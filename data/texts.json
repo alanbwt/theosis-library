@@ -1,6 +1,43 @@
 {
   "texts": [
     {
+      "id": "filastrius-gnostic-heresies",
+      "author": "Filastrius of Brescia",
+      "author_dates": "d. c. 397 AD",
+      "title": "The Book of Various Heresies, Chapters 29–43: The Gnostic Schools",
+      "original_title": "Diversarum Hereseon Liber",
+      "language": "Latin",
+      "source": "CSEL 38 (ed. F. Marx, 1898)",
+      "source_url": "https://archive.org/details/CorpusScriptorumEcclesiasticorumLatinorum38",
+      "critical_edition": "Marx, F. (ed.), Corpus Scriptorum Ecclesiasticorum Latinorum 38, Vienna: Tempsky, 1898",
+      "century": 4,
+      "era": "Nicene",
+      "description": "The first English translation of any part of Filastrius’s catalog of heresies. These fifteen chapters cover every major Gnostic school known to the late fourth-century Church: the Simonians, Basilideans, Valentinians, Marcosians, Carpocratians, and the Barbelo-Gnostics. Filastrius preserves details found in no other source — including his account of the Nicolaitan-Gnostic cosmogony and the Cainite theology of Judas as salvific agent.",
+      "themes": [
+        "gnosticism",
+        "valentinianism",
+        "basilideans",
+        "simonians",
+        "carpocratians",
+        "divine-spark",
+        "aeons",
+        "pleroma",
+        "demiurge",
+        "latin-fathers"
+      ],
+      "related_texts": [
+        "hippolytus-refutation-6",
+        "irenaeus-against-heresies-1",
+        "tertullian-against-valentinians"
+      ],
+      "status": "published",
+      "date_queued": "2026-03-27",
+      "date_drafted": "2026-03-27",
+      "date_reviewed": "2026-03-27",
+      "date_published": "2026-03-28",
+      "slug": "filastrius-gnostic-heresies"
+    },
+    {
       "id": "hippolytus-refutation-6",
       "author": "Hippolytus of Rome",
       "author_dates": "c. 170-235 AD",
@@ -12,9 +49,19 @@
       "critical_edition": "Marcovich, M. (ed.), Hippolytus: Refutatio Omnium Haeresium, Berlin: De Gruyter, 1986",
       "century": 3,
       "era": "Ante-Nicene",
-      "description": "Hippolytus describes Valentinian Gnostic theology in detail: the divine Pleroma, the emanation of aeons, the fall of Sophia, the creation of the material world by the Demiurge, and the divine spark trapped within humanity. A Church Father's account of the beliefs he sought to refute \u2014 preserving ideas whose original texts are largely lost.",
-      "themes": ["gnosticism", "valentinianism", "pleroma", "sophia", "divine-spark", "demiurge", "theosis"],
-      "related_texts": [],
+      "description": "Hippolytus describes Valentinian Gnostic theology in detail: the divine Pleroma, the emanation of aeons, the fall of Sophia, the creation of the material world by the Demiurge, and the divine spark trapped within humanity. A Church Father’s account of the beliefs he sought to refute — preserving ideas whose original texts are largely lost.",
+      "themes": [
+        "gnosticism",
+        "valentinianism",
+        "pleroma",
+        "sophia",
+        "divine-spark",
+        "demiurge",
+        "theosis"
+      ],
+      "related_texts": [
+        "filastrius-gnostic-heresies"
+      ],
       "status": "queued",
       "date_queued": "2026-03-27",
       "date_drafted": null,
@@ -31,12 +78,23 @@
       "language": "Latin",
       "source": "Patrologia Graeca 7, cols. 433-732 (Latin text; Greek fragments)",
       "source_url": "",
-      "critical_edition": "Rousseau, A. and Doutreleau, L. (eds.), Sources Chr\u00e9tiennes 263-264, Paris: Cerf, 1979",
+      "critical_edition": "Rousseau, A. and Doutreleau, L. (eds.), Sources Chrétiennes 263-264, Paris: Cerf, 1979",
       "century": 2,
       "era": "Ante-Nicene",
-      "description": "The earliest systematic description and refutation of Gnostic theology. Book 1 is essentially a catalog of Gnostic beliefs \u2014 Irenaeus describes Valentinian, Marcosian, and other Gnostic systems in extraordinary detail before arguing against them. The original Greek is mostly lost; the Latin translation survives in full. A foundational text for understanding what the Gnostics actually believed.",
-      "themes": ["gnosticism", "valentinianism", "marcosians", "pleroma", "sophia", "aeons", "divine-spark"],
-      "related_texts": ["hippolytus-refutation-6"],
+      "description": "The earliest systematic description and refutation of Gnostic theology. Book 1 is essentially a catalog of Gnostic beliefs — Irenaeus describes Valentinian, Marcosian, and other Gnostic systems in extraordinary detail before arguing against them. The original Greek is mostly lost; the Latin translation survives in full. A foundational text for understanding what the Gnostics actually believed.",
+      "themes": [
+        "gnosticism",
+        "valentinianism",
+        "marcosians",
+        "pleroma",
+        "sophia",
+        "aeons",
+        "divine-spark"
+      ],
+      "related_texts": [
+        "hippolytus-refutation-6",
+        "filastrius-gnostic-heresies"
+      ],
       "status": "queued",
       "date_queued": "2026-03-27",
       "date_drafted": null,
@@ -53,12 +111,22 @@
       "language": "Latin",
       "source": "Patrologia Latina 2, cols. 539-594",
       "source_url": "",
-      "critical_edition": "Fredouille, J.-C. (ed.), Sources Chr\u00e9tiennes 280-281, Paris: Cerf, 1980",
+      "critical_edition": "Fredouille, J.-C. (ed.), Sources Chrétiennes 280-281, Paris: Cerf, 1980",
       "century": 3,
       "era": "Ante-Nicene",
-      "description": "Tertullian's sharp, satirical attack on Valentinian Gnosticism. Written entirely in Latin by one of the most vivid prose stylists in Christian history. Tertullian mocks the Valentinian cosmology while preserving detailed descriptions of their beliefs about divine emanation and the spark of divinity within humanity.",
-      "themes": ["gnosticism", "valentinianism", "pleroma", "aeons", "latin-fathers"],
-      "related_texts": ["hippolytus-refutation-6", "irenaeus-against-heresies-1"],
+      "description": "Tertullian’s sharp, satirical attack on Valentinian Gnosticism. Written entirely in Latin by one of the most vivid prose stylists in Christian history. Tertullian mocks the Valentinian cosmology while preserving detailed descriptions of their beliefs about divine emanation and the spark of divinity within humanity.",
+      "themes": [
+        "gnosticism",
+        "valentinianism",
+        "pleroma",
+        "aeons",
+        "latin-fathers"
+      ],
+      "related_texts": [
+        "hippolytus-refutation-6",
+        "irenaeus-against-heresies-1",
+        "filastrius-gnostic-heresies"
+      ],
       "status": "queued",
       "date_queued": "2026-03-27",
       "date_drafted": null,
@@ -75,11 +143,18 @@
       "language": "Latin",
       "source": "Patrologia Latina 8, cols. 1039-1138",
       "source_url": "",
-      "critical_edition": "Henry, P. and Hadot, P. (eds.), Sources Chr\u00e9tiennes 68, Paris: Cerf, 1960",
+      "critical_edition": "Henry, P. and Hadot, P. (eds.), Sources Chrétiennes 68, Paris: Cerf, 1960",
       "century": 4,
       "era": "Nicene",
-      "description": "A Neoplatonist philosopher who converted to Christianity in old age, Marius Victorinus brought the full apparatus of Greek philosophical thought to bear on the question of Christ's divinity. His theology sits at the exact intersection of Platonic metaphysics and Christian doctrine \u2014 exploring how the divine nature relates to human nature through concepts drawn from both traditions. Barely translated into English and largely unknown outside specialist circles.",
-      "themes": ["neoplatonism", "trinity", "divine-nature", "theosis", "latin-fathers", "philosophy"],
+      "description": "A Neoplatonist philosopher who converted to Christianity in old age, Marius Victorinus brought the full apparatus of Greek philosophical thought to bear on the question of Christ’s divinity. His theology sits at the exact intersection of Platonic metaphysics and Christian doctrine — exploring how the divine nature relates to human nature through concepts drawn from both traditions. Barely translated into English and largely unknown outside specialist circles.",
+      "themes": [
+        "neoplatonism",
+        "trinity",
+        "divine-nature",
+        "theosis",
+        "latin-fathers",
+        "philosophy"
+      ],
       "related_texts": [],
       "status": "queued",
       "date_queued": "2026-03-27",
