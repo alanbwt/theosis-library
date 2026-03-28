@@ -124,8 +124,9 @@ def build_library_page(era_groups):
     <div class="container--wide">
       <div class="site-title"><a href="/">Theosis Library</a></div>
       <nav class="site-nav">
-        <a href="/library/">Library</a>
-        <a href="/sources/">Sources</a>
+        <a href="/library/?view=first">First Translations</a>
+        <a href="/library/?view=ancient">Most Ancient</a>
+        <a href="/library/">Full Library</a>
         <a href="/about.html">About</a>
       </nav>
     </div>
@@ -142,17 +143,122 @@ def build_library_page(era_groups):
       </div>
 
       {status_line}
+
+      <!-- Full Library view -->
+      <div id="view-full">
 {items_html}
+      </div>
+
+      <!-- Most Ancient timeline view -->
+      <div id="view-ancient" class="timeline-view" style="display:none;">
+        <div class="timeline">
+
+          <div class="timeline-entry">
+            <div class="timeline-date">c. 2600 BCE</div>
+            <div class="timeline-content">
+              <h3>Instructions of Shuruppak</h3>
+              <div class="text-meta">Sumerian &middot; Earliest known wisdom literature</div>
+              <div class="text-description">One of the oldest surviving literary texts. A father's advice to his son, preserved on clay tablets from ancient Sumer. Predates the Hebrew Bible by over a millennium.</div>
+              <div class="timeline-status">Forthcoming</div>
+            </div>
+          </div>
+
+          <div class="timeline-entry">
+            <div class="timeline-date">c. 2100 BCE</div>
+            <div class="timeline-content">
+              <h3>Epic of Gilgamesh (Standard Version)</h3>
+              <div class="text-meta">Akkadian &middot; Mesopotamia</div>
+              <div class="text-description">The oldest great work of literature. A king's search for immortality and the meaning of human mortality. Contains the earliest flood narrative, predating Genesis by centuries.</div>
+              <div class="timeline-status">Forthcoming</div>
+            </div>
+          </div>
+
+          <div class="timeline-entry">
+            <div class="timeline-date">c. 1550 BCE</div>
+            <div class="timeline-content">
+              <h3>Egyptian Book of the Dead (Papyrus of Ani)</h3>
+              <div class="text-meta">Egyptian &middot; Thebes</div>
+              <div class="text-description">Spells and instructions for navigating the afterlife. The most complete surviving copy of the funerary texts that shaped Egyptian religion for two millennia.</div>
+              <div class="timeline-status">Forthcoming</div>
+            </div>
+          </div>
+
+          <div class="timeline-entry">
+            <div class="timeline-date">c. 250 BCE</div>
+            <div class="timeline-content">
+              <h3>Septuagint (LXX)</h3>
+              <div class="text-meta">Greek &middot; Alexandria</div>
+              <div class="text-description">The Greek translation of the Hebrew scriptures, produced in Ptolemaic Alexandria. The Bible of the early Church and the textual basis for most New Testament quotations of the Old.</div>
+              <div class="timeline-status">Forthcoming</div>
+            </div>
+          </div>
+
+          <div class="timeline-entry">
+            <div class="timeline-date">c. 50&ndash;120 AD</div>
+            <div class="timeline-content">
+              <h3>Earliest Gospel Manuscripts</h3>
+              <div class="text-meta">Greek &middot; From Codex Sinaiticus (4th c. copy)</div>
+              <div class="text-description">The words of Jesus as preserved in the earliest surviving manuscripts. John 1 (the Logos), John 10 ("ye are gods"), 2 Peter 1:4 ("partakers of the divine nature").</div>
+              <div class="timeline-status">Forthcoming</div>
+            </div>
+          </div>
+
+          <div class="timeline-entry">
+            <div class="timeline-date">c. 130&ndash;200 AD</div>
+            <div class="timeline-content">
+              <h3>Irenaeus, Against Heresies</h3>
+              <div class="text-meta">Greek/Latin &middot; Lyon</div>
+              <div class="text-description">The earliest systematic account of Gnostic theology and its refutation. "God became man so that man might become God."</div>
+              <div class="timeline-status">Forthcoming</div>
+            </div>
+          </div>
+
+          <div class="timeline-entry timeline-entry--published">
+            <div class="timeline-date">c. 385 AD</div>
+            <div class="timeline-content">
+              <h3><a href="/library/filastrius-gnostic-heresies.html">Filastrius, The Gnostic Schools</a></h3>
+              <div class="text-meta">Latin &middot; Brescia &middot; <strong>First English translation</strong></div>
+              <div class="text-description">Fifteen chapters covering every major Gnostic school: Simonians, Basilideans, Valentinians, Marcosians, Carpocratians, Barbelo-Gnostics. With manuscript scans.</div>
+              <div class="timeline-status timeline-status--live">Published &middot; Read now &rarr;</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- First Translations view -->
+      <div id="view-first" style="display:none;">
+        <p class="view-description">Texts appearing in English for the first time. No previous English translation exists for any text in this collection.</p>
+{items_html}
+      </div>
+
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>Theosis Library is a project of Hyperborean Press.</p>
+      <p>Theosis Library is a project of <a href="#">Hyperborean Press</a>.</p>
     </div>
   </footer>
 
   <script src="../js/search.js"></script>
+  <script>
+  (function() {{
+    var params = new URLSearchParams(window.location.search);
+    var view = params.get('view');
+    var views = ['full', 'ancient', 'first'];
+    views.forEach(function(v) {{
+      var el = document.getElementById('view-' + v);
+      if (el) el.style.display = (v === (view || 'full')) ? '' : 'none';
+    }});
+
+    // Filter first-translation view to only show first translations
+    if (view === 'first') {{
+      var items = document.querySelectorAll('#view-first .text-item');
+      // For now show all since we only have one published text which is a first translation
+    }}
+  }})();
+  </script>
 
 </body>
 </html>"""

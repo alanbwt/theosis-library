@@ -18,7 +18,7 @@
 
   function render(sourceImg) {
     // Output dimensions — high-res for sharp lines
-    var maxW = 900;
+    var maxW = 1200;
     var aspect = sourceImg.height / sourceImg.width;
     var W = maxW;
     var H = Math.round(W * aspect);
@@ -73,16 +73,16 @@
     ctx.lineCap = 'round';
 
     // ─── Layer 1: Primary hatching (roughly 30°) ───────────
-    drawHatchLayer(ctx, 30, 4.5, 0.15, 0.7);
+    drawHatchLayer(ctx, 30, 3.5, 0.15, 0.7);
 
     // ─── Layer 2: Cross-hatching (120°) for mid-darks ──────
-    drawHatchLayer(ctx, 120, 5, 0.0, 0.55);
+    drawHatchLayer(ctx, 120, 4, 0.0, 0.55);
 
     // ─── Layer 3: Tertiary hatching (75°) for darkest ──────
-    drawHatchLayer(ctx, 75, 5.5, 0.0, 0.38);
+    drawHatchLayer(ctx, 75, 4.5, 0.0, 0.38);
 
     // ─── Layer 4: Near-horizontal (165°) for deepest darks ─
-    drawHatchLayer(ctx, 165, 6, 0.0, 0.22);
+    drawHatchLayer(ctx, 165, 5, 0.0, 0.22);
 
     // ─── Layer 5: Stippling for texture in mid-tones ───────
     drawStipple(ctx);
@@ -200,7 +200,7 @@
 
     function drawStipple(c) {
       c.fillStyle = '#1a1a1a';
-      var dotCount = 30000;
+      var dotCount = 50000;
       for (var i = 0; i < dotCount; i++) {
         var x = Math.random() * W;
         var y = Math.random() * H;

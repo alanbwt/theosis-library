@@ -13,8 +13,9 @@
     <div class="container--wide">
       <div class="site-title"><a href="/">Theosis Library</a></div>
       <nav class="site-nav">
-        <a href="/library/">Library</a>
-        <a href="/sources/">Sources</a>
+        <a href="/library/?view=first">First Translations</a>
+        <a href="/library/?view=ancient">Most Ancient</a>
+        <a href="/library/">Full Library</a>
         <a href="/about.html">About</a>
       </nav>
     </div>
@@ -61,7 +62,7 @@
              data-author="{{ author_name }}"
              data-title="{{ original_title }}"
              data-section="ch. {{ section.section }}"
-             data-translator="Theosis Library"
+             data-translator="Alan B."
              data-year="{{ pub_year }}"
              data-url-path="/library/{{ slug }}.html#s{{ section.section | replace('.', '-') }}">
 
