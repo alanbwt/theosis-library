@@ -107,9 +107,8 @@ sup a {
 /* --- Header / Navigation --- */
 
 .site-header {
-  padding: 2rem 0 1rem;
+  padding: 1.5rem 0;
   border-bottom: 1px solid #e0dcd4;
-  margin-bottom: 2.5rem;
 }
 
 .site-header .container {
@@ -121,11 +120,11 @@ sup a {
 }
 
 .site-title {
-  font-size: 1.25rem;
-  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .site-title a {
@@ -139,13 +138,14 @@ sup a {
 
 .site-nav {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .site-nav a {
-  color: #666;
-  margin-left: 1.5rem;
-  letter-spacing: 0.02em;
+  color: #888;
+  margin-left: 2rem;
 }
 
 .site-nav a:hover {
@@ -155,17 +155,28 @@ sup a {
 /* --- Hero / Mission Statement --- */
 
 .hero {
-  padding: 4.5rem 0 2.5rem;
+  padding: 4rem 0 2.5rem;
   text-align: center;
+}
+
+.hero h1 {
+  font-size: 1.35rem;
+  font-style: italic;
+  font-weight: normal;
+  max-width: 540px;
+  margin: 0 auto 0;
+  line-height: 1.55;
+  color: #2a2a2a;
+  letter-spacing: 0;
 }
 
 /* --- Hero Engraving --- */
 
 .hero-engraving-wrap {
-  max-width: 300px;
-  margin: 0 auto 2rem;
+  max-width: 260px;
+  margin: 0 auto 2.5rem;
   opacity: 0;
-  transition: opacity 1.5s ease;
+  transition: opacity 2s ease;
 }
 
 .hero-engraving-wrap.loaded {
@@ -178,21 +189,23 @@ sup a {
   height: auto;
 }
 
-.hero h1 {
-  font-size: 1.5rem;
-  font-style: italic;
-  font-weight: normal;
-  max-width: 620px;
-  margin: 0 auto 0;
-  line-height: 1.5;
-  color: #2a2a2a;
-  letter-spacing: -0.005em;
-}
+/* --- Hero body text --- */
 
 .hero-body {
   text-align: left;
   max-width: 680px;
   margin: 0 auto;
+  padding-top: 2.5rem;
+  border-top: 1px solid #e0dcd4;
+}
+
+/* --- Thin rule divider (high-tech accent) --- */
+
+.rule {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #c8c2b6, transparent);
+  margin: 2.5rem 0;
 }
 
 /* --- Sections --- */
@@ -202,7 +215,13 @@ section {
 }
 
 section > h2:first-child {
-  padding-bottom: 0.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #8b7355;
+  padding-bottom: 0.75rem;
   border-bottom: 1px solid #e0dcd4;
 }
 
@@ -210,35 +229,43 @@ section > h2:first-child {
 
 .preview-section {
   margin: 3rem 0;
-  padding: 2rem 0;
+  padding: 2.5rem 0;
   border-top: 1px solid #e0dcd4;
   border-bottom: 1px solid #e0dcd4;
 }
 
 .preview-section h2 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #8b7355;
   margin-top: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
   border-bottom: 1px solid #e0dcd4;
 }
 
 .preview-caption {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: #666;
   margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
 .preview-parallel {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding: 1.5rem;
-  background: #f8f6f1;
-  border-radius: 4px;
+  gap: 2.5rem;
+  padding: 1.5rem 1.75rem;
+  background: #f5f3ee;
+  border: 1px solid #e8e5de;
+  border-radius: 3px;
 }
 
 .preview-col p {
-  font-size: 0.92rem;
-  line-height: 1.7;
+  font-size: 0.88rem;
+  line-height: 1.75;
   margin-bottom: 0;
 }
 
@@ -250,14 +277,20 @@ section > h2:first-child {
 
 .open-invitation {
   margin-top: 3rem;
-  padding-top: 2rem;
+  padding-top: 2.5rem;
   border-top: 1px solid #e0dcd4;
 }
 
 .open-invitation h2 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #8b7355;
   margin-top: 0;
   border-bottom: none;
-  padding-bottom: 0;
+  padding-bottom: 0.5rem;
 }
 
 .open-invitation p {
@@ -283,7 +316,7 @@ section > h2:first-child {
 .text-item h3 {
   margin-top: 0;
   margin-bottom: 0.25rem;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .text-item h3 a {
@@ -297,20 +330,22 @@ section > h2:first-child {
 
 .text-meta {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-size: 0.8rem;
-  color: #888;
+  font-size: 0.75rem;
+  color: #999;
   margin-bottom: 0.4rem;
+  letter-spacing: 0.01em;
 }
 
 .text-description {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: #555;
   margin-bottom: 0.4rem;
+  line-height: 1.6;
 }
 
 .text-themes {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: #999;
 }
 
@@ -318,7 +353,7 @@ section > h2:first-child {
   display: inline-block;
   background: #eeebe4;
   padding: 0.15em 0.5em;
-  border-radius: 3px;
+  border-radius: 2px;
   margin-right: 0.3em;
   margin-bottom: 0.3em;
 }
@@ -362,12 +397,13 @@ section > h2:first-child {
 
 .parallel-controls {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: #888;
   margin-bottom: 1.5rem;
   padding: 0.75rem 1rem;
   background: #f5f3ee;
-  border-radius: 4px;
+  border: 1px solid #e8e5de;
+  border-radius: 3px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -382,14 +418,15 @@ section > h2:first-child {
 
 .parallel-controls button {
   font-family: inherit;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   padding: 0.3em 0.75em;
   border: 1px solid #d4d0c8;
-  border-radius: 3px;
+  border-radius: 2px;
   background: #fff;
   color: #666;
   cursor: pointer;
   transition: all 0.15s;
+  letter-spacing: 0.02em;
 }
 
 .parallel-controls button:hover {
@@ -418,11 +455,12 @@ section > h2:first-child {
 
 .parallel-section .section-ref {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: #999;
   display: block;
   margin-bottom: 0.5rem;
   grid-column: 1 / -1;
+  letter-spacing: 0.02em;
 }
 
 .parallel-original {
@@ -443,19 +481,20 @@ section > h2:first-child {
 
 .parallel-col-label {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   color: #8b7355;
   margin-bottom: 0.5rem;
 }
 
 .source-link-banner {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   padding: 0.75rem 1rem;
   background: #f5f3ee;
-  border-radius: 4px;
+  border: 1px solid #e8e5de;
+  border-radius: 3px;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -570,9 +609,9 @@ section > h2:first-child {
   width: 100%;
   padding: 0.6rem 1rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   border: 1px solid #d4d0c8;
-  border-radius: 4px;
+  border-radius: 3px;
   background: #fff;
   color: #2a2a2a;
   outline: none;
@@ -622,8 +661,9 @@ section > h2:first-child {
   border-top: 1px solid #e0dcd4;
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: #999;
+  letter-spacing: 0.02em;
 }
 
 .site-footer a {
@@ -638,31 +678,47 @@ section > h2:first-child {
 
 .era-label {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   color: #8b7355;
   margin-bottom: 0.5rem;
 }
 
 .status-badge {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   padding: 0.15em 0.5em;
-  border-radius: 3px;
+  border-radius: 2px;
   margin-left: 0.5em;
 }
 
 .status-badge--queued {
   background: #f0ece4;
-  color: #999;
+  color: #aaa;
 }
 
 .status-badge--published {
   background: #e8ead4;
   color: #6b7a4a;
+}
+
+.browse-link {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8b7355;
+  border-bottom: 1px solid #d4cfc5;
+  padding-bottom: 0.15em;
+  transition: border-color 0.2s;
+}
+
+.browse-link:hover {
+  border-bottom-color: #8b7355;
 }
 
 /* --- Responsive --- */
@@ -689,36 +745,70 @@ section > h2:first-child {
     font-size: 16px;
   }
 
+  .site-header {
+    padding: 1.25rem 0;
+  }
+
   .site-header .container {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
+    align-items: center;
+    gap: 0.6rem;
+    text-align: center;
   }
 
   .site-nav a {
     margin-left: 0;
-    margin-right: 1.25rem;
+    margin-right: 1rem;
+  }
+
+  .hero {
+    padding: 3rem 0 2rem;
   }
 
   .hero h1 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+    max-width: 90%;
   }
 
   .hero-engraving-wrap {
-    max-width: 240px;
+    max-width: 200px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-body {
+    padding-top: 2rem;
   }
 
   h1 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
   }
 
   .container,
   .container--parallel {
-    padding: 0 1rem;
+    padding: 0 1.25rem;
+  }
+
+  .preview-parallel {
+    padding: 1.25rem;
+    gap: 1rem;
   }
 
   .parallel-controls {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-engraving-wrap {
+    max-width: 170px;
+  }
+
+  .hero h1 {
+    font-size: 1.05rem;
   }
 }
