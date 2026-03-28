@@ -1,7 +1,13 @@
 /**
- * Theosis Library — High-fidelity 3D particle portrait
- * WebGL-rendered point cloud with depth, lighting, and perspective.
+ * Theosis Library — 3D Particle Portrait
+ * Three.js InstancedMesh + UnrealBloomPass for cinematic volumetric look.
  */
+
+import * as THREE from 'https://esm.sh/three@0.170.0';
+import { OrbitControls } from 'https://esm.sh/three@0.170.0/addons/controls/OrbitControls.js';
+import { EffectComposer } from 'https://esm.sh/three@0.170.0/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'https://esm.sh/three@0.170.0/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'https://esm.sh/three@0.170.0/addons/postprocessing/UnrealBloomPass.js';
 
 (function () {
   'use strict';
@@ -9,348 +15,274 @@
   var canvas = document.getElementById('particle-canvas');
   if (!canvas) return;
 
-  var gl = canvas.getContext('webgl', { antialias: true, alpha: true });
-  if (!gl) return;
+  // ─── Config ──────────────────────────────────────────────
 
-  // ─── Shaders ─────────────────────────────────────────────
+  var CONFIG = {
+    particleCount: 35000,
+    particleSize: 0.12,
+    spread: 28,
+    depthScale: 6,
+    bloomStrength: 1.4,
+    bloomRadius: 0.5,
+    bloomThreshold: 0,
+    rotateSpeed: 0.3,
+    hoverAmplitude: 0.04,
+    lerpFactor: 0.08,
+    fadeInDuration: 3500,
+    cameraDistance: 55,
+    fogDensity: 0.008
+  };
 
-  var vertSrc = [
-    'attribute vec3 aPos;',
-    'attribute float aBright;',
-    'attribute float aPhase;',
-    'attribute float aSize;',
-    'uniform float uTime;',
-    'uniform mat4 uProj;',
-    'uniform mat4 uView;',
-    'uniform vec2 uMouse;',
-    'uniform float uMouseActive;',
-    'uniform float uFade;',
-    'uniform float uDpr;',
-    'varying float vAlpha;',
-    'varying float vBright;',
-    '',
-    'void main() {',
-    '  float t = uTime;',
-    '  // Organic drift per-particle',
-    '  float dx = sin(t * 0.4 + aPhase) * 0.003;',
-    '  float dy = cos(t * 0.3 + aPhase * 1.3) * 0.002;',
-    '  float dz = sin(t * 0.25 + aPhase * 0.7) * 0.004;',
-    '',
-    '  vec3 pos = aPos + vec3(dx, dy, dz);',
-    '',
-    '  // Mouse repulsion in screen space after projection',
-    '  vec4 projected = uProj * uView * vec4(pos, 1.0);',
-    '  vec2 ndc = projected.xy / projected.w;',
-    '  vec2 diff = ndc - uMouse;',
-    '  float dist = length(diff);',
-    '  float radius = 0.15;',
-    '  if (dist < radius && uMouseActive > 0.5) {',
-    '    float force = (1.0 - dist / radius) * 0.08;',
-    '    vec2 push = normalize(diff) * force;',
-    '    pos.x += push.x;',
-    '    pos.y += push.y;',
-    '    pos.z += (1.0 - dist / radius) * 0.03;',
-    '  }',
-    '',
-    '  gl_Position = uProj * uView * vec4(pos, 1.0);',
-    '',
-    '  // Depth-based size: closer = bigger',
-    '  float depth = gl_Position.w;',
-    '  gl_PointSize = aSize * uDpr * (1.8 / depth);',
-    '',
-    '  // Alpha from brightness and depth',
-    '  float depthFade = smoothstep(2.5, 0.8, depth);',
-    '  vAlpha = (0.15 + aBright * 0.85) * depthFade * uFade;',
-    '  vBright = aBright;',
-    '}'
-  ].join('\n');
+  // ─── Scene setup ─────────────────────────────────────────
 
-  var fragSrc = [
-    'precision mediump float;',
-    'varying float vAlpha;',
-    'varying float vBright;',
-    '',
-    'void main() {',
-    '  // Soft circular particle',
-    '  vec2 c = gl_PointCoord - 0.5;',
-    '  float d = length(c);',
-    '  if (d > 0.5) discard;',
-    '  float soft = 1.0 - smoothstep(0.2, 0.5, d);',
-    '',
-    '  // Monochrome: dark particles on light bg',
-    '  float lum = 0.12 + (1.0 - vBright) * 0.06;',
-    '  gl_FragColor = vec4(lum, lum, lum, vAlpha * soft);',
-    '}'
-  ].join('\n');
+  var container = canvas.parentElement;
+  var w = container.clientWidth;
+  var h = container.clientHeight;
+  var dpr = Math.min(window.devicePixelRatio, 2);
 
-  function compileShader(src, type) {
-    var s = gl.createShader(type);
-    gl.shaderSource(s, src);
-    gl.compileShader(s);
-    if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
-      console.error(gl.getShaderInfoLog(s));
-      return null;
-    }
-    return s;
-  }
+  var renderer = new THREE.WebGLRenderer({
+    canvas: canvas,
+    antialias: true,
+    alpha: false,
+    powerPreference: 'high-performance'
+  });
+  renderer.setSize(w, h);
+  renderer.setPixelRatio(dpr);
+  renderer.setClearColor(0x0a0a0a, 1);
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.2;
 
-  var vs = compileShader(vertSrc, gl.VERTEX_SHADER);
-  var fs = compileShader(fragSrc, gl.FRAGMENT_SHADER);
-  var prog = gl.createProgram();
-  gl.attachShader(prog, vs);
-  gl.attachShader(prog, fs);
-  gl.linkProgram(prog);
-  gl.useProgram(prog);
+  var scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x0a0a0a, CONFIG.fogDensity);
 
-  var aPos = gl.getAttribLocation(prog, 'aPos');
-  var aBright = gl.getAttribLocation(prog, 'aBright');
-  var aPhase = gl.getAttribLocation(prog, 'aPhase');
-  var aSize = gl.getAttribLocation(prog, 'aSize');
-  var uTime = gl.getUniformLocation(prog, 'uTime');
-  var uProj = gl.getUniformLocation(prog, 'uProj');
-  var uView = gl.getUniformLocation(prog, 'uView');
-  var uMouse = gl.getUniformLocation(prog, 'uMouse');
-  var uMouseActive = gl.getUniformLocation(prog, 'uMouseActive');
-  var uFade = gl.getUniformLocation(prog, 'uFade');
-  var uDpr = gl.getUniformLocation(prog, 'uDpr');
+  var camera = new THREE.PerspectiveCamera(50, w / h, 0.1, 500);
+  camera.position.set(0, 0, CONFIG.cameraDistance);
 
-  // ─── State ───────────────────────────────────────────────
+  var controls = new OrbitControls(camera, canvas);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.05;
+  controls.autoRotate = true;
+  controls.autoRotateSpeed = CONFIG.rotateSpeed;
+  controls.enablePan = false;
+  controls.minDistance = 25;
+  controls.maxDistance = 90;
 
-  var dpr = Math.min(window.devicePixelRatio || 1, 2);
-  var particleCount = 0;
-  var animId = null;
+  // ─── Post-processing ────────────────────────────────────
+
+  var composer = new EffectComposer(renderer);
+  composer.addPass(new RenderPass(scene, camera));
+
+  var bloomPass = new UnrealBloomPass(
+    new THREE.Vector2(w, h),
+    CONFIG.bloomStrength,
+    CONFIG.bloomRadius,
+    CONFIG.bloomThreshold
+  );
+  composer.addPass(bloomPass);
+
+  // ─── Particle system ────────────────────────────────────
+
+  var worldGroup = new THREE.Group();
+  scene.add(worldGroup);
+
+  var mesh = null;
+  var dummy = new THREE.Object3D();
+  var particleData = [];
   var startTime = 0;
-  var mouse = { x: 0, y: 0, active: false };
-  var cameraAngle = 0;
-  var FADE_DURATION = 3000;
 
-  // ─── Matrix helpers (no dependencies) ────────────────────
+  function sampleImage(img) {
+    var sCanvas = document.createElement('canvas');
+    var sCtx = sCanvas.getContext('2d');
 
-  function perspective(fov, aspect, near, far) {
-    var f = 1.0 / Math.tan(fov / 2);
-    var nf = 1 / (near - far);
-    return new Float32Array([
-      f / aspect, 0, 0, 0,
-      0, f, 0, 0,
-      0, 0, (far + near) * nf, -1,
-      0, 0, 2 * far * near * nf, 0
-    ]);
-  }
+    // Sample at high resolution for faithful reproduction
+    var sW = 420;
+    var sH = Math.round(sW * (img.height / img.width));
+    sCanvas.width = sW;
+    sCanvas.height = sH;
+    sCtx.drawImage(img, 0, 0, sW, sH);
 
-  function lookAt(eye, center, up) {
-    var zx = eye[0] - center[0], zy = eye[1] - center[1], zz = eye[2] - center[2];
-    var zl = 1 / Math.sqrt(zx * zx + zy * zy + zz * zz);
-    zx *= zl; zy *= zl; zz *= zl;
-    var xx = up[1] * zz - up[2] * zy;
-    var xy = up[2] * zx - up[0] * zz;
-    var xz = up[0] * zy - up[1] * zx;
-    var xl = 1 / Math.sqrt(xx * xx + xy * xy + xz * xz);
-    xx *= xl; xy *= xl; xz *= xl;
-    var yx = zy * xz - zz * xy;
-    var yy = zz * xx - zx * xz;
-    var yz = zx * xy - zy * xx;
-    return new Float32Array([
-      xx, yx, zx, 0,
-      xy, yy, zy, 0,
-      xz, yz, zz, 0,
-      -(xx * eye[0] + xy * eye[1] + xz * eye[2]),
-      -(yx * eye[0] + yy * eye[1] + yz * eye[2]),
-      -(zx * eye[0] + zy * eye[1] + zz * eye[2]),
-      1
-    ]);
-  }
+    var data = sCtx.getImageData(0, 0, sW, sH).data;
+    var samples = [];
 
-  // ─── Build particles from image ─────────────────────────
-
-  function loadImage(src, cb) {
-    var img = new Image();
-    img.crossOrigin = 'anonymous';
-    img.onload = function () { cb(img); };
-    img.src = src;
-  }
-
-  function buildParticles(img) {
-    var sampleCanvas = document.createElement('canvas');
-    var sctx = sampleCanvas.getContext('2d');
-
-    // Sample at high resolution
-    var sampleW = Math.min(img.width, 800);
-    var sampleH = Math.round(sampleW * (img.height / img.width));
-    sampleCanvas.width = sampleW;
-    sampleCanvas.height = sampleH;
-    sctx.drawImage(img, 0, 0, sampleW, sampleH);
-    var data = sctx.getImageData(0, 0, sampleW, sampleH).data;
-
-    var positions = [];
-    var brightnesses = [];
-    var phases = [];
-    var sizes = [];
-
-    // Aspect ratio of image
-    var aspect = sampleW / sampleH;
-
-    // Sample every pixel at gap=1 for high density, gap=2 for medium
-    var gap = sampleW > 600 ? 2 : 2;
-
-    for (var y = 0; y < sampleH; y += gap) {
-      for (var x = 0; x < sampleW; x += gap) {
-        var i = (y * sampleW + x) * 4;
+    for (var y = 0; y < sH; y++) {
+      for (var x = 0; x < sW; x++) {
+        var i = (y * sW + x) * 4;
         var r = data[i], g = data[i + 1], b = data[i + 2];
         var bright = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
 
-        // Skip very bright pixels (background)
-        if (bright > 0.82) continue;
+        // Skip bright background
+        if (bright > 0.78) continue;
 
-        // Normalize to centered coordinates [-1, 1] range
-        var nx = (x / sampleW - 0.5) * 2 * aspect * 0.55;
-        var ny = -(y / sampleH - 0.5) * 2 * 0.55;
-
-        // Depth from brightness: darker = closer (face pops forward)
-        var darkness = 1 - bright;
-        var nz = darkness * 0.15 - 0.05;
-
-        // Add slight random jitter for organic feel
-        nx += (Math.random() - 0.5) * 0.003;
-        ny += (Math.random() - 0.5) * 0.003;
-        nz += (Math.random() - 0.5) * 0.01;
-
-        positions.push(nx, ny, nz);
-        brightnesses.push(darkness);
-        phases.push(Math.random() * Math.PI * 2);
-
-        // Size varies: darker areas get slightly larger particles
-        var sz = 2.0 + darkness * 3.0;
-        // Add some randomness
-        sz *= 0.8 + Math.random() * 0.4;
-        sizes.push(sz);
+        samples.push({
+          x: x,
+          y: y,
+          brightness: bright,
+          darkness: 1 - bright
+        });
       }
     }
 
-    particleCount = positions.length / 3;
+    // Randomly select particles, weighted toward darker areas
+    var selected = [];
+    var maxAttempts = CONFIG.particleCount * 4;
+    var attempts = 0;
 
-    // Upload buffers
-    var posBuf = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER, posBuf);
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
-    gl.enableVertexAttribArray(aPos);
-    gl.vertexAttribPointer(aPos, 3, gl.FLOAT, false, 0, 0);
+    while (selected.length < CONFIG.particleCount && attempts < maxAttempts) {
+      var idx = Math.floor(Math.random() * samples.length);
+      var s = samples[idx];
+      // Darker pixels more likely to be selected
+      if (Math.random() < s.darkness * s.darkness) {
+        selected.push(s);
+      }
+      attempts++;
+    }
 
-    var brightBuf = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER, brightBuf);
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(brightnesses), gl.STATIC_DRAW);
-    gl.enableVertexAttribArray(aBright);
-    gl.vertexAttribPointer(aBright, 1, gl.FLOAT, false, 0, 0);
+    // Fill remaining if needed
+    while (selected.length < CONFIG.particleCount) {
+      selected.push(samples[Math.floor(Math.random() * samples.length)]);
+    }
 
-    var phaseBuf = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER, phaseBuf);
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(phases), gl.STATIC_DRAW);
-    gl.enableVertexAttribArray(aPhase);
-    gl.vertexAttribPointer(aPhase, 1, gl.FLOAT, false, 0, 0);
+    return { samples: selected, width: sW, height: sH };
+  }
 
-    var sizeBuf = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER, sizeBuf);
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(sizes), gl.STATIC_DRAW);
-    gl.enableVertexAttribArray(aSize);
-    gl.vertexAttribPointer(aSize, 1, gl.FLOAT, false, 0, 0);
+  function buildParticles(img) {
+    var result = sampleImage(img);
+    var samples = result.samples;
+    var sW = result.width;
+    var sH = result.height;
+    var aspect = sW / sH;
+
+    // Geometry: small tetrahedron for faceted sparkle look
+    var geo = new THREE.TetrahedronGeometry(CONFIG.particleSize, 0);
+    var mat = new THREE.MeshBasicMaterial({
+      color: 0xffffff,
+      transparent: false
+    });
+
+    mesh = new THREE.InstancedMesh(geo, mat, CONFIG.particleCount);
+    mesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+    mesh.instanceColor = new THREE.InstancedBufferAttribute(
+      new Float32Array(CONFIG.particleCount * 3), 3
+    );
+    mesh.instanceColor.setUsage(THREE.DynamicDrawUsage);
+
+    var color = new THREE.Color();
+
+    for (var i = 0; i < CONFIG.particleCount; i++) {
+      var s = samples[i];
+
+      // Map to 3D centered coordinates
+      var nx = (s.x / sW - 0.5) * CONFIG.spread * aspect;
+      var ny = -(s.y / sH - 0.5) * CONFIG.spread;
+      var nz = s.darkness * CONFIG.depthScale + (Math.random() - 0.5) * 0.5;
+
+      // Slight positional jitter for organic feel
+      nx += (Math.random() - 0.5) * 0.15;
+      ny += (Math.random() - 0.5) * 0.15;
+
+      // Warm monochrome: dark amber to pale gold based on brightness
+      // Darker areas: warm amber (saturated), lighter areas: pale cream
+      var hue = 0.08 + s.darkness * 0.02; // amber range
+      var sat = 0.2 + s.darkness * 0.5;
+      var lum = 0.4 + s.darkness * 0.45;
+      color.setHSL(hue, sat, lum);
+
+      particleData.push({
+        targetX: nx,
+        targetY: ny,
+        targetZ: nz,
+        currentX: nx + (Math.random() - 0.5) * 40,
+        currentY: ny + (Math.random() - 0.5) * 40,
+        currentZ: nz + (Math.random() - 0.5) * 40,
+        seed: Math.random() * Math.PI * 2,
+        speed: 0.5 + Math.random() * 0.5,
+        scale: 0.6 + s.darkness * 0.8 + Math.random() * 0.3
+      });
+
+      // Set initial transform (will be overridden in animation)
+      dummy.position.set(particleData[i].currentX, particleData[i].currentY, particleData[i].currentZ);
+      dummy.scale.setScalar(particleData[i].scale);
+      dummy.rotation.set(Math.random() * 6.28, Math.random() * 6.28, 0);
+      dummy.updateMatrix();
+      mesh.setMatrixAt(i, dummy.matrix);
+      mesh.setColorAt(i, color);
+    }
+
+    mesh.instanceMatrix.needsUpdate = true;
+    mesh.instanceColor.needsUpdate = true;
+
+    worldGroup.add(mesh);
+  }
+
+  // ─── Animation loop ─────────────────────────────────────
+
+  function animate(timestamp) {
+    if (!startTime) startTime = timestamp;
+    var elapsed = timestamp - startTime;
+    var fade = Math.min(elapsed / CONFIG.fadeInDuration, 1);
+    fade = fade * fade * (3 - 2 * fade); // smoothstep easing
+
+    var time = timestamp * 0.001;
+
+    if (mesh) {
+      // Lerp factor increases during fade-in for dramatic assembly effect
+      var currentLerp = CONFIG.lerpFactor * (0.3 + fade * 0.7);
+
+      for (var i = 0; i < CONFIG.particleCount; i++) {
+        var p = particleData[i];
+
+        // Lerp toward target position
+        p.currentX += (p.targetX - p.currentX) * currentLerp;
+        p.currentY += (p.targetY - p.currentY) * currentLerp;
+        p.currentZ += (p.targetZ - p.currentZ) * currentLerp;
+
+        // Subtle hover animation once assembled
+        var hover = Math.sin(time * p.speed + p.seed) * CONFIG.hoverAmplitude * fade;
+        var hoverX = Math.cos(time * p.speed * 0.7 + p.seed * 1.3) * CONFIG.hoverAmplitude * 0.5 * fade;
+
+        dummy.position.set(
+          p.currentX + hoverX,
+          p.currentY + hover,
+          p.currentZ + Math.sin(time * 0.3 + p.seed * 2.1) * CONFIG.hoverAmplitude * 0.3 * fade
+        );
+        dummy.scale.setScalar(p.scale * (0.85 + Math.sin(time * 0.8 + p.seed) * 0.15));
+        dummy.rotation.x = time * 0.1 + p.seed;
+        dummy.rotation.y = time * 0.15 + p.seed * 0.5;
+        dummy.updateMatrix();
+        mesh.setMatrixAt(i, dummy.matrix);
+      }
+      mesh.instanceMatrix.needsUpdate = true;
+    }
+
+    controls.update();
+    composer.render();
+    requestAnimationFrame(animate);
   }
 
   // ─── Resize ──────────────────────────────────────────────
 
   function resize() {
-    var rect = canvas.parentElement.getBoundingClientRect();
-    var w = rect.width;
-    var h = rect.height;
-    canvas.style.width = w + 'px';
-    canvas.style.height = h + 'px';
-    canvas.width = w * dpr;
-    canvas.height = h * dpr;
-    gl.viewport(0, 0, canvas.width, canvas.height);
+    var cw = container.clientWidth;
+    var ch = container.clientHeight;
+    camera.aspect = cw / ch;
+    camera.updateProjectionMatrix();
+    renderer.setSize(cw, ch);
+    composer.setSize(cw, ch);
+    bloomPass.resolution.set(cw, ch);
   }
 
-  // ─── Render loop ─────────────────────────────────────────
-
-  function draw(timestamp) {
-    if (!startTime) startTime = timestamp;
-    var elapsed = timestamp - startTime;
-    var fade = Math.min(elapsed / FADE_DURATION, 1);
-    fade = fade * fade * (3 - 2 * fade); // smoothstep
-
-    var t = timestamp * 0.001;
-
-    var rect = canvas.parentElement.getBoundingClientRect();
-    var w = rect.width;
-    var h = rect.height;
-
-    gl.clearColor(0, 0, 0, 0);
-    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
-    gl.enable(gl.BLEND);
-    gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
-
-    // Very slow camera orbit: subtle 3D reveal
-    cameraAngle = Math.sin(t * 0.06) * 0.12;
-    var camDist = 1.5;
-    var eyeX = Math.sin(cameraAngle) * camDist;
-    var eyeZ = Math.cos(cameraAngle) * camDist;
-    var eyeY = Math.sin(t * 0.04) * 0.03;
-
-    var projMat = perspective(Math.PI / 4.5, w / h, 0.1, 10);
-    var viewMat = lookAt([eyeX, eyeY, eyeZ], [0, 0, 0], [0, 1, 0]);
-
-    gl.uniformMatrix4fv(uProj, false, projMat);
-    gl.uniformMatrix4fv(uView, false, viewMat);
-    gl.uniform1f(uTime, t);
-    gl.uniform1f(uFade, fade);
-    gl.uniform1f(uDpr, dpr);
-
-    // Mouse in NDC
-    if (mouse.active) {
-      var mx = (mouse.x / w) * 2 - 1;
-      var my = -((mouse.y / h) * 2 - 1);
-      gl.uniform2f(uMouse, mx, my);
-      gl.uniform1f(uMouseActive, 1.0);
-    } else {
-      gl.uniform1f(uMouseActive, 0.0);
-    }
-
-    gl.drawArrays(gl.POINTS, 0, particleCount);
-
-    animId = requestAnimationFrame(draw);
-  }
-
-  // ─── Events ──────────────────────────────────────────────
-
-  canvas.addEventListener('mousemove', function (e) {
-    var rect = canvas.getBoundingClientRect();
-    mouse.x = e.clientX - rect.left;
-    mouse.y = e.clientY - rect.top;
-    mouse.active = true;
-  });
-
-  canvas.addEventListener('mouseleave', function () {
-    mouse.active = false;
-  });
-
-  var resizeTimer;
   window.addEventListener('resize', function () {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(resize, 100);
-  });
-
-  document.addEventListener('visibilitychange', function () {
-    if (document.hidden) {
-      if (animId) cancelAnimationFrame(animId);
-      animId = null;
-    } else if (!animId && particleCount > 0) {
-      animId = requestAnimationFrame(draw);
-    }
+    resize();
   });
 
   // ─── Init ────────────────────────────────────────────────
 
-  loadImage('/assets/christ-portrait.jpg', function (img) {
-    resize();
+  var img = new Image();
+  img.crossOrigin = 'anonymous';
+  img.onload = function () {
     buildParticles(img);
-    animId = requestAnimationFrame(draw);
-  });
+    requestAnimationFrame(animate);
+  };
+  img.src = '/assets/christ-portrait.jpg';
 
 })();
