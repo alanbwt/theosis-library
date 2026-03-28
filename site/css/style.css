@@ -159,33 +159,23 @@ sup a {
   text-align: center;
 }
 
-.hero--with-canvas {
-  position: relative;
-  padding: 0;
-  overflow: hidden;
-  background: #0a0a0a;
+/* --- Hero Engraving --- */
+
+.hero-engraving-wrap {
+  max-width: 480px;
+  margin: 0 auto 2rem;
+  opacity: 0;
+  transition: opacity 1.5s ease;
 }
 
-.hero-canvas-wrap {
-  position: relative;
-  width: 100%;
-  height: 90vh;
-  min-height: 560px;
-  max-height: 960px;
+.hero-engraving-wrap.loaded {
+  opacity: 1;
 }
 
-.hero-canvas-wrap canvas {
+.hero-engraving-img {
   display: block;
   width: 100%;
-  height: 100%;
-}
-
-.hero-text {
-  position: relative;
-  z-index: 2;
-  padding: 3rem 1.5rem 4rem;
-  background: linear-gradient(to bottom, rgba(10,10,10,0) 0%, rgba(10,10,10,0.8) 30%, rgba(250,248,244,0.95) 80%, rgba(250,248,244,1) 100%);
-  margin-top: -12rem;
+  height: auto;
 }
 
 .hero h1 {
@@ -714,13 +704,8 @@ section > h2:first-child {
     font-size: 1.2rem;
   }
 
-  .hero-canvas-wrap {
-    height: 65vh;
-    min-height: 380px;
-  }
-
-  .hero-text {
-    margin-top: -7rem;
+  .hero-engraving-wrap {
+    max-width: 320px;
   }
 
   h1 {
