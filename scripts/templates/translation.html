@@ -61,7 +61,7 @@
              data-author="{{ author_name }}"
              data-title="{{ original_title }}"
              data-section="ch. {{ section.section }}"
-             data-translator="Matt Mattimore"
+             data-translator="Theosis Library"
              data-year="{{ pub_year }}"
              data-url-path="/library/{{ slug }}.html#s{{ section.section | replace('.', '-') }}">
 
@@ -144,10 +144,10 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>Translated by Matt Mattimore. AI-assisted draft reviewed against the {{ language }} text of
+      <p>AI-assisted draft reviewed against the {{ language }} text of
         {% if 'Patrologia Graeca' in source %}Migne's <em>Patrologia Graeca</em>{% elif 'Patrologia Latina' in source %}Migne's <em>Patrologia Latina</em>{% else %}the source edition{% endif %}.</p>
       <p>Published {{ pub_date }} · License: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
-      <p style="margin-top: 1rem;">Theosis Library is a project of Hyperborean Press.</p>
+      <p style="margin-top: 1rem;">Theosis Library is a project of <a href="#">Hyperborean Press</a>.</p>
     </div>
   </footer>
 

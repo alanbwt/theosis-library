@@ -113,10 +113,10 @@ sup a {
 
 .site-header .container {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  text-align: center;
 }
 
 .site-title {
@@ -145,7 +145,7 @@ sup a {
 
 .site-nav a {
   color: #888;
-  margin-left: 2rem;
+  margin: 0 1rem;
 }
 
 .site-nav a:hover {
