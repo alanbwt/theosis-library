@@ -2,8 +2,7 @@
   "texts": [
     {
       "id": "filastrius-gnostic-heresies",
-      "author": "Filastrius of Brescia",
-      "author_dates": "d. c. 397 AD",
+      "author_id": "filastrius",
       "title": "The Book of Various Heresies, Chapters 29–43: The Gnostic Schools",
       "original_title": "Diversarum Hereseon Liber",
       "language": "Latin",
@@ -11,8 +10,12 @@
       "source_url": "https://archive.org/details/CorpusScriptorumEcclesiasticorumLatinorum38",
       "critical_edition": "Marx, F. (ed.), Corpus Scriptorum Ecclesiasticorum Latinorum 38, Vienna: Tempsky, 1898",
       "century": 4,
+      "date_approx": "c. 385 AD",
       "era": "Nicene",
-      "description": "The first English translation of any part of Filastrius’s catalog of heresies. These fifteen chapters cover every major Gnostic school known to the late fourth-century Church: the Simonians, Basilideans, Valentinians, Marcosians, Carpocratians, and the Barbelo-Gnostics. Filastrius preserves details found in no other source — including his account of the Nicolaitan-Gnostic cosmogony and the Cainite theology of Judas as salvific agent.",
+      "category": "heresiological",
+      "tradition": "orthodox",
+      "is_first_translation": true,
+      "description": "The first English translation of any part of Filastrius’s catalog of heresies. These fifteen chapters cover every major Gnostic school known to the late fourth-century Church: the Simonians, Basilideans, Valentinians, Marcosians, Carpocratians, and the Barbelo-Gnostics.",
       "themes": [
         "gnosticism",
         "valentinianism",
@@ -30,6 +33,93 @@
         "irenaeus-against-heresies-1",
         "tertullian-against-valentinians"
       ],
+      "scans": {
+        "source": "Internet Archive",
+        "edition": "CSEL 38",
+        "pages": [
+          {
+            "file": "csel38-p14.jpg",
+            "page_label": "p. 14",
+            "sections": [
+              "29"
+            ]
+          },
+          {
+            "file": "csel38-p15.jpg",
+            "page_label": "p. 15",
+            "sections": [
+              "29",
+              "30"
+            ]
+          },
+          {
+            "file": "csel38-p16.jpg",
+            "page_label": "p. 16",
+            "sections": [
+              "31",
+              "32"
+            ]
+          },
+          {
+            "file": "csel38-p17.jpg",
+            "page_label": "p. 17",
+            "sections": [
+              "32",
+              "33"
+            ]
+          },
+          {
+            "file": "csel38-p18.jpg",
+            "page_label": "p. 18",
+            "sections": [
+              "33",
+              "34"
+            ]
+          },
+          {
+            "file": "csel38-p19.jpg",
+            "page_label": "p. 19",
+            "sections": [
+              "34",
+              "35",
+              "36"
+            ]
+          },
+          {
+            "file": "csel38-p20.jpg",
+            "page_label": "p. 20",
+            "sections": [
+              "36",
+              "37",
+              "38"
+            ]
+          },
+          {
+            "file": "csel38-p21.jpg",
+            "page_label": "p. 21",
+            "sections": [
+              "38",
+              "39"
+            ]
+          },
+          {
+            "file": "csel38-p22.jpg",
+            "page_label": "p. 22",
+            "sections": [
+              "40",
+              "41",
+              "42"
+            ]
+          },
+          {
+            "file": "csel38-p23.jpg",
+            "page_label": "p. 23",
+            "sections": [
+              "43"
+            ]
+          }
+        ]
+      },
       "status": "published",
       "date_queued": "2026-03-27",
       "date_drafted": "2026-03-27",
@@ -39,17 +129,20 @@
     },
     {
       "id": "hippolytus-refutation-6",
-      "author": "Hippolytus of Rome",
-      "author_dates": "c. 170-235 AD",
-      "title": "Refutation of All Heresies, Book 6, Chapters 24-37",
+      "author_id": "hippolytus",
+      "title": "Refutation of All Heresies, Book 6, Chapters 24–37",
       "original_title": "Refutatio Omnium Haeresium",
       "language": "Greek",
-      "source": "Patrologia Graeca 16, cols. 3205-3258",
+      "source": "Patrologia Graeca 16, cols. 3205–3258",
       "source_url": "",
       "critical_edition": "Marcovich, M. (ed.), Hippolytus: Refutatio Omnium Haeresium, Berlin: De Gruyter, 1986",
       "century": 3,
+      "date_approx": "c. 225 AD",
       "era": "Ante-Nicene",
-      "description": "Hippolytus describes Valentinian Gnostic theology in detail: the divine Pleroma, the emanation of aeons, the fall of Sophia, the creation of the material world by the Demiurge, and the divine spark trapped within humanity. A Church Father’s account of the beliefs he sought to refute — preserving ideas whose original texts are largely lost.",
+      "category": "heresiological",
+      "tradition": "orthodox",
+      "is_first_translation": false,
+      "description": "Hippolytus describes Valentinian Gnostic theology in detail: the divine Pleroma, the emanation of aeons, the fall of Sophia, the creation of the material world by the Demiurge, and the divine spark trapped within humanity.",
       "themes": [
         "gnosticism",
         "valentinianism",
@@ -62,6 +155,7 @@
       "related_texts": [
         "filastrius-gnostic-heresies"
       ],
+      "scans": null,
       "status": "queued",
       "date_queued": "2026-03-27",
       "date_drafted": null,
@@ -71,17 +165,20 @@
     },
     {
       "id": "irenaeus-against-heresies-1",
-      "author": "Irenaeus of Lyon",
-      "author_dates": "c. 130-202 AD",
+      "author_id": "irenaeus",
       "title": "Against Heresies, Book 1 (complete)",
       "original_title": "Adversus Haereses",
       "language": "Latin",
-      "source": "Patrologia Graeca 7, cols. 433-732 (Latin text; Greek fragments)",
+      "source": "Patrologia Graeca 7, cols. 433–732 (Latin text; Greek fragments)",
       "source_url": "",
-      "critical_edition": "Rousseau, A. and Doutreleau, L. (eds.), Sources Chrétiennes 263-264, Paris: Cerf, 1979",
+      "critical_edition": "Rousseau, A. and Doutreleau, L. (eds.), Sources Chrétiennes 263–264, Paris: Cerf, 1979",
       "century": 2,
+      "date_approx": "c. 180 AD",
       "era": "Ante-Nicene",
-      "description": "The earliest systematic description and refutation of Gnostic theology. Book 1 is essentially a catalog of Gnostic beliefs — Irenaeus describes Valentinian, Marcosian, and other Gnostic systems in extraordinary detail before arguing against them. The original Greek is mostly lost; the Latin translation survives in full. A foundational text for understanding what the Gnostics actually believed.",
+      "category": "heresiological",
+      "tradition": "orthodox",
+      "is_first_translation": false,
+      "description": "The earliest systematic description and refutation of Gnostic theology. Book 1 is essentially a catalog of Gnostic beliefs — Irenaeus describes Valentinian, Marcosian, and other Gnostic systems in extraordinary detail before arguing against them.",
       "themes": [
         "gnosticism",
         "valentinianism",
@@ -95,6 +192,7 @@
         "hippolytus-refutation-6",
         "filastrius-gnostic-heresies"
       ],
+      "scans": null,
       "status": "queued",
       "date_queued": "2026-03-27",
       "date_drafted": null,
@@ -104,17 +202,20 @@
     },
     {
       "id": "tertullian-against-valentinians",
-      "author": "Tertullian",
-      "author_dates": "c. 155-220 AD",
+      "author_id": "tertullian",
       "title": "Against the Valentinians",
       "original_title": "Adversus Valentinianos",
       "language": "Latin",
-      "source": "Patrologia Latina 2, cols. 539-594",
+      "source": "Patrologia Latina 2, cols. 539–594",
       "source_url": "",
-      "critical_edition": "Fredouille, J.-C. (ed.), Sources Chrétiennes 280-281, Paris: Cerf, 1980",
+      "critical_edition": "Fredouille, J.-C. (ed.), Sources Chrétiennes 280–281, Paris: Cerf, 1980",
       "century": 3,
+      "date_approx": "c. 206 AD",
       "era": "Ante-Nicene",
-      "description": "Tertullian’s sharp, satirical attack on Valentinian Gnosticism. Written entirely in Latin by one of the most vivid prose stylists in Christian history. Tertullian mocks the Valentinian cosmology while preserving detailed descriptions of their beliefs about divine emanation and the spark of divinity within humanity.",
+      "category": "heresiological",
+      "tradition": "orthodox",
+      "is_first_translation": false,
+      "description": "Tertullian’s sharp, satirical attack on Valentinian Gnosticism. Written entirely in Latin by one of the most vivid prose stylists in Christian history.",
       "themes": [
         "gnosticism",
         "valentinianism",
@@ -127,6 +228,7 @@
         "irenaeus-against-heresies-1",
         "filastrius-gnostic-heresies"
       ],
+      "scans": null,
       "status": "queued",
       "date_queued": "2026-03-27",
       "date_drafted": null,
@@ -136,17 +238,20 @@
     },
     {
       "id": "marius-victorinus-against-arius-1",
-      "author": "Marius Victorinus",
-      "author_dates": "c. 290-364 AD",
+      "author_id": "marius-victorinus",
       "title": "Against Arius, Book 1",
       "original_title": "Adversus Arium",
       "language": "Latin",
-      "source": "Patrologia Latina 8, cols. 1039-1138",
+      "source": "Patrologia Latina 8, cols. 1039–1138",
       "source_url": "",
       "critical_edition": "Henry, P. and Hadot, P. (eds.), Sources Chrétiennes 68, Paris: Cerf, 1960",
       "century": 4,
+      "date_approx": "c. 358 AD",
       "era": "Nicene",
-      "description": "A Neoplatonist philosopher who converted to Christianity in old age, Marius Victorinus brought the full apparatus of Greek philosophical thought to bear on the question of Christ’s divinity. His theology sits at the exact intersection of Platonic metaphysics and Christian doctrine — exploring how the divine nature relates to human nature through concepts drawn from both traditions. Barely translated into English and largely unknown outside specialist circles.",
+      "category": "patristic-treatise",
+      "tradition": "orthodox",
+      "is_first_translation": false,
+      "description": "A Neoplatonist philosopher who converted to Christianity in old age, Marius Victorinus brought the full apparatus of Greek philosophical thought to bear on the question of Christ’s divinity.",
       "themes": [
         "neoplatonism",
         "trinity",
@@ -156,6 +261,7 @@
         "philosophy"
       ],
       "related_texts": [],
+      "scans": null,
       "status": "queued",
       "date_queued": "2026-03-27",
       "date_drafted": null,

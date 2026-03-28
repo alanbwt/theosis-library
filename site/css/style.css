@@ -263,6 +263,10 @@ section > h2:first-child {
   border-radius: 3px;
 }
 
+.preview-parallel--3col {
+  grid-template-columns: 160px 1fr 1fr;
+}
+
 .preview-col p {
   font-size: 0.88rem;
   line-height: 1.75;
@@ -271,6 +275,18 @@ section > h2:first-child {
 
 .preview-col strong {
   color: #8b7355;
+}
+
+.preview-col--scan {
+  display: flex;
+  flex-direction: column;
+}
+
+.preview-scan-img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #e0dcd4;
+  border-radius: 2px;
 }
 
 /* --- Open Invitation --- */
@@ -389,6 +405,19 @@ section > h2:first-child {
   margin-top: 0.5rem;
 }
 
+.first-translation-badge {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6b7a4a;
+  background: #e8ead4;
+  padding: 0.2em 0.6em;
+  border-radius: 2px;
+  margin-top: 0.75rem;
+}
+
 .introduction {
   margin-bottom: 2.5rem;
 }
@@ -443,7 +472,7 @@ section > h2:first-child {
 .parallel-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 1.5rem 2rem;
   margin-bottom: 2.5rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid #e8e5de;
@@ -451,6 +480,152 @@ section > h2:first-child {
 
 .parallel-section:last-child {
   border-bottom: none;
+}
+
+/* Three-column mode (scan + original + translation) */
+.view-parallel-3 .parallel-section {
+  grid-template-columns: 200px 1fr 1fr;
+}
+
+/* Section header spans all columns */
+.section-header {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.section-actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.btn-cite,
+.btn-share {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.25em 0.6em;
+  border: 1px solid #d4d0c8;
+  border-radius: 2px;
+  background: #fff;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-cite:hover,
+.btn-share:hover {
+  border-color: #8b7355;
+  color: #8b7355;
+}
+
+/* Scan thumbnail column */
+.parallel-scan {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.scan-thumb {
+  width: 100%;
+  height: auto;
+  border: 1px solid #e0dcd4;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.scan-thumb:hover {
+  border-color: #8b7355;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Toast notification */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(1rem);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  background: #2a2a2a;
+  color: #fff;
+  padding: 0.6em 1.2em;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 1000;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Scan lightbox */
+.scan-lightbox {
+  border: none;
+  background: rgba(0,0,0,0.85);
+  max-width: 100vw;
+  max-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scan-lightbox::backdrop {
+  background: rgba(0,0,0,0.85);
+}
+
+.scan-lightbox-inner {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scan-lightbox-img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  transition: transform 0.15s ease;
+}
+
+.scan-lightbox-close {
+  position: absolute;
+  top: -2rem;
+  right: -1rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 1;
+}
+
+.scan-lightbox-hint {
+  color: #888;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.7rem;
+  margin-top: 0.75rem;
+  letter-spacing: 0.03em;
+}
+
+/* First translation badge in library listing */
+.status-badge--first {
+  background: #e8ead4;
+  color: #6b7a4a;
 }
 
 .parallel-section .section-ref {
@@ -505,12 +680,20 @@ section > h2:first-child {
 
 /* View modes */
 
+.translation-body.view-parallel .parallel-section {
+  grid-template-columns: 1fr 1fr;
+}
+
+.translation-body.view-parallel .parallel-scan {
+  display: none;
+}
+
 .translation-body.view-translation-only .parallel-section {
   grid-template-columns: 1fr;
 }
 
 .translation-body.view-translation-only .parallel-original,
-.translation-body.view-translation-only .parallel-original + .parallel-col-label {
+.translation-body.view-translation-only .parallel-scan {
   display: none;
 }
 
@@ -519,7 +702,7 @@ section > h2:first-child {
 }
 
 .translation-body.view-original-only .parallel-translation,
-.translation-body.view-original-only .parallel-translation + .parallel-col-label {
+.translation-body.view-original-only .parallel-scan {
   display: none;
 }
 
@@ -723,8 +906,26 @@ section > h2:first-child {
 
 /* --- Responsive --- */
 
+@media (max-width: 1100px) {
+  .view-parallel-3 .parallel-section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .view-parallel-3 .parallel-scan {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .view-parallel-3 .scan-thumb {
+    width: 150px;
+    flex-shrink: 0;
+  }
+}
+
 @media (max-width: 900px) {
-  .parallel-section {
+  .parallel-section,
+  .view-parallel-3 .parallel-section {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
@@ -734,9 +935,26 @@ section > h2:first-child {
     border-bottom: 1px solid #e8e5de;
   }
 
-  .preview-parallel {
+  .view-parallel-3 .parallel-scan {
+    flex-direction: row;
+  }
+
+  .view-parallel-3 .scan-thumb {
+    width: 120px;
+  }
+
+  .preview-parallel,
+  .preview-parallel--3col {
     grid-template-columns: 1fr;
     gap: 1.25rem;
+  }
+
+  .preview-scan-img {
+    max-width: 200px;
+  }
+
+  .parallel-controls .view-toggle {
+    flex-wrap: wrap;
   }
 }
 

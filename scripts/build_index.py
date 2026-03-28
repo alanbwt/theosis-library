@@ -15,9 +15,19 @@ SITE_DIR = PROJECT_ROOT / "site"
 LIBRARY_DIR = SITE_DIR / "library"
 
 
-def load_texts():
-    with open(DATA_DIR / "texts.json") as f:
+def load_json(path):
+    with open(path, encoding="utf-8") as f:
         return json.load(f)
+
+
+def resolve_authors(texts_data, authors_data):
+    """Join author info into each text record."""
+    author_map = {a["id"]: a for a in authors_data["authors"]}
+    for text in texts_data["texts"]:
+        author = author_map.get(text.get("author_id", ""), {})
+        text["author_name"] = author.get("name", "Unknown")
+        text["author_dates"] = author.get("dates", "")
+        text["author_tradition"] = author.get("tradition", "")
 
 
 def group_by_era(texts):
@@ -29,16 +39,13 @@ def group_by_era(texts):
             groups[era] = []
         groups[era].append(text)
 
-    # Sort each group by century, then by author
     for era in groups:
-        groups[era].sort(key=lambda t: (t.get("century", 0), t.get("author", "")))
+        groups[era].sort(key=lambda t: (t.get("century", 0), t.get("author_name", "")))
 
-    # Return in canonical order
     ordered = []
     for era in era_order:
         if era in groups:
             ordered.append((era, groups[era]))
-    # Add any eras not in canonical list
     for era in groups:
         if era not in era_order:
             ordered.append((era, groups[era]))
@@ -50,15 +57,22 @@ def render_text_item(text):
     status_class = f"status-badge--{text['status']}"
     themes_html = "".join(f"<span>{t}</span>" for t in text.get("themes", []))
 
+    first_badge = ""
+    if text.get("is_first_translation") and text["status"] == "published":
+        first_badge = ' <span class="status-badge status-badge--first">first translation</span>'
+
     link_start = ""
     link_end = ""
     if text["status"] == "published":
         link_start = f'<a href="/library/{text["slug"]}.html">'
         link_end = "</a>"
 
-    return f"""          <li class="text-item" data-themes="{' '.join(text.get('themes', []))}" data-author="{text['author']}" data-title="{text['title']}">
-            <h3>{link_start}{text['title']}{link_end} <span class="status-badge {status_class}">{text['status']}</span></h3>
-            <div class="text-meta">{text['author']} &middot; {text['author_dates']} &middot; {text['language']}</div>
+    tradition = text.get("tradition", "")
+    category = text.get("category", "")
+
+    return f"""          <li class="text-item" data-themes="{' '.join(text.get('themes', []))}" data-author="{text['author_name']}" data-title="{text['title']}" data-tradition="{tradition}" data-category="{category}">
+            <h3>{link_start}{text['title']}{link_end} <span class="status-badge {status_class}">{text['status']}</span>{first_badge}</h3>
+            <div class="text-meta">{text['author_name']} &middot; {text['author_dates']} &middot; {text['language']}</div>
             <div class="text-description">{text['description']}</div>
             <div class="text-themes">{themes_html}</div>
           </li>"""
@@ -93,14 +107,14 @@ def build_library_page(era_groups):
     if published_count > 0:
         status_line = f'<p style="color: #999; font-size: 0.9rem;">{published_count} published translation{"s" if published_count != 1 else ""} &middot; {total_count} texts in catalog</p>'
     else:
-        status_line = '<p style="color: #999; font-style: italic;">Published translations will appear here as they are completed. The texts below are currently in the translation queue.</p>'
+        status_line = '<p style="color: #999; font-style: italic;">Published translations will appear here as they are completed.</p>'
 
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Library &mdash; Theosis Library</title>
+  <title>Library — Theosis Library</title>
   <meta name="description" content="Browse all translations of early Christian texts in the Theosis Library.">
   <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -134,7 +148,7 @@ def build_library_page(era_groups):
 
   <footer class="site-footer">
     <div class="container">
-      <p>Theosis Library is a project of Hyperborean Press. Translations by Matt Mattimore.</p>
+      <p>Theosis Library is a project of Hyperborean Press.</p>
     </div>
   </footer>
 
@@ -145,29 +159,30 @@ def build_library_page(era_groups):
 
 
 def build_search_index(texts):
-    """Build a JSON search index for published texts with full-text content."""
+    """Build a JSON search index for published texts with passage-level content."""
     index = []
     for text in texts:
         entry = {
             "id": text["id"],
             "title": text["title"],
-            "author": text["author"],
-            "author_dates": text["author_dates"],
+            "author": text.get("author_name", ""),
+            "author_dates": text.get("author_dates", ""),
             "description": text["description"],
             "themes": text.get("themes", []),
             "slug": text["slug"],
             "status": text["status"],
             "era": text.get("era", ""),
+            "tradition": text.get("tradition", ""),
+            "category": text.get("category", ""),
+            "is_first_translation": text.get("is_first_translation", False),
         }
 
-        # If published, try to include translation content for full-text search
         if text["status"] == "published":
             published_path = (
                 PROJECT_ROOT / "translations" / "published" / f"{text['id']}.json"
             )
             if published_path.exists():
-                with open(published_path) as f:
-                    pub_data = json.load(f)
+                pub_data = load_json(published_path)
                 content = pub_data.get("draft", pub_data)
                 sections = content.get("translation", [])
                 entry["content"] = " ".join(s.get("text", "") for s in sections)
@@ -178,7 +193,10 @@ def build_search_index(texts):
 
 
 def main():
-    texts_data = load_texts()
+    texts_data = load_json(DATA_DIR / "texts.json")
+    authors_data = load_json(DATA_DIR / "authors.json")
+    resolve_authors(texts_data, authors_data)
+
     all_texts = texts_data["texts"]
     era_groups = group_by_era(all_texts)
 
