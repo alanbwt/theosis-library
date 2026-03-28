@@ -240,6 +240,107 @@ section > h2:first-child {
   border-bottom: 1px solid #e0dcd4;
 }
 
+/* --- How It Works (three layers) --- */
+
+.three-layers {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.layer {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.layer-number {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #8b7355;
+  border: 1.5px solid #8b7355;
+  border-radius: 50%;
+}
+
+.layer-content strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+}
+
+.layer-content p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* --- Translator section --- */
+
+.translator-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0dcd4;
+}
+
+.translator-section h2 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #8b7355;
+  margin-top: 0;
+  border-bottom: none;
+  padding-bottom: 0.5rem;
+}
+
+.translator-section p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* --- Library tabs --- */
+
+.library-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e0dcd4;
+}
+
+.library-tab {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  background: none;
+  color: #999;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.library-tab:hover {
+  color: #8b7355;
+}
+
+.library-tab.active {
+  color: #8b7355;
+  border-bottom-color: #8b7355;
+}
+
 /* --- Homepage Preview --- */
 
 .preview-section {
@@ -927,6 +1028,26 @@ section > h2:first-child {
 .timeline-entry {
   position: relative;
   padding: 0 0 2.5rem 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.timeline-entry-img {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f0ece4;
+}
+
+.timeline-entry-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.2);
+  opacity: 0.85;
 }
 
 .timeline-entry::before {
@@ -1064,6 +1185,25 @@ section > h2:first-child {
 
   .preview-scan-img {
     max-width: 200px;
+  }
+
+  .timeline-entry {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .timeline-entry-img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .library-tabs {
+    flex-wrap: wrap;
+  }
+
+  .library-tab {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.65rem;
   }
 
   .parallel-controls .view-toggle {
