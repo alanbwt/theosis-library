@@ -40,6 +40,12 @@ body {
   padding: 0 1.5rem;
 }
 
+.container--parallel {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
 /* --- Typography --- */
 
 h1, h2, h3, h4 {
@@ -271,6 +277,133 @@ section > h2:first-child {
   margin-bottom: 2.5rem;
 }
 
+/* --- Parallel Text (Loeb-style) --- */
+
+.parallel-controls {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  background: #f5f3ee;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.parallel-controls .view-toggle {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.parallel-controls button {
+  font-family: inherit;
+  font-size: 0.8rem;
+  padding: 0.3em 0.75em;
+  border: 1px solid #d4d0c8;
+  border-radius: 3px;
+  background: #fff;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.parallel-controls button:hover {
+  border-color: #8b7355;
+  color: #8b7355;
+}
+
+.parallel-controls button.active {
+  background: #8b7355;
+  border-color: #8b7355;
+  color: #fff;
+}
+
+.parallel-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e8e5de;
+}
+
+.parallel-section:last-child {
+  border-bottom: none;
+}
+
+.parallel-section .section-ref {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  color: #999;
+  display: block;
+  margin-bottom: 0.5rem;
+  grid-column: 1 / -1;
+}
+
+.parallel-original {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: #444;
+}
+
+.parallel-translation {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.parallel-original p,
+.parallel-translation p {
+  margin-bottom: 0.75rem;
+}
+
+.parallel-col-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8b7355;
+  margin-bottom: 0.5rem;
+}
+
+.source-link-banner {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  padding: 0.75rem 1rem;
+  background: #f5f3ee;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.source-link-banner a {
+  font-weight: 600;
+}
+
+/* View modes */
+
+.translation-body.view-translation-only .parallel-section {
+  grid-template-columns: 1fr;
+}
+
+.translation-body.view-translation-only .parallel-original,
+.translation-body.view-translation-only .parallel-original + .parallel-col-label {
+  display: none;
+}
+
+.translation-body.view-original-only .parallel-section {
+  grid-template-columns: 1fr;
+}
+
+.translation-body.view-original-only .parallel-translation,
+.translation-body.view-original-only .parallel-translation + .parallel-col-label {
+  display: none;
+}
+
+/* Legacy single-column fallback */
 .translation-body .section-block {
   margin-bottom: 2rem;
 }
@@ -453,6 +586,18 @@ section > h2:first-child {
 
 /* --- Responsive --- */
 
+@media (max-width: 900px) {
+  .parallel-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .parallel-original {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e8e5de;
+  }
+}
+
 @media (max-width: 600px) {
   html {
     font-size: 16px;
@@ -477,7 +622,13 @@ section > h2:first-child {
     font-size: 1.6rem;
   }
 
-  .container {
+  .container,
+  .container--parallel {
     padding: 0 1rem;
+  }
+
+  .parallel-controls {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

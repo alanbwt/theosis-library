@@ -65,6 +65,45 @@ TRANSLATION_TEMPLATE = """<!DOCTYPE html>
         {{ introduction }}
       </section>
 
+    </div>
+
+    {% if has_parallel %}
+    <div class="container--parallel">
+
+      {% if source_url %}
+      <div class="source-link-banner">
+        Verify this translation: <a href="{{ source_url }}" target="_blank" rel="noopener">view the original {{ language }} text &rarr;</a>
+      </div>
+      {% endif %}
+
+      <div class="parallel-controls">
+        <span>{{ language }} original &amp; English translation, section-aligned. Read side by side or toggle view.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel', this)">Parallel</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">{{ language }} only</button>
+        </div>
+      </div>
+
+      <section class="translation-body" id="translation-body">
+        {% for section in translation %}
+        <div class="parallel-section" id="section-{{ section.section | replace('.', '-') }}">
+          <span class="section-ref">&sect;{{ section.section }}{% if section.original_ref %} &middot; {{ section.original_ref }}{% endif %}</span>
+          <div class="parallel-original">
+            <div class="parallel-col-label">{{ language }}</div>
+            {{ section.original_text }}
+          </div>
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            {{ section.text }}
+          </div>
+        </div>
+        {% endfor %}
+      </section>
+
+    </div>
+    {% else %}
+    <div class="container">
       <section class="translation-body">
         <h2>Translation</h2>
         {% for section in translation %}
@@ -74,6 +113,10 @@ TRANSLATION_TEMPLATE = """<!DOCTYPE html>
         </div>
         {% endfor %}
       </section>
+    </div>
+    {% endif %}
+
+    <div class="container">
 
       {% if translator_notes %}
       <section class="notes-section">
@@ -91,7 +134,7 @@ TRANSLATION_TEMPLATE = """<!DOCTYPE html>
       <section class="source-section">
         <h2>Source &amp; Cross-References</h2>
         <ul>
-          <li><strong>Source text:</strong> {{ source }}{% if source_url %} &mdash; <a href="{{ source_url }}">view original</a>{% endif %}</li>
+          <li><strong>Source text:</strong> {{ source }}{% if source_url %} &mdash; <a href="{{ source_url }}" target="_blank" rel="noopener">view original</a>{% endif %}</li>
           {% if critical_edition %}<li><strong>Critical edition:</strong> {{ critical_edition }}</li>{% endif %}
           {% for ref in related_texts %}
           <li><a href="/library/{{ ref.slug }}.html">{{ ref.title }}</a> by {{ ref.author }}</li>
@@ -110,6 +153,18 @@ TRANSLATION_TEMPLATE = """<!DOCTYPE html>
       <p style="margin-top: 1rem;">Theosis Library is a project of Hyperborean Press.</p>
     </div>
   </footer>
+
+  <script>
+  function setView(mode, btn) {
+    var body = document.getElementById('translation-body');
+    if (!body) return;
+    body.className = 'translation-body';
+    if (mode !== 'parallel') body.classList.add('view-' + mode);
+    var btns = btn.parentElement.querySelectorAll('button');
+    for (var i = 0; i < btns.length; i++) btns[i].classList.remove('active');
+    btn.classList.add('active');
+  }
+  </script>
 
 </body>
 </html>
@@ -171,9 +226,15 @@ def publish(text_id):
     translation = content.get("translation", [])
     translator_notes = content.get("translator_notes", [])
 
-    # Wrap translation section text in paragraphs if needed
+    # Wrap translation section text and original text in paragraphs if needed
+    has_parallel = False
     for section in translation:
         section["text"] = wrap_paragraphs(section["text"])
+        if section.get("original_text"):
+            has_parallel = True
+            section["original_text"] = wrap_paragraphs(section["original_text"])
+        else:
+            section["original_text"] = ""
 
     related = get_related_texts(texts_data, text_meta)
 
@@ -196,6 +257,7 @@ def publish(text_id):
         translator_notes=translator_notes,
         related_texts=related,
         pub_date=str(date.today()),
+        has_parallel=has_parallel,
     )
 
     # Write HTML to site
