@@ -180,7 +180,8 @@ sup a {
   max-width: 320px;
   margin: 0 auto 2rem;
   overflow: hidden;
-  background: transparent;
+  background: #000000;
+  border-radius: 12px;
 }
 
 .ascii-art {
@@ -188,10 +189,10 @@ sup a {
   font-size: 4px;
   line-height: 4.5px;
   letter-spacing: 0.3px;
-  color: #2c2418;
-  background: transparent;
+  color: #ffffff;
+  background: #000000;
   margin: 0;
-  padding: 0;
+  padding: 8px;
   overflow: hidden;
   white-space: pre;
   text-align: center;
