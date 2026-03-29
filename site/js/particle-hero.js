@@ -38,11 +38,10 @@
     var cw = container.clientWidth;
     var ch = container.clientHeight;
 
-    // Calculate how many chars fit in the container exactly
-    // Font metrics: char width ≈ fontSize * 0.6, char height ≈ lineHeight
-    var fontSize = 3.8;
-    var lineHeight = 4.2;
-    var charW = fontSize * 0.6 + 0.2; // letter-spacing included
+    // Font metrics must match CSS exactly
+    var fontSize = 6;
+    var lineHeight = 6.5;
+    var charW = fontSize * 0.6 + 0.5; // letter-spacing included
     var charH = lineHeight;
 
     var width = Math.floor(cw / charW);
