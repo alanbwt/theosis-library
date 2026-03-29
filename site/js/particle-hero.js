@@ -1,7 +1,7 @@
 /**
- * Theosis Library — ASCII Art Portrait
- * Exact port of scipython.com/blog/ascii-art/ technique.
- * White ASCII characters on black background.
+ * Theosis Library — Animated ASCII Art Hero
+ * Cycles between images with a split-flap scramble transition.
+ * Gilgamesh → Jesus → loop
  */
 
 (function () {
@@ -10,70 +10,191 @@
   var container = document.getElementById('particle-hero');
   if (!container) return;
 
-  var IMAGE_SRC = '/assets/christ-portrait.jpg';
-  var ASCII_WIDTH = 160; // characters wide — increase for more detail
+  var IMAGES = [
+    '/assets/gilgamesh-statue.jpg',
+    '/assets/christ-portrait.jpg'
+  ];
+
+  var HOLD_TIME = 6000;       // ms to hold each image
+  var TRANSITION_TIME = 1500; // ms for scramble transition
+  var SCRAMBLE_CHARS = '$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,"^`\'. ';
   var CONTRAST = 10;
 
-  // Exact density string from scipython
   var density = '$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,"^`\'.          ';
-  // Trim by contrast (contrast=10 keeps almost all)
   density = density.substring(0, density.length - 11 + CONTRAST);
   var n = density.length;
 
-  // Build a <pre> element with the ASCII art (not canvas — actual text)
   var pre = document.createElement('pre');
   pre.className = 'ascii-art';
   container.appendChild(pre);
 
-  var img = new Image();
-  img.crossOrigin = 'anonymous';
-  img.onload = function () {
-    renderASCII(img);
+  var asciiFrames = [];   // pre-rendered ASCII strings per image
+  var currentIdx = 0;
+  var cols = 0;
+  var rows = 0;
+  var transitioning = false;
 
-    var resizeTimer;
-    window.addEventListener('resize', function () {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(function () { renderASCII(img); }, 300);
-    });
-  };
-  img.src = IMAGE_SRC;
-
-  function renderASCII(img) {
-    // Responsive width: more chars on bigger screens
+  function imageToASCII(img) {
     var cw = container.clientWidth;
     var width = cw > 400 ? 200 : 140;
 
-    // Calculate height with 0.5 aspect correction for character cells
-    var r = img.height / img.width;
-    var height = Math.floor(width * r * 0.5);
+    // Use 4:5 container aspect ratio for consistent sizing across images
+    var containerH = container.clientHeight;
+    var containerW = container.clientWidth;
+    var height = Math.floor(width * (containerH / containerW) * 0.55);
 
-    // Sample the image at ASCII resolution
+    cols = width;
+    rows = height;
+
     var sCanvas = document.createElement('canvas');
     var sCtx = sCanvas.getContext('2d');
     sCanvas.width = width;
     sCanvas.height = height;
     sCtx.imageSmoothingEnabled = true;
     sCtx.imageSmoothingQuality = 'high';
-    sCtx.drawImage(img, 0, 0, width, height);
+
+    // Draw image to cover the grid
+    var imgAspect = img.width / img.height;
+    var gridAspect = width / height;
+    var sx, sy, sw, sh;
+
+    if (imgAspect > gridAspect) {
+      sh = img.height;
+      sw = img.height * gridAspect;
+      sx = (img.width - sw) / 2;
+      sy = 0;
+    } else {
+      sw = img.width;
+      sh = img.width / gridAspect;
+      sx = 0;
+      sy = (img.height - sh) / 2;
+    }
+
+    sCtx.drawImage(img, sx, sy, sw, sh, 0, 0, width, height);
     var data = sCtx.getImageData(0, 0, width, height).data;
 
-    // Build ASCII string exactly like the Python version
-    var lines = [];
+    // Build flat char array
+    var chars = [];
     for (var y = 0; y < height; y++) {
-      var line = '';
       for (var x = 0; x < width; x++) {
         var i = (y * width + x) * 4;
         var gray = 0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2];
         var k = Math.floor(gray / 256 * n);
-        // n-1-k: dark pixels -> dense chars ($@B), bright pixels -> sparse chars (.  )
         var charIdx = n - 1 - k;
         if (charIdx < 0) charIdx = 0;
         if (charIdx >= n) charIdx = n - 1;
-        line += density[charIdx];
+        chars.push(density[charIdx]);
       }
-      lines.push(line);
+    }
+    return chars;
+  }
+
+  function charsToString(chars) {
+    var lines = [];
+    for (var y = 0; y < rows; y++) {
+      lines.push(chars.slice(y * cols, (y + 1) * cols).join(''));
+    }
+    return lines.join('\n');
+  }
+
+  function display(chars) {
+    pre.textContent = charsToString(chars);
+  }
+
+  function scrambleTransition(fromChars, toChars, onComplete) {
+    transitioning = true;
+    var total = fromChars.length;
+    var current = fromChars.slice(); // copy
+
+    // Assign each character a random transition time within the window
+    var timings = new Float32Array(total);
+    for (var i = 0; i < total; i++) {
+      timings[i] = Math.random(); // 0-1, will be scaled to TRANSITION_TIME
     }
 
-    pre.textContent = lines.join('\n');
+    var startTime = performance.now();
+
+    function tick(now) {
+      var elapsed = now - startTime;
+      var progress = Math.min(elapsed / TRANSITION_TIME, 1.0);
+      var changed = false;
+
+      for (var i = 0; i < total; i++) {
+        if (current[i] === toChars[i]) continue; // already settled
+
+        if (progress >= timings[i] + 0.15) {
+          // Settled on target
+          current[i] = toChars[i];
+          changed = true;
+        } else if (progress >= timings[i]) {
+          // Scrambling phase — show random chars
+          current[i] = SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)];
+          changed = true;
+        }
+      }
+
+      if (changed || progress < 1.0) {
+        display(current);
+      }
+
+      if (progress < 1.0) {
+        requestAnimationFrame(tick);
+      } else {
+        display(toChars);
+        transitioning = false;
+        if (onComplete) onComplete();
+      }
+    }
+
+    requestAnimationFrame(tick);
   }
+
+  function cycle() {
+    var nextIdx = (currentIdx + 1) % asciiFrames.length;
+    scrambleTransition(asciiFrames[currentIdx], asciiFrames[nextIdx], function () {
+      currentIdx = nextIdx;
+      setTimeout(cycle, HOLD_TIME);
+    });
+  }
+
+  // Load all images, pre-render ASCII, start cycling
+  function loadImages(urls, cb) {
+    var loaded = 0, imgs = [];
+    urls.forEach(function (url, idx) {
+      var img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.onload = function () { imgs[idx] = img; loaded++; if (loaded === urls.length) cb(imgs); };
+      img.onerror = function () { imgs[idx] = null; loaded++; if (loaded === urls.length) cb(imgs); };
+      img.src = url;
+    });
+  }
+
+  loadImages(IMAGES, function (imgs) {
+    imgs.filter(Boolean).forEach(function (img) {
+      asciiFrames.push(imageToASCII(img));
+    });
+
+    if (!asciiFrames.length) return;
+
+    // Show first image
+    display(asciiFrames[0]);
+    currentIdx = 0;
+
+    // Start cycling after hold time
+    setTimeout(cycle, HOLD_TIME);
+
+    // Re-render on resize
+    var resizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        var newFrames = [];
+        imgs.filter(Boolean).forEach(function (img) {
+          newFrames.push(imageToASCII(img));
+        });
+        asciiFrames = newFrames;
+        display(asciiFrames[currentIdx]);
+      }, 300);
+    });
+  });
 })();
