@@ -41,7 +41,7 @@
   function renderASCII(img) {
     // Responsive width: more chars on bigger screens
     var cw = container.clientWidth;
-    var width = cw > 900 ? 280 : cw > 600 ? 220 : cw > 400 ? 160 : 120;
+    var width = cw > 400 ? 200 : 140;
 
     // Calculate height with 0.5 aspect correction for character cells
     var r = img.height / img.width;

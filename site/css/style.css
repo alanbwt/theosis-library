@@ -177,22 +177,21 @@ sup a {
 
 .particle-hero-wrap {
   width: 100%;
-  max-width: 750px;
+  max-width: 320px;
   margin: 0 auto 2rem;
-  border-radius: 12px;
   overflow: hidden;
-  background: #000000;
+  background: transparent;
 }
 
 .ascii-art {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 4.5px;
-  line-height: 5px;
+  font-size: 4px;
+  line-height: 4.5px;
   letter-spacing: 0.3px;
-  color: #ffffff;
-  background: #000000;
+  color: #2c2418;
+  background: transparent;
   margin: 0;
-  padding: 10px;
+  padding: 0;
   overflow: hidden;
   white-space: pre;
   text-align: center;
@@ -2128,16 +2127,14 @@ section > h2:first-child {
   .evidence-hero h1 {
 
   .particle-hero-wrap {
-    max-width: 100%;
-    margin-bottom: 1.25rem;
-    border-radius: 8px;
+    max-width: 240px;
+    margin-bottom: 1rem;
   }
 
   .ascii-art {
     font-size: 3px;
     line-height: 3.5px;
     letter-spacing: 0.2px;
-    padding: 6px;
   }
     font-size: 1.5rem;
     margin-bottom: 0.4rem;
