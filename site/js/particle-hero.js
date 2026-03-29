@@ -74,7 +74,10 @@
       sy = (img.height - sh) / 2;
     }
 
+    // Boost brightness and contrast so dark paintings are visible as ASCII
+    sCtx.filter = 'brightness(1.5) contrast(1.8)';
     sCtx.drawImage(img, sx, sy, sw, sh, 0, 0, width, height);
+    sCtx.filter = 'none';
     var data = sCtx.getImageData(0, 0, width, height).data;
 
     // Build flat char array
