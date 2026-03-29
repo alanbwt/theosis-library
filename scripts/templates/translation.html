@@ -15,6 +15,7 @@
       <nav class="site-nav">
         <a href="/">Home</a>
         <a href="/library/">Library</a>
+        <a href="/quotes/">Quotes</a>
       </nav>
     </div>
   </header>
@@ -127,6 +128,27 @@
         </ol>
       </section>
       {% endif %}
+
+      <section class="export-section">
+        <h2>Export</h2>
+        <div class="export-buttons">
+          <a href="/downloads/{{ slug }}.html" target="_blank" class="export-btn">Print / PDF</a>
+          <button class="export-btn" onclick="copyBibtex()">Copy BibTeX</button>
+        </div>
+        <script>
+        function copyBibtex() {
+          var bib = '@misc{theosis_{{ slug | replace("-", "_") }},\n' +
+            '  author = {Alan B.},\n' +
+            '  title = { {{- title -}} },\n' +
+            '  year = { {{- pub_year -}} },\n' +
+            '  publisher = {Theosis Library},\n' +
+            '  url = {https://theosislibrary.com/library/{{ slug }}.html},\n' +
+            '  note = {Translated from {{ language }}. {{ source }}}\n' +
+            '}';
+          navigator.clipboard.writeText(bib).then(function() { showToast('BibTeX copied'); });
+        }
+        </script>
+      </section>
 
       <section class="source-section">
         <h2>Source & Cross-References</h2>

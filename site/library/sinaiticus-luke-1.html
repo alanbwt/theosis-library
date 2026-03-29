@@ -15,6 +15,7 @@
       <nav class="site-nav">
         <a href="/">Home</a>
         <a href="/library/">Library</a>
+        <a href="/quotes/">Quotes</a>
       </nav>
     </div>
   </header>
@@ -163,13 +164,32 @@
       </section>
       
 
+      <section class="export-section">
+        <h2>Export</h2>
+        <div class="export-buttons">
+          <a href="/downloads/sinaiticus-luke-1.html" target="_blank" class="export-btn">Print / PDF</a>
+          <button class="export-btn" onclick="copyBibtex()">Copy BibTeX</button>
+        </div>
+        <script>
+        function copyBibtex() {
+          var bib = '@misc{theosis_sinaiticus_luke_1,\n' +
+            '  author = {Alan B.},\n' +
+            '  title = {Gospel of Luke 1:1-4: The Historian's Prologue},\n' +
+            '  year = {2026},\n' +
+            '  publisher = {Theosis Library},\n' +
+            '  url = {https://theosislibrary.com/library/sinaiticus-luke-1.html},\n' +
+            '  note = {Translated from Greek. Codex Sinaiticus (4th century), British Library Add. MS 43725}\n' +
+            '}';
+          navigator.clipboard.writeText(bib).then(function() { showToast('BibTeX copied'); });
+        }
+        </script>
+      </section>
+
       <section class="source-section">
         <h2>Source & Cross-References</h2>
         <ul>
           <li><strong>Source text:</strong> Codex Sinaiticus (4th century), British Library Add. MS 43725 — <a href="https://codexsinaiticus.org/" target="_blank" rel="noopener">view original</a></li>
           <li><strong>Critical edition:</strong> Lake, K. and Lake, S. (eds.), Codex Sinaiticus Petropolitanus, Oxford: Clarendon Press, 1911</li>
-          
-          <li><a href="/library/sinaiticus-mark-1.html">Gospel of Mark 1:1-11: The Beginning and the Baptism</a> by Mark (attributed)</li>
           
           <li><a href="/library/sinaiticus-john-1.html">Gospel of John, Chapter 1:1–18 (The Logos Prologue)</a> by John (attributed)</li>
           

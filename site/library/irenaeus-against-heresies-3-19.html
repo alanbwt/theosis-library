@@ -15,6 +15,7 @@
       <nav class="site-nav">
         <a href="/">Home</a>
         <a href="/library/">Library</a>
+        <a href="/quotes/">Quotes</a>
       </nav>
     </div>
   </header>
@@ -203,6 +204,27 @@
         </ol>
       </section>
       
+
+      <section class="export-section">
+        <h2>Export</h2>
+        <div class="export-buttons">
+          <a href="/downloads/irenaeus-against-heresies-3-19.html" target="_blank" class="export-btn">Print / PDF</a>
+          <button class="export-btn" onclick="copyBibtex()">Copy BibTeX</button>
+        </div>
+        <script>
+        function copyBibtex() {
+          var bib = '@misc{theosis_irenaeus_against_heresies_3_19,\n' +
+            '  author = {Alan B.},\n' +
+            '  title = {Against Heresies, Book III, Chapter 19: "He Became What We Are"},\n' +
+            '  year = {2026},\n' +
+            '  publisher = {Theosis Library},\n' +
+            '  url = {https://theosislibrary.com/library/irenaeus-against-heresies-3-19.html},\n' +
+            '  note = {Translated from Latin. Patrologia Graeca 7, cols. 939-941}\n' +
+            '}';
+          navigator.clipboard.writeText(bib).then(function() { showToast('BibTeX copied'); });
+        }
+        </script>
+      </section>
 
       <section class="source-section">
         <h2>Source & Cross-References</h2>

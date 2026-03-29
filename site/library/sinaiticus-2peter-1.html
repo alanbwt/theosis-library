@@ -15,6 +15,7 @@
       <nav class="site-nav">
         <a href="/">Home</a>
         <a href="/library/">Library</a>
+        <a href="/quotes/">Quotes</a>
       </nav>
     </div>
   </header>
@@ -162,6 +163,27 @@
         </ol>
       </section>
       
+
+      <section class="export-section">
+        <h2>Export</h2>
+        <div class="export-buttons">
+          <a href="/downloads/sinaiticus-2peter-1.html" target="_blank" class="export-btn">Print / PDF</a>
+          <button class="export-btn" onclick="copyBibtex()">Copy BibTeX</button>
+        </div>
+        <script>
+        function copyBibtex() {
+          var bib = '@misc{theosis_sinaiticus_2peter_1,\n' +
+            '  author = {Alan B.},\n' +
+            '  title = {2 Peter 1:3–4: “Partakers of the Divine Nature”},\n' +
+            '  year = {2026},\n' +
+            '  publisher = {Theosis Library},\n' +
+            '  url = {https://theosislibrary.com/library/sinaiticus-2peter-1.html},\n' +
+            '  note = {Translated from Greek. Codex Sinaiticus (4th century), British Library Add. MS 43725}\n' +
+            '}';
+          navigator.clipboard.writeText(bib).then(function() { showToast('BibTeX copied'); });
+        }
+        </script>
+      </section>
 
       <section class="source-section">
         <h2>Source & Cross-References</h2>

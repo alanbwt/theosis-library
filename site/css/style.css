@@ -1129,6 +1129,52 @@ section > h2:first-child {
   margin-bottom: 1.5rem;
 }
 
+/* --- Export section --- */
+
+.export-section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e8e5de;
+}
+
+.export-section h2 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #8b7355;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.export-btn {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.5em 1.25em;
+  border: 1px solid #d4d0c8;
+  border-radius: 3px;
+  background: #fff;
+  color: #666;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.export-btn:hover {
+  border-color: #8b7355;
+  color: #8b7355;
+}
+
 .browse-link {
   display: inline-block;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;

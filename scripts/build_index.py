@@ -126,6 +126,7 @@ def build_library_page(era_groups):
       <nav class="site-nav">
         <a href="/">Home</a>
         <a href="/library/">Library</a>
+        <a href="/quotes/">Quotes</a>
       </nav>
     </div>
   </header>
