@@ -177,18 +177,26 @@ sup a {
 
 .particle-hero-wrap {
   width: 100%;
-  max-width: 500px;
-  height: 500px;
+  max-width: 700px;
   margin: 0 auto 2rem;
   border-radius: 12px;
   overflow: hidden;
   background: #0a0a0a;
 }
 
-.particle-hero-wrap canvas {
-  display: block;
-  width: 100%;
-  height: 100%;
+.ascii-art {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 5px;
+  line-height: 5.5px;
+  letter-spacing: 0.5px;
+  color: #e0e0e0;
+  background: #0a0a0a;
+  margin: 0;
+  padding: 8px;
+  overflow: hidden;
+  white-space: pre;
+  text-align: center;
+  user-select: none;
 }
 
 .evidence-search-wrap {
@@ -2122,6 +2130,14 @@ section > h2:first-child {
   .particle-hero-wrap {
     max-width: 100%;
     margin-bottom: 1.25rem;
+    border-radius: 8px;
+  }
+
+  .ascii-art {
+    font-size: 3.5px;
+    line-height: 4px;
+    letter-spacing: 0.3px;
+    padding: 6px;
   }
     font-size: 1.5rem;
     margin-bottom: 0.4rem;
