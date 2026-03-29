@@ -177,17 +177,18 @@ sup a {
 
 .particle-hero-wrap {
   width: 100%;
-  height: 380px;
-  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  aspect-ratio: 3 / 4;
   border-radius: 12px;
   overflow: hidden;
+  background: #0a0a0a;
 }
 
 .particle-hero-wrap canvas {
   display: block;
   width: 100%;
   height: 100%;
-  border-radius: 12px;
 }
 
 .evidence-search-wrap {
@@ -2119,8 +2120,8 @@ section > h2:first-child {
   .evidence-hero h1 {
 
   .particle-hero-wrap {
-    height: 240px;
-    margin-bottom: 1rem;
+    max-width: 100%;
+    margin-bottom: 1.25rem;
   }
     font-size: 1.5rem;
     margin-bottom: 0.4rem;
