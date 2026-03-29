@@ -1,7 +1,7 @@
 /**
  * Theosis Library — ASCII Art Portrait
- * Renders source image as dense ASCII characters on dark background.
- * High-res, monochrome, like a terminal art masterpiece.
+ * Based on the scipython.com/blog/ascii-art/ technique.
+ * Dense character set, inverted brightness mapping, 0.5 aspect correction.
  */
 
 (function () {
@@ -18,11 +18,10 @@
 
   var IMAGE_SRC = '/assets/christ-portrait.jpg';
 
-  // ASCII characters from darkest to lightest
-  var CHARS = ' .\'`^",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$';
+  // The exact 70-char density string from scipython, densest to lightest
+  var DENSITY = '$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,"^`\'. ';
 
   var dpr = Math.min(window.devicePixelRatio || 1, 2);
-  var rendered = false;
 
   function render(img) {
     var cw = container.clientWidth;
@@ -36,86 +35,92 @@
     ctx.fillStyle = '#0a0a0a';
     ctx.fillRect(0, 0, cw, ch);
 
-    // Determine font size for density
-    // Smaller font = more characters = higher fidelity
-    var fontSize = cw > 800 ? 6 : cw > 500 ? 5.5 : 5;
-    var charW = fontSize * 0.6;
-    var charH = fontSize * 1.0;
+    // Font size — smaller = denser = higher fidelity
+    var fontSize = cw > 900 ? 7 : cw > 600 ? 6 : cw > 400 ? 5.5 : 5;
 
-    // How many characters fit
+    // Measure actual character dimensions
+    ctx.font = fontSize + 'px Courier New, Courier, monospace';
+    var charW = ctx.measureText('M').width;
+    var charH = fontSize * 1.15; // line height
+
+    // How many chars fit in the container
     var cols = Math.floor(cw / charW);
     var rows = Math.floor(ch / charH);
 
-    // Sample image at that resolution
+    if (cols < 10 || rows < 10) return;
+
+    // Sample the image at ASCII resolution
+    // The 0.5 aspect correction is built into the grid: we use charH which is ~2x charW
     var sCanvas = document.createElement('canvas');
     var sCtx = sCanvas.getContext('2d');
     sCanvas.width = cols;
     sCanvas.height = rows;
 
-    // Draw image centered/cover
-    var imgAspect = img.width / img.height;
-    var containerAspect = cols / rows * (charH / charW);
-    var drawW, drawH, drawX, drawY;
+    // Enable high-quality downsampling (equivalent to LANCZOS)
+    sCtx.imageSmoothingEnabled = true;
+    sCtx.imageSmoothingQuality = 'high';
 
-    if (imgAspect > containerAspect) {
-      drawH = rows;
-      drawW = rows * imgAspect * (charW / charH);
-      drawX = (cols - drawW) / 2;
-      drawY = 0;
+    // Draw image to fill the grid (cover)
+    var imgAspect = img.width / img.height;
+    var gridAspect = (cols * charW) / (rows * charH);
+    var sx, sy, sw, sh;
+
+    if (imgAspect > gridAspect) {
+      // Image wider than grid — crop sides
+      sh = img.height;
+      sw = img.height * gridAspect;
+      sx = (img.width - sw) / 2;
+      sy = 0;
     } else {
-      drawW = cols;
-      drawH = cols / imgAspect * (charH / charW);
-      drawX = 0;
-      drawY = (rows - drawH) / 2;
+      // Image taller than grid — crop top/bottom
+      sw = img.width;
+      sh = img.width / gridAspect;
+      sx = 0;
+      sy = (img.height - sh) / 2;
     }
 
-    sCtx.drawImage(img, drawX, drawY, drawW, drawH);
+    sCtx.drawImage(img, sx, sy, sw, sh, 0, 0, cols, rows);
     var data = sCtx.getImageData(0, 0, cols, rows).data;
 
-    // Render ASCII
-    ctx.font = fontSize + 'px monospace';
+    var n = DENSITY.length;
+
+    // Set font for rendering
+    ctx.font = fontSize + 'px Courier New, Courier, monospace';
     ctx.textBaseline = 'top';
 
     for (var y = 0; y < rows; y++) {
       for (var x = 0; x < cols; x++) {
         var i = (y * cols + x) * 4;
-        var r = data[i], g = data[i + 1], b = data[i + 2], a = data[i + 3];
+        var r = data[i], g = data[i + 1], b = data[i + 2];
 
-        if (a < 10) continue;
+        // Convert to grayscale
+        var gray = 0.299 * r + 0.587 * g + 0.114 * b;
 
-        var brightness = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+        // Map to character — bright pixel = dense/visible char, dark = sparse/space
+        var charIdx = Math.floor(gray / 256 * n);
+        if (charIdx >= n) charIdx = n - 1;
+        var ch_char = DENSITY[charIdx];
 
-        // Map brightness to character
-        var charIdx = Math.floor(brightness * (CHARS.length - 1));
-        var ch_char = CHARS[charIdx];
+        if (ch_char === ' ' || ch_char === '.' || ch_char === "'") continue;
 
-        if (ch_char === ' ') continue;
-
-        // Use brightness for alpha/intensity
-        var intensity = 0.3 + brightness * 0.7;
-        ctx.fillStyle = 'rgba(255,255,255,' + intensity + ')';
+        // Brighter pixels get more visible characters
+        var alpha = 0.4 + (gray / 255) * 0.6;
+        ctx.fillStyle = 'rgba(220,220,215,' + alpha.toFixed(2) + ')';
         ctx.fillText(ch_char, x * charW, y * charH);
       }
     }
-
-    rendered = true;
   }
 
-  function init() {
-    var img = new Image();
-    img.crossOrigin = 'anonymous';
-    img.onload = function () {
-      render(img);
+  var img = new Image();
+  img.crossOrigin = 'anonymous';
+  img.onload = function () {
+    render(img);
 
-      // Re-render on resize
-      var resizeTimer;
-      window.addEventListener('resize', function () {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function () { render(img); }, 200);
-      });
-    };
-    img.src = IMAGE_SRC;
-  }
-
-  init();
+    var resizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () { render(img); }, 250);
+    });
+  };
+  img.src = IMAGE_SRC;
 })();
