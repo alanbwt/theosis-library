@@ -11,7 +11,7 @@
   if (!container) return;
 
   var IMAGES = [
-    '/assets/dore-leviathan.jpg',
+    '/assets/dore-leviathan.png',
     '/assets/dore-jesus.jpg'
   ];
 
