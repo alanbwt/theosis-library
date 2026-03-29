@@ -5,6 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }} — Theosis Library</title>
   <meta name="description" content="{{ description }}">
+  <!-- OpenGraph -->
+  <meta property="og:title" content="{{ title }} — Theosis Library">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://theosislibrary.com/library/{{ slug }}.html">
+  <meta property="og:site_name" content="Theosis Library">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "name": "{{ title }}",
+    "author": {"@type": "Person", "name": "Alan B."},
+    "datePublished": "{{ pub_date }}",
+    "publisher": {"@type": "Organization", "name": "Theosis Library"},
+    "description": "{{ description }}",
+    "url": "https://theosislibrary.com/library/{{ slug }}.html",
+    "inLanguage": ["en", "{{ language | lower }}"],
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+  }
+  </script>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>

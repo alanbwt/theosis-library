@@ -927,10 +927,78 @@ section > h2:first-child {
 
 .search-results-info {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: #999;
   margin-bottom: 1rem;
   display: none;
+}
+
+.search-results {
+  margin-bottom: 2rem;
+}
+
+.search-group {
+  margin-bottom: 1.5rem;
+}
+
+.search-group-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  color: #8b7355;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid #e8e5de;
+}
+
+.search-group-title em {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.search-result {
+  display: block;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.25rem;
+  background: #f8f6f2;
+  border-radius: 3px;
+  color: #2a2a2a;
+  border-bottom: none;
+  transition: background 0.15s;
+}
+
+.search-result:hover {
+  background: #f0ece4;
+  border-bottom: none;
+}
+
+.search-result-ref {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.7rem;
+  color: #999;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.search-result-snippet {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+.search-result-snippet mark {
+  background: rgba(139, 115, 85, 0.15);
+  color: #2a2a2a;
+  padding: 0.1em 0.15em;
+  border-radius: 2px;
+}
+
+.search-no-results {
+  font-size: 0.9rem;
+  color: #999;
+  font-style: italic;
+  padding: 1rem 0;
 }
 
 /* --- About Page --- */
@@ -1127,6 +1195,98 @@ section > h2:first-child {
   color: #888;
   font-style: italic;
   margin-bottom: 1.5rem;
+}
+
+/* --- Reading Paths --- */
+
+.path-header {
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+
+.path-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #8b7355;
+  margin-bottom: 0.5rem;
+}
+
+.path-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.path-description {
+  font-size: 1rem;
+  color: #666;
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.path-list {
+  list-style: none;
+  padding: 0;
+  counter-reset: none;
+}
+
+.path-step {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e8e5de;
+  align-items: flex-start;
+}
+
+.path-step:last-child {
+  border-bottom: none;
+}
+
+.path-number {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #8b7355;
+  border: 1.5px solid #8b7355;
+  border-radius: 50%;
+  margin-top: 0.2rem;
+}
+
+.path-content h3 {
+  font-size: 1.05rem;
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+}
+
+.path-content h3 a {
+  color: #2a2a2a;
+}
+
+.path-content h3 a:hover {
+  color: #8b7355;
+  border-bottom-color: #8b7355;
+}
+
+.path-meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.7rem;
+  color: #999;
+  margin-bottom: 0.25rem;
+}
+
+.path-content p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.55;
+  margin-bottom: 0;
 }
 
 /* --- Export section --- */

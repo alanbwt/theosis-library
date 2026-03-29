@@ -260,7 +260,7 @@ def build_library_page(era_groups):
     </div>
   </footer>
 
-  <script src="../js/search.js"></script>
+  <script type="module" src="../js/search.js"></script>
   <script>
   function switchView(view, btn) {{
     var views = ['full', 'ancient', 'first', 'canon'];
