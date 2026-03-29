@@ -754,6 +754,153 @@
       "date_reviewed": null,
       "date_published": null,
       "slug": "marius-victorinus-against-arius-1"
+    },
+    {
+      "id": "septuagint-psalm-82",
+      "author_id": "psalmist",
+      "title": "Psalm 82: \"I Said, You Are Gods\"",
+      "original_title": "Ψαλμός 81 (LXX)",
+      "language": "Greek",
+      "source": "Septuagint (LXX), Psalm 81",
+      "source_url": "",
+      "critical_edition": "Rahlfs, A. (ed.), Septuaginta, Stuttgart: Deutsche Bibelgesellschaft, 2006",
+      "century": -8,
+      "date_approx": "c. 8th-6th c. BCE",
+      "era": "Hebrew Bible",
+      "category": "scripture",
+      "tradition": "jewish",
+      "is_first_translation": false,
+      "description": "The psalm Jesus quotes at John 10:34. God stands in the divine assembly, judges the gods, and declares: \"I said, you are gods.\" The most important Old Testament text for the theosis debate.",
+      "themes": [
+        "theosis",
+        "divine-council",
+        "gods",
+        "psalm-82",
+        "divinization"
+      ],
+      "related_texts": [
+        "sinaiticus-john-10",
+        "sinaiticus-2peter-1"
+      ],
+      "scans": {
+        "source": "Codex Sinaiticus",
+        "edition": "Codex Sinaiticus",
+        "pages": [
+          {
+            "file": "sinaiticus/sinaiticus-psalm-82a.jpg",
+            "page_label": "Psalm 82",
+            "sections": [
+              "82:1",
+              "82:2-4",
+              "82:5",
+              "82:6-7",
+              "82:8"
+            ]
+          }
+        ]
+      },
+      "status": "published",
+      "date_queued": "2026-03-29",
+      "date_drafted": "2026-03-29",
+      "date_reviewed": "2026-03-29",
+      "date_published": "2026-03-29",
+      "slug": "septuagint-psalm-82"
+    },
+    {
+      "id": "septuagint-genesis-1",
+      "author_id": "moses-attributed",
+      "title": "Genesis 1:26-28: \"Let Us Make Man in Our Image\"",
+      "original_title": "Γένεσις",
+      "language": "Greek",
+      "source": "Septuagint (LXX), Genesis 1",
+      "source_url": "",
+      "critical_edition": "Rahlfs, A. (ed.), Septuaginta, Stuttgart: Deutsche Bibelgesellschaft, 2006",
+      "century": -13,
+      "date_approx": "traditional (Mosaic)",
+      "era": "Hebrew Bible",
+      "category": "scripture",
+      "tradition": "jewish",
+      "is_first_translation": false,
+      "description": "The creation of humanity in the image (eikon) and likeness (homoiosis) of God. The distinction between image and likeness became central to the theosis tradition: image is given at creation, likeness is achieved through divinization.",
+      "themes": [
+        "image-of-god",
+        "creation",
+        "theosis",
+        "anthropology"
+      ],
+      "related_texts": [
+        "septuagint-psalm-82",
+        "sinaiticus-2peter-1"
+      ],
+      "scans": {
+        "source": "Codex Sinaiticus",
+        "edition": "Codex Sinaiticus",
+        "pages": [
+          {
+            "file": "sinaiticus/sinaiticus-genesis-1a.jpg",
+            "page_label": "Genesis 1:26-28",
+            "sections": [
+              "1:26-27",
+              "1:28"
+            ]
+          }
+        ]
+      },
+      "status": "published",
+      "date_queued": "2026-03-29",
+      "date_drafted": "2026-03-29",
+      "date_reviewed": "2026-03-29",
+      "date_published": "2026-03-29",
+      "slug": "septuagint-genesis-1"
+    },
+    {
+      "id": "nicene-creed",
+      "author_id": "nicene-council",
+      "title": "The Nicene Creed (Niceno-Constantinopolitan, 381 AD)",
+      "original_title": "Σύμβολον τῆς Νικαίας",
+      "language": "Greek",
+      "source": "Acts of the Council of Constantinople (381 AD)",
+      "source_url": "",
+      "critical_edition": "Denzinger, H. (ed.), Enchiridion Symbolorum, 43rd ed., San Francisco: Ignatius Press, 2012",
+      "century": 4,
+      "date_approx": "325 / 381 AD",
+      "era": "Nicene",
+      "category": "conciliar",
+      "tradition": "orthodox",
+      "is_first_translation": false,
+      "description": "The formal resolution of the first great theological crisis. Defines Christ as homoousios (of one substance) with the Father. For the theosis tradition, the Creed is both foundation and constraint.",
+      "themes": [
+        "homoousios",
+        "trinity",
+        "nicene-theology",
+        "christology",
+        "creed"
+      ],
+      "related_texts": [
+        "athanasius-incarnation-54",
+        "irenaeus-against-heresies-3-19"
+      ],
+      "scans": {
+        "source": "Patristic sources",
+        "edition": "Conciliar Acts",
+        "pages": [
+          {
+            "file": "nicaea/nicene-creed-1a.jpg",
+            "page_label": "Nicene Creed",
+            "sections": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        ]
+      },
+      "status": "published",
+      "date_queued": "2026-03-29",
+      "date_drafted": "2026-03-29",
+      "date_reviewed": "2026-03-29",
+      "date_published": "2026-03-29",
+      "slug": "nicene-creed"
     }
   ]
 }

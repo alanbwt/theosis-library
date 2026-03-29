@@ -1197,6 +1197,190 @@ section > h2:first-child {
   margin-bottom: 1.5rem;
 }
 
+/* --- Annotations --- */
+
+.annot-highlight {
+  background: rgba(139, 115, 85, 0.12);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.annot-toolbar {
+  position: absolute;
+  z-index: 999;
+  display: none;
+  pointer-events: none;
+}
+
+.annot-toolbar.visible {
+  display: flex;
+  pointer-events: auto;
+  gap: 4px;
+}
+
+.annot-toolbar-btn {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.7rem;
+  padding: 0.35em 0.75em;
+  border: 1px solid #d4d0c8;
+  border-radius: 3px;
+  background: #fff;
+  color: #666;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  white-space: nowrap;
+}
+
+.annot-toolbar-btn:hover {
+  border-color: #8b7355;
+  color: #8b7355;
+}
+
+.annot-badge {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 998;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  padding: 0.5em 1em;
+  border: 1px solid #d4d0c8;
+  border-radius: 20px;
+  background: #fff;
+  color: #666;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.annot-badge:hover {
+  border-color: #8b7355;
+  color: #8b7355;
+}
+
+.annot-badge-count {
+  background: #f0ece4;
+  padding: 0.1em 0.5em;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #8b7355;
+}
+
+.annot-panel {
+  position: fixed;
+  bottom: 4rem;
+  right: 1.5rem;
+  z-index: 998;
+  width: 320px;
+  max-height: 60vh;
+  background: #fff;
+  border: 1px solid #d4d0c8;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.annot-panel.open {
+  display: flex;
+}
+
+.annot-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e8e5de;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #2a2a2a;
+}
+
+.annot-panel-close {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.annot-panel-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.75rem 1rem;
+}
+
+.annot-empty {
+  font-size: 0.85rem;
+  color: #999;
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+.annot-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0ece4;
+}
+
+.annot-item:last-child {
+  border-bottom: none;
+}
+
+.annot-item-text {
+  font-size: 0.85rem;
+  color: #444;
+  font-style: italic;
+  line-height: 1.4;
+  margin-bottom: 0.25rem;
+}
+
+.annot-item-note {
+  font-size: 0.85rem;
+  color: #2a2a2a;
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+.annot-item-meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.65rem;
+  color: #bbb;
+}
+
+.annot-item-meta a {
+  color: #ccc;
+  font-size: 0.65rem;
+}
+
+.annot-panel-footer {
+  padding: 0.5rem 1rem;
+  border-top: 1px solid #e8e5de;
+}
+
+.annot-export-btn {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.4em 0.8em;
+  border: 1px solid #d4d0c8;
+  border-radius: 3px;
+  background: #fff;
+  color: #888;
+  cursor: pointer;
+  width: 100%;
+}
+
+.annot-export-btn:hover {
+  border-color: #8b7355;
+  color: #8b7355;
+}
+
 /* --- Morphological Popups --- */
 
 .morph-word-clickable {
