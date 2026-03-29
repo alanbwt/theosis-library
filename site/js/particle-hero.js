@@ -11,7 +11,7 @@
   if (!container) return;
 
   var IMAGES = [
-    '/assets/gilgamesh-statue.jpg',
+    '/assets/achilles-centaur.jpg',
     '/assets/christ-portrait.jpg'
   ];
 
@@ -58,23 +58,21 @@
     sCtx.imageSmoothingEnabled = true;
     sCtx.imageSmoothingQuality = 'high';
 
-    // Draw image to cover the grid — crop from TOP, never stretch
+    // Draw image to cover the grid — center crop, never stretch
     var imgAspect = img.width / img.height;
     var gridAspect = width / height;
     var sx, sy, sw, sh;
 
     if (imgAspect > gridAspect) {
-      // Image wider than grid — crop sides, keep centered
       sh = img.height;
       sw = img.height * gridAspect;
       sx = (img.width - sw) / 2;
       sy = 0;
     } else {
-      // Image taller than grid — crop bottom, keep TOP
       sw = img.width;
       sh = img.width / gridAspect;
       sx = 0;
-      sy = 0; // TOP aligned, not centered
+      sy = (img.height - sh) / 2;
     }
 
     sCtx.drawImage(img, sx, sy, sw, sh, 0, 0, width, height);
