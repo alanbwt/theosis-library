@@ -176,12 +176,13 @@ sup a {
 }
 
 .particle-hero-wrap {
-  width: 280px;
-  height: 360px;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 4 / 5;
   margin: 0 auto 2rem;
   overflow: hidden;
   background: #000000;
-  border-radius: 50%;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2131,9 +2132,9 @@ section > h2:first-child {
   .evidence-hero h1 {
 
   .particle-hero-wrap {
-    width: 200px;
-    height: 260px;
+    max-width: 260px;
     margin-bottom: 1rem;
+    border-radius: 12px;
   }
 
   .ascii-art {
