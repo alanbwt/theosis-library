@@ -154,14 +154,317 @@ sup a {
   color: #8b7355;
 }
 
-/* --- Hero / Mission Statement --- */
+/* --- Evidence Engine Hero --- */
+
+.evidence-hero {
+  padding: 4rem 0 3rem;
+  text-align: center;
+}
+
+.evidence-hero h1 {
+  font-size: 2rem;
+  font-weight: normal;
+  font-style: italic;
+  color: #2a2a2a;
+  margin-bottom: 0.5rem;
+}
+
+.evidence-subtitle {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+.evidence-search-wrap {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  position: relative;
+}
+
+.evidence-search {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+  border: 2px solid #d4d0c8;
+  border-radius: 8px;
+  background: #fff;
+  color: #2a2a2a;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.evidence-search:focus {
+  border-color: #8b7355;
+  box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
+}
+
+.evidence-search::placeholder {
+  color: #bbb;
+  font-style: italic;
+}
+
+.evidence-suggestions {
+  display: none;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  padding: 0.75rem 0;
+}
+
+.suggestion {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.72rem;
+  padding: 0.35em 0.75em;
+  background: #f5f3ee;
+  border: 1px solid #e8e5de;
+  border-radius: 20px;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.suggestion:hover {
+  border-color: #8b7355;
+  color: #8b7355;
+  background: #fff;
+}
+
+.evidence-pills {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.evidence-pill {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.5em 1.25em;
+  border: 1px solid #d4d0c8;
+  border-radius: 20px;
+  color: #888;
+  transition: all 0.15s;
+}
+
+.evidence-pill:hover {
+  border-color: #8b7355;
+  color: #8b7355;
+}
+
+.evidence-stats {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  color: #bbb;
+  letter-spacing: 0.03em;
+}
+
+/* --- Passage Card Grid --- */
+
+.iconic-section h2,
+.how-section h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.passage-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e8e5de;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #2a2a2a;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.passage-card:hover {
+  border-color: #c8c2b6;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border-bottom-color: #c8c2b6;
+}
+
+.card-scan {
+  height: 140px;
+  overflow: hidden;
+  background: #f0ece4;
+}
+
+.card-scan img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(40%) contrast(1.1);
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.passage-card:hover .card-scan img {
+  opacity: 1;
+  filter: grayscale(20%);
+}
+
+.card-body {
+  padding: 1rem 1.25rem;
+  flex: 1;
+}
+
+.card-quote {
+  font-size: 0.92rem;
+  font-style: italic;
+  line-height: 1.45;
+  margin-bottom: 0.5rem;
+  color: #2a2a2a;
+}
+
+.card-meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.68rem;
+  color: #aaa;
+  letter-spacing: 0.02em;
+}
+
+.passage-card--result .card-body {
+  padding: 1rem;
+}
+
+/* --- Three Layers Horizontal --- */
+
+.how-section {
+  text-align: center;
+  padding: 2.5rem 0;
+  border-top: 1px solid #e0dcd4;
+  margin-top: 3rem;
+}
+
+.how-subtitle {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+.three-layers-horizontal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.layer-h {
+  padding: 0 0.5rem;
+}
+
+.layer-h-num {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #8b7355;
+  border: 1.5px solid #8b7355;
+  border-radius: 50%;
+  margin: 0 auto 0.75rem;
+}
+
+.layer-h strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+}
+
+.layer-h p {
+  font-size: 0.85rem;
+  color: #888;
+  line-height: 1.5;
+}
+
+/* --- Paths Grid --- */
+
+.paths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.path-card {
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #e8e5de;
+  border-radius: 6px;
+  color: #2a2a2a;
+  transition: border-color 0.2s;
+}
+
+.path-card:hover {
+  border-color: #8b7355;
+  border-bottom-color: #8b7355;
+}
+
+.path-card strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.path-card p {
+  font-size: 0.85rem;
+  color: #888;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --- Why Section --- */
+
+.why-section {
+  padding: 2.5rem 0;
+  border-top: 1px solid #e0dcd4;
+  margin-top: 3rem;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.why-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.why-section p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.why-contact {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* --- Legacy Hero (for other pages) --- */
 
 .hero {
   padding: 3.5rem 0 2.5rem;
   text-align: center;
 }
 
-/* Generous spacing after header for all pages */
 main > .container:first-child,
 main > .hero {
   margin-top: 0;
@@ -535,7 +838,45 @@ section > h2:first-child {
 }
 
 .introduction {
+  margin-bottom: 2rem;
+}
+
+.provenance-chain {
   margin-bottom: 2.5rem;
+}
+
+.provenance-chain summary {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8b7355;
+  cursor: pointer;
+  padding: 0.75rem 0;
+  border-top: 1px solid #e8e5de;
+  border-bottom: 1px solid #e8e5de;
+}
+
+.provenance-chain summary:hover {
+  color: #6b5a42;
+}
+
+.provenance-body {
+  padding: 1rem 0;
+}
+
+.provenance-item {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.provenance-item strong {
+  color: #444;
+  display: inline-block;
+  min-width: 80px;
 }
 
 /* --- Parallel Text (Loeb-style) --- */
@@ -1717,6 +2058,24 @@ section > h2:first-child {
 
   .hero {
     padding: 3rem 0 2rem;
+  }
+
+  .evidence-hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .evidence-search {
+    font-size: 1rem;
+    padding: 0.85rem 1.25rem;
+  }
+
+  .three-layers-horizontal {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
   }
 
   .hero h1 {

@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Theosis Library</title>
-  <meta name="description" content="The oldest texts in human history, verified against original manuscripts. Manuscript scans, original text, and English translation. Open to all.">
-  <meta property="og:title" content="Theosis Library">
-  <meta property="og:description" content="The oldest texts in human history, verified against original manuscripts. Scan. Original. Translation. Open to all.">
+  <title>Theosis Library — The Evidence Engine for Ancient Texts</title>
+  <meta name="description" content="What did the ancient world actually say? Manuscript scans, original languages, and English translations. 50 texts, 121 passages, 4,300 years. Verify everything.">
+  <meta property="og:title" content="Theosis Library — The Evidence Engine for Ancient Texts">
+  <meta property="og:description" content="What did the ancient world actually say? 50 texts with manuscript scans, original languages, and translations. Verify everything.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://theosislibrary.com/">
-  <meta property="og:site_name" content="Theosis Library">
   <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -27,142 +26,159 @@
   </header>
 
   <main>
-    <div class="hero">
+
+    <!-- EVIDENCE ENGINE: The hero IS the search -->
+    <div class="evidence-hero">
       <div class="container">
-        <div class="hero-engraving-wrap" id="hero-engraving"></div>
-        <h1>The oldest texts in human history, verified against original manuscripts. Open to all.</h1>
+        <h1>Don't trust. Verify.</h1>
+        <p class="evidence-subtitle">The oldest texts in human history, verified against original manuscripts.</p>
+
+        <div class="evidence-search-wrap">
+          <input type="text" class="evidence-search" id="evidence-search" placeholder="Show me the evidence for..." autocomplete="off">
+          <div class="evidence-suggestions" id="evidence-suggestions"></div>
+        </div>
+
+        <div class="evidence-pills">
+          <a href="/library/?view=ancient" class="evidence-pill">Oldest Texts</a>
+          <a href="/library/?view=full" class="evidence-pill">Gospels</a>
+          <a href="/paths/theosis-in-10.html" class="evidence-pill">The Theosis Debate</a>
+          <a href="/paths/gnostic-schools.html" class="evidence-pill">Gnostic Sources</a>
+          <a href="/paths/words-of-jesus.html" class="evidence-pill">Words of Jesus</a>
+        </div>
+
+        <div class="evidence-stats">
+          50 texts · 121 passages · 39 authors · 8 languages · 4,300 years of history
+        </div>
       </div>
     </div>
 
-    <div class="container">
-      <div class="hero-body">
-        <p>The foundational texts of human civilization survive in manuscripts scattered across the world's libraries and archives. Most have never been translated into modern English. Many exist only in ancient Greek, Latin, Sumerian, or Egyptian, accessible to a shrinking number of specialists.</p>
+    <!-- Search results appear here -->
+    <div class="container" id="home-search-results" style="display:none;"></div>
 
-        <p>Theosis Library makes these texts available to everyone, with three layers of verification for every passage: scans of the original manuscript or critical edition, the clean original text, and a modern English translation. Every rendering can be checked against the source. Every passage is citable, searchable, and shareable. No interpretation without evidence. No claim without a source you can see with your own eyes.</p>
+    <!-- ICONIC PASSAGES: Visual card grid -->
+    <div class="container--wide" id="home-default-content">
 
-        <p>We begin with the question that divided the ancient world: <em>theosis</em> (&theta;&#x03AD;&omega;&sigma;&iota;&sigmaf;), the participation of humanity in the divine nature. Is divinity the exclusive property of one, or a spark within all? The Church Fathers and the Gnostic teachers they opposed left behind extraordinary arguments on both sides, preserved in texts that most people have never been able to read. Until now.</p>
-      </div>
+      <section class="iconic-section">
+        <h2>Iconic Passages</h2>
+        <div class="card-grid">
 
-      <section>
-        <h2>How It Works</h2>
-        <p>Every text in this library is presented with three layers, so that nothing is taken on faith:</p>
-        <div class="three-layers">
-          <div class="layer">
-            <div class="layer-number">1</div>
-            <div class="layer-content">
-              <strong>Manuscript Scan</strong>
-              <p>A photograph or scan of the original manuscript or critical edition. The physical evidence.</p>
+          <a href="/library/sinaiticus-john-1.html#s1-1" class="passage-card">
+            <div class="card-scan"><img src="/assets/scans/sinaiticus/sinaiticus_text.jpg" alt="Codex Sinaiticus" loading="lazy"></div>
+            <div class="card-body">
+              <div class="card-quote">"In the beginning was the Word, and the Word was God."</div>
+              <div class="card-meta">John 1:1 · Codex Sinaiticus · c. 90 AD</div>
             </div>
+          </a>
+
+          <a href="/library/sinaiticus-john-10.html#s10-31" class="passage-card">
+            <div class="card-scan"><img src="/assets/scans/sinaiticus/sinaiticus_text.jpg" alt="Codex Sinaiticus" loading="lazy"></div>
+            <div class="card-body">
+              <div class="card-quote">"I said, you are gods."</div>
+              <div class="card-meta">John 10:34 · Codex Sinaiticus · c. 90 AD</div>
+            </div>
+          </a>
+
+          <a href="/library/athanasius-incarnation-54.html#s54-3" class="passage-card">
+            <div class="card-scan"><img src="/assets/scans/patristic/basil-spirit-1a.jpg" alt="Patrologia Graeca" loading="lazy"></div>
+            <div class="card-body">
+              <div class="card-quote">"He became man that we might become God."</div>
+              <div class="card-meta">Athanasius · On the Incarnation · c. 335 AD</div>
+            </div>
+          </a>
+
+          <a href="/library/filastrius-gnostic-heresies.html#s31" class="passage-card">
+            <div class="card-scan"><img src="/assets/scans/csel38-p16.jpg" alt="CSEL 38" loading="lazy"></div>
+            <div class="card-body">
+              <div class="card-quote">"He sent a spark, which corrected man and made him live."</div>
+              <div class="card-meta">Filastrius · First English translation · c. 385 AD</div>
+            </div>
+          </a>
+
+          <a href="/library/gilgamesh-flood-tablet.html#sXI-241" class="passage-card">
+            <div class="card-scan"><img src="/assets/scans/gilgamesh/gilgamesh-flood-1.jpg" alt="Flood Tablet" loading="lazy"></div>
+            <div class="card-body">
+              <div class="card-quote">"Let Utnapishtim become like the gods. Never again."</div>
+              <div class="card-meta">Epic of Gilgamesh · British Museum · c. 1200 BCE</div>
+            </div>
+          </a>
+
+          <a href="/library/septuagint-genesis-1.html#s1-26" class="passage-card">
+            <div class="card-scan"><img src="/assets/scans/sinaiticus/sinaiticus_text.jpg" alt="Septuagint" loading="lazy"></div>
+            <div class="card-body">
+              <div class="card-quote">"Let us make man in our image, according to our likeness."</div>
+              <div class="card-meta">Genesis 1:26 · Septuagint · traditional</div>
+            </div>
+          </a>
+
+          <a href="/library/sinaiticus-2peter-1.html#s1-4" class="passage-card">
+            <div class="card-scan"><img src="/assets/scans/sinaiticus/sinaiticus_text.jpg" alt="Codex Sinaiticus" loading="lazy"></div>
+            <div class="card-body">
+              <div class="card-quote">"That you may become partakers of the divine nature."</div>
+              <div class="card-meta">2 Peter 1:4 · Codex Sinaiticus · c. 100 AD</div>
+            </div>
+          </a>
+
+          <a href="/library/irenaeus-against-heresies-3-19.html#sIII-19-1b" class="passage-card">
+            <div class="card-scan"><img src="/assets/scans/irenaeus/irenaeus-ah-1a.jpg" alt="Patrologia Graeca" loading="lazy"></div>
+            <div class="card-body">
+              <div class="card-quote">"He became what we are, that we might become what he is."</div>
+              <div class="card-meta">Irenaeus · Against Heresies · c. 180 AD</div>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="how-section">
+        <h2>Three Layers of Verification</h2>
+        <p class="how-subtitle">Every passage in this library comes with the evidence. Nothing is taken on faith.</p>
+        <div class="three-layers-horizontal">
+          <div class="layer-h">
+            <div class="layer-h-num">1</div>
+            <strong>Manuscript Scan</strong>
+            <p>The physical evidence. A photograph of the original manuscript or critical edition.</p>
           </div>
-          <div class="layer">
-            <div class="layer-number">2</div>
-            <div class="layer-content">
-              <strong>Original Text</strong>
-              <p>The clean text in the original language: Greek, Latin, Sumerian, Egyptian. For scholars to verify.</p>
-            </div>
+          <div class="layer-h">
+            <div class="layer-h-num">2</div>
+            <strong>Original Text</strong>
+            <p>Clean text in the original language. Greek, Latin, Akkadian, Egyptian, Sumerian.</p>
           </div>
-          <div class="layer">
-            <div class="layer-number">3</div>
-            <div class="layer-content">
-              <strong>English Translation</strong>
-              <p>A modern English rendering with scholarly annotations. For everyone.</p>
-            </div>
+          <div class="layer-h">
+            <div class="layer-h-num">3</div>
+            <strong>English Translation</strong>
+            <p>A modern translation with scholarly annotations. Click any word for parsing and meaning.</p>
           </div>
         </div>
       </section>
 
-      <section class="preview-section">
-        <h2>From the Library</h2>
-        <p class="preview-caption">Filastrius of Brescia, <em>Diversarum Hereseon Liber</em>, Chapter 31: On Saturninus. Fourth century. Never before translated into English. On the divine spark sent to animate the body fashioned by angels.</p>
-
-        <div class="preview-parallel preview-parallel--3col">
-          <div class="preview-col preview-col--scan">
-            <div class="parallel-col-label">Manuscript Scan</div>
-            <img src="/assets/scans/csel38-p16.jpg" alt="CSEL 38, p. 16" class="preview-scan-img" loading="lazy">
-          </div>
-          <div class="preview-col">
-            <div class="parallel-col-label">Latin (CSEL 38, Marx 1898)</div>
-            <p>Videns itaque uirtus superna quod illi hoc fecerunt, misit <strong>scintillam</strong>, quae correxit hominem et suscitauit et fecit eum uiuere. Scintillam itaque uolunt saluari, alia autem uirtutibus illis quae fecerunt dimitti ac derelinqui suspicantur.</p>
-          </div>
-          <div class="preview-col">
-            <div class="parallel-col-label">English</div>
-            <p>Therefore the power above, seeing that they had done this, sent a <strong>spark</strong> (<em>scintilla</em>), which corrected man and raised him up and made him live. They hold, therefore, that the spark is saved, but that all else is given over and abandoned to those powers that made it.</p>
-          </div>
+      <!-- READING PATHS -->
+      <section>
+        <h2>Guided Paths</h2>
+        <div class="paths-grid">
+          <a href="/paths/theosis-in-10.html" class="path-card">
+            <strong>Theosis in 10 Texts</strong>
+            <p>Can humanity participate in the divine nature? The complete arc of the argument.</p>
+          </a>
+          <a href="/paths/words-of-jesus.html" class="path-card">
+            <strong>What Did Jesus Say?</strong>
+            <p>The words attributed to Jesus on divinity, from the earliest manuscripts.</p>
+          </a>
+          <a href="/paths/gnostic-schools.html" class="path-card">
+            <strong>The Gnostic Schools</strong>
+            <p>Who were the Gnostics? What did they actually believe? A guided tour.</p>
+          </a>
         </div>
-
-        <p style="text-align: center; margin-top: 1.25rem;"><a href="/library/filastrius-gnostic-heresies.html">Read the full translation with parallel text &rarr;</a></p>
       </section>
 
-      <section>
-        <h2>Reading Paths</h2>
-        <p style="font-size: 0.9rem; color: #666; margin-bottom: 1.25rem;">Curated guides through the primary sources. Start here.</p>
-        <ul class="text-list">
-          <li class="text-item">
-            <h3><a href="/paths/theosis-in-10.html">Theosis in 10 Texts</a></h3>
-            <div class="text-description">The complete arc of the theosis debate in 10 passages, from Gilgamesh to Athanasius. Can humanity participate in the divine nature?</div>
-          </li>
-          <li class="text-item">
-            <h3><a href="/paths/words-of-jesus.html">What Did Jesus Say About Divinity?</a></h3>
-            <div class="text-description">The words attributed to Jesus on the question of the divine nature, from the earliest Gospel manuscripts.</div>
-          </li>
-          <li class="text-item">
-            <h3><a href="/paths/gnostic-schools.html">The Gnostic Schools</a></h3>
-            <div class="text-description">Who were the Gnostics? What did they actually believe? A guided tour from Simon Magus to the Valentinians.</div>
-          </li>
-        </ul>
+      <!-- WHY THIS EXISTS -->
+      <section class="why-section">
+        <h2>Why This Exists</h2>
+        <p>AI can generate plausible translations of any ancient text in seconds. What AI cannot generate is a photograph of a manuscript. The scans in this library are the evidence. The original-language texts are verifiable against those scans. The translations are checkable against the originals. Every claim links to a source you can see with your own eyes.</p>
+        <p>As AI becomes more capable, the need for a verification layer becomes greater, not less. This is that layer.</p>
+        <p class="why-contact">Corrections, alternate translations, and scholarly correspondence: <a href="mailto:contact@theosislibrary.com">contact@theosislibrary.com</a></p>
       </section>
 
-      <section>
-        <h2>Published</h2>
-        <ul class="text-list">
-          <li class="text-item">
-            <h3><a href="/library/filastrius-gnostic-heresies.html">The Book of Various Heresies, Chapters 29&ndash;43: The Gnostic Schools</a></h3>
-            <div class="text-meta">Filastrius of Brescia &middot; d. c. 397 AD &middot; Latin &middot; <strong>First English translation</strong></div>
-            <div class="text-description">Fifteen chapters covering every major Gnostic school known to the late fourth-century Church: the Simonians, Basilideans, Valentinians, Marcosians, Carpocratians, and the Barbelo-Gnostics. Parallel Latin and English throughout.</div>
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Forthcoming</h2>
-        <ul class="text-list">
-          <li class="text-item">
-            <h3>Refutation of All Heresies, Book VI, Chapters 24&ndash;37</h3>
-            <div class="text-meta">Hippolytus of Rome &middot; c. 170&ndash;235 AD &middot; Greek</div>
-            <div class="text-description">The Valentinian theology in full: the divine Pleroma, the emanation of the aeons, the fall of Sophia, the Demiurge, and the divine spark imprisoned within humanity.</div>
-          </li>
-          <li class="text-item">
-            <h3>Against Heresies, Book I</h3>
-            <div class="text-meta">Irenaeus of Lyon &middot; c. 130&ndash;202 AD &middot; Latin</div>
-            <div class="text-description">The earliest systematic account of Gnostic theology. Irenaeus catalogues Valentinian, Marcosian, and other Gnostic systems in extraordinary detail before arguing against them.</div>
-          </li>
-          <li class="text-item">
-            <h3>Against the Valentinians</h3>
-            <div class="text-meta">Tertullian &middot; c. 155&ndash;220 AD &middot; Latin</div>
-            <div class="text-description">Tertullian at his most caustic: a satirical attack on Valentinian cosmology that preserves, in the act of mockery, a detailed portrait of beliefs the Church sought to erase.</div>
-          </li>
-          <li class="text-item">
-            <h3>Against Arius, Book I</h3>
-            <div class="text-meta">Marius Victorinus &middot; c. 290&ndash;364 AD &middot; Latin</div>
-            <div class="text-description">A Neoplatonist philosopher, converted in old age, brings the full apparatus of Platonic metaphysics to the question of Christ's divinity. Virtually unknown outside specialist circles.</div>
-          </li>
-        </ul>
-      </section>
-
-      <section style="text-align: center; margin-top: 2.5rem;">
-        <a href="/library/" class="browse-link">Browse the Full Library &rarr;</a>
-      </section>
-
-      <section class="open-invitation">
-        <h2>An Open Project</h2>
-        <p>Every text in this library is published so it can be read, verified, and improved. The manuscript scans are there so you do not have to take our word for anything. The original language text is there so any scholar can check the translation. The translations themselves are there so that everyone else can finally read what has been locked away in ancient languages for centuries.</p>
-        <p>This project is built to be useful no matter how good AI becomes. The scans are real. The manuscripts are real. The verification layer cannot be generated or hallucinated.</p>
-      </section>
-
-      <section class="translator-section">
-        <h2>The Translator</h2>
-        <p>Translations by Alan B., a classicist trained in Latin and Greek with fieldwork experience at ancient archaeological sites. AI-assisted drafts are reviewed and corrected against the original texts, with scholarly annotations added by the translator. Corrections and alternate translations are welcome at <a href="mailto:contact@theosislibrary.com">contact@theosislibrary.com</a>.</p>
-      </section>
     </div>
   </main>
 
@@ -171,6 +187,97 @@
       <p>Theosis Library is a project of <a href="#">Hyperborean Press</a>. Translations by Alan B.</p>
     </div>
   </footer>
+
+  <script type="module">
+  import MiniSearch from 'https://esm.sh/minisearch@7.1.1';
+
+  var input = document.getElementById('evidence-search');
+  var resultsEl = document.getElementById('home-search-results');
+  var defaultContent = document.getElementById('home-default-content');
+  var suggestionsEl = document.getElementById('evidence-suggestions');
+  var miniSearch = null;
+  var loaded = false;
+
+  var suggestions = [
+    'theosis', 'divine spark', 'logos', 'incarnation', 'pleroma',
+    'image of God', 'partakers of the divine nature', 'ye are gods',
+    'Word became flesh', 'Gnostic', 'Valentinus', 'Athanasius',
+    'oldest text', 'flood narrative', 'Nicene Creed', 'kenosis'
+  ];
+
+  input.addEventListener('focus', function() {
+    if (!this.value) {
+      suggestionsEl.innerHTML = suggestions.map(function(s) {
+        return '<div class="suggestion" onclick="document.getElementById(\'evidence-search\').value=\'' + s + '\';document.getElementById(\'evidence-search\').dispatchEvent(new Event(\'input\'));">' + s + '</div>';
+      }).join('');
+      suggestionsEl.style.display = 'flex';
+    }
+  });
+
+  input.addEventListener('blur', function() {
+    setTimeout(function() { suggestionsEl.style.display = 'none'; }, 200);
+  });
+
+  var debounce;
+  input.addEventListener('input', function() {
+    var q = this.value.trim();
+    suggestionsEl.style.display = 'none';
+
+    clearTimeout(debounce);
+    if (q.length < 2) {
+      resultsEl.style.display = 'none';
+      defaultContent.style.display = '';
+      return;
+    }
+
+    debounce = setTimeout(function() {
+      if (!loaded) {
+        fetch('/data/search-index.json')
+          .then(function(r) { return r.json(); })
+          .then(function(data) {
+            miniSearch = new MiniSearch({
+              fields: ['en', 'orig', 'title', 'author'],
+              storeFields: ['pid','tid','s','en','orig','title','author','slug'],
+              idField: 'pid',
+              searchOptions: { boost: { title: 3, en: 2, orig: 1.5 }, prefix: true, fuzzy: 0.15 },
+              processTerm: function(t) { return t.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase(); }
+            });
+            miniSearch.addAll(data);
+            loaded = true;
+            doSearch(q);
+          });
+      } else {
+        doSearch(q);
+      }
+    }, 200);
+  });
+
+  function doSearch(q) {
+    var results = miniSearch.search(q, { limit: 30 });
+    if (!results.length) {
+      resultsEl.innerHTML = '<p style="color:#999;text-align:center;padding:2rem 0;">No passages found. Try a different term.</p>';
+      resultsEl.style.display = '';
+      defaultContent.style.display = 'none';
+      return;
+    }
+
+    var html = '<div class="card-grid">';
+    results.forEach(function(r) {
+      var snippet = r.en ? r.en.slice(0, 120) + '...' : '';
+      var anchor = r.s.replace(/[.:]/g, '-');
+      html += '<a href="/library/' + r.slug + '.html#s' + anchor + '" class="passage-card passage-card--result">' +
+        '<div class="card-body">' +
+        '<div class="card-quote">"' + snippet + '"</div>' +
+        '<div class="card-meta">' + r.author + ' · ' + r.title + ' · §' + r.s + '</div>' +
+        '</div></a>';
+    });
+    html += '</div>';
+
+    resultsEl.innerHTML = '<h2 style="margin-bottom:1rem;">' + results.length + ' passages found</h2>' + html;
+    resultsEl.style.display = '';
+    defaultContent.style.display = 'none';
+  }
+  </script>
 
   <script src="js/engrave.js"></script>
 </body>

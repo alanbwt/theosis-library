@@ -59,6 +59,19 @@
         <h2>Introduction</h2>
         {{ introduction }}
       </section>
+
+      <div class="provenance-chain">
+        <details>
+          <summary>How was this translated? (Provenance)</summary>
+          <div class="provenance-body">
+            <div class="provenance-item"><strong>Source:</strong> {{ source }}</div>
+            {% if critical_edition %}<div class="provenance-item"><strong>Edition:</strong> {{ critical_edition }}</div>{% endif %}
+            <div class="provenance-item"><strong>Method:</strong> AI-assisted draft (Claude by Anthropic) reviewed against the {{ language }} text by Alan B.</div>
+            <div class="provenance-item"><strong>Verify:</strong> Click any Greek/Latin word for morphological analysis. Scan images show the physical manuscript.</div>
+            <div class="provenance-item"><strong>Challenge:</strong> Submit a correction or alternate translation to <a href="mailto:contact@theosislibrary.com">contact@theosislibrary.com</a></div>
+          </div>
+        </details>
+      </div>
     </div>
 
     {% if has_parallel %}
