@@ -36,12 +36,17 @@
 
   function imageToASCII(img) {
     var cw = container.clientWidth;
-    var width = cw > 400 ? 200 : 140;
+    var ch = container.clientHeight;
 
-    // Use 4:5 container aspect ratio for consistent sizing across images
-    var containerH = container.clientHeight;
-    var containerW = container.clientWidth;
-    var height = Math.floor(width * (containerH / containerW) * 0.55);
+    // Calculate how many chars fit in the container exactly
+    // Font metrics: char width ≈ fontSize * 0.6, char height ≈ lineHeight
+    var fontSize = 3.8;
+    var lineHeight = 4.2;
+    var charW = fontSize * 0.6 + 0.2; // letter-spacing included
+    var charH = lineHeight;
+
+    var width = Math.floor(cw / charW);
+    var height = Math.floor(ch / charH);
 
     cols = width;
     rows = height;
@@ -53,21 +58,23 @@
     sCtx.imageSmoothingEnabled = true;
     sCtx.imageSmoothingQuality = 'high';
 
-    // Draw image to cover the grid
+    // Draw image to cover the grid — crop from TOP, never stretch
     var imgAspect = img.width / img.height;
     var gridAspect = width / height;
     var sx, sy, sw, sh;
 
     if (imgAspect > gridAspect) {
+      // Image wider than grid — crop sides, keep centered
       sh = img.height;
       sw = img.height * gridAspect;
       sx = (img.width - sw) / 2;
       sy = 0;
     } else {
+      // Image taller than grid — crop bottom, keep TOP
       sw = img.width;
       sh = img.width / gridAspect;
       sx = 0;
-      sy = (img.height - sh) / 2;
+      sy = 0; // TOP aligned, not centered
     }
 
     sCtx.drawImage(img, sx, sy, sw, sh, 0, 0, width, height);

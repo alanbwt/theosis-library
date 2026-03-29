@@ -183,24 +183,22 @@ sup a {
   overflow: hidden;
   background: #000000;
   border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .ascii-art {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 4px;
-  line-height: 4.5px;
-  letter-spacing: 0.3px;
+  font-size: 3.8px;
+  line-height: 4.2px;
+  letter-spacing: 0.2px;
   color: #ffffff;
-  background: transparent;
+  background: #000000;
   margin: 0;
   padding: 0;
   overflow: hidden;
   white-space: pre;
-  text-align: center;
+  text-align: left;
   user-select: none;
+  display: block;
 }
 
 .evidence-search-wrap {
@@ -2139,8 +2137,8 @@ section > h2:first-child {
 
   .ascii-art {
     font-size: 3px;
-    line-height: 3.5px;
-    letter-spacing: 0.2px;
+    line-height: 3.3px;
+    letter-spacing: 0.15px;
   }
     font-size: 1.5rem;
     margin-bottom: 0.4rem;
