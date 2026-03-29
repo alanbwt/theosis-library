@@ -177,22 +177,22 @@ sup a {
 
 .particle-hero-wrap {
   width: 100%;
-  max-width: 700px;
+  max-width: 750px;
   margin: 0 auto 2rem;
   border-radius: 12px;
   overflow: hidden;
-  background: #0a0a0a;
+  background: #000000;
 }
 
 .ascii-art {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 5px;
-  line-height: 5.5px;
-  letter-spacing: 0.5px;
-  color: #e0e0e0;
-  background: #0a0a0a;
+  font-size: 4.5px;
+  line-height: 5px;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+  background: #000000;
   margin: 0;
-  padding: 8px;
+  padding: 10px;
   overflow: hidden;
   white-space: pre;
   text-align: center;
@@ -2134,9 +2134,9 @@ section > h2:first-child {
   }
 
   .ascii-art {
-    font-size: 3.5px;
-    line-height: 4px;
-    letter-spacing: 0.3px;
+    font-size: 3px;
+    line-height: 3.5px;
+    letter-spacing: 0.2px;
     padding: 6px;
   }
     font-size: 1.5rem;
