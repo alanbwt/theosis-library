@@ -11,8 +11,8 @@
   if (!container) return;
 
   var IMAGES = [
-    '/assets/achilles-centaur.jpg',
-    '/assets/christ-portrait.jpg'
+    '/assets/dore-leviathan.jpg',
+    '/assets/dore-jesus.jpg'
   ];
 
   var HOLD_TIME = 6000;       // ms to hold each image
@@ -74,8 +74,8 @@
       sy = (img.height - sh) / 2;
     }
 
-    // Boost brightness and contrast so dark paintings are visible as ASCII
-    sCtx.filter = 'brightness(1.5) contrast(1.8)';
+    // Slight boost for better ASCII tonal range
+    sCtx.filter = 'brightness(1.15) contrast(1.3)';
     sCtx.drawImage(img, sx, sy, sw, sh, 0, 0, width, height);
     sCtx.filter = 'none';
     var data = sCtx.getImageData(0, 0, width, height).data;
