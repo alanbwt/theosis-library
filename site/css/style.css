@@ -111,7 +111,8 @@ sup a {
   border-bottom: 1px solid #d4c9b8;
 }
 
-.site-header .container {
+.site-header .container,
+.site-header .container--wide {
   display: flex;
   flex-direction: column;
   align-items: center;
