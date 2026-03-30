@@ -100,9 +100,13 @@ def render_text_item(text):
     return render_text_card(text)
 
 
-def build_library_page(era_groups):
-    items_html = ""
+def build_filtered_html(era_groups, filter_fn):
+    """Build card grid HTML for texts matching a filter function."""
+    html = ""
     for era, texts in era_groups:
+        filtered = [t for t in texts if filter_fn(t)]
+        if not filtered:
+            continue
         era_range = {
             "Apostolic": "1st-2nd century",
             "Ante-Nicene": "before 325 AD",
@@ -110,9 +114,8 @@ def build_library_page(era_groups):
             "Post-Nicene": "451-800 AD",
             "Byzantine": "800-1453 AD",
         }.get(era, "")
-
-        items = "\n".join(render_text_card(t) for t in texts)
-        items_html += f"""
+        items = "\n".join(render_text_card(t) for t in filtered)
+        html += f"""
       <div class="era-group">
         <div class="era-label">{era} ({era_range})</div>
         <div class="lib-card-grid">
@@ -120,6 +123,19 @@ def build_library_page(era_groups):
         </div>
       </div>
 """
+    return html if html.strip() else '<p style="color:#8a7e6f;font-style:italic;padding:2rem 0;">No texts in this category yet.</p>'
+
+
+def build_library_page(era_groups):
+    # Full list
+    items_html = build_filtered_html(era_groups, lambda t: True)
+
+    # First translations only
+    first_html = build_filtered_html(era_groups, lambda t: t.get("is_first_translation", False) and t["status"] == "published")
+
+    # Core canon: patristic treatises + conciliar + scripture that's not just an epistle
+    canon_categories = {"patristic-treatise", "conciliar", "heresiological"}
+    canon_html = build_filtered_html(era_groups, lambda t: t.get("category") in canon_categories and t["status"] == "published")
 
     published_count = sum(
         1 for _, texts in era_groups for t in texts if t["status"] == "published"
@@ -264,13 +280,13 @@ def build_library_page(era_groups):
       <!-- First Translations view -->
       <div id="view-first" class="library-view" style="display:none;">
         <p class="view-description">Texts appearing in English for the first time. No previous English translation exists for any text in this collection.</p>
-{items_html}
+{first_html}
       </div>
 
       <!-- Core Canon view -->
       <div id="view-canon" class="library-view" style="display:none;">
         <p class="view-description">The essential texts of the theosis debate: Church Fathers, Gnostic teachers, and the councils that attempted to settle the question. Includes both new and existing translations.</p>
-{items_html}
+{canon_html}
       </div>
 
     </div>
