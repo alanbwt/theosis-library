@@ -39,7 +39,7 @@ ASCII_WIDTH = 140  # chars wide
 ASPECT_CORRECTION = 0.5  # chars are ~2x taller than wide
 
 
-TARGET_RATIO = 5 / 4  # height/width ratio for portrait format (after aspect correction)
+TARGET_RATIO = 4 / 3  # height/width ratio for portrait format (after aspect correction)
 
 
 def process_image(img_path, width=ASCII_WIDTH):

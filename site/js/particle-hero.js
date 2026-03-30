@@ -10,7 +10,7 @@
   var container = document.getElementById('particle-hero');
   if (!container) return;
 
-  var HOLD_TIME = 6000;
+  var HOLD_TIME = 3000;
   var TRANSITION_TIME = 1500;
   var SCRAMBLE_CHARS = '$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,"^`\'. ';
 
