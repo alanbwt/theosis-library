@@ -23,10 +23,15 @@ OUTPUT_FILE = PROJECT_ROOT / "site" / "data" / "ascii-frames.json"
 # Exact density string from scipython
 DENSITY = '$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,"^`\'. '
 
-# Images to process
+# Images to process (chronological order)
 IMAGES = [
-    "bust-1.jpg",
-    "bust-2.jpg",
+    "gilgamesh-statue.jpg",     # Gilgamesh c. 2100 BCE
+    "moses-tablets.jpg",        # Moses with tablets
+    "socrates-death.jpg",       # Death of Socrates
+    "rembrandt-paul.jpg",       # Rembrandt's Paul
+    "christ-bloch.jpg",         # Christ portrait (Bloch)
+    "augustine-botticelli.jpg", # Botticelli's Augustine
+    "dore-leviathan.png",       # Doré Leviathan
 ]
 
 # Target ASCII dimensions (characters)
