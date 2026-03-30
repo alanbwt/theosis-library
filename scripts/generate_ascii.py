@@ -39,6 +39,9 @@ ASCII_WIDTH = 140  # chars wide
 ASPECT_CORRECTION = 0.5  # chars are ~2x taller than wide
 
 
+TARGET_RATIO = 5 / 4  # height/width ratio for portrait format (after aspect correction)
+
+
 def process_image(img_path, width=ASCII_WIDTH):
     """Load image, enhance, and convert to ASCII string."""
     img = Image.open(img_path)
@@ -46,10 +49,24 @@ def process_image(img_path, width=ASCII_WIDTH):
     # Convert to grayscale
     img = img.convert('L')
 
-    # Calculate height with aspect correction
+    # Fixed portrait dimensions — crop image to match, never stretch
+    height = int(width * TARGET_RATIO)
+
+    # Crop to target aspect ratio (center crop) BEFORE resizing
+    target_aspect = width / (height / ASPECT_CORRECTION)  # undo the 0.5 correction to get pixel aspect
     orig_w, orig_h = img.size
-    r = orig_h / orig_w
-    height = int(width * r * ASPECT_CORRECTION)
+    orig_aspect = orig_w / orig_h
+
+    if orig_aspect > target_aspect:
+        # Image is wider — crop sides
+        new_w = int(orig_h * target_aspect)
+        left = (orig_w - new_w) // 2
+        img = img.crop((left, 0, left + new_w, orig_h))
+    else:
+        # Image is taller — crop top/bottom (center)
+        new_h = int(orig_w / target_aspect)
+        top = (orig_h - new_h) // 2
+        img = img.crop((0, top, orig_w, top + new_h))
 
     # Resize with LANCZOS (highest quality)
     img = img.resize((width, height), Image.LANCZOS)
