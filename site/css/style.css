@@ -760,7 +760,87 @@ section > h2:first-child {
   color: #4a3e30;
 }
 
-/* --- Library Listing --- */
+/* --- Library Card Grid --- */
+
+.lib-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.lib-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #d4c9b8;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #2c2418;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.lib-card:hover {
+  border-color: #6b1d2a;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+  border-bottom-color: #6b1d2a;
+}
+
+.lib-card--queued {
+  opacity: 0.6;
+}
+
+.lib-card-scan {
+  height: 120px;
+  overflow: hidden;
+  background: #ece4d8;
+}
+
+.lib-card-scan img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.lib-card:hover .lib-card-scan img {
+  transform: scale(1.05);
+}
+
+.lib-card-body {
+  padding: 0.85rem 1rem;
+  flex: 1;
+}
+
+.lib-card-badge {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #4a6b2a;
+  background: #d8e4c8;
+  padding: 0.15em 0.5em;
+  border-radius: 2px;
+  margin-bottom: 0.4rem;
+}
+
+.lib-card-title {
+  font-size: 0.85rem;
+  font-weight: normal;
+  line-height: 1.35;
+  margin-bottom: 0.3rem;
+}
+
+.lib-card-meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.62rem;
+  color: #8a7e6f;
+  letter-spacing: 0.01em;
+}
+
+/* --- Legacy Library Listing --- */
 
 .text-list {
   list-style: none;
@@ -2270,6 +2350,19 @@ section > h2:first-child {
   }
 
   /* --- Library --- */
+
+  .lib-card-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .lib-card-scan {
+    height: 80px;
+  }
+
+  .lib-card-title {
+    font-size: 0.78rem;
+  }
   .library-tabs {
     gap: 0;
     overflow-x: auto;

@@ -53,29 +53,51 @@ def group_by_era(texts):
     return ordered
 
 
-def render_text_item(text):
-    status_class = f"status-badge--{text['status']}"
-    themes_html = "".join(f"<span>{t}</span>" for t in text.get("themes", []))
+def get_scan_thumb(text):
+    """Get the first scan image path for a text."""
+    scans = text.get("scans", {})
+    if scans and scans.get("pages"):
+        return scans["pages"][0].get("file", "")
+    return ""
+
+
+def render_text_card(text):
+    """Render a visual card with scan thumbnail."""
+    scan = get_scan_thumb(text)
+    scan_html = ""
+    if scan and text["status"] == "published":
+        scan_html = f'<div class="lib-card-scan"><img src="/assets/scans/{scan}" alt="" loading="lazy"></div>'
 
     first_badge = ""
     if text.get("is_first_translation") and text["status"] == "published":
-        first_badge = ' <span class="status-badge status-badge--first">first translation</span>'
-
-    link_start = ""
-    link_end = ""
-    if text["status"] == "published":
-        link_start = f'<a href="/library/{text["slug"]}.html">'
-        link_end = "</a>"
+        first_badge = '<span class="lib-card-badge">First Translation</span>'
 
     tradition = text.get("tradition", "")
     category = text.get("category", "")
+    themes = " ".join(text.get("themes", []))
 
-    return f"""          <li class="text-item" data-themes="{' '.join(text.get('themes', []))}" data-author="{text['author_name']}" data-title="{text['title']}" data-tradition="{tradition}" data-category="{category}">
-            <h3>{link_start}{text['title']}{link_end} <span class="status-badge {status_class}">{text['status']}</span>{first_badge}</h3>
-            <div class="text-meta">{text['author_name']} &middot; {text['author_dates']} &middot; {text['language']}</div>
-            <div class="text-description">{text['description']}</div>
-            <div class="text-themes">{themes_html}</div>
-          </li>"""
+    if text["status"] == "published":
+        href = f'/library/{text["slug"]}.html'
+        return f"""<a href="{href}" class="lib-card" data-themes="{themes}" data-author="{text['author_name']}" data-title="{text['title']}" data-tradition="{tradition}" data-category="{category}">
+            {scan_html}
+            <div class="lib-card-body">
+              {first_badge}
+              <div class="lib-card-title">{text['title']}</div>
+              <div class="lib-card-meta">{text['author_name']} &middot; {text.get('date_approx', '')} &middot; {text['language']}</div>
+            </div>
+          </a>"""
+    else:
+        return f"""<div class="lib-card lib-card--queued" data-themes="{themes}" data-author="{text['author_name']}" data-title="{text['title']}" data-tradition="{tradition}" data-category="{category}">
+            <div class="lib-card-body">
+              <div class="lib-card-title">{text['title']}</div>
+              <div class="lib-card-meta">{text['author_name']} &middot; {text.get('date_approx', '')} &middot; Forthcoming</div>
+            </div>
+          </div>"""
+
+
+def render_text_item(text):
+    """Legacy list item (kept for compatibility)."""
+    return render_text_card(text)
 
 
 def build_library_page(era_groups):
@@ -89,13 +111,13 @@ def build_library_page(era_groups):
             "Byzantine": "800-1453 AD",
         }.get(era, "")
 
-        items = "\n".join(render_text_item(t) for t in texts)
+        items = "\n".join(render_text_card(t) for t in texts)
         items_html += f"""
       <div class="era-group">
         <div class="era-label">{era} ({era_range})</div>
-        <ul class="text-list">
+        <div class="lib-card-grid">
 {items}
-        </ul>
+        </div>
       </div>
 """
 
