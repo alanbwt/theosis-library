@@ -26,6 +26,27 @@ import MiniSearch from 'https://esm.sh/minisearch@7.1.1';
   var indexLoaded = false;
   var indexLoading = false;
   var metaData = null;
+  var questionMap = null;
+
+  // Load question map for natural language queries
+  fetch('/data/question-map.json')
+    .then(function (r) { return r.json(); })
+    .then(function (data) { questionMap = data; })
+    .catch(function () {});
+
+  function expandQuery(q) {
+    if (!questionMap) return q;
+    var lower = q.toLowerCase();
+    for (var i = 0; i < questionMap.questions.length; i++) {
+      var qm = questionMap.questions[i];
+      for (var j = 0; j < qm.patterns.length; j++) {
+        if (lower.indexOf(qm.patterns[j]) !== -1) {
+          return qm.search;
+        }
+      }
+    }
+    return q;
+  }
 
   // Load metadata immediately (small file)
   fetch('/data/texts-meta.json')
@@ -181,12 +202,12 @@ import MiniSearch from 'https://esm.sh/minisearch@7.1.1';
         resultsInfo.style.display = 'block';
         loadSearchIndex().then(function () {
           if (miniSearch) {
-            var results = miniSearch.search(query, { limit: 50 });
+            var results = miniSearch.search(expandQuery(query), { limit: 50 });
             renderResults(results, query);
           }
         });
       } else if (miniSearch) {
-        var results = miniSearch.search(query, { limit: 50 });
+        var results = miniSearch.search(expandQuery(query), { limit: 50 });
         renderResults(results, query);
       }
     }, 200);

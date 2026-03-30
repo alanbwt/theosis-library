@@ -35,7 +35,7 @@
         <p class="evidence-subtitle">The oldest texts in human history, verified against original manuscripts.</p>
 
         <div class="evidence-search-wrap">
-          <input type="text" class="evidence-search" id="evidence-search" placeholder="Show me the evidence for..." autocomplete="off">
+          <input type="text" class="evidence-search" id="evidence-search" placeholder="What did the ancient world say about..." autocomplete="off">
           <div class="evidence-suggestions" id="evidence-suggestions"></div>
         </div>
 
@@ -197,14 +197,43 @@
   var defaultContent = document.getElementById('home-default-content');
   var suggestionsEl = document.getElementById('evidence-suggestions');
   var miniSearch = null;
+  var questionMap = null;
   var loaded = false;
 
   var suggestions = [
-    'theosis', 'divine spark', 'logos', 'incarnation', 'pleroma',
-    'image of God', 'partakers of the divine nature', 'ye are gods',
-    'Word became flesh', 'Gnostic', 'Valentinus', 'Athanasius',
-    'oldest text', 'flood narrative', 'Nicene Creed', 'kenosis'
+    'What did Jesus say about divinity?',
+    'theosis',
+    'divine spark',
+    'What is the oldest text?',
+    'image of God',
+    'Did the Church Fathers believe in theosis?',
+    'ye are gods',
+    'Gnostic beliefs',
+    'incarnation',
+    'What did Paul teach about divinity?',
+    'Nicene Creed',
+    'flood narrative'
   ];
+
+  // Load question map
+  fetch('/data/question-map.json')
+    .then(function(r) { return r.json(); })
+    .then(function(data) { questionMap = data; })
+    .catch(function() {});
+
+  function expandQuery(q) {
+    if (!questionMap) return q;
+    var lower = q.toLowerCase();
+    for (var i = 0; i < questionMap.questions.length; i++) {
+      var qm = questionMap.questions[i];
+      for (var j = 0; j < qm.patterns.length; j++) {
+        if (lower.indexOf(qm.patterns[j]) !== -1) {
+          return qm.search;
+        }
+      }
+    }
+    return q;
+  }
 
   input.addEventListener('focus', function() {
     if (!this.value) {
@@ -254,7 +283,9 @@
   });
 
   function doSearch(q) {
-    var results = miniSearch.search(q, { limit: 30 });
+    // Expand natural language questions to keyword searches
+    var expanded = expandQuery(q);
+    var results = miniSearch.search(expanded, { limit: 30 });
     if (!results.length) {
       resultsEl.innerHTML = '<p style="color:#999;text-align:center;padding:2rem 0;">No passages found. Try a different term.</p>';
       resultsEl.style.display = '';
