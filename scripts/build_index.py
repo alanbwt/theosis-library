@@ -133,9 +133,15 @@ def build_library_page(era_groups):
     # First translations only
     first_html = build_filtered_html(era_groups, lambda t: t.get("is_first_translation", False) and t["status"] == "published")
 
-    # Core canon: patristic treatises + conciliar + scripture that's not just an epistle
-    canon_categories = {"patristic-treatise", "conciliar", "heresiological"}
-    canon_html = build_filtered_html(era_groups, lambda t: t.get("category") in canon_categories and t["status"] == "published")
+    # Core canon: the irreducible essential texts
+    canon_ids = {
+        "septuagint-genesis-1", "septuagint-exodus-3", "septuagint-psalm-82",
+        "sinaiticus-mark-1", "sinaiticus-matt-5", "sinaiticus-luke-1",
+        "sinaiticus-john-1", "sinaiticus-john-10", "sinaiticus-john-17",
+        "sinaiticus-2peter-1", "sinaiticus-phil-2-5", "sinaiticus-col-1-15",
+        "nicene-creed",
+    }
+    canon_html = build_filtered_html(era_groups, lambda t: t["id"] in canon_ids and t["status"] == "published")
 
     published_count = sum(
         1 for _, texts in era_groups for t in texts if t["status"] == "published"
