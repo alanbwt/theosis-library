@@ -139,11 +139,33 @@ def build_filtered_html(era_groups, filter_fn):
         if not filtered:
             continue
         era_range = {
-            "Apostolic": "1st-2nd century",
-            "Ante-Nicene": "before 325 AD",
+            "Ancient Near East": "3000-500 BCE",
+            "Vedic": "1500-800 BCE",
+            "Upanishadic": "800-200 BCE",
+            "Hebrew Bible": "1200-200 BCE",
+            "Axial Age": "800-200 BCE",
+            "Pre-Socratic": "600-400 BCE",
+            "Classical": "500-300 BCE",
+            "Hellenistic": "300-30 BCE",
+            "Second Temple": "200 BCE-70 AD",
+            "Late Republic": "100-27 BCE",
+            "Ancient": "before 500 BCE",
+            "Epic": "400 BCE-200 AD",
+            "Apostolic": "30-150 AD",
+            "Imperial": "27 BCE-284 AD",
+            "Late Antiquity": "200-600 AD",
+            "Ante-Nicene": "100-325 AD",
             "Nicene": "325-451 AD",
             "Post-Nicene": "451-800 AD",
-            "Byzantine": "800-1453 AD",
+            "Byzantine": "330-1453 AD",
+            "Abbasid": "750-1258 AD",
+            "Early Islamic": "610-750 AD",
+            "Tang Dynasty": "618-907 AD",
+            "Song Dynasty": "960-1279 AD",
+            "Viking Age": "793-1066 AD",
+            "Medieval": "500-1500 AD",
+            "Reformation": "1500-1650 AD",
+            "Modern": "1650-present",
         }.get(era, "")
         items = "\n".join(render_text_card(t) for t in filtered)
         html += f"""
