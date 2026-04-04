@@ -103,14 +103,21 @@
       frames = data;
       if (!frames.length) return;
 
+      // Start with scramble-in animation immediately
       var firstChars = getFrameChars(frames[0]);
       var firstCols = getFrameCols(frames[0]);
-      display(firstChars, firstCols);
       currentIdx = 0;
 
-      if (frames.length > 1) {
-        setTimeout(cycle, HOLD_TIME);
-      }
+      // Create blank starting frame (all spaces)
+      var blankChars = [];
+      for (var i = 0; i < firstChars.length; i++) blankChars.push(' ');
+
+      // Scramble from blank to first image on load
+      scrambleTransition(blankChars, firstChars, firstCols, function () {
+        if (frames.length > 1) {
+          setTimeout(cycle, HOLD_TIME);
+        }
+      });
     })
     .catch(function (err) {
       console.error('Failed to load ASCII frames:', err);
