@@ -34,6 +34,23 @@ function citePasage(btn) {
   });
 }
 
+function shareToX(btn) {
+  var section = btn.closest('.parallel-section');
+  if (!section) return;
+
+  var urlPath = section.getAttribute('data-url-path') || '';
+  var url = window.location.origin + urlPath;
+  // Get a snippet of the English translation
+  var transEl = section.querySelector('.parallel-translation p');
+  var snippet = transEl ? transEl.textContent.slice(0, 200) : '';
+  var author = section.getAttribute('data-author') || '';
+  var sec = section.getAttribute('data-section') || '';
+
+  var text = '"' + snippet + '..." — ' + author + ', ' + sec + '\n\nVerify the original manuscript: ' + url + '\n\nvia @TheosisLibrary';
+  var tweetUrl = 'https://x.com/intent/tweet?text=' + encodeURIComponent(text);
+  window.open(tweetUrl, '_blank', 'width=550,height=420');
+}
+
 function sharePassage(btn) {
   var section = btn.closest('.parallel-section');
   if (!section) return;
