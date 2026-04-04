@@ -30,8 +30,39 @@ def resolve_authors(texts_data, authors_data):
         text["author_tradition"] = author.get("tradition", "")
 
 
+def sort_chronologically(texts):
+    """Sort texts by date, oldest first. Returns flat list."""
+    def sort_key(t):
+        # Parse century or date_approx for sorting
+        century = t.get("century", 0)
+        date_str = t.get("date_approx", "")
+        # Try to extract a year from date_approx
+        import re
+        match = re.search(r'(\d+)\s*(BCE|BC)', date_str)
+        if match:
+            return -int(match.group(1))
+        match = re.search(r'(\d+)\s*(AD|CE)', date_str)
+        if match:
+            return int(match.group(1))
+        # Fall back to century
+        if century < 0:
+            return century * 100
+        return century * 100
+    return sorted(texts, key=sort_key)
+
+
 def group_by_era(texts):
-    era_order = ["Apostolic", "Ante-Nicene", "Nicene", "Post-Nicene", "Byzantine"]
+    era_order = [
+        "Ancient Near East", "Vedic", "Upanishadic", "Hebrew Bible",
+        "Axial Age", "Pre-Socratic", "Classical", "Hellenistic",
+        "Second Temple", "Late Republic", "Ancient",
+        "Apostolic", "Imperial", "Late Antiquity",
+        "Ante-Nicene", "Nicene", "Post-Nicene",
+        "Byzantine", "Tang Dynasty", "Song Dynasty",
+        "Abbasid", "Early Islamic",
+        "Medieval", "Viking Age",
+        "Reformation", "Modern"
+    ]
     groups = {}
     for text in texts:
         era = text.get("era", "Unknown")
@@ -40,7 +71,7 @@ def group_by_era(texts):
         groups[era].append(text)
 
     for era in groups:
-        groups[era].sort(key=lambda t: (t.get("century", 0), t.get("author_name", "")))
+        groups[era] = sort_chronologically(groups[era])
 
     ordered = []
     for era in era_order:
