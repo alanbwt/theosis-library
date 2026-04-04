@@ -386,6 +386,7 @@ def build_library_page(era_groups):
   }})();
   </script>
 
+<script src="../js/decode.js"></script>
 </body>
 </html>"""
 
