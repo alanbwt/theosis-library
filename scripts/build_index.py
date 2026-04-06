@@ -180,26 +180,27 @@ def build_filtered_html(era_groups, filter_fn):
 
 
 def build_library_page(era_groups):
-    # Full list
+    # Single unified chronological view with data attributes for filtering
     items_html = build_filtered_html(era_groups, lambda t: True)
-
-    # First translations only
-    first_html = build_filtered_html(era_groups, lambda t: t.get("is_first_translation", False) and t["status"] == "published")
-
-    # Core canon: the irreducible essential texts
-    canon_ids = {
-        "septuagint-genesis-1", "septuagint-exodus-3", "septuagint-psalm-82",
-        "sinaiticus-mark-1", "sinaiticus-matt-5", "sinaiticus-luke-1",
-        "sinaiticus-john-1", "sinaiticus-john-10", "sinaiticus-john-17",
-        "sinaiticus-2peter-1", "sinaiticus-phil-2-5", "sinaiticus-col-1-15",
-        "nicene-creed",
-    }
-    canon_html = build_filtered_html(era_groups, lambda t: t["id"] in canon_ids and t["status"] == "published")
 
     published_count = sum(
         1 for _, texts in era_groups for t in texts if t["status"] == "published"
     )
+    first_count = sum(
+        1 for _, texts in era_groups for t in texts if t.get("is_first_translation") and t["status"] == "published"
+    )
     total_count = sum(len(texts) for _, texts in era_groups)
+
+    # Collect unique traditions for filter chips
+    traditions = set()
+    for _, texts in era_groups:
+        for t in texts:
+            if t.get("tradition") and t["status"] == "published":
+                traditions.add(t["tradition"])
+    tradition_chips = "\n".join(
+        f'        <button class="filter-chip" onclick="toggleFilter(\'tradition\', \'{tr}\', this)">{tr.replace("orthodox","Christian").replace("neoplatonist","Greek/Roman").replace("jewish","Jewish").replace("hindu","Hindu").replace("buddhist","Buddhist").replace("islamic","Islamic").replace("sufi","Sufi").replace("gnostic","Gnostic").replace("hermetic","Hermetic").replace("norse","Norse").replace("egyptian","Egyptian").replace("mesopotamian","Mesopotamian").replace("zoroastrian","Zoroastrian").replace("taoist","Taoist").replace("confucian","Confucian").title()}</button>'
+        for tr in sorted(traditions)
+    )
 
     if published_count > 0:
         status_line = f'<p style="color: #999; font-size: 0.9rem;">{published_count} published translation{"s" if published_count != 1 else ""} &middot; {total_count} texts in catalog</p>'
@@ -336,17 +337,7 @@ def build_library_page(era_groups):
         </div>
       </div>
 
-      <!-- First Translations view -->
-      <div id="view-first" class="library-view" style="display:none;">
-        <p class="view-description">Texts appearing in English for the first time. No previous English translation exists for any text in this collection.</p>
-{first_html}
-      </div>
-
-      <!-- Core Canon view -->
-      <div id="view-canon" class="library-view" style="display:none;">
-        <p class="view-description">The essential texts of the theosis debate: Church Fathers, Gnostic teachers, and the councils that attempted to settle the question. Includes both new and existing translations.</p>
-{canon_html}
-      </div>
+      <!-- Filters applied via JS on the single view above -->
 
     </div>
   </main>

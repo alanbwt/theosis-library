@@ -2616,3 +2616,16 @@ section > h2:first-child {
     font-size: 1.05rem;
   }
 }
+
+/* --- Headline Reveal Animation --- */
+
+.reveal-heading {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal-heading.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}

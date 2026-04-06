@@ -212,4 +212,10 @@ import MiniSearch from 'https://esm.sh/minisearch@7.1.1';
       }
     }, 200);
   });
+  // Auto-search from URL ?q= param
+  var urlQ = new URLSearchParams(window.location.search).get('q');
+  if (urlQ && searchInput) {
+    searchInput.value = urlQ;
+    searchInput.dispatchEvent(new Event('input'));
+  }
 })();
