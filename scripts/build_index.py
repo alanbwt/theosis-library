@@ -214,6 +214,19 @@ def build_library_page(era_groups):
         "zoroastrian": "Zoroastrian",
         "taoist": "Taoist",
         "confucian": "Confucian",
+        "celtic": "Celtic",
+        "japanese": "Japanese",
+        "tibetan": "Tibetan",
+        "mesoamerican": "Mesoamerican",
+        "ethiopian": "Ethiopian",
+        "african": "African",
+        "slavic": "Slavic",
+        "persian": "Persian",
+        "jain": "Jain",
+        "canaanite": "Canaanite",
+        "korean": "Korean",
+        "southeast-asian": "Southeast Asian",
+        "finnish": "Finnish",
     }
     tradition_chips = "\n".join(
         f'        <button class="filter-chip" onclick="toggleFilter(\'tradition\', \'{tr}\', this)">{tradition_labels.get(tr, tr.title())}</button>'
