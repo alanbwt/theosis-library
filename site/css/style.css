@@ -735,39 +735,6 @@ section > h2:first-child {
   color: #4a3e30;
 }
 
-/* --- Library tabs --- */
-
-.library-tabs {
-  display: flex;
-  gap: 0;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid #d4c9b8;
-}
-
-.library-tab {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 0.75rem 1.25rem;
-  border: none;
-  background: none;
-  color: #8a7e6f;
-  cursor: pointer;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -1px;
-  transition: color 0.15s, border-color 0.15s;
-}
-
-.library-tab:hover {
-  color: #6b1d2a;
-}
-
-.library-tab.active {
-  color: #6b1d2a;
-  border-bottom-color: #6b1d2a;
-}
-
 /* --- Homepage Preview --- */
 
 .preview-section {
@@ -1748,13 +1715,6 @@ section > h2:first-child {
   font-weight: 500;
 }
 
-.view-description {
-  font-size: 0.9rem;
-  color: #8a7e6f;
-  font-style: italic;
-  margin-bottom: 1.5rem;
-}
-
 /* --- Annotations --- */
 
 .annot-highlight {
@@ -2259,15 +2219,6 @@ section > h2:first-child {
     width: 80px;
   }
 
-  .library-tabs {
-    flex-wrap: wrap;
-  }
-
-  .library-tab {
-    padding: 0.6rem 0.8rem;
-    font-size: 0.65rem;
-  }
-
   .parallel-controls .view-toggle {
     flex-wrap: wrap;
   }
@@ -2460,20 +2411,6 @@ section > h2:first-child {
   .lib-card-title {
     font-size: 0.78rem;
   }
-  .library-tabs {
-    gap: 0;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    flex-wrap: nowrap;
-  }
-
-  .library-tab {
-    padding: 0.6rem 0.75rem;
-    font-size: 0.6rem;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-
   /* --- Translation Pages --- */
   .parallel-controls {
     flex-direction: column;
