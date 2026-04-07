@@ -192,13 +192,31 @@ def build_library_page(era_groups):
     total_count = sum(len(texts) for _, texts in era_groups)
 
     # Collect unique traditions for filter chips
+    # Exclude 'jewish' — Hebrew Bible / Second Temple texts are part of the Christian tradition on this site
     traditions = set()
     for _, texts in era_groups:
         for t in texts:
-            if t.get("tradition") and t["status"] == "published":
+            if t.get("tradition") and t["status"] == "published" and t["tradition"] != "jewish":
                 traditions.add(t["tradition"])
+    tradition_labels = {
+        "orthodox": "Christian",
+        "neoplatonist": "Greek / Roman",
+        "greek": "Greek",
+        "hindu": "Hindu",
+        "buddhist": "Buddhist",
+        "islamic": "Islamic",
+        "sufi": "Sufi",
+        "gnostic": "Gnostic",
+        "hermetic": "Hermetic",
+        "norse": "Norse",
+        "egyptian": "Egyptian",
+        "mesopotamian": "Mesopotamian",
+        "zoroastrian": "Zoroastrian",
+        "taoist": "Taoist",
+        "confucian": "Confucian",
+    }
     tradition_chips = "\n".join(
-        f'        <button class="filter-chip" onclick="toggleFilter(\'tradition\', \'{tr}\', this)">{tr.replace("orthodox","Christian").replace("neoplatonist","Greek/Roman").replace("jewish","Jewish").replace("hindu","Hindu").replace("buddhist","Buddhist").replace("islamic","Islamic").replace("sufi","Sufi").replace("gnostic","Gnostic").replace("hermetic","Hermetic").replace("norse","Norse").replace("egyptian","Egyptian").replace("mesopotamian","Mesopotamian").replace("zoroastrian","Zoroastrian").replace("taoist","Taoist").replace("confucian","Confucian").title()}</button>'
+        f'        <button class="filter-chip" onclick="toggleFilter(\'tradition\', \'{tr}\', this)">{tradition_labels.get(tr, tr.title())}</button>'
         for tr in sorted(traditions)
     )
 
