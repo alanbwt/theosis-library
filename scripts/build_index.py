@@ -239,139 +239,86 @@ def build_library_page(era_groups):
         <div class="search-results-info" id="search-results-info"></div>
       </div>
 
-      <div class="library-tabs">
-        <button class="library-tab active" onclick="switchView('full', this)">All Texts</button>
-        <button class="library-tab" onclick="switchView('first', this)">First Translations</button>
-        <button class="library-tab" onclick="switchView('canon', this)">Core Canon</button>
-        <button class="library-tab" onclick="switchView('ancient', this)">Most Ancient</button>
+      <div class="filter-chips-wrap">
+        <button class="filter-chip active" onclick="clearFilters(this)">All ({published_count})</button>
+        <button class="filter-chip" onclick="toggleFilter('first', 'true', this)">First Translations ({first_count})</button>
+        <button class="filter-chip" onclick="toggleFilter('canon', 'true', this)">Core Canon</button>
+{tradition_chips}
       </div>
 
-      {status_line}
+      <p style="color: #8a7e6f; font-size: 0.8rem; margin-bottom: 1.5rem;">{published_count} texts &middot; Oldest first</p>
 
-      <!-- Full Library view -->
-      <div id="view-full" class="library-view">
+      <div id="search-results"></div>
+
 {items_html}
-      </div>
-
-      <!-- Most Ancient timeline view -->
-      <div id="view-ancient" class="timeline-view" style="display:none;">
-        <div class="timeline">
-
-          <div class="timeline-entry">
-            <div class="timeline-entry-img"><img src="/assets/timeline/sumerian-tablet.jpg" alt="Sumerian clay tablet" loading="lazy"></div>
-            <div class="timeline-content">
-              <div class="timeline-date">c. 2600 BCE</div>
-              <h3>Instructions of Shuruppak</h3>
-              <div class="text-meta">Sumerian &middot; Earliest known wisdom literature</div>
-              <div class="text-description">One of the oldest surviving literary texts. A father's advice to his son, preserved on clay tablets from ancient Sumer. Predates the Hebrew Bible by over a millennium.</div>
-              <div class="timeline-status">Forthcoming</div>
-            </div>
-          </div>
-
-          <div class="timeline-entry">
-            <div class="timeline-entry-img"><img src="/assets/timeline/gilgamesh-tablet.jpg" alt="Gilgamesh flood tablet" loading="lazy"></div>
-            <div class="timeline-content">
-              <div class="timeline-date">c. 2100 BCE</div>
-              <h3>Epic of Gilgamesh (Standard Version)</h3>
-              <div class="text-meta">Akkadian &middot; Mesopotamia</div>
-              <div class="text-description">The oldest great work of literature. A king's search for immortality and the meaning of human mortality. Contains the earliest flood narrative, predating Genesis by centuries.</div>
-              <div class="timeline-status">Forthcoming</div>
-            </div>
-          </div>
-
-          <div class="timeline-entry">
-            <div class="timeline-entry-img"><img src="/assets/timeline/book-of-dead.jpg" alt="Papyrus of Ani" loading="lazy"></div>
-            <div class="timeline-content">
-              <div class="timeline-date">c. 1550 BCE</div>
-              <h3>Egyptian Book of the Dead (Papyrus of Ani)</h3>
-              <div class="text-meta">Egyptian &middot; Thebes</div>
-              <div class="text-description">Spells and instructions for navigating the afterlife. The most complete surviving copy of the funerary texts that shaped Egyptian religion for two millennia.</div>
-              <div class="timeline-status">Forthcoming</div>
-            </div>
-          </div>
-
-          <div class="timeline-entry">
-            <div class="timeline-entry-img"><img src="/assets/timeline/septuagint.jpg" alt="Codex Vaticanus" loading="lazy"></div>
-            <div class="timeline-content">
-              <div class="timeline-date">c. 250 BCE</div>
-              <h3>Septuagint (LXX)</h3>
-              <div class="text-meta">Greek &middot; Alexandria</div>
-              <div class="text-description">The Greek translation of the Hebrew scriptures, produced in Ptolemaic Alexandria. The Bible of the early Church and the textual basis for most New Testament quotations of the Old.</div>
-              <div class="timeline-status">Forthcoming</div>
-            </div>
-          </div>
-
-          <div class="timeline-entry">
-            <div class="timeline-entry-img"><img src="/assets/timeline/codex-sinaiticus.jpg" alt="Codex Sinaiticus" loading="lazy"></div>
-            <div class="timeline-content">
-              <div class="timeline-date">c. 50&ndash;120 AD</div>
-              <h3>Earliest Gospel Manuscripts</h3>
-              <div class="text-meta">Greek &middot; From Codex Sinaiticus (4th c. copy)</div>
-              <div class="text-description">The words of Jesus as preserved in the earliest surviving manuscripts. John 1 (the Logos), John 10 ("ye are gods"), 2 Peter 1:4 ("partakers of the divine nature").</div>
-              <div class="timeline-status">Forthcoming</div>
-            </div>
-          </div>
-
-          <div class="timeline-entry">
-            <div class="timeline-entry-img"><img src="/assets/timeline/irenaeus.jpg" alt="Irenaeus of Lyon" loading="lazy"></div>
-            <div class="timeline-content">
-              <div class="timeline-date">c. 130&ndash;200 AD</div>
-              <h3>Irenaeus, Against Heresies</h3>
-              <div class="text-meta">Greek/Latin &middot; Lyon</div>
-              <div class="text-description">The earliest systematic account of Gnostic theology and its refutation. "God became man so that man might become God."</div>
-              <div class="timeline-status">Forthcoming</div>
-            </div>
-          </div>
-
-          <div class="timeline-entry timeline-entry--published">
-            <div class="timeline-entry-img"><img src="/assets/scans/csel38-p20.jpg" alt="CSEL 38" loading="lazy"></div>
-            <div class="timeline-content">
-              <div class="timeline-date">c. 385 AD</div>
-              <h3><a href="/library/filastrius-gnostic-heresies.html">Filastrius, The Gnostic Schools</a></h3>
-              <div class="text-meta">Latin &middot; Brescia &middot; <strong>First English translation</strong></div>
-              <div class="text-description">Fifteen chapters covering every major Gnostic school: Simonians, Basilideans, Valentinians, Marcosians, Carpocratians, Barbelo-Gnostics. With manuscript scans.</div>
-              <div class="timeline-status timeline-status--live">Published &middot; Read now &rarr;</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Filters applied via JS on the single view above -->
 
     </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>Theosis Library is a project of <a href="#">Hyperborean Press</a>.</p>
+    <div class="container" style="text-align:center;">
+      <img src="../assets/hyperborean-press-logo.webp" alt="Hyperborean Press" style="width:60px;height:auto;opacity:0.4;margin-bottom:0.5rem;">
+      <p>&copy; Hyperborean Press 2026</p>
     </div>
   </footer>
 
   <script type="module" src="../js/search.js"></script>
   <script>
-  function switchView(view, btn) {{
-    var views = ['full', 'ancient', 'first', 'canon'];
-    views.forEach(function(v) {{
-      var el = document.getElementById('view-' + v);
-      if (el) el.style.display = (v === view) ? '' : 'none';
-    }});
-    var tabs = document.querySelectorAll('.library-tab');
-    for (var i = 0; i < tabs.length; i++) tabs[i].classList.remove('active');
-    if (btn) btn.classList.add('active');
-    // Update URL without reload
-    var url = new URL(window.location);
-    if (view === 'full') url.searchParams.delete('view');
-    else url.searchParams.set('view', view);
-    history.replaceState(null, '', url);
+  var activeFilters = {{}};
+  var canonIds = new Set(['septuagint-genesis-1','septuagint-exodus-3','septuagint-psalm-82','sinaiticus-mark-1','sinaiticus-matt-5','sinaiticus-luke-1','sinaiticus-john-1','sinaiticus-john-10','sinaiticus-john-17','sinaiticus-2peter-1','sinaiticus-phil-2-5','sinaiticus-col-1-15','nicene-creed']);
+
+  function toggleFilter(type, value, btn) {{
+    document.querySelectorAll('.filter-chip').forEach(function(c) {{ c.classList.remove('active'); }});
+    btn.classList.add('active');
+    activeFilters = {{}};
+    activeFilters[type] = value;
+    applyFilters();
   }}
-  // Init from URL
+
+  function clearFilters(btn) {{
+    activeFilters = {{}};
+    document.querySelectorAll('.filter-chip').forEach(function(c) {{ c.classList.remove('active'); }});
+    btn.classList.add('active');
+    applyFilters();
+  }}
+
+  function applyFilters() {{
+    var cards = document.querySelectorAll('.lib-card, .lib-card--queued');
+    var groups = document.querySelectorAll('.era-group');
+
+    cards.forEach(function(card) {{
+      var show = true;
+      if (activeFilters.tradition) {{
+        show = show && card.getAttribute('data-tradition') === activeFilters.tradition;
+      }}
+      if (activeFilters.first) {{
+        show = show && card.querySelector('.lib-card-badge') !== null;
+      }}
+      if (activeFilters.canon) {{
+        var href = card.getAttribute('href') || '';
+        var slug = href.replace('/library/', '').replace('.html', '').split('#')[0];
+        show = show && canonIds.has(slug);
+      }}
+      card.style.display = show ? '' : 'none';
+    }});
+
+    groups.forEach(function(g) {{
+      var anyVisible = false;
+      g.querySelectorAll('.lib-card, .lib-card--queued').forEach(function(c) {{
+        if (c.style.display !== 'none') anyVisible = true;
+      }});
+      g.style.display = anyVisible ? '' : 'none';
+    }});
+  }}
+
+  // Auto-search from URL ?q= param
   (function() {{
-    var view = new URLSearchParams(window.location.search).get('view') || 'full';
-    var tabs = document.querySelectorAll('.library-tab');
-    for (var i = 0; i < tabs.length; i++) {{
-      if (tabs[i].textContent.toLowerCase().indexOf(view === 'full' ? 'all' : view === 'first' ? 'first' : view === 'canon' ? 'core' : 'ancient') !== -1) {{
-        switchView(view, tabs[i]);
+    var q = new URLSearchParams(window.location.search).get('q');
+    if (q) {{
+      var input = document.getElementById('search-input');
+      if (input) {{
+        input.value = q;
+        input.dispatchEvent(new Event('input'));
       }}
     }}
   }})();
