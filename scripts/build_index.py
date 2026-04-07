@@ -200,7 +200,7 @@ def build_library_page(era_groups):
                 traditions.add(t["tradition"])
     tradition_labels = {
         "orthodox": "Christian",
-        "neoplatonist": "Greek / Roman",
+        "neoplatonist": "Greco-Roman",
         "greek": "Greek",
         "hindu": "Hindu",
         "buddhist": "Buddhist",
