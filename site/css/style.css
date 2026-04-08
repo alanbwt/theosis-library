@@ -964,6 +964,74 @@ section > h2:first-child {
   margin-bottom: 0.3em;
 }
 
+/* --- Tradition Hero Banners --- */
+
+.tradition-hero {
+  height: 120px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 3px solid rgba(0,0,0,0.1);
+}
+
+.tradition-hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 1rem 2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 60%);
+}
+
+.tradition-hero-label {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.85);
+  font-weight: 400;
+}
+
+/* Tradition-specific palettes */
+.tradition-hero--orthodox { background: linear-gradient(135deg, #6b1d2a 0%, #1a0a0e 50%, #4a1520 100%); }
+.tradition-hero--neoplatonist { background: linear-gradient(135deg, #2c3e50 0%, #1a1a2e 50%, #34495e 100%); background-image: url('/assets/traditions/neoplatonist.jpg'); }
+.tradition-hero--greek { background: linear-gradient(135deg, #1e3a5f 0%, #0d1b2a 50%, #2c5282 100%); background-image: url('/assets/traditions/greek.jpg'); }
+.tradition-hero--hindu { background: linear-gradient(135deg, #c2571a 0%, #5c1a00 50%, #d4760a 100%); }
+.tradition-hero--buddhist { background: linear-gradient(135deg, #b8860b 0%, #3d2b00 50%, #c9961c 100%); }
+.tradition-hero--gnostic { background: linear-gradient(135deg, #2d1b4e 0%, #0f0a1a 50%, #4a2d6e 100%); background-image: url('/assets/traditions/gnostic.jpg'); }
+.tradition-hero--jewish { background: linear-gradient(135deg, #1a237e 0%, #0d1040 50%, #283593 100%); }
+.tradition-hero--celtic { background: linear-gradient(135deg, #1b5e20 0%, #0a2e10 50%, #2e7d32 100%); }
+.tradition-hero--mesopotamian { background: linear-gradient(135deg, #5d4037 0%, #2e1a0e 50%, #6d4c41 100%); }
+.tradition-hero--japanese { background: linear-gradient(135deg, #b71c1c 0%, #4a0000 50%, #c62828 100%); }
+.tradition-hero--egyptian { background: linear-gradient(135deg, #c6962e 0%, #5c4500 50%, #d4a638 100%); }
+.tradition-hero--taoist { background: linear-gradient(135deg, #1b5e20 0%, #0a2e10 50%, #388e3c 100%); }
+.tradition-hero--hermetic { background: linear-gradient(135deg, #4a148c 0%, #1a0533 50%, #6a1b9a 100%); }
+.tradition-hero--islamic { background: linear-gradient(135deg, #006064 0%, #002628 50%, #00838f 100%); }
+.tradition-hero--mesoamerican { background: linear-gradient(135deg, #33691e 0%, #1a3a0e 50%, #558b2f 100%); }
+.tradition-hero--zoroastrian { background: linear-gradient(135deg, #e65100 0%, #6d2600 50%, #ef6c00 100%); }
+.tradition-hero--african { background: linear-gradient(135deg, #bf360c 0%, #5c1a06 50%, #d84315 100%); }
+.tradition-hero--confucian { background: linear-gradient(135deg, #880e4f 0%, #3e0624 50%, #ad1457 100%); }
+.tradition-hero--chinese { background: linear-gradient(135deg, #b71c1c 0%, #4a0000 50%, #d32f2f 100%); }
+.tradition-hero--slavic { background: linear-gradient(135deg, #1565c0 0%, #0a3260 50%, #1976d2 100%); }
+.tradition-hero--tibetan { background: linear-gradient(135deg, #880e4f 0%, #3e0624 50%, #c2185b 100%); }
+.tradition-hero--persian { background: linear-gradient(135deg, #00695c 0%, #003430 50%, #00897b 100%); }
+.tradition-hero--norse { background: linear-gradient(135deg, #37474f 0%, #1a2328 50%, #455a64 100%); }
+.tradition-hero--sufi { background: linear-gradient(135deg, #004d40 0%, #002420 50%, #00695c 100%); }
+.tradition-hero--canaanite { background: linear-gradient(135deg, #795548 0%, #3e2723 50%, #8d6e63 100%); }
+.tradition-hero--korean { background: linear-gradient(135deg, #0d47a1 0%, #062350 50%, #1565c0 100%); }
+.tradition-hero--southeast-asian { background: linear-gradient(135deg, #2e7d32 0%, #174018 50%, #43a047 100%); }
+.tradition-hero--jain { background: linear-gradient(135deg, #f57f17 0%, #7a400c 50%, #f9a825 100%); }
+.tradition-hero--finnish { background: linear-gradient(135deg, #1565c0 0%, #0a3260 50%, #e8eaf6 100%); }
+.tradition-hero--ethiopian { background: linear-gradient(135deg, #1b5e20 0%, #f9a825 50%, #d32f2f 100%); }
+
+@media (max-width: 768px) {
+  .tradition-hero { height: 80px; }
+  .tradition-hero-overlay { padding: 0.75rem 1rem; }
+  .tradition-hero-label { font-size: 0.65rem; }
+}
+
 /* --- Translation Page --- */
 
 .translation-header {

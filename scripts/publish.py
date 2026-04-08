@@ -118,6 +118,20 @@ def publish(text_id):
     )
     template = env.get_template("translation.html")
 
+    tradition_labels = {
+        "orthodox": "Christian", "neoplatonist": "Greco-Roman", "greek": "Greek",
+        "hindu": "Hindu", "buddhist": "Buddhist", "islamic": "Islamic", "sufi": "Sufi",
+        "gnostic": "Gnostic", "hermetic": "Hermetic", "norse": "Norse",
+        "egyptian": "Egyptian", "mesopotamian": "Mesopotamian", "zoroastrian": "Zoroastrian",
+        "taoist": "Taoist", "confucian": "Confucian", "celtic": "Celtic",
+        "japanese": "Japanese", "tibetan": "Tibetan", "mesoamerican": "Mesoamerican",
+        "ethiopian": "Ethiopian", "african": "African", "slavic": "Slavic",
+        "persian": "Persian", "jain": "Jain", "canaanite": "Canaanite",
+        "korean": "Korean", "southeast-asian": "Southeast Asian", "finnish": "Finnish",
+        "chinese": "Chinese", "jewish": "Jewish",
+    }
+    tradition = text_meta.get("tradition", "")
+
     today = date.today()
     html = template.render(
         title=text_meta["title"],
@@ -139,6 +153,8 @@ def publish(text_id):
         slug=text_meta["slug"],
         pub_date=str(today),
         pub_year=str(today.year),
+        tradition=tradition,
+        tradition_label=tradition_labels.get(tradition, tradition.title()),
     )
 
     # Write HTML
