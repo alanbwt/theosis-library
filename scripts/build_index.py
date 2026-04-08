@@ -356,6 +356,7 @@ def build_library_page(era_groups):
   </script>
 
 <script src="../js/decode.js"></script>
+<script src="../js/columns.js"></script>
 </body>
 </html>"""
 
