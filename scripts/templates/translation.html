@@ -47,10 +47,20 @@
 
   <main>
     <div class="tradition-hero tradition-hero--{{ tradition }}">
+      <pre class="tradition-hero-art" id="tradition-art"></pre>
       <div class="tradition-hero-overlay">
         <div class="tradition-hero-label">{{ tradition_label }}</div>
       </div>
     </div>
+    <script>
+    (function(){
+      var t = '{{ tradition }}';
+      fetch('/data/tradition-art.json').then(function(r){return r.json()}).then(function(d){
+        var art = d[t];
+        if (art) document.getElementById('tradition-art').textContent = art.join('\n');
+      }).catch(function(){});
+    })();
+    </script>
 
     <div class="container">
       <div class="translation-header">
