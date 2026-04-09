@@ -824,6 +824,52 @@ section > h2:first-child {
   color: #4a3e30;
 }
 
+/* --- Library Filter Chips --- */
+
+.filter-chips-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.filter-chip {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  padding: 0.45em 1.1em;
+  border: 1px solid #d4c9b8;
+  border-radius: 20px;
+  background: transparent;
+  color: #8a7e6f;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.filter-chip:hover {
+  border-color: #6b1d2a;
+  color: #6b1d2a;
+  background: rgba(107, 29, 42, 0.04);
+}
+
+.filter-chip.active {
+  background: #6b1d2a;
+  color: #f4ede4;
+  border-color: #6b1d2a;
+}
+
+@media (max-width: 768px) {
+  .filter-chips-wrap {
+    gap: 0.35rem;
+  }
+  .filter-chip {
+    font-size: 0.68rem;
+    padding: 0.4em 0.85em;
+  }
+}
+
 /* --- Library Card Grid --- */
 
 .lib-card-grid {
