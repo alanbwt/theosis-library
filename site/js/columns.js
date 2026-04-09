@@ -1,198 +1,222 @@
 /**
- * Theosis Library — Crumbling Corinthian Columns
- * Inspired by the Gibbon "Decline & Fall" book spine columns.
- * ASCII art columns on left/right that progressively crumble as you scroll.
- * Capital intact at top → fragments and rubble at bottom.
- * Only on screens >= 1280px.
+ * Theosis Library — Crumbling ASCII Columns
+ * Gibbon "Decline & Fall" inspired columns that crumble as you scroll.
+ * Black background, white ASCII characters — matching hero art style.
+ * Works on desktop AND mobile (thinner on mobile).
+ * Columns rebuild when scrolling back up.
  */
 
 (function () {
   'use strict';
 
-  if (window.innerWidth < 1280) return;
+  var isMobile = window.innerWidth < 768;
+  var COL_W = isMobile ? 20 : 40; // px width
+  var FONT = isMobile ? 5 : 7;    // px font size
+  var CHARS_W = isMobile ? 4 : 6; // chars per line
+  var LINE_H = FONT * 1.15;
 
-  var COL_CHARS = 18; // width in characters
-  var CHAR_H = 10;    // approx px per line at font-size 9px
-  var COLOR = '#a09078';
-  var OPACITY = 0.13;
+  // Column components scaled by width
+  function capital(w) {
+    if (w <= 4) return [
+      '.==.',
+      '|{}|',
+      '|::|',
+      '+--+',
+    ];
+    return [
+      '.====.',
+      '|{~~}|',
+      '|(||)|',
+      '| || |',
+      '|:||:|',
+      '+====+',
+    ];
+  }
 
-  // Pristine Ionic/Corinthian capital (top)
-  var CAPITAL = [
-    '   .========.   ',
-    '  /||||||||||\\  ',
-    ' /||||||||||||\\  ',
-    '|  .--====--. | ',
-    '| /  (~~~~)  \\| ',
-    '|/  (||||||)  \\',
-    '|   (||||||)   |',
-    '|    (||||)    |',
-    '|     (||)     |',
-    '|=====:||:=====|',
-    '|:::::::::::::: |',
-    '+==============+',
-  ];
+  function shaft(w) {
+    if (w <= 4) return [
+      '||||',
+      '||| ',
+      '||||',
+      ' |||',
+    ];
+    return [
+      '||||||',
+      '||| ||',
+      '||||||',
+      '|| |||',
+    ];
+  }
 
-  // Shaft segments — intact, then progressively damaged
-  var SHAFT_INTACT = [
-    '| ||| ||| ||| |',
-    '| ||| ||| ||| |',
-    '| ||| ||| ||| |',
-    '| ||| ||| ||| |',
-  ];
+  function rubble(w) {
+    if (w <= 4) return [
+      ' || ',
+      '  | ',
+      ' .  ',
+      '  . ',
+      '.  .',
+      ' .. ',
+    ];
+    return [
+      ' ||  |',
+      '  | | ',
+      ' |    ',
+      '   .  ',
+      ' .  . ',
+      '  ..  ',
+      '.   . ',
+      '  .   ',
+    ];
+  }
 
-  var SHAFT_WORN = [
-    '| ||  ||| ||| |',
-    '| ||| |||  || |',
-    '| |||  || ||| |',
-    '|  || ||| ||  |',
-  ];
+  function base(w) {
+    if (w <= 4) return [
+      '.,.,',
+      '====',
+    ];
+    return [
+      '.,.,..',
+      '.,;:,.',
+      '======',
+    ];
+  }
 
-  var SHAFT_CRACKED = [
-    '| ||   ||  || |',
-    '|  ||  |  ||  |',
-    '| |  \\  / ||  |',
-    '|  |  \\/  |   |',
-  ];
-
-  var SHAFT_BREAKING = [
-    '|  |    |  |  |',
-    '   ||  |   |   ',
-    '|  |   |  |   |',
-    '   |  |    |   ',
-  ];
-
-  var SHAFT_CRUMBLED = [
-    '   |    |      ',
-    '      |    |   ',
-    '  |       |    ',
-    '      |        ',
-  ];
-
-  var SHAFT_RUBBLE = [
-    '  .  ,    .    ',
-    '    .   ,   .  ',
-    ' ,    .    ,   ',
-    '   .    ,      ',
-  ];
-
-  var SHAFT_DUST = [
-    '  .         .  ',
-    '       .       ',
-    '  .            ',
-    '            .  ',
-  ];
-
-  // Base — crumbled remains
-  var BASE_RUBBLE = [
-    '  .,. .,. .,.  ',
-    ' .,:;:.,.:;:,. ',
-    '.,;:;:;:;:;:;,.',
-    '================',
-  ];
-
-  function buildColumn() {
-    // Calculate how many lines we need
-    var pageH = Math.max(document.body.scrollHeight, window.innerHeight);
-    var totalLines = Math.floor(pageH / CHAR_H);
+  // Build column text for a given scroll fraction (0 = top, 1 = bottom)
+  function buildColumn(scrollFrac, totalLines) {
+    var w = CHARS_W;
+    var cap = capital(w);
+    var sh = shaft(w);
+    var rub = rubble(w);
+    var bas = base(w);
 
     var lines = [];
 
-    // Capital (always intact)
-    for (var i = 0; i < CAPITAL.length; i++) {
-      lines.push(CAPITAL[i]);
+    // Capital always at top
+    for (var i = 0; i < cap.length; i++) lines.push(cap[i]);
+
+    var bodyLines = totalLines - cap.length - bas.length;
+    if (bodyLines < 4) bodyLines = 4;
+
+    // The "damage point" moves down as you scroll
+    // scrollFrac 0 = fully intact, 1 = fully crumbled
+    var intactLines = Math.floor(bodyLines * (1 - scrollFrac * 0.95));
+    var crumbleLines = bodyLines - intactLines;
+
+    // Intact shaft
+    for (var j = 0; j < intactLines; j++) {
+      var line = sh[j % sh.length];
+      // Add slight weathering near the transition
+      if (j > intactLines - 5 && scrollFrac > 0.1) {
+        var arr = line.split('');
+        for (var k = 0; k < arr.length; k++) {
+          if (arr[k] === '|' && Math.random() < 0.15 * scrollFrac) arr[k] = ' ';
+        }
+        line = arr.join('');
+      }
+      lines.push(line);
     }
 
-    var shaftLines = totalLines - CAPITAL.length - BASE_RUBBLE.length;
-    if (shaftLines < 10) shaftLines = 10;
-
-    // Divide shaft into zones
-    var zone1 = Math.floor(shaftLines * 0.25); // intact
-    var zone2 = Math.floor(shaftLines * 0.15); // worn
-    var zone3 = Math.floor(shaftLines * 0.15); // cracked
-    var zone4 = Math.floor(shaftLines * 0.15); // breaking
-    var zone5 = Math.floor(shaftLines * 0.12); // crumbled
-    var zone6 = Math.floor(shaftLines * 0.10); // rubble
-    var zone7 = shaftLines - zone1 - zone2 - zone3 - zone4 - zone5 - zone6; // dust
-
-    function addZone(pattern, count) {
-      for (var j = 0; j < count; j++) {
-        var line = pattern[j % pattern.length];
-        // Add slight randomness to damaged zones
-        if (pattern !== SHAFT_INTACT) {
-          var arr = line.split('');
-          for (var k = 0; k < arr.length; k++) {
-            if (arr[k] === '|' && Math.random() < 0.08) arr[k] = ' ';
-            if (arr[k] === ' ' && Math.random() < 0.02) arr[k] = '.';
-          }
-          line = arr.join('');
+    // Crumbling zone — transition from shaft to rubble
+    for (var m = 0; m < crumbleLines; m++) {
+      var frac = m / Math.max(crumbleLines, 1); // 0 at crack, 1 at base
+      if (frac < 0.3) {
+        // Cracked shaft
+        var sline = sh[m % sh.length].split('');
+        for (var n = 0; n < sline.length; n++) {
+          if (sline[n] === '|' && Math.random() < 0.3 + frac) sline[n] = ' ';
         }
-        lines.push(line);
+        lines.push(sline.join(''));
+      } else if (frac < 0.6) {
+        // Breaking
+        var bline = sh[m % sh.length].split('');
+        for (var p = 0; p < bline.length; p++) {
+          if (Math.random() < 0.5 + frac * 0.3) bline[p] = ' ';
+          else if (bline[p] === '|' && Math.random() < 0.3) bline[p] = '.';
+        }
+        lines.push(bline.join(''));
+      } else {
+        // Rubble/dust
+        lines.push(rub[m % rub.length]);
       }
     }
 
-    addZone(SHAFT_INTACT, zone1);
-    addZone(SHAFT_WORN, zone2);
-    addZone(SHAFT_CRACKED, zone3);
-    addZone(SHAFT_BREAKING, zone4);
-    addZone(SHAFT_CRUMBLED, zone5);
-    addZone(SHAFT_RUBBLE, zone6);
-    addZone(SHAFT_DUST, zone7);
-
-    // Base rubble
-    for (var b = 0; b < BASE_RUBBLE.length; b++) {
-      lines.push(BASE_RUBBLE[b]);
-    }
+    // Base
+    for (var b = 0; b < bas.length; b++) lines.push(bas[b]);
 
     return lines.join('\n');
   }
 
   function createColumn(side) {
-    var pre = document.createElement('pre');
-    pre.className = 'ascii-column ascii-column--' + side;
-    pre.textContent = buildColumn();
-
-    pre.style.cssText = [
-      'position: absolute',
+    var wrap = document.createElement('div');
+    wrap.className = 'ascii-col-wrap ascii-col-wrap--' + side;
+    wrap.style.cssText = [
+      'position: fixed',
       'top: 0',
       side + ': 0',
-      'z-index: 1',
+      'width: ' + COL_W + 'px',
+      'height: 100vh',
+      'z-index: 100',
       'pointer-events: none',
-      'color: ' + COLOR,
-      'opacity: ' + OPACITY,
-      'font-family: "Courier New", Courier, monospace',
-      'font-size: 9px',
-      'line-height: ' + CHAR_H + 'px',
-      'white-space: pre',
+      'background: #0a0a0a',
       'overflow: hidden',
-      'padding: 0',
+      'display: flex',
+      'align-items: stretch',
+    ].join(';');
+
+    var pre = document.createElement('pre');
+    pre.style.cssText = [
+      'color: #c8b898',
+      'font-family: "Courier New", Courier, monospace',
+      'font-size: ' + FONT + 'px',
+      'line-height: ' + LINE_H + 'px',
+      'white-space: pre',
       'margin: 0',
-      'width: ' + (COL_CHARS * 5.4) + 'px',
+      'padding: 0',
+      'width: 100%',
+      'text-align: center',
+      'opacity: 0.7',
       side === 'right' ? 'transform: scaleX(-1)' : '',
     ].join(';');
 
-    return pre;
+    wrap.appendChild(pre);
+    return { wrap: wrap, pre: pre };
   }
 
   var left = createColumn('left');
   var right = createColumn('right');
-  document.body.appendChild(left);
-  document.body.appendChild(right);
+  document.body.appendChild(left.wrap);
+  document.body.appendChild(right.wrap);
 
-  // Rebuild on significant page height changes (e.g. dynamic content)
-  var lastHeight = document.body.scrollHeight;
-  setInterval(function () {
-    var h = document.body.scrollHeight;
-    if (Math.abs(h - lastHeight) > 200) {
-      lastHeight = h;
-      left.textContent = buildColumn();
-      right.textContent = buildColumn();
+  var totalLines = Math.floor(window.innerHeight / LINE_H);
+
+  function updateColumns() {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var docHeight = Math.max(document.body.scrollHeight - window.innerHeight, 1);
+    var scrollFrac = Math.min(scrollTop / docHeight, 1);
+
+    var text = buildColumn(scrollFrac, totalLines);
+    left.pre.textContent = text;
+    right.pre.textContent = text;
+  }
+
+  // Initial render
+  updateColumns();
+
+  // Update on scroll with RAF throttling
+  var ticking = false;
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      requestAnimationFrame(function () {
+        updateColumns();
+        ticking = false;
+      });
+      ticking = true;
     }
-  }, 3000);
+  });
 
   // Handle resize
   window.addEventListener('resize', function () {
-    var show = window.innerWidth >= 1280;
-    left.style.display = show ? '' : 'none';
-    right.style.display = show ? '' : 'none';
+    totalLines = Math.floor(window.innerHeight / LINE_H);
+    updateColumns();
   });
 })();
