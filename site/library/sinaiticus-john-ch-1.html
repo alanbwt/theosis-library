@@ -21,7 +21,7 @@
     "@type": "ScholarlyArticle",
     "name": "Gospel of John, Chapter 1",
     "author": {"@type": "Person", "name": "Alan B."},
-    "datePublished": "2026-04-07",
+    "datePublished": "2026-04-09",
     "publisher": {"@type": "Organization", "name": "Theosis Library"},
     "description": "John chapter 1 from Codex Sinaiticus.",
     "url": "https://theosislibrary.com/library/sinaiticus-john-ch-1.html",
@@ -47,10 +47,20 @@
 
   <main>
     <div class="tradition-hero tradition-hero--orthodox">
+      <pre class="tradition-hero-art" id="tradition-art"></pre>
       <div class="tradition-hero-overlay">
         <div class="tradition-hero-label">Christian</div>
       </div>
     </div>
+    <script>
+    (function(){
+      var t = 'orthodox';
+      fetch('/data/tradition-art.json').then(function(r){return r.json()}).then(function(d){
+        var art = d[t];
+        if (art) document.getElementById('tradition-art').textContent = art.join('\n');
+      }).catch(function(){});
+    })();
+    </script>
 
     <div class="container">
       <div class="translation-header">
@@ -63,7 +73,7 @@
 
       <section class="introduction">
         <h2>Introduction</h2>
-        <p>John chapter 1 from Codex Sinaiticus.</p>
+        <p>The Prologue of the Gospel of John is the most theologically dense passage in the New Testament. In eighteen verses, the evangelist establishes that the Logos — the Word, the rational principle of the cosmos — is identical with God, is the agent of all creation, and has become incarnate as a human being. This is the text that bridges Greek philosophy and Christian theology: the <em>Logos</em> of Heraclitus and the Stoics is identified with the God of Israel who walked in the Garden of Eden.</p><p>The Greek text is from Codex Sinaiticus (4th century), the oldest substantially complete manuscript of the New Testament. Variant readings from Sinaiticus are noted where they differ significantly from later manuscripts.</p>
       </section>
 
       <div class="provenance-chain">
@@ -81,16 +91,264 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>Greek original and English translation.</span>
+        <div class="view-toggle">
+          
+          <button class="active" onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">Greek only</button>
+        </div>
+      </div>
+
+      <section class="translation-body " id="translation-body">
         
-        <div class="section-block" id="s1">
-          <span class="section-ref">§1 · sinaiticus-john-ch-1</span>
-          <p>In the beginning was the Word, and the Word was with God, and the Word was God.</p>
+        <div class="parallel-section" id="s1-1-5"
+             data-author="John (attributed)"
+             data-title="Gospel of John, Chapter 1"
+             data-section="ch. 1.1-5"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/sinaiticus-john-ch-1.html#s1-1-5">
+
+          <div class="section-header">
+            <span class="section-ref">§1.1-5 · John 1:1-5</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">Greek</div>
+            <p>Ἐν ἀρχῇ ἦν ὁ λόγος, καὶ ὁ λόγος ἦν πρὸς τὸν θεόν, καὶ θεὸς ἦν ὁ λόγος. οὗτος ἦν ἐν ἀρχῇ πρὸς τὸν θεόν. πάντα δι᾿ αὐτοῦ ἐγένετο, καὶ χωρὶς αὐτοῦ ἐγένετο οὐδὲ ἕν ὃ γέγονεν. ἐν αὐτῷ ζωὴ ἦν, καὶ ἡ ζωὴ ἦν τὸ φῶς τῶν ἀνθρώπων· καὶ τὸ φῶς ἐν τῇ σκοτίᾳ φαίνει, καὶ ἡ σκοτία αὐτὸ οὐ κατέλαβεν.</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p>In the beginning was the Word, and the Word was toward God, and the Word was God. This one was in the beginning toward God. All things came into being through him, and apart from him not one thing came into being that has come into being. In him was life, and the life was the light of human beings. And the light shines in the darkness, and the darkness did not overcome it.</p>
+          </div>
+        </div>
+        
+        <div class="parallel-section" id="s1-6-9"
+             data-author="John (attributed)"
+             data-title="Gospel of John, Chapter 1"
+             data-section="ch. 1.6-9"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/sinaiticus-john-ch-1.html#s1-6-9">
+
+          <div class="section-header">
+            <span class="section-ref">§1.6-9 · John 1:6-9</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">Greek</div>
+            <p>Ἐγένετο ἄνθρωπος ἀπεσταλμένος παρὰ θεοῦ, ὄνομα αὐτῷ Ἰωάννης· οὗτος ἦλθεν εἰς μαρτυρίαν, ἵνα μαρτυρήσῃ περὶ τοῦ φωτός, ἵνα πάντες πιστεύσωσιν δι᾿ αὐτοῦ. οὐκ ἦν ἐκεῖνος τὸ φῶς, ἀλλ᾿ ἵνα μαρτυρήσῃ περὶ τοῦ φωτός. ἦν τὸ φῶς τὸ ἀληθινόν, ὃ φωτίζει πάντα ἄνθρωπον, ἐρχόμενον εἰς τὸν κόσμον.</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p>There came a man sent from God, whose name was John. He came as a witness, to bear witness concerning the light, so that all might believe through him. He was not the light, but came to bear witness concerning the light. The true light, which enlightens every person, was coming into the world.</p>
+          </div>
+        </div>
+        
+        <div class="parallel-section" id="s1-10-14"
+             data-author="John (attributed)"
+             data-title="Gospel of John, Chapter 1"
+             data-section="ch. 1.10-14"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/sinaiticus-john-ch-1.html#s1-10-14">
+
+          <div class="section-header">
+            <span class="section-ref">§1.10-14 · John 1:10-14</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">Greek</div>
+            <p>ἐν τῷ κόσμῳ ἦν, καὶ ὁ κόσμος δι᾿ αὐτοῦ ἐγένετο, καὶ ὁ κόσμος αὐτὸν οὐκ ἔγνω. εἰς τὰ ἴδια ἦλθεν, καὶ οἱ ἴδιοι αὐτὸν οὐ παρέλαβον. ὅσοι δὲ ἔλαβον αὐτόν, ἔδωκεν αὐτοῖς ἐξουσίαν τέκνα θεοῦ γενέσθαι, τοῖς πιστεύουσιν εἰς τὸ ὄνομα αὐτοῦ· οἳ οὐκ ἐξ αἱμάτων οὐδὲ ἐκ θελήματος σαρκὸς οὐδὲ ἐκ θελήματος ἀνδρὸς ἀλλ᾿ ἐκ θεοῦ ἐγεννήθησαν. Καὶ ὁ λόγος σὰρξ ἐγένετο καὶ ἐσκήνωσεν ἐν ἡμῖν, καὶ ἐθεασάμεθα τὴν δόξαν αὐτοῦ, δόξαν ὡς μονογενοῦς παρὰ πατρός, πλήρης χάριτος καὶ ἀληθείας.</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p>He was in the world, and the world came into being through him, yet the world did not know him. He came to his own, and his own people did not receive him. But to all who received him, who believed in his name, he gave the right to become children of God — children born not of blood, nor of the will of the flesh, nor of the will of a man, but of God. And the Word became flesh and dwelt among us, and we beheld his glory, glory as of the only-begotten from the Father, full of grace and truth.</p>
+          </div>
+        </div>
+        
+        <div class="parallel-section" id="s1-15-18"
+             data-author="John (attributed)"
+             data-title="Gospel of John, Chapter 1"
+             data-section="ch. 1.15-18"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/sinaiticus-john-ch-1.html#s1-15-18">
+
+          <div class="section-header">
+            <span class="section-ref">§1.15-18 · John 1:15-18</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">Greek</div>
+            <p>Ἰωάννης μαρτυρεῖ περὶ αὐτοῦ καὶ κέκραγεν λέγων· οὗτος ἦν ὃν εἶπον· ὁ ὀπίσω μου ἐρχόμενος ἔμπροσθέν μου γέγονεν, ὅτι πρῶτός μου ἦν. ὅτι ἐκ τοῦ πληρώματος αὐτοῦ ἡμεῖς πάντες ἐλάβομεν, καὶ χάριν ἀντὶ χάριτος· ὅτι ὁ νόμος διὰ Μωϋσέως ἐδόθη, ἡ χάρις καὶ ἡ ἀλήθεια διὰ Ἰησοῦ Χριστοῦ ἐγένετο. θεὸν οὐδεὶς ἑώρακεν πώποτε· μονογενὴς θεὸς ὁ ὢν εἰς τὸν κόλπον τοῦ πατρὸς ἐκεῖνος ἐξηγήσατο.</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p>John bore witness concerning him and cried out: 'This was he of whom I said, the one coming after me has been placed before me, because he was before me.' From his fullness we have all received, grace upon grace. For the law was given through Moses; grace and truth came through Jesus Christ. No one has ever seen God. The only-begotten God, who is in the bosom of the Father — he has made him known.</p>
+          </div>
+        </div>
+        
+        <div class="parallel-section" id="s1-19-28"
+             data-author="John (attributed)"
+             data-title="Gospel of John, Chapter 1"
+             data-section="ch. 1.19-28"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/sinaiticus-john-ch-1.html#s1-19-28">
+
+          <div class="section-header">
+            <span class="section-ref">§1.19-28 · John 1:19-28</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">Greek</div>
+            <p>Καὶ αὕτη ἐστὶν ἡ μαρτυρία τοῦ Ἰωάννου, ὅτε ἀπέστειλαν πρὸς αὐτὸν οἱ Ἰουδαῖοι ἐξ Ἱεροσολύμων ἱερεῖς καὶ Λευίτας ἵνα ἐρωτήσωσιν αὐτόν· σὺ τίς εἶ;</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p>And this is the witness of John, when the Jews sent priests and Levites from Jerusalem to ask him: 'Who are you?' He confessed and did not deny it: 'I am not the Christ.' They asked him: 'What then? Are you Elijah?' He said: 'I am not.' 'Are you the Prophet?' He answered: 'No.' They said to him: 'Who are you? We need to give an answer to those who sent us. What do you say about yourself?' He said: 'I am a voice crying in the wilderness: Make straight the way of the Lord, as the prophet Isaiah said.'</p>
+          </div>
+        </div>
+        
+        <div class="parallel-section" id="s1-29-34"
+             data-author="John (attributed)"
+             data-title="Gospel of John, Chapter 1"
+             data-section="ch. 1.29-34"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/sinaiticus-john-ch-1.html#s1-29-34">
+
+          <div class="section-header">
+            <span class="section-ref">§1.29-34 · John 1:29-34</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">Greek</div>
+            <p>Τῇ ἐπαύριον βλέπει τὸν Ἰησοῦν ἐρχόμενον πρὸς αὐτὸν καὶ λέγει· ἴδε ὁ ἀμνὸς τοῦ θεοῦ ὁ αἴρων τὴν ἁμαρτίαν τοῦ κόσμου.</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p>The next day he saw Jesus coming toward him and said: 'Behold, the Lamb of God, who takes away the sin of the world! This is the one of whom I said: After me comes a man who ranks before me, because he was before me. I myself did not know him, but for this purpose I came baptizing with water — that he might be revealed to Israel.' And John bore witness: 'I saw the Spirit descending from heaven like a dove, and it remained on him. I did not know him, but the one who sent me to baptize with water said to me: The one on whom you see the Spirit descend and remain — this is the one who baptizes with the Holy Spirit. And I have seen and have borne witness that this is the Son of God.'</p>
+          </div>
+        </div>
+        
+        <div class="parallel-section" id="s1-35-42"
+             data-author="John (attributed)"
+             data-title="Gospel of John, Chapter 1"
+             data-section="ch. 1.35-42"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/sinaiticus-john-ch-1.html#s1-35-42">
+
+          <div class="section-header">
+            <span class="section-ref">§1.35-42 · John 1:35-42</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">Greek</div>
+            <p>Τῇ ἐπαύριον πάλιν εἱστήκει ὁ Ἰωάννης καὶ ἐκ τῶν μαθητῶν αὐτοῦ δύο.</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p>The next day John was standing again with two of his disciples, and he looked at Jesus as he walked by and said: 'Behold, the Lamb of God!' The two disciples heard him say this, and they followed Jesus. Jesus turned and saw them following and said to them: 'What are you seeking?' They said: 'Rabbi, where are you staying?' He said: 'Come and you will see.' They came and saw where he was staying, and they remained with him that day. It was about the tenth hour. One of the two was Andrew, Simon Peter's brother. He first found his own brother Simon and said: 'We have found the Messiah.' He brought him to Jesus. Jesus looked at him and said: 'You are Simon son of John. You shall be called Cephas' — which means Peter.</p>
+          </div>
+        </div>
+        
+        <div class="parallel-section" id="s1-43-51"
+             data-author="John (attributed)"
+             data-title="Gospel of John, Chapter 1"
+             data-section="ch. 1.43-51"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/sinaiticus-john-ch-1.html#s1-43-51">
+
+          <div class="section-header">
+            <span class="section-ref">§1.43-51 · John 1:43-51</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">Greek</div>
+            <p>Τῇ ἐπαύριον ἠθέλησεν ἐξελθεῖν εἰς τὴν Γαλιλαίαν καὶ εὑρίσκει Φίλιππον.</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p>The next day Jesus decided to go to Galilee, and he found Philip and said: 'Follow me.' Philip found Nathanael and said: 'We have found the one Moses and the prophets wrote about — Jesus of Nazareth, the son of Joseph.' Nathanael said: 'Can anything good come out of Nazareth?' Philip said: 'Come and see.' Jesus saw Nathanael coming toward him and said: 'Behold, an Israelite in whom there is no deceit!' Nathanael said: 'How do you know me?' Jesus answered: 'Before Philip called you, when you were under the fig tree, I saw you.' Nathanael answered: 'Rabbi, you are the Son of God! You are the King of Israel!' Jesus answered: 'Because I said I saw you under the fig tree, you believe? You will see greater things than these. Truly, truly, I say to you: you will see heaven opened, and the angels of God ascending and descending on the Son of Man.'</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 
