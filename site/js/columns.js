@@ -10,16 +10,27 @@
 (function () {
   'use strict';
 
-  if (window.innerWidth < 768) return;
-
-  var isNarrow = window.innerWidth < 1024;
-  var COL_W = isNarrow ? 48 : 68;
-  var FONT = isNarrow ? 5.5 : 7;
+  var isMobile = window.innerWidth < 600;
+  var isTablet = window.innerWidth >= 600 && window.innerWidth < 1024;
+  var COL_W = isMobile ? 22 : isTablet ? 48 : 68;
+  var FONT = isMobile ? 4.5 : isTablet ? 5.5 : 7;
   var LINE_H = FONT * 1.15;
   var GOLD = '#c4a858';
 
-  // ── Full intact capital ──
-  var CAP = [
+  // ── MOBILE patterns (thin, 4-char wide) ──
+  var M_CAP = [
+    '╔══╗',
+    '║◎◎║',
+    '║║║║',
+    '╚╤╤╝',
+    '║║║║',
+  ];
+  var M_SHAFT = ['║║║║', '║║ ║', '║║║║', '║ ║║'];
+  var M_JAGGED = [' .  ', ' ╎. ', ' ║╎ ', '╎║║╎', '║║║║'];
+  var M_BASE = ['╔╤╤╗', '║▓▓║', '╚══╝'];
+
+  // ── DESKTOP patterns ──
+  var D_CAP = [
     ' ╔════════════════╗ ',
     ' ║████████████████║ ',
     ' ╚══╤══════════╤══╝ ',
@@ -32,18 +43,13 @@
     '  ║::║║║║║║║║::║  ',
     '  ╚═╤╤╤╤╤╤╤╤╤╤═╝  ',
   ];
-
-  // ── Intact shaft line patterns ──
-  var SHAFT = [
+  var D_SHAFT = [
     '  ║ ║║║║║║║║║║ ║  ',
     '  ║ ║║║ ║║ ║║║ ║  ',
     '  ║ ║║║║║║║║║║ ║  ',
     '  ║ ║║ ║║║║ ║║ ║  ',
   ];
-
-  // ── Jagged break edge patterns (the irregular top of a snapped column) ──
-  // These represent the ragged broken-off top, read top-to-bottom
-  var JAGGED_TOP = [
+  var D_JAGGED = [
     '        .  ,       ',
     '    ,  .    . ,    ',
     '   ╎.  ╎  ╎  .╎   ',
@@ -53,9 +59,7 @@
     '  ║║║║║║║╎║║║║║║  ',
     '  ║ ║║║║║║║║║║ ║  ',
   ];
-
-  // ── Base (always intact) ──
-  var BASE = [
+  var D_BASE = [
     '  ╔═╤╤╤╤╤╤╤╤╤╤═╗  ',
     '  ║::║║║║║║║║::║  ',
     '  ╚═╧╧╧╧╧╧╧╧╧╧═╝  ',
@@ -66,6 +70,13 @@
     '║██████████████████║',
     '╚══════════════════╝',
   ];
+
+  // Select patterns based on screen size
+  var CAP = isMobile ? M_CAP : D_CAP;
+  var SHAFT = isMobile ? M_SHAFT : D_SHAFT;
+  var JAGGED_TOP = isMobile ? M_JAGGED : D_JAGGED;
+  var BASE = isMobile ? M_BASE : D_BASE;
+  var EMPTY_LINE = isMobile ? '    ' : '                    ';
 
   function buildColumn(scrollFrac, totalLines) {
     var lines = [];
@@ -80,7 +91,7 @@
 
     // Fill destroyed zone with empty space (black background shows)
     for (var e = 0; e < destroyedLines; e++) {
-      lines.push('                    ');
+      lines.push(EMPTY_LINE);
     }
 
     if (scrollFrac < 0.05) {
@@ -186,18 +197,7 @@
   });
 
   window.addEventListener('resize', function () {
-    if (window.innerWidth < 768) {
-      left.wrap.style.display = 'none';
-      right.wrap.style.display = 'none';
-      document.body.style.paddingLeft = '';
-      document.body.style.paddingRight = '';
-    } else {
-      left.wrap.style.display = '';
-      right.wrap.style.display = '';
-      document.body.style.paddingLeft = COL_W + 'px';
-      document.body.style.paddingRight = COL_W + 'px';
-      totalLines = Math.floor(window.innerHeight / LINE_H);
-      update();
-    }
+    totalLines = Math.floor(window.innerHeight / LINE_H);
+    update();
   });
 })();
