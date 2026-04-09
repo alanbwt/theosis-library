@@ -1,143 +1,169 @@
 /**
- * Theosis Library — Crumbling ASCII Columns
- * Gibbon "Decline & Fall" inspired columns that crumble as you scroll.
- * Black background, white ASCII characters — matching hero art style.
- * Works on desktop AND mobile (thinner on mobile).
- * Columns rebuild when scrolling back up.
+ * Theosis Library — Crumbling Corinthian Columns
+ * Award-winning ASCII art columns that crumble as you scroll.
+ * Wider, more detailed, unmistakably columns.
+ * Black background with warm gold ASCII characters.
  */
 
 (function () {
   'use strict';
 
   var isMobile = window.innerWidth < 768;
-  var COL_W = isMobile ? 20 : 40; // px width
-  var FONT = isMobile ? 5 : 7;    // px font size
-  var CHARS_W = isMobile ? 4 : 6; // chars per line
+  if (isMobile) return; // Skip on mobile — too narrow to look good
+
+  var isTablet = window.innerWidth < 1024;
+  var COL_W = isTablet ? 50 : 72;
+  var FONT = isTablet ? 6 : 7;
   var LINE_H = FONT * 1.15;
 
-  // Column components scaled by width
-  function capital(w) {
-    if (w <= 4) return [
-      '.==.',
-      '|{}|',
-      '|::|',
-      '+--+',
-    ];
-    return [
-      '.====.',
-      '|{~~}|',
-      '|(||)|',
-      '| || |',
-      '|:||:|',
-      '+====+',
-    ];
-  }
+  // Detailed Ionic capital — unmistakably a column
+  var CAPITAL = [
+    '  ╔══════════════╗  ',
+    '  ║██████████████║  ',
+    '  ╚══════════════╝  ',
+    ' ╔════════════════╗ ',
+    ' ║  ╭──────────╮  ║ ',
+    ' ║ ╭╯ (◎)  (◎) ╰╮ ║ ',
+    ' ║ │  ╭──────╮  │ ║ ',
+    ' ║ ╰╮ │||||||│ ╭╯ ║ ',
+    ' ║  ╰─┤||||||├─╯  ║ ',
+    ' ║    │||||||│    ║ ',
+    ' ║    ╰──┬┬──╯    ║ ',
+    ' ╚═══════╧╧═══════╝ ',
+    '  ┌──────┤├──────┐  ',
+    '  │::::::││::::::│  ',
+    '  └──────┤├──────┘  ',
+  ];
 
-  function shaft(w) {
-    if (w <= 4) return [
-      '||||',
-      '||| ',
-      '||||',
-      ' |||',
-    ];
-    return [
-      '||||||',
-      '||| ||',
-      '||||||',
-      '|| |||',
-    ];
-  }
+  // Narrower capital for tablet
+  var CAPITAL_SM = [
+    ' ╔══════════╗ ',
+    ' ║██████████║ ',
+    ' ╚══════════╝ ',
+    '╔════════════╗',
+    '║ ╭(◎)  (◎)╮ ║',
+    '║ │ ││││││ │ ║',
+    '║ ╰─┤││││├─╯ ║',
+    '╚════╧╧╧╧════╝',
+    ' ┌───┤├───┐ ',
+    ' │:::││:::│ ',
+    ' └───┤├───┘ ',
+  ];
 
-  function rubble(w) {
-    if (w <= 4) return [
-      ' || ',
-      '  | ',
-      ' .  ',
-      '  . ',
-      '.  .',
-      ' .. ',
-    ];
-    return [
-      ' ||  |',
-      '  | | ',
-      ' |    ',
-      '   .  ',
-      ' .  . ',
-      '  ..  ',
-      '.   . ',
-      '  .   ',
-    ];
-  }
+  var SHAFT = [
+    '  │║│║│║││║│║│║│  ',
+    '  │║│║│║││║│║│║│  ',
+    '  │║│║│ ││ │║│║│  ',
+    '  │║│║│║││║│║│║│  ',
+  ];
 
-  function base(w) {
-    if (w <= 4) return [
-      '.,.,',
-      '====',
-    ];
-    return [
-      '.,.,..',
-      '.,;:,.',
-      '======',
-    ];
-  }
+  var SHAFT_SM = [
+    ' │║│║││║│║│ ',
+    ' │║│ ││ │║│ ',
+    ' │║│║││║│║│ ',
+    ' │║│║││║│║│ ',
+  ];
 
-  // Build column text for a given scroll fraction (0 = top, 1 = bottom)
+  // Damaged variants
+  var SHAFT_WORN = [
+    '  │║│ │ ││ │ │║│  ',
+    '  │║│║│ ││║│║│║│  ',
+    '  │ │║│║││║│║│ │  ',
+    '  │║│ │ ││ │║│║│  ',
+  ];
+
+  var SHAFT_CRACKED = [
+    '  │ │  ╲││╱  │ │  ',
+    '  │║│   ││   │║│  ',
+    '  │ │  ╱││╲  │ │  ',
+    '  │ │   ││   │ │  ',
+  ];
+
+  var SHAFT_BREAKING = [
+    '  │ │   ╎╎   │    ',
+    '     │  ╎╎  │     ',
+    '  │     ╎╎    │   ',
+    '    │   ╎╎   │    ',
+  ];
+
+  var SHAFT_RUBBLE = [
+    '   ╎    ╎╎        ',
+    '        ╎╎   ╎    ',
+    '  ╎     ╎         ',
+    '     ╎       ╎    ',
+  ];
+
+  var SHAFT_DUST = [
+    '   ·    ·    ·    ',
+    '      ·      ·    ',
+    '  ·       ·       ',
+    '        ·     ·   ',
+  ];
+
+  // Column base
+  var BASE = [
+    '  ┌──────┤├──────┐  ',
+    '  │::::::││::::::│  ',
+    '  └──────┤├──────┘  ',
+    ' ╔═══════╤╤═══════╗ ',
+    ' ║▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓║ ',
+    ' ╚═══════════════╝  ',
+    '╔══════════════════╗',
+    '║▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓║',
+    '╚══════════════════╝',
+  ];
+
+  var BASE_SM = [
+    ' ┌───┤├───┐ ',
+    ' │:::││:::│ ',
+    ' └───┤├───┘ ',
+    '╔════╤╤════╗',
+    '║▓▓▓▓▓▓▓▓▓▓║',
+    '╚══════════╝',
+  ];
+
   function buildColumn(scrollFrac, totalLines) {
-    var w = CHARS_W;
-    var cap = capital(w);
-    var sh = shaft(w);
-    var rub = rubble(w);
-    var bas = base(w);
-
+    var cap = isTablet ? CAPITAL_SM : CAPITAL;
+    var sh = isTablet ? SHAFT_SM : SHAFT;
+    var bas = isTablet ? BASE_SM : BASE;
     var lines = [];
 
-    // Capital always at top
+    // Capital
     for (var i = 0; i < cap.length; i++) lines.push(cap[i]);
 
     var bodyLines = totalLines - cap.length - bas.length;
-    if (bodyLines < 4) bodyLines = 4;
+    if (bodyLines < 10) bodyLines = 10;
 
-    // The "damage point" moves down as you scroll
-    // scrollFrac 0 = fully intact, 1 = fully crumbled
-    var intactLines = Math.floor(bodyLines * (1 - scrollFrac * 0.95));
-    var crumbleLines = bodyLines - intactLines;
+    var intactEnd = Math.floor(bodyLines * Math.max(0.05, 1 - scrollFrac * 0.95));
+    var crumbleLines = bodyLines - intactEnd;
 
     // Intact shaft
-    for (var j = 0; j < intactLines; j++) {
+    for (var j = 0; j < intactEnd; j++) {
       var line = sh[j % sh.length];
-      // Add slight weathering near the transition
-      if (j > intactLines - 5 && scrollFrac > 0.1) {
+      // Slight wear near transition
+      if (j > intactEnd - 4 && scrollFrac > 0.15) {
         var arr = line.split('');
         for (var k = 0; k < arr.length; k++) {
-          if (arr[k] === '|' && Math.random() < 0.15 * scrollFrac) arr[k] = ' ';
+          if ((arr[k] === '║' || arr[k] === '│') && Math.random() < 0.12 * scrollFrac) arr[k] = ' ';
         }
         line = arr.join('');
       }
       lines.push(line);
     }
 
-    // Crumbling zone — transition from shaft to rubble
+    // Crumbling zone
     for (var m = 0; m < crumbleLines; m++) {
-      var frac = m / Math.max(crumbleLines, 1); // 0 at crack, 1 at base
-      if (frac < 0.3) {
-        // Cracked shaft
-        var sline = sh[m % sh.length].split('');
-        for (var n = 0; n < sline.length; n++) {
-          if (sline[n] === '|' && Math.random() < 0.3 + frac) sline[n] = ' ';
-        }
-        lines.push(sline.join(''));
-      } else if (frac < 0.6) {
-        // Breaking
-        var bline = sh[m % sh.length].split('');
-        for (var p = 0; p < bline.length; p++) {
-          if (Math.random() < 0.5 + frac * 0.3) bline[p] = ' ';
-          else if (bline[p] === '|' && Math.random() < 0.3) bline[p] = '.';
-        }
-        lines.push(bline.join(''));
-      } else {
-        // Rubble/dust
-        lines.push(rub[m % rub.length]);
+      var frac = m / Math.max(crumbleLines, 1);
+      var patterns = [SHAFT_WORN, SHAFT_CRACKED, SHAFT_BREAKING, SHAFT_RUBBLE, SHAFT_DUST];
+      var idx = Math.min(Math.floor(frac * patterns.length), patterns.length - 1);
+      var pattern = patterns[idx];
+      var line2 = pattern[m % pattern.length];
+      // Extra randomization
+      var arr2 = line2.split('');
+      for (var n = 0; n < arr2.length; n++) {
+        if (arr2[n] !== ' ' && Math.random() < frac * 0.3) arr2[n] = ' ';
       }
+      lines.push(arr2.join(''));
     }
 
     // Base
@@ -148,7 +174,7 @@
 
   function createColumn(side) {
     var wrap = document.createElement('div');
-    wrap.className = 'ascii-col-wrap ascii-col-wrap--' + side;
+    wrap.className = 'ascii-col-wrap ascii-col--' + side;
     wrap.style.cssText = [
       'position: fixed',
       'top: 0',
@@ -157,24 +183,22 @@
       'height: 100vh',
       'z-index: 100',
       'pointer-events: none',
-      'background: #0a0a0a',
+      'background: #0c0a08',
       'overflow: hidden',
-      'display: flex',
-      'align-items: stretch',
     ].join(';');
 
     var pre = document.createElement('pre');
     pre.style.cssText = [
-      'color: #c8b898',
+      'color: #b8a070',
       'font-family: "Courier New", Courier, monospace',
       'font-size: ' + FONT + 'px',
       'line-height: ' + LINE_H + 'px',
       'white-space: pre',
       'margin: 0',
-      'padding: 0',
+      'padding: 2px 0',
       'width: 100%',
       'text-align: center',
-      'opacity: 0.7',
+      'opacity: 0.85',
       side === 'right' ? 'transform: scaleX(-1)' : '',
     ].join(';');
 
@@ -187,22 +211,23 @@
   document.body.appendChild(left.wrap);
   document.body.appendChild(right.wrap);
 
+  // Add body padding so content doesn't go under columns
+  document.body.style.paddingLeft = COL_W + 'px';
+  document.body.style.paddingRight = COL_W + 'px';
+
   var totalLines = Math.floor(window.innerHeight / LINE_H);
 
   function updateColumns() {
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     var docHeight = Math.max(document.body.scrollHeight - window.innerHeight, 1);
     var scrollFrac = Math.min(scrollTop / docHeight, 1);
-
     var text = buildColumn(scrollFrac, totalLines);
     left.pre.textContent = text;
     right.pre.textContent = text;
   }
 
-  // Initial render
   updateColumns();
 
-  // Update on scroll with RAF throttling
   var ticking = false;
   window.addEventListener('scroll', function () {
     if (!ticking) {
@@ -214,9 +239,19 @@
     }
   });
 
-  // Handle resize
   window.addEventListener('resize', function () {
-    totalLines = Math.floor(window.innerHeight / LINE_H);
-    updateColumns();
+    if (window.innerWidth < 768) {
+      left.wrap.style.display = 'none';
+      right.wrap.style.display = 'none';
+      document.body.style.paddingLeft = '';
+      document.body.style.paddingRight = '';
+    } else {
+      left.wrap.style.display = '';
+      right.wrap.style.display = '';
+      document.body.style.paddingLeft = COL_W + 'px';
+      document.body.style.paddingRight = COL_W + 'px';
+      totalLines = Math.floor(window.innerHeight / LINE_H);
+      updateColumns();
+    }
   });
 })();
