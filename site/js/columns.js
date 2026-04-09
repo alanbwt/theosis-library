@@ -1,10 +1,10 @@
 /**
  * Theosis Library — Crumbling Corinthian Columns
- * Inspired by Gibbon "Decline & Fall" book spines.
- * Capital intact at TOP. Base intact at BOTTOM.
- * Crumbling progresses from TOP DOWN as you scroll —
- * like the spines going from Vol. I (intact) to Vol. VII (ruins).
- * Scroll back up = column rebuilds.
+ * Gibbon "Decline & Fall" style: column snaps off from the top.
+ * At scroll=0: full column with capital.
+ * As you scroll: capital vanishes, top becomes a jagged broken edge
+ * that descends lower and lower. Base always intact.
+ * Like Vols I→VII of the Gibbon spines.
  */
 
 (function () {
@@ -16,88 +16,49 @@
   var COL_W = isNarrow ? 48 : 68;
   var FONT = isNarrow ? 5.5 : 7;
   var LINE_H = FONT * 1.15;
+  var GOLD = '#c4a858';
 
-  // ── CAPITAL (Ionic, always at very top) ──
+  // ── Full intact capital ──
   var CAP = [
     ' ╔════════════════╗ ',
     ' ║████████████████║ ',
-    ' ╚════════════════╝ ',
-    '╔══════════════════╗',
-    '║  ╭(◎)════(◎)╮   ║',
-    '║  │ ║║║║║║║║ │   ║',
-    '║  ╰─╢║║║║║║╟─╯   ║',
-    '╚════╧╧╧╧╧╧╧╧════╝',
-    ' ╔════╤╤╤╤╤╤════╗  ',
-    ' ║::::║║║║║║::::║  ',
-    ' ╚════╧╧╧╧╧╧════╝  ',
+    ' ╚══╤══════════╤══╝ ',
+    '╔═══╧══════════╧═══╗',
+    '║ ╭(◎)══════(◎)╮  ║',
+    '║ │ ║║║║║║║║║║ │  ║',
+    '║ ╰─╢║║║║║║║║╟─╯  ║',
+    '╚═══╤╤╤╤╤╤╤╤╤╤═══╝',
+    '  ╔═╧╧╧╧╧╧╧╧╧╧═╗  ',
+    '  ║::║║║║║║║║::║  ',
+    '  ╚═╤╤╤╤╤╤╤╤╤╤═╝  ',
   ];
 
-  var CAP_SM = [
-    ' ╔══════════╗ ',
-    ' ║██████████║ ',
-    ' ╚══════════╝ ',
-    '╔════════════╗',
-    '║ (◎)══(◎)  ║',
-    '║  ║║║║║║   ║',
-    '╚══╧╧╧╧╧╧══╝',
-    ' ╔══╤╤╤╤══╗  ',
-    ' ║::║║║║::║  ',
-    ' ╚══╧╧╧╧══╝  ',
+  // ── Intact shaft line patterns ──
+  var SHAFT = [
+    '  ║ ║║║║║║║║║║ ║  ',
+    '  ║ ║║║ ║║ ║║║ ║  ',
+    '  ║ ║║║║║║║║║║ ║  ',
+    '  ║ ║║ ║║║║ ║║ ║  ',
   ];
 
-  // ── SHAFT variants (intact → crumbling) ──
-  var S_INTACT = [
-    ' ║ ║║║║║║║║║║ ║ ',
-    ' ║ ║║║ ║║ ║║║ ║ ',
-    ' ║ ║║║║║║║║║║ ║ ',
-    ' ║ ║║ ║║║║ ║║ ║ ',
+  // ── Jagged break edge patterns (the irregular top of a snapped column) ──
+  // These represent the ragged broken-off top, read top-to-bottom
+  var JAGGED_TOP = [
+    '        .  ,       ',
+    '    ,  .    . ,    ',
+    '   ╎.  ╎  ╎  .╎   ',
+    '   ╎║  ╎║ ║╎  ║   ',
+    '  ╎║║╎ ║║ ║║ ╎║╎  ',
+    '  ║║║║╎║║ ║║╎║║║  ',
+    '  ║║║║║║║╎║║║║║║  ',
+    '  ║ ║║║║║║║║║║ ║  ',
   ];
 
-  // Cracks appear — jagged lines cutting across the fluting
-  var S_CRACKED = [
-    ' ║ ║║╲║║║╱║║║ ║ ',
-    ' ║ ║║ ╲║╱ ║║║ ║ ',
-    ' ║ ║║║╱║╲║║║║ ║ ',
-    ' ║ ║╱║║║║║╲║║ ║ ',
-  ];
-
-  // Chunks missing — pieces of the column broken away
-  var S_BROKEN = [
-    ' ║ ║║  ║║  ║║ ║ ',
-    ' ║  ║║ ║║ ║║  ║ ',
-    '   ║║║ ║║ ║║║   ',
-    ' ║  ║  ║║  ║  ║ ',
-  ];
-
-  // Major gaps — jagged top of remaining column
-  var S_RUINED = [
-    '   ║║  ║║  ║║    ',
-    '    ║  ║║  ║     ',
-    '   ║   ║║   ║    ',
-    '    ║  ║    ║    ',
-  ];
-
-  // Stumps — barely anything left
-  var S_STUMPS = [
-    '       ║║        ',
-    '    ║  ╎╎  ║     ',
-    '       ╎╎        ',
-    '    ╎  ╎╎  ╎     ',
-  ];
-
-  // Rubble/debris on the ground
-  var S_RUBBLE = [
-    '   ╎   ..   ╎    ',
-    '     .    .       ',
-    '  .    ..    .    ',
-    '       .     .    ',
-  ];
-
-  // ── BASE (always at bottom, intact) ──
+  // ── Base (always intact) ──
   var BASE = [
-    ' ╔════╤╤╤╤╤╤════╗  ',
-    ' ║::::║║║║║║::::║  ',
-    ' ╚════╧╧╧╧╧╧════╝  ',
+    '  ╔═╤╤╤╤╤╤╤╤╤╤═╗  ',
+    '  ║::║║║║║║║║::║  ',
+    '  ╚═╧╧╧╧╧╧╧╧╧╧═╝  ',
     '╔══════════════════╗',
     '║▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓║',
     '╚══════════════════╝',
@@ -106,88 +67,58 @@
     '╚══════════════════╝',
   ];
 
-  var BASE_SM = [
-    ' ╔══╤╤╤╤══╗  ',
-    ' ║::║║║║::║  ',
-    ' ╚══╧╧╧╧══╝  ',
-    '╔════════════╗',
-    '║▓▓▓▓▓▓▓▓▓▓▓║',
-    '╚════════════╝',
-  ];
-
   function buildColumn(scrollFrac, totalLines) {
-    var cap = isNarrow ? CAP_SM : CAP;
-    var bas = isNarrow ? BASE_SM : BASE;
     var lines = [];
+    var baseH = BASE.length;
+    var bodyLines = totalLines - baseH;
+    if (bodyLines < 10) bodyLines = 10;
 
-    // Capital — crumbles from top as you scroll
-    // At scrollFrac 0: full capital visible
-    // At scrollFrac 1: capital mostly gone
-    var capLinesToShow = Math.max(2, Math.round(cap.length * (1 - scrollFrac * 0.8)));
+    // How much of the column is destroyed (from top)
+    // scrollFrac 0 = full column, 1 = only base + short stump
+    var destroyedLines = Math.floor(bodyLines * scrollFrac * 0.85);
+    var remainingBody = bodyLines - destroyedLines;
 
-    // Show remaining capital lines (bottom portion stays longer)
-    var capStart = cap.length - capLinesToShow;
-    for (var i = capStart; i < cap.length; i++) {
-      var line = cap[i];
-      // Add damage to upper visible capital lines based on scroll
-      if (i < capStart + 3 && scrollFrac > 0.2) {
-        var arr = line.split('');
-        for (var k = 0; k < arr.length; k++) {
-          if (arr[k] !== ' ' && Math.random() < scrollFrac * 0.4) arr[k] = ' ';
+    // Fill destroyed zone with empty space (black background shows)
+    for (var e = 0; e < destroyedLines; e++) {
+      lines.push('                    ');
+    }
+
+    if (scrollFrac < 0.05) {
+      // Nearly no scroll: show full capital + shaft
+      // Undo empty lines
+      lines = [];
+      for (var ci = 0; ci < CAP.length; ci++) lines.push(CAP[ci]);
+      var shaftCount = bodyLines - CAP.length;
+      for (var si = 0; si < shaftCount; si++) {
+        lines.push(SHAFT[si % SHAFT.length]);
+      }
+    } else {
+      // Capital is gone. Show jagged broken top edge, then intact shaft below.
+      // The jagged edge is ~6-8 lines of transition from rubble → intact
+
+      var jaggedH = Math.min(JAGGED_TOP.length, remainingBody);
+      for (var ji = 0; ji < jaggedH; ji++) {
+        var jline = JAGGED_TOP[ji];
+        // Extra randomization on the very top lines
+        if (ji < 3) {
+          var arr = jline.split('');
+          for (var k = 0; k < arr.length; k++) {
+            if (arr[k] !== ' ' && Math.random() < 0.3) arr[k] = ' ';
+          }
+          jline = arr.join('');
         }
-        line = arr.join('');
-      }
-      lines.push(line);
-    }
-
-    // Shaft body
-    var bodyLines = totalLines - capLinesToShow - bas.length;
-    if (bodyLines < 6) bodyLines = 6;
-
-    // The damage zone extends from the TOP of the shaft downward
-    // scrollFrac controls how far down the damage reaches
-    var damageDepth = Math.floor(bodyLines * scrollFrac * 0.9);
-    var intactStart = damageDepth;
-
-    // DAMAGED zone (top of shaft, grows as you scroll)
-    for (var d = 0; d < damageDepth; d++) {
-      var depthFrac = d / Math.max(damageDepth, 1); // 0=near capital, 1=near intact
-      var patterns, pat;
-
-      if (depthFrac < 0.15) {
-        // Near top: complete rubble
-        patterns = S_RUBBLE;
-      } else if (depthFrac < 0.3) {
-        // Stumps
-        patterns = S_STUMPS;
-      } else if (depthFrac < 0.5) {
-        // Major ruin
-        patterns = S_RUINED;
-      } else if (depthFrac < 0.7) {
-        // Broken chunks
-        patterns = S_BROKEN;
-      } else {
-        // Cracked — transition to intact
-        patterns = S_CRACKED;
+        lines.push(jline);
       }
 
-      pat = patterns[d % patterns.length];
-      // Extra randomization
-      var arr2 = pat.split('');
-      for (var n = 0; n < arr2.length; n++) {
-        if (arr2[n] !== ' ' && Math.random() < (1 - depthFrac) * 0.15) arr2[n] = ' ';
+      // Intact shaft fills the rest
+      var intactCount = remainingBody - jaggedH;
+      for (var ii = 0; ii < intactCount; ii++) {
+        lines.push(SHAFT[ii % SHAFT.length]);
       }
-      lines.push(arr2.join(''));
     }
 
-    // INTACT zone (bottom of shaft, shrinks as you scroll)
-    var intactLines = bodyLines - damageDepth;
-    for (var j = 0; j < intactLines; j++) {
-      lines.push(S_INTACT[j % S_INTACT.length]);
-    }
-
-    // Base — always intact
-    for (var b = 0; b < bas.length; b++) lines.push(bas[b]);
+    // Base always at bottom
+    for (var b = 0; b < baseH; b++) lines.push(BASE[b]);
 
     return lines.join('\n');
   }
@@ -208,13 +139,13 @@
 
     var pre = document.createElement('pre');
     pre.style.cssText = [
-      'color: #c4a858',
+      'color: ' + GOLD,
       'font-family: "Courier New", Courier, monospace',
       'font-size: ' + FONT + 'px',
       'line-height: ' + LINE_H + 'px',
       'white-space: pre',
       'margin: 0',
-      'padding: 2px 0',
+      'padding: 0',
       'width: 100%',
       'text-align: center',
       'opacity: 0.9',
