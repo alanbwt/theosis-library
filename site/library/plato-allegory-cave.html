@@ -21,7 +21,7 @@
     "@type": "ScholarlyArticle",
     "name": "Republic VII: The Allegory of the Cave",
     "author": {"@type": "Person", "name": "Alan B."},
-    "datePublished": "2026-04-07",
+    "datePublished": "2026-04-10",
     "publisher": {"@type": "Organization", "name": "Theosis Library"},
     "description": "Plato's most famous image: prisoners chained in a cave, mistaking shadows for reality.",
     "url": "https://theosislibrary.com/library/plato-allegory-cave.html",
@@ -47,10 +47,20 @@
 
   <main>
     <div class="tradition-hero tradition-hero--greek">
+      <pre class="tradition-hero-art" id="tradition-art"></pre>
       <div class="tradition-hero-overlay">
         <div class="tradition-hero-label">Greek</div>
       </div>
     </div>
+    <script>
+    (function(){
+      var t = 'greek';
+      fetch('/data/tradition-art.json').then(function(r){return r.json()}).then(function(d){
+        var art = d[t];
+        if (art) document.getElementById('tradition-art').textContent = art.join('\n');
+      }).catch(function(){});
+    })();
+    </script>
 
     <div class="container">
       <div class="translation-header">
@@ -63,7 +73,7 @@
 
       <section class="introduction">
         <h2>Introduction</h2>
-        <p>The Allegory of the Cave is the most influential image in the history of Western philosophy. Plato describes prisoners chained since childhood in an underground cave, watching shadows cast on a wall by objects passing before a fire. They take the shadows for the whole of reality. When one prisoner is freed and dragged into the sunlight, he is blinded — but gradually comes to see the real world, and finally the sun itself, which Plato identifies with the Form of the Good. The allegory maps the soul's journey from ignorance to knowledge, from the visible world to the intelligible.</p>
+        <p>The Allegory of the Cave is the most famous passage in the Republic and arguably the most famous image in Western philosophy. Plato describes prisoners chained since birth in an underground cave, watching shadows cast on the wall by objects passing before a fire. They mistake the shadows for reality. When one prisoner is freed and dragged into the sunlight, he is blinded — but slowly comes to see the real world, and finally the sun itself, which Plato identifies with the Form of the Good. The allegory maps the philosopher's journey from ignorance to wisdom, from the visible to the intelligible.</p>
       </section>
 
       <div class="provenance-chain">
@@ -97,16 +107,16 @@
 
       <section class="translation-body " id="translation-body">
         
-        <div class="parallel-section" id="s514a-b"
+        <div class="parallel-section" id="s514a-515a"
              data-author="Plato"
              data-title="Republic VII: The Allegory of the Cave"
-             data-section="ch. 514a-b"
+             data-section="ch. 514a-515a"
              data-translator="Alan B."
              data-year="2026"
-             data-url-path="/library/plato-allegory-cave.html#s514a-b">
+             data-url-path="/library/plato-allegory-cave.html#s514a-515a">
 
           <div class="section-header">
-            <span class="section-ref">§514a-b · Rep. 514a-b</span>
+            <span class="section-ref">§514a-515a · Rep. 514a-515a</span>
             <div class="section-actions">
               <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
               <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
@@ -118,25 +128,25 @@
 
           <div class="parallel-original">
             <div class="parallel-col-label">Greek</div>
-            <p>ἀπείκασον τοιούτῳ πάθει τὴν ἡμετέραν φύσιν παιδείας τε πέρι καὶ ἀπαιδευσίας. ἰδὲ γὰρ ἀνθρώπους οἷον ἐν καταγείῳ οἰκήσει σπηλαιώδει.</p>
+            <p>Μετὰ ταῦτα δή, εἶπον, ἀπείκασον τοιούτῳ πάθει τὴν ἡμετέραν φύσιν παιδείας τε πέρι καὶ ἀπαιδευσίας. ἰδὲ γὰρ ἀνθρώπους οἷον ἐν καταγείῳ οἰκήσει σπηλαιώδει, ἀναπεπταμένην πρὸς τὸ φῶς τὴν εἴσοδον ἐχούσῃ μακρὰν παρὰ πᾶν τὸ σπήλαιον, ἐν ταύτῃ ἐκ παίδων ὄντας ἐν δεσμοῖς καὶ τὰ σκέλη καὶ τοὺς αὐχένας, ὥστε μένειν τε αὐτοὺς εἴς τε τὸ πρόσθεν μόνον ὁρᾶν, κύκλῳ δὲ τὰς κεφαλὰς ὑπὸ τοῦ δεσμοῦ ἀδυνάτους περιάγειν, φῶς δὲ αὐτοῖς πυρὸς ἄνωθεν καὶ πόρρωθεν καόμενον ὄπισθεν αὐτῶν.</p>
           </div>
 
           <div class="parallel-translation">
             <div class="parallel-col-label">English</div>
-            <p>Compare our nature, in respect of education and its lack, to such an experience as this. Picture human beings living in an underground cave-like dwelling.</p>
+            <p>After this, I said, compare our nature in respect of education and its lack to such an experience as this. Picture human beings living in an underground, cave-like dwelling, with an entrance a long way up, which is open to the light and as wide as the cave itself. They've been there since childhood, fixed in the same place, with their necks and legs fettered, able to see only in front of them, because their bonds prevent them from turning their heads around. Light is provided by a fire burning far above and behind them.</p>
           </div>
         </div>
         
-        <div class="parallel-section" id="s515c-516a"
+        <div class="parallel-section" id="s515b-c"
              data-author="Plato"
              data-title="Republic VII: The Allegory of the Cave"
-             data-section="ch. 515c-516a"
+             data-section="ch. 515b-c"
              data-translator="Alan B."
              data-year="2026"
-             data-url-path="/library/plato-allegory-cave.html#s515c-516a">
+             data-url-path="/library/plato-allegory-cave.html#s515b-c">
 
           <div class="section-header">
-            <span class="section-ref">§515c-516a · Rep. 515c-516a</span>
+            <span class="section-ref">§515b-c · Rep. 515b-c</span>
             <div class="section-actions">
               <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
               <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
@@ -148,25 +158,25 @@
 
           <div class="parallel-original">
             <div class="parallel-col-label">Greek</div>
-            <p>εἴ τις αὐτὸν βίᾳ... ἕλκοι... πρὸς τὸ τοῦ ἡλίου φῶς, ἆρ᾿ οὐχὶ ὀδυνᾶσθαί τε ἂν καὶ ἀγανακτεῖν ἑλκόμενον;</p>
+            <p>Ἰδὲ τοίνυν παρὰ τοῦτο τὸ τειχίον φέροντας ἀνθρώπους σκεύη τε παντοδαπὰ ὑπερέχοντα τοῦ τειχίου καὶ ἀνδριάντας καὶ ἄλλα ζῷα λίθινά τε καὶ ξύλινα καὶ παντοῖα εἰργασμένα.</p>
           </div>
 
           <div class="parallel-translation">
             <div class="parallel-col-label">English</div>
-            <p>If someone were to drag him by force up the steep and rough path and did not let him go until he had been dragged out into the light of the sun — would he not be pained and resentful at being so dragged?</p>
+            <p>Also see along this wall human beings carrying all sorts of artifacts, which project above it, including statues of human beings and animals made of stone and wood and every material. The prisoners would in every way believe that the truth is nothing other than the shadows of those artifacts.</p>
           </div>
         </div>
         
-        <div class="parallel-section" id="s516b-c"
+        <div class="parallel-section" id="s515d-516a"
              data-author="Plato"
              data-title="Republic VII: The Allegory of the Cave"
-             data-section="ch. 516b-c"
+             data-section="ch. 515d-516a"
              data-translator="Alan B."
              data-year="2026"
-             data-url-path="/library/plato-allegory-cave.html#s516b-c">
+             data-url-path="/library/plato-allegory-cave.html#s515d-516a">
 
           <div class="section-header">
-            <span class="section-ref">§516b-c · Rep. 516b-c</span>
+            <span class="section-ref">§515d-516a · Rep. 515d-516a</span>
             <div class="section-actions">
               <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
               <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
@@ -178,12 +188,132 @@
 
           <div class="parallel-original">
             <div class="parallel-col-label">Greek</div>
-            <p>τελευταῖον δὴ οἶμαι τὸν ἥλιον... αὐτὸν καθ᾿ αὑτὸν ἐν τῇ αὑτοῦ χώρᾳ δύναιτ᾿ ἂν κατιδεῖν καὶ θεάσασθαι οἷός ἐστιν.</p>
+            <p>Σκόπει δή, ἦν δ᾿ ἐγώ, αὐτῶν λύσιν τε καὶ ἴασιν τῶν τε δεσμῶν καὶ τῆς ἀφροσύνης, οἵα τις ἂν εἴη, εἰ φύσει τοιάδε συμβαίνοι αὐτοῖς· ὁπότε τις λυθείη καὶ ἀναγκάζοιτο ἐξαίφνης ἀνίστασθαί τε καὶ περιάγειν τὸν αὐχένα.</p>
           </div>
 
           <div class="parallel-translation">
             <div class="parallel-col-label">English</div>
-            <p>Last of all, I think, he would be able to look upon the sun itself, by itself, in its own place, and see it as it truly is.</p>
+            <p>Consider what their release and the curing of their ignorance would be like. When one of them was freed and suddenly compelled to stand up, turn his neck around, walk, and look up toward the light — would he not suffer pain, and find it impossible to see those things whose shadows he had seen before? And if someone told him that what he'd seen before was inconsequential, but that now — because he is a bit closer to what is — he sees more correctly, what would he say?</p>
+          </div>
+        </div>
+        
+        <div class="parallel-section" id="s516a-c"
+             data-author="Plato"
+             data-title="Republic VII: The Allegory of the Cave"
+             data-section="ch. 516a-c"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/plato-allegory-cave.html#s516a-c">
+
+          <div class="section-header">
+            <span class="section-ref">§516a-c · Rep. 516a-c</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">Greek</div>
+            <p>Πρῶτον μὲν τὰς σκιὰς ἂν ῥᾷστα καθορῷ, καὶ μετὰ τοῦτο ἐν τοῖς ὕδασι τά τε τῶν ἀνθρώπων καὶ τὰ τῶν ἄλλων εἴδωλα, ὕστερον δὲ αὐτά· ἐκ δὲ τούτων τὰ ἐν τῷ οὐρανῷ καὶ αὐτὸν τὸν οὐρανὸν νύκτωρ ἂν ῥᾷον θεάσαιτο.</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p>He'd see shadows most easily, then images of men and other things in water, then the things themselves. Then he could investigate the things in the sky and the sky itself more easily by night, looking at the light of the stars and the moon, than by looking at the sun and its light by day. Finally, I suppose, he'd be able to see the sun, not images of it in water or some alien place, but the sun itself, in its own place, and be able to study it.</p>
+          </div>
+        </div>
+        
+        <div class="parallel-section" id="s516e-517a"
+             data-author="Plato"
+             data-title="Republic VII: The Allegory of the Cave"
+             data-section="ch. 516e-517a"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/plato-allegory-cave.html#s516e-517a">
+
+          <div class="section-header">
+            <span class="section-ref">§516e-517a · Rep. 516e-517a</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">Greek</div>
+            <p>Καὶ μνησθεὶς τῆς πρώτης οἰκήσεως καὶ τῆς ἐκεῖ σοφίας καὶ τῶν τότε συνδεσμωτῶν οὐκ ἂν οἴει αὑτὸν μὲν εὐδαιμονίζειν τῆς μεταβολῆς, τοὺς δὲ ἐλεεῖν;</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p>Then, if he recalled his first dwelling place, his fellow prisoners, and what passed for wisdom there, don't you think he would count himself happy for the change and pity the others? And what if there had been honors, praises, and prizes among them for the one who could most sharply make out the shadows? Do you think our man would desire these things or envy those who held them?</p>
+          </div>
+        </div>
+        
+        <div class="parallel-section" id="s517a-c"
+             data-author="Plato"
+             data-title="Republic VII: The Allegory of the Cave"
+             data-section="ch. 517a-c"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/plato-allegory-cave.html#s517a-c">
+
+          <div class="section-header">
+            <span class="section-ref">§517a-c · Rep. 517a-c</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">Greek</div>
+            <p>Καὶ ἐάν, ἦν δ᾿ ἐγώ, πάλιν εἰς ἐκείνην ἔλθῃ ἕδραν, ἆρ᾿ οὐ σκότους ἂν ἀνάπλεως ἴσχοι τοὺς ὀφθαλμούς, ἐξαίφνης ἥκων ἐκ τοῦ ἡλίου;</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p>And if he returned to his old seat, wouldn't his eyes be filled with darkness, having come suddenly from the sun? And before his eyes had recovered — and the adjustment would not be quick — while his vision was still dim, if he had to compete in identifying those shadows with the prisoners who had never been freed, wouldn't he provoke ridicule? Wouldn't it be said of him that he'd returned from his upward journey with his eyes ruined? They would say: it isn't worthwhile even to try to go up. As for the man who tried to free them and lead them upward — if they could somehow get their hands on him, they would kill him.</p>
+          </div>
+        </div>
+        
+        <div class="parallel-section" id="s517b-c (interpretation)"
+             data-author="Plato"
+             data-title="Republic VII: The Allegory of the Cave"
+             data-section="ch. 517b-c (interpretation)"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/plato-allegory-cave.html#s517b-c (interpretation)">
+
+          <div class="section-header">
+            <span class="section-ref">§517b-c (interpretation) · Rep. 517b-c</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">Greek</div>
+            <p>Ταύτην τοίνυν, ἦν δ᾿ ἐγώ, τὴν εἰκόνα, ὦ φίλε Γλαύκων, προσαπτέον ἅπασαν τοῖς ἔμπροσθεν λεγομένοις, τὴν μὲν δι᾿ ὄψεως φαινομένην ἕδραν τῇ τοῦ δεσμωτηρίου οἰκήσει ἀφομοιοῦντα.</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p>This image, my dear Glaucon, must be applied as a whole to what we said before. The realm revealed through sight should be likened to the prison dwelling, and the light of the fire inside it to the power of the sun. And if you interpret the upward journey and the study of things above as the upward journey of the soul to the intelligible realm, you'll grasp what I hope to convey. In the knowable realm, the form of the good is the last thing to be seen, and it is reached only with difficulty. Once one has seen it, however, one must conclude that it is the cause of all that is correct and beautiful in anything, that in the visible realm it produces both light and its source, and that in the intelligible realm it controls and provides truth and understanding, so that anyone who is to act sensibly in private or public must see it.</p>
           </div>
         </div>
         

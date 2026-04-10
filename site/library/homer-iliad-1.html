@@ -21,7 +21,7 @@
     "@type": "ScholarlyArticle",
     "name": "Iliad, Book I: The Wrath of Achilles",
     "author": {"@type": "Person", "name": "Alan B."},
-    "datePublished": "2026-04-07",
+    "datePublished": "2026-04-10",
     "publisher": {"@type": "Organization", "name": "Theosis Library"},
     "description": "The opening of the Iliad: Achilles' rage, Agamemnon's hubris, and the gods' intervention in mortal affairs.",
     "url": "https://theosislibrary.com/library/homer-iliad-1.html",
@@ -47,10 +47,20 @@
 
   <main>
     <div class="tradition-hero tradition-hero--greek">
+      <pre class="tradition-hero-art" id="tradition-art"></pre>
       <div class="tradition-hero-overlay">
         <div class="tradition-hero-label">Greek</div>
       </div>
     </div>
+    <script>
+    (function(){
+      var t = 'greek';
+      fetch('/data/tradition-art.json').then(function(r){return r.json()}).then(function(d){
+        var art = d[t];
+        if (art) document.getElementById('tradition-art').textContent = art.join('\n');
+      }).catch(function(){});
+    })();
+    </script>
 
     <div class="container">
       <div class="translation-header">
@@ -63,7 +73,7 @@
 
       <section class="introduction">
         <h2>Introduction</h2>
-        <p>The <em>Iliad</em> opens with the word <em>mēnin</em> — wrath — and the whole of Western literature follows from it. Homer's epic of the Trojan War is not primarily about war but about the consequences of unchecked anger, the tragedy of mortality, and the complex relationship between gods and humans. Book I establishes the central conflict: Achilles withdrawing from battle after Agamemnon seizes his war-prize, setting in motion the chain of suffering that fulfills the will of Zeus.</p>
+        <p>Book I of the Iliad establishes the central conflict of the entire epic in 611 lines. After the famous proem (the first seven lines that begin all of Western literature), Homer narrates: the plague sent by Apollo because Agamemnon dishonored his priest Chryses; the assembly where Achilles confronts Agamemnon; Agamemnon's seizure of Briseis; Achilles' withdrawal from battle; and Thetis's prayer to Zeus, which sets the divine machinery in motion. The story of the Iliad — the wrath of Achilles and its consequences — flows entirely from this opening book.</p>
       </section>
 
       <div class="provenance-chain">
@@ -97,16 +107,16 @@
 
       <section class="translation-body " id="translation-body">
         
-        <div class="parallel-section" id="s1-1-7"
+        <div class="parallel-section" id="s1-1-7 (Proem)"
              data-author="Homer"
              data-title="Iliad, Book I: The Wrath of Achilles"
-             data-section="ch. 1.1-7"
+             data-section="ch. 1.1-7 (Proem)"
              data-translator="Alan B."
              data-year="2026"
-             data-url-path="/library/homer-iliad-1.html#s1-1-7">
+             data-url-path="/library/homer-iliad-1.html#s1-1-7 (Proem)">
 
           <div class="section-header">
-            <span class="section-ref">§1.1-7 · Il. 1.1-7</span>
+            <span class="section-ref">§1.1-7 (Proem) · Il. 1.1-7</span>
             <div class="section-actions">
               <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
               <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
@@ -118,25 +128,25 @@
 
           <div class="parallel-original">
             <div class="parallel-col-label">Greek</div>
-            <p>Μῆνιν ἄειδε, θεά, Πηληϊάδεω Ἀχιλῆος οὐλομένην, ἣ μυρί᾿ Ἀχαιοῖς ἄλγε᾿ ἔθηκε, πολλὰς δ᾿ ἰφθίμους ψυχὰς Ἄϊδι προΐαψεν ἡρώων, αὐτοὺς δὲ ἑλώρια τεῦχε κύνεσσιν οἰωνοῖσί τε πᾶσι — Διὸς δ᾿ ἐτελείετο βουλή — ἐξ οὗ δὴ τὰ πρῶτα διαστήτην ἐρίσαντε Ἀτρεΐδης τε ἄναξ ἀνδρῶν καὶ δῖος Ἀχιλλεύς.</p>
+            <p>Μῆνιν ἄειδε, θεά, Πηληϊάδεω Ἀχιλῆος οὐλομένην, ἣ μυρί᾿ Ἀχαιοῖς ἄλγε᾿ ἔθηκε, πολλὰς δ᾿ ἰφθίμους ψυχὰς Ἄϊδι προΐαψεν ἡρώων, αὐτοὺς δὲ ἑλώρια τεῦχε κύνεσσιν οἰωνοῖσί τε πᾶσι, Διὸς δ᾿ ἐτελείετο βουλή, ἐξ οὗ δὴ τὰ πρῶτα διαστήτην ἐρίσαντε Ἀτρεΐδης τε ἄναξ ἀνδρῶν καὶ δῖος Ἀχιλλεύς.</p>
           </div>
 
           <div class="parallel-translation">
             <div class="parallel-col-label">English</div>
-            <p>Sing, goddess, the wrath of Achilles, son of Peleus — the accursed wrath that brought countless sorrows upon the Achaeans and hurled many mighty souls of heroes down to Hades, making them prey for dogs and all the birds — and the will of Zeus was being accomplished — from the moment when first they quarreled and parted, Atreus' son, lord of men, and godlike Achilles.</p>
+            <p>Sing, goddess, the wrath of Achilles, son of Peleus — the accursed wrath that brought countless sorrows upon the Achaeans, and hurled many mighty souls of heroes down to Hades, making them prey for dogs and all the birds — and the will of Zeus was being fulfilled — from the moment when first they parted in strife: Atreus' son, lord of men, and godlike Achilles.</p>
           </div>
         </div>
         
-        <div class="parallel-section" id="s1-8-16"
+        <div class="parallel-section" id="s1-8-21 (The Plague Begins)"
              data-author="Homer"
              data-title="Iliad, Book I: The Wrath of Achilles"
-             data-section="ch. 1.8-16"
+             data-section="ch. 1.8-21 (The Plague Begins)"
              data-translator="Alan B."
              data-year="2026"
-             data-url-path="/library/homer-iliad-1.html#s1-8-16">
+             data-url-path="/library/homer-iliad-1.html#s1-8-21 (The Plague Begins)">
 
           <div class="section-header">
-            <span class="section-ref">§1.8-16 · Il. 1.8-16</span>
+            <span class="section-ref">§1.8-21 (The Plague Begins) · Il. 1.8-21</span>
             <div class="section-actions">
               <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
               <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
@@ -148,25 +158,25 @@
 
           <div class="parallel-original">
             <div class="parallel-col-label">Greek</div>
-            <p>τίς τ᾿ ἄρ σφωε θεῶν ἔριδι ξυνέηκε μάχεσθαι; Λητοῦς καὶ Διὸς υἱός. ὁ γὰρ βασιλῆϊ χολωθεὶς νοῦσον ἀνὰ στρατὸν ὦρσε κακήν, ὀλέκοντο δὲ λαοί.</p>
+            <p>Τίς τ᾿ ἄρ σφωε θεῶν ἔριδι ξυνέηκε μάχεσθαι; Λητοῦς καὶ Διὸς υἱός· ὁ γὰρ βασιλῆϊ χολωθεὶς νοῦσον ἀνὰ στρατὸν ὦρσε κακήν, ὀλέκοντο δὲ λαοί, οὕνεκα τὸν Χρύσην ἠτίμασεν ἀρητῆρα Ἀτρεΐδης.</p>
           </div>
 
           <div class="parallel-translation">
             <div class="parallel-col-label">English</div>
-            <p>Which of the gods set them to quarrel and fight? The son of Leto and Zeus. For angered at the king, he sent a plague upon the army — an evil sickness — and the people were dying.</p>
+            <p>Which of the gods set them to quarrel and fight? The son of Leto and Zeus — for he was angry with the king, and sent a plague upon the army, an evil sickness, and the people were dying — because Atreus' son had dishonored the priest Chryses. For he came to the swift ships of the Achaeans to ransom his daughter, bringing untold ransom and holding in his hands the wreaths of Apollo who shoots from afar, on a golden staff. He begged all the Achaeans, but most of all the two sons of Atreus, the marshalers of the host.</p>
           </div>
         </div>
         
-        <div class="parallel-section" id="s1-188-194"
+        <div class="parallel-section" id="s1-43-53 (Apollo Descends)"
              data-author="Homer"
              data-title="Iliad, Book I: The Wrath of Achilles"
-             data-section="ch. 1.188-194"
+             data-section="ch. 1.43-53 (Apollo Descends)"
              data-translator="Alan B."
              data-year="2026"
-             data-url-path="/library/homer-iliad-1.html#s1-188-194">
+             data-url-path="/library/homer-iliad-1.html#s1-43-53 (Apollo Descends)">
 
           <div class="section-header">
-            <span class="section-ref">§1.188-194 · Il. 1.188-194</span>
+            <span class="section-ref">§1.43-53 (Apollo Descends) · Il. 1.43-53</span>
             <div class="section-actions">
               <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
               <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
@@ -178,12 +188,132 @@
 
           <div class="parallel-original">
             <div class="parallel-col-label">Greek</div>
-            <p>ἕλκετο δ᾿ ἐκ κολεοῖο μέγα ξίφος· ἦλθε δ᾿ Ἀθήνη οὐρανόθεν... στῆ δ᾿ ὄπιθεν, ξανθῆς δὲ κόμης ἕλε Πηλεΐωνα.</p>
+            <p>Ὣς ἔφατ᾿ εὐχόμενος, τοῦ δ᾿ ἔκλυε Φοῖβος Ἀπόλλων, βῆ δὲ κατ᾿ Οὐλύμποιο καρήνων χωόμενος κῆρ, τόξ᾿ ὤμοισιν ἔχων ἀμφηρεφέα τε φαρέτρην· ἔκλαγξαν δ᾿ ἄρ᾿ ὀϊστοὶ ἐπ᾿ ὤμων χωομένοιο.</p>
           </div>
 
           <div class="parallel-translation">
             <div class="parallel-col-label">English</div>
-            <p>He was drawing his great sword from its sheath when Athena came from heaven... She stood behind him and seized the son of Peleus by his golden hair.</p>
+            <p>So he spoke in prayer, and Phoebus Apollo heard him, and came down from the peaks of Olympus, his heart raging, with his bow on his shoulder and the close-covered quiver. The arrows clanged on his shoulders as he moved in his anger. He came as the night comes down. He sat opposite the ships and let an arrow fly: terrible was the twang of the silver bow. First he attacked the mules and the swift dogs, then he loosed his sharp arrows against the men themselves. The pyres of the dead burned everywhere and never ceased.</p>
+          </div>
+        </div>
+        
+        <div class="parallel-section" id="s1-121-129 (Achilles vs Agamemnon)"
+             data-author="Homer"
+             data-title="Iliad, Book I: The Wrath of Achilles"
+             data-section="ch. 1.121-129 (Achilles vs Agamemnon)"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/homer-iliad-1.html#s1-121-129 (Achilles vs Agamemnon)">
+
+          <div class="section-header">
+            <span class="section-ref">§1.121-129 (Achilles vs Agamemnon) · Il. 1.121-129</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">Greek</div>
+            <p>Τὸν δ᾿ ἠμείβετ᾿ ἔπειτα ποδάρκης δῖος Ἀχιλλεύς· Ἀτρεΐδη κύδιστε φιλοκτεανώτατε πάντων, πῶς γάρ τοι δώσουσι γέρας μεγάθυμοι Ἀχαιοί;</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p>Then swift-footed Achilles answered him: 'Most glorious son of Atreus, most greedy for gain of all men, how can the great-hearted Achaeans give you a prize? We know nothing of any common store laid up. Whatever we took from the cities we have already distributed.'</p>
+          </div>
+        </div>
+        
+        <div class="parallel-section" id="s1-188-200 (Athena Restrains Achilles)"
+             data-author="Homer"
+             data-title="Iliad, Book I: The Wrath of Achilles"
+             data-section="ch. 1.188-200 (Athena Restrains Achilles)"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/homer-iliad-1.html#s1-188-200 (Athena Restrains Achilles)">
+
+          <div class="section-header">
+            <span class="section-ref">§1.188-200 (Athena Restrains Achilles) · Il. 1.188-200</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">Greek</div>
+            <p>Ὣς φάτο· Πηλεΐωνι δ᾿ ἄχος γένετ᾿, ἐν δέ οἱ ἦτορ στήθεσσιν λασίοισι διάνδιχα μερμήριξεν, ἢ ὅ γε φάσγανον ὀξὺ ἐρυσσάμενος παρὰ μηροῦ τοὺς μὲν ἀναστήσειεν, ὁ δ᾿ Ἀτρεΐδην ἐναρίζοι, ἦε χόλον παύσειεν ἐρητύσειέ τε θυμόν.</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p>So he spoke. Grief came to the son of Peleus, and the heart in his shaggy breast was divided two ways: should he draw the sharp sword from his thigh and force the others aside and kill the son of Atreus, or should he restrain his wrath and curb his anger? While he debated this in his mind and his heart, and was drawing his great sword from its sheath, Athena came down from the sky. White-armed Hera had sent her, who loved both men alike in her heart and was concerned for them. Athena stood behind him and seized the son of Peleus by his golden hair, appearing to him alone — none of the others saw her.</p>
+          </div>
+        </div>
+        
+        <div class="parallel-section" id="s1-348-356 (Achilles Withdraws)"
+             data-author="Homer"
+             data-title="Iliad, Book I: The Wrath of Achilles"
+             data-section="ch. 1.348-356 (Achilles Withdraws)"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/homer-iliad-1.html#s1-348-356 (Achilles Withdraws)">
+
+          <div class="section-header">
+            <span class="section-ref">§1.348-356 (Achilles Withdraws) · Il. 1.348-356</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">Greek</div>
+            <p>Πάτροκλος δὲ φίλῳ ἐπεπείθεθ᾿ ἑταίρῳ, ἐκ δ᾿ ἄγαγε κλισίης Βρισηΐδα καλλιπάρῃον, δῶκε δ᾿ ἄγειν· τὼ δ᾿ αὖτις ἴτην παρὰ νῆας Ἀχαιῶν· ἡ δ᾿ ἀέκουσ᾿ ἅμα τοῖσι γυνὴ κίεν.</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p>Patroclus obeyed his dear comrade. He brought out of the hut Briseis of the lovely cheeks and gave her over to the heralds to lead away. The two of them went back beside the ships of the Achaeans. The woman went with them unwilling. Achilles in tears withdrew apart from his companions and sat down by the shore of the gray sea, looking out over the wine-dark deep. He stretched out his hands and prayed long to his mother.</p>
+          </div>
+        </div>
+        
+        <div class="parallel-section" id="s1-494-516 (Thetis Petitions Zeus)"
+             data-author="Homer"
+             data-title="Iliad, Book I: The Wrath of Achilles"
+             data-section="ch. 1.494-516 (Thetis Petitions Zeus)"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/homer-iliad-1.html#s1-494-516 (Thetis Petitions Zeus)">
+
+          <div class="section-header">
+            <span class="section-ref">§1.494-516 (Thetis Petitions Zeus) · Il. 1.494-516</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">Greek</div>
+            <p>Καὶ τότε δὴ πρὸς Ὄλυμπον ἴσαν θεοὶ αἰὲν ἐόντες πάντες ἅμα, Ζεὺς δ᾿ ἦρχε· Θέτις δ᾿ οὐ λήθετ᾿ ἐφετμέων παιδὸς ἑοῦ, ἀλλ᾿ ἥ γ᾿ ἀνεδύσετο κῦμα θαλάσσης.</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p>Then the immortal gods went to Olympus together, and Zeus led them. But Thetis did not forget the requests of her son. She rose from the sea, and came at dawn to great Olympus and the heavens. She found wide-seeing Zeus sitting alone on the topmost peak of many-ridged Olympus. She sat down before him, and laid her left hand on his knees, and her right she put under his chin. She spoke in supplication: 'Father Zeus, if ever I have helped you among the gods by word or deed, fulfill this prayer for me. Honor my son, who is doomed to a short life among all others. He has been dishonored by Agamemnon, who has taken his prize. So honor him for me, you Olympian, all-wise Zeus. Give victory to the Trojans until the Achaeans honor my son and exalt him with recompense.'</p>
           </div>
         </div>
         
