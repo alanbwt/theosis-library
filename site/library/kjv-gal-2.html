@@ -91,38 +91,145 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s2-1-8">
-          <span class="section-ref">§2.1-8 · Galatians 2:1-8</span>
-          <p><sup>1</sup>Then fourteen years after I went up again to Jerusalem with Barnabas, and took Titus with
+        <div class="parallel-section" id="s2-1-8"
+             data-author="Unknown"
+             data-title="Galatians, Chapter 2"
+             data-section="ch. 2.1-8"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-gal-2.html#s2-1-8">
+
+          <div class="section-header">
+            <span class="section-ref">§2.1-8 · Galatians 2:1-8</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus-gal-2a.jpg"
+                 alt="Scan sinaiticus/sinaiticus-gal-2a.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus-gal-2a.jpg')"
+                 title="Click to enlarge">
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus-gal-4a.jpg"
+                 alt="Scan sinaiticus/sinaiticus-gal-4a.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus-gal-4a.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>επειτα δια δεκατεσσαρων ετων παλιν ανεβην εις ιεροσολυμα μετα βαρναβα συμπαραλαβων και τιτον <sup>2</sup>ανεβην δε κατα αποκαλυψιν και ανεθεμην αυτοις το ευαγγελιον ο κηρυσσω εν τοις εθνεσιν κατ ιδιαν δε τοις δοκουσιν μηπως εις κενον τρεχω η εδραμον <sup>3</sup>αλλ ουδε τιτος ο συν εμοι ελλην ων ηναγκασθη περιτμηθηναι <sup>4</sup>δια δε τους παρεισακτους ψευδαδελφους οιτινες παρεισηλθον κατασκοπησαι την ελευθεριαν ημων ην εχομεν εν χριστω ιησου ινα ημας καταδουλωσωνται <sup>5</sup>οις ουδε προς ωραν ειξαμεν τη υποταγη ινα η αληθεια του ευαγγελιου διαμεινη προς υμας <sup>6</sup>απο δε των δοκουντων ειναι τι οποιοι ποτε ησαν ουδεν μοι διαφερει προσωπον θεος ανθρωπου ου λαμβανει εμοι γαρ οι δοκουντες ουδεν προσανεθεντο <sup>7</sup>αλλα τουναντιον ιδοντες οτι πεπιστευμαι το ευαγγελιον της ακροβυστιας καθως πετρος της περιτομης <sup>8</sup>ο γαρ ενεργησας πετρω εις αποστολην της περιτομης ενηργησεν και εμοι εις τα εθνη</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>Then fourteen years after I went up again to Jerusalem with Barnabas, and took Titus with
 me also. <sup>2</sup>And I went up by revelation, and communicated unto them that gospel which I preach among the Gentiles, but privately to them which were of reputation, lest by any means I should run, or had run, in vain. <sup>3</sup>But neither Titus, who was with me, being a Greek, was compelled to be circumcised: <sup>4</sup>And that because of false brethren unawares brought in, who came in privily to spy out our liberty which we have in Christ Jesus, that they might bring us into bondage: <sup>5</sup>To whom we gave place by subjection, no, not for an hour; that the truth of the gospel might continue with you. <sup>6</sup>But of these who seemed to be somewhat, (whatsoever they were, it maketh no matter to me: God accepteth no man’s person:) for they who seemed
 to be somewhat in conference added nothing to me: <sup>7</sup>But contrariwise, when they saw that the gospel of the uncircumcision was committed unto me, as
 the gospel of the circumcision
 was
  unto Peter; <sup>8</sup>(For he that wrought effectually in Peter to the apostleship of the circumcision, the same was mighty in me toward the Gentiles:)</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s2-9-16">
-          <span class="section-ref">§2.9-16 · Galatians 2:9-16</span>
-          <p><sup>9</sup>And when James, Cephas, and John, who seemed to be pillars, perceived the grace that was given unto me, they gave to me and Barnabas the right hands of fellowship; that we
+        <div class="parallel-section" id="s2-9-16"
+             data-author="Unknown"
+             data-title="Galatians, Chapter 2"
+             data-section="ch. 2.9-16"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-gal-2.html#s2-9-16">
+
+          <div class="section-header">
+            <span class="section-ref">§2.9-16 · Galatians 2:9-16</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>9</sup>και γνοντες την χαριν την δοθεισαν μοι ιακωβος και κηφας και ιωαννης οι δοκουντες στυλοι ειναι δεξιας εδωκαν εμοι και βαρναβα κοινωνιας ινα ημεις εις τα εθνη αυτοι δε εις την περιτομην <sup>10</sup>μονον των πτωχων ινα μνημονευωμεν ο και εσπουδασα αυτο τουτο ποιησαι <sup>11</sup>οτε δε ηλθεν πετρος εις αντιοχειαν κατα προσωπον αυτω αντεστην οτι κατεγνωσμενος ην <sup>12</sup>προ του γαρ ελθειν τινας απο ιακωβου μετα των εθνων συνησθιεν οτε δε ηλθον υπεστελλεν και αφωριζεν εαυτον φοβουμενος τους εκ περιτομης <sup>13</sup>και συνυπεκριθησαν αυτω και οι λοιποι ιουδαιοι ωστε και βαρναβας συναπηχθη αυτων τη υποκρισει <sup>14</sup>αλλ οτε ειδον οτι ουκ ορθοποδουσιν προς την αληθειαν του ευαγγελιου ειπον τω πετρω εμπροσθεν παντων ει συ ιουδαιος υπαρχων εθνικως ζης και ουκ ιουδαικως τι τα εθνη αναγκαζεις ιουδαιζειν <sup>15</sup>ημεις φυσει ιουδαιοι και ουκ εξ εθνων αμαρτωλοι <sup>16</sup>ειδοτες οτι ου δικαιουται ανθρωπος εξ εργων νομου εαν μη δια πιστεως ιησου χριστου και ημεις εις χριστον ιησουν επιστευσαμεν ινα δικαιωθωμεν εκ πιστεως χριστου και ουκ εξ εργων νομου διοτι ου δικαιωθησεται εξ εργων νομου πασα σαρξ</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>9</sup>And when James, Cephas, and John, who seemed to be pillars, perceived the grace that was given unto me, they gave to me and Barnabas the right hands of fellowship; that we
 should go unto the heathen, and they unto the circumcision. <sup>10</sup>Only
 they would that we should remember the poor; the same which I also was forward to do. <sup>11</sup>But when Peter was come to Antioch, I withstood him to the face, because he was to be blamed. <sup>12</sup>For before that certain came from James, he did eat with the Gentiles: but when they were come, he withdrew and separated himself, fearing them which were of the circumcision. <sup>13</sup>And the other Jews dissembled likewise with him; insomuch that Barnabas also was carried away with their dissimulation. <sup>14</sup>But when I saw that they walked not uprightly according to the truth of the gospel, I said unto Peter before
 them all, If thou, being a Jew, livest after the manner of Gentiles, and not as do the Jews, why compellest thou the Gentiles to live as do the Jews? <sup>15</sup>We
 who are Jews by nature, and not sinners of the Gentiles, <sup>16</sup>Knowing that a man is not justified by the works of the law, but by the faith of Jesus Christ, even we have believed in Jesus Christ, that we might be justified by the faith of Christ, and not by the works of the law: for by the works of the law shall no flesh be justified.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s2-17-21">
-          <span class="section-ref">§2.17-21 · Galatians 2:17-21</span>
-          <p><sup>17</sup>But if, while we seek to be justified by Christ, we ourselves also are found sinners,
+        <div class="parallel-section" id="s2-17-21"
+             data-author="Unknown"
+             data-title="Galatians, Chapter 2"
+             data-section="ch. 2.17-21"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-gal-2.html#s2-17-21">
+
+          <div class="section-header">
+            <span class="section-ref">§2.17-21 · Galatians 2:17-21</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>17</sup>ει δε ζητουντες δικαιωθηναι εν χριστω ευρεθημεν και αυτοι αμαρτωλοι αρα χριστος αμαρτιας διακονος μη γενοιτο <sup>18</sup>ει γαρ α κατελυσα ταυτα παλιν οικοδομω παραβατην εμαυτον συνιστημι <sup>19</sup>εγω γαρ δια νομου νομω απεθανον ινα θεω ζησω <sup>20</sup>χριστω συνεσταυρωμαι ζω δε ουκετι εγω ζη δε εν εμοι χριστος ο δε νυν ζω εν σαρκι εν πιστει ζω τη του υιου του θεου του αγαπησαντος με και παραδοντος εαυτον υπερ εμου <sup>21</sup>ουκ αθετω την χαριν του θεου ει γαρ δια νομου δικαιοσυνη αρα χριστος δωρεαν απεθανεν</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>17</sup>But if, while we seek to be justified by Christ, we ourselves also are found sinners,
 is therefore Christ the minister of sin? God forbid. <sup>18</sup>For if I build again the things which I destroyed, I make myself a transgressor. <sup>19</sup>For I through the law am dead to the law, that I might live unto God. <sup>20</sup>I am crucified with Christ: nevertheless I live; yet not I, but Christ liveth in me: and the life which I now live in the flesh I live by the faith of the Son of God, who loved me, and gave himself for me. <sup>21</sup>I do not frustrate the grace of God: for if righteousness
 come
  by the law, then Christ is dead in vain.</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 

@@ -91,13 +91,61 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s18-1-8">
-          <span class="section-ref">§18.1-8 · Acts 18:1-8</span>
-          <p><sup>1</sup>After these things Paul departed from Athens, and came to Corinth; <sup>2</sup>And found a certain Jew named Aquila, born in Pontus, lately come from Italy, with his wife Priscilla; (because that Claudius had commanded all Jews to depart from Rome:) and came unto them. <sup>3</sup>And because he was of the same craft, he abode with them, and wrought: for by their occupation they were tentmakers. <sup>4</sup>And he reasoned in the synagogue every sabbath, and persuaded the Jews and the Greeks. <sup>5</sup>And when Silas and Timotheus were come from Macedonia, Paul was pressed in the spirit, and testified to the Jews
+        <div class="parallel-section" id="s18-1-8"
+             data-author="Unknown"
+             data-title="Acts, Chapter 18"
+             data-section="ch. 18.1-8"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-acts-18.html#s18-1-8">
+
+          <div class="section-header">
+            <span class="section-ref">§18.1-8 · Acts 18:1-8</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/codex_sinaiticus.jpg"
+                 alt="Scan sinaiticus/codex_sinaiticus.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/codex_sinaiticus.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>μετα δε ταυτα χωρισθεις ο παυλος εκ των αθηνων ηλθεν εις κορινθον <sup>2</sup>και ευρων τινα ιουδαιον ονοματι ακυλαν ποντικον τω γενει προσφατως εληλυθοτα απο της ιταλιας και πρισκιλλαν γυναικα αυτου δια το διατεταχεναι κλαυδιον χωριζεσθαι παντας τους ιουδαιους εκ της ρωμης προσηλθεν αυτοις <sup>3</sup>και δια το ομοτεχνον ειναι εμενεν παρ αυτοις και ειργαζετο ησαν γαρ σκηνοποιοι την τεχνην <sup>4</sup>διελεγετο δε εν τη συναγωγη κατα παν σαββατον επειθεν τε ιουδαιους και ελληνας <sup>5</sup>ως δε κατηλθον απο της μακεδονιας ο τε σιλας και ο τιμοθεος συνειχετο τω πνευματι ο παυλος διαμαρτυρομενος τοις ιουδαιοις τον χριστον ιησουν <sup>6</sup>αντιτασσομενων δε αυτων και βλασφημουντων εκτιναξαμενος τα ιματια ειπεν προς αυτους το αιμα υμων επι την κεφαλην υμων καθαρος εγω απο του νυν εις τα εθνη πορευσομαι <sup>7</sup>και μεταβας εκειθεν ηλθεν εις οικιαν τινος ονοματι ιουστου σεβομενου τον θεον ου η οικια ην συνομορουσα τη συναγωγη <sup>8</sup>κρισπος δε ο αρχισυναγωγος επιστευσεν τω κυριω συν ολω τω οικω αυτου και πολλοι των κορινθιων ακουοντες επιστευον και εβαπτιζοντο</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>After these things Paul departed from Athens, and came to Corinth; <sup>2</sup>And found a certain Jew named Aquila, born in Pontus, lately come from Italy, with his wife Priscilla; (because that Claudius had commanded all Jews to depart from Rome:) and came unto them. <sup>3</sup>And because he was of the same craft, he abode with them, and wrought: for by their occupation they were tentmakers. <sup>4</sup>And he reasoned in the synagogue every sabbath, and persuaded the Jews and the Greeks. <sup>5</sup>And when Silas and Timotheus were come from Macedonia, Paul was pressed in the spirit, and testified to the Jews
 that Jesus
 was
  Christ. <sup>6</sup>And when they opposed themselves, and blasphemed, he shook
@@ -107,11 +155,36 @@ be upon your own heads; I
 am clean: from henceforth I will go unto the Gentiles. <sup>7</sup>And he departed thence, and entered into a certain
 man’s house, named Justus,
 one that worshipped God, whose house joined hard to the synagogue. <sup>8</sup>And Crispus, the chief ruler of the synagogue, believed on the Lord with all his house; and many of the Corinthians hearing believed, and were baptized.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s18-9-16">
-          <span class="section-ref">§18.9-16 · Acts 18:9-16</span>
-          <p><sup>9</sup>Then spake the Lord to Paul in the night by a vision,
+        <div class="parallel-section" id="s18-9-16"
+             data-author="Unknown"
+             data-title="Acts, Chapter 18"
+             data-section="ch. 18.9-16"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-acts-18.html#s18-9-16">
+
+          <div class="section-header">
+            <span class="section-ref">§18.9-16 · Acts 18:9-16</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>9</sup>ειπεν δε ο κυριος δι οραματος εν νυκτι τω παυλω μη φοβου αλλα λαλει και μη σιωπησης <sup>10</sup>διοτι εγω ειμι μετα σου και ουδεις επιθησεται σοι του κακωσαι σε διοτι λαος εστιν μοι πολυς εν τη πολει ταυτη <sup>11</sup>εκαθισεν τε ενιαυτον και μηνας εξ διδασκων εν αυτοις τον λογον του θεου <sup>12</sup>γαλλιωνος δε ανθυπατευοντος της αχαιας κατεπεστησαν ομοθυμαδον οι ιουδαιοι τω παυλω και ηγαγον αυτον επι το βημα <sup>13</sup>λεγοντες οτι παρα τον νομον ουτος αναπειθει τους ανθρωπους σεβεσθαι τον θεον <sup>14</sup>μελλοντος δε του παυλου ανοιγειν το στομα ειπεν ο γαλλιων προς τους ιουδαιους ει μεν ουν ην αδικημα τι η ραδιουργημα πονηρον ω ιουδαιοι κατα λογον αν ηνεσχομην υμων <sup>15</sup>ει δε ζητημα εστιν περι λογου και ονοματων και νομου του καθ υμας οψεσθε αυτοι κριτης γαρ εγω τουτων ου βουλομαι ειναι <sup>16</sup>και απηλασεν αυτους απο του βηματος</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>9</sup>Then spake the Lord to Paul in the night by a vision,
 Be not afraid, but speak, and hold not thy peace: <sup>10</sup>For I am with thee, and no man shall set on thee to hurt thee: for I have much people in this city. <sup>11</sup>And he continued
 there a year and six months, teaching the word of God among them. <sup>12</sup>And when Gallio was the deputy of Achaia, the Jews made insurrection with one accord against Paul, and brought him to the judgment seat, <sup>13</sup>Saying, This
 fellow persuadeth men to worship God contrary to the law. <sup>14</sup>And when Paul was now about to open
@@ -121,11 +194,36 @@ ye
 of your law, look ye
 to it; for I will be no judge of such
 matters. <sup>16</sup>And he drave them from the judgment seat.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s18-17-24">
-          <span class="section-ref">§18.17-24 · Acts 18:17-24</span>
-          <p><sup>17</sup>Then all the Greeks took Sosthenes, the chief ruler of the synagogue, and beat
+        <div class="parallel-section" id="s18-17-24"
+             data-author="Unknown"
+             data-title="Acts, Chapter 18"
+             data-section="ch. 18.17-24"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-acts-18.html#s18-17-24">
+
+          <div class="section-header">
+            <span class="section-ref">§18.17-24 · Acts 18:17-24</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>17</sup>επιλαβομενοι δε παντες οι ελληνες σωσθενην τον αρχισυναγωγον ετυπτον εμπροσθεν του βηματος και ουδεν τουτων τω γαλλιωνι εμελεν <sup>18</sup>ο δε παυλος ετι προσμεινας ημερας ικανας τοις αδελφοις αποταξαμενος εξεπλει εις την συριαν και συν αυτω πρισκιλλα και ακυλας κειραμενος την κεφαλην εν κεγχρεαις ειχεν γαρ ευχην <sup>19</sup>κατηντησεν δε εις εφεσον κακεινους κατελιπεν αυτου αυτος δε εισελθων εις την συναγωγην διελεχθη τοις ιουδαιοις <sup>20</sup>ερωτωντων δε αυτων επι πλειονα χρονον μειναι παρ αυτοις ουκ επενευσεν <sup>21</sup>αλλ απεταξατο αυτοις ειπων δει με παντως την εορτην την ερχομενην ποιησαι εις ιεροσολυμα παλιν δε ανακαμψω προς υμας του θεου θελοντος και ανηχθη απο της εφεσου <sup>22</sup>και κατελθων εις καισαρειαν αναβας και ασπασαμενος την εκκλησιαν κατεβη εις αντιοχειαν <sup>23</sup>και ποιησας χρονον τινα εξηλθεν διερχομενος καθεξης την γαλατικην χωραν και φρυγιαν επιστηριζων παντας τους μαθητας <sup>24</sup>ιουδαιος δε τις απολλως ονοματι αλεξανδρευς τω γενει ανηρ λογιος κατηντησεν εις εφεσον δυνατος ων εν ταις γραφαις</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>17</sup>Then all the Greeks took Sosthenes, the chief ruler of the synagogue, and beat
 him before the judgment seat. And Gallio cared for none of those things. <sup>18</sup>And Paul
 after this tarried
 there yet a good while, and then took his leave of the brethren, and sailed thence into Syria, and with him Priscilla and Aquila; having shorn
@@ -134,16 +232,43 @@ him to tarry longer time with them, he consented not; <sup>21</sup>But bade them
 there, he departed, and went over
 all the country of Galatia and Phrygia in order, strengthening all the disciples. <sup>24</sup>And a certain Jew named Apollos, born at Alexandria, an eloquent man,
 and mighty in the scriptures, came to Ephesus.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s18-25-28">
-          <span class="section-ref">§18.25-28 · Acts 18:25-28</span>
-          <p><sup>25</sup>This man was instructed in the way of the Lord; and being fervent in the spirit, he spake and taught diligently the things of the Lord, knowing only the baptism of John. <sup>26</sup>And he began to speak boldly in the synagogue: whom when Aquila and Priscilla had heard, they took him unto
+        <div class="parallel-section" id="s18-25-28"
+             data-author="Unknown"
+             data-title="Acts, Chapter 18"
+             data-section="ch. 18.25-28"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-acts-18.html#s18-25-28">
+
+          <div class="section-header">
+            <span class="section-ref">§18.25-28 · Acts 18:25-28</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>25</sup>ουτος ην κατηχημενος την οδον του κυριου και ζεων τω πνευματι ελαλει και εδιδασκεν ακριβως τα περι του κυριου επισταμενος μονον το βαπτισμα ιωαννου <sup>26</sup>ουτος τε ηρξατο παρρησιαζεσθαι εν τη συναγωγη ακουσαντες δε αυτου ακυλας και πρισκιλλα προσελαβοντο αυτον και ακριβεστερον αυτω εξεθεντο την του θεου οδον <sup>27</sup>βουλομενου δε αυτου διελθειν εις την αχαιαν προτρεψαμενοι οι αδελφοι εγραψαν τοις μαθηταις αποδεξασθαι αυτον ος παραγενομενος συνεβαλετο πολυ τοις πεπιστευκοσιν δια της χαριτος <sup>28</sup>ευτονως γαρ τοις ιουδαιοις διακατηλεγχετο δημοσια επιδεικνυς δια των γραφων ειναι τον χριστον ιησουν</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>25</sup>This man was instructed in the way of the Lord; and being fervent in the spirit, he spake and taught diligently the things of the Lord, knowing only the baptism of John. <sup>26</sup>And he began to speak boldly in the synagogue: whom when Aquila and Priscilla had heard, they took him unto
 them, and expounded unto him the way of God more perfectly. <sup>27</sup>And when he was disposed to pass into Achaia, the brethren wrote, exhorting the disciples to receive him: who, when he was come, helped them much which had believed through grace: <sup>28</sup>For he mightily convinced the Jews,
 and that publickly, shewing by the scriptures that Jesus was Christ.</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 

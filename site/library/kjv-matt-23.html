@@ -91,13 +91,68 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s23-1-8">
-          <span class="section-ref">§23.1-8 · Matthew 23:1-8</span>
-          <p><sup>1</sup>Then spake Jesus to the multitude, and to his disciples, <sup>2</sup>Saying,
+        <div class="parallel-section" id="s23-1-8"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 23"
+             data-section="ch. 23.1-8"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-23.html#s23-1-8">
+
+          <div class="section-header">
+            <span class="section-ref">§23.1-8 · Matthew 23:1-8</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus-matt-5a.jpg"
+                 alt="Scan sinaiticus/sinaiticus-matt-5a.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus-matt-5a.jpg')"
+                 title="Click to enlarge">
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus_matthew_sample.jpg"
+                 alt="Scan sinaiticus/sinaiticus_matthew_sample.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus_matthew_sample.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>τοτε ο ιησους ελαλησεν τοις οχλοις και τοις μαθηταις αυτου <sup>2</sup>λεγων επι της μωσεως καθεδρας εκαθισαν οι γραμματεις και οι φαρισαιοι <sup>3</sup>παντα ουν οσα αν ειπωσιν υμιν τηρειν τηρειτε και ποιειτε κατα δε τα εργα αυτων μη ποιειτε λεγουσιν γαρ και ου ποιουσιν <sup>4</sup>δεσμευουσιν γαρ φορτια βαρεα και δυσβαστακτα και επιτιθεασιν επι τους ωμους των ανθρωπων τω δε δακτυλω αυτων ου θελουσιν κινησαι αυτα <sup>5</sup>παντα δε τα εργα αυτων ποιουσιν προς το θεαθηναι τοις ανθρωποις πλατυνουσιν δε τα φυλακτηρια αυτων και μεγαλυνουσιν τα κρασπεδα των ιματιων αυτων <sup>6</sup>φιλουσιν τε την πρωτοκλισιαν εν τοις δειπνοις και τας πρωτοκαθεδριας εν ταις συναγωγαις <sup>7</sup>και τους ασπασμους εν ταις αγοραις και καλεισθαι υπο των ανθρωπων ραββι ραββι <sup>8</sup>υμεις δε μη κληθητε ραββι εις γαρ εστιν υμων ο καθηγητης ο χριστος παντες δε υμεις αδελφοι εστε</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>Then spake Jesus to the multitude, and to his disciples, <sup>2</sup>Saying,
 The scribes and the Pharisees sit in Moses’ seat: <sup>3</sup>All therefore whatsoever they bid you observe,
 that observe and do; but do not ye after their works: for they say, and do not. <sup>4</sup>For they bind heavy burdens and grievous to be borne, and lay
 them on men’s shoulders; but they
@@ -105,38 +160,138 @@ themselves
  will not move them with one of their fingers. <sup>5</sup>But all their works they do for to be seen of men: they make broad their phylacteries, and enlarge the borders of their garments, <sup>6</sup>And love the uppermost rooms at feasts, and the chief seats in the synagogues, <sup>7</sup>And greetings in the markets, and to be called of men, Rabbi, Rabbi. <sup>8</sup>But be not ye called Rabbi: for one is your Master,
 even
  Christ; and all ye are brethren.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s23-9-16">
-          <span class="section-ref">§23.9-16 · Matthew 23:9-16</span>
-          <p><sup>9</sup>And call no
+        <div class="parallel-section" id="s23-9-16"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 23"
+             data-section="ch. 23.9-16"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-23.html#s23-9-16">
+
+          <div class="section-header">
+            <span class="section-ref">§23.9-16 · Matthew 23:9-16</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>9</sup>και πατερα μη καλεσητε υμων επι της γης εις γαρ εστιν ο πατηρ υμων ο εν τοις ουρανοις <sup>10</sup>μηδε κληθητε καθηγηται εις γαρ υμων εστιν ο καθηγητης ο χριστος <sup>11</sup>ο δε μειζων υμων εσται υμων διακονος <sup>12</sup>οστις δε υψωσει εαυτον ταπεινωθησεται και οστις ταπεινωσει εαυτον υψωθησεται <sup>13</sup>ουαι δε υμιν γραμματεις και φαρισαιοι υποκριται οτι κλειετε την βασιλειαν των ουρανων εμπροσθεν των ανθρωπων υμεις γαρ ουκ εισερχεσθε ουδε τους εισερχομενους αφιετε εισελθειν <sup>14</sup>ουαι υμιν γραμματεις και φαρισαιοι υποκριται οτι κατεσθιετε τας οικιας των χηρων και προφασει μακρα προσευχομενοι δια τουτο ληψεσθε περισσοτερον κριμα <sup>15</sup>ουαι υμιν γραμματεις και φαρισαιοι υποκριται οτι περιαγετε την θαλασσαν και την ξηραν ποιησαι ενα προσηλυτον και οταν γενηται ποιειτε αυτον υιον γεεννης διπλοτερον υμων <sup>16</sup>ουαι υμιν οδηγοι τυφλοι οι λεγοντες ος αν ομοση εν τω ναω ουδεν εστιν ος δ αν ομοση εν τω χρυσω του ναου οφειλει</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>9</sup>And call no
 man your father upon the earth: for one is your Father, which is in heaven. <sup>10</sup>Neither be ye called masters: for one is your Master,
 even
  Christ. <sup>11</sup>But he that is greatest among you shall be your servant. <sup>12</sup>And whosoever shall exalt himself shall be abased; and he that shall humble himself shall be exalted. <sup>13</sup>But woe unto you, scribes and Pharisees, hypocrites! for ye shut up the kingdom of heaven against men: for ye neither go in
 yourselves,
  neither suffer ye them that are entering to go in. <sup>14</sup>Woe unto you, scribes and Pharisees, hypocrites! for ye devour widows’ houses, and for a pretence make long prayer: therefore ye shall receive the greater damnation. <sup>15</sup>Woe unto you, scribes and Pharisees, hypocrites! for ye compass sea and land to make one proselyte, and when he is made, ye make him twofold more the child of hell than yourselves. <sup>16</sup>Woe unto you,
 ye blind guides, which say, Whosoever shall swear by the temple, it is nothing; but whosoever shall swear by the gold of the temple, he is a debtor!</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s23-17-24">
-          <span class="section-ref">§23.17-24 · Matthew 23:17-24</span>
-          <p><sup>17</sup>Ye fools and blind: for whether is greater, the gold, or the temple that sanctifieth the gold? <sup>18</sup>And, Whosoever shall swear by the altar, it is nothing; but whosoever sweareth by the gift that is upon it, he is guilty. <sup>19</sup>Ye fools and blind: for whether
+        <div class="parallel-section" id="s23-17-24"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 23"
+             data-section="ch. 23.17-24"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-23.html#s23-17-24">
+
+          <div class="section-header">
+            <span class="section-ref">§23.17-24 · Matthew 23:17-24</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>17</sup>μωροι και τυφλοι τις γαρ μειζων εστιν ο χρυσος η ο ναος ο αγιαζων τον χρυσον <sup>18</sup>και ος εαν ομοση εν τω θυσιαστηριω ουδεν εστιν ος δ αν ομοση εν τω δωρω τω επανω αυτου οφειλει <sup>19</sup>μωροι και τυφλοι τι γαρ μειζον το δωρον η το θυσιαστηριον το αγιαζον το δωρον <sup>20</sup>ο ουν ομοσας εν τω θυσιαστηριω ομνυει εν αυτω και εν πασιν τοις επανω αυτου <sup>21</sup>και ο ομοσας εν τω ναω ομνυει εν αυτω και εν τω κατοικουντι αυτον <sup>22</sup>και ο ομοσας εν τω ουρανω ομνυει εν τω θρονω του θεου και εν τω καθημενω επανω αυτου <sup>23</sup>ουαι υμιν γραμματεις και φαρισαιοι υποκριται οτι αποδεκατουτε το ηδυοσμον και το ανηθον και το κυμινον και αφηκατε τα βαρυτερα του νομου την κρισιν και τον ελεον και την πιστιν ταυτα εδει ποιησαι κακεινα μη αφιεναι <sup>24</sup>οδηγοι τυφλοι οι διυλιζοντες τον κωνωπα την δε καμηλον καταπινοντες</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>17</sup>Ye fools and blind: for whether is greater, the gold, or the temple that sanctifieth the gold? <sup>18</sup>And, Whosoever shall swear by the altar, it is nothing; but whosoever sweareth by the gift that is upon it, he is guilty. <sup>19</sup>Ye fools and blind: for whether
 is
  greater, the gift, or the altar that sanctifieth the gift? <sup>20</sup>Whoso therefore shall swear by the altar, sweareth by it, and by all things thereon. <sup>21</sup>And whoso shall swear by the temple, sweareth by it, and by him that dwelleth therein. <sup>22</sup>And he that shall swear by heaven, sweareth by the throne of God, and by him that sitteth thereon. <sup>23</sup>Woe unto you, scribes and Pharisees, hypocrites! for ye pay tithe of mint and anise and cummin, and have omitted the weightier
 matters
  of the law, judgment, mercy, and faith: these ought ye to have done, and not to leave the other undone. <sup>24</sup>Ye blind guides, which strain at a gnat, and swallow a camel.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s23-25-32">
-          <span class="section-ref">§23.25-32 · Matthew 23:25-32</span>
-          <p><sup>25</sup>Woe unto you, scribes and Pharisees, hypocrites! for ye make clean the outside of the cup and of the platter, but within they are full of extortion and excess. <sup>26</sup>Thou blind Pharisee, cleanse first that
+        <div class="parallel-section" id="s23-25-32"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 23"
+             data-section="ch. 23.25-32"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-23.html#s23-25-32">
+
+          <div class="section-header">
+            <span class="section-ref">§23.25-32 · Matthew 23:25-32</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>25</sup>ουαι υμιν γραμματεις και φαρισαιοι υποκριται οτι καθαριζετε το εξωθεν του ποτηριου και της παροψιδος εσωθεν δε γεμουσιν εξ αρπαγης και ακρασιας <sup>26</sup>φαρισαιε τυφλε καθαρισον πρωτον το εντος του ποτηριου και της παροψιδος ινα γενηται και το εκτος αυτων καθαρον <sup>27</sup>ουαι υμιν γραμματεις και φαρισαιοι υποκριται οτι παρομοιαζετε ταφοις κεκονιαμενοις οιτινες εξωθεν μεν φαινονται ωραιοι εσωθεν δε γεμουσιν οστεων νεκρων και πασης ακαθαρσιας <sup>28</sup>ουτως και υμεις εξωθεν μεν φαινεσθε τοις ανθρωποις δικαιοι εσωθεν δε μεστοι εστε υποκρισεως και ανομιας <sup>29</sup>ουαι υμιν γραμματεις και φαρισαιοι υποκριται οτι οικοδομειτε τους ταφους των προφητων και κοσμειτε τα μνημεια των δικαιων <sup>30</sup>και λεγετε ει ημεν εν ταις ημεραις των πατερων ημων ουκ αν ημεν κοινωνοι αυτων εν τω αιματι των προφητων <sup>31</sup>ωστε μαρτυρειτε εαυτοις οτι υιοι εστε των φονευσαντων τους προφητας <sup>32</sup>και υμεις πληρωσατε το μετρον των πατερων υμων</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>25</sup>Woe unto you, scribes and Pharisees, hypocrites! for ye make clean the outside of the cup and of the platter, but within they are full of extortion and excess. <sup>26</sup>Thou blind Pharisee, cleanse first that
 which is within the cup and platter, that the outside of them may be clean also. <sup>27</sup>Woe unto you, scribes and Pharisees, hypocrites! for ye are like unto whited sepulchres, which indeed appear beautiful outward, but are within full of dead
 men’s bones, and of all uncleanness. <sup>28</sup>Even so ye also outwardly appear righteous unto men, but within ye are full of hypocrisy and iniquity. <sup>29</sup>Woe unto you, scribes and Pharisees, hypocrites! because ye build the tombs of the prophets, and garnish the sepulchres of the righteous, <sup>30</sup>And say, If we had been in the days of our fathers, we would not have been partakers with them in the blood of the prophets. <sup>31</sup>Wherefore ye be witnesses unto yourselves, that ye are the children of them which killed the prophets. <sup>32</sup>Fill ye up then the measure of your fathers.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s23-33-39">
-          <span class="section-ref">§23.33-39 · Matthew 23:33-39</span>
-          <p><sup>33</sup>Ye serpents,
+        <div class="parallel-section" id="s23-33-39"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 23"
+             data-section="ch. 23.33-39"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-23.html#s23-33-39">
+
+          <div class="section-header">
+            <span class="section-ref">§23.33-39 · Matthew 23:33-39</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>33</sup>οφεις γεννηματα εχιδνων πως φυγητε απο της κρισεως της γεεννης <sup>34</sup>δια τουτο ιδου εγω αποστελλω προς υμας προφητας και σοφους και γραμματεις και εξ αυτων αποκτενειτε και σταυρωσετε και εξ αυτων μαστιγωσετε εν ταις συναγωγαις υμων και διωξετε απο πολεως εις πολιν <sup>35</sup>οπως ελθη εφ υμας παν αιμα δικαιον εκχυνομενον επι της γης απο του αιματος αβελ του δικαιου εως του αιματος ζαχαριου υιου βαραχιου ον εφονευσατε μεταξυ του ναου και του θυσιαστηριου <sup>36</sup>αμην λεγω υμιν ηξει ταυτα παντα επι την γενεαν ταυτην <sup>37</sup>ιερουσαλημ ιερουσαλημ η αποκτεινουσα τους προφητας και λιθοβολουσα τους απεσταλμενους προς αυτην ποσακις ηθελησα επισυναγαγειν τα τεκνα σου ον τροπον επισυναγει ορνις τα νοσσια εαυτης υπο τας πτερυγας και ουκ ηθελησατε <sup>38</sup>ιδου αφιεται υμιν ο οικος υμων ερημος <sup>39</sup>λεγω γαρ υμιν ου μη με ιδητε απ αρτι εως αν ειπητε ευλογημενος ο ερχομενος εν ονοματι κυριου</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>33</sup>Ye serpents,
 ye generation of vipers, how can ye escape the damnation of hell? <sup>34</sup>Wherefore, behold, I send unto you prophets, and wise men, and scribes: and
 some of them ye shall kill and crucify; and
 some of them shall ye scourge in your synagogues, and persecute
@@ -144,9 +299,11 @@ them from city to city: <sup>35</sup>That upon you may come all the righteous bl
 thou that killest the prophets, and stonest them which are sent unto thee, how often would I have gathered thy children together, even as a hen gathereth her chickens under
 her wings, and ye would not! <sup>38</sup>Behold, your house is left unto you desolate. <sup>39</sup>For I say unto you, Ye shall not see me henceforth, till ye shall say, Blessed
 is he that cometh in the name of the Lord.</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 

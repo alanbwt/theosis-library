@@ -91,59 +91,241 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s24-1-10">
-          <span class="section-ref">§24.1-10 · Matthew 24:1-10</span>
-          <p><sup>1</sup>And Jesus went out, and departed from the temple: and his disciples came to
+        <div class="parallel-section" id="s24-1-10"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 24"
+             data-section="ch. 24.1-10"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-24.html#s24-1-10">
+
+          <div class="section-header">
+            <span class="section-ref">§24.1-10 · Matthew 24:1-10</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus-matt-5a.jpg"
+                 alt="Scan sinaiticus/sinaiticus-matt-5a.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus-matt-5a.jpg')"
+                 title="Click to enlarge">
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus_matthew_sample.jpg"
+                 alt="Scan sinaiticus/sinaiticus_matthew_sample.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus_matthew_sample.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>και εξελθων ο ιησους επορευετο απο του ιερου και προσηλθον οι μαθηται αυτου επιδειξαι αυτω τας οικοδομας του ιερου <sup>2</sup>ο δε ιησους ειπεν αυτοις ου βλεπετε παντα ταυτα αμην λεγω υμιν ου μη αφεθη ωδε λιθος επι λιθον ος ου μη καταλυθησεται <sup>3</sup>καθημενου δε αυτου επι του ορους των ελαιων προσηλθον αυτω οι μαθηται κατ ιδιαν λεγοντες ειπε ημιν ποτε ταυτα εσται και τι το σημειον της σης παρουσιας και της συντελειας του αιωνος <sup>4</sup>και αποκριθεις ο ιησους ειπεν αυτοις βλεπετε μη τις υμας πλανηση <sup>5</sup>πολλοι γαρ ελευσονται επι τω ονοματι μου λεγοντες εγω ειμι ο χριστος και πολλους πλανησουσιν <sup>6</sup>μελλησετε δε ακουειν πολεμους και ακοας πολεμων ορατε μη θροεισθε δει γαρ παντα γενεσθαι αλλ ουπω εστιν το τελος <sup>7</sup>εγερθησεται γαρ εθνος επι εθνος και βασιλεια επι βασιλειαν και εσονται λιμοι και λοιμοι και σεισμοι κατα τοπους <sup>8</sup>παντα δε ταυτα αρχη ωδινων <sup>9</sup>τοτε παραδωσουσιν υμας εις θλιψιν και αποκτενουσιν υμας και εσεσθε μισουμενοι υπο παντων εθνων δια το ονομα μου <sup>10</sup>και τοτε σκανδαλισθησονται πολλοι και αλληλους παραδωσουσιν και μισησουσιν αλληλους</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>And Jesus went out, and departed from the temple: and his disciples came to
 him for to shew him the buildings of the temple. <sup>2</sup>And Jesus said unto them, See ye not all these things? verily I say unto you, There shall not be left here one stone upon another, that shall not be thrown down. <sup>3</sup>And as he sat upon the mount of Olives, the disciples came unto him privately, saying, Tell us, when shall these things be? and what
 shall be the sign of thy coming, and of the end of the world? <sup>4</sup>And Jesus answered and said unto them,
 Take heed that no man deceive you. <sup>5</sup>For many shall come in my name, saying, I am Christ; and shall deceive many. <sup>6</sup>And ye shall hear of wars and rumours of wars: see that ye be not troubled: for all
 these things must come to pass, but the end is not yet. <sup>7</sup>For nation shall rise against nation, and kingdom against kingdom: and there shall be famines, and pestilences, and earthquakes, in divers places. <sup>8</sup>All these
 are the beginning of sorrows. <sup>9</sup>Then shall they deliver you up to be afflicted, and shall kill you: and ye shall be hated of all nations for my name’s sake. <sup>10</sup>And then shall many be offended, and shall betray one another, and shall hate one another.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s24-11-20">
-          <span class="section-ref">§24.11-20 · Matthew 24:11-20</span>
-          <p><sup>11</sup>And many false prophets shall rise, and shall deceive many. <sup>12</sup>And because iniquity shall abound, the love of many shall wax cold. <sup>13</sup>But he that shall endure unto the end, the same shall be saved. <sup>14</sup>And this gospel of the kingdom shall be preached in all the world for a witness unto all nations; and then shall the end come. <sup>15</sup>When ye therefore shall see the abomination of desolation, spoken of by Daniel the prophet, stand in the holy place, (whoso readeth, let him understand:) <sup>16</sup>Then let them which be in Judaea flee into the mountains: <sup>17</sup>Let him which is on the housetop not come down to take any thing out of his house: <sup>18</sup>Neither let him which is in the field return back to take his clothes. <sup>19</sup>And woe unto them that are with child, and to them that give suck in those days! <sup>20</sup>But pray ye that your flight be not in the winter, neither on the sabbath day:</p>
+        <div class="parallel-section" id="s24-11-20"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 24"
+             data-section="ch. 24.11-20"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-24.html#s24-11-20">
+
+          <div class="section-header">
+            <span class="section-ref">§24.11-20 · Matthew 24:11-20</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>11</sup>και πολλοι ψευδοπροφηται εγερθησονται και πλανησουσιν πολλους <sup>12</sup>και δια το πληθυνθηναι την ανομιαν ψυγησεται η αγαπη των πολλων <sup>13</sup>ο δε υπομεινας εις τελος ουτος σωθησεται <sup>14</sup>και κηρυχθησεται τουτο το ευαγγελιον της βασιλειας εν ολη τη οικουμενη εις μαρτυριον πασιν τοις εθνεσιν και τοτε ηξει το τελος <sup>15</sup>οταν ουν ιδητε το βδελυγμα της ερημωσεως το ρηθεν δια δανιηλ του προφητου εστως εν τοπω αγιω ο αναγινωσκων νοειτω <sup>16</sup>τοτε οι εν τη ιουδαια φευγετωσαν επι τα ορη <sup>17</sup>ο επι του δωματος μη καταβαινετω αραι τι εκ της οικιας αυτου <sup>18</sup>και ο εν τω αγρω μη επιστρεψατω οπισω αραι τα ιματια αυτου <sup>19</sup>ουαι δε ταις εν γαστρι εχουσαις και ταις θηλαζουσαις εν εκειναις ταις ημεραις <sup>20</sup>προσευχεσθε δε ινα μη γενηται η φυγη υμων χειμωνος μηδε εν σαββατω</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>11</sup>And many false prophets shall rise, and shall deceive many. <sup>12</sup>And because iniquity shall abound, the love of many shall wax cold. <sup>13</sup>But he that shall endure unto the end, the same shall be saved. <sup>14</sup>And this gospel of the kingdom shall be preached in all the world for a witness unto all nations; and then shall the end come. <sup>15</sup>When ye therefore shall see the abomination of desolation, spoken of by Daniel the prophet, stand in the holy place, (whoso readeth, let him understand:) <sup>16</sup>Then let them which be in Judaea flee into the mountains: <sup>17</sup>Let him which is on the housetop not come down to take any thing out of his house: <sup>18</sup>Neither let him which is in the field return back to take his clothes. <sup>19</sup>And woe unto them that are with child, and to them that give suck in those days! <sup>20</sup>But pray ye that your flight be not in the winter, neither on the sabbath day:</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s24-21-30">
-          <span class="section-ref">§24.21-30 · Matthew 24:21-30</span>
-          <p><sup>21</sup>For then shall be great tribulation, such as was not since the beginning of the world to this time, no, nor ever shall be. <sup>22</sup>And except those days should be shortened, there should no flesh be saved: but for the elect’s sake those days shall be shortened. <sup>23</sup>Then if any man shall say unto you, Lo, here
+        <div class="parallel-section" id="s24-21-30"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 24"
+             data-section="ch. 24.21-30"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-24.html#s24-21-30">
+
+          <div class="section-header">
+            <span class="section-ref">§24.21-30 · Matthew 24:21-30</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>21</sup>εσται γαρ τοτε θλιψις μεγαλη οια ου γεγονεν απ αρχης κοσμου εως του νυν ουδ ου μη γενηται <sup>22</sup>και ει μη εκολοβωθησαν αι ημεραι εκειναι ουκ αν εσωθη πασα σαρξ δια δε τους εκλεκτους κολοβωθησονται αι ημεραι εκειναι <sup>23</sup>τοτε εαν τις υμιν ειπη ιδου ωδε ο χριστος η ωδε μη πιστευσητε <sup>24</sup>εγερθησονται γαρ ψευδοχριστοι και ψευδοπροφηται και δωσουσιν σημεια μεγαλα και τερατα ωστε πλανησαι ει δυνατον και τους εκλεκτους <sup>25</sup>ιδου προειρηκα υμιν <sup>26</sup>εαν ουν ειπωσιν υμιν ιδου εν τη ερημω εστιν μη εξελθητε ιδου εν τοις ταμειοις μη πιστευσητε <sup>27</sup>ωσπερ γαρ η αστραπη εξερχεται απο ανατολων και φαινεται εως δυσμων ουτως εσται και η παρουσια του υιου του ανθρωπου <sup>28</sup>οπου γαρ εαν η το πτωμα εκει συναχθησονται οι αετοι <sup>29</sup>ευθεως δε μετα την θλιψιν των ημερων εκεινων ο ηλιος σκοτισθησεται και η σεληνη ου δωσει το φεγγος αυτης και οι αστερες πεσουνται απο του ουρανου και αι δυναμεις των ουρανων σαλευθησονται <sup>30</sup>και τοτε φανησεται το σημειον του υιου του ανθρωπου εν τω ουρανω και τοτε κοψονται πασαι αι φυλαι της γης και οψονται τον υιον του ανθρωπου ερχομενον επι των νεφελων του ουρανου μετα δυναμεως και δοξης πολλης</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>21</sup>For then shall be great tribulation, such as was not since the beginning of the world to this time, no, nor ever shall be. <sup>22</sup>And except those days should be shortened, there should no flesh be saved: but for the elect’s sake those days shall be shortened. <sup>23</sup>Then if any man shall say unto you, Lo, here
 is Christ, or there; believe
 it not. <sup>24</sup>For there shall arise false Christs, and false prophets, and shall shew great signs and wonders; insomuch that, if
 it were possible, they shall deceive the very elect. <sup>25</sup>Behold, I have told you before. <sup>26</sup>Wherefore if they shall say unto you, Behold,
 he is in the desert; go not forth: behold, he is in the secret chambers; believe
 it not. <sup>27</sup>For as the lightning cometh out of the east, and shineth even unto the west; so shall also the coming of the Son of man be. <sup>28</sup>For wheresoever the carcase is, there will the eagles be gathered together. <sup>29</sup>Immediately after the tribulation of those days shall the sun be darkened, and the moon shall not give her light, and the stars shall fall from heaven, and the powers of the heavens shall be shaken: <sup>30</sup>And then shall appear the sign of the Son of man in heaven: and then shall all the tribes of the earth mourn, and they shall see the Son of man coming in the clouds of heaven with power and great glory.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s24-31-40">
-          <span class="section-ref">§24.31-40 · Matthew 24:31-40</span>
-          <p><sup>31</sup>And he shall send his angels with a great sound of a trumpet, and they shall gather together his elect from the four winds, from one end of heaven to the other. <sup>32</sup>Now learn a parable of the fig tree; When his branch is yet tender, and putteth forth leaves, ye know that summer is nigh: <sup>33</sup>So likewise ye, when ye shall see all these things, know that it is near,
+        <div class="parallel-section" id="s24-31-40"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 24"
+             data-section="ch. 24.31-40"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-24.html#s24-31-40">
+
+          <div class="section-header">
+            <span class="section-ref">§24.31-40 · Matthew 24:31-40</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>31</sup>και αποστελει τους αγγελους αυτου μετα σαλπιγγος φωνης μεγαλης και επισυναξουσιν τους εκλεκτους αυτου εκ των τεσσαρων ανεμων απ ακρων ουρανων εως ακρων αυτων <sup>32</sup>απο δε της συκης μαθετε την παραβολην οταν ηδη ο κλαδος αυτης γενηται απαλος και τα φυλλα εκφυη γινωσκετε οτι εγγυς το θερος <sup>33</sup>ουτως και υμεις οταν ιδητε παντα ταυτα γινωσκετε οτι εγγυς εστιν επι θυραις <sup>34</sup>αμην λεγων υμιν ου μη παρελθη η γενεα αυτη εως αν παντα ταυτα γενηται <sup>35</sup>ο ουρανος και η γη παρελευσονται οι δε λογοι μου ου μη παρελθωσιν <sup>36</sup>περι δε της ημερας εκεινης και της ωρας ουδεις οιδεν ουδε οι αγγελοι των ουρανων ει μη ο πατηρ μου μονος <sup>37</sup>ωσπερ δε αι ημεραι του νωε ουτως εσται και η παρουσια του υιου του ανθρωπου <sup>38</sup>ωσπερ γαρ ησαν εν ταις ημεραις ταις προ του κατακλυσμου τρωγοντες και πινοντες γαμουντες και εκγαμιζοντες αχρι ης ημερας εισηλθεν νωε εις την κιβωτον <sup>39</sup>και ουκ εγνωσαν εως ηλθεν ο κατακλυσμος και ηρεν απαντας ουτως εσται και η παρουσια του υιου του ανθρωπου <sup>40</sup>τοτε δυο εσονται εν τω αγρω ο εις παραλαμβανεται και ο εις αφιεται</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>31</sup>And he shall send his angels with a great sound of a trumpet, and they shall gather together his elect from the four winds, from one end of heaven to the other. <sup>32</sup>Now learn a parable of the fig tree; When his branch is yet tender, and putteth forth leaves, ye know that summer is nigh: <sup>33</sup>So likewise ye, when ye shall see all these things, know that it is near,
 even at the doors. <sup>34</sup>Verily I say unto you, This generation shall not pass, till all these things be fulfilled. <sup>35</sup>Heaven and earth shall pass away, but my words shall not pass away. <sup>36</sup>But of that day and hour knoweth no
 man, no, not the angels of heaven, but my Father only. <sup>37</sup>But as the days of Noe
 were, so shall also the coming of the Son of man be. <sup>38</sup>For as in the days that were before the flood they were eating and drinking, marrying and giving in marriage, until the day that Noe entered into the ark, <sup>39</sup>And knew not until the flood came, and took them all away; so shall also the coming of the Son of man be. <sup>40</sup>Then shall two be in the field; the one shall be taken, and the other left.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s24-41-50">
-          <span class="section-ref">§24.41-50 · Matthew 24:41-50</span>
-          <p><sup>41</sup>Two
+        <div class="parallel-section" id="s24-41-50"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 24"
+             data-section="ch. 24.41-50"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-24.html#s24-41-50">
+
+          <div class="section-header">
+            <span class="section-ref">§24.41-50 · Matthew 24:41-50</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>41</sup>δυο αληθουσαι εν τω μυλωνι μια παραλαμβανεται και μια αφιεται <sup>42</sup>γρηγορειτε ουν οτι ουκ οιδατε ποια ωρα ο κυριος υμων ερχεται <sup>43</sup>εκεινο δε γινωσκετε οτι ει ηδει ο οικοδεσποτης ποια φυλακη ο κλεπτης ερχεται εγρηγορησεν αν και ουκ αν ειασεν διορυγηναι την οικιαν αυτου <sup>44</sup>δια τουτο και υμεις γινεσθε ετοιμοι οτι η ωρα ου δοκειτε ο υιος του ανθρωπου ερχεται <sup>45</sup>τις αρα εστιν ο πιστος δουλος και φρονιμος ον κατεστησεν ο κυριος αυτου επι της θεραπειας αυτου του διδοναι αυτοις την τροφην εν καιρω <sup>46</sup>μακαριος ο δουλος εκεινος ον ελθων ο κυριος αυτου ευρησει ποιουντα ουτως <sup>47</sup>αμην λεγω υμιν οτι επι πασιν τοις υπαρχουσιν αυτου καταστησει αυτον <sup>48</sup>εαν δε ειπη ο κακος δουλος εκεινος εν τη καρδια αυτου χρονιζει ο κυριος μου ελθειν <sup>49</sup>και αρξηται τυπτειν τους συνδουλους εσθιειν δε και πινειν μετα των μεθυοντων <sup>50</sup>ηξει ο κυριος του δουλου εκεινου εν ημερα η ου προσδοκα και εν ωρα η ου γινωσκει</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>41</sup>Two
 women shall be grinding at the mill; the one shall be taken, and the other left. <sup>42</sup>Watch therefore: for ye know not what hour your Lord doth come. <sup>43</sup>But know this, that if the goodman of the house had known in what watch the thief would come, he would have watched, and would not have suffered his house to be broken up. <sup>44</sup>Therefore be ye also ready: for in such an hour as ye think not the Son of man cometh. <sup>45</sup>Who then is a faithful and wise servant, whom his lord hath made ruler over his household, to give them meat in due season? <sup>46</sup>Blessed
 is that servant, whom his lord when he cometh shall find so doing. <sup>47</sup>Verily I say unto you, That he shall make him ruler over all his goods. <sup>48</sup>But and if that evil servant shall say in his heart, My lord delayeth his coming; <sup>49</sup>And shall begin to smite
 his fellowservants, and to eat and drink with the drunken; <sup>50</sup>The lord of that servant shall come in a day when he looketh not for
 him, and in an hour that he is not aware of,</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s24-51">
-          <span class="section-ref">§24.51 · Matthew 24:51</span>
-          <p><sup>51</sup>And shall cut him asunder, and appoint
+        <div class="parallel-section" id="s24-51"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 24"
+             data-section="ch. 24.51"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-24.html#s24-51">
+
+          <div class="section-header">
+            <span class="section-ref">§24.51 · Matthew 24:51</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>51</sup>και διχοτομησει αυτον και το μερος αυτου μετα των υποκριτων θησει εκει εσται ο κλαυθμος και ο βρυγμος των οδοντων</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>51</sup>And shall cut him asunder, and appoint
 him his portion with the hypocrites: there shall be weeping and gnashing of teeth.</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 

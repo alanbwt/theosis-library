@@ -91,34 +91,134 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s8-1-5">
-          <span class="section-ref">§8.1-5 · 1 Corinthians 8:1-5</span>
-          <p><sup>1</sup>Now as touching things offered unto idols, we know that we all have knowledge. Knowledge puffeth up, but charity edifieth. <sup>2</sup>And if any man think that he knoweth any thing, he knoweth nothing yet as he ought to know. <sup>3</sup>But if any man love God, the same is known of him. <sup>4</sup>As concerning therefore the eating of those things that are offered in sacrifice unto idols, we know that an idol
+        <div class="parallel-section" id="s8-1-5"
+             data-author="Unknown"
+             data-title="1 Corinthians, Chapter 8"
+             data-section="ch. 8.1-5"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-1cor-8.html#s8-1-5">
+
+          <div class="section-header">
+            <span class="section-ref">§8.1-5 · 1 Corinthians 8:1-5</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus-1cor-15a.jpg"
+                 alt="Scan sinaiticus/sinaiticus-1cor-15a.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus-1cor-15a.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>περι δε των ειδωλοθυτων οιδαμεν οτι παντες γνωσιν εχομεν η γνωσις φυσιοι η δε αγαπη οικοδομει <sup>2</sup>ει δε τις δοκει ειδεναι τι ουδεπω ουδεν εγνωκεν καθως δει γνωναι <sup>3</sup>ει δε τις αγαπα τον θεον ουτος εγνωσται υπ αυτου <sup>4</sup>περι της βρωσεως ουν των ειδωλοθυτων οιδαμεν οτι ουδεν ειδωλον εν κοσμω και οτι ουδεις θεος ετερος ει μη εις <sup>5</sup>και γαρ ειπερ εισιν λεγομενοι θεοι ειτε εν ουρανω ειτε επι της γης ωσπερ εισιν θεοι πολλοι και κυριοι πολλοι</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>Now as touching things offered unto idols, we know that we all have knowledge. Knowledge puffeth up, but charity edifieth. <sup>2</sup>And if any man think that he knoweth any thing, he knoweth nothing yet as he ought to know. <sup>3</sup>But if any man love God, the same is known of him. <sup>4</sup>As concerning therefore the eating of those things that are offered in sacrifice unto idols, we know that an idol
 is nothing in the world, and that
 there is none other God but one. <sup>5</sup>For though there be that are called gods, whether in heaven or in earth, (as there be gods many, and lords many,)</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s8-6-10">
-          <span class="section-ref">§8.6-10 · 1 Corinthians 8:6-10</span>
-          <p><sup>6</sup>But to us
+        <div class="parallel-section" id="s8-6-10"
+             data-author="Unknown"
+             data-title="1 Corinthians, Chapter 8"
+             data-section="ch. 8.6-10"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-1cor-8.html#s8-6-10">
+
+          <div class="section-header">
+            <span class="section-ref">§8.6-10 · 1 Corinthians 8:6-10</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>6</sup>αλλ ημιν εις θεος ο πατηρ εξ ου τα παντα και ημεις εις αυτον και εις κυριος ιησους χριστος δι ου τα παντα και ημεις δι αυτου <sup>7</sup>αλλ ουκ εν πασιν η γνωσις τινες δε τη συνειδησει του ειδωλου εως αρτι ως ειδωλοθυτον εσθιουσιν και η συνειδησις αυτων ασθενης ουσα μολυνεται <sup>8</sup>βρωμα δε ημας ου παριστησιν τω θεω ουτε γαρ εαν φαγωμεν περισσευομεν ουτε εαν μη φαγωμεν υστερουμεθα <sup>9</sup>βλεπετε δε μηπως η εξουσια υμων αυτη προσκομμα γενηται τοις ασθενουσιν <sup>10</sup>εαν γαρ τις ιδη σε τον εχοντα γνωσιν εν ειδωλειω κατακειμενον ουχι η συνειδησις αυτου ασθενους οντος οικοδομηθησεται εις το τα ειδωλοθυτα εσθιειν</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>6</sup>But to us
 there is but one God, the Father, of whom
 are
  all things, and we in him; and one Lord Jesus Christ, by whom
 are all things, and we by him. <sup>7</sup>Howbeit
 there is not in every man that knowledge: for some with conscience of the idol unto this hour eat
 it as a thing offered unto an idol; and their conscience being weak is defiled. <sup>8</sup>But meat commendeth us not to God: for neither, if we eat, are we the better; neither, if we eat not, are we the worse. <sup>9</sup>But take heed lest by any means this liberty of yours become a stumblingblock to them that are weak. <sup>10</sup>For if any man see thee which hast knowledge sit at meat in the idol’s temple, shall not the conscience of him which is weak be emboldened to eat those things which are offered to idols;</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s8-11-13">
-          <span class="section-ref">§8.11-13 · 1 Corinthians 8:11-13</span>
-          <p><sup>11</sup>And through thy knowledge shall the weak brother perish, for whom Christ died? <sup>12</sup>But when ye sin so against the brethren, and wound their weak conscience, ye sin against Christ. <sup>13</sup>Wherefore, if meat make my brother to offend, I will eat no flesh while the world standeth, lest I make my brother to offend.</p>
+        <div class="parallel-section" id="s8-11-13"
+             data-author="Unknown"
+             data-title="1 Corinthians, Chapter 8"
+             data-section="ch. 8.11-13"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-1cor-8.html#s8-11-13">
+
+          <div class="section-header">
+            <span class="section-ref">§8.11-13 · 1 Corinthians 8:11-13</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>11</sup>και απολειται ο ασθενων αδελφος επι τη ση γνωσει δι ον χριστος απεθανεν <sup>12</sup>ουτως δε αμαρτανοντες εις τους αδελφους και τυπτοντες αυτων την συνειδησιν ασθενουσαν εις χριστον αμαρτανετε <sup>13</sup>διοπερ ει βρωμα σκανδαλιζει τον αδελφον μου ου μη φαγω κρεα εις τον αιωνα ινα μη τον αδελφον μου σκανδαλισω</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>11</sup>And through thy knowledge shall the weak brother perish, for whom Christ died? <sup>12</sup>But when ye sin so against the brethren, and wound their weak conscience, ye sin against Christ. <sup>13</sup>Wherefore, if meat make my brother to offend, I will eat no flesh while the world standeth, lest I make my brother to offend.</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 

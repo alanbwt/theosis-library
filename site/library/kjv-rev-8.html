@@ -91,30 +91,130 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s8-1-5">
-          <span class="section-ref">§8.1-5 · Revelation 8:1-5</span>
-          <p><sup>1</sup>And when he had opened the seventh seal, there was silence in heaven about the space of half an hour. <sup>2</sup>And I saw the seven angels which stood before God; and to them were given seven trumpets. <sup>3</sup>And another angel came and stood at the altar, having a golden censer; and there was given unto him much incense, that he should offer
+        <div class="parallel-section" id="s8-1-5"
+             data-author="John (attributed)"
+             data-title="Revelation, Chapter 8"
+             data-section="ch. 8.1-5"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-rev-8.html#s8-1-5">
+
+          <div class="section-header">
+            <span class="section-ref">§8.1-5 · Revelation 8:1-5</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/codex_sinaiticus.jpg"
+                 alt="Scan sinaiticus/codex_sinaiticus.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/codex_sinaiticus.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>και οτε ηνοιξεν την σφραγιδα την εβδομην εγενετο σιγη εν τω ουρανω ως ημιωριον <sup>2</sup>και ειδον τους επτα αγγελους οι ενωπιον του θεου εστηκασιν και εδοθησαν αυτοις επτα σαλπιγγες <sup>3</sup>και αλλος αγγελος ηλθεν και εσταθη επι το θυσιαστηριον εχων λιβανωτον χρυσουν και εδοθη αυτω θυμιαματα πολλα ινα δωση ταις προσευχαις των αγιων παντων επι το θυσιαστηριον το χρυσουν το ενωπιον του θρονου <sup>4</sup>και ανεβη ο καπνος των θυμιαματων ταις προσευχαις των αγιων εκ χειρος του αγγελου ενωπιον του θεου <sup>5</sup>και ειληφεν ο αγγελος τον λιβανωτον και εγεμισεν αυτον εκ του πυρος του θυσιαστηριου και εβαλεν εις την γην και εγενοντο φωναι και βρονται και αστραπαι και σεισμος</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>And when he had opened the seventh seal, there was silence in heaven about the space of half an hour. <sup>2</sup>And I saw the seven angels which stood before God; and to them were given seven trumpets. <sup>3</sup>And another angel came and stood at the altar, having a golden censer; and there was given unto him much incense, that he should offer
 it
  with the prayers of all saints upon the golden altar which was before the throne. <sup>4</sup>And the smoke of the incense,
 which came with the prayers of the saints, ascended up before God out of the angel’s hand. <sup>5</sup>And the angel took the censer, and filled it with fire of the altar, and cast
 it into the earth: and there were voices, and thunderings, and lightnings, and an earthquake.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s8-6-10">
-          <span class="section-ref">§8.6-10 · Revelation 8:6-10</span>
-          <p><sup>6</sup>And the seven angels which had the seven trumpets prepared themselves to sound. <sup>7</sup>The first angel sounded, and there followed hail and fire mingled with blood, and they were cast upon the earth: and the third part of trees was burnt up, and all green grass was burnt up. <sup>8</sup>And the second angel sounded, and as it were a great mountain burning with fire was cast into the sea: and the third part of the sea became blood; <sup>9</sup>And the third part of the creatures which were in the sea, and had life, died; and the third part of the ships were destroyed. <sup>10</sup>And the third angel sounded, and there fell a great star from heaven, burning as it were a lamp, and it fell upon the third part of the rivers, and upon the fountains of waters;</p>
+        <div class="parallel-section" id="s8-6-10"
+             data-author="John (attributed)"
+             data-title="Revelation, Chapter 8"
+             data-section="ch. 8.6-10"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-rev-8.html#s8-6-10">
+
+          <div class="section-header">
+            <span class="section-ref">§8.6-10 · Revelation 8:6-10</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>6</sup>και οι επτα αγγελοι εχοντες τας επτα σαλπιγγας ητοιμασαν εαυτους ινα σαλπισωσιν <sup>7</sup>και ο πρωτος αγγελος εσαλπισεν και εγενετο χαλαζα και πυρ μεμιγμενα αιματι και εβληθη εις την γην και το τριτον των δενδρων κατεκαη και πας χορτος χλωρος κατεκαη <sup>8</sup>και ο δευτερος αγγελος εσαλπισεν και ως ορος μεγα πυρι καιομενον εβληθη εις την θαλασσαν και εγενετο το τριτον της θαλασσης αιμα <sup>9</sup>και απεθανεν το τριτον των κτισματων των εν τη θαλασση τα εχοντα ψυχας και το τριτον των πλοιων διεφθαρη <sup>10</sup>και ο τριτος αγγελος εσαλπισεν και επεσεν εκ του ουρανου αστηρ μεγας καιομενος ως λαμπας και επεσεν επι το τριτον των ποταμων και επι τας πηγας υδατων</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>6</sup>And the seven angels which had the seven trumpets prepared themselves to sound. <sup>7</sup>The first angel sounded, and there followed hail and fire mingled with blood, and they were cast upon the earth: and the third part of trees was burnt up, and all green grass was burnt up. <sup>8</sup>And the second angel sounded, and as it were a great mountain burning with fire was cast into the sea: and the third part of the sea became blood; <sup>9</sup>And the third part of the creatures which were in the sea, and had life, died; and the third part of the ships were destroyed. <sup>10</sup>And the third angel sounded, and there fell a great star from heaven, burning as it were a lamp, and it fell upon the third part of the rivers, and upon the fountains of waters;</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s8-11-13">
-          <span class="section-ref">§8.11-13 · Revelation 8:11-13</span>
-          <p><sup>11</sup>And the name of the star is called Wormwood: and the third part of the waters became wormwood; and many men died of the waters, because they were made bitter. <sup>12</sup>And the fourth angel sounded, and the third part of the sun was smitten, and the third part of the moon, and the third part of the stars; so as the third part of them was darkened, and the day shone not for a third part of it, and the night likewise. <sup>13</sup>And I beheld, and heard an angel flying through the midst of heaven, saying with a loud voice, Woe, woe, woe, to the inhabiters of the earth by reason of the other voices of the trumpet of the three angels, which are yet to sound!</p>
+        <div class="parallel-section" id="s8-11-13"
+             data-author="John (attributed)"
+             data-title="Revelation, Chapter 8"
+             data-section="ch. 8.11-13"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-rev-8.html#s8-11-13">
+
+          <div class="section-header">
+            <span class="section-ref">§8.11-13 · Revelation 8:11-13</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>11</sup>και το ονομα του αστερος λεγεται αψινθος και γινεται το τριτον των υδατων εις αψινθον και πολλοι ανθρωπων απεθανον εκ των υδατων οτι επικρανθησαν <sup>12</sup>και ο τεταρτος αγγελος εσαλπισεν και επληγη το τριτον του ηλιου και το τριτον της σεληνης και το τριτον των αστερων ινα σκοτισθη το τριτον αυτων και η ημερα μη φαινη το τριτον αυτης και η νυξ ομοιως <sup>13</sup>και ειδον και ηκουσα ενος αγγελου πετωμενου εν μεσουρανηματι λεγοντος φωνη μεγαλη ουαι ουαι ουαι τοις κατοικουσιν επι της γης εκ των λοιπων φωνων της σαλπιγγος των τριων αγγελων των μελλοντων σαλπιζειν</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>11</sup>And the name of the star is called Wormwood: and the third part of the waters became wormwood; and many men died of the waters, because they were made bitter. <sup>12</sup>And the fourth angel sounded, and the third part of the sun was smitten, and the third part of the moon, and the third part of the stars; so as the third part of them was darkened, and the day shone not for a third part of it, and the night likewise. <sup>13</sup>And I beheld, and heard an angel flying through the midst of heaven, saying with a loud voice, Woe, woe, woe, to the inhabiters of the earth by reason of the other voices of the trumpet of the three angels, which are yet to sound!</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 

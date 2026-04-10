@@ -91,21 +91,94 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s10-1-5">
-          <span class="section-ref">§10.1-5 · 2 Corinthians 10:1-5</span>
-          <p><sup>1</sup>Now I Paul myself beseech you by the meekness and gentleness of Christ, who in presence
+        <div class="parallel-section" id="s10-1-5"
+             data-author="Unknown"
+             data-title="2 Corinthians, Chapter 10"
+             data-section="ch. 10.1-5"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-2cor-10.html#s10-1-5">
+
+          <div class="section-header">
+            <span class="section-ref">§10.1-5 · 2 Corinthians 10:1-5</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/codex_sinaiticus.jpg"
+                 alt="Scan sinaiticus/codex_sinaiticus.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/codex_sinaiticus.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>αυτος δε εγω παυλος παρακαλω υμας δια της πραοτητος και επιεικειας του χριστου ος κατα προσωπον μεν ταπεινος εν υμιν απων δε θαρρω εις υμας <sup>2</sup>δεομαι δε το μη παρων θαρρησαι τη πεποιθησει η λογιζομαι τολμησαι επι τινας τους λογιζομενους ημας ως κατα σαρκα περιπατουντας <sup>3</sup>εν σαρκι γαρ περιπατουντες ου κατα σαρκα στρατευομεθα <sup>4</sup>τα γαρ οπλα της στρατειας ημων ου σαρκικα αλλα δυνατα τω θεω προς καθαιρεσιν οχυρωματων <sup>5</sup>λογισμους καθαιρουντες και παν υψωμα επαιρομενον κατα της γνωσεως του θεου και αιχμαλωτιζοντες παν νοημα εις την υπακοην του χριστου</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>Now I Paul myself beseech you by the meekness and gentleness of Christ, who in presence
 am base among you, but being absent am bold toward you: <sup>2</sup>But I beseech
 you, that I may not be bold when I am present with that confidence, wherewith I think to be bold against some, which think of us as if we walked according to the flesh. <sup>3</sup>For though we walk in the flesh, we do not war after the flesh: <sup>4</sup>(For the weapons of our warfare
 are not carnal, but mighty through God to the pulling down of strong holds;) <sup>5</sup>Casting down imaginations, and every high thing that exalteth itself against the knowledge of God, and bringing into captivity every thought to the obedience of Christ;</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s10-6-10">
-          <span class="section-ref">§10.6-10 · 2 Corinthians 10:6-10</span>
-          <p><sup>6</sup>And having in a readiness to revenge all disobedience, when your obedience is fulfilled. <sup>7</sup>Do ye look on things after the outward appearance? If any man trust to himself that he is Christ’s, let him of himself think this again, that, as he
+        <div class="parallel-section" id="s10-6-10"
+             data-author="Unknown"
+             data-title="2 Corinthians, Chapter 10"
+             data-section="ch. 10.6-10"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-2cor-10.html#s10-6-10">
+
+          <div class="section-header">
+            <span class="section-ref">§10.6-10 · 2 Corinthians 10:6-10</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>6</sup>και εν ετοιμω εχοντες εκδικησαι πασαν παρακοην οταν πληρωθη υμων η υπακοη <sup>7</sup>τα κατα προσωπον βλεπετε ει τις πεποιθεν εαυτω χριστου ειναι τουτο λογιζεσθω παλιν αφ εαυτου οτι καθως αυτος χριστου ουτως και ημεις χριστου <sup>8</sup>εαν τε γαρ και περισσοτερον τι καυχησωμαι περι της εξουσιας ημων ης εδωκεν ο κυριος ημιν εις οικοδομην και ουκ εις καθαιρεσιν υμων ουκ αισχυνθησομαι <sup>9</sup>ινα μη δοξω ως αν εκφοβειν υμας δια των επιστολων <sup>10</sup>οτι αι μεν επιστολαι φησιν βαρειαι και ισχυραι η δε παρουσια του σωματος ασθενης και ο λογος εξουθενημενος</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>6</sup>And having in a readiness to revenge all disobedience, when your obedience is fulfilled. <sup>7</sup>Do ye look on things after the outward appearance? If any man trust to himself that he is Christ’s, let him of himself think this again, that, as he
 is Christ’s, even so
 are we Christ’s. <sup>8</sup>For though I should boast somewhat more of our authority, which the Lord hath given us for edification, and not for your destruction, I should not be ashamed: <sup>9</sup>That I may not seem as if I would terrify you by letters. <sup>10</sup>For
 his letters, say they,
@@ -113,11 +186,36 @@ are weighty and powerful; but
 his bodily presence
 is weak, and
 his speech contemptible.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s10-11-15">
-          <span class="section-ref">§10.11-15 · 2 Corinthians 10:11-15</span>
-          <p><sup>11</sup>Let such an one think this, that, such as we are in word by letters when we are absent, such
+        <div class="parallel-section" id="s10-11-15"
+             data-author="Unknown"
+             data-title="2 Corinthians, Chapter 10"
+             data-section="ch. 10.11-15"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-2cor-10.html#s10-11-15">
+
+          <div class="section-header">
+            <span class="section-ref">§10.11-15 · 2 Corinthians 10:11-15</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>11</sup>τουτο λογιζεσθω ο τοιουτος οτι οιοι εσμεν τω λογω δι επιστολων αποντες τοιουτοι και παροντες τω εργω <sup>12</sup>ου γαρ τολμωμεν εγκριναι η συγκριναι εαυτους τισιν των εαυτους συνιστανοντων αλλα αυτοι εν εαυτοις εαυτους μετρουντες και συγκρινοντες εαυτους εαυτοις ου συνιουσιν <sup>13</sup>ημεις δε ουχι εις τα αμετρα καυχησομεθα αλλα κατα το μετρον του κανονος ου εμερισεν ημιν ο θεος μετρου εφικεσθαι αχρι και υμων <sup>14</sup>ου γαρ ως μη εφικνουμενοι εις υμας υπερεκτεινομεν εαυτους αχρι γαρ και υμων εφθασαμεν εν τω ευαγγελιω του χριστου <sup>15</sup>ουκ εις τα αμετρα καυχωμενοι εν αλλοτριοις κοποις ελπιδα δε εχοντες αυξανομενης της πιστεως υμων εν υμιν μεγαλυνθηναι κατα τον κανονα ημων εις περισσειαν</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>11</sup>Let such an one think this, that, such as we are in word by letters when we are absent, such
 will we be also in deed when we are present. <sup>12</sup>For we dare not make ourselves of the number, or compare ourselves with some that commend themselves: but they measuring themselves by themselves, and comparing themselves among themselves, are not wise. <sup>13</sup>But we will not boast of things without
 our measure, but according to the measure of the rule which God hath distributed to us, a measure to reach even unto you. <sup>14</sup>For we stretch not ourselves beyond
 our measure, as though we reached not unto you: for we are come as far as to you also in
@@ -126,17 +224,44 @@ preaching
 our measure,
 that is,
  of other men’s labours; but having hope, when your faith is increased, that we shall be enlarged by you according to our rule abundantly,</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s10-16-18">
-          <span class="section-ref">§10.16-18 · 2 Corinthians 10:16-18</span>
-          <p><sup>16</sup>To preach the gospel in the
+        <div class="parallel-section" id="s10-16-18"
+             data-author="Unknown"
+             data-title="2 Corinthians, Chapter 10"
+             data-section="ch. 10.16-18"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-2cor-10.html#s10-16-18">
+
+          <div class="section-header">
+            <span class="section-ref">§10.16-18 · 2 Corinthians 10:16-18</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>16</sup>εις τα υπερεκεινα υμων ευαγγελισασθαι ουκ εν αλλοτριω κανονι εις τα ετοιμα καυχησασθαι <sup>17</sup>ο δε καυχωμενος εν κυριω καυχασθω <sup>18</sup>ου γαρ ο εαυτον συνιστων εκεινος εστιν δοκιμος αλλ ον ο κυριος συνιστησιν</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>16</sup>To preach the gospel in the
 regions beyond you,
 and
  not to boast in another man’s line of things made ready to our hand. <sup>17</sup>But he that glorieth, let him glory in the Lord. <sup>18</sup>For not he that commendeth himself is approved, but whom the Lord commendeth.</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 

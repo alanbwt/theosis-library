@@ -91,19 +91,92 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s2-1-8">
-          <span class="section-ref">§2.1-8 · Revelation 2:1-8</span>
-          <p><sup>1</sup>Unto the angel of the church of Ephesus write; These things saith he that holdeth the seven stars in his right hand, who walketh in the midst of the seven golden candlesticks; <sup>2</sup>I know thy works, and thy labour, and thy patience, and how thou canst not bear them which are evil: and thou hast tried them which say they are apostles, and are not, and hast found them liars: <sup>3</sup>And hast borne, and hast patience, and for my name’s sake hast laboured, and hast not fainted. <sup>4</sup>Nevertheless I have
+        <div class="parallel-section" id="s2-1-8"
+             data-author="John (attributed)"
+             data-title="Revelation, Chapter 2"
+             data-section="ch. 2.1-8"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-rev-2.html#s2-1-8">
+
+          <div class="section-header">
+            <span class="section-ref">§2.1-8 · Revelation 2:1-8</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/codex_sinaiticus.jpg"
+                 alt="Scan sinaiticus/codex_sinaiticus.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/codex_sinaiticus.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>τω αγγελω της εφεσινης εκκλησιας γραψον ταδε λεγει ο κρατων τους επτα αστερας εν τη δεξια αυτου ο περιπατων εν μεσω των επτα λυχνιων των χρυσων <sup>2</sup>οιδα τα εργα σου και τον κοπον σου και την υπομονην σου και οτι ου δυνη βαστασαι κακους και επειρασω τους φασκοντας ειναι αποστολους και ουκ εισιν και ευρες αυτους ψευδεις <sup>3</sup>και εβαστασας και υπομονην εχεις και δια το ονομα μου κεκοπιακας και ου κεκμηκας <sup>4</sup>αλλ εχω κατα σου οτι την αγαπην σου την πρωτην αφηκας <sup>5</sup>μνημονευε ουν ποθεν εκπεπτωκας και μετανοησον και τα πρωτα εργα ποιησον ει δε μη ερχομαι σοι ταχυ και κινησω την λυχνιαν σου εκ του τοπου αυτης εαν μη μετανοησης <sup>6</sup>αλλα τουτο εχεις οτι μισεις τα εργα των νικολαιτων α καγω μισω <sup>7</sup>ο εχων ους ακουσατω τι το πνευμα λεγει ταις εκκλησιαις τω νικωντι δωσω αυτω φαγειν εκ του ξυλου της ζωης ο εστιν εν μεσω του παραδεισου του θεου <sup>8</sup>και τω αγγελω της εκκλησιας σμυρναιων γραψον ταδε λεγει ο πρωτος και ο εσχατος ος εγενετο νεκρος και εζησεν</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>Unto the angel of the church of Ephesus write; These things saith he that holdeth the seven stars in his right hand, who walketh in the midst of the seven golden candlesticks; <sup>2</sup>I know thy works, and thy labour, and thy patience, and how thou canst not bear them which are evil: and thou hast tried them which say they are apostles, and are not, and hast found them liars: <sup>3</sup>And hast borne, and hast patience, and for my name’s sake hast laboured, and hast not fainted. <sup>4</sup>Nevertheless I have
 somewhat against thee, because thou hast left thy first love. <sup>5</sup>Remember therefore from whence thou art fallen, and repent, and do the first works; or else I will come unto thee quickly, and will remove thy candlestick out of his place, except thou repent. <sup>6</sup>But this thou hast, that thou hatest the deeds of the Nicolaitanes, which I also hate. <sup>7</sup>He that hath an ear, let him hear what the Spirit saith unto the churches; To him that overcometh will I give to eat of the tree of life, which is in the midst of the paradise of God. <sup>8</sup>And unto the angel of the church in Smyrna write; These things saith the first and the last, which was dead, and is alive;</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s2-9-16">
-          <span class="section-ref">§2.9-16 · Revelation 2:9-16</span>
-          <p><sup>9</sup>I know thy works, and tribulation, and poverty, (but thou art rich) and
+        <div class="parallel-section" id="s2-9-16"
+             data-author="John (attributed)"
+             data-title="Revelation, Chapter 2"
+             data-section="ch. 2.9-16"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-rev-2.html#s2-9-16">
+
+          <div class="section-header">
+            <span class="section-ref">§2.9-16 · Revelation 2:9-16</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>9</sup>οιδα σου τα εργα και την θλιψιν και την πτωχειαν πλουσιος δε ει και την βλασφημιαν των λεγοντων ιουδαιους ειναι εαυτους και ουκ εισιν αλλα συναγωγη του σατανα <sup>10</sup>μηδεν φοβου α μελλεις πασχειν ιδου μελλει βαλειν εξ υμων ο διαβολος εις φυλακην ινα πειρασθητε και εξετε θλιψιν ημερων δεκα γινου πιστος αχρι θανατου και δωσω σοι τον στεφανον της ζωης <sup>11</sup>ο εχων ους ακουσατω τι το πνευμα λεγει ταις εκκλησιαις ο νικων ου μη αδικηθη εκ του θανατου του δευτερου <sup>12</sup>και τω αγγελω της εν περγαμω εκκλησιας γραψον ταδε λεγει ο εχων την ρομφαιαν την διστομον την οξειαν <sup>13</sup>οιδα τα εργα σου και που κατοικεις οπου ο θρονος του σατανα και κρατεις το ονομα μου και ουκ ηρνησω την πιστιν μου και εν ταις ημεραις εν αις αντιπας ο μαρτυς μου ο πιστος ος απεκτανθη παρ υμιν οπου κατοικει ο σατανας <sup>14</sup>αλλ εχω κατα σου ολιγα οτι εχεις εκει κρατουντας την διδαχην βαλααμ ος εδιδασκεν τον βαλακ βαλειν σκανδαλον ενωπιον των υιων ισραηλ φαγειν ειδωλοθυτα και πορνευσαι <sup>15</sup>ουτως εχεις και συ κρατουντας την διδαχην των νικολαιτων ο μισω <sup>16</sup>μετανοησον ει δε μη ερχομαι σοι ταχυ και πολεμησω μετ αυτων εν τη ρομφαια του στοματος μου</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>9</sup>I know thy works, and tribulation, and poverty, (but thou art rich) and
 I know the blasphemy of them which say they are Jews, and are not, but
 are the synagogue of Satan. <sup>10</sup>Fear none of those things which thou shalt suffer: behold, the devil shall cast
 some of you into prison, that ye may be tried; and ye shall have tribulation ten days: be thou faithful unto death, and I will give thee a crown of life. <sup>11</sup>He that hath an ear, let him hear what the Spirit saith unto the churches; He that overcometh shall not be hurt of the second death. <sup>12</sup>And to the angel of the church in Pergamos write; These things saith he which hath the sharp sword with two edges; <sup>13</sup>I know thy works, and where thou dwellest,
@@ -111,23 +184,75 @@ even where Satan’s seat
 is: and thou holdest fast my name, and hast not denied my faith, even in those days wherein Antipas
 was
  my faithful martyr, who was slain among you, where Satan dwelleth. <sup>14</sup>But I have a few things against thee, because thou hast there them that hold the doctrine of Balaam, who taught Balac to cast a stumblingblock before the children of Israel, to eat things sacrificed unto idols, and to commit fornication. <sup>15</sup>So hast thou also them that hold the doctrine of the Nicolaitanes, which thing I hate. <sup>16</sup>Repent; or else I will come unto thee quickly, and will fight against them with the sword of my mouth.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s2-17-24">
-          <span class="section-ref">§2.17-24 · Revelation 2:17-24</span>
-          <p><sup>17</sup>He that hath an ear, let him hear what the Spirit saith unto the churches; To him that overcometh will I give to eat of the hidden manna, and will give him a white stone, and in the stone a new name written, which no man knoweth saving he that receiveth
+        <div class="parallel-section" id="s2-17-24"
+             data-author="John (attributed)"
+             data-title="Revelation, Chapter 2"
+             data-section="ch. 2.17-24"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-rev-2.html#s2-17-24">
+
+          <div class="section-header">
+            <span class="section-ref">§2.17-24 · Revelation 2:17-24</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>17</sup>ο εχων ους ακουσατω τι το πνευμα λεγει ταις εκκλησιαις τω νικωντι δωσω αυτω φαγειν απο του μαννα του κεκρυμμενου και δωσω αυτω ψηφον λευκην και επι την ψηφον ονομα καινον γεγραμμενον ο ουδεις εγνω ει μη ο λαμβανων <sup>18</sup>και τω αγγελω της εν θυατειροις εκκλησιας γραψον ταδε λεγει ο υιος του θεου ο εχων τους οφθαλμους αυτου ως φλογα πυρος και οι ποδες αυτου ομοιοι χαλκολιβανω <sup>19</sup>οιδα σου τα εργα και την αγαπην και την διακονιαν και την πιστιν και την υπομονην σου και τα εργα σου και τα εσχατα πλειονα των πρωτων <sup>20</sup>αλλ εχω κατα σου ολιγα οτι εας την γυναικα ιεζαβηλ την λεγουσαν εαυτην προφητιν διδασκειν και πλανασθαι εμους δουλους πορνευσαι και ειδωλοθυτα φαγειν <sup>21</sup>και εδωκα αυτη χρονον ινα μετανοηση εκ της πορνειας αυτης και ου μετενοησεν <sup>22</sup>ιδου εγω βαλλω αυτην εις κλινην και τους μοιχευοντας μετ αυτης εις θλιψιν μεγαλην εαν μη μετανοησωσιν εκ των εργων αυτων <sup>23</sup>και τα τεκνα αυτης αποκτενω εν θανατω και γνωσονται πασαι αι εκκλησιαι οτι εγω ειμι ο ερευνων νεφρους και καρδιας και δωσω υμιν εκαστω κατα τα εργα υμων <sup>24</sup>υμιν δε λεγω και λοιποις τοις εν θυατειροις οσοι ουκ εχουσιν την διδαχην ταυτην και οιτινες ουκ εγνωσαν τα βαθη του σατανα ως λεγουσιν ου βαλω εφ υμας αλλο βαρος</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>17</sup>He that hath an ear, let him hear what the Spirit saith unto the churches; To him that overcometh will I give to eat of the hidden manna, and will give him a white stone, and in the stone a new name written, which no man knoweth saving he that receiveth
 it. <sup>18</sup>And unto the angel of the church in Thyatira write; These things saith the Son of God, who hath his eyes like unto a flame of fire, and his feet
 are like fine brass; <sup>19</sup>I know thy works, and charity, and service, and faith, and thy patience, and thy works; and the last
 to be more than the first. <sup>20</sup>Notwithstanding I have a few things against thee, because thou sufferest that woman Jezebel, which calleth herself a prophetess, to teach and to seduce my servants to commit fornication, and to eat things sacrificed unto idols. <sup>21</sup>And I gave her space to repent of her fornication; and she repented not. <sup>22</sup>Behold, I will cast her into a bed, and them that commit adultery with her into great tribulation, except they repent of their deeds. <sup>23</sup>And I will kill her children with death; and all the churches shall know that I am he which searcheth the reins and hearts: and I will give unto every one of you according to your works. <sup>24</sup>But unto you I say, and unto the rest in Thyatira, as many as have not this doctrine, and which have not known the depths of Satan, as they speak; I will put upon you none other burden.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s2-25-29">
-          <span class="section-ref">§2.25-29 · Revelation 2:25-29</span>
-          <p><sup>25</sup>But that which ye have
+        <div class="parallel-section" id="s2-25-29"
+             data-author="John (attributed)"
+             data-title="Revelation, Chapter 2"
+             data-section="ch. 2.25-29"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-rev-2.html#s2-25-29">
+
+          <div class="section-header">
+            <span class="section-ref">§2.25-29 · Revelation 2:25-29</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>25</sup>πλην ο εχετε κρατησατε αχρις ου αν ηξω <sup>26</sup>και ο νικων και ο τηρων αχρι τελους τα εργα μου δωσω αυτω εξουσιαν επι των εθνων <sup>27</sup>και ποιμανει αυτους εν ραβδω σιδηρα ως τα σκευη τα κεραμικα συντριβεται ως καγω ειληφα παρα του πατρος μου <sup>28</sup>και δωσω αυτω τον αστερα τον πρωινον <sup>29</sup>ο εχων ους ακουσατω τι το πνευμα λεγει ταις εκκλησιαις</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>25</sup>But that which ye have
 already hold fast till I come. <sup>26</sup>And he that overcometh, and keepeth my works unto the end, to him will I give power over the nations: <sup>27</sup>And he shall rule them with a rod of iron; as the vessels of a potter shall they be broken to shivers: even as I received of my Father. <sup>28</sup>And I will give him the morning star. <sup>29</sup>He that hath an ear, let him hear what the Spirit saith unto the churches.</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 

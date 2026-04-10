@@ -91,41 +91,171 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s25-1-10">
-          <span class="section-ref">§25.1-10 · Matthew 25:1-10</span>
-          <p><sup>1</sup>Then shall the kingdom of heaven be likened unto ten virgins, which took their lamps, and went forth to meet the bridegroom. <sup>2</sup>And five of them were wise, and five
+        <div class="parallel-section" id="s25-1-10"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 25"
+             data-section="ch. 25.1-10"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-25.html#s25-1-10">
+
+          <div class="section-header">
+            <span class="section-ref">§25.1-10 · Matthew 25:1-10</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus-matt-5a.jpg"
+                 alt="Scan sinaiticus/sinaiticus-matt-5a.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus-matt-5a.jpg')"
+                 title="Click to enlarge">
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus_matthew_sample.jpg"
+                 alt="Scan sinaiticus/sinaiticus_matthew_sample.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus_matthew_sample.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>τοτε ομοιωθησεται η βασιλεια των ουρανων δεκα παρθενοις αιτινες λαβουσαι τας λαμπαδας αυτων εξηλθον εις απαντησιν του νυμφιου <sup>2</sup>πεντε δε ησαν εξ αυτων φρονιμοι και πεντε μωραι <sup>3</sup>αιτινες μωραι λαβουσαι τας λαμπαδας εαυτων ουκ ελαβον μεθ εαυτων ελαιον <sup>4</sup>αι δε φρονιμοι ελαβον ελαιον εν τοις αγγειοις αυτων μετα των λαμπαδων αυτων <sup>5</sup>χρονιζοντος δε του νυμφιου ενυσταξαν πασαι και εκαθευδον <sup>6</sup>μεσης δε νυκτος κραυγη γεγονεν ιδου ο νυμφιος ερχεται εξερχεσθε εις απαντησιν αυτου <sup>7</sup>τοτε ηγερθησαν πασαι αι παρθενοι εκειναι και εκοσμησαν τας λαμπαδας αυτων <sup>8</sup>αι δε μωραι ταις φρονιμοις ειπον δοτε ημιν εκ του ελαιου υμων οτι αι λαμπαδες ημων σβεννυνται <sup>9</sup>απεκριθησαν δε αι φρονιμοι λεγουσαι μηποτε ουκ αρκεση ημιν και υμιν πορευεσθε δε μαλλον προς τους πωλουντας και αγορασατε εαυταις <sup>10</sup>απερχομενων δε αυτων αγορασαι ηλθεν ο νυμφιος και αι ετοιμοι εισηλθον μετ αυτου εις τους γαμους και εκλεισθη η θυρα</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>Then shall the kingdom of heaven be likened unto ten virgins, which took their lamps, and went forth to meet the bridegroom. <sup>2</sup>And five of them were wise, and five
 were foolish. <sup>3</sup>They that
 were foolish took their lamps, and took no oil with them: <sup>4</sup>But the wise took oil in their vessels with their lamps. <sup>5</sup>While the bridegroom tarried, they all slumbered and slept. <sup>6</sup>And at midnight there was a cry made, Behold, the bridegroom cometh; go ye out to meet him. <sup>7</sup>Then all those virgins arose, and trimmed their lamps. <sup>8</sup>And the foolish said unto the wise, Give us of your oil; for our lamps are gone out. <sup>9</sup>But the wise answered, saying,
 Not so; lest there be not enough for us and you: but go ye rather to them that sell, and buy for yourselves. <sup>10</sup>And while they went to buy, the bridegroom came; and they that were ready went in with him to the marriage: and the door was shut.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s25-11-20">
-          <span class="section-ref">§25.11-20 · Matthew 25:11-20</span>
-          <p><sup>11</sup>Afterward came also the other virgins, saying, Lord, Lord, open to us. <sup>12</sup>But he answered and said, Verily I say unto you, I know you not. <sup>13</sup>Watch therefore, for ye know neither the day nor the hour wherein the Son of man cometh. <sup>14</sup>For
+        <div class="parallel-section" id="s25-11-20"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 25"
+             data-section="ch. 25.11-20"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-25.html#s25-11-20">
+
+          <div class="section-header">
+            <span class="section-ref">§25.11-20 · Matthew 25:11-20</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>11</sup>υστερον δε ερχονται και αι λοιπαι παρθενοι λεγουσαι κυριε κυριε ανοιξον ημιν <sup>12</sup>ο δε αποκριθεις ειπεν αμην λεγω υμιν ουκ οιδα υμας <sup>13</sup>γρηγορειτε ουν οτι ουκ οιδατε την ημεραν ουδε την ωραν εν η ο υιος του ανθρωπου ερχεται <sup>14</sup>ωσπερ γαρ ανθρωπος αποδημων εκαλεσεν τους ιδιους δουλους και παρεδωκεν αυτοις τα υπαρχοντα αυτου <sup>15</sup>και ω μεν εδωκεν πεντε ταλαντα ω δε δυο ω δε εν εκαστω κατα την ιδιαν δυναμιν και απεδημησεν ευθεως <sup>16</sup>πορευθεις δε ο τα πεντε ταλαντα λαβων ειργασατο εν αυτοις και εποιησεν αλλα πεντε ταλαντα <sup>17</sup>ωσαυτως και ο τα δυο εκερδησεν και αυτος αλλα δυο <sup>18</sup>ο δε το εν λαβων απελθων ωρυξεν εν τη γη και απεκρυψεν το αργυριον του κυριου αυτου <sup>19</sup>μετα δε χρονον πολυν ερχεται ο κυριος των δουλων εκεινων και συναιρει μετ αυτων λογον <sup>20</sup>και προσελθων ο τα πεντε ταλαντα λαβων προσηνεγκεν αλλα πεντε ταλαντα λεγων κυριε πεντε ταλαντα μοι παρεδωκας ιδε αλλα πεντε ταλαντα εκερδησα επ αυτοις</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>11</sup>Afterward came also the other virgins, saying, Lord, Lord, open to us. <sup>12</sup>But he answered and said, Verily I say unto you, I know you not. <sup>13</sup>Watch therefore, for ye know neither the day nor the hour wherein the Son of man cometh. <sup>14</sup>For
 the kingdom of heaven is as a man travelling into a far country,
 who called his own servants, and delivered unto them his goods. <sup>15</sup>And unto one he gave five talents, to another two, and to another one; to every man according to his several ability; and straightway took his journey. <sup>16</sup>Then he that had received the five talents went and traded with the same, and made
 them other five talents. <sup>17</sup>And likewise he that
 had received two, he also gained other two. <sup>18</sup>But he that had received one went and digged in the earth, and hid his lord’s money. <sup>19</sup>After a long time the lord of those servants cometh, and reckoneth with them. <sup>20</sup>And so he that had received five talents came and brought other five talents, saying, Lord, thou deliveredst unto me five talents: behold, I have gained beside them five talents more.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s25-21-30">
-          <span class="section-ref">§25.21-30 · Matthew 25:21-30</span>
-          <p><sup>21</sup>His lord said unto him, Well done,
+        <div class="parallel-section" id="s25-21-30"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 25"
+             data-section="ch. 25.21-30"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-25.html#s25-21-30">
+
+          <div class="section-header">
+            <span class="section-ref">§25.21-30 · Matthew 25:21-30</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>21</sup>εφη δε αυτω ο κυριος αυτου ευ δουλε αγαθε και πιστε επι ολιγα ης πιστος επι πολλων σε καταστησω εισελθε εις την χαραν του κυριου σου <sup>22</sup>προσελθων δε και ο τα δυο ταλαντα λαβων ειπεν κυριε δυο ταλαντα μοι παρεδωκας ιδε αλλα δυο ταλαντα εκερδησα επ αυτοις <sup>23</sup>εφη αυτω ο κυριος αυτου ευ δουλε αγαθε και πιστε επι ολιγα ης πιστος επι πολλων σε καταστησω εισελθε εις την χαραν του κυριου σου <sup>24</sup>προσελθων δε και ο το εν ταλαντον ειληφως ειπεν κυριε εγνων σε οτι σκληρος ει ανθρωπος θεριζων οπου ουκ εσπειρας και συναγων οθεν ου διεσκορπισας <sup>25</sup>και φοβηθεις απελθων εκρυψα το ταλαντον σου εν τη γη ιδε εχεις το σον <sup>26</sup>αποκριθεις δε ο κυριος αυτου ειπεν αυτω πονηρε δουλε και οκνηρε ηδεις οτι θεριζω οπου ουκ εσπειρα και συναγω οθεν ου διεσκορπισα <sup>27</sup>εδει ουν σε βαλειν το αργυριον μου τοις τραπεζιταις και ελθων εγω εκομισαμην αν το εμον συν τοκω <sup>28</sup>αρατε ουν απ αυτου το ταλαντον και δοτε τω εχοντι τα δεκα ταλαντα <sup>29</sup>τω γαρ εχοντι παντι δοθησεται και περισσευθησεται απο δε του μη εχοντος και ο εχει αρθησεται απ αυτου <sup>30</sup>και τον αχρειον δουλον εκβαλλετε εις το σκοτος το εξωτερον εκει εσται ο κλαυθμος και ο βρυγμος των οδοντων</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>21</sup>His lord said unto him, Well done,
 thou good and faithful servant: thou hast been faithful over a few things, I will make thee ruler over many things: enter thou into the joy of thy lord. <sup>22</sup>He also that had received two talents came and said, Lord, thou deliveredst unto me two talents: behold, I have gained two other talents beside them. <sup>23</sup>His lord said unto him, Well done, good and faithful servant; thou hast been faithful over a few things, I will make thee ruler over many things: enter thou into the joy of thy lord. <sup>24</sup>Then he which had received the one talent came and said, Lord, I knew thee that thou art an hard man, reaping where thou hast not sown, and gathering where thou hast not strawed: <sup>25</sup>And I was afraid, and went and hid thy talent in the earth: lo,
 there thou hast
 that is thine. <sup>26</sup>His lord answered and said unto him,
 Thou wicked and slothful servant, thou knewest that I reap where I sowed not, and gather where I have not strawed: <sup>27</sup>Thou oughtest therefore to have put my money to the exchangers, and
 then at my coming I should have received mine own with usury. <sup>28</sup>Take therefore the talent from him, and give
 it unto him which hath ten talents. <sup>29</sup>For unto every one that hath shall be given, and he shall have abundance: but from him that hath not shall be taken away even that which he hath. <sup>30</sup>And cast ye the unprofitable servant into outer darkness: there shall be weeping and gnashing of teeth.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s25-31-40">
-          <span class="section-ref">§25.31-40 · Matthew 25:31-40</span>
-          <p><sup>31</sup>When the Son of man shall come in his glory, and all the holy angels with him, then shall he sit upon the throne of his glory: <sup>32</sup>And before him shall be gathered all nations: and he shall separate them one from another, as a shepherd divideth
+        <div class="parallel-section" id="s25-31-40"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 25"
+             data-section="ch. 25.31-40"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-25.html#s25-31-40">
+
+          <div class="section-header">
+            <span class="section-ref">§25.31-40 · Matthew 25:31-40</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>31</sup>οταν δε ελθη ο υιος του ανθρωπου εν τη δοξη αυτου και παντες οι αγιοι αγγελοι μετ αυτου τοτε καθισει επι θρονου δοξης αυτου <sup>32</sup>και συναχθησεται εμπροσθεν αυτου παντα τα εθνη και αφοριει αυτους απ αλληλων ωσπερ ο ποιμην αφοριζει τα προβατα απο των εριφων <sup>33</sup>και στησει τα μεν προβατα εκ δεξιων αυτου τα δε εριφια εξ ευωνυμων <sup>34</sup>τοτε ερει ο βασιλευς τοις εκ δεξιων αυτου δευτε οι ευλογημενοι του πατρος μου κληρονομησατε την ητοιμασμενην υμιν βασιλειαν απο καταβολης κοσμου <sup>35</sup>επεινασα γαρ και εδωκατε μοι φαγειν εδιψησα και εποτισατε με ξενος ημην και συνηγαγετε με <sup>36</sup>γυμνος και περιεβαλετε με ησθενησα και επεσκεψασθε με εν φυλακη ημην και ηλθετε προς με <sup>37</sup>τοτε αποκριθησονται αυτω οι δικαιοι λεγοντες κυριε ποτε σε ειδομεν πεινωντα και εθρεψαμεν η διψωντα και εποτισαμεν <sup>38</sup>ποτε δε σε ειδομεν ξενον και συνηγαγομεν η γυμνον και περιεβαλομεν <sup>39</sup>ποτε δε σε ειδομεν ασθενη η εν φυλακη και ηλθομεν προς σε <sup>40</sup>και αποκριθεις ο βασιλευς ερει αυτοις αμην λεγω υμιν εφ οσον εποιησατε ενι τουτων των αδελφων μου των ελαχιστων εμοι εποιησατε</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>31</sup>When the Son of man shall come in his glory, and all the holy angels with him, then shall he sit upon the throne of his glory: <sup>32</sup>And before him shall be gathered all nations: and he shall separate them one from another, as a shepherd divideth
 his sheep from the goats: <sup>33</sup>And he shall set the sheep on his right hand, but the goats on the left. <sup>34</sup>Then shall the King say unto them on his right hand, Come, ye blessed of my Father, inherit the kingdom prepared for you from the foundation of the world: <sup>35</sup>For I was an hungred, and ye gave me meat: I was thirsty, and ye gave me drink: I was a stranger, and ye took me in: <sup>36</sup>Naked, and ye clothed me: I was sick, and ye visited me: I was in prison, and ye came unto me. <sup>37</sup>Then shall the righteous answer him, saying, Lord, when saw we thee an hungred, and fed
 thee? or thirsty, and gave
 thee
@@ -134,16 +264,43 @@ thee in? or naked, and clothed
 thee? <sup>39</sup>Or when saw we thee sick, or in prison, and came unto thee? <sup>40</sup>And the King shall answer and say unto them, Verily I say unto you, Inasmuch as ye have done
 it unto one of the least of these my brethren, ye have done
 it unto me.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s25-41-46">
-          <span class="section-ref">§25.41-46 · Matthew 25:41-46</span>
-          <p><sup>41</sup>Then shall he say also unto them on the left hand, Depart from me, ye cursed, into everlasting fire, prepared for the devil and his angels: <sup>42</sup>For I was an hungred, and ye gave me no meat: I was thirsty, and ye gave me no drink: <sup>43</sup>I was a stranger, and ye took me not in: naked, and ye clothed me not: sick, and in prison, and ye visited me not. <sup>44</sup>Then shall they also answer him, saying, Lord, when saw we thee an hungred, or athirst, or a stranger, or naked, or sick, or in prison, and did not minister unto thee? <sup>45</sup>Then shall he answer them, saying, Verily I say unto you, Inasmuch as ye did
+        <div class="parallel-section" id="s25-41-46"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 25"
+             data-section="ch. 25.41-46"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-25.html#s25-41-46">
+
+          <div class="section-header">
+            <span class="section-ref">§25.41-46 · Matthew 25:41-46</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>41</sup>τοτε ερει και τοις εξ ευωνυμων πορευεσθε απ εμου οι κατηραμενοι εις το πυρ το αιωνιον το ητοιμασμενον τω διαβολω και τοις αγγελοις αυτου <sup>42</sup>επεινασα γαρ και ουκ εδωκατε μοι φαγειν εδιψησα και ουκ εποτισατε με <sup>43</sup>ξενος ημην και ου συνηγαγετε με γυμνος και ου περιεβαλετε με ασθενης και εν φυλακη και ουκ επεσκεψασθε με <sup>44</sup>τοτε αποκριθησονται αυτω και αυτοι λεγοντες κυριε ποτε σε ειδομεν πεινωντα η διψωντα η ξενον η γυμνον η ασθενη η εν φυλακη και ου διηκονησαμεν σοι <sup>45</sup>τοτε αποκριθησεται αυτοις λεγων αμην λεγω υμιν εφ οσον ουκ εποιησατε ενι τουτων των ελαχιστων ουδε εμοι εποιησατε <sup>46</sup>και απελευσονται ουτοι εις κολασιν αιωνιον οι δε δικαιοι εις ζωην αιωνιον</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>41</sup>Then shall he say also unto them on the left hand, Depart from me, ye cursed, into everlasting fire, prepared for the devil and his angels: <sup>42</sup>For I was an hungred, and ye gave me no meat: I was thirsty, and ye gave me no drink: <sup>43</sup>I was a stranger, and ye took me not in: naked, and ye clothed me not: sick, and in prison, and ye visited me not. <sup>44</sup>Then shall they also answer him, saying, Lord, when saw we thee an hungred, or athirst, or a stranger, or naked, or sick, or in prison, and did not minister unto thee? <sup>45</sup>Then shall he answer them, saying, Verily I say unto you, Inasmuch as ye did
 it not to one of the least of these, ye did
 it not to me. <sup>46</sup>And these shall go away into everlasting punishment: but the righteous into life eternal.</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 

@@ -91,42 +91,167 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s4-1-5">
-          <span class="section-ref">§4.1-5 · Hebrews 4:1-5</span>
-          <p><sup>1</sup>Let us therefore fear, lest, a promise being left
+        <div class="parallel-section" id="s4-1-5"
+             data-author="Unknown"
+             data-title="Hebrews, Chapter 4"
+             data-section="ch. 4.1-5"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-hebrews-4.html#s4-1-5">
+
+          <div class="section-header">
+            <span class="section-ref">§4.1-5 · Hebrews 4:1-5</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus-heb-1a.jpg"
+                 alt="Scan sinaiticus/sinaiticus-heb-1a.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus-heb-1a.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>φοβηθωμεν ουν μηποτε καταλειπομενης επαγγελιας εισελθειν εις την καταπαυσιν αυτου δοκη τις εξ υμων υστερηκεναι <sup>2</sup>και γαρ εσμεν ευηγγελισμενοι καθαπερ κακεινοι αλλ ουκ ωφελησεν ο λογος της ακοης εκεινους μη συγκεκραμενος τη πιστει τοις ακουσασιν <sup>3</sup>εισερχομεθα γαρ εις την καταπαυσιν οι πιστευσαντες καθως ειρηκεν ως ωμοσα εν τη οργη μου ει εισελευσονται εις την καταπαυσιν μου καιτοι των εργων απο καταβολης κοσμου γενηθεντων <sup>4</sup>ειρηκεν γαρ που περι της εβδομης ουτως και κατεπαυσεν ο θεος εν τη ημερα τη εβδομη απο παντων των εργων αυτου <sup>5</sup>και εν τουτω παλιν ει εισελευσονται εις την καταπαυσιν μου</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>Let us therefore fear, lest, a promise being left
 us of entering into his rest, any of you should seem to come short of it. <sup>2</sup>For unto us was the gospel preached, as well as unto them: but the word preached did not profit them, not being mixed with faith in them that heard
 it. <sup>3</sup>For we which have believed do enter into rest, as he said, As I have sworn in my wrath, if they shall enter into my rest: although the works were finished from the foundation of the world. <sup>4</sup>For he spake in a certain place of the seventh
 day on this wise, And God did rest the seventh day from all his works. <sup>5</sup>And in this
 place again, If they shall enter into my rest.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s4-6-10">
-          <span class="section-ref">§4.6-10 · Hebrews 4:6-10</span>
-          <p><sup>6</sup>Seeing therefore it remaineth that some must enter therein, and they to whom it was first preached entered not in because of unbelief: <sup>7</sup>Again, he limiteth a certain day, saying in David, To day, after so long a time; as it is said, To day if ye will hear his voice, harden not your hearts. <sup>8</sup>For if Jesus had given them rest, then would he not afterward have spoken of another day. <sup>9</sup>There remaineth therefore a rest to the people of God. <sup>10</sup>For he that is entered into his rest, he also hath ceased from his own works, as God
+        <div class="parallel-section" id="s4-6-10"
+             data-author="Unknown"
+             data-title="Hebrews, Chapter 4"
+             data-section="ch. 4.6-10"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-hebrews-4.html#s4-6-10">
+
+          <div class="section-header">
+            <span class="section-ref">§4.6-10 · Hebrews 4:6-10</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>6</sup>επει ουν απολειπεται τινας εισελθειν εις αυτην και οι προτερον ευαγγελισθεντες ουκ εισηλθον δι απειθειαν <sup>7</sup>παλιν τινα οριζει ημεραν σημερον εν δαβιδ λεγων μετα τοσουτον χρονον καθως ειρηται σημερον εαν της φωνης αυτου ακουσητε μη σκληρυνητε τας καρδιας υμων <sup>8</sup>ει γαρ αυτους ιησους κατεπαυσεν ουκ αν περι αλλης ελαλει μετα ταυτα ημερας <sup>9</sup>αρα απολειπεται σαββατισμος τω λαω του θεου <sup>10</sup>ο γαρ εισελθων εις την καταπαυσιν αυτου και αυτος κατεπαυσεν απο των εργων αυτου ωσπερ απο των ιδιων ο θεος</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>6</sup>Seeing therefore it remaineth that some must enter therein, and they to whom it was first preached entered not in because of unbelief: <sup>7</sup>Again, he limiteth a certain day, saying in David, To day, after so long a time; as it is said, To day if ye will hear his voice, harden not your hearts. <sup>8</sup>For if Jesus had given them rest, then would he not afterward have spoken of another day. <sup>9</sup>There remaineth therefore a rest to the people of God. <sup>10</sup>For he that is entered into his rest, he also hath ceased from his own works, as God
 did from his.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s4-11-15">
-          <span class="section-ref">§4.11-15 · Hebrews 4:11-15</span>
-          <p><sup>11</sup>Let us labour therefore to enter into that rest, lest any man fall after the same example of unbelief. <sup>12</sup>For the word of God
+        <div class="parallel-section" id="s4-11-15"
+             data-author="Unknown"
+             data-title="Hebrews, Chapter 4"
+             data-section="ch. 4.11-15"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-hebrews-4.html#s4-11-15">
+
+          <div class="section-header">
+            <span class="section-ref">§4.11-15 · Hebrews 4:11-15</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>11</sup>σπουδασωμεν ουν εισελθειν εις εκεινην την καταπαυσιν ινα μη εν τω αυτω τις υποδειγματι πεση της απειθειας <sup>12</sup>ζων γαρ ο λογος του θεου και ενεργης και τομωτερος υπερ πασαν μαχαιραν διστομον και διικνουμενος αχρι μερισμου ψυχης τε και πνευματος αρμων τε και μυελων και κριτικος ενθυμησεων και εννοιων καρδιας <sup>13</sup>και ουκ εστιν κτισις αφανης ενωπιον αυτου παντα δε γυμνα και τετραχηλισμενα τοις οφθαλμοις αυτου προς ον ημιν ο λογος <sup>14</sup>εχοντες ουν αρχιερεα μεγαν διεληλυθοτα τους ουρανους ιησουν τον υιον του θεου κρατωμεν της ομολογιας <sup>15</sup>ου γαρ εχομεν αρχιερεα μη δυναμενον συμπαθησαι ταις ασθενειαις ημων πεπειρασμενον δε κατα παντα καθ ομοιοτητα χωρις αμαρτιας</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>11</sup>Let us labour therefore to enter into that rest, lest any man fall after the same example of unbelief. <sup>12</sup>For the word of God
 is quick, and powerful, and sharper than any twoedged sword, piercing even to the dividing asunder of soul and spirit, and of the joints and marrow, and
 is a discerner of the thoughts and intents of the heart. <sup>13</sup>Neither is there any creature that is not manifest in his sight: but all things
 are naked and opened unto the eyes of him with whom we have to do. <sup>14</sup>Seeing then that we have a great high priest, that is passed into the heavens, Jesus the Son of God, let us hold fast
 our profession. <sup>15</sup>For we have not an high priest which cannot be touched with the feeling of our infirmities; but was in all points tempted like as
 we are, yet
  without sin.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s4-16">
-          <span class="section-ref">§4.16 · Hebrews 4:16</span>
-          <p><sup>16</sup>Let us therefore come boldly unto the throne of grace, that we may obtain mercy, and find grace to help in time of need.</p>
+        <div class="parallel-section" id="s4-16"
+             data-author="Unknown"
+             data-title="Hebrews, Chapter 4"
+             data-section="ch. 4.16"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-hebrews-4.html#s4-16">
+
+          <div class="section-header">
+            <span class="section-ref">§4.16 · Hebrews 4:16</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>16</sup>προσερχωμεθα ουν μετα παρρησιας τω θρονω της χαριτος ινα λαβωμεν ελεον και χαριν ευρωμεν εις ευκαιρον βοηθειαν</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>16</sup>Let us therefore come boldly unto the throne of grace, that we may obtain mercy, and find grace to help in time of need.</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 

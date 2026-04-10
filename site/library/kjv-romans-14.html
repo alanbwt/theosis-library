@@ -91,23 +91,103 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s14-1-8">
-          <span class="section-ref">§14.1-8 · Romans 14:1-8</span>
-          <p><sup>1</sup>Him that is weak in the faith receive ye,
+        <div class="parallel-section" id="s14-1-8"
+             data-author="Unknown"
+             data-title="Romans, Chapter 14"
+             data-section="ch. 14.1-8"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-romans-14.html#s14-1-8">
+
+          <div class="section-header">
+            <span class="section-ref">§14.1-8 · Romans 14:1-8</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus-rom-8a.jpg"
+                 alt="Scan sinaiticus/sinaiticus-rom-8a.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus-rom-8a.jpg')"
+                 title="Click to enlarge">
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus-rom-8-14a.jpg"
+                 alt="Scan sinaiticus/sinaiticus-rom-8-14a.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus-rom-8-14a.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>τον δε ασθενουντα τη πιστει προσλαμβανεσθε μη εις διακρισεις διαλογισμων <sup>2</sup>ος μεν πιστευει φαγειν παντα ο δε ασθενων λαχανα εσθιει <sup>3</sup>ο εσθιων τον μη εσθιοντα μη εξουθενειτω και ο μη εσθιων τον εσθιοντα μη κρινετω ο θεος γαρ αυτον προσελαβετο <sup>4</sup>συ τις ει ο κρινων αλλοτριον οικετην τω ιδιω κυριω στηκει η πιπτει σταθησεται δε δυνατος γαρ εστιν ο θεος στησαι αυτον <sup>5</sup>ος μεν κρινει ημεραν παρ ημεραν ος δε κρινει πασαν ημεραν εκαστος εν τω ιδιω νοι πληροφορεισθω <sup>6</sup>ο φρονων την ημεραν κυριω φρονει και ο μη φρονων την ημεραν κυριω ου φρονει ο εσθιων κυριω εσθιει ευχαριστει γαρ τω θεω και ο μη εσθιων κυριω ουκ εσθιει και ευχαριστει τω θεω <sup>7</sup>ουδεις γαρ ημων εαυτω ζη και ουδεις εαυτω αποθνησκει <sup>8</sup>εαν τε γαρ ζωμεν τω κυριω ζωμεν εαν τε αποθνησκωμεν τω κυριω αποθνησκομεν εαν τε ουν ζωμεν εαν τε αποθνησκωμεν του κυριου εσμεν</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>Him that is weak in the faith receive ye,
 but not to doubtful disputations. <sup>2</sup>For one believeth that he may eat all things: another, who is weak, eateth herbs. <sup>3</sup>Let not him that eateth despise him that eateth not; and let not him which eateth not judge him that eateth: for God hath received him. <sup>4</sup>Who art thou that judgest another man’s servant? to his own master he standeth or falleth. Yea, he shall be holden up: for God is able to make him stand. <sup>5</sup>One man esteemeth one day above another: another esteemeth every day
 alike. Let every man be fully persuaded in his own mind. <sup>6</sup>He that regardeth the day, regardeth
 it unto the Lord; and he that regardeth not the day, to the Lord he doth not regard
 it.
  He that eateth, eateth to the Lord, for he giveth God thanks; and he that eateth not, to the Lord he eateth not, and giveth God thanks. <sup>7</sup>For none of us liveth to himself, and no man dieth to himself. <sup>8</sup>For whether we live, we live unto the Lord; and whether we die, we die unto the Lord: whether we live therefore, or die, we are the Lord’s.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s14-9-16">
-          <span class="section-ref">§14.9-16 · Romans 14:9-16</span>
-          <p><sup>9</sup>For to this end Christ both died, and rose, and revived, that he might be Lord both of the dead and living. <sup>10</sup>But why dost thou judge thy brother? or why dost thou set at nought thy brother? for we shall all stand before the judgment seat of Christ. <sup>11</sup>For it is written,
+        <div class="parallel-section" id="s14-9-16"
+             data-author="Unknown"
+             data-title="Romans, Chapter 14"
+             data-section="ch. 14.9-16"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-romans-14.html#s14-9-16">
+
+          <div class="section-header">
+            <span class="section-ref">§14.9-16 · Romans 14:9-16</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>9</sup>εις τουτο γαρ χριστος και απεθανεν και ανεστη και ανεζησεν ινα και νεκρων και ζωντων κυριευση <sup>10</sup>συ δε τι κρινεις τον αδελφον σου η και συ τι εξουθενεις τον αδελφον σου παντες γαρ παραστησομεθα τω βηματι του χριστου <sup>11</sup>γεγραπται γαρ ζω εγω λεγει κυριος οτι εμοι καμψει παν γονυ και πασα γλωσσα εξομολογησεται τω θεω <sup>12</sup>αρα ουν εκαστος ημων περι εαυτου λογον δωσει τω θεω <sup>13</sup>μηκετι ουν αλληλους κρινωμεν αλλα τουτο κρινατε μαλλον το μη τιθεναι προσκομμα τω αδελφω η σκανδαλον <sup>14</sup>οιδα και πεπεισμαι εν κυριω ιησου οτι ουδεν κοινον δι εαυτου ει μη τω λογιζομενω τι κοινον ειναι εκεινω κοινον <sup>15</sup>ει δε δια βρωμα ο αδελφος σου λυπειται ουκετι κατα αγαπην περιπατεις μη τω βρωματι σου εκεινον απολλυε υπερ ου χριστος απεθανεν <sup>16</sup>μη βλασφημεισθω ουν υμων το αγαθον</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>9</sup>For to this end Christ both died, and rose, and revived, that he might be Lord both of the dead and living. <sup>10</sup>But why dost thou judge thy brother? or why dost thou set at nought thy brother? for we shall all stand before the judgment seat of Christ. <sup>11</sup>For it is written,
 As I live, saith the Lord, every knee shall bow to me, and every tongue shall confess to God. <sup>12</sup>So then every one of us shall give account of himself to God. <sup>13</sup>Let us not therefore judge one another any more: but judge this rather, that no man put a stumblingblock or an occasion to fall in
 his
  brother’s way. <sup>14</sup>I know, and am persuaded by the Lord Jesus, that
@@ -115,11 +195,36 @@ there is
  nothing unclean of itself: but to him that esteemeth any thing to be unclean, to him
 it is unclean. <sup>15</sup>But if thy brother be grieved with
 thy meat, now walkest thou not charitably. Destroy not him with thy meat, for whom Christ died. <sup>16</sup>Let not then your good be evil spoken of:</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s14-17-23">
-          <span class="section-ref">§14.17-23 · Romans 14:17-23</span>
-          <p><sup>17</sup>For the kingdom of God is not meat and drink; but righteousness, and peace, and joy in the Holy Ghost. <sup>18</sup>For he that in these things serveth Christ
+        <div class="parallel-section" id="s14-17-23"
+             data-author="Unknown"
+             data-title="Romans, Chapter 14"
+             data-section="ch. 14.17-23"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-romans-14.html#s14-17-23">
+
+          <div class="section-header">
+            <span class="section-ref">§14.17-23 · Romans 14:17-23</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>17</sup>ου γαρ εστιν η βασιλεια του θεου βρωσις και ποσις αλλα δικαιοσυνη και ειρηνη και χαρα εν πνευματι αγιω <sup>18</sup>ο γαρ εν τουτοις δουλευων τω χριστω ευαρεστος τω θεω και δοκιμος τοις ανθρωποις <sup>19</sup>αρα ουν τα της ειρηνης διωκωμεν και τα της οικοδομης της εις αλληλους <sup>20</sup>μη ενεκεν βρωματος καταλυε το εργον του θεου παντα μεν καθαρα αλλα κακον τω ανθρωπω τω δια προσκομματος εσθιοντι <sup>21</sup>καλον το μη φαγειν κρεα μηδε πιειν οινον μηδε εν ω ο αδελφος σου προσκοπτει η σκανδαλιζεται η ασθενει <sup>22</sup>συ πιστιν εχεις κατα σαυτον εχε ενωπιον του θεου μακαριος ο μη κρινων εαυτον εν ω δοκιμαζει <sup>23</sup>ο δε διακρινομενος εαν φαγη κατακεκριται οτι ουκ εκ πιστεως παν δε ο ουκ εκ πιστεως αμαρτια εστιν</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>17</sup>For the kingdom of God is not meat and drink; but righteousness, and peace, and joy in the Holy Ghost. <sup>18</sup>For he that in these things serveth Christ
 is acceptable to God, and approved of men. <sup>19</sup>Let us therefore follow after the things which make for peace, and things wherewith one may edify another. <sup>20</sup>For meat destroy not the work of God. All things indeed
 are
  pure; but
@@ -130,9 +235,11 @@ is he that condemneth not himself in that thing which he alloweth. <sup>23</sup>
 he eateth
  not of faith: for whatsoever
 is not of faith is sin.</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 

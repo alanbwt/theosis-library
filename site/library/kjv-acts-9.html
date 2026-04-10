@@ -91,13 +91,61 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s9-1-10">
-          <span class="section-ref">§9.1-10 · Acts 9:1-10</span>
-          <p><sup>1</sup>And Saul, yet breathing out threatenings and slaughter against the disciples of the Lord, went unto the high priest, <sup>2</sup>And desired of him letters to Damascus to the synagogues, that if he found any of this way, whether they were men or women, he might bring them bound unto Jerusalem. <sup>3</sup>And as he journeyed, he came near Damascus: and suddenly there shined round about him a light from heaven: <sup>4</sup>And he fell to the earth, and heard a voice saying unto him,
+        <div class="parallel-section" id="s9-1-10"
+             data-author="Unknown"
+             data-title="Acts, Chapter 9"
+             data-section="ch. 9.1-10"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-acts-9.html#s9-1-10">
+
+          <div class="section-header">
+            <span class="section-ref">§9.1-10 · Acts 9:1-10</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/codex_sinaiticus.jpg"
+                 alt="Scan sinaiticus/codex_sinaiticus.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/codex_sinaiticus.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>ο δε σαυλος ετι εμπνεων απειλης και φονου εις τους μαθητας του κυριου προσελθων τω αρχιερει <sup>2</sup>ητησατο παρ αυτου επιστολας εις δαμασκον προς τας συναγωγας οπως εαν τινας ευρη της οδου οντας ανδρας τε και γυναικας δεδεμενους αγαγη εις ιερουσαλημ <sup>3</sup>εν δε τω πορευεσθαι εγενετο αυτον εγγιζειν τη δαμασκω και εξαιφνης περιεστραψεν αυτον φως απο του ουρανου <sup>4</sup>και πεσων επι την γην ηκουσεν φωνην λεγουσαν αυτω σαουλ σαουλ τι με διωκεις <sup>5</sup>ειπεν δε τις ει κυριε ο δε κυριος ειπεν εγω ειμι ιησους ον συ διωκεις σκληρον σοι προς κεντρα λακτιζειν <sup>6</sup>τρεμων τε και θαμβων ειπεν κυριε τι με θελεις ποιησαι και ο κυριος προς αυτον αναστηθι και εισελθε εις την πολιν και λαληθησεται σοι τι σε δει ποιειν <sup>7</sup>οι δε ανδρες οι συνοδευοντες αυτω ειστηκεισαν εννεοι ακουοντες μεν της φωνης μηδενα δε θεωρουντες <sup>8</sup>ηγερθη δε ο σαυλος απο της γης ανεωγμενων δε των οφθαλμων αυτου ουδενα εβλεπεν χειραγωγουντες δε αυτον εισηγαγον εις δαμασκον <sup>9</sup>και ην ημερας τρεις μη βλεπων και ουκ εφαγεν ουδε επιεν <sup>10</sup>ην δε τις μαθητης εν δαμασκω ονοματι ανανιας και ειπεν προς αυτον ο κυριος εν οραματι ανανια ο δε ειπεν ιδου εγω κυριε</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>And Saul, yet breathing out threatenings and slaughter against the disciples of the Lord, went unto the high priest, <sup>2</sup>And desired of him letters to Damascus to the synagogues, that if he found any of this way, whether they were men or women, he might bring them bound unto Jerusalem. <sup>3</sup>And as he journeyed, he came near Damascus: and suddenly there shined round about him a light from heaven: <sup>4</sup>And he fell to the earth, and heard a voice saying unto him,
 Saul, Saul, why persecutest thou me? <sup>5</sup>And he said, Who art thou, Lord? And the Lord said,
 I am Jesus whom thou persecutest:
 it is hard for thee to kick against the pricks. <sup>6</sup>And he trembling and astonished said, Lord, what wilt thou have me to do? And the Lord
@@ -106,11 +154,36 @@ Arise, and go into the city, and it shall be told thee what thou must do. <sup>7
 him into Damascus. <sup>9</sup>And he was three days without sight, and neither did eat nor drink. <sup>10</sup>And there was a certain disciple at Damascus, named Ananias; and to him said the Lord in a vision,
 Ananias. And he said, Behold, I
 am here, Lord.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s9-11-20">
-          <span class="section-ref">§9.11-20 · Acts 9:11-20</span>
-          <p><sup>11</sup>And the Lord
+        <div class="parallel-section" id="s9-11-20"
+             data-author="Unknown"
+             data-title="Acts, Chapter 9"
+             data-section="ch. 9.11-20"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-acts-9.html#s9-11-20">
+
+          <div class="section-header">
+            <span class="section-ref">§9.11-20 · Acts 9:11-20</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>11</sup>ο δε κυριος προς αυτον αναστας πορευθητι επι την ρυμην την καλουμενην ευθειαν και ζητησον εν οικια ιουδα σαυλον ονοματι ταρσεα ιδου γαρ προσευχεται <sup>12</sup>και ειδεν εν οραματι ανδρα ονοματι ανανιαν εισελθοντα και επιθεντα αυτω χειρα οπως αναβλεψη <sup>13</sup>απεκριθη δε ο ανανιας κυριε ακηκοα απο πολλων περι του ανδρος τουτου οσα κακα εποιησεν τοις αγιοις σου εν ιερουσαλημ <sup>14</sup>και ωδε εχει εξουσιαν παρα των αρχιερεων δησαι παντας τους επικαλουμενους το ονομα σου <sup>15</sup>ειπεν δε προς αυτον ο κυριος πορευου οτι σκευος εκλογης μοι εστιν ουτος του βαστασαι το ονομα μου ενωπιον εθνων και βασιλεων υιων τε ισραηλ <sup>16</sup>εγω γαρ υποδειξω αυτω οσα δει αυτον υπερ του ονοματος μου παθειν <sup>17</sup>απηλθεν δε ανανιας και εισηλθεν εις την οικιαν και επιθεις επ αυτον τας χειρας ειπεν σαουλ αδελφε ο κυριος απεσταλκεν με ιησους ο οφθεις σοι εν τη οδω η ηρχου οπως αναβλεψης και πλησθης πνευματος αγιου <sup>18</sup>και ευθεως απεπεσον απο των οφθαλμων αυτου ωσει λεπιδες ανεβλεψεν τε παραχρημα και αναστας εβαπτισθη <sup>19</sup>και λαβων τροφην ενισχυσεν εγενετο δε ο σαυλος μετα των εν δαμασκω μαθητων ημερας τινας <sup>20</sup>και ευθεως εν ταις συναγωγαις εκηρυσσεν τον χριστον οτι ουτος εστιν ο υιος του θεου</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>11</sup>And the Lord
 said unto him,
 Arise, and go into the street which is called Straight, and enquire in the house of Judas for
 one
@@ -118,34 +191,111 @@ one
 his hand on him, that he might receive his sight. <sup>13</sup>Then Ananias answered, Lord, I have heard by many of this man, how much evil he hath done to thy saints at Jerusalem: <sup>14</sup>And here he hath authority from the chief priests to bind all that call on thy name. <sup>15</sup>But the Lord said unto him,
 Go thy way: for he is a chosen vessel unto me, to bear my name before the Gentiles, and kings, and the children of Israel: <sup>16</sup>For I will shew him how great things he must suffer for my name’s sake. <sup>17</sup>And Ananias went his way, and entered into the house; and putting his hands on him said, Brother Saul, the Lord,
 even Jesus, that appeared unto thee in the way as thou camest, hath sent me, that thou mightest receive thy sight, and be filled with the Holy Ghost. <sup>18</sup>And immediately there fell from his eyes as it had been scales: and he received sight forthwith, and arose, and was baptized. <sup>19</sup>And when he had received meat, he was strengthened. Then was Saul certain days with the disciples which were at Damascus. <sup>20</sup>And straightway he preached Christ in the synagogues, that he is the Son of God.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s9-21-30">
-          <span class="section-ref">§9.21-30 · Acts 9:21-30</span>
-          <p><sup>21</sup>But all that heard
+        <div class="parallel-section" id="s9-21-30"
+             data-author="Unknown"
+             data-title="Acts, Chapter 9"
+             data-section="ch. 9.21-30"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-acts-9.html#s9-21-30">
+
+          <div class="section-header">
+            <span class="section-ref">§9.21-30 · Acts 9:21-30</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>21</sup>εξισταντο δε παντες οι ακουοντες και ελεγον ουχ ουτος εστιν ο πορθησας εν ιερουσαλημ τους επικαλουμενους το ονομα τουτο και ωδε εις τουτο εληλυθει ινα δεδεμενους αυτους αγαγη επι τους αρχιερεις <sup>22</sup>σαυλος δε μαλλον ενεδυναμουτο και συνεχυνεν τους ιουδαιους τους κατοικουντας εν δαμασκω συμβιβαζων οτι ουτος εστιν ο χριστος <sup>23</sup>ως δε επληρουντο ημεραι ικαναι συνεβουλευσαντο οι ιουδαιοι ανελειν αυτον <sup>24</sup>εγνωσθη δε τω σαυλω η επιβουλη αυτων παρετηρουν τε τας πυλας ημερας τε και νυκτος οπως αυτον ανελωσιν <sup>25</sup>λαβοντες δε αυτον οι μαθηται νυκτος καθηκαν δια του τειχους χαλασαντες εν σπυριδι <sup>26</sup>παραγενομενος δε ο σαυλος εις ιερουσαλημ επειρατο κολλασθαι τοις μαθηταις και παντες εφοβουντο αυτον μη πιστευοντες οτι εστιν μαθητης <sup>27</sup>βαρναβας δε επιλαβομενος αυτον ηγαγεν προς τους αποστολους και διηγησατο αυτοις πως εν τη οδω ειδεν τον κυριον και οτι ελαλησεν αυτω και πως εν δαμασκω επαρρησιασατο εν τω ονοματι του ιησου <sup>28</sup>και ην μετ αυτων εισπορευομενος και εκπορευομενος εν ιερουσαλημ και παρρησιαζομενος εν τω ονοματι του κυριου ιησου <sup>29</sup>ελαλει τε και συνεζητει προς τους ελληνιστας οι δε επεχειρουν αυτον ανελειν <sup>30</sup>επιγνοντες δε οι αδελφοι κατηγαγον αυτον εις καισαρειαν και εξαπεστειλαν αυτον εις ταρσον</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>21</sup>But all that heard
 him were amazed, and said; Is not this he that destroyed them which called on this name in Jerusalem, and came hither for that intent, that he might bring them bound unto the chief priests? <sup>22</sup>But Saul increased the more in strength, and confounded the Jews which dwelt at Damascus, proving that this is very Christ. <sup>23</sup>And after that many days were fulfilled, the Jews took counsel to kill him: <sup>24</sup>But their laying await was known of Saul. And they watched the gates day and night to kill him. <sup>25</sup>Then the disciples took him by night, and let
 him down by the wall in a basket. <sup>26</sup>And when Saul was come to Jerusalem, he assayed to join himself to the disciples: but they were all afraid of him, and believed not that he was a disciple. <sup>27</sup>But Barnabas took him, and brought
 him to the apostles, and declared unto them how he had seen the Lord in the way, and that he had spoken to him, and how he had preached boldly at Damascus in the name of Jesus. <sup>28</sup>And he was with them coming in and going out at Jerusalem. <sup>29</sup>And he spake boldly in the name of the Lord Jesus, and disputed against the Grecians: but they went about to slay him. <sup>30</sup>Which when the brethren knew, they brought him down to Caesarea, and sent him forth to Tarsus.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s9-31-40">
-          <span class="section-ref">§9.31-40 · Acts 9:31-40</span>
-          <p><sup>31</sup>Then had the churches rest throughout all Judaea and Galilee and Samaria, and were edified; and walking in the fear of the Lord, and in the comfort of the Holy Ghost, were multiplied. <sup>32</sup>And it came to pass, as Peter passed throughout all
+        <div class="parallel-section" id="s9-31-40"
+             data-author="Unknown"
+             data-title="Acts, Chapter 9"
+             data-section="ch. 9.31-40"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-acts-9.html#s9-31-40">
+
+          <div class="section-header">
+            <span class="section-ref">§9.31-40 · Acts 9:31-40</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>31</sup>αι μεν ουν εκκλησιαι καθ ολης της ιουδαιας και γαλιλαιας και σαμαρειας ειχον ειρηνην οικοδομουμεναι και πορευομεναι τω φοβω του κυριου και τη παρακλησει του αγιου πνευματος επληθυνοντο <sup>32</sup>εγενετο δε πετρον διερχομενον δια παντων κατελθειν και προς τους αγιους τους κατοικουντας λυδδαν <sup>33</sup>ευρεν δε εκει ανθρωπον τινα αινεαν ονοματι εξ ετων οκτω κατακειμενον επι κραββατω ος ην παραλελυμενος <sup>34</sup>και ειπεν αυτω ο πετρος αινεα ιαται σε ιησους ο χριστος αναστηθι και στρωσον σεαυτω και ευθεως ανεστη <sup>35</sup>και ειδον αυτον παντες οι κατοικουντες λυδδαν και τον σαρωνα οιτινες επεστρεψαν επι τον κυριον <sup>36</sup>εν ιοππη δε τις ην μαθητρια ονοματι ταβιθα η διερμηνευομενη λεγεται δορκας αυτη ην πληρης αγαθων εργων και ελεημοσυνων ων εποιει <sup>37</sup>εγενετο δε εν ταις ημεραις εκειναις ασθενησασαν αυτην αποθανειν λουσαντες δε αυτην εθηκαν εν υπερωω <sup>38</sup>εγγυς δε ουσης λυδδης τη ιοππη οι μαθηται ακουσαντες οτι πετρος εστιν εν αυτη απεστειλαν δυο ανδρας προς αυτον παρακαλουντες μη οκνησαι διελθειν εως αυτων <sup>39</sup>αναστας δε πετρος συνηλθεν αυτοις ον παραγενομενον ανηγαγον εις το υπερωον και παρεστησαν αυτω πασαι αι χηραι κλαιουσαι και επιδεικνυμεναι χιτωνας και ιματια οσα εποιει μετ αυτων ουσα η δορκας <sup>40</sup>εκβαλων δε εξω παντας ο πετρος θεις τα γονατα προσηυξατο και επιστρεψας προς το σωμα ειπεν ταβιθα αναστηθι η δε ηνοιξεν τους οφθαλμους αυτης και ιδουσα τον πετρον ανεκαθισεν</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>31</sup>Then had the churches rest throughout all Judaea and Galilee and Samaria, and were edified; and walking in the fear of the Lord, and in the comfort of the Holy Ghost, were multiplied. <sup>32</sup>And it came to pass, as Peter passed throughout all
 quarters,
  he came down also to the saints which dwelt at Lydda. <sup>33</sup>And there he found a certain man named Aeneas, which had kept his bed eight years, and was sick of the palsy. <sup>34</sup>And Peter said unto him, Aeneas, Jesus Christ maketh thee whole: arise, and make thy bed. And he arose immediately. <sup>35</sup>And all that dwelt at Lydda and Saron saw him, and turned to the Lord. <sup>36</sup>Now there was at Joppa a certain disciple named Tabitha, which by interpretation is called Dorcas: this woman was full of good works and almsdeeds which she did. <sup>37</sup>And it came to pass in those days, that she was sick, and died: whom when they had washed, they laid
 her in an upper chamber. <sup>38</sup>And forasmuch as Lydda was nigh to Joppa, and the disciples had heard that Peter was there, they sent unto him two men, desiring
 him
  that he would not delay to come to them. <sup>39</sup>Then Peter arose and went with them. When he was come, they brought him into the upper chamber: and all the widows stood by him weeping, and shewing the coats and garments which Dorcas made, while she was with them. <sup>40</sup>But Peter put them all forth, and kneeled down, and prayed; and turning
 him to the body said, Tabitha, arise. And she opened her eyes: and when she saw Peter, she sat up.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s9-41-43">
-          <span class="section-ref">§9.41-43 · Acts 9:41-43</span>
-          <p><sup>41</sup>And he gave her
+        <div class="parallel-section" id="s9-41-43"
+             data-author="Unknown"
+             data-title="Acts, Chapter 9"
+             data-section="ch. 9.41-43"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-acts-9.html#s9-41-43">
+
+          <div class="section-header">
+            <span class="section-ref">§9.41-43 · Acts 9:41-43</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>41</sup>δους δε αυτη χειρα ανεστησεν αυτην φωνησας δε τους αγιους και τας χηρας παρεστησεν αυτην ζωσαν <sup>42</sup>γνωστον δε εγενετο καθ ολης της ιοππης και πολλοι επιστευσαν επι τον κυριον <sup>43</sup>εγενετο δε ημερας ικανας μειναι αυτον εν ιοππη παρα τινι σιμωνι βυρσει</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>41</sup>And he gave her
 his hand, and lifted her up, and when he had called the saints and widows, presented her alive. <sup>42</sup>And it was known throughout all Joppa; and many believed in the Lord. <sup>43</sup>And it came to pass, that he tarried many days in Joppa with one Simon a tanner.</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 

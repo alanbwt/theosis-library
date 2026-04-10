@@ -91,13 +91,96 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s21-1-8">
-          <span class="section-ref">§21.1-8 · John 21:1-8</span>
-          <p><sup>1</sup>After these things Jesus shewed himself again to the disciples at the sea of Tiberias; and on this wise shewed he
+        <div class="parallel-section" id="s21-1-8"
+             data-author="Unknown"
+             data-title="John, Chapter 21"
+             data-section="ch. 21.1-8"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-john-21.html#s21-1-8">
+
+          <div class="section-header">
+            <span class="section-ref">§21.1-8 · John 21:1-8</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus-john-1a.jpg"
+                 alt="Scan sinaiticus/sinaiticus-john-1a.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus-john-1a.jpg')"
+                 title="Click to enlarge">
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus-john-1b.jpg"
+                 alt="Scan sinaiticus/sinaiticus-john-1b.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus-john-1b.jpg')"
+                 title="Click to enlarge">
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus-john-10a.jpg"
+                 alt="Scan sinaiticus/sinaiticus-john-10a.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus-john-10a.jpg')"
+                 title="Click to enlarge">
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus-john-17a.jpg"
+                 alt="Scan sinaiticus/sinaiticus-john-17a.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus-john-17a.jpg')"
+                 title="Click to enlarge">
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus_john_21_7.jpg"
+                 alt="Scan sinaiticus/sinaiticus_john_21_7.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus_john_21_7.jpg')"
+                 title="Click to enlarge">
+            
+            <img src="/assets/scans/sinaiticus/ende_johannesevangelium.jpg"
+                 alt="Scan sinaiticus/ende_johannesevangelium.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/ende_johannesevangelium.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>μετα ταυτα εφανερωσεν εαυτον παλιν ο ιησους τοις μαθηταις επι της θαλασσης της τιβεριαδος εφανερωσεν δε ουτως <sup>2</sup>ησαν ομου σιμων πετρος και θωμας ο λεγομενος διδυμος και ναθαναηλ ο απο κανα της γαλιλαιας και οι του ζεβεδαιου και αλλοι εκ των μαθητων αυτου δυο <sup>3</sup>λεγει αυτοις σιμων πετρος υπαγω αλιευειν λεγουσιν αυτω ερχομεθα και ημεις συν σοι εξηλθον και ανεβησαν εις το πλοιον ευθυς και εν εκεινη τη νυκτι επιασαν ουδεν <sup>4</sup>πρωιας δε ηδη γενομενης εστη ο ιησους εις τον αιγιαλον ου μεντοι ηδεισαν οι μαθηται οτι ιησους εστιν <sup>5</sup>λεγει ουν αυτοις ο ιησους παιδια μη τι προσφαγιον εχετε απεκριθησαν αυτω ου <sup>6</sup>ο δε ειπεν αυτοις βαλετε εις τα δεξια μερη του πλοιου το δικτυον και ευρησετε εβαλον ουν και ουκ ετι αυτο ελκυσαι ισχυσαν απο του πληθους των ιχθυων <sup>7</sup>λεγει ουν ο μαθητης εκεινος ον ηγαπα ο ιησους τω πετρω ο κυριος εστιν σιμων ουν πετρος ακουσας οτι ο κυριος εστιν τον επενδυτην διεζωσατο ην γαρ γυμνος και εβαλεν εαυτον εις την θαλασσαν <sup>8</sup>οι δε αλλοι μαθηται τω πλοιαριω ηλθον ου γαρ ησαν μακραν απο της γης αλλ ως απο πηχων διακοσιων συροντες το δικτυον των ιχθυων</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>After these things Jesus shewed himself again to the disciples at the sea of Tiberias; and on this wise shewed he
 himself. <sup>2</sup>There were together Simon Peter, and Thomas called Didymus, and Nathanael of Cana in Galilee, and the
 sons of Zebedee, and two other of his disciples. <sup>3</sup>Simon Peter saith unto them, I go a fishing. They say unto him, We also go with thee. They went forth, and entered into a ship immediately; and that night they caught nothing. <sup>4</sup>But when the morning was now come, Jesus stood on the shore: but the disciples knew not that it was Jesus. <sup>5</sup>Then Jesus saith unto them,
 Children, have ye any meat? They answered him, No. <sup>6</sup>And he said unto them,
@@ -105,11 +188,36 @@ Cast the net on the right side of the ship, and ye shall find. They cast therefo
 his
  fisher’s coat
 unto him, (for he was naked,) and did cast himself into the sea. <sup>8</sup>And the other disciples came in a little ship; (for they were not far from land, but as it were two hundred cubits,) dragging the net with fishes.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s21-9-16">
-          <span class="section-ref">§21.9-16 · John 21:9-16</span>
-          <p><sup>9</sup>As soon then as they were come to land, they saw a fire of coals there, and fish laid thereon, and bread. <sup>10</sup>Jesus saith unto them,
+        <div class="parallel-section" id="s21-9-16"
+             data-author="Unknown"
+             data-title="John, Chapter 21"
+             data-section="ch. 21.9-16"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-john-21.html#s21-9-16">
+
+          <div class="section-header">
+            <span class="section-ref">§21.9-16 · John 21:9-16</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>9</sup>ως ουν απεβησαν εις την γην βλεπουσιν ανθρακιαν κειμενην και οψαριον επικειμενον και αρτον <sup>10</sup>λεγει αυτοις ο ιησους ενεγκατε απο των οψαριων ων επιασατε νυν <sup>11</sup>ανεβη σιμων πετρος και ειλκυσεν το δικτυον επι της γης μεστον ιχθυων μεγαλων εκατον πεντηκοντατριων και τοσουτων οντων ουκ εσχισθη το δικτυον <sup>12</sup>λεγει αυτοις ο ιησους δευτε αριστησατε ουδεις δε ετολμα των μαθητων εξετασαι αυτον συ τις ει ειδοτες οτι ο κυριος εστιν <sup>13</sup>ερχεται ουν ο ιησους και λαμβανει τον αρτον και διδωσιν αυτοις και το οψαριον ομοιως <sup>14</sup>τουτο ηδη τριτον εφανερωθη ο ιησους τοις μαθηταις αυτου εγερθεις εκ νεκρων <sup>15</sup>οτε ουν ηριστησαν λεγει τω σιμωνι πετρω ο ιησους σιμων ιωνα αγαπας με πλειον τουτων λεγει αυτω ναι κυριε συ οιδας οτι φιλω σε λεγει αυτω βοσκε τα αρνια μου <sup>16</sup>λεγει αυτω παλιν δευτερον σιμων ιωνα αγαπας με λεγει αυτω ναι κυριε συ οιδας οτι φιλω σε λεγει αυτω ποιμαινε τα προβατα μου</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>9</sup>As soon then as they were come to land, they saw a fire of coals there, and fish laid thereon, and bread. <sup>10</sup>Jesus saith unto them,
 Bring of the fish which ye have now caught. <sup>11</sup>Simon Peter went up, and drew the net to land full of great fishes, and hundred and fifty and three: and for all there were so many, yet was not the net broken. <sup>12</sup>Jesus saith unto them,
 Come
 and dine. And none of the disciples durst ask him, Who art thou? knowing that it was the Lord. <sup>13</sup>Jesus then cometh, and taketh bread, and giveth them, and fish likewise. <sup>14</sup>This is now the third time that Jesus shewed himself to his disciples, after that he was risen from the dead. <sup>15</sup>So when they had dined, Jesus saith to Simon Peter,
@@ -119,11 +227,36 @@ Feed my lambs. <sup>16</sup>He saith to him again the second time,
 Simon,
 son of Jonas, lovest thou me? He saith unto him, Yea, Lord; thou knowest that I love thee. He saith unto him,
 Feed my sheep.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s21-17-24">
-          <span class="section-ref">§21.17-24 · John 21:17-24</span>
-          <p><sup>17</sup>He saith unto him the third time,
+        <div class="parallel-section" id="s21-17-24"
+             data-author="Unknown"
+             data-title="John, Chapter 21"
+             data-section="ch. 21.17-24"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-john-21.html#s21-17-24">
+
+          <div class="section-header">
+            <span class="section-ref">§21.17-24 · John 21:17-24</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>17</sup>λεγει αυτω το τριτον σιμων ιωνα φιλεις με ελυπηθη ο πετρος οτι ειπεν αυτω το τριτον φιλεις με και ειπεν αυτω κυριε συ παντα οιδας συ γινωσκεις οτι φιλω σε λεγει αυτω ο ιησους βοσκε τα προβατα μου <sup>18</sup>αμην αμην λεγω σοι οτε ης νεωτερος εζωννυες σεαυτον και περιεπατεις οπου ηθελες οταν δε γηρασης εκτενεις τας χειρας σου και αλλος σε ζωσει και οισει οπου ου θελεις <sup>19</sup>τουτο δε ειπεν σημαινων ποιω θανατω δοξασει τον θεον και τουτο ειπων λεγει αυτω ακολουθει μοι <sup>20</sup>επιστραφεις δε ο πετρος βλεπει τον μαθητην ον ηγαπα ο ιησους ακολουθουντα ος και ανεπεσεν εν τω δειπνω επι το στηθος αυτου και ειπεν κυριε τις εστιν ο παραδιδους σε <sup>21</sup>τουτον ιδων ο πετρος λεγει τω ιησου κυριε ουτος δε τι <sup>22</sup>λεγει αυτω ο ιησους εαν αυτον θελω μενειν εως ερχομαι τι προς σε συ ακολουθει μοι <sup>23</sup>εξηλθεν ουν ο λογος ουτος εις τους αδελφους οτι ο μαθητης εκεινος ουκ αποθνησκει και ουκ ειπεν αυτω ο ιησους οτι ουκ αποθνησκει αλλ εαν αυτον θελω μενειν εως ερχομαι τι προς σε <sup>24</sup>ουτος εστιν ο μαθητης ο μαρτυρων περι τουτων και γραψας ταυτα και οιδαμεν οτι αληθης εστιν η μαρτυρια αυτου</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>17</sup>He saith unto him the third time,
 Simon,
 son of Jonas, lovest thou me? Peter was grieved because he said unto him the third time, Lovest thou me? And he said unto him, Lord, thou knowest all things; thou knowest that I love thee. Jesus saith unto him,
 Feed my sheep. <sup>18</sup>Verily, verily, I say unto thee, When thou wast young, thou girdedst thyself, and walkedst whither thou wouldest: but when thou shalt be old, thou shalt stretch forth thy hands, and another shall gird thee, and carry
@@ -135,14 +268,41 @@ If I will that he tarry till I come, what
 is that to thee? follow thou me. <sup>23</sup>Then went this saying abroad among the brethren, that that disciple should not die: yet Jesus said not unto him, He shall not die; but,
 If I will that he tarry till I come, what
 is that to thee? <sup>24</sup>This is the disciple which testifieth of these things, and wrote these things: and we know that his testimony is true.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s21-25">
-          <span class="section-ref">§21.25 · John 21:25</span>
-          <p><sup>25</sup>And there are also many other things which Jesus did, the which, if they should be written every one, I suppose that even the world itself could not contain the books that should be written. Amen.</p>
+        <div class="parallel-section" id="s21-25"
+             data-author="Unknown"
+             data-title="John, Chapter 21"
+             data-section="ch. 21.25"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-john-21.html#s21-25">
+
+          <div class="section-header">
+            <span class="section-ref">§21.25 · John 21:25</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>25</sup>εστιν δε και αλλα πολλα οσα εποιησεν ο ιησους ατινα εαν γραφηται καθ εν ουδε αυτον οιμαι τον κοσμον χωρησαι τα γραφομενα βιβλια αμην</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>25</sup>And there are also many other things which Jesus did, the which, if they should be written every one, I suppose that even the world itself could not contain the books that should be written. Amen.</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 

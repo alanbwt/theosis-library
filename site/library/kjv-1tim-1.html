@@ -91,41 +91,166 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s1-1-5">
-          <span class="section-ref">§1.1-5 · 1 Timothy 1:1-5</span>
-          <p><sup>1</sup>Paul, an apostle of Jesus Christ by the commandment of God our Saviour, and Lord Jesus Christ,
+        <div class="parallel-section" id="s1-1-5"
+             data-author="Unknown"
+             data-title="1 Timothy, Chapter 1"
+             data-section="ch. 1.1-5"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-1tim-1.html#s1-1-5">
+
+          <div class="section-header">
+            <span class="section-ref">§1.1-5 · 1 Timothy 1:1-5</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/codex_sinaiticus.jpg"
+                 alt="Scan sinaiticus/codex_sinaiticus.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/codex_sinaiticus.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>παυλος αποστολος ιησου χριστου κατ επιταγην θεου σωτηρος ημων και κυριου ιησου χριστου της ελπιδος ημων <sup>2</sup>τιμοθεω γνησιω τεκνω εν πιστει χαρις ελεος ειρηνη απο θεου πατρος ημων και χριστου ιησου του κυριου ημων <sup>3</sup>καθως παρεκαλεσα σε προσμειναι εν εφεσω πορευομενος εις μακεδονιαν ινα παραγγειλης τισιν μη ετεροδιδασκαλειν <sup>4</sup>μηδε προσεχειν μυθοις και γενεαλογιαις απεραντοις αιτινες ζητησεις παρεχουσιν μαλλον η οικοδομιαν θεου την εν πιστει <sup>5</sup>το δε τελος της παραγγελιας εστιν αγαπη εκ καθαρας καρδιας και συνειδησεως αγαθης και πιστεως ανυποκριτου</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>Paul, an apostle of Jesus Christ by the commandment of God our Saviour, and Lord Jesus Christ,
 which is our hope; <sup>2</sup>Unto Timothy,
 my own son in the faith: Grace, mercy,
 and peace, from God our Father and Jesus Christ our Lord. <sup>3</sup>As I besought thee to abide still at Ephesus, when I went into Macedonia, that thou mightest charge some that they teach no other doctrine, <sup>4</sup>Neither give heed to fables and endless genealogies, which minister questions, rather than godly edifying which is in faith:
 so do. <sup>5</sup>Now the end of the commandment is charity out of a pure heart, and
 of a good conscience, and
 of faith unfeigned:</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s1-6-10">
-          <span class="section-ref">§1.6-10 · 1 Timothy 1:6-10</span>
-          <p><sup>6</sup>From which some having swerved have turned aside unto vain jangling; <sup>7</sup>Desiring to be teachers of the law; understanding neither what they say, nor whereof they affirm. <sup>8</sup>But we know that the law
+        <div class="parallel-section" id="s1-6-10"
+             data-author="Unknown"
+             data-title="1 Timothy, Chapter 1"
+             data-section="ch. 1.6-10"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-1tim-1.html#s1-6-10">
+
+          <div class="section-header">
+            <span class="section-ref">§1.6-10 · 1 Timothy 1:6-10</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>6</sup>ων τινες αστοχησαντες εξετραπησαν εις ματαιολογιαν <sup>7</sup>θελοντες ειναι νομοδιδασκαλοι μη νοουντες μητε α λεγουσιν μητε περι τινων διαβεβαιουνται <sup>8</sup>οιδαμεν δε οτι καλος ο νομος εαν τις αυτω νομιμως χρηται <sup>9</sup>ειδως τουτο οτι δικαιω νομος ου κειται ανομοις δε και ανυποτακτοις ασεβεσιν και αμαρτωλοις ανοσιοις και βεβηλοις πατραλωαις και μητραλωαις ανδροφονοις <sup>10</sup>πορνοις αρσενοκοιταις ανδραποδισταις ψευσταις επιορκοις και ει τι ετερον τη υγιαινουση διδασκαλια αντικειται</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>6</sup>From which some having swerved have turned aside unto vain jangling; <sup>7</sup>Desiring to be teachers of the law; understanding neither what they say, nor whereof they affirm. <sup>8</sup>But we know that the law
 is good, if a man use it lawfully; <sup>9</sup>Knowing this, that the law is not made for a righteous man, but for the lawless and disobedient, for the ungodly and for sinners, for unholy and profane, for murderers of fathers and murderers of mothers, for manslayers, <sup>10</sup>For whoremongers, for them that defile themselves with mankind, for menstealers, for liars, for perjured persons, and if there be any other thing that is contrary to sound doctrine;</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s1-11-15">
-          <span class="section-ref">§1.11-15 · 1 Timothy 1:11-15</span>
-          <p><sup>11</sup>According to the glorious gospel of the blessed God, which was committed to my trust. <sup>12</sup>And I thank Christ Jesus our Lord, who hath enabled me, for that he counted me faithful, putting me into the ministry; <sup>13</sup>Who was before a blasphemer, and a persecutor, and injurious: but I obtained mercy, because I did
+        <div class="parallel-section" id="s1-11-15"
+             data-author="Unknown"
+             data-title="1 Timothy, Chapter 1"
+             data-section="ch. 1.11-15"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-1tim-1.html#s1-11-15">
+
+          <div class="section-header">
+            <span class="section-ref">§1.11-15 · 1 Timothy 1:11-15</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>11</sup>κατα το ευαγγελιον της δοξης του μακαριου θεου ο επιστευθην εγω <sup>12</sup>και χαριν εχω τω ενδυναμωσαντι με χριστω ιησου τω κυριω ημων οτι πιστον με ηγησατο θεμενος εις διακονιαν <sup>13</sup>τον προτερον οντα βλασφημον και διωκτην και υβριστην αλλ ηλεηθην οτι αγνοων εποιησα εν απιστια <sup>14</sup>υπερεπλεονασεν δε η χαρις του κυριου ημων μετα πιστεως και αγαπης της εν χριστω ιησου <sup>15</sup>πιστος ο λογος και πασης αποδοχης αξιος οτι χριστος ιησους ηλθεν εις τον κοσμον αμαρτωλους σωσαι ων πρωτος ειμι εγω</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>11</sup>According to the glorious gospel of the blessed God, which was committed to my trust. <sup>12</sup>And I thank Christ Jesus our Lord, who hath enabled me, for that he counted me faithful, putting me into the ministry; <sup>13</sup>Who was before a blasphemer, and a persecutor, and injurious: but I obtained mercy, because I did
 it ignorantly in unbelief. <sup>14</sup>And the grace of our Lord was exceeding abundant with faith and love which is in Christ Jesus. <sup>15</sup>This
 is a faithful saying, and worthy of all acceptation, that Christ Jesus came into the world to save sinners; of whom I am chief.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s1-16-20">
-          <span class="section-ref">§1.16-20 · 1 Timothy 1:16-20</span>
-          <p><sup>16</sup>Howbeit for this cause I obtained mercy, that in me first Jesus Christ might shew forth all longsuffering, for a pattern to them which should hereafter believe on him to life everlasting. <sup>17</sup>Now unto the King eternal, immortal, invisible, the only wise God,
+        <div class="parallel-section" id="s1-16-20"
+             data-author="Unknown"
+             data-title="1 Timothy, Chapter 1"
+             data-section="ch. 1.16-20"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-1tim-1.html#s1-16-20">
+
+          <div class="section-header">
+            <span class="section-ref">§1.16-20 · 1 Timothy 1:16-20</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>16</sup>αλλα δια τουτο ηλεηθην ινα εν εμοι πρωτω ενδειξηται ιησους χριστος την πασαν μακροθυμιαν προς υποτυπωσιν των μελλοντων πιστευειν επ αυτω εις ζωην αιωνιον <sup>17</sup>τω δε βασιλει των αιωνων αφθαρτω αορατω μονω σοφω θεω τιμη και δοξα εις τους αιωνας των αιωνων αμην <sup>18</sup>ταυτην την παραγγελιαν παρατιθεμαι σοι τεκνον τιμοθεε κατα τας προαγουσας επι σε προφητειας ινα στρατευη εν αυταις την καλην στρατειαν <sup>19</sup>εχων πιστιν και αγαθην συνειδησιν ην τινες απωσαμενοι περι την πιστιν εναυαγησαν <sup>20</sup>ων εστιν υμεναιος και αλεξανδρος ους παρεδωκα τω σατανα ινα παιδευθωσιν μη βλασφημειν</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>16</sup>Howbeit for this cause I obtained mercy, that in me first Jesus Christ might shew forth all longsuffering, for a pattern to them which should hereafter believe on him to life everlasting. <sup>17</sup>Now unto the King eternal, immortal, invisible, the only wise God,
 be honour and glory for ever and ever. Amen. <sup>18</sup>This charge I commit unto thee, son Timothy, according to the prophecies which went before on thee, that thou by them mightest war a good warfare; <sup>19</sup>Holding faith, and a good conscience; which some having put away concerning faith have made shipwreck: <sup>20</sup>Of whom is Hymenaeus and Alexander; whom I have delivered unto Satan, that they may learn not to blaspheme.</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 

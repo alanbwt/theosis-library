@@ -91,13 +91,61 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s2-1-8">
-          <span class="section-ref">§2.1-8 · 2 Peter 2:1-8</span>
-          <p><sup>1</sup>But there were false prophets also among the people, even as there shall be false teachers among you, who privily shall bring in damnable heresies, even denying the Lord that bought them, and bring upon themselves swift destruction. <sup>2</sup>And many shall follow their pernicious ways; by reason of whom the way of truth shall be evil spoken of. <sup>3</sup>And through covetousness shall they with feigned words make merchandise of you: whose judgment now of a long time lingereth not, and their damnation slumbereth not. <sup>4</sup>For if God spared not the angels that sinned, but cast
+        <div class="parallel-section" id="s2-1-8"
+             data-author="Unknown"
+             data-title="2 Peter, Chapter 2"
+             data-section="ch. 2.1-8"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-2peter-2.html#s2-1-8">
+
+          <div class="section-header">
+            <span class="section-ref">§2.1-8 · 2 Peter 2:1-8</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus-2peter-1a.jpg"
+                 alt="Scan sinaiticus/sinaiticus-2peter-1a.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus-2peter-1a.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>εγενοντο δε και ψευδοπροφηται εν τω λαω ως και εν υμιν εσονται ψευδοδιδασκαλοι οιτινες παρεισαξουσιν αιρεσεις απωλειας και τον αγορασαντα αυτους δεσποτην αρνουμενοι επαγοντες εαυτοις ταχινην απωλειαν <sup>2</sup>και πολλοι εξακολουθησουσιν αυτων ταις απωλειαις δι ους η οδος της αληθειας βλασφημηθησεται <sup>3</sup>και εν πλεονεξια πλαστοις λογοις υμας εμπορευσονται οις το κριμα εκπαλαι ουκ αργει και η απωλεια αυτων ου νυσταζει <sup>4</sup>ει γαρ ο θεος αγγελων αμαρτησαντων ουκ εφεισατο αλλα σειραις ζοφου ταρταρωσας παρεδωκεν εις κρισιν τετηρημενους <sup>5</sup>και αρχαιου κοσμου ουκ εφεισατο αλλ ογδοον νωε δικαιοσυνης κηρυκα εφυλαξεν κατακλυσμον κοσμω ασεβων επαξας <sup>6</sup>και πολεις σοδομων και γομορρας τεφρωσας καταστροφη κατεκρινεν υποδειγμα μελλοντων ασεβειν τεθεικως <sup>7</sup>και δικαιον λωτ καταπονουμενον υπο της των αθεσμων εν ασελγεια αναστροφης ερρυσατο <sup>8</sup>βλεμματι γαρ και ακοη ο δικαιος εγκατοικων εν αυτοις ημεραν εξ ημερας ψυχην δικαιαν ανομοις εργοις εβασανιζεν</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>But there were false prophets also among the people, even as there shall be false teachers among you, who privily shall bring in damnable heresies, even denying the Lord that bought them, and bring upon themselves swift destruction. <sup>2</sup>And many shall follow their pernicious ways; by reason of whom the way of truth shall be evil spoken of. <sup>3</sup>And through covetousness shall they with feigned words make merchandise of you: whose judgment now of a long time lingereth not, and their damnation slumbereth not. <sup>4</sup>For if God spared not the angels that sinned, but cast
 them
  down to hell, and delivered
 them into chains of darkness, to be reserved unto judgment; <sup>5</sup>And spared not the old world, but saved Noah the eighth
@@ -107,27 +155,79 @@ them with an overthrow, making
 them an ensample unto those that after should live ungodly; <sup>7</sup>And delivered just Lot, vexed with the filthy conversation of the wicked: <sup>8</sup>(For that righteous man dwelling among them, in seeing and hearing, vexed
 his righteous soul from day to day with
 their unlawful deeds;)</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s2-9-16">
-          <span class="section-ref">§2.9-16 · 2 Peter 2:9-16</span>
-          <p><sup>9</sup>The Lord knoweth how to deliver the godly out of temptations, and to reserve the unjust unto the day of judgment to be punished: <sup>10</sup>But chiefly them that walk after the flesh in the lust of uncleanness, and despise government. Presumptuous
+        <div class="parallel-section" id="s2-9-16"
+             data-author="Unknown"
+             data-title="2 Peter, Chapter 2"
+             data-section="ch. 2.9-16"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-2peter-2.html#s2-9-16">
+
+          <div class="section-header">
+            <span class="section-ref">§2.9-16 · 2 Peter 2:9-16</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>9</sup>οιδεν κυριος ευσεβεις εκ πειρασμου ρυεσθαι αδικους δε εις ημεραν κρισεως κολαζομενους τηρειν <sup>10</sup>μαλιστα δε τους οπισω σαρκος εν επιθυμια μιασμου πορευομενους και κυριοτητος καταφρονουντας τολμηται αυθαδεις δοξας ου τρεμουσιν βλασφημουντες <sup>11</sup>οπου αγγελοι ισχυι και δυναμει μειζονες οντες ου φερουσιν κατ αυτων παρα κυριω βλασφημον κρισιν <sup>12</sup>ουτοι δε ως αλογα ζωα φυσικα γεγεννημενα εις αλωσιν και φθοραν εν οις αγνοουσιν βλασφημουντες εν τη φθορα αυτων καταφθαρησονται <sup>13</sup>κομιουμενοι μισθον αδικιας ηδονην ηγουμενοι την εν ημερα τρυφην σπιλοι και μωμοι εντρυφωντες εν ταις απαταις αυτων συνευωχουμενοι υμιν <sup>14</sup>οφθαλμους εχοντες μεστους μοιχαλιδος και ακαταπαυστους αμαρτιας δελεαζοντες ψυχας αστηρικτους καρδιαν γεγυμνασμενην πλεονεξιαις εχοντες καταρας τεκνα <sup>15</sup>καταλιποντες την ευθειαν οδον επλανηθησαν εξακολουθησαντες τη οδω του βαλααμ του βοσορ ος μισθον αδικιας ηγαπησεν <sup>16</sup>ελεγξιν δε εσχεν ιδιας παρανομιας υποζυγιον αφωνον εν ανθρωπου φωνη φθεγξαμενον εκωλυσεν την του προφητου παραφρονιαν</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>9</sup>The Lord knoweth how to deliver the godly out of temptations, and to reserve the unjust unto the day of judgment to be punished: <sup>10</sup>But chiefly them that walk after the flesh in the lust of uncleanness, and despise government. Presumptuous
 are they, selfwilled, they are not afraid to speak evil of dignities. <sup>11</sup>Whereas angels, which are greater in power and might, bring not railing accusation against them before the Lord. <sup>12</sup>But these, as natural brute beasts, made to be taken and destroyed, speak evil of the things that they understand not; and shall utterly perish in their own corruption; <sup>13</sup>And shall receive the reward of unrighteousness,
 as they that count it pleasure to riot in the daytime. Spots
 they are and blemishes, sporting themselves with their own deceivings while they feast with you; <sup>14</sup>Having eyes full of adultery, and that cannot cease from sin; beguiling unstable souls: an heart they have exercised with covetous practices; cursed children: <sup>15</sup>Which have forsaken the right way, and are gone astray, following the way of Balaam
 the son of Bosor, who loved the wages of unrighteousness; <sup>16</sup>But was rebuked for his iniquity: the dumb ass speaking with man’s voice forbad the madness of the prophet.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s2-17-22">
-          <span class="section-ref">§2.17-22 · 2 Peter 2:17-22</span>
-          <p><sup>17</sup>These are wells without water, clouds that are carried with a tempest; to whom the mist of darkness is reserved for ever. <sup>18</sup>For when they speak great swelling
+        <div class="parallel-section" id="s2-17-22"
+             data-author="Unknown"
+             data-title="2 Peter, Chapter 2"
+             data-section="ch. 2.17-22"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-2peter-2.html#s2-17-22">
+
+          <div class="section-header">
+            <span class="section-ref">§2.17-22 · 2 Peter 2:17-22</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>17</sup>ουτοι εισιν πηγαι ανυδροι νεφελαι υπο λαιλαπος ελαυνομεναι οις ο ζοφος του σκοτους εις αιωνα τετηρηται <sup>18</sup>υπερογκα γαρ ματαιοτητος φθεγγομενοι δελεαζουσιν εν επιθυμιαις σαρκος εν ασελγειαις τους οντως αποφυγοντας τους εν πλανη αναστρεφομενους <sup>19</sup>ελευθεριαν αυτοις επαγγελλομενοι αυτοι δουλοι υπαρχοντες της φθορας ω γαρ τις ηττηται τουτω και δεδουλωται <sup>20</sup>ει γαρ αποφυγοντες τα μιασματα του κοσμου εν επιγνωσει του κυριου και σωτηρος ιησου χριστου τουτοις δε παλιν εμπλακεντες ηττωνται γεγονεν αυτοις τα εσχατα χειρονα των πρωτων <sup>21</sup>κρειττον γαρ ην αυτοις μη επεγνωκεναι την οδον της δικαιοσυνης η επιγνουσιν επιστρεψαι εκ της παραδοθεισης αυτοις αγιας εντολης <sup>22</sup>συμβεβηκεν δε αυτοις το της αληθους παροιμιας κυων επιστρεψας επι το ιδιον εξεραμα και υς λουσαμενη εις κυλισμα βορβορου</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>17</sup>These are wells without water, clouds that are carried with a tempest; to whom the mist of darkness is reserved for ever. <sup>18</sup>For when they speak great swelling
 words of vanity, they allure through the lusts of the flesh,
 through much wantonness, those that were clean escaped from them who live in error. <sup>19</sup>While they promise them liberty, they themselves are the servants of corruption: for of whom a man is overcome, of the same is he brought in bondage. <sup>20</sup>For if after they have escaped the pollutions of the world through the knowledge of the Lord and Saviour Jesus Christ, they are again entangled therein, and overcome, the latter end is worse with them than the beginning. <sup>21</sup>For it had been better for them not to have known the way of righteousness, than, after they have known
 it, to turn from the holy commandment delivered unto them. <sup>22</sup>But it is happened unto them according to the true proverb, The dog
 is turned to his own vomit again; and the sow that was washed to her wallowing in the mire.</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 

@@ -91,34 +91,134 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s5-1-5">
-          <span class="section-ref">§5.1-5 · Hebrews 5:1-5</span>
-          <p><sup>1</sup>For every high priest taken from among men is ordained for men in things
+        <div class="parallel-section" id="s5-1-5"
+             data-author="Unknown"
+             data-title="Hebrews, Chapter 5"
+             data-section="ch. 5.1-5"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-hebrews-5.html#s5-1-5">
+
+          <div class="section-header">
+            <span class="section-ref">§5.1-5 · Hebrews 5:1-5</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus-heb-1a.jpg"
+                 alt="Scan sinaiticus/sinaiticus-heb-1a.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus-heb-1a.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>πας γαρ αρχιερευς εξ ανθρωπων λαμβανομενος υπερ ανθρωπων καθισταται τα προς τον θεον ινα προσφερη δωρα τε και θυσιας υπερ αμαρτιων <sup>2</sup>μετριοπαθειν δυναμενος τοις αγνοουσιν και πλανωμενοις επει και αυτος περικειται ασθενειαν <sup>3</sup>και δια ταυτην οφειλει καθως περι του λαου ουτως και περι εαυτου προσφερειν υπερ αμαρτιων <sup>4</sup>και ουχ εαυτω τις λαμβανει την τιμην αλλα ο καλουμενος υπο του θεου καθαπερ και ο ααρων <sup>5</sup>ουτως και ο χριστος ουχ εαυτον εδοξασεν γενηθηναι αρχιερεα αλλ ο λαλησας προς αυτον υιος μου ει συ εγω σημερον γεγεννηκα σε</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>For every high priest taken from among men is ordained for men in things
 pertaining to God, that he may offer both gifts and sacrifices for sins: <sup>2</sup>Who can have compassion on the ignorant, and on them that are out of the way; for that he himself also is compassed with infirmity. <sup>3</sup>And by reason hereof he ought, as for the people, so also for himself, to offer for sins. <sup>4</sup>And no man taketh this honour unto himself, but he that is called of God, as
 was Aaron. <sup>5</sup>So also Christ glorified not himself to be made an high priest; but he that said unto him, Thou art my Son, to day have I begotten thee.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s5-6-10">
-          <span class="section-ref">§5.6-10 · Hebrews 5:6-10</span>
-          <p><sup>6</sup>As he saith also in another
+        <div class="parallel-section" id="s5-6-10"
+             data-author="Unknown"
+             data-title="Hebrews, Chapter 5"
+             data-section="ch. 5.6-10"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-hebrews-5.html#s5-6-10">
+
+          <div class="section-header">
+            <span class="section-ref">§5.6-10 · Hebrews 5:6-10</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>6</sup>καθως και εν ετερω λεγει συ ιερευς εις τον αιωνα κατα την ταξιν μελχισεδεκ <sup>7</sup>ος εν ταις ημεραις της σαρκος αυτου δεησεις τε και ικετηριας προς τον δυναμενον σωζειν αυτον εκ θανατου μετα κραυγης ισχυρας και δακρυων προσενεγκας και εισακουσθεις απο της ευλαβειας <sup>8</sup>καιπερ ων υιος εμαθεν αφ ων επαθεν την υπακοην <sup>9</sup>και τελειωθεις εγενετο τοις υπακουουσιν αυτω πασιν αιτιος σωτηριας αιωνιου <sup>10</sup>προσαγορευθεις υπο του θεου αρχιερευς κατα την ταξιν μελχισεδεκ</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>6</sup>As he saith also in another
 place, Thou
 art a priest for ever after the order of Melchisedec. <sup>7</sup>Who in the days of his flesh, when he had offered up prayers and supplications with strong crying and tears unto him that was able to save him from death, and was heard in that he feared; <sup>8</sup>Though he were a Son, yet learned he obedience by the things which he suffered; <sup>9</sup>And being made perfect, he became the author of eternal salvation unto all them that obey him; <sup>10</sup>Called of God an high priest after the order of Melchisedec.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s5-11-14">
-          <span class="section-ref">§5.11-14 · Hebrews 5:11-14</span>
-          <p><sup>11</sup>Of whom we have many things to say, and hard to be uttered, seeing ye are dull of hearing. <sup>12</sup>For when for the time ye ought to be teachers, ye have need that one teach you again which
+        <div class="parallel-section" id="s5-11-14"
+             data-author="Unknown"
+             data-title="Hebrews, Chapter 5"
+             data-section="ch. 5.11-14"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-hebrews-5.html#s5-11-14">
+
+          <div class="section-header">
+            <span class="section-ref">§5.11-14 · Hebrews 5:11-14</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>11</sup>περι ου πολυς ημιν ο λογος και δυσερμηνευτος λεγειν επει νωθροι γεγονατε ταις ακοαις <sup>12</sup>και γαρ οφειλοντες ειναι διδασκαλοι δια τον χρονον παλιν χρειαν εχετε του διδασκειν υμας τινα τα στοιχεια της αρχης των λογιων του θεου και γεγονατε χρειαν εχοντες γαλακτος και ου στερεας τροφης <sup>13</sup>πας γαρ ο μετεχων γαλακτος απειρος λογου δικαιοσυνης νηπιος γαρ εστιν <sup>14</sup>τελειων δε εστιν η στερεα τροφη των δια την εξιν τα αισθητηρια γεγυμνασμενα εχοντων προς διακρισιν καλου τε και κακου</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>11</sup>Of whom we have many things to say, and hard to be uttered, seeing ye are dull of hearing. <sup>12</sup>For when for the time ye ought to be teachers, ye have need that one teach you again which
 be the first principles of the oracles of God; and are become such as have need of milk, and not of strong meat. <sup>13</sup>For every one that useth milk
 is unskilful in the word of righteousness: for he is a babe. <sup>14</sup>But strong meat belongeth to them that are of full age,
 even
  those who by reason of use have their senses exercised to discern both good and evil.</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 

@@ -91,40 +91,165 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s16-1-8">
-          <span class="section-ref">§16.1-8 · Luke 16:1-8</span>
-          <p><sup>1</sup>And he said also unto his disciples,
+        <div class="parallel-section" id="s16-1-8"
+             data-author="Luke (attributed)"
+             data-title="Luke, Chapter 16"
+             data-section="ch. 16.1-8"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-luke-16.html#s16-1-8">
+
+          <div class="section-header">
+            <span class="section-ref">§16.1-8 · Luke 16:1-8</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus-luke-1a.jpg"
+                 alt="Scan sinaiticus/sinaiticus-luke-1a.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus-luke-1a.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>ελεγεν δε και προς τους μαθητας αυτου ανθρωπος τις ην πλουσιος ος ειχεν οικονομον και ουτος διεβληθη αυτω ως διασκορπιζων τα υπαρχοντα αυτου <sup>2</sup>και φωνησας αυτον ειπεν αυτω τι τουτο ακουω περι σου αποδος τον λογον της οικονομιας σου ου γαρ δυνηση ετι οικονομειν <sup>3</sup>ειπεν δε εν εαυτω ο οικονομος τι ποιησω οτι ο κυριος μου αφαιρειται την οικονομιαν απ εμου σκαπτειν ουκ ισχυω επαιτειν αισχυνομαι <sup>4</sup>εγνων τι ποιησω ινα οταν μετασταθω της οικονομιας δεξωνται με εις τους οικους αυτων <sup>5</sup>και προσκαλεσαμενος ενα εκαστον των χρεωφειλετων του κυριου εαυτου ελεγεν τω πρωτω ποσον οφειλεις τω κυριω μου <sup>6</sup>ο δε ειπεν εκατον βατους ελαιου και ειπεν αυτω δεξαι σου το γραμμα και καθισας ταχεως γραψον πεντηκοντα <sup>7</sup>επειτα ετερω ειπεν συ δε ποσον οφειλεις ο δε ειπεν εκατον κορους σιτου και λεγει αυτω δεξαι σου το γραμμα και γραψον ογδοηκοντα <sup>8</sup>και επηνεσεν ο κυριος τον οικονομον της αδικιας οτι φρονιμως εποιησεν οτι οι υιοι του αιωνος τουτου φρονιμωτεροι υπερ τους υιους του φωτος εις την γενεαν την εαυτων εισιν</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>And he said also unto his disciples,
 There was a certain rich man, which had a steward; and the same was accused unto him that he had wasted his goods. <sup>2</sup>And he called him, and said unto him, How is it that I hear this of thee? give an account of thy stewardship; for thou mayest be no longer steward. <sup>3</sup>Then the steward said within himself, What shall I do? for my lord taketh away from me the stewardship: I cannot dig; to beg I am ashamed. <sup>4</sup>I am resolved what to do, that, when I am put out of the stewardship, they may receive me into their houses. <sup>5</sup>So he called every one of his lord’s debtors
 unto him,
  and said unto the first, How much owest thou unto my lord? <sup>6</sup>And he said, An hundred measures of oil. And he said unto him, Take thy bill, and sit down quickly, and write fifty. <sup>7</sup>Then said he to another, And how much owest thou? And he said, An hundred measures of wheat. And he said unto him, Take thy bill, and write fourscore. <sup>8</sup>And the lord commended the unjust steward, because he had done wisely: for the children of this world are in their generation wiser than the children of light.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s16-9-16">
-          <span class="section-ref">§16.9-16 · Luke 16:9-16</span>
-          <p><sup>9</sup>And I say unto you, Make to yourselves friends of the mammon of unrighteousness; that, when ye fail, they may receive you into everlasting habitations. <sup>10</sup>He that is faithful in that which is least is faithful also in much: and he that is unjust in the least is unjust also in much. <sup>11</sup>If therefore ye have not been faithful in the unrighteous mammon, who will commit to your trust the true
+        <div class="parallel-section" id="s16-9-16"
+             data-author="Luke (attributed)"
+             data-title="Luke, Chapter 16"
+             data-section="ch. 16.9-16"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-luke-16.html#s16-9-16">
+
+          <div class="section-header">
+            <span class="section-ref">§16.9-16 · Luke 16:9-16</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>9</sup>καγω υμιν λεγω ποιησατε εαυτοις φιλους εκ του μαμωνα της αδικιας ινα οταν εκλιπητε δεξωνται υμας εις τας αιωνιους σκηνας <sup>10</sup>ο πιστος εν ελαχιστω και εν πολλω πιστος εστιν και ο εν ελαχιστω αδικος και εν πολλω αδικος εστιν <sup>11</sup>ει ουν εν τω αδικω μαμωνα πιστοι ουκ εγενεσθε το αληθινον τις υμιν πιστευσει <sup>12</sup>και ει εν τω αλλοτριω πιστοι ουκ εγενεσθε το υμετερον τις υμιν δωσει <sup>13</sup>ουδεις οικετης δυναται δυσιν κυριοις δουλευειν η γαρ τον ενα μισησει και τον ετερον αγαπησει η ενος ανθεξεται και του ετερου καταφρονησει ου δυνασθε θεω δουλευειν και μαμωνα <sup>14</sup>ηκουον δε ταυτα παντα και οι φαρισαιοι φιλαργυροι υπαρχοντες και εξεμυκτηριζον αυτον <sup>15</sup>και ειπεν αυτοις υμεις εστε οι δικαιουντες εαυτους ενωπιον των ανθρωπων ο δε θεος γινωσκει τας καρδιας υμων οτι το εν ανθρωποις υψηλον βδελυγμα ενωπιον του θεου εστιν <sup>16</sup>ο νομος και οι προφηται εως ιωαννου απο τοτε η βασιλεια του θεου ευαγγελιζεται και πας εις αυτην βιαζεται</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>9</sup>And I say unto you, Make to yourselves friends of the mammon of unrighteousness; that, when ye fail, they may receive you into everlasting habitations. <sup>10</sup>He that is faithful in that which is least is faithful also in much: and he that is unjust in the least is unjust also in much. <sup>11</sup>If therefore ye have not been faithful in the unrighteous mammon, who will commit to your trust the true
 riches? <sup>12</sup>And if ye have not been faithful in that which is another man’s, who shall give you that which is your own? <sup>13</sup>No servant can serve two masters: for either he will hate the one, and love the other; or else he will hold to the one, and despise the other. Ye cannot serve God and mammon. <sup>14</sup>And the Pharisees also, who were covetous, heard all these things: and they derided him. <sup>15</sup>And he said unto them,
 Ye are they which justify yourselves before men; but God knoweth your hearts: for that which is highly esteemed among men is abomination in the sight of God. <sup>16</sup>The law and the prophets
 were until John: since that time the kingdom of God is preached, and every man presseth into it.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s16-17-24">
-          <span class="section-ref">§16.17-24 · Luke 16:17-24</span>
-          <p><sup>17</sup>And it is easier for heaven and earth to pass, than one tittle of the law to fail. <sup>18</sup>Whosoever putteth away his wife, and marrieth another, committeth adultery: and whosoever marrieth her that is put away from
+        <div class="parallel-section" id="s16-17-24"
+             data-author="Luke (attributed)"
+             data-title="Luke, Chapter 16"
+             data-section="ch. 16.17-24"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-luke-16.html#s16-17-24">
+
+          <div class="section-header">
+            <span class="section-ref">§16.17-24 · Luke 16:17-24</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>17</sup>ευκοπωτερον δε εστιν τον ουρανον και την γην παρελθειν η του νομου μιαν κεραιαν πεσειν <sup>18</sup>πας ο απολυων την γυναικα αυτου και γαμων ετεραν μοιχευει και πας ο απολελυμενην απο ανδρος γαμων μοιχευει <sup>19</sup>ανθρωπος δε τις ην πλουσιος και ενεδιδυσκετο πορφυραν και βυσσον ευφραινομενος καθ ημεραν λαμπρως <sup>20</sup>πτωχος δε τις ην ονοματι λαζαρος ος εβεβλητο προς τον πυλωνα αυτου ηλκωμενος <sup>21</sup>και επιθυμων χορτασθηναι απο των ψιχιων των πιπτοντων απο της τραπεζης του πλουσιου αλλα και οι κυνες ερχομενοι απελειχον τα ελκη αυτου <sup>22</sup>εγενετο δε αποθανειν τον πτωχον και απενεχθηναι αυτον υπο των αγγελων εις τον κολπον του αβρααμ απεθανεν δε και ο πλουσιος και εταφη <sup>23</sup>και εν τω αδη επαρας τους οφθαλμους αυτου υπαρχων εν βασανοις ορα τον αβρααμ απο μακροθεν και λαζαρον εν τοις κολποις αυτου <sup>24</sup>και αυτος φωνησας ειπεν πατερ αβρααμ ελεησον με και πεμψον λαζαρον ινα βαψη το ακρον του δακτυλου αυτου υδατος και καταψυξη την γλωσσαν μου οτι οδυνωμαι εν τη φλογι ταυτη</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>17</sup>And it is easier for heaven and earth to pass, than one tittle of the law to fail. <sup>18</sup>Whosoever putteth away his wife, and marrieth another, committeth adultery: and whosoever marrieth her that is put away from
 her
  husband committeth adultery. <sup>19</sup>There was a certain rich man, which was clothed in purple and fine linen, and fared sumptuously every day: <sup>20</sup>And there was a certain beggar named Lazarus, which was laid at his gate, full of sores, <sup>21</sup>And desiring to be fed with the crumbs which fell from the rich man’s table: moreover the dogs came and licked his sores. <sup>22</sup>And it came to pass, that the beggar died, and was carried by the angels into Abraham’s bosom: the rich man also died, and was buried; <sup>23</sup>And in hell he lift up his eyes, being in torments, and seeth Abraham afar off, and Lazarus in his bosom. <sup>24</sup>And he cried and said, Father Abraham, have mercy on me, and send Lazarus, that he may dip the tip of his finger in water, and cool my tongue; for I am tormented in this flame.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s16-25-31">
-          <span class="section-ref">§16.25-31 · Luke 16:25-31</span>
-          <p><sup>25</sup>But Abraham said, Son, remember that thou in thy lifetime receivedst thy good things, and likewise Lazarus evil things: but now he is comforted, and thou art tormented. <sup>26</sup>And beside all this, between us and you there is a great gulf fixed: so that they which would pass from hence to you cannot; neither can they pass to us, that
+        <div class="parallel-section" id="s16-25-31"
+             data-author="Luke (attributed)"
+             data-title="Luke, Chapter 16"
+             data-section="ch. 16.25-31"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-luke-16.html#s16-25-31">
+
+          <div class="section-header">
+            <span class="section-ref">§16.25-31 · Luke 16:25-31</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>25</sup>ειπεν δε αβρααμ τεκνον μνησθητι οτι απελαβες συ τα αγαθα σου εν τη ζωη σου και λαζαρος ομοιως τα κακα νυν δε οδε παρακαλειται συ δε οδυνασαι <sup>26</sup>και επι πασιν τουτοις μεταξυ ημων και υμων χασμα μεγα εστηρικται οπως οι θελοντες διαβηναι εντευθεν προς υμας μη δυνωνται μηδε οι εκειθεν προς ημας διαπερωσιν <sup>27</sup>ειπεν δε ερωτω ουν σε πατερ ινα πεμψης αυτον εις τον οικον του πατρος μου <sup>28</sup>εχω γαρ πεντε αδελφους οπως διαμαρτυρηται αυτοις ινα μη και αυτοι ελθωσιν εις τον τοπον τουτον της βασανου <sup>29</sup>λεγει αυτω αβρααμ εχουσιν μωσεα και τους προφητας ακουσατωσαν αυτων <sup>30</sup>ο δε ειπεν ουχι πατερ αβρααμ αλλ εαν τις απο νεκρων πορευθη προς αυτους μετανοησουσιν <sup>31</sup>ειπεν δε αυτω ει μωσεως και των προφητων ουκ ακουουσιν ουδε εαν τις εκ νεκρων αναστη πεισθησονται</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>25</sup>But Abraham said, Son, remember that thou in thy lifetime receivedst thy good things, and likewise Lazarus evil things: but now he is comforted, and thou art tormented. <sup>26</sup>And beside all this, between us and you there is a great gulf fixed: so that they which would pass from hence to you cannot; neither can they pass to us, that
 would come from thence. <sup>27</sup>Then he said, I pray thee therefore, father, that thou wouldest send him to my father’s house: <sup>28</sup>For I have five brethren; that he may testify unto them, lest they also come into this place of torment. <sup>29</sup>Abraham saith unto him, They have Moses and the prophets; let them hear them. <sup>30</sup>And he said, Nay, father Abraham: but if one went unto them from the dead, they will repent. <sup>31</sup>And he said unto him, If they hear not Moses and the prophets, neither will they be persuaded, though one rose from the dead.</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 

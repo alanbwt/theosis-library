@@ -91,13 +91,61 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s7-1-5">
-          <span class="section-ref">§7.1-5 · 2 Corinthians 7:1-5</span>
-          <p><sup>1</sup>Having therefore these promises, dearly beloved, let us cleanse ourselves from all filthiness of the flesh and spirit, perfecting holiness in the fear of God. <sup>2</sup>Receive us; we have wronged no man, we have corrupted no man, we have defrauded no man. <sup>3</sup>I speak not
+        <div class="parallel-section" id="s7-1-5"
+             data-author="Unknown"
+             data-title="2 Corinthians, Chapter 7"
+             data-section="ch. 7.1-5"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-2cor-7.html#s7-1-5">
+
+          <div class="section-header">
+            <span class="section-ref">§7.1-5 · 2 Corinthians 7:1-5</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/codex_sinaiticus.jpg"
+                 alt="Scan sinaiticus/codex_sinaiticus.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/codex_sinaiticus.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>ταυτας ουν εχοντες τας επαγγελιας αγαπητοι καθαρισωμεν εαυτους απο παντος μολυσμου σαρκος και πνευματος επιτελουντες αγιωσυνην εν φοβω θεου <sup>2</sup>χωρησατε ημας ουδενα ηδικησαμεν ουδενα εφθειραμεν ουδενα επλεονεκτησαμεν <sup>3</sup>ου προς κατακρισιν λεγω προειρηκα γαρ οτι εν ταις καρδιαις ημων εστε εις το συναποθανειν και συζην <sup>4</sup>πολλη μοι παρρησια προς υμας πολλη μοι καυχησις υπερ υμων πεπληρωμαι τη παρακλησει υπερπερισσευομαι τη χαρα επι παση τη θλιψει ημων <sup>5</sup>και γαρ ελθοντων ημων εις μακεδονιαν ουδεμιαν εσχηκεν ανεσιν η σαρξ ημων αλλ εν παντι θλιβομενοι εξωθεν μαχαι εσωθεν φοβοι</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>Having therefore these promises, dearly beloved, let us cleanse ourselves from all filthiness of the flesh and spirit, perfecting holiness in the fear of God. <sup>2</sup>Receive us; we have wronged no man, we have corrupted no man, we have defrauded no man. <sup>3</sup>I speak not
 this to condemn
 you: for I have said before, that ye are in our hearts to die and live with
 you. <sup>4</sup>Great
@@ -107,17 +155,67 @@ is
 were fightings, within
 were
  fears.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s7-6-10">
-          <span class="section-ref">§7.6-10 · 2 Corinthians 7:6-10</span>
-          <p><sup>6</sup>Nevertheless God, that comforteth those that are cast down, comforted us by the coming of Titus; <sup>7</sup>And not by his coming only, but by the consolation wherewith he was comforted in you, when he told us your earnest desire, your mourning, your fervent mind toward me; so that I rejoiced the more. <sup>8</sup>For though I made you sorry with a letter, I do not repent, though I did repent: for I perceive that the same epistle hath made you sorry, though
+        <div class="parallel-section" id="s7-6-10"
+             data-author="Unknown"
+             data-title="2 Corinthians, Chapter 7"
+             data-section="ch. 7.6-10"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-2cor-7.html#s7-6-10">
+
+          <div class="section-header">
+            <span class="section-ref">§7.6-10 · 2 Corinthians 7:6-10</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>6</sup>αλλ ο παρακαλων τους ταπεινους παρεκαλεσεν ημας ο θεος εν τη παρουσια τιτου <sup>7</sup>ου μονον δε εν τη παρουσια αυτου αλλα και εν τη παρακλησει η παρεκληθη εφ υμιν αναγγελλων ημιν την υμων επιποθησιν τον υμων οδυρμον τον υμων ζηλον υπερ εμου ωστε με μαλλον χαρηναι <sup>8</sup>οτι ει και ελυπησα υμας εν τη επιστολη ου μεταμελομαι ει και μετεμελομην βλεπω γαρ οτι η επιστολη εκεινη ει και προς ωραν ελυπησεν υμας <sup>9</sup>νυν χαιρω ουχ οτι ελυπηθητε αλλ οτι ελυπηθητε εις μετανοιαν ελυπηθητε γαρ κατα θεον ινα εν μηδενι ζημιωθητε εξ ημων <sup>10</sup>η γαρ κατα θεον λυπη μετανοιαν εις σωτηριαν αμεταμελητον κατεργαζεται η δε του κοσμου λυπη θανατον κατεργαζεται</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>6</sup>Nevertheless God, that comforteth those that are cast down, comforted us by the coming of Titus; <sup>7</sup>And not by his coming only, but by the consolation wherewith he was comforted in you, when he told us your earnest desire, your mourning, your fervent mind toward me; so that I rejoiced the more. <sup>8</sup>For though I made you sorry with a letter, I do not repent, though I did repent: for I perceive that the same epistle hath made you sorry, though
 it were but for a season. <sup>9</sup>Now I rejoice, not that ye were made sorry, but that ye sorrowed to repentance: for ye were made sorry after a godly manner, that ye might receive damage by us in nothing. <sup>10</sup>For godly sorrow worketh repentance to salvation not to be repented of: but the sorrow of the world worketh death.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s7-11-15">
-          <span class="section-ref">§7.11-15 · 2 Corinthians 7:11-15</span>
-          <p><sup>11</sup>For behold this selfsame thing, that ye sorrowed after a godly sort, what carefulness it wrought in you, yea,
+        <div class="parallel-section" id="s7-11-15"
+             data-author="Unknown"
+             data-title="2 Corinthians, Chapter 7"
+             data-section="ch. 7.11-15"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-2cor-7.html#s7-11-15">
+
+          <div class="section-header">
+            <span class="section-ref">§7.11-15 · 2 Corinthians 7:11-15</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>11</sup>ιδου γαρ αυτο τουτο το κατα θεον λυπηθηναι υμας ποσην κατειργασατο υμιν σπουδην αλλα απολογιαν αλλα αγανακτησιν αλλα φοβον αλλα επιποθησιν αλλα ζηλον αλλ εκδικησιν εν παντι συνεστησατε εαυτους αγνους ειναι εν τω πραγματι <sup>12</sup>αρα ει και εγραψα υμιν ουχ εινεκεν του αδικησαντος ουδε εινεκεν του αδικηθεντος αλλ εινεκεν του φανερωθηναι την σπουδην ημων την υπερ υμων προς υμας ενωπιον του θεου <sup>13</sup>δια τουτο παρακεκλημεθα επι τη παρακλησει υμων περισσοτερως δε μαλλον εχαρημεν επι τη χαρα τιτου οτι αναπεπαυται το πνευμα αυτου απο παντων υμων <sup>14</sup>οτι ει τι αυτω υπερ υμων κεκαυχημαι ου κατησχυνθην αλλ ως παντα εν αληθεια ελαλησαμεν υμιν ουτως και η καυχησις ημων η επι τιτου αληθεια εγενηθη <sup>15</sup>και τα σπλαγχνα αυτου περισσοτερως εις υμας εστιν αναμιμνησκομενου την παντων υμων υπακοην ως μετα φοβου και τρομου εδεξασθε αυτον</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>11</sup>For behold this selfsame thing, that ye sorrowed after a godly sort, what carefulness it wrought in you, yea,
 what clearing of yourselves, yea,
 what indignation, yea,
 what fear, yea,
@@ -129,15 +227,42 @@ things ye have approved yourselves to be clear in this matter. <sup>12</sup>Wher
 I did it not for his cause that had done the wrong, nor for his cause that suffered wrong, but that our care for you in the sight of God might appear unto you. <sup>13</sup>Therefore we were comforted in your comfort: yea, and exceedingly the more joyed we for the joy of Titus, because his spirit was refreshed by you all. <sup>14</sup>For if I have boasted any thing to him of you, I am not ashamed; but as we spake all things to you in truth, even so our boasting, which
 I made
  before Titus, is found a truth. <sup>15</sup>And his inward affection is more abundant toward you, whilst he remembereth the obedience of you all, how with fear and trembling ye received him.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s7-16">
-          <span class="section-ref">§7.16 · 2 Corinthians 7:16</span>
-          <p><sup>16</sup>I rejoice therefore that I have confidence in you in all
+        <div class="parallel-section" id="s7-16"
+             data-author="Unknown"
+             data-title="2 Corinthians, Chapter 7"
+             data-section="ch. 7.16"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-2cor-7.html#s7-16">
+
+          <div class="section-header">
+            <span class="section-ref">§7.16 · 2 Corinthians 7:16</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>16</sup>χαιρω ουν οτι εν παντι θαρρω εν υμιν</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>16</sup>I rejoice therefore that I have confidence in you in all
 things.</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 

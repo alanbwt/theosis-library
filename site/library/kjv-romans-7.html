@@ -91,13 +91,68 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s7-1-8">
-          <span class="section-ref">§7.1-8 · Romans 7:1-8</span>
-          <p><sup>1</sup>Know ye not, brethren, (for I speak to them that know the law,) how that the law hath dominion over a man as long as he liveth? <sup>2</sup>For the woman which hath an husband is bound by the law to
+        <div class="parallel-section" id="s7-1-8"
+             data-author="Unknown"
+             data-title="Romans, Chapter 7"
+             data-section="ch. 7.1-8"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-romans-7.html#s7-1-8">
+
+          <div class="section-header">
+            <span class="section-ref">§7.1-8 · Romans 7:1-8</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus-rom-8a.jpg"
+                 alt="Scan sinaiticus/sinaiticus-rom-8a.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus-rom-8a.jpg')"
+                 title="Click to enlarge">
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus-rom-8-14a.jpg"
+                 alt="Scan sinaiticus/sinaiticus-rom-8-14a.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus-rom-8-14a.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>η αγνοειτε αδελφοι γινωσκουσιν γαρ νομον λαλω οτι ο νομος κυριευει του ανθρωπου εφ οσον χρονον ζη <sup>2</sup>η γαρ υπανδρος γυνη τω ζωντι ανδρι δεδεται νομω εαν δε αποθανη ο ανηρ κατηργηται απο του ανδρος <sup>3</sup>αρα ουν ζωντος του ανδρος μοιχαλις χρηματισει εαν γενηται ανδρι ετερω εαν δε αποθανη ο ανηρ ελευθερα εστιν απο του νομου του μη ειναι αυτην μοιχαλιδα γενομενην ανδρι ετερω <sup>4</sup>ωστε αδελφοι μου και υμεις εθανατωθητε τω νομω δια του σωματος του χριστου εις το γενεσθαι υμας ετερω τω εκ νεκρων εγερθεντι ινα καρποφορησωμεν τω θεω <sup>5</sup>οτε γαρ ημεν εν τη σαρκι τα παθηματα των αμαρτιων τα δια του νομου ενηργειτο εν τοις μελεσιν ημων εις το καρποφορησαι τω θανατω <sup>6</sup>νυνι δε κατηργηθημεν απο του νομου αποθανοντος εν ω κατειχομεθα ωστε δουλευειν ημας εν καινοτητι πνευματος και ου παλαιοτητι γραμματος <sup>7</sup>τι ουν ερουμεν ο νομος αμαρτια μη γενοιτο αλλα την αμαρτιαν ουκ εγνων ει μη δια νομου την τε γαρ επιθυμιαν ουκ ηδειν ει μη ο νομος ελεγεν ουκ επιθυμησεις <sup>8</sup>αφορμην δε λαβουσα η αμαρτια δια της εντολης κατειργασατο εν εμοι πασαν επιθυμιαν χωρις γαρ νομου αμαρτια νεκρα</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>Know ye not, brethren, (for I speak to them that know the law,) how that the law hath dominion over a man as long as he liveth? <sup>2</sup>For the woman which hath an husband is bound by the law to
 her
  husband so long as he liveth; but if the husband be dead, she is loosed from the law of
 her husband. <sup>3</sup>So then if, while
@@ -106,30 +161,107 @@ even to him who is raised from the dead, that we should bring forth fruit unto G
 in the oldness of the letter. <sup>7</sup>What shall we say then?
 Is the law sin? God forbid. Nay, I had not known sin, but by the law: for I had not known lust, except the law had said, Thou shalt not covet. <sup>8</sup>But sin, taking occasion by the commandment, wrought in me all manner of concupiscence. For without the law sin
 was dead.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s7-9-16">
-          <span class="section-ref">§7.9-16 · Romans 7:9-16</span>
-          <p><sup>9</sup>For I was alive without the law once: but when the commandment came, sin revived, and I died. <sup>10</sup>And the commandment, which
+        <div class="parallel-section" id="s7-9-16"
+             data-author="Unknown"
+             data-title="Romans, Chapter 7"
+             data-section="ch. 7.9-16"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-romans-7.html#s7-9-16">
+
+          <div class="section-header">
+            <span class="section-ref">§7.9-16 · Romans 7:9-16</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>9</sup>εγω δε εζων χωρις νομου ποτε ελθουσης δε της εντολης η αμαρτια ανεζησεν εγω δε απεθανον <sup>10</sup>και ευρεθη μοι η εντολη η εις ζωην αυτη εις θανατον <sup>11</sup>η γαρ αμαρτια αφορμην λαβουσα δια της εντολης εξηπατησεν με και δι αυτης απεκτεινεν <sup>12</sup>ωστε ο μεν νομος αγιος και η εντολη αγια και δικαια και αγαθη <sup>13</sup>το ουν αγαθον εμοι γεγονεν θανατος μη γενοιτο αλλα η αμαρτια ινα φανη αμαρτια δια του αγαθου μοι κατεργαζομενη θανατον ινα γενηται καθ υπερβολην αμαρτωλος η αμαρτια δια της εντολης <sup>14</sup>οιδαμεν γαρ οτι ο νομος πνευματικος εστιν εγω δε σαρκικος ειμι πεπραμενος υπο την αμαρτιαν <sup>15</sup>ο γαρ κατεργαζομαι ου γινωσκω ου γαρ ο θελω τουτο πρασσω αλλ ο μισω τουτο ποιω <sup>16</sup>ει δε ο ου θελω τουτο ποιω συμφημι τω νομω οτι καλος</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>9</sup>For I was alive without the law once: but when the commandment came, sin revived, and I died. <sup>10</sup>And the commandment, which
 was ordained to life, I found
 to be unto death. <sup>11</sup>For sin, taking occasion by the commandment, deceived me, and by it slew
 me. <sup>12</sup>Wherefore the law
 is holy, and the commandment holy, and just, and good. <sup>13</sup>Was then that which is good made death unto me? God forbid. But sin, that it might appear sin, working death in me by that which is good; that sin by the commandment might become exceeding sinful. <sup>14</sup>For we know that the law is spiritual: but I am carnal, sold under sin. <sup>15</sup>For that which I do I allow not: for what I would, that do I not; but what I hate, that do I. <sup>16</sup>If then I do that which I would not, I consent unto the law that
 it is good.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s7-17-24">
-          <span class="section-ref">§7.17-24 · Romans 7:17-24</span>
-          <p><sup>17</sup>Now then it is no more I that do it, but sin that dwelleth in me. <sup>18</sup>For I know that in me (that is, in my flesh,) dwelleth no good thing: for to will is present with me; but
+        <div class="parallel-section" id="s7-17-24"
+             data-author="Unknown"
+             data-title="Romans, Chapter 7"
+             data-section="ch. 7.17-24"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-romans-7.html#s7-17-24">
+
+          <div class="section-header">
+            <span class="section-ref">§7.17-24 · Romans 7:17-24</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>17</sup>νυνι δε ουκετι εγω κατεργαζομαι αυτο αλλ η οικουσα εν εμοι αμαρτια <sup>18</sup>οιδα γαρ οτι ουκ οικει εν εμοι τουτ εστιν εν τη σαρκι μου αγαθον το γαρ θελειν παρακειται μοι το δε κατεργαζεσθαι το καλον ουχ ευρισκω <sup>19</sup>ου γαρ ο θελω ποιω αγαθον αλλ ο ου θελω κακον τουτο πρασσω <sup>20</sup>ει δε ο ου θελω εγω τουτο ποιω ουκετι εγω κατεργαζομαι αυτο αλλ η οικουσα εν εμοι αμαρτια <sup>21</sup>ευρισκω αρα τον νομον τω θελοντι εμοι ποιειν το καλον οτι εμοι το κακον παρακειται <sup>22</sup>συνηδομαι γαρ τω νομω του θεου κατα τον εσω ανθρωπον <sup>23</sup>βλεπω δε ετερον νομον εν τοις μελεσιν μου αντιστρατευομενον τω νομω του νοος μου και αιχμαλωτιζοντα με τω νομω της αμαρτιας τω οντι εν τοις μελεσιν μου <sup>24</sup>ταλαιπωρος εγω ανθρωπος τις με ρυσεται εκ του σωματος του θανατου τουτου</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>17</sup>Now then it is no more I that do it, but sin that dwelleth in me. <sup>18</sup>For I know that in me (that is, in my flesh,) dwelleth no good thing: for to will is present with me; but
 how to perform that which is good I find not. <sup>19</sup>For the good that I would I do not: but the evil which I would not, that I do. <sup>20</sup>Now if I do that I would not, it is no more I that do it, but sin that dwelleth in me. <sup>21</sup>I find then a law, that, when I would do good, evil is present with me. <sup>22</sup>For I delight in the law of God after the inward man: <sup>23</sup>But I see another law in my members, warring against the law of my mind, and bringing me into captivity to the law of sin which is in my members. <sup>24</sup>O wretched man that I am! who shall deliver me from the body of this death?</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s7-25">
-          <span class="section-ref">§7.25 · Romans 7:25</span>
-          <p><sup>25</sup>I thank God through Jesus Christ our Lord. So then with the mind I myself serve the law of God; but with the flesh the law of sin.</p>
+        <div class="parallel-section" id="s7-25"
+             data-author="Unknown"
+             data-title="Romans, Chapter 7"
+             data-section="ch. 7.25"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-romans-7.html#s7-25">
+
+          <div class="section-header">
+            <span class="section-ref">§7.25 · Romans 7:25</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>25</sup>ευχαριστω τω θεω δια ιησου χριστου του κυριου ημων αρα ουν αυτος εγω τω μεν νοι δουλευω νομω θεου τη δε σαρκι νομω αμαρτιας</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>25</sup>I thank God through Jesus Christ our Lord. So then with the mind I myself serve the law of God; but with the flesh the law of sin.</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 

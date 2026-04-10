@@ -91,41 +91,166 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s3-1-5">
-          <span class="section-ref">§3.1-5 · 2 Thessalonians 3:1-5</span>
-          <p><sup>1</sup>Finally, brethren, pray for us, that the word of the Lord may have
+        <div class="parallel-section" id="s3-1-5"
+             data-author="Unknown"
+             data-title="2 Thessalonians, Chapter 3"
+             data-section="ch. 3.1-5"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-2thess-3.html#s3-1-5">
+
+          <div class="section-header">
+            <span class="section-ref">§3.1-5 · 2 Thessalonians 3:1-5</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/codex_sinaiticus.jpg"
+                 alt="Scan sinaiticus/codex_sinaiticus.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/codex_sinaiticus.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>το λοιπον προσευχεσθε αδελφοι περι ημων ινα ο λογος του κυριου τρεχη και δοξαζηται καθως και προς υμας <sup>2</sup>και ινα ρυσθωμεν απο των ατοπων και πονηρων ανθρωπων ου γαρ παντων η πιστις <sup>3</sup>πιστος δε εστιν ο κυριος ος στηριξει υμας και φυλαξει απο του πονηρου <sup>4</sup>πεποιθαμεν δε εν κυριω εφ υμας οτι α παραγγελλομεν υμιν και ποιειτε και ποιησετε <sup>5</sup>ο δε κυριος κατευθυναι υμων τας καρδιας εις την αγαπην του θεου και εις υπομονην του χριστου</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>Finally, brethren, pray for us, that the word of the Lord may have
 free course, and be glorified, even as
 it is with you: <sup>2</sup>And that we may be delivered from unreasonable and wicked men: for all
 men have not faith. <sup>3</sup>But the Lord is faithful, who shall stablish you, and keep
 you
  from evil. <sup>4</sup>And we have confidence in the Lord touching you, that ye both do and will do the things which we command you. <sup>5</sup>And the Lord direct your hearts into the love of God, and into the patient waiting for Christ.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s3-6-10">
-          <span class="section-ref">§3.6-10 · 2 Thessalonians 3:6-10</span>
-          <p><sup>6</sup>Now we command you, brethren, in the name of our Lord Jesus Christ, that ye withdraw yourselves from every brother that walketh disorderly, and not after the tradition which he received of us. <sup>7</sup>For yourselves know how ye ought to follow us: for we behaved not ourselves disorderly among you; <sup>8</sup>Neither did we eat any man’s bread for nought; but wrought with labour and travail night and day, that we might not be chargeable to any of you: <sup>9</sup>Not because we have not power, but to make ourselves an ensample unto you to follow us. <sup>10</sup>For even when we were with you, this we commanded you, that if any would not work, neither should he eat.</p>
+        <div class="parallel-section" id="s3-6-10"
+             data-author="Unknown"
+             data-title="2 Thessalonians, Chapter 3"
+             data-section="ch. 3.6-10"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-2thess-3.html#s3-6-10">
+
+          <div class="section-header">
+            <span class="section-ref">§3.6-10 · 2 Thessalonians 3:6-10</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>6</sup>παραγγελλομεν δε υμιν αδελφοι εν ονοματι του κυριου ημων ιησου χριστου στελλεσθαι υμας απο παντος αδελφου ατακτως περιπατουντος και μη κατα την παραδοσιν ην παρελαβεν παρ ημων <sup>7</sup>αυτοι γαρ οιδατε πως δει μιμεισθαι ημας οτι ουκ ητακτησαμεν εν υμιν <sup>8</sup>ουδε δωρεαν αρτον εφαγομεν παρα τινος αλλ εν κοπω και μοχθω νυκτα και ημεραν εργαζομενοι προς το μη επιβαρησαι τινα υμων <sup>9</sup>ουχ οτι ουκ εχομεν εξουσιαν αλλ ινα εαυτους τυπον δωμεν υμιν εις το μιμεισθαι ημας <sup>10</sup>και γαρ οτε ημεν προς υμας τουτο παρηγγελλομεν υμιν οτι ει τις ου θελει εργαζεσθαι μηδε εσθιετω</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>6</sup>Now we command you, brethren, in the name of our Lord Jesus Christ, that ye withdraw yourselves from every brother that walketh disorderly, and not after the tradition which he received of us. <sup>7</sup>For yourselves know how ye ought to follow us: for we behaved not ourselves disorderly among you; <sup>8</sup>Neither did we eat any man’s bread for nought; but wrought with labour and travail night and day, that we might not be chargeable to any of you: <sup>9</sup>Not because we have not power, but to make ourselves an ensample unto you to follow us. <sup>10</sup>For even when we were with you, this we commanded you, that if any would not work, neither should he eat.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s3-11-15">
-          <span class="section-ref">§3.11-15 · 2 Thessalonians 3:11-15</span>
-          <p><sup>11</sup>For we hear that there are some which walk among you disorderly, working not at all, but are busybodies. <sup>12</sup>Now them that are such we command and exhort by our Lord Jesus Christ, that with quietness they work, and eat their own bread. <sup>13</sup>But ye, brethren, be not weary in well doing. <sup>14</sup>And if any man obey not our word by this epistle, note that man, and have no company with him, that he may be ashamed. <sup>15</sup>Yet count
+        <div class="parallel-section" id="s3-11-15"
+             data-author="Unknown"
+             data-title="2 Thessalonians, Chapter 3"
+             data-section="ch. 3.11-15"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-2thess-3.html#s3-11-15">
+
+          <div class="section-header">
+            <span class="section-ref">§3.11-15 · 2 Thessalonians 3:11-15</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>11</sup>ακουομεν γαρ τινας περιπατουντας εν υμιν ατακτως μηδεν εργαζομενους αλλα περιεργαζομενους <sup>12</sup>τοις δε τοιουτοις παραγγελλομεν και παρακαλουμεν δια του κυριου ημων ιησου χριστου ινα μετα ησυχιας εργαζομενοι τον εαυτων αρτον εσθιωσιν <sup>13</sup>υμεις δε αδελφοι μη εκκακησητε καλοποιουντες <sup>14</sup>ει δε τις ουχ υπακουει τω λογω ημων δια της επιστολης τουτον σημειουσθε και μη συναναμιγνυσθε αυτω ινα εντραπη <sup>15</sup>και μη ως εχθρον ηγεισθε αλλα νουθετειτε ως αδελφον</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>11</sup>For we hear that there are some which walk among you disorderly, working not at all, but are busybodies. <sup>12</sup>Now them that are such we command and exhort by our Lord Jesus Christ, that with quietness they work, and eat their own bread. <sup>13</sup>But ye, brethren, be not weary in well doing. <sup>14</sup>And if any man obey not our word by this epistle, note that man, and have no company with him, that he may be ashamed. <sup>15</sup>Yet count
 him not as an enemy, but admonish
 him
  as a brother.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s3-16-18">
-          <span class="section-ref">§3.16-18 · 2 Thessalonians 3:16-18</span>
-          <p><sup>16</sup>Now the Lord of peace himself give you peace always by all means. The Lord
+        <div class="parallel-section" id="s3-16-18"
+             data-author="Unknown"
+             data-title="2 Thessalonians, Chapter 3"
+             data-section="ch. 3.16-18"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-2thess-3.html#s3-16-18">
+
+          <div class="section-header">
+            <span class="section-ref">§3.16-18 · 2 Thessalonians 3:16-18</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>16</sup>αυτος δε ο κυριος της ειρηνης δωη υμιν την ειρηνην δια παντος εν παντι τροπω ο κυριος μετα παντων υμων <sup>17</sup>ο ασπασμος τη εμη χειρι παυλου ο εστιν σημειον εν παση επιστολη ουτως γραφω <sup>18</sup>η χαρις του κυριου ημων ιησου χριστου μετα παντων υμων αμην [προς θεσσαλονικεις δευτερα εγραφη απο αθηνων]</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>16</sup>Now the Lord of peace himself give you peace always by all means. The Lord
 be with you all. <sup>17</sup>The salutation of Paul with mine own hand, which is the token in every epistle: so I write. <sup>18</sup>The grace of our Lord Jesus Christ
 be with you all. Amen.</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 

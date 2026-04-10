@@ -91,20 +91,100 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s13-1-10">
-          <span class="section-ref">§13.1-10 · Matthew 13:1-10</span>
-          <p><sup>1</sup>The same day went Jesus out of the house, and sat by the sea side. <sup>2</sup>And great multitudes were gathered together unto him, so that he went into a ship, and sat; and the whole multitude stood on the shore. <sup>3</sup>And he spake many things unto them in parables, saying,
+        <div class="parallel-section" id="s13-1-10"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 13"
+             data-section="ch. 13.1-10"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-13.html#s13-1-10">
+
+          <div class="section-header">
+            <span class="section-ref">§13.1-10 · Matthew 13:1-10</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus-matt-5a.jpg"
+                 alt="Scan sinaiticus/sinaiticus-matt-5a.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus-matt-5a.jpg')"
+                 title="Click to enlarge">
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus_matthew_sample.jpg"
+                 alt="Scan sinaiticus/sinaiticus_matthew_sample.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus_matthew_sample.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>εν δε τη ημερα εκεινη εξελθων ο ιησους απο της οικιας εκαθητο παρα την θαλασσαν <sup>2</sup>και συνηχθησαν προς αυτον οχλοι πολλοι ωστε αυτον εις το πλοιον εμβαντα καθησθαι και πας ο οχλος επι τον αιγιαλον ειστηκει <sup>3</sup>και ελαλησεν αυτοις πολλα εν παραβολαις λεγων ιδου εξηλθεν ο σπειρων του σπειρειν <sup>4</sup>και εν τω σπειρειν αυτον α μεν επεσεν παρα την οδον και ηλθεν τα πετεινα και κατεφαγεν αυτα <sup>5</sup>αλλα δε επεσεν επι τα πετρωδη οπου ουκ ειχεν γην πολλην και ευθεως εξανετειλεν δια το μη εχειν βαθος γης <sup>6</sup>ηλιου δε ανατειλαντος εκαυματισθη και δια το μη εχειν ριζαν εξηρανθη <sup>7</sup>αλλα δε επεσεν επι τας ακανθας και ανεβησαν αι ακανθαι και απεπνιξαν αυτα <sup>8</sup>αλλα δε επεσεν επι την γην την καλην και εδιδου καρπον ο μεν εκατον ο δε εξηκοντα ο δε τριακοντα <sup>9</sup>ο εχων ωτα ακουειν ακουετω <sup>10</sup>και προσελθοντες οι μαθηται ειπον αυτω δια τι εν παραβολαις λαλεις αυτοις</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>The same day went Jesus out of the house, and sat by the sea side. <sup>2</sup>And great multitudes were gathered together unto him, so that he went into a ship, and sat; and the whole multitude stood on the shore. <sup>3</sup>And he spake many things unto them in parables, saying,
 Behold, a sower went forth to sow; <sup>4</sup>And when he sowed, some
 seeds fell by the way side, and the fowls came and devoured them up: <sup>5</sup>Some fell upon stony places, where they had not much earth: and forthwith they sprung up, because they had no deepness of earth: <sup>6</sup>And when the sun was up, they were scorched; and because they had no root, they withered away. <sup>7</sup>And some fell among thorns; and the thorns sprung up, and choked them: <sup>8</sup>But other fell into good ground, and brought forth fruit, some an hundredfold, some sixtyfold, some thirtyfold. <sup>9</sup>Who hath ears to hear, let him hear. <sup>10</sup>And the disciples came, and said unto him, Why speakest thou unto them in parables?</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s13-11-20">
-          <span class="section-ref">§13.11-20 · Matthew 13:11-20</span>
-          <p><sup>11</sup>He answered and said unto them,
+        <div class="parallel-section" id="s13-11-20"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 13"
+             data-section="ch. 13.11-20"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-13.html#s13-11-20">
+
+          <div class="section-header">
+            <span class="section-ref">§13.11-20 · Matthew 13:11-20</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>11</sup>ο δε αποκριθεις ειπεν αυτοις οτι υμιν δεδοται γνωναι τα μυστηρια της βασιλειας των ουρανων εκεινοις δε ου δεδοται <sup>12</sup>οστις γαρ εχει δοθησεται αυτω και περισσευθησεται οστις δε ουκ εχει και ο εχει αρθησεται απ αυτου <sup>13</sup>δια τουτο εν παραβολαις αυτοις λαλω οτι βλεποντες ου βλεπουσιν και ακουοντες ουκ ακουουσιν ουδε συνιουσιν <sup>14</sup>και αναπληρουται επ αυτοις η προφητεια ησαιου η λεγουσα ακοη ακουσετε και ου μη συνητε και βλεποντες βλεψετε και ου μη ιδητε <sup>15</sup>επαχυνθη γαρ η καρδια του λαου τουτου και τοις ωσιν βαρεως ηκουσαν και τους οφθαλμους αυτων εκαμμυσαν μηποτε ιδωσιν τοις οφθαλμοις και τοις ωσιν ακουσωσιν και τη καρδια συνωσιν και επιστρεψωσιν και ιασωμαι αυτους <sup>16</sup>υμων δε μακαριοι οι οφθαλμοι οτι βλεπουσιν και τα ωτα υμων οτι ακουει <sup>17</sup>αμην γαρ λεγω υμιν οτι πολλοι προφηται και δικαιοι επεθυμησαν ιδειν α βλεπετε και ουκ ειδον και ακουσαι α ακουετε και ουκ ηκουσαν <sup>18</sup>υμεις ουν ακουσατε την παραβολην του σπειροντος <sup>19</sup>παντος ακουοντος τον λογον της βασιλειας και μη συνιεντος ερχεται ο πονηρος και αρπαζει το εσπαρμενον εν τη καρδια αυτου ουτος εστιν ο παρα την οδον σπαρεις <sup>20</sup>ο δε επι τα πετρωδη σπαρεις ουτος εστιν ο τον λογον ακουων και ευθυς μετα χαρας λαμβανων αυτον</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>11</sup>He answered and said unto them,
 Because it is given unto you to know the mysteries of the kingdom of heaven, but to them it is not given. <sup>12</sup>For whosoever hath, to him shall be given, and he shall have more abundance: but whosoever hath not, from him shall be taken away even that he hath. <sup>13</sup>Therefore speak I to them in parables: because they seeing see not; and hearing they hear not, neither do they understand. <sup>14</sup>And in them is fulfilled the prophecy of Esaias, which saith, By hearing ye shall hear, and shall not understand; and seeing ye shall see, and shall not perceive: <sup>15</sup>For this people’s heart is waxed gross, and
 their ears are dull of hearing, and their eyes they have closed; lest at any time they should see with
 their eyes, and hear with
@@ -119,32 +199,132 @@ those things which ye hear, and have not heard
 them. <sup>18</sup>Hear ye therefore the parable of the sower. <sup>19</sup>When any one heareth the word of the kingdom, and understandeth
 it not, then cometh the wicked
 one, and catcheth away that which was sown in his heart. This is he which received seed by the way side. <sup>20</sup>But he that received the seed into stony places, the same is he that heareth the word, and anon with joy receiveth it;</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s13-21-30">
-          <span class="section-ref">§13.21-30 · Matthew 13:21-30</span>
-          <p><sup>21</sup>Yet hath he not root in himself, but dureth for a while: for when tribulation or persecution ariseth because of the word, by and by he is offended. <sup>22</sup>He also that received seed among the thorns is he that heareth the word; and the care of this world, and the deceitfulness of riches, choke the word, and he becometh unfruitful. <sup>23</sup>But he that received seed into the good ground is he that heareth the word, and understandeth
+        <div class="parallel-section" id="s13-21-30"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 13"
+             data-section="ch. 13.21-30"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-13.html#s13-21-30">
+
+          <div class="section-header">
+            <span class="section-ref">§13.21-30 · Matthew 13:21-30</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>21</sup>ουκ εχει δε ριζαν εν εαυτω αλλα προσκαιρος εστιν γενομενης δε θλιψεως η διωγμου δια τον λογον ευθυς σκανδαλιζεται <sup>22</sup>ο δε εις τας ακανθας σπαρεις ουτος εστιν ο τον λογον ακουων και η μεριμνα του αιωνος τουτου και η απατη του πλουτου συμπνιγει τον λογον και ακαρπος γινεται <sup>23</sup>ο δε επι την γην την καλην σπαρεις ουτος εστιν ο τον λογον ακουων και συνιων ος δη καρποφορει και ποιει ο μεν εκατον ο δε εξηκοντα ο δε τριακοντα <sup>24</sup>αλλην παραβολην παρεθηκεν αυτοις λεγων ωμοιωθη η βασιλεια των ουρανων ανθρωπω σπειροντι καλον σπερμα εν τω αγρω αυτου <sup>25</sup>εν δε τω καθευδειν τους ανθρωπους ηλθεν αυτου ο εχθρος και εσπειρεν ζιζανια ανα μεσον του σιτου και απηλθεν <sup>26</sup>οτε δε εβλαστησεν ο χορτος και καρπον εποιησεν τοτε εφανη και τα ζιζανια <sup>27</sup>προσελθοντες δε οι δουλοι του οικοδεσποτου ειπον αυτω κυριε ουχι καλον σπερμα εσπειρας εν τω σω αγρω ποθεν ουν εχει τα ζιζανια <sup>28</sup>ο δε εφη αυτοις εχθρος ανθρωπος τουτο εποιησεν οι δε δουλοι ειπον αυτω θελεις ουν απελθοντες συλλεξωμεν αυτα <sup>29</sup>ο δε εφη ου μηποτε συλλεγοντες τα ζιζανια εκριζωσητε αμα αυτοις τον σιτον <sup>30</sup>αφετε συναυξανεσθαι αμφοτερα μεχρι του θερισμου και εν τω καιρω του θερισμου ερω τοις θερισταις συλλεξατε πρωτον τα ζιζανια και δησατε αυτα εις δεσμας προς το κατακαυσαι αυτα τον δε σιτον συναγαγετε εις την αποθηκην μου</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>21</sup>Yet hath he not root in himself, but dureth for a while: for when tribulation or persecution ariseth because of the word, by and by he is offended. <sup>22</sup>He also that received seed among the thorns is he that heareth the word; and the care of this world, and the deceitfulness of riches, choke the word, and he becometh unfruitful. <sup>23</sup>But he that received seed into the good ground is he that heareth the word, and understandeth
 it; which also beareth fruit, and bringeth forth, some an hundredfold, some sixty, some thirty. <sup>24</sup>Another parable put he forth unto them, saying,
 The kingdom of heaven is likened unto a man which sowed good seed in his field: <sup>25</sup>But while men slept, his enemy came and sowed tares among the wheat, and went his way. <sup>26</sup>But when the blade was sprung up, and brought forth fruit, then appeared the tares also. <sup>27</sup>So the servants of the householder came and said unto him, Sir, didst not thou sow good seed in thy field? from whence then hath it tares? <sup>28</sup>He said unto them, An enemy hath done this. The servants said unto him, Wilt thou then that we go and gather them up? <sup>29</sup>But he said, Nay; lest while ye gather up the tares, ye root up also the wheat with them. <sup>30</sup>Let both grow together until the harvest: and in the time of harvest I will say to the reapers, Gather ye together first the tares, and bind them in bundles to burn them: but gather the wheat into my barn.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s13-31-40">
-          <span class="section-ref">§13.31-40 · Matthew 13:31-40</span>
-          <p><sup>31</sup>Another parable put he forth unto them, saying,
+        <div class="parallel-section" id="s13-31-40"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 13"
+             data-section="ch. 13.31-40"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-13.html#s13-31-40">
+
+          <div class="section-header">
+            <span class="section-ref">§13.31-40 · Matthew 13:31-40</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>31</sup>αλλην παραβολην παρεθηκεν αυτοις λεγων ομοια εστιν η βασιλεια των ουρανων κοκκω σιναπεως ον λαβων ανθρωπος εσπειρεν εν τω αγρω αυτου <sup>32</sup>ο μικροτερον μεν εστιν παντων των σπερματων οταν δε αυξηθη μειζον των λαχανων εστιν και γινεται δενδρον ωστε ελθειν τα πετεινα του ουρανου και κατασκηνουν εν τοις κλαδοις αυτου <sup>33</sup>αλλην παραβολην ελαλησεν αυτοις ομοια εστιν η βασιλεια των ουρανων ζυμη ην λαβουσα γυνη ενεκρυψεν εις αλευρου σατα τρια εως ου εζυμωθη ολον <sup>34</sup>ταυτα παντα ελαλησεν ο ιησους εν παραβολαις τοις οχλοις και χωρις παραβολης ουκ ελαλει αυτοις <sup>35</sup>οπως πληρωθη το ρηθεν δια του προφητου λεγοντος ανοιξω εν παραβολαις το στομα μου ερευξομαι κεκρυμμενα απο καταβολης κοσμου <sup>36</sup>τοτε αφεις τους οχλους ηλθεν εις την οικιαν ο ιησους και προσηλθον αυτω οι μαθηται αυτου λεγοντες φρασον ημιν την παραβολην των ζιζανιων του αγρου <sup>37</sup>ο δε αποκριθεις ειπεν αυτοις ο σπειρων το καλον σπερμα εστιν ο υιος του ανθρωπου <sup>38</sup>ο δε αγρος εστιν ο κοσμος το δε καλον σπερμα ουτοι εισιν οι υιοι της βασιλειας τα δε ζιζανια εισιν οι υιοι του πονηρου <sup>39</sup>ο δε εχθρος ο σπειρας αυτα εστιν ο διαβολος ο δε θερισμος συντελεια του αιωνος εστιν οι δε θερισται αγγελοι εισιν <sup>40</sup>ωσπερ ουν συλλεγεται τα ζιζανια και πυρι κατακαιεται ουτως εσται εν τη συντελεια του αιωνος τουτου</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>31</sup>Another parable put he forth unto them, saying,
 The kingdom of heaven is like to a grain of mustard seed, which a man took, and sowed in his field: <sup>32</sup>Which indeed is the least of all seeds: but when it is grown, it is the greatest among herbs, and becometh a tree, so that the birds of the air come and lodge in the branches thereof. <sup>33</sup>Another parable spake he unto them;
 The kingdom of heaven is like unto leaven, which a woman took, and hid in three measures of meal, till the whole was leavened. <sup>34</sup>All these things spake Jesus unto the multitude in parables; and without a parable spake he not unto them: <sup>35</sup>That it might be fulfilled which was spoken by the prophet, saying, I will open my mouth in parables; I will utter things which have been kept secret from the foundation of the world. <sup>36</sup>Then Jesus sent the multitude away, and went into the house: and his disciples came unto him, saying, Declare unto us the parable of the tares of the field. <sup>37</sup>He answered and said unto them,
 He that soweth the good seed is the Son of man; <sup>38</sup>The field is the world; the good seed are the children of the kingdom; but the tares are the children of the wicked
 one; <sup>39</sup>The enemy that sowed them is the devil; the harvest is the end of the world; and the reapers are the angels. <sup>40</sup>As therefore the tares are gathered and burned in the fire; so shall it be in the end of this world.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s13-41-50">
-          <span class="section-ref">§13.41-50 · Matthew 13:41-50</span>
-          <p><sup>41</sup>The Son of man shall send forth his angels, and they shall gather out of his kingdom all things that offend, and them which do iniquity; <sup>42</sup>And shall cast them into a furnace of fire: there shall be wailing and gnashing of teeth. <sup>43</sup>Then shall the righteous shine forth as the sun in the kingdom of their Father. Who hath ears to hear, let him hear. <sup>44</sup>Again, the kingdom of heaven is like unto treasure hid in a field; the which when a man hath found, he hideth, and for joy thereof goeth and selleth all that he hath, and buyeth that field. <sup>45</sup>Again, the kingdom of heaven is like unto a merchant man, seeking goodly pearls: <sup>46</sup>Who, when he had found one pearl of great price, went and sold all that he had, and bought it. <sup>47</sup>Again, the kingdom of heaven is like unto a net, that was cast into the sea, and gathered of every kind: <sup>48</sup>Which, when it was full, they drew to shore, and sat down, and gathered the good into vessels, but cast the bad away. <sup>49</sup>So shall it be at the end of the world: the angels shall come forth, and sever the wicked from among the just, <sup>50</sup>And shall cast them into the furnace of fire: there shall be wailing and gnashing of teeth.</p>
+        <div class="parallel-section" id="s13-41-50"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 13"
+             data-section="ch. 13.41-50"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-13.html#s13-41-50">
+
+          <div class="section-header">
+            <span class="section-ref">§13.41-50 · Matthew 13:41-50</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>41</sup>αποστελει ο υιος του ανθρωπου τους αγγελους αυτου και συλλεξουσιν εκ της βασιλειας αυτου παντα τα σκανδαλα και τους ποιουντας την ανομιαν <sup>42</sup>και βαλουσιν αυτους εις την καμινον του πυρος εκει εσται ο κλαυθμος και ο βρυγμος των οδοντων <sup>43</sup>τοτε οι δικαιοι εκλαμψουσιν ως ο ηλιος εν τη βασιλεια του πατρος αυτων ο εχων ωτα ακουειν ακουετω <sup>44</sup>παλιν ομοια εστιν η βασιλεια των ουρανων θησαυρω κεκρυμμενω εν τω αγρω ον ευρων ανθρωπος εκρυψεν και απο της χαρας αυτου υπαγει και παντα οσα εχει πωλει και αγοραζει τον αγρον εκεινον <sup>45</sup>παλιν ομοια εστιν η βασιλεια των ουρανων ανθρωπω εμπορω ζητουντι καλους μαργαριτας <sup>46</sup>ος ευρων ενα πολυτιμον μαργαριτην απελθων πεπρακεν παντα οσα ειχεν και ηγορασεν αυτον <sup>47</sup>παλιν ομοια εστιν η βασιλεια των ουρανων σαγηνη βληθειση εις την θαλασσαν και εκ παντος γενους συναγαγουση <sup>48</sup>ην οτε επληρωθη αναβιβασαντες επι τον αιγιαλον και καθισαντες συνελεξαν τα καλα εις αγγεια τα δε σαπρα εξω εβαλον <sup>49</sup>ουτως εσται εν τη συντελεια του αιωνος εξελευσονται οι αγγελοι και αφοριουσιν τους πονηρους εκ μεσου των δικαιων <sup>50</sup>και βαλουσιν αυτους εις την καμινον του πυρος εκει εσται ο κλαυθμος και ο βρυγμος των οδοντων</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>41</sup>The Son of man shall send forth his angels, and they shall gather out of his kingdom all things that offend, and them which do iniquity; <sup>42</sup>And shall cast them into a furnace of fire: there shall be wailing and gnashing of teeth. <sup>43</sup>Then shall the righteous shine forth as the sun in the kingdom of their Father. Who hath ears to hear, let him hear. <sup>44</sup>Again, the kingdom of heaven is like unto treasure hid in a field; the which when a man hath found, he hideth, and for joy thereof goeth and selleth all that he hath, and buyeth that field. <sup>45</sup>Again, the kingdom of heaven is like unto a merchant man, seeking goodly pearls: <sup>46</sup>Who, when he had found one pearl of great price, went and sold all that he had, and bought it. <sup>47</sup>Again, the kingdom of heaven is like unto a net, that was cast into the sea, and gathered of every kind: <sup>48</sup>Which, when it was full, they drew to shore, and sat down, and gathered the good into vessels, but cast the bad away. <sup>49</sup>So shall it be at the end of the world: the angels shall come forth, and sever the wicked from among the just, <sup>50</sup>And shall cast them into the furnace of fire: there shall be wailing and gnashing of teeth.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s13-51-58">
-          <span class="section-ref">§13.51-58 · Matthew 13:51-58</span>
-          <p><sup>51</sup>Jesus saith unto them,
+        <div class="parallel-section" id="s13-51-58"
+             data-author="Unknown"
+             data-title="Matthew, Chapter 13"
+             data-section="ch. 13.51-58"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-matt-13.html#s13-51-58">
+
+          <div class="section-header">
+            <span class="section-ref">§13.51-58 · Matthew 13:51-58</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>51</sup>λεγει αυτοις ο ιησους συνηκατε ταυτα παντα λεγουσιν αυτω ναι κυριε <sup>52</sup>ο δε ειπεν αυτοις δια τουτο πας γραμματευς μαθητευθεις εις την βασιλειαν των ουρανων ομοιος εστιν ανθρωπω οικοδεσποτη οστις εκβαλλει εκ του θησαυρου αυτου καινα και παλαια <sup>53</sup>και εγενετο οτε ετελεσεν ο ιησους τας παραβολας ταυτας μετηρεν εκειθεν <sup>54</sup>και ελθων εις την πατριδα αυτου εδιδασκεν αυτους εν τη συναγωγη αυτων ωστε εκπληττεσθαι αυτους και λεγειν ποθεν τουτω η σοφια αυτη και αι δυναμεις <sup>55</sup>ουχ ουτος εστιν ο του τεκτονος υιος ουχι η μητηρ αυτου λεγεται μαριαμ και οι αδελφοι αυτου ιακωβος και ιωσης και σιμων και ιουδας <sup>56</sup>και αι αδελφαι αυτου ουχι πασαι προς ημας εισιν ποθεν ουν τουτω ταυτα παντα <sup>57</sup>και εσκανδαλιζοντο εν αυτω ο δε ιησους ειπεν αυτοις ουκ εστιν προφητης ατιμος ει μη εν τη πατριδι αυτου και εν τη οικια αυτου <sup>58</sup>και ουκ εποιησεν εκει δυναμεις πολλας δια την απιστιαν αυτων</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>51</sup>Jesus saith unto them,
 Have ye understood all these things?
  They say unto him, Yea, Lord. <sup>52</sup>Then said he unto them,
 Therefore every scribe
@@ -156,9 +336,11 @@ that when Jesus had finished these parables, he departed thence. <sup>54</sup>An
 man this wisdom, and
 these mighty works? <sup>55</sup>Is not this the carpenter’s son? is not his mother called Mary? and his brethren, James, and Joses, and Simon, and Judas? <sup>56</sup>And his sisters, are they not all with us? Whence then hath this
 man all these things? <sup>57</sup>And they were offended in him. But Jesus said unto them, A prophet is not without honour, save in his own country, and in his own house. <sup>58</sup>And he did not many mighty works there because of their unbelief.</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 

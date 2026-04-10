@@ -91,31 +91,138 @@
     </div>
 
     
-    <div class="container">
-      <section class="translation-body">
-        <h2>Translation</h2>
+    <div class="container--parallel">
+
+      
+
+      <div class="parallel-controls">
+        <span>English (KJV) original and English translation, with manuscript scans.</span>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('parallel-3', this)">Scan + Original + English</button>
+          <button  onclick="setView('parallel', this)">Original + English</button>
+          <button onclick="setView('translation-only', this)">English only</button>
+          <button onclick="setView('original-only', this)">English (KJV) only</button>
+        </div>
+      </div>
+
+      <section class="translation-body view-parallel-3" id="translation-body">
         
-        <div class="section-block" id="s5-1-8">
-          <span class="section-ref">§5.1-8 · 1 John 5:1-8</span>
-          <p><sup>1</sup>Whosoever believeth that Jesus is the Christ is born of God: and every one that loveth him that begat loveth him also that is begotten of him. <sup>2</sup>By this we know that we love the children of God, when we love God, and keep his commandments. <sup>3</sup>For this is the love of God, that we keep his commandments: and his commandments are not grievous. <sup>4</sup>For whatsoever is born of God overcometh the world: and this is the victory that overcometh the world,
+        <div class="parallel-section" id="s5-1-8"
+             data-author="John (attributed)"
+             data-title="1 John, Chapter 5"
+             data-section="ch. 5.1-8"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-1john-5.html#s5-1-8">
+
+          <div class="section-header">
+            <span class="section-ref">§5.1-8 · 1 John 5:1-8</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+          <div class="parallel-scan">
+            <div class="parallel-col-label">Manuscript</div>
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus-1john-3a.jpg"
+                 alt="Scan sinaiticus/sinaiticus-1john-3a.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus-1john-3a.jpg')"
+                 title="Click to enlarge">
+            
+            <img src="/assets/scans/sinaiticus/sinaiticus_1john_5.jpg"
+                 alt="Scan sinaiticus/sinaiticus_1john_5.jpg"
+                 class="scan-thumb"
+                 loading="lazy"
+                 onclick="openScan('/assets/scans/sinaiticus/sinaiticus_1john_5.jpg')"
+                 title="Click to enlarge">
+            
+          </div>
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>1</sup>πας ο πιστευων οτι ιησους εστιν ο χριστος εκ του θεου γεγεννηται και πας ο αγαπων τον γεννησαντα αγαπα και τον γεγεννημενον εξ αυτου <sup>2</sup>εν τουτω γινωσκομεν οτι αγαπωμεν τα τεκνα του θεου οταν τον θεον αγαπωμεν και τας εντολας αυτου τηρωμεν <sup>3</sup>αυτη γαρ εστιν η αγαπη του θεου ινα τας εντολας αυτου τηρωμεν και αι εντολαι αυτου βαρειαι ουκ εισιν <sup>4</sup>οτι παν το γεγεννημενον εκ του θεου νικα τον κοσμον και αυτη εστιν η νικη η νικησασα τον κοσμον η πιστις ημων <sup>5</sup>τις εστιν ο νικων τον κοσμον ει μη ο πιστευων οτι ιησους εστιν ο υιος του θεου <sup>6</sup>ουτος εστιν ο ελθων δι υδατος και αιματος ιησους ο χριστος ουκ εν τω υδατι μονον αλλ εν τω υδατι και τω αιματι και το πνευμα εστιν το μαρτυρουν οτι το πνευμα εστιν η αληθεια <sup>7</sup>οτι τρεις εισιν οι μαρτυρουντες εν τω ουρανω ο πατηρ ο λογος και το αγιον πνευμα και ουτοι οι τρεις εν εισιν <sup>8</sup>και τρεις εισιν οι μαρτυρουντες εν τη γη το πνευμα και το υδωρ και το αιμα και οι τρεις εις το εν εισιν</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>1</sup>Whosoever believeth that Jesus is the Christ is born of God: and every one that loveth him that begat loveth him also that is begotten of him. <sup>2</sup>By this we know that we love the children of God, when we love God, and keep his commandments. <sup>3</sup>For this is the love of God, that we keep his commandments: and his commandments are not grievous. <sup>4</sup>For whatsoever is born of God overcometh the world: and this is the victory that overcometh the world,
 even our faith. <sup>5</sup>Who is he that overcometh the world, but he that believeth that Jesus is the Son of God? <sup>6</sup>This is he that came by water and blood,
 even Jesus Christ; not by water only, but by water and blood. And it is the Spirit that beareth witness, because the Spirit is truth. <sup>7</sup>For there are three that bear record in heaven, the Father, the Word, and the Holy Ghost: and these three are one. <sup>8</sup>And there are three that bear witness in earth, the spirit, and the water, and the blood: and these three agree in one.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s5-9-16">
-          <span class="section-ref">§5.9-16 · 1 John 5:9-16</span>
-          <p><sup>9</sup>If we receive the witness of men, the witness of God is greater: for this is the witness of God which he hath testified of his Son. <sup>10</sup>He that believeth on the Son of God hath the witness in himself: he that believeth not God hath made him a liar; because he believeth not the record that God gave of his Son. <sup>11</sup>And this is the record, that God hath given to us eternal life, and this life is in his Son. <sup>12</sup>He that hath the Son hath life;
+        <div class="parallel-section" id="s5-9-16"
+             data-author="John (attributed)"
+             data-title="1 John, Chapter 5"
+             data-section="ch. 5.9-16"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-1john-5.html#s5-9-16">
+
+          <div class="section-header">
+            <span class="section-ref">§5.9-16 · 1 John 5:9-16</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>9</sup>ει την μαρτυριαν των ανθρωπων λαμβανομεν η μαρτυρια του θεου μειζων εστιν οτι αυτη εστιν η μαρτυρια του θεου ην μεμαρτυρηκεν περι του υιου αυτου <sup>10</sup>ο πιστευων εις τον υιον του θεου εχει την μαρτυριαν εν εαυτω ο μη πιστευων τω θεω ψευστην πεποιηκεν αυτον οτι ου πεπιστευκεν εις την μαρτυριαν ην μεμαρτυρηκεν ο θεος περι του υιου αυτου <sup>11</sup>και αυτη εστιν η μαρτυρια οτι ζωην αιωνιον εδωκεν ημιν ο θεος και αυτη η ζωη εν τω υιω αυτου εστιν <sup>12</sup>ο εχων τον υιον εχει την ζωην ο μη εχων τον υιον του θεου την ζωην ουκ εχει <sup>13</sup>ταυτα εγραψα υμιν τοις πιστευουσιν εις το ονομα του υιου του θεου ινα ειδητε οτι ζωην εχετε αιωνιον και ινα πιστευητε εις το ονομα του υιου του θεου <sup>14</sup>και αυτη εστιν η παρρησια ην εχομεν προς αυτον οτι εαν τι αιτωμεθα κατα το θελημα αυτου ακουει ημων <sup>15</sup>και εαν οιδαμεν οτι ακουει ημων ο αν αιτωμεθα οιδαμεν οτι εχομεν τα αιτηματα α ητηκαμεν παρ αυτου <sup>16</sup>εαν τις ιδη τον αδελφον αυτου αμαρτανοντα αμαρτιαν μη προς θανατον αιτησει και δωσει αυτω ζωην τοις αμαρτανουσιν μη προς θανατον εστιν αμαρτια προς θανατον ου περι εκεινης λεγω ινα ερωτηση</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>9</sup>If we receive the witness of men, the witness of God is greater: for this is the witness of God which he hath testified of his Son. <sup>10</sup>He that believeth on the Son of God hath the witness in himself: he that believeth not God hath made him a liar; because he believeth not the record that God gave of his Son. <sup>11</sup>And this is the record, that God hath given to us eternal life, and this life is in his Son. <sup>12</sup>He that hath the Son hath life;
 and he that hath not the Son of God hath not life. <sup>13</sup>These things have I written unto you that believe on the name of the Son of God; that ye may know that ye have eternal life, and that ye may believe on the name of the Son of God. <sup>14</sup>And this is the confidence that we have in him, that, if we ask any thing according to his will, he heareth us: <sup>15</sup>And if we know that he hear us, whatsoever we ask, we know that we have the petitions that we desired of him. <sup>16</sup>If any man see his brother sin a sin
 which is not unto death, he shall ask, and he shall give him life for them that sin not unto death. There is a sin unto death: I do not say that he shall pray for it.</p>
+          </div>
         </div>
         
-        <div class="section-block" id="s5-17-21">
-          <span class="section-ref">§5.17-21 · 1 John 5:17-21</span>
-          <p><sup>17</sup>All unrighteousness is sin: and there is a sin not unto death. <sup>18</sup>We know that whosoever is born of God sinneth not; but he that is begotten of God keepeth himself, and that wicked one toucheth him not. <sup>19</sup>And we know that we are of God, and the whole world lieth in wickedness. <sup>20</sup>And we know that the Son of God is come, and hath given us an understanding, that we may know him that is true, and we are in him that is true,
+        <div class="parallel-section" id="s5-17-21"
+             data-author="John (attributed)"
+             data-title="1 John, Chapter 5"
+             data-section="ch. 5.17-21"
+             data-translator="Alan B."
+             data-year="2026"
+             data-url-path="/library/kjv-1john-5.html#s5-17-21">
+
+          <div class="section-header">
+            <span class="section-ref">§5.17-21 · 1 John 5:17-21</span>
+            <div class="section-actions">
+              <button class="btn-cite" onclick="citePasage(this)" title="Copy citation">Cite</button>
+              <button class="btn-share" onclick="sharePassage(this)" title="Copy link">Share</button>
+              <button class="btn-share" onclick="shareToX(this)" title="Share on X">X</button>
+            </div>
+          </div>
+
+          
+
+          <div class="parallel-original">
+            <div class="parallel-col-label">English (KJV)</div>
+            <p><sup>17</sup>πασα αδικια αμαρτια εστιν και εστιν αμαρτια ου προς θανατον <sup>18</sup>οιδαμεν οτι πας ο γεγεννημενος εκ του θεου ουχ αμαρτανει αλλ ο γεννηθεις εκ του θεου τηρει εαυτον και ο πονηρος ουχ απτεται αυτου <sup>19</sup>οιδαμεν οτι εκ του θεου εσμεν και ο κοσμος ολος εν τω πονηρω κειται <sup>20</sup>οιδαμεν δε οτι ο υιος του θεου ηκει και δεδωκεν ημιν διανοιαν ινα γινωσκωμεν τον αληθινον και εσμεν εν τω αληθινω εν τω υιω αυτου ιησου χριστω ουτος εστιν ο αληθινος θεος και η ζωη αιωνιος <sup>21</sup>τεκνια φυλαξατε εαυτους απο των ειδωλων αμην</p>
+          </div>
+
+          <div class="parallel-translation">
+            <div class="parallel-col-label">English</div>
+            <p><sup>17</sup>All unrighteousness is sin: and there is a sin not unto death. <sup>18</sup>We know that whosoever is born of God sinneth not; but he that is begotten of God keepeth himself, and that wicked one toucheth him not. <sup>19</sup>And we know that we are of God, and the whole world lieth in wickedness. <sup>20</sup>And we know that the Son of God is come, and hath given us an understanding, that we may know him that is true, and we are in him that is true,
 even in his Son Jesus Christ. This is the true God, and eternal life. <sup>21</sup>Little children, keep yourselves from idols. Amen.</p>
+          </div>
         </div>
         
       </section>
+
     </div>
     
 
