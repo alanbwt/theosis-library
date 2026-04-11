@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Primary Source Quotes on Theosis — Theosis Library</title>
-  <meta name="description" content="Every major primary source statement for and against theosis (divinization), from the Epic of Gilgamesh through the Church Fathers. Original language, English translation, and manuscript source.">
+  <title>Primary Source Quotes — Theosis Library</title>
+  <meta name="description" content="The best primary source quotes from every civilization on divinity, soul, creation, afterlife, ethics, knowledge, and governance. Filter by tradition, topic, era, and theosis position.">
   <meta property="og:title" content="The Evidence — Theosis Library">
-  <meta property="og:description" content="Every major primary source quote for and against theosis, with original language and manuscript references.">
+  <meta property="og:description" content="Primary source quotes from every civilization, with original language and manuscript references.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://theosislibrary.com/quotes/">
   <meta name="twitter:card" content="summary">
@@ -31,575 +31,863 @@
 
       <div class="quotes-header">
         <h1>The Evidence</h1>
-        <p class="quotes-subtitle">Every major primary source statement on whether divinity can be shared with humanity. Original language, English translation, manuscript source. Organized by position.</p>
+        <p class="quotes-subtitle">Primary source quotes from every civilization on the deepest questions: divinity, soul, creation, afterlife, ethics, knowledge. Original language, English translation, manuscript source.</p>
       </div>
 
       <div class="quotes-filters">
-        <button class="quotes-filter active" onclick="filterQuotes('all', this)">All</button>
-        <button class="quotes-filter" onclick="filterQuotes('for', this)">For Theosis</button>
-        <button class="quotes-filter" onclick="filterQuotes('against', this)">Against</button>
-        <button class="quotes-filter" onclick="filterQuotes('ambiguous', this)">Ambiguous</button>
+        <div class="quotes-filter-row">
+          <span class="quotes-filter-label">Position:</span>
+          <button class="quotes-filter active" data-filter-type="position" data-filter-value="all">All</button>
+          <button class="quotes-filter" data-filter-type="position" data-filter-value="for">For Theosis</button>
+          <button class="quotes-filter" data-filter-type="position" data-filter-value="against">Against</button>
+          <button class="quotes-filter" data-filter-type="position" data-filter-value="ambiguous">Ambiguous</button>
+        </div>
+        <div class="quotes-filter-row">
+          <span class="quotes-filter-label">Tradition:</span>
+        <button class="quotes-filter" data-filter-type="tradition" data-filter-value="buddhist">Buddhist</button>
+        <button class="quotes-filter" data-filter-type="tradition" data-filter-value="christian">Christian</button>
+        <button class="quotes-filter" data-filter-type="tradition" data-filter-value="confucian">Confucian</button>
+        <button class="quotes-filter" data-filter-type="tradition" data-filter-value="egyptian">Egyptian</button>
+        <button class="quotes-filter" data-filter-type="tradition" data-filter-value="gnostic">Gnostic</button>
+        <button class="quotes-filter" data-filter-type="tradition" data-filter-value="greek">Greek/Roman</button>
+        <button class="quotes-filter" data-filter-type="tradition" data-filter-value="hindu">Hindu</button>
+        <button class="quotes-filter" data-filter-type="tradition" data-filter-value="islamic">Islamic</button>
+        <button class="quotes-filter" data-filter-type="tradition" data-filter-value="mesopotamian">Mesopotamian</button>
+        <button class="quotes-filter" data-filter-type="tradition" data-filter-value="norse">Norse</button>
+        <button class="quotes-filter" data-filter-type="tradition" data-filter-value="sufi">Sufi</button>
+        <button class="quotes-filter" data-filter-type="tradition" data-filter-value="taoist">Taoist</button>
+        <button class="quotes-filter" data-filter-type="tradition" data-filter-value="tibetan">Tibetan</button>
+        </div>
+        <div class="quotes-filter-row">
+          <span class="quotes-filter-label">Topic:</span>
+        <button class="quotes-filter" data-filter-type="topic" data-filter-value="afterlife">Afterlife</button>
+        <button class="quotes-filter" data-filter-type="topic" data-filter-value="creation">Creation</button>
+        <button class="quotes-filter" data-filter-type="topic" data-filter-value="death">Death</button>
+        <button class="quotes-filter" data-filter-type="topic" data-filter-value="divinity">Divinity</button>
+        <button class="quotes-filter" data-filter-type="topic" data-filter-value="ethics">Ethics</button>
+        <button class="quotes-filter" data-filter-type="topic" data-filter-value="governance">Governance</button>
+        <button class="quotes-filter" data-filter-type="topic" data-filter-value="knowledge">Knowledge</button>
+        <button class="quotes-filter" data-filter-type="topic" data-filter-value="love">Love</button>
+        <button class="quotes-filter" data-filter-type="topic" data-filter-value="soul">Soul</button>
+        <button class="quotes-filter" data-filter-type="topic" data-filter-value="suffering">Suffering</button>
+        </div>
+        <div class="quotes-filter-row">
+          <span class="quotes-filter-label">Era:</span>
+        <button class="quotes-filter" data-filter-type="era" data-filter-value="Bronze Age">Bronze Age</button>
+        <button class="quotes-filter" data-filter-type="era" data-filter-value="Iron Age">Iron Age</button>
+        <button class="quotes-filter" data-filter-type="era" data-filter-value="Classical">Classical</button>
+        <button class="quotes-filter" data-filter-type="era" data-filter-value="Imperial">Imperial</button>
+        <button class="quotes-filter" data-filter-type="era" data-filter-value="Late Antiquity">Late Antiquity</button>
+        <button class="quotes-filter" data-filter-type="era" data-filter-value="Medieval">Medieval</button>
+        <button class="quotes-filter" data-filter-type="era" data-filter-value="Early Modern">Early Modern</button>
+        </div>
       </div>
 
-      <!-- FOR THEOSIS -->
-      <section class="quotes-section" id="section-for">
-        <h2>For: Divinity Can Be Shared</h2>
-
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          <blockquote class="quote-original">καὶ ὁ λόγος σὰρξ ἐγένετο</blockquote>
-          <blockquote class="quote-english">“And the Word became flesh and dwelt among us.”</blockquote>
+      <section class="quotes-section">
+        <div class="quote-card" data-position="foundational" data-tradition="mesopotamian" data-topic="creation" data-era="Bronze Age">
+          <div class="quote-position-tag tag-foundational">Foundational</div>
+          <blockquote class="quote-original">enūma eliš lā nabû šamāmū</blockquote>
+          <blockquote class="quote-english">"When on high the heavens had not been named."</blockquote>
           <div class="quote-meta">
-            <span class="quote-author">John (attributed)</span>
-            <span class="quote-date">c. 90–110 AD</span>
-            <span class="quote-source">Gospel of John 1:14</span>
+            <span class="quote-author">Anonymous (Babylonian)</span>
+            <span class="quote-date">c. 1750 BCE</span>
+            <span class="quote-source">Enuma Elish, Tablet I</span>
           </div>
-          <p class="quote-significance">God entered humanity. If divinity can become flesh, the boundary between divine and human is permeable. The orthodox read this as unique to Christ; the Gnostics read it as paradigmatic.</p>
-          <a href="/library/sinaiticus-john-1.html#s1-14" class="quote-link">Read with manuscript scan →</a>
+          <p class="quote-significance">The Mesopotamian creation epic: the cosmos arose from primordial waters when the gods were named into existence.</p>
+          
         </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          <blockquote class="quote-original">ἔδωκεν αὐτοῖς ἐξουσίαν τέκνα θεοῦ γενέσθαι</blockquote>
-          <blockquote class="quote-english">“He gave them the right to become children of God.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">John (attributed)</span>
-            <span class="quote-date">c. 90–110 AD</span>
-            <span class="quote-source">Gospel of John 1:12</span>
-          </div>
-          <p class="quote-significance">Divine sonship is available to those who receive the Logos. The Gnostics read this as awakening the divine spark; the orthodox read it as adoption by grace.</p>
-          <a href="/library/sinaiticus-john-1.html#s1-12" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          <blockquote class="quote-original">ἐγὼ εἶπα θεοί ἐστε</blockquote>
-          <blockquote class="quote-english">“I said, you are gods.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">John (attributed), quoting Psalm 82:6</span>
-            <span class="quote-date">c. 90–110 AD</span>
-            <span class="quote-source">Gospel of John 10:34</span>
-          </div>
-          <p class="quote-significance">Jesus quotes scripture calling human beings 'gods.' The most direct claim that divinity is not exclusive. Cited by every major theosis theologian from Clement to Palamas.</p>
-          <a href="/library/sinaiticus-john-10.html#s10-31" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          <blockquote class="quote-original">ἵνα πάντες ἓν ὦσιν · καθὼς σύ πάτερ ἐν ἐμοὶ κἀγὼ ἐν σοί · ἵνα καὶ αὐτοὶ ἐν ἡμῖν ὦσιν</blockquote>
-          <blockquote class="quote-english">“That they all may be one, just as you, Father, are in me and I in you, that they also may be in us.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">John (attributed)</span>
-            <span class="quote-date">c. 90–110 AD</span>
-            <span class="quote-source">Gospel of John 17:21</span>
-          </div>
-          <p class="quote-significance">Christ prays that the mutual indwelling between Father and Son extend to all believers. The most explicit theosis prayer in the New Testament.</p>
-          <a href="/library/sinaiticus-john-17.html#s17-20" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          <blockquote class="quote-original">ἔσεσθε οὖν ὑμεῖς τέλειοι ὡς ὁ πατὴρ ὑμῶν ὁ οὐράνιος τέλειός ἐστιν</blockquote>
-          <blockquote class="quote-english">“Be perfect, therefore, as your heavenly Father is perfect.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Matthew (attributed)</span>
-            <span class="quote-date">c. 80–90 AD</span>
-            <span class="quote-source">Gospel of Matthew 5:48</span>
-          </div>
-          <p class="quote-significance">The command to become teleios (complete, having reached the telos). The theosis tradition reads this as an ontological command to become like God, not merely a moral aspiration.</p>
-          <a href="/library/sinaiticus-matt-5.html#s5-48" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          <blockquote class="quote-original">ἵνα διὰ τούτων γένησθε θείας κοινωνοὶ φύσεως</blockquote>
-          <blockquote class="quote-english">“That through them you may become partakers of the divine nature.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Peter (attributed)</span>
-            <span class="quote-date">c. 100–120 AD</span>
-            <span class="quote-source">2 Peter 1:4</span>
-          </div>
-          <p class="quote-significance">The most explicit theosis statement in the New Testament. Koinonoi physeos = sharers in the nature (ontological, not merely moral). The proof-text for Eastern Orthodox divinization.</p>
-          <a href="/library/sinaiticus-2peter-1.html#s1-4" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          <blockquote class="quote-original">Verbum Dei, Dominus noster Iesus Christus, qui propter immensam suam dilectionem factus est quod sumus nos, uti nos perficeret esse quod est ipse.</blockquote>
-          <blockquote class="quote-english">“The Word of God, our Lord Jesus Christ, who through his transcendent love became what we are, that he might bring us to be what he himself is.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Irenaeus of Lyon</span>
-            <span class="quote-date">c. 180 AD</span>
-            <span class="quote-source">Against Heresies III.19.1</span>
-          </div>
-          <p class="quote-significance">The earliest systematic theosis formula. More radical than Athanasius: not 'God' in the abstract but 'what he himself is.' The verb perficeret (might perfect/complete) implies a process.</p>
-          <a href="/library/irenaeus-against-heresies-3-19.html#sIII-19-1b" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          <blockquote class="quote-original">Αὐτὸς γὰρ ἐνηνθρώπησεν, ἵνα ἡμεῖς θεοποιηθῶμεν</blockquote>
-          <blockquote class="quote-english">“He became man that we might be made God.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Athanasius of Alexandria</span>
-            <span class="quote-date">c. 335 AD</span>
-            <span class="quote-source">On the Incarnation, ch. 54</span>
-          </div>
-          <p class="quote-significance">The most famous sentence in the history of the theosis doctrine. The verb theopoiethomen (might be made god) is active and ontological, not metaphorical.</p>
-          <a href="/library/athanasius-incarnation-54.html#s54-3" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          <blockquote class="quote-original">misit scintillam, quae correxit hominem et suscitauit et fecit eum uiuere</blockquote>
-          <blockquote class="quote-english">“He sent a spark, which corrected man and raised him up and made him live.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Filastrius of Brescia (reporting Saturninus)</span>
-            <span class="quote-date">c. 385 AD</span>
-            <span class="quote-source">Diversarum Hereseon Liber, ch. 31</span>
-          </div>
-          <p class="quote-significance">The Gnostic divine spark (scintilla): a fragment of divine light sent into the body made by angels. The spark alone is saved; all else is abandoned. The most concise summary of Gnostic soteriology.</p>
-          <a href="/library/filastrius-gnostic-heresies.html#s31" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          <blockquote class="quote-original">Animam ergo solam saluari, corpus autem hominis non saluari arbitratur.</blockquote>
-          <blockquote class="quote-english">“He holds that the soul alone is saved, but that the body of man is not saved.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Filastrius of Brescia (reporting Valentinus)</span>
-            <span class="quote-date">c. 385 AD</span>
-            <span class="quote-source">Diversarum Hereseon Liber, ch. 38</span>
-          </div>
-          <p class="quote-significance">The Valentinian position: only the spiritual element in humanity participates in the divine. The body, made by the Demiurge, is excluded. A radical theosis limited to the soul.</p>
-          <a href="/library/filastrius-gnostic-heresies.html#s38" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
+        <div class="quote-card" data-position="for" data-tradition="egyptian" data-topic="afterlife" data-era="Bronze Age">
           <div class="quote-position-tag tag-for">For theosis</div>
           
-          <blockquote class="quote-english">“We are called to become gods, not by nature but by grace.”</blockquote>
+          <blockquote class="quote-english">"I have not done evil to mankind. I have not blasphemed a god."</blockquote>
           <div class="quote-meta">
-            <span class="quote-author">John Chrysostom</span>
-            <span class="quote-date">c. 390 AD</span>
-            <span class="quote-source">Homily 14 on John</span>
+            <span class="quote-author">Anonymous (Egyptian)</span>
+            <span class="quote-date">c. 1500 BCE</span>
+            <span class="quote-source">Book of the Dead, Spell 125 (Negative Confession)</span>
           </div>
-          <p class="quote-significance">The distinction between theosis by nature (impossible) and by grace (the orthodox claim). Chrysostom's formulation became standard.</p>
-          <a href="/library/john-chrysostom-john-homily-14.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
+          <p class="quote-significance">The Egyptian heart-weighing: salvation through ethical declaration. The earliest extant moral self-examination in afterlife judgment.</p>
           
-          <blockquote class="quote-english">“The true gnostic has already become god.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Clement of Alexandria</span>
-            <span class="quote-date">c. 200 AD</span>
-            <span class="quote-source">Stromata VII.10</span>
-          </div>
-          <p class="quote-significance">Clement reclaims 'gnosis' from the Gnostics: true knowledge does lead to divinization, but through the Church, not secret revelation.</p>
-          <a href="/library/clement-stromata-7-10.html" class="quote-link">Read with manuscript scan →</a>
         </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          
-          <blockquote class="quote-english">“The divine light is not knowledge but surpasses knowledge.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Gregory Palamas</span>
-            <span class="quote-date">c. 1338 AD</span>
-            <span class="quote-source">Triads I.3.5</span>
-          </div>
-          <p class="quote-significance">The essence-energies distinction: God's essence is unknowable, but his energies (including the uncreated light) are participable. The final Orthodox synthesis on theosis.</p>
-          <a href="/library/gregory-palamas-triads-1.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          <blockquote class="quote-original">Deus natus homo est, ut homo nasceretur Deus.</blockquote>
-          <blockquote class="quote-english">“God was born as man so that man might be born as God.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Hilary of Poitiers</span>
-            <span class="quote-date">c. 360 AD</span>
-            <span class="quote-source">De Trinitate IX.4</span>
-          </div>
-          <p class="quote-significance">The Western Latin tradition affirming theosis in almost identical terms to Athanasius.</p>
-          <a href="/library/hilary-trinity-9-4.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          <blockquote class="quote-original">Unigenitus Dei Filius, suae divinitatis volens nos esse participes.</blockquote>
-          <blockquote class="quote-english">“The only-begotten Son of God, wanting to make us sharers in his divinity.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Thomas Aquinas</span>
-            <span class="quote-date">c. 1270 AD</span>
-            <span class="quote-source">Summa Theologiae III.1.2</span>
-          </div>
-          <p class="quote-significance">Even the greatest Western scholastic affirms participation in divinity as the purpose of the Incarnation.</p>
-          <a href="/library/thomas-aquinas-summa-3-1-2.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          
-          <blockquote class="quote-english">“The blood of God.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Ignatius of Antioch</span>
-            <span class="quote-date">c. 107 AD</span>
-            <span class="quote-source">To the Ephesians 4</span>
-          </div>
-          <p class="quote-significance">One of the earliest assertions of Christ's full divinity, written by a bishop on his way to martyrdom. If Christ has 'blood of God,' then divinity entered flesh.</p>
-          <a href="/library/ignatius-ephesians-4.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          
-          <blockquote class="quote-english">“The soul deemed worthy to participate in the Spirit becomes all light, all face, all eye.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Pseudo-Macarius</span>
-            <span class="quote-date">c. 385 AD</span>
-            <span class="quote-source">Homily 15</span>
-          </div>
-          <p class="quote-significance">The mystical vision of total transformation: not a metaphor but an ontological claim about what happens when the Spirit fills a person.</p>
-          <a href="/library/macarius-homily-15.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          <blockquote class="quote-original">τὴν αὐτὴν εἰκόνα μεταμορφούμεθα ἀπὸ δόξης εἰς δόξαν</blockquote>
-          <blockquote class="quote-english">“We are being transformed into the same image from glory to glory.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Paul (attributed)</span>
-            <span class="quote-date">c. 56 AD</span>
-            <span class="quote-source">2 Corinthians 3:18</span>
-          </div>
-          <p class="quote-significance">Theosis as progressive transformation: not instantaneous but a process, moving from one degree of glory to the next, into the image (eikon) of Christ.</p>
-          <a href="/library/sinaiticus-2cor-3-18.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          <blockquote class="quote-original">ἐγώ εἰμι ἡ ἄμπελος ὑμεῖς τὰ κλήματα</blockquote>
-          <blockquote class="quote-english">“I am the vine, you are the branches.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">John (attributed)</span>
-            <span class="quote-date">c. 90 AD</span>
-            <span class="quote-source">Gospel of John 15:5</span>
-          </div>
-          <p class="quote-significance">Organic union with Christ: not merely following a teacher but being a living part of the divine organism. The branches share the life of the vine.</p>
-          <a href="/library/sinaiticus-john-15-1.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          <blockquote class="quote-original">tat tvam asi</blockquote>
-          <blockquote class="quote-english">“You are That.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Upanishadic Sages</span>
-            <span class="quote-date">c. 700 BCE</span>
-            <span class="quote-source">Chandogya Upanishad 6.8</span>
-          </div>
-          <p class="quote-significance">The Eastern theosis: the individual self (atman) IS the universal divine reality (Brahman). Not 'you can become God' but 'you already are.'</p>
-          <a href="/library/chandogya-6-8.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          <blockquote class="quote-original">aham brahmasmi</blockquote>
-          <blockquote class="quote-english">“I am Brahman.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Upanishadic Sages</span>
-            <span class="quote-date">c. 700 BCE</span>
-            <span class="quote-source">Brihadaranyaka Upanishad 1.4</span>
-          </div>
-          <p class="quote-significance">The Self discovers it is identical with the ultimate reality. The most direct theosis claim in any tradition.</p>
-          <a href="/library/brihadaranyaka-1-4.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          
-          <blockquote class="quote-english">“All beings possess the Tathagata-garbha (Buddha-nature).”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Tathagatagarbha Sutra</span>
-            <span class="quote-date">c. 3rd c. CE</span>
-            <span class="quote-source">Tathagatagarbha Sutra</span>
-          </div>
-          <p class="quote-significance">The Buddhist divine spark: every being already has the seed of Buddhahood within. Not earned but uncovered.</p>
-          <a href="/library/tathagatagarbha-sutra.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          <blockquote class="quote-original">ana al-haqq</blockquote>
-          <blockquote class="quote-english">“I am the Truth (God).”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Mansur al-Hallaj</span>
-            <span class="quote-date">c. 900 AD</span>
-            <span class="quote-source">Al-Hallaj, attested in multiple sources</span>
-          </div>
-          <p class="quote-significance">The Sufi mystic executed for claiming identity with God. The Islamic parallel to both John 10:30 and Aham Brahmasmi. Al-Hallaj was crucified.</p>
-          <a href="/library/hallaj-ana-al-haqq.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          
-          <blockquote class="quote-english">“I died as a mineral and became a plant. I died as a plant and became an animal. I died as an animal and became human. What should I fear? When have I become less by dying?”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Rumi</span>
-            <span class="quote-date">c. 1260 AD</span>
-            <span class="quote-source">Masnavi III</span>
-          </div>
-          <p class="quote-significance">Theosis as evolutionary ascent: each death is a transformation into a higher form. The human is not the endpoint.</p>
-          <a href="/library/rumi-masnavi-evolution.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          <blockquote class="quote-original">phuge monou pros monon</blockquote>
-          <blockquote class="quote-english">“The flight of the alone to the Alone.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Plotinus</span>
-            <span class="quote-date">c. 260 AD</span>
-            <span class="quote-source">Enneads VI.9.11</span>
-          </div>
-          <p class="quote-significance">The philosophical foundation of theosis: the soul's return to the One from which it emanated. Not a gift but a homecoming.</p>
-          <a href="/library/plotinus-6-9-11.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="for">
-          <div class="quote-position-tag tag-for">For theosis</div>
-          
-          <blockquote class="quote-english">“The eye through which I see God is the same eye through which God sees me.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Meister Eckhart</span>
-            <span class="quote-date">c. 1300 AD</span>
-            <span class="quote-source">Sermon 52</span>
-          </div>
-          <p class="quote-significance">The most radical Western theosis statement. Not two eyes but one. The seer and the seen are identical. Condemned by the Pope.</p>
-          <a href="/library/meister-eckhart-sermon-52.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-
-      </section>
-
-      <!-- AGAINST THEOSIS -->
-      <section class="quotes-section" id="section-against">
-        <h2>Against: Divinity Is Exclusive</h2>
-
-        <div class="quote-card" data-position="against">
-          <div class="quote-position-tag tag-against">Against theosis</div>
-          <blockquote class="quote-original">μονογενὴς θεὸς ὁ ὢν εἰς τὸν κόλπον τοῦ πατρὸς</blockquote>
-          <blockquote class="quote-english">“The only-begotten God, the one who is in the bosom of the Father, he has made him known.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">John (attributed)</span>
-            <span class="quote-date">c. 90–110 AD</span>
-            <span class="quote-source">Gospel of John 1:18 (Sinaiticus reading)</span>
-          </div>
-          <p class="quote-significance">Sinaiticus reads 'only-begotten God' (monogenes theos), not 'only-begotten Son.' If Christ is the unique God, divinity may be his exclusive property. Key textual variant.</p>
-          <a href="/library/sinaiticus-john-1.html#s1-17" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="against">
+        <div class="quote-card" data-position="against" data-tradition="mesopotamian" data-topic="death" data-era="Bronze Age">
           <div class="quote-position-tag tag-against">Against theosis</div>
           <blockquote class="quote-original">panānumma Ūta-napištim amilu / inanna Ūta-napištim u sinništassu lū ēmūū kīma ilīni anaḥnīti</blockquote>
-          <blockquote class="quote-english">“Previously Utnapishtim was a mortal man. Now let Utnapishtim and his wife become like the gods, like us.”</blockquote>
+          <blockquote class="quote-english">"Previously Utnapishtim was a mortal man. Now let Utnapishtim and his wife become like the gods, like us."</blockquote>
           <div class="quote-meta">
             <span class="quote-author">Sin-leqi-unninni (attributed)</span>
             <span class="quote-date">c. 1200 BCE</span>
             <span class="quote-source">Epic of Gilgamesh, Tablet XI, lines 241–245</span>
           </div>
           <p class="quote-significance">The Mesopotamian answer: divinity (immortality) was granted once, to one man, and never again. Gilgamesh is refused. The oldest argument that the divine-human boundary is permanent.</p>
-          <a href="/library/gilgamesh-flood-tablet.html#sXI-241" class="quote-link">Read with manuscript scan →</a>
+          
         </div>
-        <div class="quote-card" data-position="against">
+        <div class="quote-card" data-position="ambiguous" data-tradition="hindu" data-topic="creation" data-era="Bronze Age">
+          <div class="quote-position-tag tag-ambiguous">Ambiguous</div>
+          <blockquote class="quote-original">nāsadāsīn no sadāsīt tadānīṃ</blockquote>
+          <blockquote class="quote-english">"Then there was neither non-being nor being."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Rigveda</span>
+            <span class="quote-date">c. 1200 BCE</span>
+            <span class="quote-source">Rigveda 10.129 (Nasadiya Sukta)</span>
+          </div>
+          <p class="quote-significance">The oldest cosmological skepticism on record. Even the gods came after creation; perhaps no one knows whence it arose.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="hindu" data-topic="soul" data-era="Iron Age">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">tat tvam asi</blockquote>
+          <blockquote class="quote-english">"You are That."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Upanishadic Sages</span>
+            <span class="quote-date">c. 700 BCE</span>
+            <span class="quote-source">Chandogya Upanishad 6.8</span>
+          </div>
+          <p class="quote-significance">The Eastern theosis: the individual self (atman) IS the universal divine reality (Brahman). Not &#x27;you can become God&#x27; but &#x27;you already are.&#x27;</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="hindu" data-topic="soul" data-era="Iron Age">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">aham brahmasmi</blockquote>
+          <blockquote class="quote-english">"I am Brahman."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Upanishadic Sages</span>
+            <span class="quote-date">c. 700 BCE</span>
+            <span class="quote-source">Brihadaranyaka Upanishad 1.4</span>
+          </div>
+          <p class="quote-significance">The Self discovers it is identical with the ultimate reality. The most direct theosis claim in any tradition.</p>
+          
+        </div>
+        <div class="quote-card" data-position="ambiguous" data-tradition="hindu" data-topic="knowledge" data-era="Iron Age">
+          <div class="quote-position-tag tag-ambiguous">Ambiguous</div>
+          <blockquote class="quote-original">hiraṇmayena pātreṇa satyasyāpihitaṃ mukham</blockquote>
+          <blockquote class="quote-english">"The face of truth is hidden by a golden disk."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Upanishadic Sages</span>
+            <span class="quote-date">c. 700 BCE</span>
+            <span class="quote-source">Isha Upanishad 15</span>
+          </div>
+          <p class="quote-significance">Truth is veiled even by what shines. Mystical knowledge requires the removal of brightness, not its addition.</p>
+          
+        </div>
+        <div class="quote-card" data-position="against" data-tradition="greek" data-topic="divinity" data-era="Iron Age">
           <div class="quote-position-tag tag-against">Against theosis</div>
           
-          <blockquote class="quote-english">“Anu offered him the bread of life and the water of life, but Adapa refused them.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Anonymous (Babylonian)</span>
-            <span class="quote-date">c. 14th c. BCE</span>
-            <span class="quote-source">Myth of Adapa</span>
-          </div>
-          <p class="quote-significance">The second Mesopotamian argument against theosis: Adapa had the chance at immortality and was tricked into refusing it. Humanity's exclusion from divinity as cosmic accident, not divine decree.</p>
-          <a href="/library/adapa-myth.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="against">
-          <div class="quote-position-tag tag-against">Against theosis</div>
-          
-          <blockquote class="quote-english">“The Son is a creature. There was when he was not.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Arius</span>
-            <span class="quote-date">c. 318 AD</span>
-            <span class="quote-source">Letter to Alexander of Alexandria</span>
-          </div>
-          <p class="quote-significance">If Christ himself is not fully God by nature, then theosis through Christ is impossible. The Arian position that nearly won.</p>
-          <a href="/library/arius-letter-alexander.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="against">
-          <div class="quote-position-tag tag-against">Against theosis</div>
-          <blockquote class="quote-original">laqad kafara alladhina qalu inna allaha huwa al-masihu ibnu maryam</blockquote>
-          <blockquote class="quote-english">“They have certainly disbelieved who say, God is the Messiah, son of Mary.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Quran</span>
-            <span class="quote-date">c. 622 AD</span>
-            <span class="quote-source">Quran 5:72</span>
-          </div>
-          <p class="quote-significance">The Quranic rejection of divine incarnation. If God did not become human, the entire mechanism of Christian theosis collapses.</p>
-          <a href="/library/quran-5-72.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="against">
-          <div class="quote-position-tag tag-against">Against theosis</div>
-          <blockquote class="quote-original">laysa kamithlihi shay'un</blockquote>
-          <blockquote class="quote-english">“There is nothing like unto Him.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Quran</span>
-            <span class="quote-date">c. 622 AD</span>
-            <span class="quote-source">Quran 42:11</span>
-          </div>
-          <p class="quote-significance">God's absolute transcendence and incomparability. If nothing is like God, then becoming like God is a category error.</p>
-          <a href="/library/quran-42-11.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="against">
-          <div class="quote-position-tag tag-against">Against theosis</div>
-          <blockquote class="quote-original">finitum non capax infiniti</blockquote>
-          <blockquote class="quote-english">“The finite cannot contain the infinite.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">John Calvin</span>
-            <span class="quote-date">1536 AD</span>
-            <span class="quote-source">Institutes I.1</span>
-          </div>
-          <p class="quote-significance">The Reformed Protestant rejection of theosis: God's nature is absolutely other. Human nature cannot contain or participate in divine nature.</p>
-          <a href="/library/calvin-institutes-1-1.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="against">
-          <div class="quote-position-tag tag-against">Against theosis</div>
-          
-          <blockquote class="quote-english">“Where were you when I laid the foundation of the earth?”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Job</span>
-            <span class="quote-date">c. 6th c. BCE</span>
-            <span class="quote-source">Job 38:4</span>
-          </div>
-          <p class="quote-significance">God's rebuke to Job: the gap between Creator and creature is absolute. You cannot question God, let alone become God.</p>
-          <a href="/library/job-38.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="against">
-          <div class="quote-position-tag tag-against">Against theosis</div>
-          <blockquote class="quote-original">mataiotes mataioteton ta panta mataiotes</blockquote>
-          <blockquote class="quote-english">“Vanity of vanities, all is vanity.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Ecclesiastes</span>
-            <span class="quote-date">c. 3rd c. BCE</span>
-            <span class="quote-source">Ecclesiastes 1:2</span>
-          </div>
-          <p class="quote-significance">The anti-theosis of despair: nothing changes, nothing transcends, nothing is new under the sun. Human aspiration to the divine is futile.</p>
-          <a href="/library/ecclesiastes-1-1.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="against">
-          <div class="quote-position-tag tag-against">Against theosis</div>
-          
-          <blockquote class="quote-english">“If the self were the same as the aggregates, it would be subject to arising and ceasing.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Nagarjuna</span>
-            <span class="quote-date">c. 200 AD</span>
-            <span class="quote-source">MMK 18.5</span>
-          </div>
-          <p class="quote-significance">The Buddhist philosophical demolition: there is no permanent self to be divinized. If there is no atman, theosis has no subject.</p>
-          <a href="/library/nagarjuna-mmk-18.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="against">
-          <div class="quote-position-tag tag-against">Against theosis</div>
-          
-          <blockquote class="quote-english">“If cattle and horses had hands, they would draw gods like cattle and horses.”</blockquote>
+          <blockquote class="quote-english">"If cattle and horses had hands, they would draw gods like cattle and horses."</blockquote>
           <div class="quote-meta">
             <span class="quote-author">Xenophanes</span>
             <span class="quote-date">c. 500 BCE</span>
             <span class="quote-source">Fragment 15</span>
           </div>
           <p class="quote-significance">The first philosophical critique of anthropomorphic gods. If our gods look like us, that says more about us than about the divine.</p>
-          <a href="/library/xenophanes-fragments.html" class="quote-link">Read with manuscript scan →</a>
+          
         </div>
-        <div class="quote-card" data-position="against">
+        <div class="quote-card" data-position="ambiguous" data-tradition="confucian" data-topic="ethics" data-era="Iron Age">
+          <div class="quote-position-tag tag-ambiguous">Ambiguous</div>
+          <blockquote class="quote-original">己所不欲勿施於人</blockquote>
+          <blockquote class="quote-english">"What you do not want done to yourself, do not do to others."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Confucius</span>
+            <span class="quote-date">c. 500 BCE</span>
+            <span class="quote-source">Analects 15:24</span>
+          </div>
+          <p class="quote-significance">The Silver Rule, predating its Christian formulation by 500 years. Ethics derived from empathy rather than divine command.</p>
+          
+        </div>
+        <div class="quote-card" data-position="ambiguous" data-tradition="greek" data-topic="knowledge" data-era="Classical">
+          <div class="quote-position-tag tag-ambiguous">Ambiguous</div>
+          <blockquote class="quote-original">οἶδα οὐδὲν εἰδώς</blockquote>
+          <blockquote class="quote-english">"I know that I know nothing."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Socrates (via Plato)</span>
+            <span class="quote-date">c. 399 BCE</span>
+            <span class="quote-source">Apology 21d</span>
+          </div>
+          <p class="quote-significance">The foundation of philosophical humility. Wisdom begins with the recognition of ignorance.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="greek" data-topic="soul" data-era="Classical">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">ἀθάνατον ἄρα ψυχή</blockquote>
+          <blockquote class="quote-english">"The soul is immortal."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Plato</span>
+            <span class="quote-date">c. 380 BCE</span>
+            <span class="quote-source">Phaedo 105e</span>
+          </div>
+          <p class="quote-significance">The first sustained philosophical defense of immortality in Western thought. The soul cannot die because it shares in life itself.</p>
+          
+        </div>
+        <div class="quote-card" data-position="ambiguous" data-tradition="greek" data-topic="governance" data-era="Classical">
+          <div class="quote-position-tag tag-ambiguous">Ambiguous</div>
+          <blockquote class="quote-original">ἢ οἱ φιλόσοφοι βασιλεύσωσιν ἐν ταῖς πόλεσιν</blockquote>
+          <blockquote class="quote-english">"Until philosophers rule as kings in cities."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Plato</span>
+            <span class="quote-date">c. 375 BCE</span>
+            <span class="quote-source">Republic V.473d</span>
+          </div>
+          <p class="quote-significance">The philosopher-king ideal: a society can only be just when wisdom and power are united in the same person.</p>
+          
+        </div>
+        <div class="quote-card" data-position="ambiguous" data-tradition="greek" data-topic="knowledge" data-era="Classical">
+          <div class="quote-position-tag tag-ambiguous">Ambiguous</div>
+          <blockquote class="quote-original">πάντες ἄνθρωποι τοῦ εἰδέναι ὀρέγονται φύσει</blockquote>
+          <blockquote class="quote-english">"All men by nature desire to know."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Aristotle</span>
+            <span class="quote-date">c. 340 BCE</span>
+            <span class="quote-source">Metaphysics I.1</span>
+          </div>
+          <p class="quote-significance">The opening line of the Metaphysics: knowledge is not optional but constitutive of human nature.</p>
+          
+        </div>
+        <div class="quote-card" data-position="against" data-tradition="greek" data-topic="divinity" data-era="Classical">
           <div class="quote-position-tag tag-against">Against theosis</div>
           
-          <blockquote class="quote-english">“The gods live in perfect tranquility, unconcerned with human affairs.”</blockquote>
+          <blockquote class="quote-english">"The gods live in perfect tranquility, unconcerned with human affairs."</blockquote>
           <div class="quote-meta">
             <span class="quote-author">Lucretius</span>
             <span class="quote-date">c. 55 BCE</span>
             <span class="quote-source">De Rerum Natura I</span>
           </div>
-          <p class="quote-significance">The Epicurean materialist rejection: the gods exist but don't care about us. There is no divine-human relationship to deepen.</p>
-          <a href="/library/lucretius-rerum-natura-1.html" class="quote-link">Read with manuscript scan →</a>
+          <p class="quote-significance">The Epicurean materialist rejection: the gods exist but don&#x27;t care about us. There is no divine-human relationship to deepen.</p>
+          
         </div>
-        <div class="quote-card" data-position="against">
+        <div class="quote-card" data-position="against" data-tradition="mesopotamian" data-topic="death" data-era="Classical">
           <div class="quote-position-tag tag-against">Against theosis</div>
           
-          <blockquote class="quote-english">“How can a mortal body be God?”</blockquote>
+          <blockquote class="quote-english">"Anu offered him the bread of life and the water of life, but Adapa refused them."</blockquote>
           <div class="quote-meta">
-            <span class="quote-author">Celsus</span>
-            <span class="quote-date">c. 178 AD</span>
-            <span class="quote-source">True Doctrine (in Origen, Contra Celsum)</span>
+            <span class="quote-author">Anonymous (Babylonian)</span>
+            <span class="quote-date">c. 14th c. BCE</span>
+            <span class="quote-source">Myth of Adapa</span>
           </div>
-          <p class="quote-significance">The pagan philosophical attack on Christian incarnation: divinity and mortality are incompatible categories.</p>
-          <a href="/library/celsus-true-doctrine.html" class="quote-link">Read with manuscript scan →</a>
+          <p class="quote-significance">The second Mesopotamian argument against theosis: Adapa had the chance at immortality and was tricked into refusing it. Humanity&#x27;s exclusion from divinity as cosmic accident, not divine decree.</p>
+          
         </div>
-
-      </section>
-
-      <!-- AMBIGUOUS -->
-      <section class="quotes-section" id="section-ambiguous">
-        <h2>Ambiguous: Claimed by Both Sides</h2>
-
-        <div class="quote-card" data-position="ambiguous">
-          <div class="quote-position-tag tag-ambiguous">Ambiguous</div>
-          <blockquote class="quote-original">ἐγὼ καὶ ὁ πατὴρ ἕν ἐσμεν</blockquote>
-          <blockquote class="quote-english">“I and the Father are one.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">John (attributed)</span>
-            <span class="quote-date">c. 90–110 AD</span>
-            <span class="quote-source">Gospel of John 10:30</span>
-          </div>
-          <p class="quote-significance">The neuter 'one' (hen, not heis) means 'one thing,' not 'one person.' Unity of substance or merely of will? The Arians, Nicenes, and Gnostics all claimed this verse.</p>
-          <a href="/library/sinaiticus-john-10.html#s10-27" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="ambiguous">
-          <div class="quote-position-tag tag-ambiguous">Ambiguous</div>
-          <blockquote class="quote-original">σὺ εἶ ὁ υἱός μου ὁ ἀγαπητός · ἐν σοὶ εὐδόκησα</blockquote>
-          <blockquote class="quote-english">“You are my beloved Son; in you I am well pleased.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Mark (attributed)</span>
-            <span class="quote-date">c. 65–75 AD</span>
-            <span class="quote-source">Gospel of Mark 1:11</span>
-          </div>
-          <p class="quote-significance">The divine voice at the baptism. Addressed to Jesus alone ('You are'), not declared publicly ('This is'). The adoptionists read this as the moment Christ received divinity; the orthodox read it as confirmation of pre-existing sonship.</p>
-          <a href="/library/sinaiticus-mark-1.html#s1-9" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="ambiguous">
-          <div class="quote-position-tag tag-ambiguous">Ambiguous</div>
-          <blockquote class="quote-original">ruupam shuunyataa shuunyataiva ruupam</blockquote>
-          <blockquote class="quote-english">“Form is emptiness, emptiness is form.”</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">Heart Sutra</span>
-            <span class="quote-date">c. 1st c. CE</span>
-            <span class="quote-source">Heart Sutra</span>
-          </div>
-          <p class="quote-significance">Buddhism's answer: there is no divine nature to possess because all distinctions (including divine/human) are empty. The dissolution of the question itself.</p>
-          <a href="/library/heart-sutra.html" class="quote-link">Read with manuscript scan →</a>
-        </div>
-        <div class="quote-card" data-position="ambiguous">
+        <div class="quote-card" data-position="ambiguous" data-tradition="norse" data-topic="knowledge" data-era="Classical">
           <div class="quote-position-tag tag-ambiguous">Ambiguous</div>
           <blockquote class="quote-original">gefinn Odhni, sjalfr sjalfum mer</blockquote>
-          <blockquote class="quote-english">“Given to Odin, myself to myself.”</blockquote>
+          <blockquote class="quote-english">"Given to Odin, myself to myself."</blockquote>
           <div class="quote-meta">
             <span class="quote-author">Anonymous (Norse)</span>
             <span class="quote-date">c. 10th c. AD</span>
             <span class="quote-source">Havamal 138</span>
           </div>
-          <p class="quote-significance">The Norse god who sacrifices himself to himself for knowledge. The parallel to Christ's crucifixion: divine self-sacrifice as the path to transcendent wisdom.</p>
-          <a href="/library/havamal-138.html" class="quote-link">Read with manuscript scan →</a>
+          <p class="quote-significance">The Norse god who sacrifices himself to himself for knowledge. The parallel to Christ&#x27;s crucifixion: divine self-sacrifice as the path to transcendent wisdom.</p>
+          
         </div>
-        <div class="quote-card" data-position="ambiguous">
+        <div class="quote-card" data-position="ambiguous" data-tradition="taoist" data-topic="knowledge" data-era="Classical">
           <div class="quote-position-tag tag-ambiguous">Ambiguous</div>
           <blockquote class="quote-original">dao ke dao fei chang dao</blockquote>
-          <blockquote class="quote-english">“The Tao that can be spoken is not the eternal Tao.”</blockquote>
+          <blockquote class="quote-english">"The Tao that can be spoken is not the eternal Tao."</blockquote>
           <div class="quote-meta">
             <span class="quote-author">Lao Tzu</span>
             <span class="quote-date">c. 6th c. BCE</span>
             <span class="quote-source">Tao Te Ching 1</span>
           </div>
           <p class="quote-significance">The Taoist answer: the divine cannot be named, defined, or possessed. It can only be aligned with. The question itself is the obstacle.</p>
-          <a href="/library/tao-te-ching-1.html" class="quote-link">Read with manuscript scan →</a>
+          
         </div>
-        <div class="quote-card" data-position="foundational">
-          <div class="quote-position-tag tag-ambiguous">Foundational</div>
+        <div class="quote-card" data-position="against" data-tradition="christian" data-topic="creation" data-era="Classical">
+          <div class="quote-position-tag tag-against">Against theosis</div>
+          
+          <blockquote class="quote-english">"Where were you when I laid the foundation of the earth?"</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Job</span>
+            <span class="quote-date">c. 6th c. BCE</span>
+            <span class="quote-source">Job 38:4</span>
+          </div>
+          <p class="quote-significance">God&#x27;s rebuke to Job: the gap between Creator and creature is absolute. You cannot question God, let alone become God.</p>
+          
+        </div>
+        <div class="quote-card" data-position="against" data-tradition="christian" data-topic="ethics" data-era="Classical">
+          <div class="quote-position-tag tag-against">Against theosis</div>
+          <blockquote class="quote-original">mataiotes mataioteton ta panta mataiotes</blockquote>
+          <blockquote class="quote-english">"Vanity of vanities, all is vanity."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Ecclesiastes</span>
+            <span class="quote-date">c. 3rd c. BCE</span>
+            <span class="quote-source">Ecclesiastes 1:2</span>
+          </div>
+          <p class="quote-significance">The anti-theosis of despair: nothing changes, nothing transcends, nothing is new under the sun. Human aspiration to the divine is futile.</p>
+          
+        </div>
+        <div class="quote-card" data-position="foundational" data-tradition="christian" data-topic="creation" data-era="Classical">
+          <div class="quote-position-tag tag-foundational">Foundational</div>
+          <blockquote class="quote-original">ἐν ἀρχῇ ἐποίησεν ὁ θεὸς τὸν οὐρανὸν καὶ τὴν γῆν</blockquote>
+          <blockquote class="quote-english">"In the beginning God created the heaven and the earth."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Moses (attributed)</span>
+            <span class="quote-date">c. 6th c. BCE</span>
+            <span class="quote-source">Genesis 1:1</span>
+          </div>
+          <p class="quote-significance">Creation ex nihilo as the foundation of Western metaphysics. Time, space, and matter all begin with a single divine act.</p>
+          
+        </div>
+        <div class="quote-card" data-position="ambiguous" data-tradition="buddhist" data-topic="ethics" data-era="Classical">
+          <div class="quote-position-tag tag-ambiguous">Ambiguous</div>
+          <blockquote class="quote-original">manopubbaṅgamā dhammā manoseṭṭhā manomayā</blockquote>
+          <blockquote class="quote-english">"All that we are is the result of what we have thought."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Buddha</span>
+            <span class="quote-date">c. 5th c. BCE</span>
+            <span class="quote-source">Dhammapada 1</span>
+          </div>
+          <p class="quote-significance">Mind as the origin of all states. The first verse of the Buddha&#x27;s most quoted text: ethics begins in thought, not action.</p>
+          
+        </div>
+        <div class="quote-card" data-position="against" data-tradition="norse" data-topic="ethics" data-era="Classical">
+          <div class="quote-position-tag tag-against">Against theosis</div>
+          <blockquote class="quote-original">deyr fé deyja frændr deyr sjalfr it sama en orðstírr deyr aldregi</blockquote>
+          <blockquote class="quote-english">"Cattle die, kinsmen die, you yourself shall die. But the fame of one who has done well never dies."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Anonymous (Norse)</span>
+            <span class="quote-date">c. 10th c. AD</span>
+            <span class="quote-source">Havamal 77</span>
+          </div>
+          <p class="quote-significance">Norse pagan immortality is not theosis but reputation. Glory outlives the body where the soul does not.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="tibetan" data-topic="afterlife" data-era="Classical">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          
+          <blockquote class="quote-english">"O nobly born, the time has come for you to seek the Path."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Padmasambhava (attributed)</span>
+            <span class="quote-date">c. 8th c. AD</span>
+            <span class="quote-source">Bardo Thodol I</span>
+          </div>
+          <p class="quote-significance">The Tibetan Book of the Dead&#x27;s instruction to the dying: liberation is possible at the moment of death if the mind recognizes its true nature.</p>
+          
+        </div>
+        <div class="quote-card" data-position="ambiguous" data-tradition="taoist" data-topic="governance" data-era="Classical">
+          <div class="quote-position-tag tag-ambiguous">Ambiguous</div>
+          <blockquote class="quote-original">太上下知有之</blockquote>
+          <blockquote class="quote-english">"The best ruler is one whose existence the people merely know."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Lao Tzu</span>
+            <span class="quote-date">c. 6th c. BCE</span>
+            <span class="quote-source">Tao Te Ching 17</span>
+          </div>
+          <p class="quote-significance">The Taoist political ideal: minimal interference, invisible rule. Authority is best when it goes unnoticed.</p>
+          
+        </div>
+        <div class="quote-card" data-position="foundational" data-tradition="buddhist" data-topic="suffering" data-era="Classical">
+          <div class="quote-position-tag tag-foundational">Foundational</div>
+          <blockquote class="quote-original">dukkhaṃ ariyasaccaṃ</blockquote>
+          <blockquote class="quote-english">"This is the noble truth of suffering."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Buddha</span>
+            <span class="quote-date">c. 5th c. BCE</span>
+            <span class="quote-source">Dhammacakkappavattana Sutta</span>
+          </div>
+          <p class="quote-significance">The First Noble Truth: existence is marked by dukkha. The diagnosis from which all Buddhist practice follows.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="christian" data-topic="suffering" data-era="Classical">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          
+          <blockquote class="quote-english">"Though he slay me, yet will I trust in him."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Job</span>
+            <span class="quote-date">c. 6th c. BCE</span>
+            <span class="quote-source">Job 13:15</span>
+          </div>
+          <p class="quote-significance">The paradigm of fidelity through undeserved suffering. Trust that survives all evidence against it.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="hindu" data-topic="ethics" data-era="Classical">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">karmaṇy evādhikāras te mā phaleṣu kadācana</blockquote>
+          <blockquote class="quote-english">"You have a right to action, but never to its fruits."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Krishna (in Bhagavad Gita)</span>
+            <span class="quote-date">c. 2nd c. BCE</span>
+            <span class="quote-source">Bhagavad Gita 2.47</span>
+          </div>
+          <p class="quote-significance">The doctrine of nishkama karma: act without attachment to results. The Hindu answer to the problem of motive.</p>
+          
+        </div>
+        <div class="quote-card" data-position="ambiguous" data-tradition="buddhist" data-topic="knowledge" data-era="Imperial">
+          <div class="quote-position-tag tag-ambiguous">Ambiguous</div>
+          <blockquote class="quote-original">ruupam shuunyataa shuunyataiva ruupam</blockquote>
+          <blockquote class="quote-english">"Form is emptiness, emptiness is form."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Heart Sutra</span>
+            <span class="quote-date">c. 1st c. CE</span>
+            <span class="quote-source">Heart Sutra</span>
+          </div>
+          <p class="quote-significance">Buddhism&#x27;s answer: there is no divine nature to possess because all distinctions (including divine/human) are empty. The dissolution of the question itself.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="christian" data-topic="love" data-era="Imperial">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">νυνὶ δὲ μένει πίστις ἐλπὶς ἀγάπη</blockquote>
+          <blockquote class="quote-english">"And now abideth faith, hope, charity, these three; but the greatest of these is charity."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Paul (attributed)</span>
+            <span class="quote-date">c. 55 AD</span>
+            <span class="quote-source">1 Corinthians 13:13</span>
+          </div>
+          <p class="quote-significance">The supremacy of agape: not affection or desire, but self-giving love. Paul ranks it above faith itself.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="christian" data-topic="soul" data-era="Imperial">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">τὴν αὐτὴν εἰκόνα μεταμορφούμεθα ἀπὸ δόξης εἰς δόξαν</blockquote>
+          <blockquote class="quote-english">"We are being transformed into the same image from glory to glory."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Paul (attributed)</span>
+            <span class="quote-date">c. 56 AD</span>
+            <span class="quote-source">2 Corinthians 3:18</span>
+          </div>
+          <p class="quote-significance">Theosis as progressive transformation: not instantaneous but a process, moving from one degree of glory to the next, into the image (eikon) of Christ.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="christian" data-topic="death" data-era="Imperial">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">ποῦ σου θάνατε τὸ νῖκος</blockquote>
+          <blockquote class="quote-english">"O death, where is thy victory?"</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Paul (attributed)</span>
+            <span class="quote-date">c. 56 AD</span>
+            <span class="quote-source">1 Corinthians 15:55</span>
+          </div>
+          <p class="quote-significance">Paul&#x27;s triumphal taunt to death. The Christian claim that resurrection has emptied the grave of its terror.</p>
+          
+        </div>
+        <div class="quote-card" data-position="ambiguous" data-tradition="christian" data-topic="governance" data-era="Imperial">
+          <div class="quote-position-tag tag-ambiguous">Ambiguous</div>
+          <blockquote class="quote-original">οὐ γὰρ ἔστιν ἐξουσία εἰ μὴ ὑπὸ θεοῦ</blockquote>
+          <blockquote class="quote-english">"There is no authority except from God."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Paul (attributed)</span>
+            <span class="quote-date">c. 57 AD</span>
+            <span class="quote-source">Romans 13:1</span>
+          </div>
+          <p class="quote-significance">The doctrine of divinely ordained authority. Used to justify obedience to rulers from Constantine to the modern state.</p>
+          
+        </div>
+        <div class="quote-card" data-position="ambiguous" data-tradition="christian" data-topic="divinity" data-era="Imperial">
+          <div class="quote-position-tag tag-ambiguous">Ambiguous</div>
+          <blockquote class="quote-original">σὺ εἶ ὁ υἱός μου ὁ ἀγαπητός · ἐν σοὶ εὐδόκησα</blockquote>
+          <blockquote class="quote-english">"You are my beloved Son; in you I am well pleased."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Mark (attributed)</span>
+            <span class="quote-date">c. 65–75 AD</span>
+            <span class="quote-source">Gospel of Mark 1:11</span>
+          </div>
+          <p class="quote-significance">The divine voice at the baptism. Addressed to Jesus alone (&#x27;You are&#x27;), not declared publicly (&#x27;This is&#x27;). The adoptionists read this as the moment Christ received divinity; the orthodox read it as confirmation of pre-existing sonship.</p>
+          <a href="/library/verified-sinaiticus-mark-1.html" class="quote-link">Read with manuscript scan →</a>
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="christian" data-topic="ethics" data-era="Imperial">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">ἔσεσθε οὖν ὑμεῖς τέλειοι ὡς ὁ πατὴρ ὑμῶν ὁ οὐράνιος τέλειός ἐστιν</blockquote>
+          <blockquote class="quote-english">"Be perfect, therefore, as your heavenly Father is perfect."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Matthew (attributed)</span>
+            <span class="quote-date">c. 80–90 AD</span>
+            <span class="quote-source">Gospel of Matthew 5:48</span>
+          </div>
+          <p class="quote-significance">The command to become teleios (complete, having reached the telos). The theosis tradition reads this as an ontological command to become like God, not merely a moral aspiration.</p>
+          <a href="/library/verified-sinaiticus-matt-5.html" class="quote-link">Read with manuscript scan →</a>
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="christian" data-topic="soul" data-era="Imperial">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">ἐγώ εἰμι ἡ ἄμπελος ὑμεῖς τὰ κλήματα</blockquote>
+          <blockquote class="quote-english">"I am the vine, you are the branches."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">John (attributed)</span>
+            <span class="quote-date">c. 90 AD</span>
+            <span class="quote-source">Gospel of John 15:5</span>
+          </div>
+          <p class="quote-significance">Organic union with Christ: not merely following a teacher but being a living part of the divine organism. The branches share the life of the vine.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="christian" data-topic="divinity" data-era="Imperial">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          
+          <blockquote class="quote-english">"The blood of God."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Ignatius of Antioch</span>
+            <span class="quote-date">c. 107 AD</span>
+            <span class="quote-source">To the Ephesians 4</span>
+          </div>
+          <p class="quote-significance">One of the earliest assertions of Christ&#x27;s full divinity, written by a bishop on his way to martyrdom. If Christ has &#x27;blood of God,&#x27; then divinity entered flesh.</p>
+          
+        </div>
+        <div class="quote-card" data-position="foundational" data-tradition="christian" data-topic="divinity" data-era="Imperial">
+          <div class="quote-position-tag tag-foundational">Foundational</div>
           <blockquote class="quote-original">ἐν ἀρχῇ ἦν ὁ λόγος · καὶ ὁ λόγος ἦν πρὸς τὸν θεόν · καὶ θεὸς ἦν ὁ λόγος</blockquote>
-          <blockquote class="quote-english">“In the beginning was the Word, and the Word was with God, and the Word was God.”</blockquote>
+          <blockquote class="quote-english">"In the beginning was the Word, and the Word was with God, and the Word was God."</blockquote>
           <div class="quote-meta">
             <span class="quote-author">John (attributed)</span>
             <span class="quote-date">c. 90–110 AD</span>
             <span class="quote-source">Gospel of John 1:1</span>
           </div>
           <p class="quote-significance">Establishes the divinity of the Logos. The Word is not a lesser emanation but is itself God. Foundation of both orthodox Christology and Gnostic Logos theology.</p>
-          <a href="/library/sinaiticus-john-1.html#s1-1" class="quote-link">Read with manuscript scan →</a>
+          <a href="/library/verified-sinaiticus-john-1.html" class="quote-link">Read with manuscript scan →</a>
         </div>
-
+        <div class="quote-card" data-position="for" data-tradition="christian" data-topic="divinity" data-era="Imperial">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">καὶ ὁ λόγος σὰρξ ἐγένετο</blockquote>
+          <blockquote class="quote-english">"And the Word became flesh and dwelt among us."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">John (attributed)</span>
+            <span class="quote-date">c. 90–110 AD</span>
+            <span class="quote-source">Gospel of John 1:14</span>
+          </div>
+          <p class="quote-significance">God entered humanity. If divinity can become flesh, the boundary between divine and human is permeable. The orthodox read this as unique to Christ; the Gnostics read it as paradigmatic.</p>
+          <a href="/library/verified-sinaiticus-john-1.html" class="quote-link">Read with manuscript scan →</a>
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="christian" data-topic="divinity" data-era="Imperial">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">ἔδωκεν αὐτοῖς ἐξουσίαν τέκνα θεοῦ γενέσθαι</blockquote>
+          <blockquote class="quote-english">"He gave them the right to become children of God."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">John (attributed)</span>
+            <span class="quote-date">c. 90–110 AD</span>
+            <span class="quote-source">Gospel of John 1:12</span>
+          </div>
+          <p class="quote-significance">Divine sonship is available to those who receive the Logos. The Gnostics read this as awakening the divine spark; the orthodox read it as adoption by grace.</p>
+          <a href="/library/verified-sinaiticus-john-1.html" class="quote-link">Read with manuscript scan →</a>
+        </div>
+        <div class="quote-card" data-position="against" data-tradition="christian" data-topic="divinity" data-era="Imperial">
+          <div class="quote-position-tag tag-against">Against theosis</div>
+          <blockquote class="quote-original">μονογενὴς θεὸς ὁ ὢν εἰς τὸν κόλπον τοῦ πατρὸς</blockquote>
+          <blockquote class="quote-english">"The only-begotten God, the one who is in the bosom of the Father, he has made him known."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">John (attributed)</span>
+            <span class="quote-date">c. 90–110 AD</span>
+            <span class="quote-source">Gospel of John 1:18 (Sinaiticus reading)</span>
+          </div>
+          <p class="quote-significance">Sinaiticus reads &#x27;only-begotten God&#x27; (monogenes theos), not &#x27;only-begotten Son.&#x27; If Christ is the unique God, divinity may be his exclusive property. Key textual variant.</p>
+          <a href="/library/verified-sinaiticus-john-1.html" class="quote-link">Read with manuscript scan →</a>
+        </div>
+        <div class="quote-card" data-position="ambiguous" data-tradition="christian" data-topic="divinity" data-era="Imperial">
+          <div class="quote-position-tag tag-ambiguous">Ambiguous</div>
+          <blockquote class="quote-original">ἐγὼ καὶ ὁ πατὴρ ἕν ἐσμεν</blockquote>
+          <blockquote class="quote-english">"I and the Father are one."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">John (attributed)</span>
+            <span class="quote-date">c. 90–110 AD</span>
+            <span class="quote-source">Gospel of John 10:30</span>
+          </div>
+          <p class="quote-significance">The neuter &#x27;one&#x27; (hen, not heis) means &#x27;one thing,&#x27; not &#x27;one person.&#x27; Unity of substance or merely of will? The Arians, Nicenes, and Gnostics all claimed this verse.</p>
+          <a href="/library/verified-sinaiticus-john-10.html" class="quote-link">Read with manuscript scan →</a>
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="christian" data-topic="divinity" data-era="Imperial">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">ἐγὼ εἶπα θεοί ἐστε</blockquote>
+          <blockquote class="quote-english">"I said, you are gods."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">John (attributed), quoting Psalm 82:6</span>
+            <span class="quote-date">c. 90–110 AD</span>
+            <span class="quote-source">Gospel of John 10:34</span>
+          </div>
+          <p class="quote-significance">Jesus quotes scripture calling human beings &#x27;gods.&#x27; The most direct claim that divinity is not exclusive. Cited by every major theosis theologian from Clement to Palamas.</p>
+          <a href="/library/verified-sinaiticus-john-10.html" class="quote-link">Read with manuscript scan →</a>
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="christian" data-topic="divinity" data-era="Imperial">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">ἵνα πάντες ἓν ὦσιν · καθὼς σύ πάτερ ἐν ἐμοὶ κἀγὼ ἐν σοί · ἵνα καὶ αὐτοὶ ἐν ἡμῖν ὦσιν</blockquote>
+          <blockquote class="quote-english">"That they all may be one, just as you, Father, are in me and I in you, that they also may be in us."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">John (attributed)</span>
+            <span class="quote-date">c. 90–110 AD</span>
+            <span class="quote-source">Gospel of John 17:21</span>
+          </div>
+          <p class="quote-significance">Christ prays that the mutual indwelling between Father and Son extend to all believers. The most explicit theosis prayer in the New Testament.</p>
+          <a href="/library/verified-sinaiticus-john-17.html" class="quote-link">Read with manuscript scan →</a>
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="christian" data-topic="divinity" data-era="Imperial">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">ἵνα διὰ τούτων γένησθε θείας κοινωνοὶ φύσεως</blockquote>
+          <blockquote class="quote-english">"That through them you may become partakers of the divine nature."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Peter (attributed)</span>
+            <span class="quote-date">c. 100–120 AD</span>
+            <span class="quote-source">2 Peter 1:4</span>
+          </div>
+          <p class="quote-significance">The most explicit theosis statement in the New Testament. Koinonoi physeos = sharers in the nature (ontological, not merely moral). The proof-text for Eastern Orthodox divinization.</p>
+          <a href="/library/verified-sinaiticus-2peter-1.html" class="quote-link">Read with manuscript scan →</a>
+        </div>
+        <div class="quote-card" data-position="ambiguous" data-tradition="greek" data-topic="ethics" data-era="Imperial">
+          <div class="quote-position-tag tag-ambiguous">Ambiguous</div>
+          <blockquote class="quote-original">ἕωθεν προλέγειν ἑαυτῷ συντεύξομαι περιέργῳ ἀχαρίστῳ</blockquote>
+          <blockquote class="quote-english">"Begin the morning by saying to thyself: I shall meet with the busybody, the ungrateful, the arrogant."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Marcus Aurelius</span>
+            <span class="quote-date">c. 170 AD</span>
+            <span class="quote-source">Meditations II.1</span>
+          </div>
+          <p class="quote-significance">The Stoic emperor&#x27;s daily preparation: anticipate human failure and remain unmoved. The foundation of Stoic ethical practice.</p>
+          
+        </div>
+        <div class="quote-card" data-position="against" data-tradition="greek" data-topic="divinity" data-era="Imperial">
+          <div class="quote-position-tag tag-against">Against theosis</div>
+          
+          <blockquote class="quote-english">"How can a mortal body be God?"</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Celsus</span>
+            <span class="quote-date">c. 178 AD</span>
+            <span class="quote-source">True Doctrine (in Origen, Contra Celsum)</span>
+          </div>
+          <p class="quote-significance">The pagan philosophical attack on Christian incarnation: divinity and mortality are incompatible categories.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="christian" data-topic="divinity" data-era="Imperial">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">Verbum Dei, Dominus noster Iesus Christus, qui propter immensam suam dilectionem factus est quod sumus nos, uti nos perficeret esse quod est ipse.</blockquote>
+          <blockquote class="quote-english">"The Word of God, our Lord Jesus Christ, who through his transcendent love became what we are, that he might bring us to be what he himself is."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Irenaeus of Lyon</span>
+            <span class="quote-date">c. 180 AD</span>
+            <span class="quote-source">Against Heresies III.19.1</span>
+          </div>
+          <p class="quote-significance">The earliest systematic theosis formula. More radical than Athanasius: not &#x27;God&#x27; in the abstract but &#x27;what he himself is.&#x27; The verb perficeret (might perfect/complete) implies a process.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="christian" data-topic="knowledge" data-era="Imperial">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          
+          <blockquote class="quote-english">"The true gnostic has already become god."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Clement of Alexandria</span>
+            <span class="quote-date">c. 200 AD</span>
+            <span class="quote-source">Stromata VII.10</span>
+          </div>
+          <p class="quote-significance">Clement reclaims &#x27;gnosis&#x27; from the Gnostics: true knowledge does lead to divinization, but through the Church, not secret revelation.</p>
+          
+        </div>
+        <div class="quote-card" data-position="against" data-tradition="buddhist" data-topic="soul" data-era="Imperial">
+          <div class="quote-position-tag tag-against">Against theosis</div>
+          
+          <blockquote class="quote-english">"If the self were the same as the aggregates, it would be subject to arising and ceasing."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Nagarjuna</span>
+            <span class="quote-date">c. 200 AD</span>
+            <span class="quote-source">MMK 18.5</span>
+          </div>
+          <p class="quote-significance">The Buddhist philosophical demolition: there is no permanent self to be divinized. If there is no atman, theosis has no subject.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="buddhist" data-topic="soul" data-era="Imperial">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          
+          <blockquote class="quote-english">"All beings possess the Tathagata-garbha (Buddha-nature)."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Tathagatagarbha Sutra</span>
+            <span class="quote-date">c. 3rd c. CE</span>
+            <span class="quote-source">Tathagatagarbha Sutra</span>
+          </div>
+          <p class="quote-significance">The Buddhist divine spark: every being already has the seed of Buddhahood within. Not earned but uncovered.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="greek" data-topic="soul" data-era="Imperial">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">phuge monou pros monon</blockquote>
+          <blockquote class="quote-english">"The flight of the alone to the Alone."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Plotinus</span>
+            <span class="quote-date">c. 260 AD</span>
+            <span class="quote-source">Enneads VI.9.11</span>
+          </div>
+          <p class="quote-significance">The philosophical foundation of theosis: the soul&#x27;s return to the One from which it emanated. Not a gift but a homecoming.</p>
+          
+        </div>
+        <div class="quote-card" data-position="against" data-tradition="christian" data-topic="divinity" data-era="Late Antiquity">
+          <div class="quote-position-tag tag-against">Against theosis</div>
+          
+          <blockquote class="quote-english">"The Son is a creature. There was when he was not."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Arius</span>
+            <span class="quote-date">c. 318 AD</span>
+            <span class="quote-source">Letter to Alexander of Alexandria</span>
+          </div>
+          <p class="quote-significance">If Christ himself is not fully God by nature, then theosis through Christ is impossible. The Arian position that nearly won.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="christian" data-topic="divinity" data-era="Late Antiquity">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">Αὐτὸς γὰρ ἐνηνθρώπησεν, ἵνα ἡμεῖς θεοποιηθῶμεν</blockquote>
+          <blockquote class="quote-english">"He became man that we might be made God."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Athanasius of Alexandria</span>
+            <span class="quote-date">c. 335 AD</span>
+            <span class="quote-source">On the Incarnation, ch. 54</span>
+          </div>
+          <p class="quote-significance">The most famous sentence in the history of the theosis doctrine. The verb theopoiethomen (might be made god) is active and ontological, not metaphorical.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="christian" data-topic="divinity" data-era="Late Antiquity">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">Deus natus homo est, ut homo nasceretur Deus.</blockquote>
+          <blockquote class="quote-english">"God was born as man so that man might be born as God."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Hilary of Poitiers</span>
+            <span class="quote-date">c. 360 AD</span>
+            <span class="quote-source">De Trinitate IX.4</span>
+          </div>
+          <p class="quote-significance">The Western Latin tradition affirming theosis in almost identical terms to Athanasius.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="gnostic" data-topic="soul" data-era="Late Antiquity">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">misit scintillam, quae correxit hominem et suscitauit et fecit eum uiuere</blockquote>
+          <blockquote class="quote-english">"He sent a spark, which corrected man and raised him up and made him live."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Filastrius of Brescia (reporting Saturninus)</span>
+            <span class="quote-date">c. 385 AD</span>
+            <span class="quote-source">Diversarum Hereseon Liber, ch. 31</span>
+          </div>
+          <p class="quote-significance">The Gnostic divine spark (scintilla): a fragment of divine light sent into the body made by angels. The spark alone is saved; all else is abandoned. The most concise summary of Gnostic soteriology.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="gnostic" data-topic="soul" data-era="Late Antiquity">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">Animam ergo solam saluari, corpus autem hominis non saluari arbitratur.</blockquote>
+          <blockquote class="quote-english">"He holds that the soul alone is saved, but that the body of man is not saved."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Filastrius of Brescia (reporting Valentinus)</span>
+            <span class="quote-date">c. 385 AD</span>
+            <span class="quote-source">Diversarum Hereseon Liber, ch. 38</span>
+          </div>
+          <p class="quote-significance">The Valentinian position: only the spiritual element in humanity participates in the divine. The body, made by the Demiurge, is excluded. A radical theosis limited to the soul.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="christian" data-topic="soul" data-era="Late Antiquity">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          
+          <blockquote class="quote-english">"The soul deemed worthy to participate in the Spirit becomes all light, all face, all eye."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Pseudo-Macarius</span>
+            <span class="quote-date">c. 385 AD</span>
+            <span class="quote-source">Homily 15</span>
+          </div>
+          <p class="quote-significance">The mystical vision of total transformation: not a metaphor but an ontological claim about what happens when the Spirit fills a person.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="christian" data-topic="divinity" data-era="Late Antiquity">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          
+          <blockquote class="quote-english">"We are called to become gods, not by nature but by grace."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">John Chrysostom</span>
+            <span class="quote-date">c. 390 AD</span>
+            <span class="quote-source">Homily 14 on John</span>
+          </div>
+          <p class="quote-significance">The distinction between theosis by nature (impossible) and by grace (the orthodox claim). Chrysostom&#x27;s formulation became standard.</p>
+          
+        </div>
+        <div class="quote-card" data-position="against" data-tradition="islamic" data-topic="divinity" data-era="Medieval">
+          <div class="quote-position-tag tag-against">Against theosis</div>
+          <blockquote class="quote-original">laqad kafara alladhina qalu inna allaha huwa al-masihu ibnu maryam</blockquote>
+          <blockquote class="quote-english">"They have certainly disbelieved who say, God is the Messiah, son of Mary."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Quran</span>
+            <span class="quote-date">c. 622 AD</span>
+            <span class="quote-source">Quran 5:72</span>
+          </div>
+          <p class="quote-significance">The Quranic rejection of divine incarnation. If God did not become human, the entire mechanism of Christian theosis collapses.</p>
+          
+        </div>
+        <div class="quote-card" data-position="against" data-tradition="islamic" data-topic="divinity" data-era="Medieval">
+          <div class="quote-position-tag tag-against">Against theosis</div>
+          <blockquote class="quote-original">laysa kamithlihi shay&#x27;un</blockquote>
+          <blockquote class="quote-english">"There is nothing like unto Him."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Quran</span>
+            <span class="quote-date">c. 622 AD</span>
+            <span class="quote-source">Quran 42:11</span>
+          </div>
+          <p class="quote-significance">God&#x27;s absolute transcendence and incomparability. If nothing is like God, then becoming like God is a category error.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="sufi" data-topic="divinity" data-era="Medieval">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">ana al-haqq</blockquote>
+          <blockquote class="quote-english">"I am the Truth (God)."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Mansur al-Hallaj</span>
+            <span class="quote-date">c. 900 AD</span>
+            <span class="quote-source">Al-Hallaj, attested in multiple sources</span>
+          </div>
+          <p class="quote-significance">The Sufi mystic executed for claiming identity with God. The Islamic parallel to both John 10:30 and Aham Brahmasmi. Al-Hallaj was crucified.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="sufi" data-topic="death" data-era="Medieval">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          
+          <blockquote class="quote-english">"I died as a mineral and became a plant. I died as a plant and became an animal. I died as an animal and became human. What should I fear? When have I become less by dying?"</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Rumi</span>
+            <span class="quote-date">c. 1260 AD</span>
+            <span class="quote-source">Masnavi III</span>
+          </div>
+          <p class="quote-significance">Theosis as evolutionary ascent: each death is a transformation into a higher form. The human is not the endpoint.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="sufi" data-topic="love" data-era="Medieval">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">بشنو این نی چون شکایت می‌کند</blockquote>
+          <blockquote class="quote-english">"Listen to the reed, how it complains, telling the tale of separations."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Rumi</span>
+            <span class="quote-date">c. 1260 AD</span>
+            <span class="quote-source">Masnavi I.1</span>
+          </div>
+          <p class="quote-significance">The opening of the Masnavi: the soul cut from its source longs to return. Love as the wound of separation.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="christian" data-topic="divinity" data-era="Medieval">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          <blockquote class="quote-original">Unigenitus Dei Filius, suae divinitatis volens nos esse participes.</blockquote>
+          <blockquote class="quote-english">"The only-begotten Son of God, wanting to make us sharers in his divinity."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Thomas Aquinas</span>
+            <span class="quote-date">c. 1270 AD</span>
+            <span class="quote-source">Summa Theologiae III.1.2</span>
+          </div>
+          <p class="quote-significance">Even the greatest Western scholastic affirms participation in divinity as the purpose of the Incarnation.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="christian" data-topic="knowledge" data-era="Medieval">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          
+          <blockquote class="quote-english">"The eye through which I see God is the same eye through which God sees me."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Meister Eckhart</span>
+            <span class="quote-date">c. 1300 AD</span>
+            <span class="quote-source">Sermon 52</span>
+          </div>
+          <p class="quote-significance">The most radical Western theosis statement. Not two eyes but one. The seer and the seen are identical. Condemned by the Pope.</p>
+          
+        </div>
+        <div class="quote-card" data-position="for" data-tradition="christian" data-topic="knowledge" data-era="Medieval">
+          <div class="quote-position-tag tag-for">For theosis</div>
+          
+          <blockquote class="quote-english">"The divine light is not knowledge but surpasses knowledge."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">Gregory Palamas</span>
+            <span class="quote-date">c. 1338 AD</span>
+            <span class="quote-source">Triads I.3.5</span>
+          </div>
+          <p class="quote-significance">The essence-energies distinction: God&#x27;s essence is unknowable, but his energies (including the uncreated light) are participable. The final Orthodox synthesis on theosis.</p>
+          
+        </div>
+        <div class="quote-card" data-position="against" data-tradition="christian" data-topic="divinity" data-era="Early Modern">
+          <div class="quote-position-tag tag-against">Against theosis</div>
+          <blockquote class="quote-original">finitum non capax infiniti</blockquote>
+          <blockquote class="quote-english">"The finite cannot contain the infinite."</blockquote>
+          <div class="quote-meta">
+            <span class="quote-author">John Calvin</span>
+            <span class="quote-date">1536 AD</span>
+            <span class="quote-source">Institutes I.1</span>
+          </div>
+          <p class="quote-significance">The Reformed Protestant rejection of theosis: God&#x27;s nature is absolutely other. Human nature cannot contain or participate in divine nature.</p>
+          
+        </div>
       </section>
 
     </div>
@@ -613,28 +901,49 @@
   </footer>
 
   <script>
-  function filterQuotes(position, btn) {
+  var activeFilters = { position: 'all', tradition: '', topic: '', era: '' };
+
+  function applyQuoteFilters() {
     var cards = document.querySelectorAll('.quote-card');
-    var sections = document.querySelectorAll('.quotes-section');
-    var btns = document.querySelectorAll('.quotes-filter');
-
-    for (var i = 0; i < btns.length; i++) btns[i].classList.remove('active');
-    btn.classList.add('active');
-
-    if (position === 'all') {
-      for (var i = 0; i < cards.length; i++) cards[i].style.display = '';
-      for (var i = 0; i < sections.length; i++) sections[i].style.display = '';
-      return;
-    }
-
-    for (var i = 0; i < cards.length; i++) {
-      cards[i].style.display = cards[i].getAttribute('data-position') === position ? '' : 'none';
-    }
-    // Show/hide section headers
-    document.getElementById('section-for').style.display = position === 'for' || position === 'all' ? '' : 'none';
-    document.getElementById('section-against').style.display = position === 'against' || position === 'all' ? '' : 'none';
-    document.getElementById('section-ambiguous').style.display = position === 'ambiguous' || position === 'all' ? '' : 'none';
+    cards.forEach(function(c) {
+      var show = true;
+      if (activeFilters.position && activeFilters.position !== 'all') {
+        show = show && c.getAttribute('data-position') === activeFilters.position;
+      }
+      if (activeFilters.tradition) {
+        show = show && c.getAttribute('data-tradition') === activeFilters.tradition;
+      }
+      if (activeFilters.topic) {
+        show = show && c.getAttribute('data-topic') === activeFilters.topic;
+      }
+      if (activeFilters.era) {
+        show = show && c.getAttribute('data-era') === activeFilters.era;
+      }
+      c.style.display = show ? '' : 'none';
+    });
   }
+
+  document.querySelectorAll('.quotes-filter').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var type = btn.getAttribute('data-filter-type');
+      var value = btn.getAttribute('data-filter-value');
+      // Toggle: clicking active filter clears it
+      if (activeFilters[type] === value) {
+        activeFilters[type] = type === 'position' ? 'all' : '';
+        btn.classList.remove('active');
+        if (type === 'position') {
+          document.querySelector('.quotes-filter[data-filter-type="position"][data-filter-value="all"]').classList.add('active');
+        }
+      } else {
+        activeFilters[type] = value;
+        document.querySelectorAll('.quotes-filter[data-filter-type="' + type + '"]').forEach(function(b) {
+          b.classList.remove('active');
+        });
+        btn.classList.add('active');
+      }
+      applyQuoteFilters();
+    });
+  });
   </script>
 
 <script src="../js/decode.js"></script>

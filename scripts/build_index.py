@@ -233,6 +233,12 @@ def build_library_page(era_groups):
         for tr in sorted(traditions)
     )
 
+    # Only show First Translations chip if any exist — text: "Texts appearing in English for the first time."
+    first_chip = (
+        f'        <button class="filter-chip" onclick="toggleFilter(\'first\', \'true\', this)" title="Texts appearing in English for the first time.">First Translations ({first_count})</button>'
+        if first_count > 0 else ''
+    )
+
     if published_count > 0:
         status_line = f'<p style="color: #999; font-size: 0.9rem;">{published_count} published translation{"s" if published_count != 1 else ""} &middot; {total_count} texts in catalog</p>'
     else:
@@ -272,7 +278,7 @@ def build_library_page(era_groups):
 
       <div class="filter-chips-wrap">
         <button class="filter-chip active" onclick="clearFilters(this)">All ({published_count})</button>
-        <button class="filter-chip" onclick="toggleFilter('first', 'true', this)">First Translations ({first_count})</button>
+{first_chip}
         <button class="filter-chip" onclick="toggleFilter('canon', 'true', this)">Core Canon</button>
 {tradition_chips}
       </div>

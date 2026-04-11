@@ -1,0 +1,124 @@
+#!/usr/bin/env python3
+"""
+render_verified.py — Render HTML pages for all verified entries.
+
+Reads each translations/published/verified-*.json + the matching texts.json
+metadata, and writes site/library/<slug>.html using the translation template.
+"""
+
+import json
+import sys
+from datetime import date
+from pathlib import Path
+
+from jinja2 import Environment, FileSystemLoader
+
+ROOT = Path(__file__).resolve().parent.parent
+DATA = ROOT / "data" / "texts.json"
+PUB = ROOT / "translations" / "published"
+LIB = ROOT / "site" / "library"
+TEMPLATES = Path(__file__).resolve().parent / "templates"
+
+TRADITION_LABELS = {
+    "orthodox": "Christian", "neoplatonist": "Greco-Roman", "greek": "Greek",
+    "hindu": "Hindu", "buddhist": "Buddhist", "islamic": "Islamic", "sufi": "Sufi",
+    "gnostic": "Gnostic", "hermetic": "Hermetic", "norse": "Norse",
+    "egyptian": "Egyptian", "mesopotamian": "Mesopotamian", "zoroastrian": "Zoroastrian",
+}
+
+
+def wrap_paragraphs(text):
+    if not text:
+        return ""
+    if "<p>" in text:
+        return text
+    paragraphs = text.strip().split("\n\n")
+    return "\n".join(f"        <p>{p.strip()}</p>" for p in paragraphs if p.strip())
+
+
+def main():
+    texts = json.loads(DATA.read_text(encoding="utf-8"))["texts"]
+    by_id = {t["id"]: t for t in texts}
+
+    env = Environment(loader=FileSystemLoader(str(TEMPLATES)), autoescape=False)
+    template = env.get_template("translation.html")
+
+    today = date.today()
+    rendered = 0
+    skipped = 0
+
+    for tid, meta in by_id.items():
+        if not tid.startswith("verified-"):
+            continue
+        pub_path = PUB / f"{tid}.json"
+        if not pub_path.exists():
+            print(f"  skip {tid}: no published JSON")
+            skipped += 1
+            continue
+        pub = json.loads(pub_path.read_text(encoding="utf-8"))
+
+        introduction = wrap_paragraphs(pub.get("introduction", ""))
+        translation = pub.get("translation", [])
+        translator_notes = pub.get("translator_notes", [])
+
+        has_parallel = False
+        has_scans = False
+        for s in translation:
+            s["text"] = wrap_paragraphs(s.get("text", ""))
+            if s.get("original_text"):
+                has_parallel = True
+                s["original_text"] = wrap_paragraphs(s["original_text"])
+            else:
+                s["original_text"] = ""
+            if s.get("scan_pages"):
+                has_scans = True
+            else:
+                s["scan_pages"] = []
+
+        tradition = meta.get("tradition", "")
+        slug = meta.get("slug", tid)
+
+        # Source labeling per tradition
+        if tid.startswith("verified-edda-"):
+            author_name = "Anonymous (Codex Regius, 13th c.)"
+            source_url = "https://handrit.is/manuscript/view/is/GKS04-2365"
+            critical_edition = "Codex Regius (GKS 2365 4to)"
+        else:
+            author_name = "Codex Sinaiticus (4th c.) — biblical authors"
+            source_url = "https://codexsinaiticus.org/"
+            critical_edition = "Tischendorf 8th edition (1869) / Codex Sinaiticus transcription"
+
+        html = template.render(
+            title=pub.get("title", meta.get("title", tid)),
+            original_title=pub.get("title", ""),
+            author_name=author_name,
+            author_dates="",
+            source=pub.get("source", meta.get("source", "")),
+            source_url=source_url,
+            critical_edition=critical_edition,
+            language=pub.get("language", meta.get("language", "")),
+            description=pub.get("description", meta.get("description", "")),
+            is_first_translation=False,
+            introduction=introduction,
+            translation=translation,
+            translator_notes=translator_notes,
+            related_texts=[],
+            has_parallel=has_parallel,
+            has_scans=has_scans,
+            slug=slug,
+            pub_date=str(today),
+            pub_year=str(today.year),
+            tradition=tradition,
+            tradition_label=TRADITION_LABELS.get(tradition, tradition.title()),
+        )
+
+        out = LIB / f"{slug}.html"
+        out.write_text(html, encoding="utf-8")
+        rendered += 1
+
+    print(f"Rendered: {rendered}")
+    print(f"Skipped: {skipped}")
+
+
+if __name__ == "__main__":
+    main()
