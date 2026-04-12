@@ -107,6 +107,14 @@ def main():
             author_name = "Virgil (Vergilius Vaticanus, 4th-5th c.)"
             source_url = "https://digi.vatlib.it/view/MSS_Vat.lat.3225"
             critical_edition = "Greenough edition (Perseus Digital Library)"
+        elif tid.startswith("verified-bookdead-"):
+            author_name = "Ancient Egyptian Scribes (Papyrus of Ani, c. 1250 BCE)"
+            source_url = "https://archive.org/details/papyrusofanirepr01budg"
+            critical_edition = "E.A. Wallis Budge (1895/1913)"
+        elif tid.startswith("verified-hammurabi"):
+            author_name = "King Hammurabi of Babylon (c. 1754 BCE)"
+            source_url = "https://avalon.law.yale.edu/ancient/hamframe.asp"
+            critical_edition = "L.W. King (1910)"
         else:
             author_name = "Codex Sinaiticus (4th c.) — biblical authors"
             source_url = "https://codexsinaiticus.org/"
