@@ -115,6 +115,14 @@ def main():
             author_name = "King Hammurabi of Babylon (c. 1754 BCE)"
             source_url = "https://avalon.law.yale.edu/ancient/hamframe.asp"
             critical_edition = "L.W. King (1910)"
+        elif tid.startswith("verified-rigveda-"):
+            author_name = "Vedic Rishis (c. 1500-1200 BCE)"
+            source_url = "https://archive.org/details/rigvedasanhitasa03syaauoft"
+            critical_edition = "Max Müller editio princeps (1849)"
+        elif tid.startswith("verified-plato-"):
+            author_name = "Plato (c. 428-348 BCE)"
+            source_url = "https://www.perseus.tufts.edu/hopper/"
+            critical_edition = "Perseus Digital Library"
         else:
             author_name = "Codex Sinaiticus (4th c.) — biblical authors"
             source_url = "https://codexsinaiticus.org/"
