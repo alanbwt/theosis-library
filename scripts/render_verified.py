@@ -91,6 +91,10 @@ def main():
             author_name = "Latin Vulgate (Codex Amiatinus, c. 700 AD)"
             source_url = "https://archive.org/details/codex-amiatinua"
             critical_edition = "Latin Vulgate (Jerome, late 4th c.)"
+        elif tid.startswith("verified-venetus-"):
+            author_name = "Homer (Venetus A, 10th c.)"
+            source_url = "https://www.homermultitext.org/"
+            critical_edition = "Munro & Allen (Perseus Digital Library)"
         else:
             author_name = "Codex Sinaiticus (4th c.) — biblical authors"
             source_url = "https://codexsinaiticus.org/"
