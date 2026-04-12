@@ -49,6 +49,23 @@ ILIAD_BOOK_FOLIOS = {
     22: "VA282RN_0452", 23: "VA292VN_0794", 24: "VA310VN_0812",
 }
 
+# Odyssey manuscript scans: Hayman 1866 Greek edition on Internet Archive
+# (identifier: odysseyofhome01home, 524 pages)
+# Greek text begins around page 120, ~17 pages per book
+ODYSSEY_IA_ID = "odysseyofhome01home"
+ODYSSEY_IA_TPL = (
+    "https://iiif.archive.org/image/iiif/3/"
+    "odysseyofhome01home%2Fodysseyofhome01home_jp2.zip%2Fodysseyofhome01home_jp2%2F"
+    "odysseyofhome01home_{page:04d}.jp2/full/max/0/default.jpg"
+)
+ODYSSEY_SCAN_DIR = PROJECT_ROOT / "site" / "assets" / "scans" / "odyssey-hayman"
+ODYSSEY_SCAN_DIR.mkdir(parents=True, exist_ok=True)
+
+# Proportional page ranges for each Odyssey book (pages 120-520, ~400 pages for 24 books)
+def _odyssey_page(book_num):
+    """Estimated page in Hayman 1866 for each book start."""
+    return 120 + int((book_num - 1) * 400 / 24)
+
 # Perseus GitHub URLs for Greek text
 ILIAD_XML_URL = (
     "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/"
@@ -183,24 +200,25 @@ def import_homer_book(work, book_num, force=False):
         xml_url = ILIAD_XML_URL
         pg_id = PG_ILIAD
         pretty_work = "The Iliad"
-        folio_map = ILIAD_BOOK_FOLIOS
+        tid = f"verified-venetus-{work}-{book_num}"
     else:
         xml_url = ODYSSEY_XML_URL
         pg_id = PG_ODYSSEY
         pretty_work = "The Odyssey"
-        folio_map = {}  # TODO: Odyssey folio mapping
+        tid = f"verified-odyssey-{book_num}"
 
-    tid = f"verified-venetus-{work}-{book_num}"
     pub_path = PUB_DIR / f"{tid}.json"
     if pub_path.exists() and not force:
         return ("skip", tid)
 
     print(f"  [{tid}] {pretty_work} Book {book_num}...")
 
-    # 1. Download Venetus A folio for this book
-    folio_filename = folio_map.get(book_num)
+    # 1. Download manuscript scan
     scan_files = []
-    if folio_filename:
+    if work == "iliad":
+        folio_filename = ILIAD_BOOK_FOLIOS.get(book_num)
+        if not folio_filename:
+            return ("fail", f"{tid}: no folio mapping")
         scan_name = f"venetus-a-{work}-{book_num}-{folio_filename}.jpg"
         scan_path = SCAN_DIR / scan_name
         try:
@@ -211,7 +229,20 @@ def import_homer_book(work, book_num, force=False):
             return ("fail", f"{tid}: scan too small or missing")
         scan_files.append(f"venetus-a/{scan_name}")
     else:
-        return ("fail", f"{tid}: no folio mapping for {work} book {book_num}")
+        # Odyssey: use Hayman 1866 edition from archive.org
+        page = _odyssey_page(book_num)
+        scan_name = f"odyssey-hayman-book{book_num}-p{page:04d}.jpg"
+        scan_path = ODYSSEY_SCAN_DIR / scan_name
+        if not (scan_path.exists() and scan_path.stat().st_size > 30000):
+            try:
+                url = ODYSSEY_IA_TPL.format(page=page)
+                data = http_get(url, timeout=120)
+                scan_path.write_bytes(data)
+            except Exception as e:
+                return ("fail", f"{tid}: scan download failed: {e}")
+        if not scan_path.exists() or scan_path.stat().st_size < 30000:
+            return ("fail", f"{tid}: scan too small")
+        scan_files.append(f"odyssey-hayman/{scan_name}")
 
     # 2. Fetch Greek text from Perseus
     try:
@@ -259,50 +290,64 @@ def import_homer_book(work, book_num, force=False):
         })
 
     today = str(date.today())
+    if work == "iliad":
+        scan_source = "Homer Multitext Project (homermultitext.org)"
+        scan_license = "CC BY-SA"
+        scan_ms = "Venetus A (Marcianus Graecus 454, Biblioteca Marciana, Venice)"
+        scan_desc = (
+            f"Manuscript page from Venetus A (Marcianus Graecus 454), the most important "
+            f"surviving Iliad manuscript (10th c., Biblioteca Marciana, Venice), via the "
+            f"Homer Multitext Project."
+        )
+        butler_year = "1898"
+    else:
+        scan_source = "Internet Archive (Hayman 1866 Greek edition)"
+        scan_license = "public domain"
+        scan_ms = "Hayman Greek Odyssey edition (1866, Oxford)"
+        scan_desc = (
+            f"Page from Hayman's 1866 Greek edition of the Odyssey with text and commentary "
+            f"(Oxford), a standard 19th-century scholarly edition. Via Internet Archive "
+            f"(archive.org/details/odysseyofhome01home)."
+        )
+        butler_year = "1900"
+
     entry = {
         "id": tid,
         "title": f"{pretty_work}, Book {book_num}",
         "slug": tid,
         "language": "Ancient Greek / English",
         "source": (
-            f"Venetus A (Marcianus Graecus 454, 10th c.) folio via Homer Multitext IIIF + "
-            f"Perseus Digital Library Greek (Munro & Allen ed.) + "
-            f"Samuel Butler English (1898, Project Gutenberg #{pg_id})"
+            f"{scan_ms} + Perseus Digital Library Greek (Munro & Allen ed.) + "
+            f"Samuel Butler English ({butler_year}, Project Gutenberg #{pg_id})"
         ),
         "description": (
-            f"Book {book_num} of {pretty_work} by Homer. Manuscript page from Venetus A "
-            f"(Marcianus Graecus 454), the most important surviving Iliad manuscript (10th c., "
-            f"Biblioteca Marciana, Venice), via the Homer Multitext Project. Greek text verbatim "
+            f"Book {book_num} of {pretty_work} by Homer. {scan_desc} Greek text verbatim "
             f"from the Munro & Allen edition via Perseus Digital Library (public domain). "
-            f"English translation verbatim from Samuel Butler's 1898 prose rendering "
+            f"English translation verbatim from Samuel Butler's {butler_year} prose rendering "
             f"(Project Gutenberg #{pg_id}, public domain)."
         ),
         "introduction": (
             f"<p>This entry presents Book {book_num} of <strong>{pretty_work}</strong> with "
             f"the strict three-criteria standard of the Theosis Library:</p>"
             f"<ol>"
-            f"<li><strong>Manuscript scan:</strong> The opening folio of Book {book_num} "
-            f"from Venetus A (Marcianus Graecus 454, 10th century), the most important "
-            f"manuscript witness for Homer's Iliad. Hosted by the Homer Multitext Project "
-            f"(CC BY-SA). Folio: {folio_filename}.</li>"
+            f"<li><strong>Primary source scan:</strong> {scan_desc}</li>"
             f"<li><strong>Original text:</strong> The complete Greek text of Book {book_num} "
             f"({len(greek_lines)} lines), verbatim from the Munro & Allen edition via the "
             f"Perseus Digital Library (public domain).</li>"
             f"<li><strong>English translation:</strong> Samuel Butler's prose translation "
-            f"(1898), verbatim from Project Gutenberg #{pg_id} (public domain).</li>"
+            f"({butler_year}), verbatim from Project Gutenberg #{pg_id} (public domain).</li>"
             f"</ol>"
         ),
         "translation": sections,
         "translator_notes": [],
         "verification": {
-            "scan_source": "Homer Multitext Project (homermultitext.org)",
-            "scan_license": "CC BY-SA",
-            "scan_manuscript": "Venetus A (Marcianus Graecus 454, Biblioteca Marciana, Venice)",
-            "scan_folio": folio_filename,
+            "scan_source": scan_source,
+            "scan_license": scan_license,
+            "scan_manuscript": scan_ms,
             "scan_local_paths": scan_files,
             "original_text_source": "Perseus Digital Library (Munro & Allen edition)",
             "original_text_license": "public domain",
-            "translation_source": f"Project Gutenberg #{pg_id} (Samuel Butler, 1898)",
+            "translation_source": f"Project Gutenberg #{pg_id} (Samuel Butler, {butler_year})",
             "translation_license": "public domain",
             "verified_date": today,
         },

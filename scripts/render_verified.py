@@ -95,6 +95,14 @@ def main():
             author_name = "Homer (Venetus A, 10th c.)"
             source_url = "https://www.homermultitext.org/"
             critical_edition = "Munro & Allen (Perseus Digital Library)"
+        elif tid.startswith("verified-odyssey-"):
+            author_name = "Homer (Hayman 1866 Greek edition)"
+            source_url = "https://archive.org/details/odysseyofhome01home"
+            critical_edition = "Munro & Allen (Perseus Digital Library)"
+        elif tid.startswith("verified-gilgamesh-"):
+            author_name = "Sin-leqi-unninni (attributed)"
+            source_url = "https://cdli.earth/"
+            critical_edition = "Stephen Langdon (1917)"
         else:
             author_name = "Codex Sinaiticus (4th c.) — biblical authors"
             source_url = "https://codexsinaiticus.org/"
