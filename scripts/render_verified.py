@@ -83,6 +83,14 @@ def main():
             author_name = "Anonymous (Codex Regius, 13th c.)"
             source_url = "https://handrit.is/manuscript/view/is/GKS04-2365"
             critical_edition = "Codex Regius (GKS 2365 4to)"
+        elif tid.startswith("verified-leningrad-"):
+            author_name = "Hebrew Bible (Codex Leningradensis, 1008 AD)"
+            source_url = "https://archive.org/details/Leningrad_Codex"
+            critical_edition = "Westminster Leningrad Codex (Groves Center)"
+        elif tid.startswith("verified-amiatinus-"):
+            author_name = "Latin Vulgate (Codex Amiatinus, c. 700 AD)"
+            source_url = "https://archive.org/details/codex-amiatinua"
+            critical_edition = "Latin Vulgate (Jerome, late 4th c.)"
         else:
             author_name = "Codex Sinaiticus (4th c.) — biblical authors"
             source_url = "https://codexsinaiticus.org/"

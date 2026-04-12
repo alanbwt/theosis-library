@@ -39,7 +39,7 @@ USER_AGENT = (
 IA_IIIF_TPL = (
     "https://iiif.archive.org/image/iiif/3/"
     "Leningrad_Codex%2FLeningrad_jp2.zip%2FLeningrad_jp2%2FLeningrad_{page:04d}.jp2/"
-    "full/1600,/0/default.jpg"
+    "full/max/0/default.jpg"
 )
 
 # Total content pages in the IA facsimile: 988 (leafNum 0-987).
@@ -87,7 +87,7 @@ LENINGRAD_BOOKS = [
     ("zeph",    "Zephaniah",       36,  3, "zephaniah",      53),
     ("hag",     "Haggai",          37,  2, "haggai",         38),
     ("zech",    "Zechariah",       38, 14, "zechariah",     211),
-    ("mal",     "Malachi",         39,  4, "malachi",        55),
+    ("mal",     "Malachi",         39,  3, "malachi",        55),  # WLC merges KJV ch 3+4
     # Ketuvim (Writings — Leningrad puts Chronicles first)
     ("1chr",    "1 Chronicles",    13, 29, "1 chronicles",  942),
     ("2chr",    "2 Chronicles",    14, 36, "2 chronicles",  822),
