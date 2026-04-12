@@ -103,6 +103,10 @@ def main():
             author_name = "Sin-leqi-unninni (attributed)"
             source_url = "https://cdli.earth/"
             critical_edition = "Stephen Langdon (1917)"
+        elif tid.startswith("verified-aeneid-"):
+            author_name = "Virgil (Vergilius Vaticanus, 4th-5th c.)"
+            source_url = "https://digi.vatlib.it/view/MSS_Vat.lat.3225"
+            critical_edition = "Greenough edition (Perseus Digital Library)"
         else:
             author_name = "Codex Sinaiticus (4th c.) — biblical authors"
             source_url = "https://codexsinaiticus.org/"
