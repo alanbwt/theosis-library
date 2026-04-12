@@ -123,6 +123,18 @@ def main():
             author_name = "Plato (c. 428-348 BCE)"
             source_url = "https://www.perseus.tufts.edu/hopper/"
             critical_edition = "Perseus Digital Library"
+        elif tid.startswith("verified-vaticanus-"):
+            author_name = "Codex Vaticanus (4th c., Vatican Library)"
+            source_url = "https://digi.vatlib.it/view/MSS_Vat.gr.1209"
+            critical_edition = "Tischendorf 8th edition (NT) / KJV (OT)"
+        elif tid.startswith("verified-alexandrinus-"):
+            author_name = "Codex Alexandrinus (5th c., British Library)"
+            source_url = "https://archive.org/details/codex-alexandrinus"
+            critical_edition = "Tischendorf 8th edition (NT) / KJV (OT)"
+        elif tid.startswith("verified-dss-"):
+            author_name = "Dead Sea Scrolls (c. 2nd c. BCE - 1st c. CE)"
+            source_url = "https://en.wikipedia.org/wiki/Great_Isaiah_Scroll"
+            critical_edition = "Westminster Leningrad Codex (Hebrew)"
         else:
             author_name = "Codex Sinaiticus (4th c.) — biblical authors"
             source_url = "https://codexsinaiticus.org/"

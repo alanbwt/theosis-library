@@ -228,9 +228,21 @@ def build_library_page(era_groups):
         "southeast-asian": "Southeast Asian",
         "finnish": "Finnish",
     }
+    # Sort traditions chronologically (oldest first)
+    tradition_chrono_order = [
+        "egyptian", "mesopotamian", "hindu", "greek", "neoplatonist",
+        "orthodox", "gnostic", "hermetic", "buddhist", "islamic", "sufi",
+        "norse", "celtic", "zoroastrian", "taoist", "confucian",
+        "japanese", "tibetan", "mesoamerican", "ethiopian", "african",
+        "slavic", "persian", "jain", "korean", "southeast-asian", "finnish",
+    ]
+    sorted_traditions = sorted(
+        traditions,
+        key=lambda tr: tradition_chrono_order.index(tr) if tr in tradition_chrono_order else 999
+    )
     tradition_chips = "\n".join(
         f'        <button class="filter-chip" onclick="toggleFilter(\'tradition\', \'{tr}\', this)">{tradition_labels.get(tr, tr.title())}</button>'
-        for tr in sorted(traditions)
+        for tr in sorted_traditions
     )
 
     # Only show First Translations chip if any exist — text: "Texts appearing in English for the first time."
@@ -279,7 +291,6 @@ def build_library_page(era_groups):
       <div class="filter-chips-wrap">
         <button class="filter-chip active" onclick="clearFilters(this)">All ({published_count})</button>
 {first_chip}
-        <button class="filter-chip" onclick="toggleFilter('canon', 'true', this)">Core Canon</button>
 {tradition_chips}
       </div>
 

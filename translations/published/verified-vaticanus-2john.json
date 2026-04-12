@@ -1,0 +1,38 @@
+{
+  "id": "verified-vaticanus-2john",
+  "title": "2 John (Codex Vaticanus)",
+  "slug": "verified-vaticanus-2john",
+  "language": "Greek (Tischendorf) / English (KJV)",
+  "source": "Codex Vaticanus (4th c.) via Vatican Library IIIF + Tischendorf Greek + KJV",
+  "description": "The book of 2 John from Codex Vaticanus (Vat.gr.1209, 4th century AD), considered by many scholars the most important manuscript of the Greek Bible. Folio scans via Vatican Library IIIF (digi.vatlib.it). Greek from Tischendorf 8th edition. English from the King James Version (1611, public domain).",
+  "introduction": "<p><strong>Codex Vaticanus</strong> (Vat.gr.1209, 4th century AD) is widely regarded as the single most important manuscript of the Greek Bible. It has been in the Vatican Library since at least 1475. Along with Codex Sinaiticus, it is one of the two oldest near-complete copies of the Bible in existence.</p>",
+  "translation": [
+    {
+      "section": "1.1",
+      "original_ref": "2 John 1:1",
+      "original_text": "<sup>1</sup>Ὁ<S>3588</S> πρεσβύτερος<S>4245</S> ἐκλεκτῇ<S>1588</S> κυρίᾳ<S>2959</S> καὶ<S>2532</S> τοῖς<S>3588</S> τέκνοις<S>5043</S> αὐτῆς,<S>846</S> οὓς<S>3739</S> ἐγὼ<S>1473</S> ἀγαπῶ<S>25</S> ἐν<S>1722</S> ἀληθείᾳ,<S>225</S> καὶ<S>2532</S> οὐκ<S>3756</S> ἐγὼ<S>1473</S> μόνος<S>3441</S> ἀλλὰ<S>235</S> καὶ<S>2532</S> πάντες<S>3956</S> οἱ<S>3588</S> ἐγνωκότες<S>1097</S> τὴν<S>3588</S> ἀλήθειαν,<S>225</S>",
+      "text": "<sup>1</sup>The elder unto the elect lady and her children, whom I love in the truth; and not I only, but also all they that have known the truth;",
+      "scan_pages": [
+        "vaticanus/vat-b-2john-1544.jpg",
+        "vaticanus/vat-b-2john-1544.jpg",
+        "vaticanus/vat-b-2john-1545.jpg"
+      ]
+    }
+  ],
+  "translator_notes": [],
+  "verification": {
+    "scan_source": "Vatican Library IIIF (digi.vatlib.it/view/MSS_Vat.gr.1209)",
+    "scan_license": "Biblioteca Apostolica Vaticana — non-commercial scholarly use",
+    "scan_manuscript": "Codex Vaticanus (Vat.gr.1209, 4th c.)",
+    "scan_local_paths": [
+      "vaticanus/vat-b-2john-1544.jpg",
+      "vaticanus/vat-b-2john-1544.jpg",
+      "vaticanus/vat-b-2john-1545.jpg"
+    ],
+    "original_text_source": "bolls.life API (TISCH)",
+    "original_text_license": "public domain",
+    "translation_source": "bible-api.com (KJV)",
+    "translation_license": "public domain (1611)",
+    "verified_date": "2026-04-12"
+  }
+}
