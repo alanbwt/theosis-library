@@ -161,6 +161,7 @@ def main():
             pub_date=str(today),
             pub_year=str(today.year),
             tradition=tradition,
+            scan_thumb=translation[0].get("scan_pages", [""])[0] if translation else "",
             tradition_label=TRADITION_LABELS.get(tradition, tradition.title()),
         )
 

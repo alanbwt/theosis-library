@@ -11,9 +11,11 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://theosislibrary.com/library/{{ slug }}.html">
   <meta property="og:site_name" content="Theosis Library">
-  <meta name="twitter:card" content="summary">
+  {% if scan_thumb %}<meta property="og:image" content="https://theosislibrary.com/assets/scans/{{ scan_thumb }}">{% endif %}
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ title }}">
   <meta name="twitter:description" content="{{ description }}">
+  {% if scan_thumb %}<meta name="twitter:image" content="https://theosislibrary.com/assets/scans/{{ scan_thumb }}">{% endif %}
   <!-- Schema.org -->
   <script type="application/ld+json">
   {
