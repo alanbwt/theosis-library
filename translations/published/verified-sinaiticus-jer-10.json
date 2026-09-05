@@ -5,7 +5,7 @@
   "language": "Greek (Codex Sinaiticus) / English (KJV)",
   "source": "Codex Sinaiticus folio + transcription (codexsinaiticus.org) + KJV (bible-api.com)",
   "description": "Jeremiah chapter 10. Both the manuscript page scan AND the Greek text are taken directly from Codex Sinaiticus (4th century AD) via the Codex Sinaiticus Project (codexsinaiticus.org). The Greek transcription preserves the actual uncial forms, lunate sigma, nomina sacra abbreviations, and lectional marks of the manuscript. Library folio: 73. English translation verbatim from the King James Version (1611, public domain) via bible-api.com.",
-  "introduction": "<p>This entry meets the strict three-criteria standard of the Theosis Library, with the manuscript text drawn directly from the same source as the scan:</p><ol><li><strong>Manuscript scan:</strong> The actual folio of Codex Sinaiticus containing this passage, from the Codex Sinaiticus Project (codexsinaiticus.org). Library folio reference: 73.</li><li><strong>Original text:</strong> The verbatim transcription of the Sinaiticus manuscript from the Codex Sinaiticus Project, preserving uncial forms, lunate sigma, nomina sacra (e.g. ⟨θϲ⟩ = θεός), and scribal marks. Nomina sacra are shown in angle brackets to indicate the manuscript's sacred-name abbreviations.</li><li><strong>English translation:</strong> The King James Version (1611), retrieved verbatim from the public-domain bible-api.com endpoint.</li></ol>",
+  "introduction": "<p>This entry meets the strict three-criteria standard of the Theosis Library, with the manuscript text drawn directly from the same source as the scan:</p><ol><li><strong>Manuscript scan:</strong> The actual folio of Codex Sinaiticus containing this passage, from the Codex Sinaiticus Project (codexsinaiticus.org). Library folio reference: 73.</li><li><strong>Original text:</strong> The verbatim transcription of the Sinaiticus manuscript from the Codex Sinaiticus Project, preserving uncial forms, lunate sigma, nomina sacra (e.g. ⟨θϲ⟩ = θεός), and scribal marks. Nomina sacra are shown in angle brackets to indicate the manuscript's sacred-name abbreviations.</li><li><strong>English translation:</strong> The King James Version (1611), retrieved verbatim from the public-domain bible-api.com endpoint.</li></ol><p><strong>Numbering:</strong> KJV verses 6, 7, 8, 10 of this chapter have no counterpart in the Septuagint text as it stands in Codex Sinaiticus (the Greek either omits, relocates, or numbers them differently). Compare by content rather than by verse number. Where the Septuagint lacks a verse found in the Hebrew, that is itself a documented textual difference between the two traditions.</p>",
   "translation": [
     {
       "section": "10.1-8",
@@ -37,7 +37,7 @@
     {
       "section": "10.25",
       "original_ref": "Jeremiah 10:25",
-      "original_text": "<sup>25</sup>επι γενεαϲ · ε το ονομα ϲου ουκ επεκαλεϲαντο οτι κατεφαγεϲαν τον ϊακωβʼ · και εξανηλωϲαν αυτον · και τον νομον αυτου ηρημωϲαν ·",
+      "original_text": "<sup>25</sup>εκχεον τον θυμον ϲου επι εθνη τα μη ειδοτα ϲε · και επι γενεαϲ · ε το ονομα ϲου ουκ επεκαλεϲαντο οτι κατεφαγεϲαν τον ϊακωβʼ · και εξανηλωϲαν αυτον · και τον νομον αυτου ηρημωϲαν ·",
       "text": "<sup>25</sup>Pour out thy fury upon the heathen that know thee not, and upon the families that call not on thy name: for they have eaten up Jacob, and devoured him, and consumed him, and have made his habitation desolate.",
       "scan_pages": [
         "sinaiticus-folios/jer-10-Q46_8v_B154.jpg"
@@ -57,6 +57,19 @@
     "original_text_license": "CC BY-NC-SA 3.0",
     "translation_source": "bible-api.com (KJV)",
     "translation_license": "public domain (1611)",
-    "verified_date": "2026-04-11"
+    "verified_date": "2026-04-11",
+    "scan_local_paths": [
+      "sinaiticus-folios/jer-10-Q46_8v_B154.jpg"
+    ],
+    "scan_folio_ids": [
+      "Q46_8v_B154"
+    ],
+    "scan_folio_ranges": [
+      "Q46_8v_B154 (lib. folio 73): Jeremiah, 9:20  - 10:25"
+    ],
+    "section_folios_verified": true,
+    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "versification_note": "KJV verses 6, 7, 8, 10 of this chapter have no counterpart in the Septuagint text as it stands in Codex Sinaiticus (the Greek either omits, relocates, or numbers them differently). Compare by content rather than by verse number. Where the Septuagint lacks a verse found in the Hebrew, that is itself a documented textual difference between the two traditions.",
+    "csp_greek_refreshed": true
   }
 }

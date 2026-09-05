@@ -5,7 +5,7 @@
   "language": "Greek (Codex Sinaiticus) / English (KJV)",
   "source": "Codex Sinaiticus folio + transcription (codexsinaiticus.org) + KJV (bible-api.com)",
   "description": "Proverbs chapter 8. Both the manuscript page scan AND the Greek text are taken directly from Codex Sinaiticus (4th century AD) via the Codex Sinaiticus Project (codexsinaiticus.org). The Greek transcription preserves the actual uncial forms, lunate sigma, nomina sacra abbreviations, and lectional marks of the manuscript. Library folio: 131. English translation verbatim from the King James Version (1611, public domain) via bible-api.com.",
-  "introduction": "<p>This entry meets the strict three-criteria standard of the Theosis Library, with the manuscript text drawn directly from the same source as the scan:</p><ol><li><strong>Manuscript scan:</strong> The actual folio of Codex Sinaiticus containing this passage, from the Codex Sinaiticus Project (codexsinaiticus.org). Library folio reference: 131.</li><li><strong>Original text:</strong> The verbatim transcription of the Sinaiticus manuscript from the Codex Sinaiticus Project, preserving uncial forms, lunate sigma, nomina sacra (e.g. ⟨θϲ⟩ = θεός), and scribal marks. Nomina sacra are shown in angle brackets to indicate the manuscript's sacred-name abbreviations.</li><li><strong>English translation:</strong> The King James Version (1611), retrieved verbatim from the public-domain bible-api.com endpoint.</li></ol>",
+  "introduction": "<p>This entry meets the strict three-criteria standard of the Theosis Library, with the manuscript text drawn directly from the same source as the scan:</p><ol><li><strong>Manuscript scan:</strong> The actual folio of Codex Sinaiticus containing this passage, from the Codex Sinaiticus Project (codexsinaiticus.org). Library folio reference: 131.</li><li><strong>Original text:</strong> The verbatim transcription of the Sinaiticus manuscript from the Codex Sinaiticus Project, preserving uncial forms, lunate sigma, nomina sacra (e.g. ⟨θϲ⟩ = θεός), and scribal marks. Nomina sacra are shown in angle brackets to indicate the manuscript's sacred-name abbreviations.</li><li><strong>English translation:</strong> The King James Version (1611), retrieved verbatim from the public-domain bible-api.com endpoint.</li></ol><p><strong>Numbering:</strong> KJV verse 33 of this chapter has no counterpart in the Septuagint text as it stands in Codex Sinaiticus (the Greek either omits, relocates, or numbers it differently). Compare by content rather than by verse number. Where the Septuagint lacks a verse found in the Hebrew, that is itself a documented textual difference between the two traditions.</p>",
   "translation": [
     {
       "section": "8.1-8",
@@ -46,10 +46,11 @@
     {
       "section": "8.33-36",
       "original_ref": "Proverbs 8:33-36",
-      "original_text": "<sup>34</sup> <sup>35</sup>αι γαρ εξοδοι μου · εξοδοι ζωηϲ και ετοιμαζεται · θεληϲειϲ παρα κυ <sup>36</sup>οι δε αμαρτανοντεϲ ειϲ εμε · αϲεβουϲιν ταϲ εαυτων ψυχαϲ και οι μιϲουντεϲ αγαπωϲιν θανατο",
+      "original_text": "<sup>34</sup>μακαριοϲ ανηρ · οϲ ειϲακουϲεται μου και ανθρωποϲ · οϲ ταϲ εμαϲ οδουϲ φυλαξει αγρυπνων επ εμαιϲ θυραν τηρων ϲταθμουϲ · εμων ειϲοδων ·<sup>35</sup>αι γαρ εξοδοι μου · εξοδοι ζωηϲ και ετοιμαζεται · θεληϲειϲ παρα κυ <sup>36</sup>οι δε αμαρτανοντεϲ ειϲ εμε · αϲεβουϲιν ταϲ εαυτων ψυχαϲ και οι μιϲουντεϲ αγαπωϲιν θανατο",
       "text": "<sup>33</sup>Hear instruction, and be wise, and refuse it not. <sup>34</sup>Blessed\nis the man that heareth me, watching daily at my gates, waiting at the posts of my doors. <sup>35</sup>For whoso findeth me findeth life, and shall obtain favour of the LORD. <sup>36</sup>But he that sinneth against me wrongeth his own soul: all they that hate me love death.",
       "scan_pages": [
-        "sinaiticus-folios/prov-8-Q64_4v_B270.jpg"
+        "sinaiticus-folios/prov-8-Q64_4v_B270.jpg",
+        "sinaiticus-folios/prov-10-Q64_5r_B271.jpg"
       ]
     }
   ],
@@ -66,6 +67,22 @@
     "original_text_license": "CC BY-NC-SA 3.0",
     "translation_source": "bible-api.com (KJV)",
     "translation_license": "public domain (1611)",
-    "verified_date": "2026-04-11"
+    "verified_date": "2026-04-11",
+    "scan_local_paths": [
+      "sinaiticus-folios/prov-8-Q64_4v_B270.jpg",
+      "sinaiticus-folios/prov-10-Q64_5r_B271.jpg"
+    ],
+    "scan_folio_ids": [
+      "Q64_4v_B270",
+      "Q64_5r_B271"
+    ],
+    "scan_folio_ranges": [
+      "Q64_4v_B270 (lib. folio 131): Proverbs, 7:27  - 8:34",
+      "Q64_5r_B271 (lib. folio 132): Proverbs, 8:34  - 10:8"
+    ],
+    "section_folios_verified": true,
+    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "versification_note": "KJV verse 33 of this chapter has no counterpart in the Septuagint text as it stands in Codex Sinaiticus (the Greek either omits, relocates, or numbers it differently). Compare by content rather than by verse number. Where the Septuagint lacks a verse found in the Hebrew, that is itself a documented textual difference between the two traditions.",
+    "csp_greek_refreshed": true
   }
 }

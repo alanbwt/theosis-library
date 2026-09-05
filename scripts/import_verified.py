@@ -81,7 +81,7 @@ CSP_BOOKS_NT = {
     "1john":    (55, 62, "1 john",           5),
     "2john":    (56, 63, "2 john",           1),
     "3john":    (57, 64, "3 john",           1),
-    "jude":     (57, 65, "jude",             1),
+    "jude":     (58, 65, "jude",             1),
     "rev":      (59, 66, "revelation",      22),
 }
 
@@ -112,7 +112,7 @@ CSP_BOOKS_OT = {
     "ps":     ([26], 19, "psalms",          150, "Psalms"),
     "prov":   ([27], 20, "proverbs",         31, "Proverbs"),
     "eccl":   ([28, 29], 21, "ecclesiastes", 12, "Ecclesiastes"),
-    "song":   ([29, 30], 22, "song of solomon", 8, "Song of Solomon"),
+    # Song of Solomon is LOST in Sinaiticus (no surviving folios). Excluded.
     "job":    ([32], 18, "job",              42, "Job"),
     # Major prophets
     "isa":    ([14, 15], 23, "isaiah",       66, "Isaiah"),
@@ -203,7 +203,7 @@ NOMINA_SACRA = {
 
 # Regex helpers for parsing the transcription HTML
 _VERSE_RE = re.compile(
-    r'<p[^>]*id="V-B(\d+)K(\d+)V(\d+)[^"]*"[^>]*>(.*?)</p>',
+    r'<p[^>]*id="V-B(\d+)K(\d+)V(\d+)[^"]*"[^>]*>(.*?)(?:</p>|(?=<p[^>]*id="V-B)|\Z)',
     re.DOTALL,
 )
 _WORD_RE = re.compile(r'<span name="(\d+-\d+-\d+-\d+)"[^>]*>([^<]*)</span>')
@@ -283,7 +283,12 @@ def csp_get_chapter_text(csp_book, chapter, start_folio_id, max_walk=8):
             break
         parsed = parse_transcription(html_text, target_book=csp_book, target_chapter=chapter)
         for p in parsed:
-            verses[p["verse"]] = p["text"]
+            # A verse can straddle a page break: keep both halves in order.
+            prev = verses.get(p["verse"], "")
+            if prev and p["text"] and p["text"] != prev:
+                verses[p["verse"]] = (prev + " " + p["text"]).strip()
+            elif p["text"] or not prev:
+                verses[p["verse"]] = p["text"] or prev
         if parsed:
             saw_chapter = True
         else:
@@ -342,9 +347,30 @@ def fetch_lxx_chapter(bolls_book_num, chapter):
     return http_get_json(url, timeout=20)
 
 
+SINGLE_CHAPTER_BOOKS = {
+    # For one-chapter books, bible-api.com interprets `<book> 1` as verse 1, not
+    # the whole chapter. Use a 1:1-N range query to pull the full chapter.
+    "obadiah":  21,
+    "philemon": 25,
+    "2 john":   13,
+    "3 john":   14,
+    "jude":     25,
+}
+
+
 def fetch_kjv_chapter(book_name, chapter):
-    """Fetch a KJV chapter from bible-api.com."""
-    url = f"https://bible-api.com/{urllib.parse.quote(book_name)}+{chapter}?translation=kjv"
+    """Fetch a KJV chapter from bible-api.com.
+
+    bible-api.com treats `<book> 1` as `<book> 1:1` for one-chapter books
+    (Obadiah, Philemon, 2 John, 3 John, Jude). For those, query the full range
+    explicitly so we get every verse.
+    """
+    key = book_name.lower()
+    if key in SINGLE_CHAPTER_BOOKS and chapter == 1:
+        ref = f"{book_name} 1:1-{SINGLE_CHAPTER_BOOKS[key]}"
+    else:
+        ref = f"{book_name} {chapter}"
+    url = f"https://bible-api.com/{urllib.parse.quote(ref)}?translation=kjv"
     return http_get_json(url, timeout=20)
 
 
@@ -711,7 +737,7 @@ def sync_texts_json(imported_ids):
             "title": pub["title"],
             "author_id": "biblical-authors",
             "language": pub["language"],
-            "era": "Hebrew Bible" if is_ot else "Apostolic",
+            "era": "Old Testament" if is_ot else "Apostolic",
             "tradition": "orthodox",
             "category": "sacred-text",
             "date_approx": (

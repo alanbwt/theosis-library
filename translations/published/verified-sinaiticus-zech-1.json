@@ -5,7 +5,7 @@
   "language": "Greek (Codex Sinaiticus) / English (KJV)",
   "source": "Codex Sinaiticus folio + transcription (codexsinaiticus.org) + KJV (bible-api.com)",
   "description": "Zechariah chapter 1. Both the manuscript page scan AND the Greek text are taken directly from Codex Sinaiticus (4th century AD) via the Codex Sinaiticus Project (codexsinaiticus.org). The Greek transcription preserves the actual uncial forms, lunate sigma, nomina sacra abbreviations, and lectional marks of the manuscript. Library folio: 81. English translation verbatim from the King James Version (1611, public domain) via bible-api.com.",
-  "introduction": "<p>This entry meets the strict three-criteria standard of the Theosis Library, with the manuscript text drawn directly from the same source as the scan:</p><ol><li><strong>Manuscript scan:</strong> The actual folio of Codex Sinaiticus containing this passage, from the Codex Sinaiticus Project (codexsinaiticus.org). Library folio reference: 81.</li><li><strong>Original text:</strong> The verbatim transcription of the Sinaiticus manuscript from the Codex Sinaiticus Project, preserving uncial forms, lunate sigma, nomina sacra (e.g. ⟨θϲ⟩ = θεός), and scribal marks. Nomina sacra are shown in angle brackets to indicate the manuscript's sacred-name abbreviations.</li><li><strong>English translation:</strong> The King James Version (1611), retrieved verbatim from the public-domain bible-api.com endpoint.</li></ol>",
+  "introduction": "<p>This entry meets the strict three-criteria standard of the Theosis Library, with the manuscript text drawn directly from the same source as the scan:</p><ol><li><strong>Manuscript scan:</strong> The actual folio of Codex Sinaiticus containing this passage, from the Codex Sinaiticus Project (codexsinaiticus.org). Library folio reference: 81.</li><li><strong>Original text:</strong> The verbatim transcription of the Sinaiticus manuscript from the Codex Sinaiticus Project, preserving uncial forms, lunate sigma, nomina sacra (e.g. ⟨θϲ⟩ = θεός), and scribal marks. Nomina sacra are shown in angle brackets to indicate the manuscript's sacred-name abbreviations.</li><li><strong>English translation:</strong> The King James Version (1611), retrieved verbatim from the public-domain bible-api.com endpoint.</li></ol><p><strong>Numbering:</strong> KJV Zechariah 1:18-21 are Septuagint Zechariah 2:1-4; the Greek for those verses is included here, labelled with its Septuagint reference.</p>",
   "translation": [
     {
       "section": "1.1-8",
@@ -26,9 +26,9 @@
       ]
     },
     {
-      "section": "1.17-21",
-      "original_ref": "Zechariah 1:17-21",
-      "original_text": "<sup>17</sup>και ειπε προϲ με ο αγγελοϲ ο λαλων εν εμοι · ανακραγε λεγων ˙ ταδε λεγει κϲ πατοκρατωρʼ · ετι διαχυθηϲονται πολιϲ εν αγαθοιϲ · και ελεηϲει κϲ ετι την ϲιων · κ(αι) ερετιει ετι την ϊημ ·",
+      "section": "1.17-2:4",
+      "original_ref": "Zechariah 1:17-2:4",
+      "original_text": "<sup>17</sup>και ειπε προϲ με ο αγγελοϲ ο λαλων εν εμοι · ανακραγε λεγων ˙ ταδε λεγει κϲ πατοκρατωρʼ · ετι διαχυθηϲονται πολιϲ εν αγαθοιϲ · και ελεηϲει κϲ ετι την ϲιων · κ(αι) ερετιει ετι την ϊημ · <sup>2:1</sup>και ηρα τουϲ οφθαλμουϲ μου και ειδον · και ϊδου τεϲϲερα καιρατα <sup>2:2</sup>και ειπα προϲ τον αγγελον τον λαλοντα εν εμοι · τι εϲτιν ταυτα · κυριαι · και ειπεν προϲ με · ταυτα τα καιρατα · τα διαϲκορπιϲαντα τον ιουδα και τον ϊϲλʼ και ϊερουϲαλ·ημ ˙ <sup>2:3</sup>και εδιξεν μοι κϲ τεϲϲαρεϲ τεκτονεϲ · <sup>2:4</sup>",
       "text": "<sup>17</sup>Cry yet, saying, Thus saith the LORD of hosts; My cities through prosperity shall yet be spread abroad; and the LORD shall yet comfort Zion, and shall yet choose Jerusalem. <sup>18</sup>Then lifted I up mine eyes, and saw, and behold four horns. <sup>19</sup>And I said unto the angel that talked with me, What\nbe these? And he answered me, These\nare the horns which have scattered Judah, Israel, and Jerusalem. <sup>20</sup>And the LORD shewed me four carpenters. <sup>21</sup>Then said I, What come these to do? And he spake, saying, These\nare the horns which have scattered Judah, so that no man did lift up his head: but these are come to fray them, to cast out the horns of the Gentiles, which lifted up\ntheir horn over the land of Judah to scatter it.",
       "scan_pages": [
         "sinaiticus-folios/zech-1-Q57_8v_B170.jpg"
@@ -48,6 +48,19 @@
     "original_text_license": "CC BY-NC-SA 3.0",
     "translation_source": "bible-api.com (KJV)",
     "translation_license": "public domain (1611)",
-    "verified_date": "2026-04-11"
+    "verified_date": "2026-04-11",
+    "scan_local_paths": [
+      "sinaiticus-folios/zech-1-Q57_8v_B170.jpg"
+    ],
+    "scan_folio_ids": [
+      "Q57_8v_B170"
+    ],
+    "scan_folio_ranges": [
+      "Q57_8v_B170 (lib. folio 81): Zechariah, 1:1  - 2:4"
+    ],
+    "section_folios_verified": true,
+    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "versification_fixed": true,
+    "csp_greek_refreshed": true
   }
 }

@@ -19,22 +19,19 @@ def build():
     urls = [
         (f"{BASE_URL}/", today, "1.0"),
         (f"{BASE_URL}/library/", today, "0.9"),
-        (f"{BASE_URL}/quotes/", today, "0.8"),
-        (f"{BASE_URL}/about.html", today, "0.5"),
+        (f"{BASE_URL}/paths/", today, "0.8"),
+        (f"{BASE_URL}/quotes/", today, "0.7"),
+        (f"{BASE_URL}/sources/", today, "0.7"),
+        (f"{BASE_URL}/about", today, "0.5"),
+        (f"{BASE_URL}/paths/words-of-jesus", today, "0.6"),
     ]
 
     for t in texts["texts"]:
         if t["status"] == "published":
             urls.append((
-                f"{BASE_URL}/library/{t['slug']}.html",
+                f"{BASE_URL}/library/{t['slug']}",
                 t.get("date_published", today),
                 "0.8",
-            ))
-            # Also add the print/download version
-            urls.append((
-                f"{BASE_URL}/downloads/{t['slug']}.html",
-                t.get("date_published", today),
-                "0.3",
             ))
 
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n'

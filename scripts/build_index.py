@@ -53,7 +53,7 @@ def sort_chronologically(texts):
 
 def group_by_era(texts):
     era_order = [
-        "Ancient Near East", "Vedic", "Upanishadic", "Hebrew Bible",
+        "Ancient Near East", "Vedic", "Upanishadic", "Old Testament",
         "Axial Age", "Pre-Socratic", "Classical", "Hellenistic",
         "Second Temple", "Late Republic", "Ancient",
         "Apostolic", "Imperial", "Late Antiquity",
@@ -108,7 +108,7 @@ def render_text_card(text):
     themes = " ".join(text.get("themes", []))
 
     if text["status"] == "published":
-        href = f'/library/{text["slug"]}.html'
+        href = f'/library/{text["slug"]}'
         return f"""<a href="{href}" class="lib-card" data-themes="{themes}" data-author="{text['author_name']}" data-title="{text['title']}" data-tradition="{tradition}" data-category="{category}">
             {scan_html}
             <div class="lib-card-body">
@@ -142,7 +142,7 @@ def build_filtered_html(era_groups, filter_fn):
             "Ancient Near East": "3000-500 BCE",
             "Vedic": "1500-800 BCE",
             "Upanishadic": "800-200 BCE",
-            "Hebrew Bible": "1200-200 BCE",
+            "Old Testament": "1200-200 BCE",
             "Axial Age": "800-200 BCE",
             "Pre-Socratic": "600-400 BCE",
             "Classical": "500-300 BCE",
@@ -192,7 +192,7 @@ def build_library_page(era_groups):
     total_count = sum(len(texts) for _, texts in era_groups)
 
     # Collect unique traditions for filter chips
-    # Exclude 'jewish' — Hebrew Bible / Second Temple texts are part of the Christian tradition on this site
+    # Exclude 'jewish' — Old Testament / Second Temple texts roll up under the Christian tradition chip on this site
     traditions = set()
     for _, texts in era_groups:
         for t in texts:
@@ -245,6 +245,30 @@ def build_library_page(era_groups):
         for tr in sorted_traditions
     )
 
+    # Manuscript chips — filtered via data-themes keyword match on cards.
+    # Only emits a chip if at least one published card carries that theme keyword.
+    manuscript_defs = [
+        ("codex-sinaiticus", "Codex Sinaiticus"),
+        ("vaticanus", "Codex Vaticanus"),
+        ("bezae", "Codex Bezae"),
+        ("venetus-a", "Venetus A (Iliad)"),
+        ("codex-regius", "Codex Regius (Edda)"),
+        ("dead-sea-scrolls", "Dead Sea Scrolls"),
+    ]
+    ms_counts = {}
+    for _, texts in era_groups:
+        for t in texts:
+            if t.get("status") != "published":
+                continue
+            for keyword, _label in manuscript_defs:
+                if keyword in t.get("themes", []):
+                    ms_counts[keyword] = ms_counts.get(keyword, 0) + 1
+    manuscript_chips = "\n".join(
+        f'        <button class="filter-chip" onclick="toggleFilter(\'manuscript\', \'{kw}\', this)">{label} ({ms_counts[kw]})</button>'
+        for kw, label in manuscript_defs
+        if ms_counts.get(kw)
+    )
+
     # Only show First Translations chip if any exist — text: "Texts appearing in English for the first time."
     first_chip = (
         f'        <button class="filter-chip" onclick="toggleFilter(\'first\', \'true\', this)" title="Texts appearing in English for the first time.">First Translations ({first_count})</button>'
@@ -262,7 +286,8 @@ def build_library_page(era_groups):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library — Theosis Library</title>
-  <meta name="description" content="Browse all translations of early Christian texts in the Theosis Library.">
+  <meta name="description" content="Browse every verified primary-source ancient text in the Theosis Library. Every entry pairs a real manuscript scan with the verbatim original-language text and a public-domain English translation.">
+  <link rel="canonical" href="https://theosislibrary.com/library/">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -273,7 +298,10 @@ def build_library_page(era_groups):
       <nav class="site-nav">
         <a href="/">Home</a>
         <a href="/library/">Library</a>
-        <a href="/quotes/">Quotes</a>
+        <a href="/paths/">Paths</a>
+        <a href="/quotes/">Passages</a>
+        <a href="/sources/">Sources</a>
+        <a href="/about">About</a>
       </nav>
     </div>
   </header>
@@ -292,6 +320,7 @@ def build_library_page(era_groups):
         <button class="filter-chip active" onclick="clearFilters(this)">All ({published_count})</button>
 {first_chip}
 {tradition_chips}
+{manuscript_chips}
       </div>
 
       <p style="color: #8a7e6f; font-size: 0.8rem; margin-bottom: 1.5rem;">{published_count} texts &middot; Oldest first</p>
@@ -346,6 +375,10 @@ def build_library_page(era_groups):
         var href = card.getAttribute('href') || '';
         var slug = href.replace('/library/', '').replace('.html', '').split('#')[0];
         show = show && canonIds.has(slug);
+      }}
+      if (activeFilters.manuscript) {{
+        var themes = (card.getAttribute('data-themes') || '').split(/\s+/);
+        show = show && themes.indexOf(activeFilters.manuscript) !== -1;
       }}
       card.style.display = show ? '' : 'none';
     }});

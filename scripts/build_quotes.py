@@ -1,203 +1,139 @@
 #!/usr/bin/env python3
-"""
-build_quotes.py — Rebuild the quotes page from data/quotes.json.
+"""build_quotes.py — Rebuild `/quotes/` as a curated "Key Passages" landing page.
 
-Generates a data-driven quotes page with filters for tradition, topic, era,
-and theosis position. Enriches existing quotes with tradition/era/topic fields
-on first run if missing.
+Previous incarnation was a heavy filter UI over 20 hand-picked verses, framed as
+"quotes from every civilization" — which misrepresented the actual library
+(~6 manuscripts, 3 traditions). This rebuild drops the filter chrome and
+organizes the same 20 passages by position on the theosis question, so the page
+matches what the library actually delivers: a compact evidence compass.
 
-Usage:
-    python scripts/build_quotes.py
+Each passage links to the full library entry (with manuscript scan).
 """
 
 import json
-import re
-from pathlib import Path
 from html import escape
+from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATA = PROJECT_ROOT / "data" / "quotes.json"
 OUT = PROJECT_ROOT / "site" / "quotes" / "index.html"
 
-# category → tradition mapping
-CATEGORY_TO_TRADITION = {
-    "scripture": "christian",
-    "patristic": "christian",
-    "gnostic": "gnostic",
-    "ancient-near-east": "mesopotamian",
-    "hindu": "hindu",
-    "buddhist": "buddhist",
-    "sufi": "sufi",
-    "islamic": "islamic",
-    "neoplatonist": "greek",
-    "norse": "norse",
-    "taoist": "taoist",
-}
-
-TRADITION_LABELS = {
-    "christian": "Christian",
-    "gnostic": "Gnostic",
-    "greek": "Greek/Roman",
-    "hindu": "Hindu",
-    "buddhist": "Buddhist",
-    "sufi": "Sufi",
-    "islamic": "Islamic",
-    "norse": "Norse",
-    "taoist": "Taoist",
-    "mesopotamian": "Mesopotamian",
-    "egyptian": "Egyptian",
-    "celtic": "Celtic",
-    "zoroastrian": "Zoroastrian",
-}
-
-TOPIC_LABELS = {
-    "divinity": "Divinity",
-    "soul": "Soul",
-    "creation": "Creation",
-    "afterlife": "Afterlife",
-    "ethics": "Ethics",
-    "knowledge": "Knowledge",
-    "governance": "Governance",
-    "suffering": "Suffering",
-    "love": "Love",
-    "death": "Death",
-}
+POSITION_SECTIONS = [
+    (
+        "foundational",
+        "Foundational",
+        "The texts every subsequent argument refers to.",
+    ),
+    (
+        "for",
+        "For theosis",
+        "Passages read as affirming some form of human participation in the divine nature.",
+    ),
+    (
+        "against",
+        "Against theosis",
+        "Passages read as ruling out any real human participation in the divine nature.",
+    ),
+    (
+        "ambiguous",
+        "Ambiguous",
+        "Passages that can be read either way. Included so the reader can decide.",
+    ),
+]
 
 
-def parse_year(date_str):
-    """Extract a signed year from a date_approx like 'c. 200 AD' or '700 BCE'."""
-    if not date_str:
-        return 0
-    s = date_str.lower().replace("c.", "").strip()
-    m = re.search(r"(\d+)\s*(bce|bc)", s)
-    if m:
-        return -int(m.group(1))
-    m = re.search(r"(\d+)\s*(ad|ce)", s)
-    if m:
-        return int(m.group(1))
-    m = re.search(r"(\d+)(?:st|nd|rd|th)\s*c", s)
-    if m:
-        century = int(m.group(1))
-        return century * 100 - 50 if "bce" in s or "bc" in s else century * 100 - 50
-    return 0
+def canonical_library_href(link: str | None) -> str:
+    if not link:
+        return ""
+    # Previous build used `.html` suffixes; strip so it lands on the clean URL.
+    return link.replace(".html", "") if link.startswith("/library/") else link
 
 
-def derive_era(year):
-    if year <= -1000:
-        return "Bronze Age"
-    if year <= -500:
-        return "Iron Age"
-    if year <= 0:
-        return "Classical"
-    if year <= 300:
-        return "Imperial"
-    if year <= 600:
-        return "Late Antiquity"
-    if year <= 1500:
-        return "Medieval"
-    return "Early Modern"
+def render_quote(q: dict) -> str:
+    original = q.get("quote_original") or ""
+    english = q.get("quote_english") or ""
+    source = q.get("source") or ""
+    author = q.get("author") or ""
+    date = q.get("date") or ""
+    manuscript = q.get("manuscript") or ""
+    significance = q.get("significance") or ""
+    href = canonical_library_href(q.get("link"))
 
-
-def enrich(quotes):
-    """Add tradition/era fields if missing. Topic must be set explicitly per quote."""
-    for q in quotes:
-        if "tradition" not in q:
-            q["tradition"] = CATEGORY_TO_TRADITION.get(q.get("category", ""), q.get("category", ""))
-        if "era" not in q:
-            year = parse_year(q.get("date", ""))
-            q["era"] = derive_era(year)
-        if "topic" not in q:
-            # Default theosis quotes to 'divinity'
-            q["topic"] = "divinity"
-        if "_year" not in q:
-            q["_year"] = parse_year(q.get("date", ""))
-
-
-def render_card(q):
-    pos = q.get("position", "")
-    pos_label = {
-        "for": "For theosis",
-        "against": "Against theosis",
-        "ambiguous": "Ambiguous",
-        "foundational": "Foundational",
-    }.get(pos, pos.title())
-    pos_class = f"tag-{pos}" if pos else ""
-
-    original = q.get("quote_original", "")
-    original_html = (
-        f'<blockquote class="quote-original">{escape(original)}</blockquote>'
+    original_block = (
+        f'<blockquote class="passage-original" lang="{escape(q.get("language","").lower()[:3] or "grc")}">{escape(original)}</blockquote>'
         if original else ""
     )
-    english = escape(q.get("quote_english", ""))
-    author = escape(q.get("author", ""))
-    date = escape(q.get("date", ""))
-    source = escape(q.get("source", ""))
-    significance = escape(q.get("significance", ""))
-    link = q.get("link", "")
-    link_html = (
-        f'<a href="{escape(link)}" class="quote-link">Read with manuscript scan →</a>'
-        if link else ""
+    english_block = (
+        f'<blockquote class="passage-english">“{escape(english)}”</blockquote>'
+    )
+    significance_block = (
+        f'<p class="passage-note">{escape(significance)}</p>' if significance else ""
+    )
+    link_block = (
+        f'<a class="passage-link" href="{escape(href)}">Read with manuscript scan →</a>'
+        if href else ""
+    )
+    meta_parts = []
+    if source:
+        meta_parts.append(f'<span class="passage-source">{escape(source)}</span>')
+    if manuscript:
+        meta_parts.append(f'<span class="passage-manuscript">{escape(manuscript)}</span>')
+    if date:
+        meta_parts.append(f'<span class="passage-date">{escape(date)}</span>')
+    meta_block = (
+        f'<div class="passage-meta">{" · ".join(meta_parts)}</div>' if meta_parts else ""
     )
 
-    tradition = q.get("tradition", "")
-    topic = q.get("topic", "")
-    era = q.get("era", "")
-
-    return f"""        <div class="quote-card" data-position="{pos}" data-tradition="{tradition}" data-topic="{topic}" data-era="{escape(era)}">
-          <div class="quote-position-tag {pos_class}">{pos_label}</div>
-          {original_html}
-          <blockquote class="quote-english">"{english}"</blockquote>
-          <div class="quote-meta">
-            <span class="quote-author">{author}</span>
-            <span class="quote-date">{date}</span>
-            <span class="quote-source">{source}</span>
-          </div>
-          <p class="quote-significance">{significance}</p>
-          {link_html}
-        </div>"""
+    return f"""        <article class="passage-card" data-position="{escape(q.get("position",""))}">
+          {original_block}
+          {english_block}
+          {meta_block}
+          {significance_block}
+          {link_block}
+        </article>"""
 
 
-def build_page(quotes):
-    # Sort chronologically (oldest first)
-    quotes_sorted = sorted(quotes, key=lambda q: q.get("_year", 0))
+def build():
+    data = json.loads(DATA.read_text(encoding="utf-8"))
+    quotes = data.get("quotes", [])
 
-    cards_html = "\n".join(render_card(q) for q in quotes_sorted)
+    section_html = []
+    for key, title, blurb in POSITION_SECTIONS:
+        items = [q for q in quotes if q.get("position") == key]
+        if not items:
+            continue
+        cards = "\n".join(render_quote(q) for q in items)
+        section_html.append(
+            f"""      <section class="passages-section">
+        <header class="passages-section-header">
+          <h2>{escape(title)}</h2>
+          <p class="passages-section-blurb">{escape(blurb)}</p>
+        </header>
+        <div class="passages-grid">
+{cards}
+        </div>
+      </section>"""
+        )
+    sections_html = "\n\n".join(section_html)
 
-    # Filter chip data
-    traditions = sorted({q.get("tradition", "") for q in quotes if q.get("tradition")})
-    topics = sorted({q.get("topic", "") for q in quotes if q.get("topic")})
-    eras_present = {q.get("era", "") for q in quotes if q.get("era")}
-    era_order = ["Bronze Age", "Iron Age", "Classical", "Imperial",
-                 "Late Antiquity", "Medieval", "Early Modern"]
-    eras = [e for e in era_order if e in eras_present]
-
-    tradition_chips = "\n".join(
-        f'        <button class="quotes-filter" data-filter-type="tradition" data-filter-value="{tr}">{TRADITION_LABELS.get(tr, tr.title())}</button>'
-        for tr in traditions
-    )
-    topic_chips = "\n".join(
-        f'        <button class="quotes-filter" data-filter-type="topic" data-filter-value="{tp}">{TOPIC_LABELS.get(tp, tp.title())}</button>'
-        for tp in topics
-    )
-    era_chips = "\n".join(
-        f'        <button class="quotes-filter" data-filter-type="era" data-filter-value="{escape(er)}">{escape(er)}</button>'
-        for er in eras
-    )
-
-    return f"""<!DOCTYPE html>
+    html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Primary Source Quotes — Theosis Library</title>
-  <meta name="description" content="The best primary source quotes from every civilization on divinity, soul, creation, afterlife, ethics, knowledge, and governance. Filter by tradition, topic, era, and theosis position.">
-  <meta property="og:title" content="The Evidence — Theosis Library">
-  <meta property="og:description" content="Primary source quotes from every civilization, with original language and manuscript references.">
+  <title>Key Passages — Theosis Library</title>
+  <meta name="description" content="A compass through the verified library: the passages most often cited for, against, or ambiguous on the question of human participation in the divine nature. Each links to the full manuscript page.">
+  <link rel="canonical" href="https://theosislibrary.com/quotes/">
+  <meta property="og:title" content="Key Passages — Theosis Library">
+  <meta property="og:description" content="The passages most often cited on the theosis question — arranged by position, each linked to the full verified chapter with manuscript scan.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://theosislibrary.com/quotes/">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://theosislibrary.com/assets/scans/sinaiticus-folios/john-1-Q80_1r_B521.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Key Passages — Theosis Library">
+  <meta name="twitter:description" content="The passages most often cited on the theosis question, linked to the full manuscript page.">
+  <meta name="twitter:image" content="https://theosislibrary.com/assets/scans/sinaiticus-folios/john-1-Q80_1r_B521.jpg">
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/quotes.css">
 </head>
 <body>
 
@@ -207,7 +143,10 @@ def build_page(quotes):
       <nav class="site-nav">
         <a href="/">Home</a>
         <a href="/library/">Library</a>
-        <a href="/quotes/">Quotes</a>
+        <a href="/paths/">Paths</a>
+        <a href="/quotes/">Passages</a>
+        <a href="/sources/">Sources</a>
+        <a href="/about">About</a>
       </nav>
     </div>
   </header>
@@ -215,36 +154,16 @@ def build_page(quotes):
   <main>
     <div class="container--wide">
 
-      <div class="quotes-header">
-        <h1>The Evidence</h1>
-        <p class="quotes-subtitle">Primary source quotes from every civilization on the deepest questions: divinity, soul, creation, afterlife, ethics, knowledge. Original language, English translation, manuscript source.</p>
+      <div class="passages-header">
+        <h1>Key Passages</h1>
+        <p class="passages-subtitle">A compass through the verified library. These are the passages most often invoked in the debate over whether human beings can participate in the divine nature. Arranged by the position each tends to anchor. Every line links to the full chapter with the manuscript scan.</p>
       </div>
 
-      <div class="quotes-filters">
-        <div class="quotes-filter-row">
-          <span class="quotes-filter-label">Position:</span>
-          <button class="quotes-filter active" data-filter-type="position" data-filter-value="all">All</button>
-          <button class="quotes-filter" data-filter-type="position" data-filter-value="for">For Theosis</button>
-          <button class="quotes-filter" data-filter-type="position" data-filter-value="against">Against</button>
-          <button class="quotes-filter" data-filter-type="position" data-filter-value="ambiguous">Ambiguous</button>
-        </div>
-        <div class="quotes-filter-row">
-          <span class="quotes-filter-label">Tradition:</span>
-{tradition_chips}
-        </div>
-        <div class="quotes-filter-row">
-          <span class="quotes-filter-label">Topic:</span>
-{topic_chips}
-        </div>
-        <div class="quotes-filter-row">
-          <span class="quotes-filter-label">Era:</span>
-{era_chips}
-        </div>
-      </div>
+{sections_html}
 
-      <section class="quotes-section">
-{cards_html}
-      </section>
+      <div class="passages-footer">
+        <p>Want a guided tour? Read a <a href="/paths/">reading path</a>. Want to judge for yourself? Browse the <a href="/library/">full library</a> of {len(quotes)} curated passages drawn from {len(set(q.get("manuscript","") for q in quotes if q.get("manuscript")))} manuscripts.</p>
+      </div>
 
     </div>
   </main>
@@ -256,74 +175,12 @@ def build_page(quotes):
     </div>
   </footer>
 
-  <script>
-  var activeFilters = {{ position: 'all', tradition: '', topic: '', era: '' }};
-
-  function applyQuoteFilters() {{
-    var cards = document.querySelectorAll('.quote-card');
-    cards.forEach(function(c) {{
-      var show = true;
-      if (activeFilters.position && activeFilters.position !== 'all') {{
-        show = show && c.getAttribute('data-position') === activeFilters.position;
-      }}
-      if (activeFilters.tradition) {{
-        show = show && c.getAttribute('data-tradition') === activeFilters.tradition;
-      }}
-      if (activeFilters.topic) {{
-        show = show && c.getAttribute('data-topic') === activeFilters.topic;
-      }}
-      if (activeFilters.era) {{
-        show = show && c.getAttribute('data-era') === activeFilters.era;
-      }}
-      c.style.display = show ? '' : 'none';
-    }});
-  }}
-
-  document.querySelectorAll('.quotes-filter').forEach(function(btn) {{
-    btn.addEventListener('click', function() {{
-      var type = btn.getAttribute('data-filter-type');
-      var value = btn.getAttribute('data-filter-value');
-      // Toggle: clicking active filter clears it
-      if (activeFilters[type] === value) {{
-        activeFilters[type] = type === 'position' ? 'all' : '';
-        btn.classList.remove('active');
-        if (type === 'position') {{
-          document.querySelector('.quotes-filter[data-filter-type="position"][data-filter-value="all"]').classList.add('active');
-        }}
-      }} else {{
-        activeFilters[type] = value;
-        document.querySelectorAll('.quotes-filter[data-filter-type="' + type + '"]').forEach(function(b) {{
-          b.classList.remove('active');
-        }});
-        btn.classList.add('active');
-      }}
-      applyQuoteFilters();
-    }});
-  }});
-  </script>
-
-<script src="../js/decode.js"></script>
-<script src="../js/columns.js"></script>
 </body>
-</html>"""
-
-
-def main():
-    data = json.loads(DATA.read_text(encoding="utf-8"))
-    quotes = data["quotes"]
-    enrich(quotes)
-
-    # Persist enriched data (strip private _year)
-    persistable = []
-    for q in quotes:
-        clean = {k: v for k, v in q.items() if not k.startswith("_")}
-        persistable.append(clean)
-    DATA.write_text(json.dumps({"quotes": persistable}, indent=2, ensure_ascii=False), encoding="utf-8")
-
-    html = build_page(quotes)
+</html>
+"""
     OUT.write_text(html, encoding="utf-8")
-    print(f"Quotes page rebuilt: {OUT}  ({len(quotes)} quotes)")
+    print(f"Key Passages page rebuilt: {OUT}  ({len(quotes)} passages)")
 
 
 if __name__ == "__main__":
-    main()
+    build()

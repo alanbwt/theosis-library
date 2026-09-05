@@ -1,15 +1,15 @@
 {
   "id": "verified-sinaiticus-ps-150",
-  "title": "Psalms, Chapter 150",
+  "title": "Psalm 150",
   "slug": "verified-sinaiticus-ps-150",
   "language": "Greek (Codex Sinaiticus) / English (KJV)",
   "source": "Codex Sinaiticus folio + transcription (codexsinaiticus.org) + KJV (bible-api.com)",
-  "description": "Psalms chapter 150. Both the manuscript page scan AND the Greek text are taken directly from Codex Sinaiticus (4th century AD) via the Codex Sinaiticus Project (codexsinaiticus.org). The Greek transcription preserves the actual uncial forms, lunate sigma, nomina sacra abbreviations, and lectional marks of the manuscript. Library folio: 128. English translation verbatim from the King James Version (1611, public domain) via bible-api.com.",
-  "introduction": "<p>This entry meets the strict three-criteria standard of the Theosis Library, with the manuscript text drawn directly from the same source as the scan:</p><ol><li><strong>Manuscript scan:</strong> The actual folio of Codex Sinaiticus containing this passage, from the Codex Sinaiticus Project (codexsinaiticus.org). Library folio reference: 128.</li><li><strong>Original text:</strong> The verbatim transcription of the Sinaiticus manuscript from the Codex Sinaiticus Project, preserving uncial forms, lunate sigma, nomina sacra (e.g. ⟨θϲ⟩ = θεός), and scribal marks. Nomina sacra are shown in angle brackets to indicate the manuscript's sacred-name abbreviations.</li><li><strong>English translation:</strong> The King James Version (1611), retrieved verbatim from the public-domain bible-api.com endpoint.</li></ol>",
+  "description": "Psalm 150 in the Septuagint numbering (Psalm 150 in the KJV). Both the manuscript page scan AND the Greek text are taken directly from Codex Sinaiticus (4th century AD) via the Codex Sinaiticus Project (codexsinaiticus.org). The Greek transcription preserves the actual uncial forms, lunate sigma, nomina sacra abbreviations, and lectional marks of the manuscript. Library folio: 128. English translation verbatim from the King James Version (1611, public domain) via bible-api.com.",
+  "introduction": "<p>This entry meets the strict three-criteria standard of the Theosis Library, with the manuscript text drawn directly from the same source as the scan:</p><ol><li><strong>Manuscript scan:</strong> The actual folio of Codex Sinaiticus containing this passage, from the Codex Sinaiticus Project (codexsinaiticus.org). Library folio reference: 128.</li><li><strong>Original text:</strong> The verbatim transcription of the Sinaiticus manuscript from the Codex Sinaiticus Project, preserving uncial forms, lunate sigma, nomina sacra (e.g. ⟨θϲ⟩ = θεός), and scribal marks. Nomina sacra are shown in angle brackets to indicate the manuscript's sacred-name abbreviations.</li><li><strong>English translation:</strong> The King James Version (1611), retrieved verbatim from the public-domain bible-api.com endpoint.</li></ol><p><strong>Numbering:</strong> Codex Sinaiticus follows the Septuagint Psalter, in which this is Psalm 150. Verse numbers align between the Greek and the KJV in this psalm. The Greek and English in each section are the same words of the same psalm.</p>",
   "translation": [
     {
       "section": "150.1-5",
-      "original_ref": "Psalms 150:1-5",
+      "original_ref": "Psalm 150:1-5",
       "original_text": "<sup>1</sup>αλληλουϊααινειται τον θν εν τοιϲ αγιοιϲ αυτου αινειται αυτον εν ϲτερεωματι δυναμεωϲ αυτου <sup>2</sup>αινειται αυτον επι ταιϲ δυναϲτιαιϲ αυτου αινειται αυτον κατα το πληθοϲ τηϲ μεγαλωϲυνηϲ αυτου <sup>3</sup>αινειται αυτον εν ηχω ϲαλπιγγοϲ αινειται αυτον εν ψαλτηριω και κιθαρα <sup>4</sup>αινειται αυτον εν τυμπανω και χορω αινειται αυτον εν χορδαιϲ και οργανω <sup>5</sup>αινειται αυτον εν κυμβαλοιϲ ευηχοιοιϲ αινειται αυτον εν κυμβαλοιϲ αλαλαγμου",
       "text": "<sup>1</sup>Praise ye the LORD. Praise God in his sanctuary: praise him in the firmament of his power. <sup>2</sup>Praise him for his mighty acts: praise him according to his excellent greatness. <sup>3</sup>Praise him with the sound of the trumpet: praise him with the psaltery and harp. <sup>4</sup>Praise him with the timbrel and dance: praise him with stringed instruments and organs. <sup>5</sup>Praise him upon the loud cymbals: praise him upon the high sounding cymbals.",
       "scan_pages": [
@@ -18,7 +18,7 @@
     },
     {
       "section": "150.6",
-      "original_ref": "Psalms 150:6",
+      "original_ref": "Psalm 150:6",
       "original_text": "<sup>6</sup>παϲα πνοη αινεϲατω τον κν αλληλουια",
       "text": "<sup>6</sup>Let every thing that hath breath praise the LORD. Praise ye the LORD.",
       "scan_pages": [
@@ -37,8 +37,23 @@
     "csp_book_number": 26,
     "original_text_source": "Codex Sinaiticus Project transcription (codexsinaiticus.org)",
     "original_text_license": "CC BY-NC-SA 3.0",
-    "translation_source": "bible-api.com (KJV)",
+    "translation_source": "bible-api.com (KJV, Psalm 150)",
     "translation_license": "public domain (1611)",
-    "verified_date": "2026-04-11"
+    "verified_date": "2026-04-11",
+    "lxx_psalm_numbering_fixed": true,
+    "kjv_psalm": "150",
+    "lxx_title_verse_offset": 0,
+    "scan_local_paths": [
+      "sinaiticus-folios/ps-150-Q64_1r_B263.jpg"
+    ],
+    "scan_folio_ids": [
+      "Q64_1r_B263"
+    ],
+    "scan_folio_ranges": [
+      "Q64_1r_B263 (lib. folio 128): Psalms, 148:14  - 151:7"
+    ],
+    "section_folios_verified": true,
+    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "csp_greek_refreshed": true
   }
 }

@@ -1253,7 +1253,8 @@ section > h2:first-child {
 
 /* Three-column mode (scan + original + translation) */
 .view-parallel-3 .parallel-section {
-  grid-template-columns: 200px 1fr 1fr;
+  grid-template-columns: minmax(240px, 320px) 1fr 1fr;
+  gap: 1.25rem 2rem;
 }
 
 /* Section header spans all columns */
@@ -1399,28 +1400,68 @@ section > h2:first-child {
 
 .parallel-section .section-ref {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-size: 0.7rem;
-  color: #8a7e6f;
+  font-size: 0.72rem;
+  color: #6b1d2a;
   display: block;
-  margin-bottom: 0.5rem;
-  grid-column: 1 / -1;
-  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.parallel-section {
+  scroll-margin-top: 1.5rem;
+}
+
+.parallel-section:hover .section-actions,
+.parallel-section:focus-within .section-actions {
+  opacity: 1;
+}
+
+.section-actions {
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+@media (max-width: 720px) {
+  .section-actions {
+    opacity: 1;
+  }
 }
 
 .parallel-original {
-  font-size: 0.92rem;
-  line-height: 1.75;
-  color: #3c3225;
+  font-family: 'Gentium Plus', 'Gentium Book Basic', 'Cardo', 'Palatino Linotype', 'Book Antiqua', Palatino, 'URW Palladio L', Georgia, serif;
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: #2d2518;
+  hyphens: none;
+  word-spacing: 0.02em;
 }
 
 .parallel-translation {
-  font-size: 0.95rem;
-  line-height: 1.7;
+  font-family: 'Gentium Plus', 'Gentium Book Basic', 'Cardo', Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #2d2518;
 }
 
 .parallel-original p,
 .parallel-translation p {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.9rem;
+  text-indent: 0;
+}
+
+/* Verse superscripts: small, muted, Loeb-style. */
+.parallel-original sup,
+.parallel-translation sup {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.6em;
+  font-weight: 600;
+  color: #b8960c;
+  vertical-align: super;
+  line-height: 0;
+  margin-right: 0.1em;
+  user-select: none;
 }
 
 .parallel-col-label {
@@ -2694,3 +2735,387 @@ section > h2:first-child {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* === Reading UX: prev/next chapter nav, breadcrumb, keyboard hint === */
+
+.reading-breadcrumb {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.78rem;
+  color: #8a7e6f;
+  margin: 0.5rem 0 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.reading-breadcrumb a {
+  color: #6b5d4a;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.reading-breadcrumb a:hover {
+  color: #6b1d2a;
+  border-bottom-color: #6b1d2a;
+}
+
+.reading-breadcrumb-sep {
+  color: #c9bca8;
+}
+
+.reading-breadcrumb-current {
+  color: #3d2f1f;
+}
+
+.reading-breadcrumb-pos {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.72rem;
+  color: #b0a28c;
+  padding: 0.2em 0.6em;
+  border: 1px solid #d4c9b8;
+  border-radius: 999px;
+}
+
+.reading-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.reading-nav--bottom {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #d4c9b8;
+}
+
+.reading-nav-link {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem 1rem;
+  border: 1px solid #d4c9b8;
+  border-radius: 3px;
+  background: #fbf8f2;
+  color: #3d2f1f;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s, transform 0.15s;
+  min-height: 3rem;
+}
+
+.reading-nav-link:hover {
+  border-color: #6b1d2a;
+  background: #fff;
+}
+
+.reading-nav-link--prev {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.reading-nav-link--next {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.reading-nav-link--disabled {
+  visibility: hidden;
+}
+
+.reading-nav-arrow {
+  font-size: 1.1rem;
+  color: #6b1d2a;
+  line-height: 1;
+}
+
+.reading-nav-link--prev .reading-nav-arrow { margin-bottom: 0.25rem; }
+.reading-nav-link--next .reading-nav-arrow { margin-top: 0.25rem; }
+
+.reading-nav-meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8a7e6f;
+}
+
+.reading-nav-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-top: 0.2rem;
+}
+
+.reading-keyboard-hint {
+  margin: 1rem 0 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.72rem;
+  color: #b0a28c;
+  text-align: center;
+}
+
+.reading-keyboard-hint kbd {
+  display: inline-block;
+  padding: 0.1em 0.45em;
+  margin: 0 0.1em;
+  font-family: inherit;
+  font-size: 0.7rem;
+  color: #5a4e3f;
+  background: #fbf8f2;
+  border: 1px solid #d4c9b8;
+  border-bottom-width: 2px;
+  border-radius: 3px;
+}
+
+/* Three-column mode on wide viewports: the scan column sticks as the reader
+   scrolls through the section's Greek + English paragraphs, so the manuscript
+   stays visible next to the text until the next section scrolls into view. */
+@media (min-width: 1101px) {
+  .view-parallel-3 .parallel-scan {
+    position: sticky;
+    top: 1rem;
+    align-self: start;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+  }
+}
+
+/* On narrow viewports, stack everything and let the scan sit above the text. */
+@media (max-width: 720px) {
+  .view-parallel-3 .parallel-section,
+  .view-parallel .parallel-section {
+    grid-template-columns: 1fr;
+  }
+  .reading-nav {
+    grid-template-columns: 1fr;
+  }
+  .reading-nav-link--next {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+/* Hide chrome for printing (Loeb-style page output). */
+@media print {
+  .site-header,
+  .site-footer,
+  .parallel-controls,
+  .reading-nav,
+  .reading-keyboard-hint,
+  .reading-breadcrumb,
+  .section-actions,
+  .tradition-hero,
+  .provenance-chain,
+  .source-link-banner,
+  .export-section {
+    display: none !important;
+  }
+  .view-parallel-3 .parallel-section {
+    grid-template-columns: 200px 1fr 1fr;
+    page-break-inside: avoid;
+  }
+}
+
+/* === Paths hub + passage cards === */
+
+.paths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.paths-card {
+  display: block;
+  padding: 1.5rem 1.25rem;
+  background: #fbf8f2;
+  border: 1px solid #d4c9b8;
+  border-radius: 4px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+
+.paths-card:hover {
+  border-color: #6b1d2a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+}
+
+.paths-card-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #b8960c;
+  margin-bottom: 0.5rem;
+}
+
+.paths-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  color: #3d2f1f;
+}
+
+.paths-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #5a4e3f;
+}
+
+.paths-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #d4c9b8;
+  text-align: center;
+  color: #8a7e6f;
+  font-size: 0.85rem;
+}
+
+/* --- Key Passages page --- */
+
+.passages-header {
+  margin: 2rem 0 2.5rem;
+  max-width: 720px;
+}
+
+.passages-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.passages-subtitle {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #5a4e3f;
+}
+
+.passages-section {
+  margin-bottom: 3rem;
+}
+
+.passages-section-header {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #d4c9b8;
+  padding-bottom: 0.75rem;
+}
+
+.passages-section-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #6b1d2a;
+  letter-spacing: 0.02em;
+}
+
+.passages-section-blurb {
+  margin: 0.35rem 0 0;
+  font-size: 0.82rem;
+  color: #8a7e6f;
+}
+
+.passages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.passage-card {
+  padding: 1.25rem 1.25rem 1rem;
+  background: #fff;
+  border: 1px solid #e0d5c1;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.passage-card .passage-original {
+  margin: 0;
+  font-family: 'Gentium Plus', 'Cardo', Palatino, Georgia, serif;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: #3c3225;
+  border-left: 2px solid #d4c9b8;
+  padding-left: 0.75rem;
+}
+
+.passage-card .passage-english {
+  margin: 0;
+  font-family: 'Gentium Plus', 'Cardo', Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #2d2518;
+  font-weight: 500;
+}
+
+.passage-meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.72rem;
+  color: #8a7e6f;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.passage-meta .passage-source {
+  font-weight: 600;
+  color: #6b1d2a;
+}
+
+.passage-note {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #5a4e3f;
+}
+
+.passage-link {
+  margin-top: auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #6b1d2a;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  align-self: flex-start;
+}
+
+.passage-link:hover {
+  border-bottom-color: #6b1d2a;
+}
+
+.passages-footer {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #d4c9b8;
+  text-align: center;
+  color: #8a7e6f;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 720px) {
+  .paths-grid,
+  .passages-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Secondary critical-edition reading beneath the manuscript transcription */
+.edition-reading {
+  margin-top: 0.9rem;
+  border-top: 1px dashed rgba(120, 110, 90, 0.35);
+  padding-top: 0.5rem;
+  font-size: 0.92em;
+}
+.edition-reading summary {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+.edition-reading summary:hover { opacity: 1; }
+.edition-text { margin-top: 0.5rem; opacity: 0.85; }

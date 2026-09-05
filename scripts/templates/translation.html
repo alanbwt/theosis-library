@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }} — Theosis Library</title>
   <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="https://theosislibrary.com/library/{{ slug }}">
   <!-- OpenGraph -->
   <meta property="og:title" content="{{ title }} — Theosis Library">
   <meta property="og:description" content="{{ description }}">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://theosislibrary.com/library/{{ slug }}.html">
+  <meta property="og:url" content="https://theosislibrary.com/library/{{ slug }}">
   <meta property="og:site_name" content="Theosis Library">
   {% if scan_thumb %}<meta property="og:image" content="https://theosislibrary.com/assets/scans/{{ scan_thumb }}">{% endif %}
   <meta name="twitter:card" content="summary_large_image">
@@ -20,16 +21,16 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
+    "@type": "DigitalDocument",
     "name": "{{ title }}",
-    "author": {"@type": "Person", "name": "Alan B."},
+    "citation": "{{ author_name }}. {{ title }}. English translation: {{ translator_name }}. {{ source }}.",
     "datePublished": "{{ pub_date }}",
     "publisher": {"@type": "Organization", "name": "Theosis Library"},
     "description": "{{ description }}",
-    "url": "https://theosislibrary.com/library/{{ slug }}.html",
+    "url": "https://theosislibrary.com/library/{{ slug }}",
     "inLanguage": ["en", "{{ language | lower }}"],
     "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+    "license": "https://creativecommons.org/publicdomain/mark/1.0/"
   }
   </script>
   <link rel="stylesheet" href="../css/style.css">
@@ -43,6 +44,8 @@
         <a href="/">Home</a>
         <a href="/library/">Library</a>
         <a href="/quotes/">Quotes</a>
+        <a href="/sources/">Sources</a>
+        <a href="/about">About</a>
       </nav>
     </div>
   </header>
@@ -65,6 +68,17 @@
     </script>
 
     <div class="container">
+      {% if reading.manuscript_label %}
+      <nav class="reading-breadcrumb" aria-label="Breadcrumb">
+        <a href="/library/">Library</a>
+        <span class="reading-breadcrumb-sep">›</span>
+        <a href="/library/?q={{ reading.manuscript }}">{{ reading.manuscript_label }}</a>
+        <span class="reading-breadcrumb-sep">›</span>
+        <span class="reading-breadcrumb-current">{{ title }}</span>
+        <span class="reading-breadcrumb-pos">{{ reading.position }} / {{ reading.total }}</span>
+      </nav>
+      {% endif %}
+
       <div class="translation-header">
         <h1>{{ title }}</h1>
         <div class="original-title">{{ original_title }}</div>
@@ -73,6 +87,25 @@
         {% if is_first_translation %}<div class="first-translation-badge">First English Translation</div>{% endif %}
       </div>
 
+      {% if reading.prev or reading.next %}
+      <nav class="reading-nav reading-nav--top" aria-label="Chapter navigation">
+        {% if reading.prev %}
+          <a class="reading-nav-link reading-nav-link--prev" href="/library/{{ reading.prev.id }}" rel="prev" title="Previous chapter (← arrow key)">
+            <span class="reading-nav-arrow">←</span>
+            <span class="reading-nav-meta">Previous</span>
+            <span class="reading-nav-title">{{ reading.prev.title }}</span>
+          </a>
+        {% else %}<span class="reading-nav-link reading-nav-link--disabled"></span>{% endif %}
+        {% if reading.next %}
+          <a class="reading-nav-link reading-nav-link--next" href="/library/{{ reading.next.id }}" rel="next" title="Next chapter (→ arrow key)">
+            <span class="reading-nav-meta">Next</span>
+            <span class="reading-nav-title">{{ reading.next.title }}</span>
+            <span class="reading-nav-arrow">→</span>
+          </a>
+        {% else %}<span class="reading-nav-link reading-nav-link--disabled"></span>{% endif %}
+      </nav>
+      {% endif %}
+
       <section class="introduction">
         <h2>Introduction</h2>
         {{ introduction }}
@@ -80,13 +113,13 @@
 
       <div class="provenance-chain">
         <details>
-          <summary>How was this translated? (Provenance)</summary>
+          <summary>How was this verified? (Provenance)</summary>
           <div class="provenance-body">
-            <div class="provenance-item"><strong>Source:</strong> {{ source }}</div>
-            {% if critical_edition %}<div class="provenance-item"><strong>Edition:</strong> {{ critical_edition }}</div>{% endif %}
-            <div class="provenance-item"><strong>Method:</strong> AI-assisted draft (Claude by Anthropic) reviewed against the {{ language }} text by Alan B.</div>
-            <div class="provenance-item"><strong>Verify:</strong> Click any Greek/Latin word for morphological analysis. Scan images show the physical manuscript.</div>
-            <div class="provenance-item"><strong>Challenge:</strong> Submit a correction or alternate translation to <a href="mailto:contact@theosislibrary.com">contact@theosislibrary.com</a></div>
+            <div class="provenance-item"><strong>Manuscript:</strong> {{ author_name }} — page scan from {{ source }}.</div>
+            {% if critical_edition %}<div class="provenance-item"><strong>Original text:</strong> {{ critical_edition }} (public domain).</div>{% endif %}
+            <div class="provenance-item"><strong>English translation:</strong> {{ translator_name }} (public domain).</div>
+            <div class="provenance-item"><strong>Verify:</strong> The scan image is the physical evidence. The original-language text is verifiable against the scan. The English translation is checkable against the original. Click any Greek, Hebrew, or Latin word for morphological analysis.</div>
+            <div class="provenance-item"><strong>Challenge:</strong> Submit a correction to <a href="mailto:contact@theosislibrary.com">contact@theosislibrary.com</a>.</div>
           </div>
         </details>
       </div>
@@ -116,10 +149,10 @@
         <div class="parallel-section" id="s{{ section.section | replace('.', '-') }}"
              data-author="{{ author_name }}"
              data-title="{{ original_title }}"
-             data-section="ch. {{ section.section }}"
-             data-translator="Alan B."
+             data-section="{% if section.original_ref %}{{ section.original_ref }}{% else %}ch. {{ section.section }}{% endif %}"
+             data-translator="{{ translator_name }}"
              data-year="{{ pub_year }}"
-             data-url-path="/library/{{ slug }}.html#s{{ section.section | replace('.', '-') }}">
+             data-url-path="/library/{{ slug }}#s{{ section.section | replace('.', '-') }}">
 
           <div class="section-header">
             <span class="section-ref">§{{ section.section }}{% if section.original_ref %} · {{ section.original_ref }}{% endif %}</span>
@@ -144,13 +177,19 @@
           </div>
           {% endif %}
 
-          <div class="parallel-original">
-            <div class="parallel-col-label">{{ language }}</div>
+          <div class="parallel-original" lang="{{ original_lang_code }}">
+            <div class="parallel-col-label">{{ original_lang_label }}</div>
             {{ section.original_text }}
+            {% if section.edition_text %}
+            <details class="edition-reading">
+              <summary>Compare: {{ edition_label }}</summary>
+              <div class="edition-text" lang="grc">{{ section.edition_text }}</div>
+            </details>
+            {% endif %}
           </div>
 
-          <div class="parallel-translation">
-            <div class="parallel-col-label">English</div>
+          <div class="parallel-translation" lang="en">
+            <div class="parallel-col-label">English · {{ translator_name }}</div>
             {{ section.text }}
           </div>
         </div>
@@ -187,21 +226,20 @@
       {% endif %}
 
       <section class="export-section">
-        <h2>Export</h2>
+        <h2>Cite</h2>
         <div class="export-buttons">
-          <a href="/downloads/{{ slug }}.html" target="_blank" class="export-btn">Print / PDF</a>
-          <a href="/downloads/{{ slug }}.epub" download class="export-btn">EPUB</a>
           <button class="export-btn" onclick="copyBibtex()">Copy BibTeX</button>
+          <button class="export-btn" onclick="window.print()">Print</button>
         </div>
         <script>
         function copyBibtex() {
           var bib = '@misc{theosis_{{ slug | replace("-", "_") }},\n' +
-            '  author = {Alan B.},\n' +
+            '  author = { {{- author_name -}} },\n' +
             '  title = { {{- title -}} },\n' +
             '  year = { {{- pub_year -}} },\n' +
             '  publisher = {Theosis Library},\n' +
-            '  url = {https://theosislibrary.com/library/{{ slug }}.html},\n' +
-            '  note = {Translated from {{ language }}. {{ source }}}\n' +
+            '  url = {https://theosislibrary.com/library/{{ slug }}},\n' +
+            '  note = {Original-language text: {{ critical_edition }}. English translation: {{ translator_name }}. Source: {{ source }}}\n' +
             '}';
           navigator.clipboard.writeText(bib).then(function() { showToast('BibTeX copied'); });
         }
@@ -214,10 +252,33 @@
           <li><strong>Source text:</strong> {{ source }}{% if source_url %} — <a href="{{ source_url }}" target="_blank" rel="noopener">view original</a>{% endif %}</li>
           {% if critical_edition %}<li><strong>Critical edition:</strong> {{ critical_edition }}</li>{% endif %}
           {% for ref in related_texts %}
-          <li><a href="/library/{{ ref.slug }}.html">{{ ref.title }}</a> by {{ ref.author_name }}</li>
+          <li><a href="/library/{{ ref.slug }}">{{ ref.title }}</a> by {{ ref.author_name }}</li>
           {% endfor %}
         </ul>
       </section>
+
+      {% if reading.prev or reading.next %}
+      <nav class="reading-nav reading-nav--bottom" aria-label="Chapter navigation">
+        {% if reading.prev %}
+          <a class="reading-nav-link reading-nav-link--prev" href="/library/{{ reading.prev.id }}" rel="prev">
+            <span class="reading-nav-arrow">←</span>
+            <span class="reading-nav-meta">Previous</span>
+            <span class="reading-nav-title">{{ reading.prev.title }}</span>
+          </a>
+        {% else %}<span class="reading-nav-link reading-nav-link--disabled"></span>{% endif %}
+        {% if reading.next %}
+          <a class="reading-nav-link reading-nav-link--next" href="/library/{{ reading.next.id }}" rel="next">
+            <span class="reading-nav-meta">Next</span>
+            <span class="reading-nav-title">{{ reading.next.title }}</span>
+            <span class="reading-nav-arrow">→</span>
+          </a>
+        {% else %}<span class="reading-nav-link reading-nav-link--disabled"></span>{% endif %}
+      </nav>
+      {% endif %}
+
+      <p class="reading-keyboard-hint">
+        <kbd>←</kbd> previous · <kbd>→</kbd> next · <kbd>v</kbd> cycle view · <kbd>l</kbd> back to library
+      </p>
     </div>
   </main>
 
@@ -237,10 +298,56 @@
     if (!body) return;
     body.className = 'translation-body';
     if (mode !== 'parallel') body.classList.add('view-' + mode);
-    var btns = btn.parentElement.querySelectorAll('button');
-    for (var i = 0; i < btns.length; i++) btns[i].classList.remove('active');
-    btn.classList.add('active');
+    if (btn) {
+      var btns = btn.parentElement.querySelectorAll('button');
+      for (var i = 0; i < btns.length; i++) btns[i].classList.remove('active');
+      btn.classList.add('active');
+    }
+    try { localStorage.setItem('tl.view', mode); } catch (e) {}
   }
+
+  // Restore the reader's last-chosen view mode.
+  (function(){
+    try {
+      var saved = localStorage.getItem('tl.view');
+      if (!saved) return;
+      var buttons = document.querySelectorAll('.parallel-controls button');
+      for (var i = 0; i < buttons.length; i++) {
+        var txt = buttons[i].getAttribute('onclick') || '';
+        if (txt.indexOf("'" + saved + "'") !== -1) {
+          setView(saved, buttons[i]);
+          return;
+        }
+      }
+    } catch (e) {}
+  })();
+
+  // Keyboard: ← / → to paginate, v to cycle views, l to return to library.
+  (function(){
+    var prev = document.querySelector('.reading-nav-link--prev');
+    var next = document.querySelector('.reading-nav-link--next');
+    document.addEventListener('keydown', function(e){
+      // Skip when the user is typing.
+      var tag = (e.target && e.target.tagName) || '';
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || e.target.isContentEditable) return;
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+      if (e.key === 'ArrowLeft' && prev && prev.getAttribute('href')) {
+        window.location.href = prev.getAttribute('href');
+      } else if (e.key === 'ArrowRight' && next && next.getAttribute('href')) {
+        window.location.href = next.getAttribute('href');
+      } else if (e.key === 'l' || e.key === 'L') {
+        window.location.href = '/library/';
+      } else if (e.key === 'v' || e.key === 'V') {
+        var buttons = document.querySelectorAll('.parallel-controls button');
+        if (!buttons.length) return;
+        var active = document.querySelector('.parallel-controls button.active');
+        var i = 0;
+        for (var k = 0; k < buttons.length; k++) if (buttons[k] === active) { i = k; break; }
+        var nextBtn = buttons[(i + 1) % buttons.length];
+        if (nextBtn) nextBtn.click();
+      }
+    });
+  })();
   </script>
   <script src="../js/cite.js"></script>
   <script src="../js/scan-viewer.js"></script>
