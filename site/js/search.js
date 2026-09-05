@@ -58,8 +58,8 @@ import MiniSearch from 'https://esm.sh/minisearch@7.1.1';
     if (indexLoaded || indexLoading) return Promise.resolve();
     indexLoading = true;
 
-    return fetch('/data/search-index.json')
-      .then(function (r) { return r.json(); })
+    return Promise.all([fetch('/data/search-index.json').then(function (r) { return r.json(); }), fetch('/data/search-index-orig.json').then(function (r) { return r.json(); })])
+      .then(function (parts) { var passages = parts[0], orig = parts[1]; for (var i = 0; i < passages.length; i++) { passages[i].orig = orig[passages[i].pid] || ''; passages[i].slug = passages[i].tid; } return passages; })
       .then(function (passages) {
         miniSearch = new MiniSearch({
           fields: ['en', 'orig', 'title', 'author'],

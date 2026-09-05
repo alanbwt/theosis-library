@@ -299,8 +299,8 @@
 
     debounce = setTimeout(function() {
       if (!loaded) {
-        fetch('/data/search-index.json')
-          .then(function(r) { return r.json(); })
+        Promise.all([fetch('/data/search-index.json').then(function (r) { return r.json(); }), fetch('/data/search-index-orig.json').then(function (r) { return r.json(); })])
+      .then(function (parts) { var passages = parts[0], orig = parts[1]; for (var i = 0; i < passages.length; i++) { passages[i].orig = orig[passages[i].pid] || ''; passages[i].slug = passages[i].tid; } return passages; })
           .then(function(data) {
             miniSearch = new MiniSearch({
               fields: ['en', 'orig', 'title', 'author'],

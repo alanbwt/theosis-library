@@ -85,8 +85,15 @@ def build():
                 "slug": t.get("slug", ""),
             })
 
+    # Split: the original-language text goes in a second file so each stays under
+    # Cloudflare Pages' 25 MiB per-file limit; search.js merges them by pid.
+    orig = {p["pid"]: p.pop("orig") for p in passages}
+    for p in passages:
+        p.pop("slug", None)  # identical to tid
     with open(OUTPUT_DIR / "search-index.json", "w", encoding="utf-8") as f:
         json.dump(passages, f, ensure_ascii=False)
+    with open(OUTPUT_DIR / "search-index-orig.json", "w", encoding="utf-8") as f:
+        json.dump(orig, f, ensure_ascii=False)
     print(f"search-index.json: {len(passages)} passages across published texts")
 
 
