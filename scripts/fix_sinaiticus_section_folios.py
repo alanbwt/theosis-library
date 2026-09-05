@@ -66,12 +66,12 @@ def lookup(csp_book, pretty, ch, v):
         except Exception as e:
             time.sleep(3 * (attempt + 1)); html = None
     if html is None: return None
-    m = re.search(r"zoom\.init\([^)]*'(Q\d+_\d+[rv]_B\d+)'", html)
+    m = re.search(r"zoom\.init\([^)]*'(Q\d+_\d+[rv]_[A-Z]\d+)'", html)
     if not m: return None
     fid = m.group(1)
     info_m = re.search(r'manuscriptVerseInfo">\s*([^<]+?)\s*&nbsp;', html)
     info = info_m.group(1).strip() if info_m else ""
-    fol_m = re.search(r"folio</i>:\s*(\d+)", html)
+    fol_m = re.search(r"folio</i>:\s*([A-Za-z0-9]+)", html)
     cache["folios"].setdefault(fid, {"verse_info": info, "library_folio": fol_m.group(1) if fol_m else "", "segments": parse_segments(info)})
     cache["lookups"][key] = fid
     return fid
@@ -125,7 +125,7 @@ def process(path):
                 infos.append(f"{fid} (lib. folio {cache['folios'].get(fid,{}).get('library_folio','?')}): {cache['folios'].get(fid,{}).get('verse_info','')}")
     v["scan_local_paths"] = all_files
     v["scan_local_path"] = all_files[0]
-    v["scan_folio_ids"] = [re.search(r"(Q\d+_\d+[rv]_B\d+)", f).group(1) for f in all_files]
+    v["scan_folio_ids"] = [re.search(r"(Q\d+_\d+[rv]_[A-Z]\d+)", f).group(1) for f in all_files]
     v["scan_folio_ranges"] = infos
     v["section_folios_verified"] = True
     v["section_folios_note"] = "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index."

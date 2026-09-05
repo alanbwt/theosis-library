@@ -156,13 +156,13 @@ def csp_get_folio(book_num, chapter, side="r"):
     """Look up the (folio_id, verse_range, library_folio) for a chapter's first verse."""
     url = f"{CSP_BASE}/en/manuscript.aspx?book={book_num}&chapter={chapter}&lid=en&side={side}&verse=1"
     html = http_get_text(url)
-    m = re.search(r"zoom\.init\([^)]*'(Q\d+_\d+[rv]_B\d+)'", html)
+    m = re.search(r"zoom\.init\([^)]*'(Q\d+_\d+[rv]_[A-Z]\d+)'", html)
     if not m:
         return None
     folio_id = m.group(1)
     info_match = re.search(r'manuscriptVerseInfo">\s*([^<]+?)\s*&nbsp;', html)
     info = info_match.group(1).strip() if info_match else ""
-    fol_match = re.search(r"folio</i>:\s*(\d+)", html)
+    fol_match = re.search(r"folio</i>:\s*([A-Za-z0-9]+)", html)
     library_folio = fol_match.group(1) if fol_match else ""
     return {"folio_id": folio_id, "verse_info": info, "library_folio": library_folio}
 
@@ -269,7 +269,7 @@ def parse_transcription(html_text, target_book=None, target_chapter=None):
 def csp_get_chapter_text(csp_book, chapter, start_folio_id, max_walk=8):
     """Walk forward through folios from the given starting folio, parsing the
     transcription, and return a dict {verse_num: text} for the requested book+chapter."""
-    m = re.match(r"Q(\d+)_(\d+)([rv])_B(\d+)", start_folio_id)
+    m = re.match(r"Q(\d+)_(\d+)([rv])_[A-Z](\d+)", start_folio_id)
     if not m:
         return {}
     quire, folio, side, _ = int(m.group(1)), int(m.group(2)), m.group(3), int(m.group(4))

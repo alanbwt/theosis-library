@@ -120,6 +120,41 @@ def main():
             translator_name = "King James Version (1611)"
             original_lang_label = "Greek · Tischendorf 8"
             original_lang_code = "grc"
+        elif tid.startswith("verified-1qisaa-"):
+            author_name = "Great Isaiah Scroll, 1QIsa-a (c. 125 BCE, Israel Museum)"
+            source_url = "https://www.imj.org.il/en/collections/199976"
+            critical_edition = "ETCBC Dead Sea Scrolls transcription (Abegg data, CC BY-NC 4.0)"
+            translator_name = "King James Version (1611)"
+            original_lang_label = "Hebrew · 1QIsa-a transcription"
+            original_lang_code = "hbo"
+        elif tid.startswith("verified-leningrad-"):
+            author_name = "Leningrad Codex, Firkovich B19a (1008 AD, National Library of Russia)"
+            source_url = "https://archive.org/details/Leningrad_Codex_Color_Images"
+            critical_edition = "Unicode/XML Leningrad Codex (tanach.us), transcription of this manuscript"
+            translator_name = "King James Version (1611)"
+            original_lang_label = "Hebrew · Leningrad Codex (UXLC)"
+            original_lang_code = "hbo"
+        elif tid.startswith("verified-parisino-petropolitanus-"):
+            author_name = "Codex Parisino-petropolitanus, BnF Arabe 328 (7th-8th c.)"
+            source_url = "https://gallica.bnf.fr/ark:/12148/btv1b8415207g"
+            critical_edition = "Tanzil Uthmani text (CC BY 3.0); folio mapping Corpus Coranicum"
+            translator_name = "Marmaduke Pickthall (1930)"
+            original_lang_label = "Arabic · Tanzil Uthmani"
+            original_lang_code = "ar"
+        elif tid.startswith("verified-gilgamesh-"):
+            author_name = "Epic of Gilgamesh, Nineveh tablets (7th c. BCE, British Museum)"
+            source_url = "https://www.ebl.lmu.de/"
+            critical_edition = "Electronic Babylonian Library manuscript transliteration (CC BY-NC-SA 4.0)"
+            translator_name = "R. Campbell Thompson (1928)"
+            original_lang_label = "Akkadian · eBL transliteration"
+            original_lang_code = "akk"
+        elif tid.startswith("verified-alexandrinus-"):
+            author_name = "Codex Alexandrinus (5th c., British Library)"
+            source_url = "https://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Royal_MS_1_D_VIII"
+            critical_edition = "Tischendorf 8th edition (1869)"
+            translator_name = "King James Version (1611)"
+            original_lang_label = "Greek · Tischendorf 8"
+            original_lang_code = "grc"
         elif tid.startswith("verified-dss-"):
             author_name = "Dead Sea Scrolls (Great Isaiah Scroll, c. 125 BCE)"
             source_url = "https://www.imj.org.il/en/collections/199976"
@@ -146,6 +181,7 @@ def main():
             original_lang_label = "Greek · Codex Sinaiticus transcription" if uses_csp else "Greek · Tischendorf 8"
             original_lang_code = "grc"
 
+        translator_name = pub.get("verification", {}).get("translator") or translator_name
         html = template.render(
             title=pub.get("title", meta.get("title", tid)),
             original_title=pub.get("title", ""),

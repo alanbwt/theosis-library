@@ -3119,3 +3119,16 @@ section > h2:first-child {
 }
 .edition-reading summary:hover { opacity: 1; }
 .edition-text { margin-top: 0.5rem; opacity: 0.85; }
+
+/* Illuminated glyph hero (canvas) */
+.glyph-hero { display: block; width: 100%; height: auto; cursor: crosshair; }
+.particle-hero-wrap { box-shadow: 0 30px 80px -30px rgba(120, 80, 10, 0.55), 0 0 0 1px rgba(184, 150, 12, 0.25); }
+
+/* Right-to-left originals (Hebrew, Arabic) */
+.parallel-original[lang="hbo"], .parallel-original[lang="ar"], .parallel-original[lang="he"] {
+  direction: rtl; text-align: right; font-size: 1.15rem; line-height: 2;
+  font-family: 'SBL Hebrew', 'Ezra SIL', 'Times New Roman', 'Noto Serif Hebrew', 'Amiri', 'Scheherazade New', serif;
+}
+.parallel-original[lang="ar"] { font-family: 'Amiri', 'Scheherazade New', 'Noto Naskh Arabic', 'Times New Roman', serif; font-size: 1.25rem; line-height: 2.1; }
+.parallel-original[lang="hbo"] sup, .parallel-original[lang="ar"] sup { margin-left: 0.1em; margin-right: 0; }
+.parallel-original[lang="akk"] { font-family: 'Gentium Plus', 'Cardo', Georgia, serif; font-size: 0.95rem; white-space: pre-line; }

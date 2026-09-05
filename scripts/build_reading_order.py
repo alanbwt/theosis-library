@@ -29,14 +29,16 @@ NT_ORDER = [
     "1thess", "2thess", "1tim", "2tim", "titus", "philemon",
     "hebrews", "james", "1peter", "2peter",
     "1john", "2john", "3john", "jude", "rev",
+    "barnabas", "hermas",  # bound after Revelation in Codex Sinaiticus
 ]
 
 # Sinaiticus OT order (as it appears in the LXX/Sinaiticus arrangement).
 OT_ORDER = [
-    "job", "ps", "prov", "eccl",
+    "tobit", "judith", "1macc", "4macc",
     "isa", "jer",
     "joel", "obad", "jonah", "nahum", "hab",
     "zeph", "hag", "zech", "mal",
+    "ps", "prov", "eccl", "song", "wisdom", "sirach", "job",
 ]
 
 # Eddic poems in Codex Regius manuscript order.
@@ -85,6 +87,12 @@ def build():
         "venetus": [],
         "edda": [],
         "dss": [],
+        "1qisaa": [],
+        "leningrad": [],
+        "parisino-petropolitanus": [],
+        "gilgamesh": [],
+        "alexandrinus": [],
+        "washingtonianus": [],
     }
     for t in texts:
         for key in buckets:
@@ -121,6 +129,23 @@ def build():
 
     order["dss"] = [e["id"] for e in buckets["dss"]]
 
+    # Hebrew Bible order for the Leningrad Codex (Masoretic arrangement)
+    HEB_ORDER = ["gen", "exod", "lev", "num", "deut", "josh", "judg", "1sam", "2sam", "1kgs", "2kgs", "isa", "jer", "ezek",
+                 "hos", "joel", "amos", "obad", "jonah", "mic", "nah", "hab", "zeph", "hag", "zech", "mal",
+                 "ps", "prov", "job", "song", "ruth", "lam", "eccl", "esth", "dan", "ezra", "neh", "1chr", "2chr"]
+    len_books = sorted({book_and_chapter(e["id"])[0] for e in buckets["leningrad"]})
+    heb = [b for b in HEB_ORDER if b in len_books] + [b for b in len_books if b not in HEB_ORDER]
+    order["leningrad"] = [e["id"] for e in sort_chapters(buckets["leningrad"], heb)]
+    order["1qisaa"] = [e["id"] for e in sort_chapters(buckets["1qisaa"], ["isa"])]
+    order["alexandrinus"] = [e["id"] for e in sort_chapters(buckets["alexandrinus"], NT_ORDER)]
+    order["washingtonianus"] = [e["id"] for e in sort_chapters(buckets["washingtonianus"], ["matt", "john", "luke", "mark"])]  # codex order
+    order["parisino-petropolitanus"] = [e["id"] for e in sorted(buckets["parisino-petropolitanus"], key=lambda e: int(re.search(r"quran-(\d+)", e["id"]).group(1)))]
+    def _tab(e):
+        m = re.search(r"tablet-([IVXLC]+|\d+)", e["id"]); r = m.group(1)
+        roman = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6, "VII": 7, "VIII": 8, "IX": 9, "X": 10, "XI": 11, "XII": 12}
+        return (roman.get(r, int(r) if r.isdigit() else 99), e["id"])
+    order["gilgamesh"] = [e["id"] for e in sorted(buckets["gilgamesh"], key=_tab)]
+
     # Build prev/next lookup per entry, plus pretty labels.
     by_id = {t["id"]: t for t in texts}
     reading = {}  # id -> {prev, next, manuscript, manuscript_label, position, total}
@@ -131,6 +156,12 @@ def build():
         "venetus": "Venetus A (Iliad)",
         "edda": "Codex Regius (Poetic Edda)",
         "dss": "Dead Sea Scrolls",
+        "1qisaa": "Great Isaiah Scroll (1QIsa-a)",
+        "leningrad": "Leningrad Codex",
+        "parisino-petropolitanus": "Codex Parisino-petropolitanus (Quran)",
+        "gilgamesh": "Epic of Gilgamesh (Nineveh tablets)",
+        "alexandrinus": "Codex Alexandrinus",
+        "washingtonianus": "Codex Washingtonianus",
     }
     for manuscript, ids in order.items():
         total = len(ids)
