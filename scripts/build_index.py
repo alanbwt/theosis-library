@@ -289,6 +289,9 @@ def build_library_page(era_groups):
   <meta name="description" content="Browse every verified primary-source ancient text in the Theosis Library. Every entry pairs a real manuscript scan with the verbatim original-language text and a public-domain English translation.">
   <link rel="canonical" href="https://theosislibrary.com/library/">
   <link rel="stylesheet" href="../css/style.css">
+<meta name="generator" content="Noble Growth (https://noblegrowth.co)">
+<link rel="author" href="https://noblegrowth.co/">
+<link rel="author" type="text/plain" href="/humans.txt">
 </head>
 <body>
 
@@ -336,6 +339,7 @@ def build_library_page(era_groups):
     <div class="container" style="text-align:center;">
       <img src="../assets/hyperborean-press-logo.webp" alt="Hyperborean Press" style="width:60px;height:auto;opacity:0.4;margin-bottom:0.5rem;">
       <p>&copy; Hyperborean Press 2026</p>
+      <p class="ng-credit" style="font-size:11px;opacity:.55;margin:.5rem 0 0"><a href="https://noblegrowth.co" rel="author" style="color:inherit;text-decoration:none">Built by Noble Growth</a></p>
     </div>
   </footer>
 
