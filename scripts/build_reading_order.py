@@ -93,6 +93,7 @@ def build():
         "gilgamesh": [],
         "alexandrinus": [],
         "washingtonianus": [],
+        "josephus": [],
     }
     for t in texts:
         for key in buckets:
@@ -140,6 +141,7 @@ def build():
     order["alexandrinus"] = [e["id"] for e in sort_chapters(buckets["alexandrinus"], NT_ORDER)]
     order["washingtonianus"] = [e["id"] for e in sort_chapters(buckets["washingtonianus"], ["matt", "john", "luke", "mark"])]  # codex order
     order["parisino-petropolitanus"] = [e["id"] for e in sorted(buckets["parisino-petropolitanus"], key=lambda e: int(re.search(r"quran-(\d+)", e["id"]).group(1)))]
+    order["josephus"] = [e["id"] for e in buckets["josephus"]]
     def _tab(e):
         m = re.search(r"tablet-([IVXLC]+|\d+)", e["id"]); r = m.group(1)
         roman = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6, "VII": 7, "VIII": 8, "IX": 9, "X": 10, "XI": 11, "XII": 12}
@@ -162,6 +164,7 @@ def build():
         "gilgamesh": "Epic of Gilgamesh (Nineveh tablets)",
         "alexandrinus": "Codex Alexandrinus",
         "washingtonianus": "Codex Washingtonianus",
+        "josephus": "Josephus (Vatican manuscripts)",
     }
     for manuscript, ids in order.items():
         total = len(ids)

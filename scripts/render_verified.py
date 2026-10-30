@@ -162,6 +162,13 @@ def main():
             translator_name = "King James Version (1611)"
             original_lang_label = "Hebrew · WLC"
             original_lang_code = "hbo"
+        elif tid.startswith("verified-josephus-"):
+            author_name = "Flavius Josephus (c. 93/94 AD; Vatican manuscripts 10th-14th c.)"
+            source_url = "https://digi.vatlib.it/view/MSS_Vat.gr.984"
+            critical_edition = "Niese, Flavii Iosephi opera (1885-1890), via Perseus"
+            translator_name = "William Whiston (1737)"
+            original_lang_label = "Greek · Niese"
+            original_lang_code = "grc"
         elif tid.startswith("verified-washingtonianus-"):
             author_name = "Codex Washingtonianus (4th-5th c., Freer Gallery)"
             source_url = "https://www.si.edu/object/fsg_F1906.274"
