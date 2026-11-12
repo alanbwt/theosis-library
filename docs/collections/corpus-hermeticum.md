@@ -1,14 +1,15 @@
-# corpus-hermeticum: Corpus Hermeticum I (Poimandres)
+# corpus-hermeticum: Corpus Hermeticum I (Poimandres) and XIII (On Rebirth)
 
 Importer: `scripts/import_corpus-hermeticum.py` (re-runnable; scans cached in `site/assets/scans/corpus-hermeticum/`).
 Shelf: Greece. Era Imperial, tradition hermetic, category sacred-text, author `hermes-trismegistus` (already in authors.json).
-1 entry, 32 sections (the standard sections of CH I).
+2 entries, 54 sections (the standard sections of CH I and Parthey's 22 sections of CH XIII).
 
 ## Contents
 
 | order | entry | sections | manuscript pages |
 |---|---|---|---|
 | 1 | `verified-corpus-hermeticum-poimandres` (CH I, complete) | 32 | Laur. Plut. 71.33 fol. 123r-125v (6 pages) |
+| 2 | `verified-corpus-hermeticum-on-rebirth` (CH XIII, complete, with the secret hymn) | 22 | Laur. Plut. 71.33 fol. 141v-144r (6 pages) |
 
 ## Sources
 
@@ -28,5 +29,12 @@ First and last lines of every page read on the image and matched to Parthey's Gr
 ## Notes and gaps
 
 - Parthey's Greek differs from the manuscript and from Reitzenstein/Nock in places; in sections 4-5 the manuscript has blank spaces where its exemplar was defective. Mead translated Reitzenstein's text (1904), so a few phrases in the English have no exact counterpart in Parthey's Greek.
-- Not built: CH XIII (the rebirth dialogue). Greek Wikisource has transcribed only the opening part of Parthey's book (djvu pages 1-57 and 159-162), not CH XIII; the only digital PD Greek found is Walter Scott's 1924 text in First1KGreek (`tlg1286.tlg013`), which rearranges and brackets the text heavily and still has OCR errors, so it cannot be mapped to the manuscript reliably. A transcription of Parthey's (or Reitzenstein's 1904) CH XIII from the page scans is needed. Mead's English for CH XIII is in the same OCR file (line ~9408, "1. Tat. [Now] in the General Sermons"); in Laur. 71.33 CH XIII lies within fols. 126-145v (not yet located).
 - sacred-texts.com is behind a Cloudflare block; not used.
+
+## CH XIII (added 2026-11-12)
+
+- Manuscript: the same Laur. Plut. 71.33. CH XIII begins in the middle of fol. 141v under a red title that lacks Parthey's words 'ἐν ὄρει λόγος ἀπόκρυφος' (Mead's commentary notes that A has no main title) and ends in the middle of fol. 144r, followed on the same line by the red title of CH XIV. The hymn has the red heading 'ὑμνῳδία' on fol. 143v. First and last lines of all six pages read on the images; all page joins checked. Sections crossing a page: 2, 6, 10, 15, 19.
+- Greek: Parthey 1854, cap. 13, pp. 114-128. Not on Wikisource and the archive.org OCR of the Greek is unusable, so the 15 pages were transcribed from the page images of `poemander00trisgoog` (leaves 140-154, 1600 px; two words checked at 3000 px: 'ἁμαρτήσεις' p. 123 and 'θεὲ,' p. 127, the latter printed with a grave) and each line was proofread against the image. The transcription keeps Parthey's line breaks, page numbers and marginal section numbers: `data/sources/corpus-hermeticum/parthey/parthey1854-ch13.txt`. Speaker names (Τάτ., Ἑρμῆς.) as printed. Pen marks of a former reader on the scan (underlines on pp. 116, 117, 124, 126) are not part of the print.
+- English: Mead, Thrice-Greatest Hermes vol. 2, pp. 219-233. Toronto OCR compared with the OCRs of two other scans of the same printing; OCR faults fixed in `FIX13_ENG` (Rebirth, Race, Rashness, Righteousness, Receive, Æon, O for 0, stray footnote numbers, a footnote from p. 229 that runs onto p. 230). The four lacunae marked with dots were checked on the page images (pp. 222, 224, 225).
+- Section numbering: Mead follows Reitzenstein, whose sections 8, 9 and 19 begin one or two sentences away from Parthey's (Parthey 8 'ἀφίστανται δὲ αὗται', 9 'δύναμιν καλῶ ἐπὶ χαρᾷ', 19 'ταῦτα βοῶσιν'). Sections here follow Parthey; the English is cut at the words that translate those openings ('But they depart', 'The Power that follows Joy', 'Thus cry the Powers in me'), and Mead's numerals are dropped.
+- Open: Mead translated Reitzenstein's text, so some phrases have no exact counterpart in Parthey (e.g. section 2, where Parthey reads 'σοφία νοερὰ ἐν σιγῇ' and Mead adds in brackets 'such is the matter and the womb').
