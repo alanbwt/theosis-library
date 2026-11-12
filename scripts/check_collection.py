@@ -184,8 +184,13 @@ def check(key, d, hard, warn):
 
 def main():
     args = sys.argv[1:]
-    reg = load_all()
-    keys = sorted(reg) if args == ["--all"] else args
+    reg = load_all(only_ready=False)
+    if args == ["--all"]:
+        keys = sorted(load_all())          # released collections
+    elif args == ["--everything"]:
+        keys = sorted(reg)                 # including ones still being built
+    else:
+        keys = args
     if not keys:
         print(__doc__)
         sys.exit(2)

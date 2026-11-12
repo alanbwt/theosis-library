@@ -122,12 +122,25 @@ REQUIRED_COLLECTION_KEYS = [
 ]
 
 
-def load_all():
-    """Return {key: collection_json} for every data/collections/*.json."""
+READY = ROOT / "data" / "collections_ready.txt"
+
+
+def ready_keys():
+    """Keys the integrator has reviewed and released (one per line in data/collections_ready.txt)."""
+    if not READY.exists():
+        return set()
+    return {l.split("#")[0].strip() for l in READY.read_text().splitlines() if l.split("#")[0].strip()}
+
+
+def load_all(only_ready=True):
+    """Return {key: collection_json} for data/collections/*.json (released ones only by default)."""
     out = {}
     if not COLL_DIR.exists():
         return out
+    keys = ready_keys() if only_ready else None
     for f in sorted(COLL_DIR.glob("*.json")):
+        if keys is not None and f.stem not in keys:
+            continue
         d = json.loads(f.read_text(encoding="utf-8"))
         c = d.get("collection", {})
         out[c.get("key", f.stem)] = d
