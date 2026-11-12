@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="P72">P72</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Switzerland</country>
+            <settlement>Cologny/Genf</settlement>
+            <repository>Bibliotheca Bodmeriana</repository>
+            <idno>P. Bodmer VII</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Vatican City</country>
+            <settlement>Città del Vaticano</settlement>
+            <repository>Biblioteca Apostolica Vaticana</repository>
+            <idno>P. Bodmer VIII</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+
+<pb n="65" type="page"/>
+<cb n="1"/>
+<lb/><div type="book" n="Jude"><div type="chapter" n="Jude.1"><ab n="Jude.1.10" part="F"><w>οσα</w> <w>δε</w> <w>φυσικως</w> <w>ως</w> <w>τα</w> <w>αλογα</w> <w>ζωα</w>
+<lb/><w>επειστανται</w> <w>εν</w> <w>τουτοις</w> <w>φθιρον
+<lb break="no"/>ται</w></ab> <ab n="Jude.1.11"><w>ουαι</w> <app><rdg type="orig" hand="firsthand"><w>αυτοι</w></rdg><rdg type="corr" hand="corrector"><w>αυτοις</w></rdg></app> <w>οτι</w> <w>τη</w> <w>οδω</w> <w>του</w> <w>καιν</w>
+<lb/><w>επορευθησαν</w> <w>και</w> <w>τη</w> <w>πλανη</w> <w>του</w>
+<lb/><w>βαλαακ</w> <w>μεισθου</w> <w>εξεχυθησαν</w>
+<lb/><w>και</w> <w>τη</w> <w>αντιλογεια</w> <w>του</w> <w>κορε</w> <w>απω
+<lb break="no"/>λοντο</w></ab> <ab n="Jude.1.12"><w>ουτοι</w> <w>εισιν</w> <w>οι</w> <w>εν</w> <w>ταις</w> <w>αγα
+<lb break="no"/>παις</w> <w>υμων</w> <w>σπειλαδες</w> <w>συνευ
+<lb break="no"/>χομενοι</w> <w>αφοβως</w> <app><rdg type="orig" hand="firsthand"><w>αυτους</w></rdg><rdg type="corr" hand="corrector"><w>εαυτους</w></rdg></app> <w>πυμε
+<lb break="no"/>νοντες</w> <w>νεφελε</w> <w>ανυδροι</w> <w>υπο</w>
+<lb/><w>ανεμων</w> <app><rdg type="orig" hand="firsthand"><w>παραφερομενοι</w></rdg><rdg type="corr" hand="corrector"><w>παραφερομεναι</w></rdg></app>
+<lb/><w>δενδρα</w> <w>φθινοπωρινα</w> <w>ακαρ
+<lb break="no"/>πα</w> <w>δις</w> <w>αποθανοντα</w> <w>εκριζω
+<lb break="no"/>θεντα</w></ab> <ab n="Jude.1.13" part="I"><w>κυματα</w> <app><rdg type="orig" hand="firsthand"><w>κυματα</w></rdg><rdg type="corr" hand="corrector"></rdg></app> <w>αγρια</w>
+<lb/><w>θαλασης</w> <w>απαφριζοντα</w> <w>τας</w>
+<lb/><w>εαυτων</w> <w>αισχυνας</w> <w>αστερες</w></ab></div> </div></body></text></TEI>

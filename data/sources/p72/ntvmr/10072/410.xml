@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="P72">P72</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Switzerland</country>
+            <settlement>Cologny/Genf</settlement>
+            <repository>Bibliotheca Bodmeriana</repository>
+            <idno>P. Bodmer VII</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Vatican City</country>
+            <settlement>Città del Vaticano</settlement>
+            <repository>Biblioteca Apostolica Vaticana</repository>
+            <idno>P. Bodmer VIII</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+
+<pb n="66" type="page"/>
+<cb n="1"/>
+<lb/><div type="book" n="Jude"><div type="chapter" n="Jude.1"><ab n="Jude.1.13" part="F"><w>πλανητε</w> <w>οις</w> <w>ζοφος</w> <w>του</w> <w>σκοτους</w>
+<lb/><w>εις</w> <w>εωνα</w> <w>τετηρητε</w></ab> <ab n="Jude.1.14"><w>επροφη
+<lb break="no"/>τευσεν</w> <w>δε</w> <w>και</w> <w>τουτοις</w> <w>εβδο
+<lb break="no"/>μος</w> <w>απο</w> <w>αδαμ</w> <w>ενωχ</w> <w>λεγων</w>
+<lb/><w>ιδου</w> <w>ηλθεν</w> <w><abbr type="nomSac"><hi rend="overline">κς</hi></abbr></w> <w>εν</w> <w>αγιων</w>
+<lb/><w>αγγελων</w> <w>μυριασιν</w></ab> <ab n="Jude.1.15"><w>ποιησαι</w> <w>κρισιν</w>
+<lb/><w>κατα</w> <w>παντων</w> <w>και</w> <w>ελεγξε</w> <w>πασαν</w>
+<lb/><w>ψυχην</w> <w>περει</w> <w>παντων</w> <app><rdg type="orig" hand="firsthand"></rdg><rdg type="corr" hand="corrector"><w>των</w></rdg></app> <w>σκληρων</w>
+<lb/><w>ων</w> <w>ελαλησαν</w> <w>κατ</w> <w>αυτου</w> <w>αμαρ
+<lb break="no"/>τωλοι</w> <w>ασεβεις</w></ab> <ab n="Jude.1.16"><w>ουτοι</w> <w>εισιν</w> <w>γογγυσ
+<lb break="no"/>τε</w> <w>μεμψιμοιροι</w> <app><rdg type="orig" hand="firsthand"></rdg><rdg type="corr" hand="corrector"><w><unclear>κατα</unclear></w> <w><unclear>τ</unclear>α<unclear>ς</unclear></w> <w><unclear>επ</unclear>ιθυμιας</w> <w>εαυτω</w> <w>πορεομενοι</w></rdg></app> <w>και</w> <w>στομα</w> <w>αυ
+<lb break="no"/>των</w> <w>λαλει</w> <w>υπερογκα</w> <w>θαυμαζον
+<lb break="no"/>τες</w> <w>προσωπα</w> <w>ωφελιας</w> <w>χαρειν</w>
+<lb/></ab> <ab n="Jude.1.17"><app><rdg type="orig" hand="firsthand"><w>υμει</w></rdg><rdg type="corr" hand="corrector"><w>υμεις</w></rdg></app> <w>δε</w> <app><rdg type="orig" hand="firsthand"><w>αγαπητοις</w></rdg><rdg type="corr" hand="corrector"><w>αγαπητοι</w></rdg></app> <w>μνησθητε</w>
+<lb/><w>των</w> <w>ρηματων</w> <w>των</w> <w>προειρη
+<lb break="no"/>μενων</w> <w>υπο</w> <w>των</w> <w>αποστολων</w>
+<lb/><w>του</w> <w><abbr type="nomSac"><hi rend="overline">κυ</hi></abbr></w> <w>ημων</w> <w><abbr type="nomSac"><hi rend="overline">ιηυ</hi></abbr></w> <w><abbr type="nomSac"><hi rend="overline">χρυ</hi></abbr></w></ab> <ab n="Jude.1.18" part="I"><w>οτι</w> <w>ελεγον</w> <w>υμιν</w></ab></div> </div></body></text></TEI>

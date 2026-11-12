@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="P72">P72</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Switzerland</country>
+            <settlement>Cologny/Genf</settlement>
+            <repository>Bibliotheca Bodmeriana</repository>
+            <idno>P. Bodmer VII</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Vatican City</country>
+            <settlement>Città del Vaticano</settlement>
+            <repository>Biblioteca Apostolica Vaticana</repository>
+            <idno>P. Bodmer VIII</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="K"></witness>
+<witness n="corrector"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="28" type="page"/><cb n="1"/><lb/><div type="book" n="B22"><div type="chapter" n="B22K2"><ab n="B22K2V2" part="F"><w part="F">δι</w> <w>ους</w> <w>η</w> <w>οδος</w> <w>της</w> <w>αληθιας</w> <w>βλα<lb break="no"/>σφημηθησεται</w></ab> <ab n="B22K2V3"><w>και</w> <w>εν</w> <w>πλεονεξια</w><lb/><w>πλαστοις</w> <w>λογοις</w> <w>υμας</w><lb/><w>εμπορευσονται</w> <w>οις</w> <w>το</w> <w>κριμα</w><lb/><w>εκπαλαι</w> <w>ουκ</w> <w>αργει</w> <w>και</w> <w>η</w> <w>απωλια</w><lb/><w>αυτων</w> <w>ου</w> <w>νυσταζει</w></ab> <ab n="B22K2V4"><w>ει</w> <w>γαρ</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">θς</hi></abbr></w><lb/><w>αγγελων</w> <w>αμαρτησαντων</w> <app><rdg type="orig" hand="firsthand"><w>οκ</w></rdg><rdg type="corr" hand="corrector"><w>ουκ</w></rdg></app> <w>εφισατο</w><pc>·</pc><lb/><w>αλλα</w> <w>σειραις</w> <w>ζοφου</w> <w>ταρταρωσας</w> <w>παρε<lb break="no"/>δωκεν</w> <w>εις</w> <w>κρισιν</w> <w>τηρουμενους</w><lb/></ab> <ab n="B22K2V5"><w>και</w> <w>αρχεου</w> <w>κοσμου</w> <w>ουκ</w> <app><rdg type="orig" hand="firsthand"><w>εφισλτο</w></rdg><rdg type="corr" hand="corrector"><w>εφισατο</w></rdg></app><lb/><app><rdg type="orig" hand="firsthand"><w>αλλ<unclear>α</unclear></w></rdg><rdg type="corr" hand="corrector"><w>αλλ</w></rdg></app> <w>ογδοον</w> <w>νωε</w> <w>δικεοσυνης</w><lb/><w>κηρυκα</w> <w>εφυλαξεν</w> <w>κατακλυσμον</w><lb/><w>κοσμω</w> <w>ασεβων</w> <w>επαξας</w></ab> <ab n="B22K2V6"><w>και</w><lb/><w>πολεις</w> <w>σοδομων</w> <w>και</w> <w>γομορας</w> <app><rdg type="orig" hand="firsthand"><w>τε<lb break="no"/>φρωσας</w> <w>κατεκρινεν</w></rdg><rdg type="comm" hand="firsthand"><w><unclear>κ</unclear>ατεπ</w><lb/><w><supplied reason="unspecified">ρ</supplied>ησεν</w></rdg></app><app><rdg type="orig" hand="firsthand"><w><unclear>ιπ</unclear>οδιγμα</w></rdg><rdg type="corr" hand="corrector"><w>οις</w> <w>το</w> <w>διγμα</w></rdg></app><lb/><w>μελλοντων</w> <w>ασεβεσει</w> <app><rdg type="orig" hand="firsthand"><w>τετεικως</w></rdg><rdg type="corr" hand="corrector"><w>τεθεικως</w></rdg></app><lb/></ab> <ab n="B22K2V7"><w>και</w> <w>δικεον</w><pc>·</pc> <w>λωτ</w> <w>καταπονουμενον</w><lb/><w>υπο</w> <w>της</w> <w>των</w> <w>αθεσμων</w> <w>εν</w> <w>ασ<lb break="no"/>σελγια</w> <w>αναστροφης</w> <w>ερυσατο</w></ab></div> </div></body></text></TEI>

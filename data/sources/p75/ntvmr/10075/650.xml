@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="P75">P75</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Vatican City</country>
+            <settlement>Città del Vaticano</settlement>
+            <repository>Biblioteca Apostolica Vaticana</repository>
+            <idno>Pap. Hanna.1 (Mater.Verbi)</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="45r" type="folio"/><cb n="1"/><lb/><div type="book" n="B04"><div type="chapter" n="B04K1"><ab n="B04K1V33" part="F"><w part="F"><supplied reason="unspecified">κ</supplied><unclear>α</unclear>ταβαινον</w> <w>και</w> <w>μεν<unclear>ο</unclear>ν</w> <w>ε<unclear>π</unclear></w> <w>αυτον</w> <w>ου<lb break="no"/>τος</w> <w>εστιν</w> <w>ο</w> <w>βαπτιζων</w> <w>εν</w> <w><abbr type="nomSac"><hi rend="overline">πνι</hi></abbr></w> <w>αγιω</w><pc>·</pc> <app><rdg type="orig" hand="firsthand"></rdg><rdg type="corr" hand="corrector"><w>κ<unclear>α</unclear><supplied reason="unspecified">ι</supplied></w> <w><supplied reason="unspecified">πυρι</supplied></w></rdg></app></ab> <ab n="B04K1V34"><w>κα<lb break="no"/>γω</w> <w>εορακα</w> <w>και</w> <w>μεμαρτυρηκα</w> <w>οτι</w> <w>ουτος</w><lb/><w>εστιν</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">υς</hi></abbr></w> <w>του</w> <app><rdg type="orig" hand="firsthand"><gap reason="unspecified" unit="char" extent="4-5"/></rdg><rdg type="corr" hand="corrector"><w><abbr type="nomSac"><hi rend="overline">θυ</hi></abbr></w><pc>·</pc></rdg></app><pc>:</pc></ab> <ab n="B04K1V35"><w>τη</w> <w>επαυριον</w> <w>ειστη<lb break="no"/><unclear>χ</unclear>ει</w> <w>ιωαννης</w> <w>και</w> <w>εκ</w> <w>των</w> <w>μαθητων</w> <w>αυ<lb break="no"/>του</w> <w><abbr type="num"><hi rend="overline">β</hi></abbr></w></ab> <ab n="B04K1V36"><w>και</w> <w>εμβλεψας</w> <w>τω</w> <w><abbr type="nomSac"><hi rend="overline">ιυ</hi></abbr></w> <w>περιπατουν<lb break="no"/>τι</w> <w>λεγει</w><pc>·</pc> <w>ιδε</w> <w>ο</w> <w>αμνος</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">θυ</hi></abbr></w><pc>·</pc></ab> <ab n="B04K1V37"><w>και</w> <w>ηκου<lb break="no"/>σαν</w> <w>οι</w> <w>δυο</w> <w>αυτου</w> <w>μαθηται</w> <w>λαλουντος</w> <w>και</w><lb/><w>ηκολουθησαν</w> <w>τω</w> <w><abbr type="nomSac"><hi rend="overline">ιυ</hi></abbr></w><pc>·</pc></ab> <ab n="B04K1V38"><w>στραφεις</w> <w>δε</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">ις</hi></abbr></w> <w>και</w><lb/><w>θεασαμενος</w> <w>αυτους</w> <w>ακολουθουντας</w><pc>.</pc><lb/><w>λεγει</w> <w>αυτοις</w> <w>τι</w> <w>ζητειτε</w><pc>·</pc> <w>οι</w> <w>δε</w> <w>ειπαν</w> <w>αυ<lb break="no"/>τω</w> <w>ραββει</w><pc>·</pc> <w>ο</w> <w>λεγεται</w> <w>μεθερμηνευομε<lb break="no"/>νον</w> <w>διδασκαλε</w> <w>που</w> <w>μενεις</w><pc>·</pc></ab> <ab n="B04K1V39"><w>λεγει</w> <w>αυτοις</w><lb/><w>ερχεσθε</w> <w>και</w> <w>οψεσθε</w><pc>·</pc> <w>ηλθαν</w> <w>ουν</w> <w>και</w> <w>ειδαν</w><lb/><w>που</w> <w>μενει</w> <w>και</w> <w>παρ</w> <w>αυτω</w> <w>εμειναν</w> <w>την</w><lb/><w>ημεραν</w> <w>εκεινην</w><pc>.</pc> <w>ωρα</w> <w>ην</w> <w>ως</w> <w>δεκατη</w><pc>·</pc><lb/></ab> <ab n="B04K1V40"><w>ην</w> <w>ανδρεας</w> <w>ο</w> <w>αδελφος</w> <w>σιμωνος</w> <app><rdg type="orig" hand="firsthand"><w>πετρος</w></rdg><rdg type="corr" hand="corrector"><w>πετρου</w></rdg></app><lb/><w>εις</w> <w>εκ</w> <w>των</w> <w>δυο</w> <w>των</w> <w>ακουσαντων</w> <w>παρα</w><lb/><w>ιωαννου</w> <w>και</w> <w>ηκολου<unclear>θ</unclear>ησαντων</w> <w>αυτω</w><lb/></ab> <ab n="B04K1V41"><w>ευρισκει</w> <w>ουτος</w> <w>πρωτον</w> <w>τον</w> <w>αδελφον</w><lb/><w>τον</w> <w>ιδιον</w> <w>σιμωνα</w> <w>και</w> <w>λεγει</w> <w>αυτω</w> <w>ευρη<lb break="no"/>καμεν</w> <w>τον</w> <w>μεσσιαν</w> <w>ο</w> <w>εστιν</w> <w>μεθερμη<lb break="no"/>νευομενον</w> <w><abbr type="nomSac"><hi rend="overline">χς</hi></abbr></w><pc>·</pc></ab> <ab n="B04K1V42"><w>ηγαγεν</w> <w>αυτον</w> <w>προς</w> <w>τον</w><lb/><w><abbr type="nomSac"><hi rend="overline">ιν</hi></abbr></w><pc>·</pc> <w>εμβλεψας</w> <w>δε</w> <w>αυτω</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">ις</hi></abbr></w> <w>ειπεν</w> <w>συ</w> <w>ει</w> <w>σι<lb break="no"/>μων</w> <w>ο</w> <w>υιος</w> <w>ιωαννου</w> <w>συ</w> <w>κληθηση</w> <w>κηφας</w><lb/><w>ο</w> <w>ερμηνευεται</w> <w>πετρος</w><pc>·</pc></ab> <ab n="B04K1V43"><w>τη</w> <w>επαυριον</w> <w>η<lb break="no"/>θελησεν</w> <w>εξελθειν</w> <w>εις</w> <w>την</w> <w>γαλιλαιαν</w><lb/><w>και</w> <w>ευρισκει</w> <w>φιλιππον</w> <w>και</w> <w>λεγει</w> <w>αυ<unclear>τω</unclear></w><lb/><w><unclear>ο</unclear></w> <w><abbr type="nomSac"><hi rend="overline">ις</hi></abbr></w> <w>ακολουθει</w> <w>μοι</w><pc>·</pc></ab> <ab n="B04K1V44"><w>ην</w> <w>δε</w> <w>ο</w> <w>φ<unclear>ι</unclear>λιππος</w> <w>α<lb break="no"/>πο</w> <app><rdg type="orig" hand="firsthand"><w>βηδσαιδα</w></rdg><rdg type="corr" hand="corrector"><w>βη<unclear>θ</unclear>σαιδα</w></rdg></app> <w>εκ</w> <w>της</w> <w>πολ<unclear>εως</unclear></w> <w>ανδρεου</w><lb/><w>και</w> <w>πετρου</w></ab> <ab n="B04K1V45"><w>ευρισκει</w> <w>φιλ<supplied reason="unspecified">ιπ</supplied>πος</w> <w>τον</w><lb/><w>ναθαναηλ</w><pc>·</pc> <w>και</w> <w>λεγ<unclear>ει</unclear></w> <w>αυτ<unclear>ω</unclear></w> <w><unclear>ον</unclear></w> <w>εγραψεν</w><lb/><w>μωυσης</w> <w>εν</w> <w>τω</w> <w>νομω</w> <w>και</w> <w>οι</w> <w>π<unclear>ροφηται</unclear></w><lb/><w>ευρηκαμεν</w><pc>·</pc> <w><abbr type="nomSac"><hi rend="overline">ιν</hi></abbr></w> <w>υιον</w> <w>του</w> <w>ιω<unclear>σηφ</unclear></w> <w><unclear>το</unclear>ν</w><lb/><w>απο</w> <w>ναζαρε<unclear>θ</unclear></w></ab> <ab n="B04K1V46"><w>και</w> <w>ειπε<unclear>ν</unclear></w> <w><unclear>α</unclear>υ<unclear>τ</unclear><supplied reason="unspecified">ω</supplied></w> <w>να<unclear>θ</unclear>ανα<lb break="no"/>ηλ</w><pc>·</pc> <w>εκ</w> <w>ναζαρεθ</w> <w>δυναται</w> <w>τι</w> <w><unclear>αγαθο</unclear>ν</w> <w>ειναι</w><lb/><w>λεγει</w> <w>αυτω</w> <w><supplied reason="unspecified">ο</supplied></w> <w>φιλιππος</w> <w>ερχο<unclear>υ</unclear></w> <w><unclear>και</unclear></w> <w>ιδε</w><lb/></ab> <ab n="B04K1V47"><w>ιδεν</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">ις</hi></abbr></w> <w>το<unclear>ν</unclear></w> <w>ναθαναηλ</w> <w>ε<unclear>ρ</unclear>χομενον</w><lb/><w>προς</w> <w>αυτον</w> <w>και</w> <w>λεγει</w> <w>περι</w> <w>αυτ<unclear>ο</unclear>υ</w> <w>ι<unclear>δ</unclear>ε</w> <w>α<lb break="no"/>ληθως</w> <w>ισραηλειτης</w> <w>εν</w> <w>ω</w> <w><unclear>δ</unclear><supplied reason="unspecified">ο</supplied><unclear>λ</unclear>ο<unclear>ς</unclear></w> <w><unclear>ο</unclear>υ<unclear>κ</unclear></w><lb/><w>εστιν</w><pc>·</pc></ab> <ab n="B04K1V48" part="I"><w>λεγει</w> <w>αυτω</w> <w>ναθαναηλ</w> <w>ποθεν</w> <w>με</w><lb/><w>γεινωσκεις</w> <w>απεκριθη</w> <w><abbr type="nomSac"><hi rend="overline">ι</hi><unclear><hi rend="overline">ς</hi></unclear></abbr></w> <w>και</w> <w>ειπεν</w><lb/><w>αυτω</w> <w>π<unclear>ρο</unclear></w> <w>τ<unclear>ου</unclear></w> <w>σε</w> <w>φι<unclear>λιπ</unclear>πον</w> <w part="I">φων<unclear>η</unclear>σαι</w></ab></div> </div></body></text></TEI>

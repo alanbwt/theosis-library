@@ -1,0 +1,748 @@
+{
+  "@context" : "http://iiif.io/api/presentation/2/context.json",
+  "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/manifest.json",
+  "@type" : "sc:Manifest",
+  "metadata" : [ {
+    "label" : "Shelfmark",
+    "value" : "Pap.Bodmer.VIII"
+  }, {
+    "label" : "Language",
+    "value" : [ "und" ]
+  } ],
+  "label" : "Pap.Bodmer.VIII",
+  "description" : "",
+  "thumbnail" : {
+    "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/cover/cover.jpg",
+    "@type" : "dctypes:Image",
+    "format" : "image/jpeg",
+    "width" : 226,
+    "height" : 256
+  },
+  "viewingDirection" : "left-to-right",
+  "viewingHint" : "individuals",
+  "attribution" : "Images Copyright Biblioteca Apostolica Vaticana",
+  "logo" : "https://digi.vatlib.it/resource/img/i/DVL_logo.jpg",
+  "sequences" : [ {
+    "@type" : "sc:Sequence",
+    "canvases" : [ {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0001",
+      "@type" : "sc:Canvas",
+      "label" : "2-11",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0001",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0001",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0001_pa_0002-11.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0001"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0001_pa_0002-11.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0002",
+      "@type" : "sc:Canvas",
+      "label" : "12-1",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0002",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0002",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0002_pa_0012-1.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0002"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0002_pa_0012-1.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0003",
+      "@type" : "sc:Canvas",
+      "label" : "10-3",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0003",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0003",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0003_pa_0010-3.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0003"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0003_pa_0010-3.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0004",
+      "@type" : "sc:Canvas",
+      "label" : "4-9",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0004",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0004",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0004_pa_0004-9.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0004"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0004_pa_0004-9.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0005",
+      "@type" : "sc:Canvas",
+      "label" : "8-5",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0005",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0005",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0005_pa_0008-5.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0005"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0005_pa_0008-5.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0006",
+      "@type" : "sc:Canvas",
+      "label" : "6-7",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0006",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0006",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0006_pa_0006-7.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0006"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0006_pa_0006-7.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0007",
+      "@type" : "sc:Canvas",
+      "label" : "13",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0007",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0007",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0007_pa_0013.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0007"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0007_pa_0013.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0008",
+      "@type" : "sc:Canvas",
+      "label" : "14",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0008",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0008",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0008_pa_0014.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0008"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0008_pa_0014.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0009",
+      "@type" : "sc:Canvas",
+      "label" : "30-15",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0009",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0009",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0009_pa_0030-15.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0009"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0009_pa_0030-15.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0010",
+      "@type" : "sc:Canvas",
+      "label" : "16-29",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0010",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0010",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0010_pa_0016-29.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0010"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0010_pa_0016-29.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0011",
+      "@type" : "sc:Canvas",
+      "label" : "28-17",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0011",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0011",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0011_pa_0028-17.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0011"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0011_pa_0028-17.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0012",
+      "@type" : "sc:Canvas",
+      "label" : "18-27",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0012",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0012",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0012_pa_0018-27.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0012"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0012_pa_0018-27.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0013",
+      "@type" : "sc:Canvas",
+      "label" : "26-19",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0013",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0013",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0013_pa_0026-19.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0013"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0013_pa_0026-19.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0014",
+      "@type" : "sc:Canvas",
+      "label" : "20-25",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0014",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0014",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0014_pa_0020-25.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0014"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0014_pa_0020-25.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0015",
+      "@type" : "sc:Canvas",
+      "label" : "24-21",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0015",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0015",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0015_pa_0024-21.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0015"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0015_pa_0024-21.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0016",
+      "@type" : "sc:Canvas",
+      "label" : "22-23",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0016",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0016",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0016_pa_0022-23.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0016"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0016_pa_0022-23.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0017",
+      "@type" : "sc:Canvas",
+      "label" : "34-31",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0017",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0017",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0017_pa_0034-31.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0017"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0017_pa_0034-31.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0018",
+      "@type" : "sc:Canvas",
+      "label" : "32-33",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0018",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0018",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0018_pa_0032-33.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0018"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0018_pa_0032-33.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0019",
+      "@type" : "sc:Canvas",
+      "label" : "35",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0019",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0019",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0019_pa_0035.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0019"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0019_pa_0035.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0020",
+      "@type" : "sc:Canvas",
+      "label" : "36",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0020",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0020",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0020_pa_0036.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0020"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0020_pa_0036.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0021",
+      "@type" : "sc:Canvas",
+      "label" : "2-28.[01.sn.0000]",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0021",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0021",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0021_pa_0002-28.%5B01.sn.0000%5D.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0021"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0021_pa_0002-28.%5B01.sn.0000%5D.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0022",
+      "@type" : "sc:Canvas",
+      "label" : "2-28.[02.sn.0000]",
+      "width" : 2882,
+      "height" : 2929,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/anno0022",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/res/img0022",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Bodmer.VIII/Pap.Bodmer.VIII_0022_pa_0002-28.%5B02.sn.0000%5D.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 2882,
+          "height" : 2929
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0022"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Bodmer.VIII/thumb/Pap.Bodmer.VIII_0022_pa_0002-28.%5B02.sn.0000%5D.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 142
+      },
+      "viewingHint" : "non-paged"
+    } ],
+    "viewingDirection" : "left-to-right",
+    "viewingHint" : "individuals"
+  } ],
+  "structures" : [ {
+    "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/range/r0",
+    "@type" : "sc:Range",
+    "label" : "Pap.Bodmer.VIII",
+    "ranges" : [ "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/range/r0-0" ]
+  }, {
+    "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/range/r0-0",
+    "@type" : "sc:Range",
+    "label" : "Pap.Bodmer.VIII",
+    "within" : "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/range/r0",
+    "canvases" : [ "https://digi.vatlib.it/iiif/MSS_Pap.Bodmer.VIII/canvas/p0001" ]
+  } ],
+  "seeAlso" : [ "https://digi.vatlib.it/mss/detail/Pap.Bodmer.VIII" ]
+}

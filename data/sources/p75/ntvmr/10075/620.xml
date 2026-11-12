@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="P75">P75</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Vatican City</country>
+            <settlement>Città del Vaticano</settlement>
+            <repository>Biblioteca Apostolica Vaticana</repository>
+            <idno>Pap. Hanna.1 (Mater.Verbi)</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="44r" type="folio"/><cb n="1"/><lb/><div type="book" n="B03"><div type="chapter" n="B03K24"><ab n="B03K24V51"><w>και</w> <w>εγενετο</w> <w>εν</w> <w>τω</w> <w>ευλογειν</w> <w>αυτον</w> <w>αυ<unclear>του</unclear><supplied reason="unspecified">ς</supplied></w><lb/><w>διεστη</w> <w>απ</w> <w>αυτων</w> <w>και</w> <w>ανεφερετο</w> <w>εις</w> <w>τον</w><lb/><w>ουρανον</w><pc>·</pc></ab> <ab n="B03K24V52"><w>και</w> <w>αυτοι</w> <w>προσκυνησαντες</w> <w>αυ<lb break="no"/>τον</w><pc>.</pc> <w>υπεστρεψαν</w> <w>εις</w> <w><abbr type="nomSac"><hi rend="overline">ιλημ</hi></abbr></w> <w>μετα</w> <w>χαρας</w><lb/><w>μεγαλης</w></ab> <ab n="B03K24V53"><w>και</w> <w>ησαν</w> <w>δια</w> <w>παντος</w> <w>εν</w> <w>τω</w><lb/><w>ιερω</w> <w>ευλογουντες</w> <w>τον</w> <w><abbr type="nomSac"><hi rend="overline">θν</hi></abbr></w><pc>·</pc><lb/></ab></div><div type="explicit" n="B03explicit"><ab><w>ευαγγελιον</w><lb/><w>κατα</w><lb/><w>λουκαν</w><lb/><lb/></ab></div></div><div type="book" n="B04"><div type="incipit" n="B04incipit"><ab n="B04KInscriptioV0"><w>ευαγγελιον</w><lb/><w>κατα</w> <w>ιωανην</w><lb/></ab></div><div type="chapter" n="B04K1"><ab n="B04K1V1"><w>εν</w> <w>αρχη</w> <w>ην</w> <w>ο</w> <w>λογος</w> <w>και</w> <w>ο</w> <w>λογος</w> <w>ην</w> <w>προς</w> <w>τον</w><lb/><w><abbr type="nomSac"><hi rend="overline">θν</hi></abbr></w> <w>και</w> <w><abbr type="nomSac"><hi rend="overline">θς</hi></abbr></w> <w>ην</w> <w>ο</w> <w>λογος</w><pc>·</pc></ab> <ab n="B04K1V2"><w>ουτος</w> <w>ην</w> <w>εν</w> <w>αρχη</w> <w>προς</w><lb/><w>τον</w> <w><abbr type="nomSac"><hi rend="overline">θν</hi></abbr></w></ab> <ab n="B04K1V3"><w>παντα</w> <w>δι</w> <w>αυτου</w> <w>εγενετο</w> <w>και</w> <w>χωρις</w><lb/><w>αυτου</w> <w>εγενετο</w> <w>ουδε</w> <w>εν</w><pc>·</pc> <w>ο</w> <w>γεγονεν</w></ab> <ab n="B04K1V4"><w>εν</w> <w>αυτω</w><lb/><w>ζωη</w> <w>ην</w><note type="editorial" xml:id="B04K1V4-P75-1">Das H hochgestellt, vgl. zur Symbolik unten zu Vers 1.0</note> <w>και</w> <w>η</w> <w>ζωη</w> <w>ην</w> <w>το</w> <w>φως</w> <w>των</w> <w><abbr type="nomSac"><hi rend="overline">ανων</hi></abbr></w><lb/></ab> <ab n="B04K1V5"><w>και</w> <w>το</w> <w>φως</w> <w>εν</w> <w>τη</w> <w>σκοτεια</w> <w>φαινει</w> <w>και</w> <w>η</w> <w>σκο<lb break="no"/>τεια</w> <w>αυτο</w> <w>ου</w> <w>κατελαβεν</w><pc>·</pc></ab> <ab n="B04K1V6"><w>εγενετο</w> <w>ανθρω<lb break="no"/>πος</w> <w>απεσταλμενος</w> <w>παρα</w> <w><abbr type="nomSac"><hi rend="overline">θυ</hi></abbr></w> <w>ονομα</w> <w>αυτω</w><lb/><w>ιωανης</w><pc>·</pc></ab> <ab n="B04K1V7"><w>ουτος</w> <w>ηλθεν</w> <w>εις</w> <w>μαρτυριον</w> <w>ινα</w><lb/><w>μαρτυρηση</w> <w>περι</w> <w>του</w> <w>φωτος</w> <w>ινα</w> <w>παν<lb break="no"/>τες</w> <w>πιστευσωσιν</w> <w>δι</w> <w>αυτου</w><pc>·</pc></ab> <ab n="B04K1V8"><w>ουκ</w> <w>ην</w> <w>εκει<lb break="no"/>νος</w> <w>το</w> <w>φως</w> <w>αλλ</w> <w>ινα</w> <w>μαρτυρηση</w> <w>περι</w> <w>του</w><lb/><w>φωτος</w><pc>·</pc></ab> <ab n="B04K1V9"><w>ην</w> <w>το</w> <w>φως</w> <w>το</w> <w>αληθινον</w> <w>ο</w> <w>φωτι<lb break="no"/>ζει</w> <w>παντα</w> <w><abbr type="nomSac"><hi rend="overline">ανον</hi></abbr></w> <w>ερχομενον</w> <w>εις</w> <w>τον</w> <w>κο<lb break="no"/>σμον</w></ab> <ab n="B04K1V10"><w>εν</w> <w>τω</w> <w>κοσμω</w> <w>ην</w><note type="editorial" xml:id="B04K1V10-P75-1">Hochgestellte H und Ε - nach C. Schedl, Novum Testamentum 14,1972,238f Zahlensymbolik (h=8=Χριστος u. e=5=σωρτηρ)</note> <w>και</w> <w>ο</w> <w>κοσμος</w> <w>δι</w><lb/><w>αυτου</w> <w>εγενετο</w> <w>και</w> <w>ο</w> <w>κοσμος</w> <w>αυτον</w> <w>ουκ</w><lb/><w>εγνω</w><pc>·</pc></ab> <ab n="B04K1V11"><w>εις</w> <w>τα</w> <w>ιδια</w> <w>ηλθεν</w> <w>και</w> <w>οι</w> <w>ιδιοι</w> <w>αυ<lb break="no"/>τον</w> <w>ου</w> <w>παρελαβον</w><pc>·</pc></ab> <ab n="B04K1V12"><w>οσοι</w> <w>δε</w> <w>ελαβον</w> <w>αυτον</w><lb/><w>εδωκεν</w> <w>αυτοις</w> <w>εξουσιαν</w> <w>τεκνα</w> <w><abbr type="nomSac"><hi rend="overline">θυ</hi></abbr></w> <w>γε<lb break="no"/>νεσθαι</w> <w>τοις</w> <w>πιστευουσιν</w> <w>εις</w> <w>το</w> <w>ονομα</w> <w>αυ<lb break="no"/>του</w><pc>·</pc></ab> <ab n="B04K1V13"><w>οι</w> <w>ουκ</w> <w>εξ</w> <w>αιματων</w> <w>ουδε</w> <w>εκ</w> <w>θελημα<lb break="no"/>τος</w> <w>σαρκος</w> <w>ουδε</w> <w>εκ</w> <w>θεληματος</w> <w>ανδρο<unclear>ς</unclear></w><lb/><w>αλλ</w> <w>εκ</w> <w><abbr type="nomSac"><hi rend="overline">θυ</hi></abbr></w> <w>εγενηθησαν</w><pc>·</pc></ab> <ab n="B04K1V14"><w>και</w> <w>ο</w> <w>λογος</w> <w>σαρξ</w> <w>ε<lb break="no"/>γενετο</w> <w>και</w> <w>εσκηνωσεν</w> <w>εν</w> <w>ημιν</w> <w>και</w> <w><unclear>ε</unclear>θε<lb break="no"/>ασαμεθα</w> <w>την</w> <w>δοξαν</w> <w>αυτου</w> <w>δοξαν</w> <w>ως</w> <w>μο<lb break="no"/>νογενους</w> <w>παρα</w> <w>πατρος</w> <w>πληρης</w> <w>χαριτος</w> <w>και</w><lb/><w>αληθειας</w></ab> <ab n="B04K1V15"><w>ιωανης</w> <w>μαρτυρει</w> <w>περι</w> <w>αυτου</w><lb/><w>και</w> <w>κεκραγε</w> <w>λεγων</w><pc>·</pc> <w>ουτος</w> <w>ην</w> <w>ον</w> <w>ειπον</w> <w>ο</w><lb/><w>οπισω</w> <w>μου</w> <w>ερχομενος</w> <w>εμπροσθεν</w> <w>μου</w><lb/><w>γεγονεν</w> <w>οτι</w> <w>πρωτος</w> <w>μου</w> <w>ην</w></ab> <ab n="B04K1V16" part="I"><w>οτι</w> <w>εκ</w> <w part="I">του</w></ab></div> </div></body></text></TEI>

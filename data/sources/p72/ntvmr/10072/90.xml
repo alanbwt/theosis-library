@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="P72">P72</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Switzerland</country>
+            <settlement>Cologny/Genf</settlement>
+            <repository>Bibliotheca Bodmeriana</repository>
+            <idno>P. Bodmer VII</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Vatican City</country>
+            <settlement>Città del Vaticano</settlement>
+            <repository>Biblioteca Apostolica Vaticana</repository>
+            <idno>P. Bodmer VIII</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="9" type="page"/><cb n="1"/><lb/><div type="book" n="B21"><div type="chapter" n="B21K2"><ab n="B21K2V12" part="F"><w part="F">καλην</w> <w>εχοντες</w> <w>εινα</w> <w>εν</w> <w>ω</w> <w>καταλαλο<unclear>υ</unclear><lb break="no"/>σειν</w> <w>υμων</w> <w>ως</w> <w>κακοποιων</w> <w>εκ</w> <w>των</w><lb/><w>καλων</w> <w>εργων</w> <w>εποπτευοντες</w> <w>δο<lb break="no"/>ξασωσιν</w> <w>υμων</w> <w>τον</w> <w><abbr type="nomSac"><hi rend="overline">θν</hi></abbr></w> <w>εν</w> <w>ημερα</w><lb/><w>επεισκοπης</w></ab> <ab n="B21K2V13"><w>υποταγητε</w> <w>παση</w> <w>αν<lb break="no"/>θρωπειν</w> <w>κτεισει</w> <w>δια</w> <w>τον</w> <w><abbr type="nomSac"><hi rend="overline">κν</hi></abbr></w> <w>ει<lb break="no"/>τε</w> <w>βασιλι</w> <w>ως</w> <w>υπερεχοντι</w></ab> <ab n="B21K2V14"><w>ειτε</w> <w>ηγε<lb break="no"/>μοσιν</w> <w>ως</w> <w>δι</w> <w>αυτου</w> <w>πεμπομενοις</w><lb/><w>εις</w> <w>εκδικησιν</w> <w>κακοποιων</w> <w>επενον</w><lb/><w>δε</w> <w>αγαθοποιων</w></ab> <ab n="B21K2V15"><w>οτι</w> <w>ουτως</w> <w>εστιν</w><lb/><w>το</w> <w>θελημα</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">θυ</hi></abbr></w> <w>αγαθοποιουν<lb break="no"/>τας</w> <w>φειμοιν</w> <w>την</w> <w>των</w> <w>αφρονων</w><lb/><w>ανθρωπων</w> <w>αγνοιαν</w></ab> <ab n="B21K2V16"><w>ως</w> <w>ελευ<lb break="no"/>θεροι</w> <w>και</w> <w>μη</w> <w>ως</w> <w>επεικαλυμμα</w> <w>ε<lb break="no"/>χοντες</w> <w>της</w> <w>κακειας</w> <w>την</w> <w>ελευ<lb break="no"/>θεριαν</w> <w>αλλα</w> <w>ως</w> <w><abbr type="nomSac"><hi rend="overline">θυ</hi></abbr></w> <w>δουλοι</w></ab> <ab n="B21K2V17" part="I"><w>παν<lb break="no"/>τας</w> <w>τειμησατε</w> <w>την</w> <w part="I">αδελφοτη<lb break="no"/></w></ab></div> </div></body></text></TEI>

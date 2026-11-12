@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="P46">P46</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Ireland</country>
+            <settlement>Dublin</settlement>
+            <repository>Chester Beatty Library</repository>
+            <idno>CBL BP II</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>USA</country>
+            <settlement>Ann Arbor, MI</settlement>
+            <repository>University of Michigan Library</repository>
+            <idno>Inv. Nr. 6238</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="085r" type="folio"/><cb n="1"/><lb/><div type="book" n="B09"><div type="chapter" n="B09K5"><ab n="B09K5V2" part="F"><w part="F">ουδεν</w> <w>ωφελησει</w></ab> <ab n="B09K5V3"><w>μα<unclear>ρ</unclear>τυρομαι</w> <w>δε</w> <w>παλιν</w> <w>παν<unclear>τι</unclear></w> <w><unclear>αν</unclear><lb break="no"/>θρωπω</w> <w>περιτεμνομενω</w> <w>οτι</w> <w>οφειλετης</w> <w>εστιν</w><lb/><w>ολον</w> <w>τον</w> <w>νομον</w> <w>ποιησαι</w></ab> <ab n="B09K5V4"><w>κατηργηθητε</w> <w>απο</w> <w><abbr type="nomSac"><hi rend="overline">χυ</hi></abbr></w><lb/><w>οιτινες</w> <w>εν</w> <w>νομω</w> <w>δικαιουσθε</w> <w>της</w> <w>χαριτος</w> <w>εξεπε<lb break="no"/>σατε</w></ab> <ab n="B09K5V5"><w>ημεις</w> <w>γαρ</w> <w><abbr type="nomSac"><hi rend="overline">πνι</hi></abbr></w> <w>εκ</w> <w>πιστεως</w> <w>ελπιδα</w> <w>δικαι<lb break="no"/>οσυνης</w> <w>εκδεχομεθα</w></ab> <ab n="B09K5V6"><w>εν</w> <w><abbr type="nomSac"><hi rend="overline">χρω</hi></abbr></w> <w><abbr type="nomSac"><hi rend="overline">ιηυ</hi></abbr></w> <w>ουτε</w> <w>περιτομη</w> <w>τι</w><lb/><w>ισχυει</w> <w>ουτε</w> <w>ακροβυστια</w> <w>αλλα</w> <w>πιστις</w> <w>δι</w> <w>αγαπης</w> <w>ενερ<lb break="no"/>γουμενης</w></ab> <ab n="B09K5V7"><w>ετρεχετε</w> <w>καλως</w> <w>τις</w> <w>υμας</w> <w>ενεκοψεν</w><lb/><w>τη</w> <w>αληθεια</w> <w>μη</w> <w>πειθεσθαι</w></ab> <ab n="B09K5V8"><w>η</w> <w>πισμονη</w> <w>ουκ</w> <w>εκ</w> <w>του</w><lb/><w>καλουντος</w> <w>υμας</w></ab> <ab n="B09K5V9"><w>μικρα</w> <w>ζυμη</w> <w>ολον</w> <w>φυραμα</w> <w>ζυμοι</w><lb/></ab> <ab n="B09K5V10"><w>εγω</w> <w>δε</w> <w>πεποιθα</w> <w>εις</w> <w>υμας</w> <w>εν</w> <w><abbr type="nomSac"><hi rend="overline">κω</hi></abbr></w> <w>οτι</w> <w>ουδεν</w> <w>αλλο</w><lb/><w>φρονησητε</w> <w>ο</w> <w>δε</w> <w>ταρασσων</w> <w>υμας</w> <w>βαστα<unclear>σ</unclear>ει</w> <w>το</w> <w>κρι<lb break="no"/>μα</w> <w>οστις</w> <w>εαν</w> <w>η</w></ab> <ab n="B09K5V11"><w>εγω</w> <w>δε</w> <w>αδελφοι</w> <w>ει</w> <w>π<unclear>ερι</unclear>τομην</w><lb/><w>ετι</w> <w>κηρυσσω</w> <w>τι</w> <w>ετι</w> <w>διωκομαι</w> <w>αρα</w> <w>κατηργηται</w><lb/><w>το</w> <w>σκανδαλον</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">στρου</hi></abbr></w></ab> <ab n="B09K5V12"><w>αρα</w> <w>και</w> <w>αποκοψων<lb break="no"/>ται</w> <w>οι</w> <w>αναστατουντες</w> <w>υμας</w></ab> <ab n="B09K5V13"><w>υμεις</w> <w>γαρ</w> <w>επ</w> <w>ελε<unclear>υθε</unclear><lb break="no"/>ρια</w> <w>εκληθητε</w> <w>αδελφοι</w> <w>μονον</w> <w>μη</w> <w>την</w> <w>ελευ<unclear>θ</unclear><supplied reason="unspecified">ερι</supplied><unclear>αν</unclear></w><lb/><w>εις</w> <w>αφορμην</w> <w>τη</w> <w>σαρκι</w> <w>αλλα</w> <w>δια</w> <w>της</w> <w>αγαπης</w> <w><supplied reason="unspecified">δου</supplied><lb break="no"/>λευετε</w> <w>αλληλοις</w></ab> <ab n="B09K5V14"><w>ο</w> <w>γαρ</w> <w>πας</w> <w>νομος</w> <w>εν</w> <w>ενι</w> <w>λογ<unclear>ω</unclear></w><lb/><w>πεπληρωται</w> <w>εν</w> <w>τω</w> <w>αγαπησαι</w> <w>τον</w> <w>πλησιον</w> <w>ω<supplied reason="unspecified">ς</supplied></w><lb/><w>εαυτον</w></ab> <ab n="B09K5V15"><w>ει</w> <w>δε</w> <w>αλληλους</w> <w>δακνετε</w> <w>και</w> <w><unclear>κα</unclear>τ<unclear>ε</unclear><supplied reason="unspecified">σθι</supplied><lb break="no"/>ετε</w> <w>βλεπετε</w> <w>μη</w> <w>υπ</w> <w>αλληλων</w> <w>αναλωθη<unclear>τ</unclear><supplied reason="unspecified">ε</supplied></w><lb/></ab> <ab n="B09K5V16"><w>λεγω</w> <w>δε</w> <w><abbr type="nomSac"><hi rend="overline">πνι</hi></abbr></w> <w>περιπατεισθε</w> <w>και</w> <w>επ<unclear>ιθ</unclear><supplied reason="unspecified">υμιαν</supplied></w> <w><supplied reason="unspecified">σαρ</supplied><lb break="no"/>κος</w> <w>ου</w> <w>μη</w> <w>τελεσητε</w></ab> <ab n="B09K5V17" part="I"><w>η</w> <w>γαρ</w> <w>σαρξ</w> <w>επ<unclear>ι</unclear><supplied reason="unspecified">θυμει</supplied></w> <w><supplied reason="unspecified">κατα</supplied></w><lb/><w>του</w> <w><abbr type="nomSac"><hi rend="overline">πνς</hi></abbr></w> <w>το</w> <w>δε</w> <app><rdg type="orig" hand="firsthand"></rdg><rdg type="corr" hand="corrector"><w>το</w></rdg></app> <w><abbr type="nomSac"><hi rend="overline">πνα</hi></abbr></w> <w>κατα</w> <w>τη<unclear>ς</unclear></w> <w><unclear>σ</unclear><supplied reason="unspecified">αρκος</supplied></w> <w><supplied reason="unspecified">ταυτα</supplied></w><lb/><w>γ<unclear>αρ</unclear></w> <w><unclear>α</unclear><supplied reason="unspecified">ντικ</supplied><unclear>ε</unclear><supplied reason="unspecified">ιται</supplied></w> <w><supplied reason="unspecified">αλλη</supplied><unclear>λο</unclear><supplied reason="unspecified">ις</supplied></w> <w><supplied reason="unspecified">ινα</supplied></w> <w><supplied reason="unspecified">μη</supplied></w> <w><supplied reason="unspecified">α</supplied></w> <w><supplied reason="unspecified">εαν</supplied></w> <w part="I"><supplied reason="unspecified">θελητε</supplied></w></ab></div> </div></body></text></TEI>

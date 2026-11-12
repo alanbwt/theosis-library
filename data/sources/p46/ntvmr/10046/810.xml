@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="P46">P46</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Ireland</country>
+            <settlement>Dublin</settlement>
+            <repository>Chester Beatty Library</repository>
+            <idno>CBL BP II</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>USA</country>
+            <settlement>Ann Arbor, MI</settlement>
+            <repository>University of Michigan Library</repository>
+            <idno>Inv. Nr. 6238</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="050r" type="folio"/><cb n="1"/><lb/><div type="book" n="B07"><div type="chapter" n="B07K10"><ab n="B07K10V11" part="F"><w part="F">εβαινεν</w> <w>εκεινοις</w> <w>εγραφη</w> <w>δε</w> <w><unclear>π</unclear>ρος</w><lb/><w>νουθεσιαν</w> <w>ημων</w> <w>εις</w> <w>ους</w> <w>τα</w> <w>τελη</w> <w>των</w><lb/><w>αιωνων</w> <w>κατηντηκεν</w></ab> <ab n="B07K10V12"><w>ωστε</w> <w>ο</w> <w>δ<unclear>ο</unclear><lb break="no"/>κων</w> <w>εσταναι</w> <w>βλεπετω</w> <w>μη</w> <w>πεση</w><lb/></ab> <ab n="B07K10V13"><w>πειρασμος</w> <w>υμας</w> <w>ουκ</w> <w>ειληφεν</w> <w>ει</w> <w>μη</w><lb/><w>ανθρωπινος</w> <w>πιστος</w> <w>δε</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">θς</hi></abbr></w> <w>ος</w> <w>ουκ</w> <w>ε<lb break="no"/>ασει</w> <w>υμας</w> <w>πειρασθηναι</w> <w>υπερ</w> <w>ο</w> <w>δυ<lb break="no"/>νασθε</w> <w>αλλα</w> <w>ποιησει</w> <w>συν</w> <w>τω</w> <w>πει<lb break="no"/>ρασμω</w> <w>και</w> <w>την</w> <w>εγβασιν</w> <w>του</w> <w>δυ<lb break="no"/>νασθαι</w> <w>υπενεγκειν</w></ab> <ab n="B07K10V14"><w>διοπερ</w> <w>αγα<lb break="no"/>πητοι</w> <w>μου</w> <w>φευγετε</w> <w>απο</w> <w>της</w> <w>ειδω<lb break="no"/>λολατριας</w></ab> <ab n="B07K10V15"><w>ως</w> <w>φρονιμοις</w> <w>λεγω</w><lb/><w>κρεινατε</w> <w>υμεις</w> <w>ο</w> <w>φημι</w></ab> <ab n="B07K10V16"><w>το</w> <w>ποτηριον</w><lb/><w>της</w> <w>ευλογιας</w> <w>ο</w> <w>ευλογουμεν</w> <w>ουχι</w> <w>κοι<lb break="no"/>νωνια</w> <w>εστιν</w> <w>του</w> <w>αιματος</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">χρυ</hi></abbr></w><lb/><w>τον</w> <w>αρτον</w> <w>ον</w> <w>κλωμεν</w> <w>ουχι</w> <w>κοινω<lb break="no"/>νια</w> <w>του</w> <w>σωματος</w> <w>εστιν</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">χρυ</hi></abbr></w></ab> <ab n="B07K10V17"><w>οτι</w><lb/><w>εις</w> <w>αρτος</w> <w>εν</w> <w>σωμα</w> <w>οι</w> <w>πολλο<unclear>ι</unclear></w> <w>εσμεν</w><lb/><w>οι</w> <w>γαρ</w> <w>παντες</w> <w>εκ</w> <w>του</w> <w>ενος</w> <w>αρτου</w> <w>με<lb break="no"/>τεχομε<unclear>ν</unclear></w></ab> <ab n="B07K10V18"><w>βλεπετε</w> <w>τον</w> <w>ισραηλ</w><lb/><w>κατα</w> <w>σαρκα</w> <w>ουχι</w> <w>οι</w> <w>εσθε<unclear>ι</unclear>οντες</w><lb/><w>τας</w> <w>θυσιας</w> <w>κοινων<unclear>ο</unclear>ι</w> <w>του</w> <w>θυσιασ<unclear>τ</unclear><supplied reason="unspecified">η</supplied><lb break="no"/>ριου</w> <w>εισιν</w></ab> <ab n="B07K10V19"><w>τι</w> <w>ουν</w> <w>φημι</w> <w>ο<unclear>τ</unclear><supplied reason="unspecified">ι</supplied></w> <w><supplied reason="unspecified">ειδω</supplied><lb break="no"/><unclear>λο</unclear>θυτον</w> <w>τι</w> <w>εστιν</w></ab> <ab n="B07K10V20" part="I"><w>α<unclear>λ</unclear>λ</w> <w><supplied reason="unspecified">οτι</supplied></w> <w><supplied reason="unspecified">α</supplied></w> <w><supplied reason="unspecified">θυ</supplied><lb break="no"/>ουσιν</w> <w><unclear>τα</unclear></w> <w>εθ<unclear>νη</unclear></w> <w><unclear>δα</unclear><supplied reason="unspecified">ι</supplied><unclear>μον</unclear><supplied reason="unspecified">ιοις</supplied></w> <w><supplied reason="unspecified">θυουσιν</supplied></w><lb/><w><supplied reason="unspecified">και</supplied></w> <w><supplied reason="unspecified">ου</supplied></w> <w><supplied source="na28" reason="illegible"><abbr type="nomSac"><hi rend="overline">θω</hi></abbr></supplied></w><note type="local" xml:id="B07K10V20-P46-1">Abkürzungsstrich erhalten.</note> <w><supplied reason="unspecified">ου</supplied></w> <w><supplied reason="unspecified">θελω</supplied></w> <w><supplied reason="unspecified">δε</supplied></w> <w><supplied reason="unspecified">υμας</supplied></w> <w part="I"><supplied reason="unspecified">κοινω</supplied><lb break="no"/><supplied reason="unspecified">νους</supplied></w></ab></div> </div></body></text></TEI>

@@ -256,6 +256,11 @@ def parse_page(path, fix_key=None):
             return
         if tag == "ab":
             ident = NP.parse_id(el.get("n") or "", fix_key)
+            cont = False
+            if ident is None and re.match(r"^B\d+K\d+V\D", el.get("n") or "") and verses and not title:
+                # malformed id in the source (e.g. P66 "B04K16V[νυν", "B04K18Vω̣σ̣"): the text
+                # continues the preceding verse (checked against the Greek), so keep it there
+                ident, cont = verses[-1], True
             if ident and ident[1] and ident[2] and not title:
                 sub = []
                 _children(el, sub, inside="ab")
@@ -270,7 +275,8 @@ def parse_page(path, fix_key=None):
                     verses.append(ident)
                     parts[ident] = set()
                 parts[ident].add(el.get("part") or "")
-                toks.append(f"{VS}{ident[0]}.{ident[1]}.{ident[2]}{VS}")
+                if not cont:
+                    toks.append(f"{VS}{ident[0]}.{ident[1]}.{ident[2]}{VS}")
                 toks.extend(sub)
             else:
                 sub = []
@@ -300,8 +306,8 @@ def verse_labels(verses):
             labels[(b, k, v)] = f"{k}:{v}"
         elif b != prev[0]:
             labels[(b, k, v)] = f"{BOOK_NAMES[b]} {k}:{v}"
-        elif k != prev[1]:
-            labels[(b, k, v)] = f"{k}:{v}"
+        elif k != prev[1] or v != prev[2] + 1:
+            labels[(b, k, v)] = f"{k}:{v}" if (k != prev[1] or v < prev[2]) else f"{v}"
         else:
             labels[(b, k, v)] = f"{v}"
         prev = (b, k, v)
@@ -579,6 +585,18 @@ def make_section(key, pg, check, extra_note=""):
                  + ("this verse" if len(pg["absent"]) == 1 else "these verses")
                  + " as empty at this point of the text, so the English leaves "
                  + ("it" if len(pg["absent"]) == 1 else "them") + " out.")
+    vs = pg["verses"]
+    jumps = [(vs[i], vs[i + 1]) for i in range(len(vs) - 1)
+             if vs[i + 1][0] == vs[i][0] and (vs[i + 1][1], vs[i + 1][2]) < (vs[i][1], vs[i][2])]
+    for x, y in jumps:
+        note += (f" On this page {BOOK_NAMES[y[0]]} {y[1]}:{y[2]} follows {x[1]}:{x[2]}: the papyrus has the verses in a "
+                 "different order from the KJV; the English follows the papyrus.")
+    lost = [v for v in missing_between(pg["verses"]) if v not in pg.get("absent", [])
+            and not any(j[1][1:] <= v[1:] <= j[0][1:] for j in jumps)]
+    if lost:
+        note += (" " + ref_range(lost) + (" falls" if len(lost) == 1 else " fall")
+                 + " in the damaged part of the page (lines lost or unreadable), so the English skips "
+                 + ("it." if len(lost) == 1 else "them."))
     note += " " + check.strip()
     if extra_note:
         note += " " + extra_note.strip()
@@ -587,7 +605,7 @@ def make_section(key, pg, check, extra_note=""):
         "original_ref": f"{pg['ref_label']}: {ref}",
         "original_text": "<br>".join(pg["lines"]),
         "text": kjv_html(pg["verses"], pg["labels"]),
-        "scan_pages": [f"{key}/{pg['file']}"],
+        "scan_pages": [f"{key}/{f}" for f in (pg.get("files") or [pg["file"]])],
         "scan_note": note,
     }
 

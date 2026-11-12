@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="P66">P66</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Germany</country>
+            <settlement>Köln</settlement>
+            <repository>Institut für Altertumskunde</repository>
+            <idno>Inv. Nr. 4274/4298</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Ireland</country>
+            <settlement>Dublin</settlement>
+            <repository>Chester Beatty Library</repository>
+            <idno>CBL BP XIX</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Switzerland</country>
+            <settlement>Cologny/Genf</settlement>
+            <repository>Bibliotheca Bodmeriana</repository>
+            <idno>P. Bodmer II</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="147" type="page"/><cb n="1"/><lb/><div type="book" n="B04"><div type="chapter" n="B04K20"><ab n="B04K20V20" part="F"><w part="F"><supplied source="na28" reason="illegible">εδει<lb break="no"/>ξεν</supplied></w> <w><supplied source="na28" reason="illegible">τα</supplied><unclear>ς</unclear></w> <w>χειρα<supplied reason="unspecified">ς</supplied></w> <w><supplied reason="unspecified">και</supplied></w> <w><supplied reason="unspecified">την</supplied></w> <w><supplied reason="unspecified">πλευ</supplied><lb break="no"/><supplied reason="unspecified">ραν</supplied></w> <w><supplied reason="unspecified">αυτο</supplied>υ</w><pc>·</pc> <w>εχαρ<unclear>η</unclear><supplied reason="unspecified">σαν</supplied></w> <w><supplied reason="unspecified">ουν</supplied></w> <w><supplied reason="unspecified">οι</supplied></w> <w><supplied reason="unspecified">μα</supplied><lb break="no"/><supplied reason="unspecified">θηται</supplied></w> <w><supplied reason="unspecified">ιδοντ</supplied><unclear>ε</unclear>ς</w> <w><unclear>τ</unclear><supplied reason="unspecified">ον</supplied></w> <w><abbr type="nomSac"><supplied reason="unspecified"><hi rend="overline">κν</hi></supplied></abbr></w><lb/></ab> <ab n="B04K20V22" part="F"><gap reason="illegible"/><lb/><w><supplied reason="unspecified">τουτο</supplied></w> <w><unclear>ει</unclear><supplied reason="unspecified">πων</supplied></w> <w><supplied reason="unspecified">ενεφυσησεν</supplied></w> <w><supplied reason="unspecified">και</supplied></w><lb/><w><supplied reason="unspecified">λεγ</supplied><unclear>ε</unclear>ι</w> <w>αυ<unclear>τ</unclear><supplied reason="unspecified">οις</supplied></w> <w><supplied reason="unspecified">λαβετε</supplied></w> <w><abbr type="nomSac"><supplied reason="unspecified"><hi rend="overline">πνα</hi></supplied></abbr></w> <w><supplied reason="unspecified">αγι</supplied><lb break="no"/><supplied reason="unspecified">ον</supplied></w></ab> <ab n="B04K20V23" part="I"><w><supplied reason="unspecified">α</supplied>ν</w> <w>τιν<unclear>ω</unclear><supplied reason="unspecified">ν</supplied></w> <w><supplied reason="unspecified">αφητε</supplied></w> <w><supplied reason="unspecified">τας</supplied></w> <w part="I"><supplied reason="unspecified">αμαρτιας</supplied></w></ab></div> </div></body></text></TEI>

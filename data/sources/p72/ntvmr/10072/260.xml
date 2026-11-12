@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="P72">P72</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Switzerland</country>
+            <settlement>Cologny/Genf</settlement>
+            <repository>Bibliotheca Bodmeriana</repository>
+            <idno>P. Bodmer VII</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Vatican City</country>
+            <settlement>Città del Vaticano</settlement>
+            <repository>Biblioteca Apostolica Vaticana</repository>
+            <idno>P. Bodmer VIII</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="26" type="page"/><cb n="1"/><lb/><div type="book" n="B22"><div type="chapter" n="B22K1"><ab n="B22K1V15" part="F"><w part="F">τουτων</w> <w>μνημην</w> <w>ποιεισθαι</w></ab> <ab n="B22K1V16"><w>ου</w> <w>γαρ</w><lb/><w>σεσοφεισμενοις</w> <w>μυθοις</w> <w>εξακολου<lb break="no"/>θησαντες</w> <w>εγνωρισαμεν</w> <w>υμιν</w><lb/><w>την</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">κυ</hi></abbr></w> <w>ημων</w> <w><abbr type="nomSac"><hi rend="overline">ιηυ</hi></abbr></w> <w><abbr type="nomSac"><hi rend="overline">χρυ</hi></abbr></w> <w>δυναμιν</w><lb/><w>και</w> <w>παρουσιαν</w><pc>·</pc> <w>αλλ</w> <w>εποπται</w> <w>γενη<lb break="no"/>θεντες</w> <w>της</w> <w>εκεινου</w> <w>μεγαλιοτη<lb break="no"/>τος</w></ab> <ab n="B22K1V17"><w>λαβων</w> <w>γαρ</w> <w>παρα</w> <w><abbr type="nomSac"><hi rend="overline">θυ</hi></abbr></w> <w><abbr type="nomSac"><hi rend="overline">πρς</hi></abbr></w><lb/><w>τιμην</w> <w>και</w> <w>δοξαν</w> <w>φωνης</w> <w>ενε<lb break="no"/>χθεισης</w> <w>αυτω</w> <app><rdg type="orig" hand="firsthand"><w>τοι<gap reason="unspecified" unit="char" extent="1"/>σδε</w></rdg><rdg type="corr" hand="corrector"><w>τοιασδε</w></rdg></app> <w>υπο</w> <w>της</w><lb/><w>μεγαλοπρεπους</w> <w>δοξης</w> <w>ο</w> <w>υιος</w> <w>μου</w><lb/><w>ο</w> <w>αγαπητος</w> <w>μου</w> <w>ουτος</w> <w>εστιν</w> <w>εις</w> <w>ον</w><lb/><w>εγω</w> <w>ευδοκησα</w></ab> <ab n="B22K1V18"><w>και</w> <w>ταυτην</w> <w>την</w><lb/><w>φωνην</w> <w>ημεις</w> <w>ηκουσαμεν</w> <w>εξ</w> <w>ου<lb break="no"/>ρανου</w> <w>ενεχθεισαν</w> <w>συν</w> <w>αυτω</w> <w>ον<lb break="no"/>τες</w> <w>εν</w> <w>τω</w> <w>αγιω</w> <w>ορει</w></ab> <ab n="B22K1V19" part="I"><w>και</w> <w>εχομεν</w><lb/><w>βεβεωτερον</w> <w>τον</w> <w>προφητικον</w><lb/><w>λογον</w> <w>ω</w> <w>καλως</w> <w>ποιειτε</w> <w part="I">προσεχον<lb break="no"/></w></ab></div> </div></body></text></TEI>

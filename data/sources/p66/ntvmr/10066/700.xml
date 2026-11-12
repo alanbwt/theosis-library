@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="P66">P66</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Germany</country>
+            <settlement>Köln</settlement>
+            <repository>Institut für Altertumskunde</repository>
+            <idno>Inv. Nr. 4274/4298</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Ireland</country>
+            <settlement>Dublin</settlement>
+            <repository>Chester Beatty Library</repository>
+            <idno>CBL BP XIX</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Switzerland</country>
+            <settlement>Cologny/Genf</settlement>
+            <repository>Bibliotheca Bodmeriana</repository>
+            <idno>P. Bodmer II</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="74" type="page"/><cb n="1"/><lb/><div type="book" n="B04"><div type="chapter" n="B04K10"><ab n="B04K10V42" part="F"><w part="F">εκει</w></ab></div> <div type="chapter" n="B04K11"><ab n="B04K11V1"><w>ην</w> <w>δε</w> <w>τις</w> <w>ασθενων</w> <w>λαζα<lb break="no"/>ρος</w> <w>απο</w> <w>βηθανιας</w> <w>εκ</w> <w>της</w> <w>κω<lb break="no"/>μης</w> <w>μαριας</w> <w>και</w> <app><rdg type="orig" hand="firsthand"><w>μαρ<unclear>ι</unclear>ας</w></rdg><rdg type="corr" hand="corrector"><w>μαρθας</w></rdg></app> <w>της</w> <w>α<lb break="no"/>δελφης</w> <app><rdg type="orig" hand="firsthand"><w>αυτ<unclear>ου</unclear></w></rdg><rdg type="corr" hand="corrector"><w>αυτης</w></rdg></app></ab> <ab n="B04K11V2"><w>ην</w> <w>δε</w> <w>μαρια</w> <w>η</w><lb/><w>αλιψασα</w> <w>τον</w> <w><abbr type="nomSac"><hi rend="overline">κν</hi></abbr></w> <w>μυρω</w><pc>·</pc> <w>και</w> <w>εκ<lb break="no"/>μαξασα</w> <w>τους</w> <w>ποδας</w> <w>αυτου</w> <w>ταις</w><lb/><w>θριξιν</w> <w>αυτης</w> <w>ης</w> <app><rdg type="orig" hand="firsthand"><w>και</w> <w>αδελφος</w> <w>ην</w><lb/><w>λαζαρος</w> <w><unclear>α</unclear>σθεν<unclear>ω</unclear>ν</w></rdg><rdg type="corr" hand="corrector"><w>ο</w> <w>αδελφος</w><lb/><w>λαζαρος</w> <w>ησθενει</w></rdg></app><pc>·</pc></ab> <ab n="B04K11V3"><app><rdg type="orig" hand="firsthand"><w>απεστιλεν</w><lb/><w>ουν</w> <w><unclear>μα</unclear>ρ<unclear>θ</unclear>α</w> <w>προς</w> <w>αυτον</w> <w>λεγουσα</w></rdg><rdg type="corr" hand="corrector"><w>απεστιλαν</w><lb/><w>ουν</w> <w>αι</w> <w>αδελφαι</w> <w>προς</w> <w>αυτον</w> <w>λεγουσαι</w></rdg></app><lb/><w><abbr type="nomSac"><hi rend="overline">κε</hi></abbr></w> <w>ιδε</w> <w>ον</w> <w>φιλεις</w> <w>ασθενει</w></ab> <ab n="B04K11V4"><w>ακου<lb break="no"/>σας</w> <w>δε</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">ις</hi></abbr></w> <w>ειπεν</w> <w>αυτη</w> <w>η</w> <w>ασθε<lb break="no"/>νια</w> <w>ουκ</w> <w>εστιν</w> <w>προς</w> <w>θανατον</w><lb/><w>αλλ</w> <w>υπερ</w> <w>της</w> <w>δοξης</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">θυ</hi></abbr></w> <w>ινα</w><lb/><w>δοξασθη</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">υς</hi></abbr></w> <w>δι</w> <w>αυτης</w></ab> <ab n="B04K11V5"><w>ηγαπα</w><lb/><w>δε</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">ις</hi></abbr></w> <w>την</w> <w>μαρθαν</w> <w>και</w> <w>την</w><lb/><w>αδελφην</w> <app><rdg type="orig" hand="firsthand"></rdg><rdg type="corr" hand="corrector"><w><supplied reason="unspecified">α</supplied>υτης</w></rdg></app> <w>και</w> <w>τον</w> <w>λαζαρον</w><lb/></ab> <ab n="B04K11V6" part="I"><w>ως</w> <w>ουν</w> <w>ηκουσεν</w> <w>οτι</w> <w part="I">ασθενει</w></ab></div> </div></body></text></TEI>

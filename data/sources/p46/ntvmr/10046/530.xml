@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="P46">P46</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Ireland</country>
+            <settlement>Dublin</settlement>
+            <repository>Chester Beatty Library</repository>
+            <idno>CBL BP II</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>USA</country>
+            <settlement>Ann Arbor, MI</settlement>
+            <repository>University of Michigan Library</repository>
+            <idno>Inv. Nr. 6238</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="036r" type="folio"/><cb n="1"/><lb/><div type="book" n="B19"><div type="chapter" n="B19K12"><ab n="B19K12V11" part="F"><w part="F">ειρηνικον</w> <w>τοις</w> <w>δι</w> <w>αυτης</w> <w>γεγυμνασμε<lb break="no"/>νοις</w> <w>αποδιδωσιν</w> <w>δικαιοσυνης</w></ab> <ab n="B19K12V12"><w>διο</w> <w>τας</w><lb/><w>παρειμενας</w> <w>χειρας</w> <w>και</w> <w>τα</w> <w>παραλελυμε<lb break="no"/>να</w> <w>γονατα</w> <w>ανορθωσατε</w></ab> <ab n="B19K12V13"><w>και</w> <w>τροχειας</w><lb/><w>ορθας</w> <w>ποιειτε</w> <w>τοις</w> <w>ποσιν</w> <w>υμων</w> <w>ινα</w><lb/><w>μη</w> <w>το</w> <w>χωλον</w> <w>εκτραπη</w><note type="editorial" xml:id="B19K12V13-P46-1">K korrigiert?</note> <w>ιαθη</w> <w>δε</w> <w>μαλλον</w><lb/></ab> <ab n="B19K12V14"><w>ειρηνην</w> <w>διωκετε</w> <w>μετα</w> <w>παντων</w> <w>και</w><lb/><w>τον</w> <w>αγιασμον</w> <w>ου</w> <w>χωρις</w> <app><rdg type="orig" hand="firsthand"><w>ουδει</w></rdg><rdg type="corr" hand="corrector"><w>ουδεις</w></rdg></app> <w>οψεται</w><lb/><w><abbr type="nomSac"><hi rend="overline">κς</hi></abbr></w></ab> <ab n="B19K12V15"><w>επισκοπουντας</w> <w>μη</w> <w>τις</w> <w><unclear>υ</unclear>στερων</w><lb/><w>απο</w> <w>της</w> <w>χαριτος</w> <w>του</w> <w><abbr type="num"><hi rend="overline">θυ</hi></abbr></w><pc>·</pc> <w>μη</w> <w>τις</w> <w>ριζα</w><lb/><w>πικριας</w> <w>ανω</w> <w>φυουσα</w> <w>ενχ<unclear>ο</unclear>λη</w> <w>και</w><lb/><w>δι</w> <w>αυτης</w> <w>μιανθωσιν</w> <w>πολλοι</w></ab> <ab n="B19K12V16"><w>μη</w> <w>τις</w><lb/><w>πορνος</w> <w>η</w> <w>βεβηλος</w> <w>ως</w> <w>ησα<unclear>υ</unclear></w> <w>ος</w> <w>αντι</w><lb/><w>βρωσεως</w> <w>μιας</w> <w>απεδετο</w> <w>τ<unclear>α</unclear>ς</w> <w>πρωτο<lb break="no"/>τοκειας</w></ab> <ab n="B19K12V17"><w>ιστε</w> <w>γαρ</w> <w>οτι</w> <w>και</w> <w>μετεπειτα</w><lb/><w>θελων</w> <w>κληρονομησαι</w> <w>την</w> <w>ευλογιαν</w><lb/><w>απεδοκιμασθη</w> <w>μετανοι<unclear>α</unclear>ς</w> <w>τοπον</w><lb/><w>γαρ</w> <w>ουχ</w> <w>ευρεν</w> <w>καιτοι</w> <w>μετα</w> <w>δακρυων</w><lb/><w>εκζητησας</w> <w>αυτην</w></ab> <ab n="B19K12V18"><w>ου</w> <w>γαρ</w> <w>προσελη<lb break="no"/>λυθατε</w> <w>ψηλαφωμενω</w> <w>και</w> <w>κεκαυ<lb break="no"/>μενω</w> <w>πυρι</w> <w>και</w> <w>γνοφω</w> <w>και</w> <w>σκοτει</w><lb/><w>και</w> <w>θυελλη</w></ab> <ab n="B19K12V19"><w>και</w> <w>σα<unclear>λ</unclear>πιγγος</w> <w>ηχω</w> <w>και</w><lb/><app><rdg type="orig" hand="firsthand"><w>φωνην</w></rdg><rdg type="corr" hand="corrector"><w>φωνη</w></rdg></app> <w>ρηματων</w><pc>·</pc> <w>ης</w> <w>οι</w> <w>ακουσαν<unclear>τ</unclear>ες</w><lb/><w>παρητησαντο</w> <w>μ<unclear>η</unclear></w> <w>προστε<unclear>θ</unclear>ηναι</w> <w>αυτοις</w><lb/><w>λογον</w></ab> <ab n="B19K12V20"><w>ουκ</w> <w>εφερ<unclear>ο</unclear>ν</w> <w>γαρ</w> <w>το</w> <w>διαστ<unclear>ε</unclear><supplied reason="unspecified">λλο</supplied><lb break="no"/>μενον</w> <w>καν</w> <w>θη<unclear>ρι</unclear>ον</w> <w>θιγη</w> <w>τ<unclear>ου</unclear></w> <w><supplied reason="unspecified">ορους</supplied></w><lb/><w>λιθ<unclear>ο</unclear>βοληθησεται</w></ab> <ab n="B19K12V21" part="I"><w>και</w> <w>ο<unclear>υ</unclear><supplied reason="unspecified">τω</supplied></w> <w part="I"><supplied reason="unspecified">φοβε</supplied><lb break="no"/><supplied reason="unspecified">ρον</supplied></w></ab></div> </div></body></text></TEI>

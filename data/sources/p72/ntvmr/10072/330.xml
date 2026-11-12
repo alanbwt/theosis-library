@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="P72">P72</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Switzerland</country>
+            <settlement>Cologny/Genf</settlement>
+            <repository>Bibliotheca Bodmeriana</repository>
+            <idno>P. Bodmer VII</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Vatican City</country>
+            <settlement>Città del Vaticano</settlement>
+            <repository>Biblioteca Apostolica Vaticana</repository>
+            <idno>P. Bodmer VIII</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="33" type="page"/><cb n="1"/><lb/><div type="book" n="B22"><div type="chapter" n="B22K3"><ab n="B22K3V3" part="F"><w part="F">επ</w> <w>εσχατων</w> <w>των</w> <w>ημερων</w><lb/><w>ενπεγμονη</w> <w>εμπεκται</w><lb/><w>κατα</w> <w>τας</w> <w>ιδιας</w> <w>επειθυμιας</w> <w>πο<lb break="no"/>ρευομενοι</w></ab> <ab n="B22K3V4"><w>και</w> <w>λεγοντες</w> <w>που</w><lb/><w>εστιν</w> <w>η</w> <w>επαγγελια</w> <w>της</w> <w>παρου<lb break="no"/>σιας</w> <w>αυτου</w> <w>αφ</w> <w>ης</w> <w>γαρ</w> <w>οι</w> <w>πατερες</w><lb/><w>εκοιμηθησαν</w> <w>παντα</w> <w>ουτως</w><lb/><w>διαμενει</w> <w>απ</w> <w>αρχης</w> <w>κτεισεως</w><lb/></ab> <ab n="B22K3V5"><w>λανθανει</w> <w>γαρ</w> <w>αυτους</w> <w>του<lb break="no"/>το</w> <w>θελοντας</w> <w>οτι</w> <w>ουρανοι</w> <w>ησαν</w><lb/><w>εκπαλαι</w> <w>και</w> <w>γη</w> <w>εξ</w> <w>υδατος</w> <w>και</w> <w>δια</w><lb/><w>υδατος</w> <w>συνεστωσης</w> <w>τω</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">θυ</hi></abbr></w><lb/><w>λογω</w></ab> <ab n="B22K3V6"><w>δι</w> <w>ων</w> <w>ο</w> <w>τοτε</w> <app><rdg type="orig" hand="firsthand"><w>κοσκμος</w></rdg><rdg type="corr" hand="corrector"><w>κοσμος</w></rdg></app> <w>υδατι</w><lb/><w>κατακλυσθεις</w> <w>απωλετο</w></ab> <ab n="B22K3V7"><w>οι</w> <w>δε</w><lb/><w>νυν</w> <w>ουρανοι</w> <w>και</w> <w>γη</w> <w>τω</w> <w>αυτω</w> <w>λογω</w><lb/><w>τεθησαυρισμενοι</w> <w>εισιν</w> <w>πυρει</w><lb/><w>τηρουμενοι</w> <w>εις</w> <w>ημεραν</w> <w>κρισεως</w><lb/><w>και</w> <w>απωλειας</w> <w>ασεβων</w> <w>ανθρωπων</w><lb/></ab> <ab n="B22K3V8" part="I"><w>εν</w> <w>δε</w> <w>τουτω</w> <w>μη</w> <w>λανθανετω</w> <w>υμας</w><lb/><w>αγαπητοι</w> <w>οτι</w> <w>μια</w> <w>ημερα</w> <w part="I">παρα</w></ab></div> </div></body></text></TEI>

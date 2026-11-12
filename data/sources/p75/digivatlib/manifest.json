@@ -1,0 +1,3495 @@
+{
+  "@context" : "http://iiif.io/api/presentation/2/context.json",
+  "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/manifest.json",
+  "@type" : "sc:Manifest",
+  "metadata" : [ {
+    "label" : "Shelfmark",
+    "value" : "Pap.Hanna.1(Mater.Verbi)"
+  } ],
+  "label" : "Pap.Hanna.1(Mater.Verbi)",
+  "description" : "",
+  "thumbnail" : {
+    "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/cover/cover.jpg",
+    "@type" : "dctypes:Image",
+    "format" : "image/jpeg"
+  },
+  "viewingDirection" : "left-to-right",
+  "viewingHint" : "paged",
+  "attribution" : "Images Copyright Biblioteca Apostolica Vaticana",
+  "logo" : "https://digi.vatlib.it/resource/img/i/DVL_logo.jpg",
+  "sequences" : [ {
+    "@type" : "sc:Sequence",
+    "canvases" : [ {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0001",
+      "@type" : "sc:Canvas",
+      "label" : "1A.1r",
+      "width" : 5003,
+      "height" : 4606,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0001",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0001",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0001_fa_1A.1r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 5003,
+          "height" : 4606
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0001"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0001_fa_1A.1r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 138
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0002",
+      "@type" : "sc:Canvas",
+      "label" : "1A.1v",
+      "width" : 4974,
+      "height" : 4563,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0002",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0002",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0002_fa_1A.1v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4974,
+          "height" : 4563
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0002"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0002_fa_1A.1v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 137
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0003",
+      "@type" : "sc:Canvas",
+      "label" : "1A.2r",
+      "width" : 4981,
+      "height" : 5740,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0003",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0003",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0003_fa_1A.2r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4981,
+          "height" : 5740
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0003"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0003_fa_1A.2r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0004",
+      "@type" : "sc:Canvas",
+      "label" : "1A.2v",
+      "width" : 4998,
+      "height" : 5738,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0004",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0004",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0004_fa_1A.2v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4998,
+          "height" : 5738
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0004"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0004_fa_1A.2v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0005",
+      "@type" : "sc:Canvas",
+      "label" : "1A.3r",
+      "width" : 5006,
+      "height" : 5715,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0005",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0005",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0005_fa_1A.3r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 5006,
+          "height" : 5715
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0005"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0005_fa_1A.3r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0006",
+      "@type" : "sc:Canvas",
+      "label" : "1A.3v",
+      "width" : 4993,
+      "height" : 5827,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0006",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0006",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0006_fa_1A.3v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4993,
+          "height" : 5827
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0006"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0006_fa_1A.3v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 128,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0007",
+      "@type" : "sc:Canvas",
+      "label" : "1A.4r",
+      "width" : 4993,
+      "height" : 5723,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0007",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0007",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0007_fa_1A.4r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4993,
+          "height" : 5723
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0007"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0007_fa_1A.4r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0008",
+      "@type" : "sc:Canvas",
+      "label" : "1A.4v",
+      "width" : 4990,
+      "height" : 5759,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0008",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0008",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0008_fa_1A.4v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4990,
+          "height" : 5759
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0008"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0008_fa_1A.4v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 129,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0009",
+      "@type" : "sc:Canvas",
+      "label" : "1A.5r",
+      "width" : 4994,
+      "height" : 5696,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0009",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0009",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0009_fa_1A.5r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4994,
+          "height" : 5696
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0009"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0009_fa_1A.5r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0010",
+      "@type" : "sc:Canvas",
+      "label" : "1A.5v",
+      "width" : 5000,
+      "height" : 5750,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0010",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0010",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0010_fa_1A.5v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 5000,
+          "height" : 5750
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0010"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0010_fa_1A.5v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0011",
+      "@type" : "sc:Canvas",
+      "label" : "1A.6r",
+      "width" : 4952,
+      "height" : 5687,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0011",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0011",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0011_fa_1A.6r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4952,
+          "height" : 5687
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0011"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0011_fa_1A.6r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0012",
+      "@type" : "sc:Canvas",
+      "label" : "1A.6v",
+      "width" : 4978,
+      "height" : 5681,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0012",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0012",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0012_fa_1A.6v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4978,
+          "height" : 5681
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0012"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0012_fa_1A.6v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0013",
+      "@type" : "sc:Canvas",
+      "label" : "1A.7r",
+      "width" : 4964,
+      "height" : 5687,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0013",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0013",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0013_fa_1A.7r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4964,
+          "height" : 5687
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0013"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0013_fa_1A.7r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0014",
+      "@type" : "sc:Canvas",
+      "label" : "1A.7v",
+      "width" : 4979,
+      "height" : 5697,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0014",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0014",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0014_fa_1A.7v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4979,
+          "height" : 5697
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0014"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0014_fa_1A.7v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0015",
+      "@type" : "sc:Canvas",
+      "label" : "1A.8r",
+      "width" : 4999,
+      "height" : 5704,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0015",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0015",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0015_fa_1A.8r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4999,
+          "height" : 5704
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0015"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0015_fa_1A.8r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0016",
+      "@type" : "sc:Canvas",
+      "label" : "1A.8v",
+      "width" : 5010,
+      "height" : 5711,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0016",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0016",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0016_fa_1A.8v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 5010,
+          "height" : 5711
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0016"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0016_fa_1A.8v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0017",
+      "@type" : "sc:Canvas",
+      "label" : "1A.9r",
+      "width" : 4993,
+      "height" : 5729,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0017",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0017",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0017_fa_1A.9r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4993,
+          "height" : 5729
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0017"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0017_fa_1A.9r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0018",
+      "@type" : "sc:Canvas",
+      "label" : "1A.9v",
+      "width" : 4989,
+      "height" : 5721,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0018",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0018",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0018_fa_1A.9v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4989,
+          "height" : 5721
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0018"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0018_fa_1A.9v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0019",
+      "@type" : "sc:Canvas",
+      "label" : "1A.10r",
+      "width" : 4979,
+      "height" : 5788,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0019",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0019",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0019_fa_1A.10r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4979,
+          "height" : 5788
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0019"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0019_fa_1A.10r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 129,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0020",
+      "@type" : "sc:Canvas",
+      "label" : "1A.10v",
+      "width" : 4998,
+      "height" : 5709,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0020",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0020",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0020_fa_1A.10v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4998,
+          "height" : 5709
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0020"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0020_fa_1A.10v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0021",
+      "@type" : "sc:Canvas",
+      "label" : "1A.11r",
+      "width" : 4993,
+      "height" : 5776,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0021",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0021",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0021_fa_1A.11r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4993,
+          "height" : 5776
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0021"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0021_fa_1A.11r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 129,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0022",
+      "@type" : "sc:Canvas",
+      "label" : "1A.11v",
+      "width" : 4974,
+      "height" : 5788,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0022",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0022",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0022_fa_1A.11v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4974,
+          "height" : 5788
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0022"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0022_fa_1A.11v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 128,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0023",
+      "@type" : "sc:Canvas",
+      "label" : "1A.12r",
+      "width" : 5003,
+      "height" : 5712,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0023",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0023",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0023_fa_1A.12r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 5003,
+          "height" : 5712
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0023"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0023_fa_1A.12r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0024",
+      "@type" : "sc:Canvas",
+      "label" : "1A.12v",
+      "width" : 4996,
+      "height" : 5771,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0024",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0024",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0024_fa_1A.12v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4996,
+          "height" : 5771
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0024"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0024_fa_1A.12v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 129,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0025",
+      "@type" : "sc:Canvas",
+      "label" : "1B.1r",
+      "width" : 4992,
+      "height" : 5728,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0025",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0025",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0025_fa_1B.1r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4992,
+          "height" : 5728
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0025"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0025_fa_1B.1r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0026",
+      "@type" : "sc:Canvas",
+      "label" : "1B.1v",
+      "width" : 4976,
+      "height" : 5748,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0026",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0026",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0026_fa_1B.1v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4976,
+          "height" : 5748
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0026"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0026_fa_1B.1v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 129,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0027",
+      "@type" : "sc:Canvas",
+      "label" : "1B.2r",
+      "width" : 4985,
+      "height" : 5713,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0027",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0027",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0027_fa_1B.2r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4985,
+          "height" : 5713
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0027"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0027_fa_1B.2r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0028",
+      "@type" : "sc:Canvas",
+      "label" : "1B.2v",
+      "width" : 4984,
+      "height" : 5747,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0028",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0028",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0028_fa_1B.2v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4984,
+          "height" : 5747
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0028"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0028_fa_1B.2v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0029",
+      "@type" : "sc:Canvas",
+      "label" : "1B.3r",
+      "width" : 5004,
+      "height" : 5741,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0029",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0029",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0029_fa_1B.3r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 5004,
+          "height" : 5741
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0029"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0029_fa_1B.3r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0030",
+      "@type" : "sc:Canvas",
+      "label" : "1B.3v",
+      "width" : 4991,
+      "height" : 5699,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0030",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0030",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0030_fa_1B.3v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4991,
+          "height" : 5699
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0030"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0030_fa_1B.3v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0031",
+      "@type" : "sc:Canvas",
+      "label" : "1B.4r",
+      "width" : 4970,
+      "height" : 5728,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0031",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0031",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0031_fa_1B.4r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4970,
+          "height" : 5728
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0031"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0031_fa_1B.4r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0032",
+      "@type" : "sc:Canvas",
+      "label" : "1B.4v",
+      "width" : 4980,
+      "height" : 5749,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0032",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0032",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0032_fa_1B.4v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4980,
+          "height" : 5749
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0032"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0032_fa_1B.4v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 129,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0033",
+      "@type" : "sc:Canvas",
+      "label" : "1B.5r",
+      "width" : 4987,
+      "height" : 5789,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0033",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0033",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0033_fa_1B.5r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4987,
+          "height" : 5789
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0033"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0033_fa_1B.5r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 129,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0034",
+      "@type" : "sc:Canvas",
+      "label" : "1B.5v",
+      "width" : 4989,
+      "height" : 5681,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0034",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0034",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0034_fa_1B.5v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4989,
+          "height" : 5681
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0034"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0034_fa_1B.5v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0035",
+      "@type" : "sc:Canvas",
+      "label" : "1B.6r",
+      "width" : 4994,
+      "height" : 5669,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0035",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0035",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0035_fa_1B.6r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4994,
+          "height" : 5669
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0035"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0035_fa_1B.6r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 132,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0036",
+      "@type" : "sc:Canvas",
+      "label" : "1B.6v",
+      "width" : 4999,
+      "height" : 5668,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0036",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0036",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0036_fa_1B.6v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4999,
+          "height" : 5668
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0036"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0036_fa_1B.6v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 132,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0037",
+      "@type" : "sc:Canvas",
+      "label" : "1B.7r",
+      "width" : 4987,
+      "height" : 5669,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0037",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0037",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0037_fa_1B.7r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4987,
+          "height" : 5669
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0037"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0037_fa_1B.7r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0038",
+      "@type" : "sc:Canvas",
+      "label" : "1B.7v",
+      "width" : 5002,
+      "height" : 5724,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0038",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0038",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0038_fa_1B.7v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 5002,
+          "height" : 5724
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0038"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0038_fa_1B.7v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0039",
+      "@type" : "sc:Canvas",
+      "label" : "1B.8r",
+      "width" : 4990,
+      "height" : 5732,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0039",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0039",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0039_fa_1B.8r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4990,
+          "height" : 5732
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0039"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0039_fa_1B.8r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0040",
+      "@type" : "sc:Canvas",
+      "label" : "1B.8v",
+      "width" : 5000,
+      "height" : 5780,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0040",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0040",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0040_fa_1B.8v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 5000,
+          "height" : 5780
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0040"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0040_fa_1B.8v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 129,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0041",
+      "@type" : "sc:Canvas",
+      "label" : "1B.9r",
+      "width" : 5007,
+      "height" : 5639,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0041",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0041",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0041_fa_1B.9r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 5007,
+          "height" : 5639
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0041"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0041_fa_1B.9r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 133,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0042",
+      "@type" : "sc:Canvas",
+      "label" : "1B.9v",
+      "width" : 4985,
+      "height" : 5732,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0042",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0042",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0042_fa_1B.9v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4985,
+          "height" : 5732
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0042"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0042_fa_1B.9v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0043",
+      "@type" : "sc:Canvas",
+      "label" : "1B.10r",
+      "width" : 5005,
+      "height" : 5776,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0043",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0043",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0043_fa_1B.10r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 5005,
+          "height" : 5776
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0043"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0043_fa_1B.10r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 129,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0044",
+      "@type" : "sc:Canvas",
+      "label" : "1B.10v",
+      "width" : 4983,
+      "height" : 5684,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0044",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0044",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0044_fa_1B.10v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4983,
+          "height" : 5684
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0044"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0044_fa_1B.10v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0045",
+      "@type" : "sc:Canvas",
+      "label" : "1B.11r",
+      "width" : 4977,
+      "height" : 5745,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0045",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0045",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0045_fa_1B.11r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4977,
+          "height" : 5745
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0045"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0045_fa_1B.11r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 129,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0046",
+      "@type" : "sc:Canvas",
+      "label" : "1B.11v",
+      "width" : 5000,
+      "height" : 5710,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0046",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0046",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0046_fa_1B.11v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 5000,
+          "height" : 5710
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0046"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0046_fa_1B.11v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0047",
+      "@type" : "sc:Canvas",
+      "label" : "1B.12r",
+      "width" : 4986,
+      "height" : 5737,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0047",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0047",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0047_fa_1B.12r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4986,
+          "height" : 5737
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0047"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0047_fa_1B.12r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0048",
+      "@type" : "sc:Canvas",
+      "label" : "1B.12v",
+      "width" : 4982,
+      "height" : 5719,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0048",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0048",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0048_fa_1B.12v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4982,
+          "height" : 5719
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0048"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0048_fa_1B.12v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0049",
+      "@type" : "sc:Canvas",
+      "label" : "2A.1r",
+      "width" : 5000,
+      "height" : 5750,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0049",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0049",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0049_fa_2A.1r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 5000,
+          "height" : 5750
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0049"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0049_fa_2A.1r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0050",
+      "@type" : "sc:Canvas",
+      "label" : "2A.1v",
+      "width" : 4963,
+      "height" : 5788,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0050",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0050",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0050_fa_2A.1v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4963,
+          "height" : 5788
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0050"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0050_fa_2A.1v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 128,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0051",
+      "@type" : "sc:Canvas",
+      "label" : "2A.2r",
+      "width" : 4987,
+      "height" : 5756,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0051",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0051",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0051_fa_2A.2r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4987,
+          "height" : 5756
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0051"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0051_fa_2A.2r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 129,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0052",
+      "@type" : "sc:Canvas",
+      "label" : "2A.2v",
+      "width" : 4983,
+      "height" : 5778,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0052",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0052",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0052_fa_2A.2v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4983,
+          "height" : 5778
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0052"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0052_fa_2A.2v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 129,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0053",
+      "@type" : "sc:Canvas",
+      "label" : "2A.3r",
+      "width" : 4994,
+      "height" : 5700,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0053",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0053",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0053_fa_2A.3r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4994,
+          "height" : 5700
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0053"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0053_fa_2A.3r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0054",
+      "@type" : "sc:Canvas",
+      "label" : "2A.3v",
+      "width" : 5008,
+      "height" : 5709,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0054",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0054",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0054_fa_2A.3v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 5008,
+          "height" : 5709
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0054"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0054_fa_2A.3v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0055",
+      "@type" : "sc:Canvas",
+      "label" : "2A.4r",
+      "width" : 4987,
+      "height" : 5720,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0055",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0055",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0055_fa_2A.4r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4987,
+          "height" : 5720
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0055"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0055_fa_2A.4r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0056",
+      "@type" : "sc:Canvas",
+      "label" : "2A.4v",
+      "width" : 4980,
+      "height" : 5699,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0056",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0056",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0056_fa_2A.4v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4980,
+          "height" : 5699
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0056"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0056_fa_2A.4v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0057",
+      "@type" : "sc:Canvas",
+      "label" : "2A.5r",
+      "width" : 4985,
+      "height" : 5714,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0057",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0057",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0057_fa_2A.5r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4985,
+          "height" : 5714
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0057"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0057_fa_2A.5r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0058",
+      "@type" : "sc:Canvas",
+      "label" : "2A.5v",
+      "width" : 4968,
+      "height" : 5683,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0058",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0058",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0058_fa_2A.5v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4968,
+          "height" : 5683
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0058"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0058_fa_2A.5v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0059",
+      "@type" : "sc:Canvas",
+      "label" : "2A.6r",
+      "width" : 5013,
+      "height" : 5739,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0059",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0059",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0059_fa_2A.6r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 5013,
+          "height" : 5739
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0059"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0059_fa_2A.6r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0060",
+      "@type" : "sc:Canvas",
+      "label" : "2A.6v",
+      "width" : 4960,
+      "height" : 5847,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0060",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0060",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0060_fa_2A.6v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4960,
+          "height" : 5847
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0060"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0060_fa_2A.6v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 127,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0061",
+      "@type" : "sc:Canvas",
+      "label" : "2A.7r",
+      "width" : 4995,
+      "height" : 5675,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0061",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0061",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0061_fa_2A.7r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4995,
+          "height" : 5675
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0061"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0061_fa_2A.7r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 132,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0062",
+      "@type" : "sc:Canvas",
+      "label" : "2A.7v",
+      "width" : 4948,
+      "height" : 5685,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0062",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0062",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0062_fa_2A.7v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4948,
+          "height" : 5685
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0062"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0062_fa_2A.7v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0063",
+      "@type" : "sc:Canvas",
+      "label" : "2A.8r",
+      "width" : 4968,
+      "height" : 5691,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0063",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0063",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0063_fa_2A.8r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4968,
+          "height" : 5691
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0063"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0063_fa_2A.8r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0064",
+      "@type" : "sc:Canvas",
+      "label" : "2A.8v",
+      "width" : 4969,
+      "height" : 5698,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0064",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0064",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0064_fa_2A.8v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4969,
+          "height" : 5698
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0064"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0064_fa_2A.8v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0065",
+      "@type" : "sc:Canvas",
+      "label" : "2A.9r",
+      "width" : 4988,
+      "height" : 5702,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0065",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0065",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0065_fa_2A.9r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4988,
+          "height" : 5702
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0065"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0065_fa_2A.9r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0066",
+      "@type" : "sc:Canvas",
+      "label" : "2A.9v",
+      "width" : 4978,
+      "height" : 5722,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0066",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0066",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0066_fa_2A.9v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4978,
+          "height" : 5722
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0066"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0066_fa_2A.9v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0067",
+      "@type" : "sc:Canvas",
+      "label" : "2A.10r",
+      "width" : 4985,
+      "height" : 5697,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0067",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0067",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0067_fa_2A.10r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4985,
+          "height" : 5697
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0067"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0067_fa_2A.10r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0068",
+      "@type" : "sc:Canvas",
+      "label" : "2A.10v",
+      "width" : 4998,
+      "height" : 5704,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0068",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0068",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0068_fa_2A.10v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4998,
+          "height" : 5704
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0068"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0068_fa_2A.10v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0069",
+      "@type" : "sc:Canvas",
+      "label" : "2A.11r",
+      "width" : 4977,
+      "height" : 5708,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0069",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0069",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0069_fa_2A.11r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4977,
+          "height" : 5708
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0069"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0069_fa_2A.11r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0070",
+      "@type" : "sc:Canvas",
+      "label" : "2A.11v",
+      "width" : 4978,
+      "height" : 5717,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0070",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0070",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0070_fa_2A.11v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4978,
+          "height" : 5717
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0070"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0070_fa_2A.11v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0071",
+      "@type" : "sc:Canvas",
+      "label" : "2A.12r",
+      "width" : 4986,
+      "height" : 5733,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0071",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0071",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0071_fa_2A.12r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4986,
+          "height" : 5733
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0071"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0071_fa_2A.12r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0072",
+      "@type" : "sc:Canvas",
+      "label" : "2A.12v",
+      "width" : 4988,
+      "height" : 5684,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0072",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0072",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0072_fa_2A.12v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4988,
+          "height" : 5684
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0072"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0072_fa_2A.12v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0073",
+      "@type" : "sc:Canvas",
+      "label" : "2B.1r",
+      "width" : 4970,
+      "height" : 5676,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0073",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0073",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0073_fa_2B.1r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4970,
+          "height" : 5676
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0073"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0073_fa_2B.1r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0074",
+      "@type" : "sc:Canvas",
+      "label" : "2B.1v",
+      "width" : 4982,
+      "height" : 5709,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0074",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0074",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0074_fa_2B.1v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4982,
+          "height" : 5709
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0074"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0074_fa_2B.1v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0075",
+      "@type" : "sc:Canvas",
+      "label" : "2B.2r",
+      "width" : 4987,
+      "height" : 5717,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0075",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0075",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0075_fa_2B.2r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4987,
+          "height" : 5717
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0075"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0075_fa_2B.2r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0076",
+      "@type" : "sc:Canvas",
+      "label" : "2B.2v",
+      "width" : 4995,
+      "height" : 5776,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0076",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0076",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0076_fa_2B.2v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4995,
+          "height" : 5776
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0076"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0076_fa_2B.2v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 129,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0077",
+      "@type" : "sc:Canvas",
+      "label" : "2B.3r",
+      "width" : 4976,
+      "height" : 5706,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0077",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0077",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0077_fa_2B.3r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4976,
+          "height" : 5706
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0077"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0077_fa_2B.3r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0078",
+      "@type" : "sc:Canvas",
+      "label" : "2B.3v",
+      "width" : 5002,
+      "height" : 5775,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0078",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0078",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0078_fa_2B.3v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 5002,
+          "height" : 5775
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0078"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0078_fa_2B.3v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 129,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0079",
+      "@type" : "sc:Canvas",
+      "label" : "2B.4r",
+      "width" : 4974,
+      "height" : 5664,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0079",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0079",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0079_fa_2B.4r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4974,
+          "height" : 5664
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0079"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0079_fa_2B.4r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0080",
+      "@type" : "sc:Canvas",
+      "label" : "2B.4v",
+      "width" : 4987,
+      "height" : 5752,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0080",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0080",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0080_fa_2B.4v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4987,
+          "height" : 5752
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0080"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0080_fa_2B.4v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0081",
+      "@type" : "sc:Canvas",
+      "label" : "2B.5r",
+      "width" : 4970,
+      "height" : 5770,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0081",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0081",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0081_fa_2B.5r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4970,
+          "height" : 5770
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0081"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0081_fa_2B.5r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 129,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0082",
+      "@type" : "sc:Canvas",
+      "label" : "2B.5v",
+      "width" : 4977,
+      "height" : 5770,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0082",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0082",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0082_fa_2B.5v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4977,
+          "height" : 5770
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0082"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0082_fa_2B.5v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 129,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0083",
+      "@type" : "sc:Canvas",
+      "label" : "2B.6r",
+      "width" : 4978,
+      "height" : 5793,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0083",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0083",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0083_fa_2B.6r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4978,
+          "height" : 5793
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0083"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0083_fa_2B.6r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 128,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0084",
+      "@type" : "sc:Canvas",
+      "label" : "2B.6v",
+      "width" : 4975,
+      "height" : 5748,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0084",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0084",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0084_fa_2B.6v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4975,
+          "height" : 5748
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0084"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0084_fa_2B.6v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 129,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0085",
+      "@type" : "sc:Canvas",
+      "label" : "2B.7r",
+      "width" : 4970,
+      "height" : 5795,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0085",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0085",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0085_fa_2B.7r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4970,
+          "height" : 5795
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0085"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0085_fa_2B.7r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 128,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0086",
+      "@type" : "sc:Canvas",
+      "label" : "2B.7v",
+      "width" : 4984,
+      "height" : 5754,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0086",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0086",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0086_fa_2B.7v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4984,
+          "height" : 5754
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0086"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0086_fa_2B.7v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 129,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0087",
+      "@type" : "sc:Canvas",
+      "label" : "2B.8r",
+      "width" : 4977,
+      "height" : 5722,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0087",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0087",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0087_fa_2B.8r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4977,
+          "height" : 5722
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0087"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0087_fa_2B.8r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0088",
+      "@type" : "sc:Canvas",
+      "label" : "2B.8v",
+      "width" : 4976,
+      "height" : 5728,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0088",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0088",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0088_fa_2B.8v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4976,
+          "height" : 5728
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0088"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0088_fa_2B.8v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0089",
+      "@type" : "sc:Canvas",
+      "label" : "2B.9r",
+      "width" : 4972,
+      "height" : 5763,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0089",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0089",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0089_fa_2B.9r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4972,
+          "height" : 5763
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0089"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0089_fa_2B.9r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 129,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0090",
+      "@type" : "sc:Canvas",
+      "label" : "2B.9v",
+      "width" : 4988,
+      "height" : 5789,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0090",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0090",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0090_fa_2B.9v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4988,
+          "height" : 5789
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0090"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0090_fa_2B.9v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 129,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0091",
+      "@type" : "sc:Canvas",
+      "label" : "2B.10r",
+      "width" : 4976,
+      "height" : 5745,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0091",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0091",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0091_fa_2B.10r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4976,
+          "height" : 5745
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0091"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0091_fa_2B.10r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 129,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0092",
+      "@type" : "sc:Canvas",
+      "label" : "2B.10v",
+      "width" : 4976,
+      "height" : 5731,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0092",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0092",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0092_fa_2B.10v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4976,
+          "height" : 5731
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0092"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0092_fa_2B.10v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0093",
+      "@type" : "sc:Canvas",
+      "label" : "2B.11r",
+      "width" : 4986,
+      "height" : 5729,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0093",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0093",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0093_fa_2B.11r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4986,
+          "height" : 5729
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0093"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0093_fa_2B.11r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0094",
+      "@type" : "sc:Canvas",
+      "label" : "2B.11v",
+      "width" : 4990,
+      "height" : 5729,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0094",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0094",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0094_fa_2B.11v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4990,
+          "height" : 5729
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0094"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0094_fa_2B.11v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0095",
+      "@type" : "sc:Canvas",
+      "label" : "2B.12r",
+      "width" : 4985,
+      "height" : 5689,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0095",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0095",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0095_fa_2B.12r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4985,
+          "height" : 5689
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0095"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0095_fa_2B.12r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0096",
+      "@type" : "sc:Canvas",
+      "label" : "2B.12v",
+      "width" : 4992,
+      "height" : 5733,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0096",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0096",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0096_fa_2B.12v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4992,
+          "height" : 5733
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0096"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0096_fa_2B.12v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0097",
+      "@type" : "sc:Canvas",
+      "label" : "3A.1r",
+      "width" : 4985,
+      "height" : 5736,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0097",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0097",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0097_fa_3A.1r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4985,
+          "height" : 5736
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0097"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0097_fa_3A.1r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0098",
+      "@type" : "sc:Canvas",
+      "label" : "3A.1v",
+      "width" : 4982,
+      "height" : 5702,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0098",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0098",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0098_fa_3A.1v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4982,
+          "height" : 5702
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0098"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0098_fa_3A.1v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0099",
+      "@type" : "sc:Canvas",
+      "label" : "3A.2r",
+      "width" : 4978,
+      "height" : 5795,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0099",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0099",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0099_fa_3A.2r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4978,
+          "height" : 5795
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0099"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0099_fa_3A.2r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 128,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0100",
+      "@type" : "sc:Canvas",
+      "label" : "3A.2v",
+      "width" : 4969,
+      "height" : 5695,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0100",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0100",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0100_fa_3A.2v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4969,
+          "height" : 5695
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0100"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0100_fa_3A.2v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0101",
+      "@type" : "sc:Canvas",
+      "label" : "3A.3r",
+      "width" : 4974,
+      "height" : 5700,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0101",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0101",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0101_fa_3A.3r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4974,
+          "height" : 5700
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0101"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0101_fa_3A.3r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 130,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0102",
+      "@type" : "sc:Canvas",
+      "label" : "3A.3v",
+      "width" : 4975,
+      "height" : 5694,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0102",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0102",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0102_fa_3A.3v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4975,
+          "height" : 5694
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0102"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0102_fa_3A.3v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 131,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0103",
+      "@type" : "sc:Canvas",
+      "label" : "3A.4r",
+      "width" : 5386,
+      "height" : 5354,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0103",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0103",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0103_fa_3A.4r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 5386,
+          "height" : 5354
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0103"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0103_fa_3A.4r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 149
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0104",
+      "@type" : "sc:Canvas",
+      "label" : "3A.4v",
+      "width" : 5402,
+      "height" : 5358,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0104",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0104",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0104_fa_3A.4v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 5402,
+          "height" : 5358
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0104"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0104_fa_3A.4v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 148
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0105",
+      "@type" : "sc:Canvas",
+      "label" : "3A.5r",
+      "width" : 5360,
+      "height" : 5347,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0105",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0105",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0105_fa_3A.5r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 5360,
+          "height" : 5347
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0105"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0105_fa_3A.5r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 149
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0106",
+      "@type" : "sc:Canvas",
+      "label" : "3A.5v",
+      "width" : 5330,
+      "height" : 5360,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0106",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0106",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0106_fa_3A.5v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 5330,
+          "height" : 5360
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0106"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0106_fa_3A.5v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 149,
+        "height" : 150
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0107",
+      "@type" : "sc:Canvas",
+      "label" : "3A.6r",
+      "width" : 4991,
+      "height" : 4677,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0107",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0107",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0107_fa_3A.6r.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4991,
+          "height" : 4677
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0107"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0107_fa_3A.6r.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 140
+      },
+      "viewingHint" : "non-paged"
+    }, {
+      "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0108",
+      "@type" : "sc:Canvas",
+      "label" : "3A.6v",
+      "width" : 4973,
+      "height" : 4590,
+      "images" : [ {
+        "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/anno0108",
+        "@type" : "oa:Annotation",
+        "motivation" : "sc:painting",
+        "resource" : {
+          "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/res/img0108",
+          "@type" : "dctypes:Image",
+          "format" : "image/jpeg",
+          "service" : {
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "@id" : "https://digi.vatlib.it/iiifimage/MSS_Pap.Hanna.1%28Mater.Verbi%29/Pap.Hanna.1%28Mater.Verbi%29_0108_fa_3A.6v.jp2",
+            "profile" : "http://iiif.io/api/image/2/level2.json"
+          },
+          "width" : 4973,
+          "height" : 4590
+        },
+        "on" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0108"
+      } ],
+      "thumbnail" : {
+        "@id" : "https://digi.vatlib.it/pub/digit/MSS_Pap.Hanna.1%28Mater.Verbi%29/thumb/Pap.Hanna.1%28Mater.Verbi%29_0108_fa_3A.6v.tif.jpg",
+        "@type" : "dctypes:Image",
+        "format" : "image/jpeg",
+        "width" : 150,
+        "height" : 138
+      },
+      "viewingHint" : "non-paged"
+    } ],
+    "viewingDirection" : "left-to-right",
+    "viewingHint" : "paged"
+  } ],
+  "structures" : [ {
+    "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/range/r0",
+    "@type" : "sc:Range",
+    "label" : " ",
+    "ranges" : [ "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/range/r0-0" ]
+  }, {
+    "@id" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/range/r0-0",
+    "@type" : "sc:Range",
+    "label" : "Pap.Hanna.1(Mater.Verbi)",
+    "within" : "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/range/r0",
+    "canvases" : [ "https://digi.vatlib.it/iiif/MSS_Pap.Hanna.1%28Mater.Verbi%29/canvas/p0001" ]
+  } ],
+  "seeAlso" : [ "https://digi.vatlib.it/mss/detail/Pap.Hanna.1(Mater.Verbi)" ]
+}

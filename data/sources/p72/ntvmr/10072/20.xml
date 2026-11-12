@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="P72">P72</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Switzerland</country>
+            <settlement>Cologny/Genf</settlement>
+            <repository>Bibliotheca Bodmeriana</repository>
+            <idno>P. Bodmer VII</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Vatican City</country>
+            <settlement>Città del Vaticano</settlement>
+            <repository>Biblioteca Apostolica Vaticana</repository>
+            <idno>P. Bodmer VIII</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="2" type="page"/><cb n="1"/><lb/><div type="book" n="B21"><div type="chapter" n="B21K1"><ab n="B21K1V5"><app><rdg type="orig" hand="firsthand"><w>τος</w></rdg><rdg type="corr" hand="corrector"><w>τους</w></rdg></app> <w>εν</w> <w><abbr type="nomSac"><hi rend="overline">δυμι</hi></abbr></w> <w>φρουρουμενου<supplied reason="unspecified">ς</supplied></w> <w><unclear>δ</unclear><supplied reason="unspecified">ι</supplied><lb break="no"/>α</w> <w>πειστεως</w> <w>εις</w> <w>σωτηριαν</w> <w>ετυ<lb break="no"/>μην</w> <w>αποκαλυφθηναι</w> <w>εν</w> <w>κερω</w><lb/><w>εσχατω</w></ab> <ab n="B21K1V6"><w>αγαλλειασαντες</w> <w>ολιγον</w><lb/><w>αρ<unclear>τ</unclear>ι</w> <w>ει</w> <w>δεον</w> <w>εστιν</w> <w>λυπηθεντες</w><lb/><w>εν</w> <w>πολλοις</w> <w>πειρασμοις</w></ab> <ab n="B21K1V7"><w>εινα</w><lb/><w>το</w> <w>δοκειμον</w> <w>της</w> <w>πειστεως</w> <w>υ<lb break="no"/>μων</w> <w>πολυτειμοτερον</w> <app><rdg type="orig" hand="firsthand"><w>χρυειου</w></rdg><rdg type="corr" hand="corrector"><w>χρυσειου</w></rdg></app><lb/><w>του</w> <w>απολλυμενου</w> <w>και</w> <w>δια</w> <w>πυρος</w><lb/><w>δοκειμαζομενου</w> <w>ευρεθη</w> <w>εις</w> <w>ε<lb break="no"/>πενον</w> <w>και</w> <w>δοξαν</w> <w>και</w> <w>τειμην</w><lb/><w>εν</w> <w>αποκαλυψει</w> <w><abbr type="nomSac"><hi rend="overline">ιηυ</hi></abbr></w> <w><abbr type="nomSac"><hi rend="overline">χρυ</hi></abbr></w></ab> <ab n="B21K1V8"><w>ον</w> <w>ου<lb break="no"/>κ</w> <w>ειδοντες</w> <w>αγαπατε</w> <app><rdg type="orig" hand="firsthand"><w>ει</w></rdg><rdg type="corr" hand="corrector"><w>εις</w></rdg></app> <w>ον</w> <w>αρ<lb break="no"/><unclear>τ</unclear>ει</w> <w>μη</w> <w>ορωστες</w> <app><rdg type="orig" hand="firsthand"><w>πειστευετες</w></rdg><rdg type="corr" hand="corrector"><w>πειστευονετες</w></rdg></app> <w>δε</w><lb/><w><supplied reason="unspecified">α</supplied><unclear>γ</unclear>αλλειασθε</w> <w>χαρα</w> <w>ανεγλα<unclear>λη</unclear><supplied reason="unspecified">τω</supplied></w><lb/><w><supplied reason="unspecified">κ</supplied><unclear>α</unclear>ι</w> <w>δεδοξασμενη</w></ab> <ab n="B21K1V9" part="I"><w part="I">κομ<unclear>ε</unclear><supplied reason="unspecified">ιζομε</supplied><lb break="no"/><supplied source="na28" reason="illegible">νοι</supplied></w></ab></div> </div></body></text></TEI>

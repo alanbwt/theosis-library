@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="P75">P75</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Vatican City</country>
+            <settlement>Città del Vaticano</settlement>
+            <repository>Biblioteca Apostolica Vaticana</repository>
+            <idno>Pap. Hanna.1 (Mater.Verbi)</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="10" type="page" /><note type="transcriber">vv</note> <note type="transcriber">Zaehlung nach Martin-Kasser, anders bei Comfort, der mit 9b beginnt, Photo Nr.1, neues Photo fuer 3,21-22 = fg.1 Lakmann</note>
+<div type="book" n="3" osisID="Luke">
+<div type="chapter" n="3" osisID="Luke.3"> <ab n="B03K3V18" osisID="Luke.3.18"><gap reason="" />
+<supplied rend="lacuna">μεν ουν και ετερα παρακαλω</supplied>ν
+<lb />
+<supplied rend="lacuna">ευηγγελι</supplied><unclear>ζ</unclear><unclear>ε</unclear><supplied rend="lacuna">το</supplied> <unclear>τ</unclear>ον λαον·</ab> <ab n="B03K3V19" osisID="Luke.3.19"><supplied rend="lacuna">ο δε η</supplied>ρω
+<lb break="no" />
+<supplied rend="lacuna">δης ο τ</supplied><unclear>ε</unclear><unclear>τ</unclear><unclear>ρ</unclear><unclear>α</unclear>ρχης ελεγ<unclear>χ</unclear>ο<unclear>μ</unclear><supplied rend="lacuna">ε</supplied><unclear>ν</unclear><supplied rend="lacuna">ος</supplied> υπ
+<lb />
+<supplied rend="lacuna">αυτ</supplied><unclear>ο</unclear><unclear>υ</unclear><w></w><unclear>π</unclear>ερι ηρωδιαδο<unclear>ς</unclear> της γυναι
+<lb break="no" />
+<supplied rend="lacuna">κο</supplied><unclear>ς</unclear> του αδελφου αυτου· και περι παν
+<lb break="no" />
+των ων εποιησεν πονηρων ο η
+<lb break="no" />
+ρωδης</ab> <ab n="B03K3V20" osisID="Luke.3.20">προσε<unclear>θ</unclear>ηκεν και τουτο επι
+<lb />
+πασιν· κατεκλεισεν <supplied rend="lacuna">τ</supplied>ον ι<unclear>ω</unclear>ανην
+<lb />
+εν φυλακη·</ab> <ab n="B03K3V21" osisID="Luke.3.21">εγε<unclear>ν</unclear><supplied rend="lacuna">ε</supplied><unclear>τ</unclear><supplied rend="lacuna">ο δε ε</supplied><unclear>ν</unclear> <supplied rend="lacuna">τω</supplied>
+<lb />
+<unclear>β</unclear>απτισθηναι απαν<supplied rend="lacuna">τα τ</supplied><unclear>ο</unclear><unclear>ν</unclear><w></w><unclear>λ</unclear><unclear>α</unclear>ο<unclear>ν</unclear>
+<lb />
+<supplied rend="lacuna">κ</supplied>αι ιυ̅ βαπτι<unclear>σ</unclear>θ<unclear>ε</unclear>ντος <supplied rend="lacuna">κ</supplied><unclear>α</unclear><unclear>ι</unclear><w></w><unclear>π</unclear>ρο<unclear>σ</unclear>ευ
+<lb break="no" />
+<supplied rend="lacuna">χομ</supplied><unclear>ε</unclear>νου. ανεωχθην<unclear>α</unclear>ι το<unclear>ν</unclear> ουρα
+<lb break="no" />
+<supplied rend="lacuna">νο</supplied><unclear>ν</unclear></ab> <ab n="B03K3V22" osisID="Luke.3.22">και καταβηνα<supplied rend="lacuna">ι το</supplied> πν̅α <unclear>τ</unclear>ο αγ<unclear>ι</unclear>
+<lb break="no" />
+<supplied rend="lacuna">ον σωματ</supplied><unclear>ι</unclear><unclear>κ</unclear><unclear>ω</unclear> <supplied rend="lacuna">ειδει ως πε</supplied><unclear>ρ</unclear><unclear>ι</unclear><unclear>σ</unclear><supplied rend="lacuna">τεραν</supplied>
+<lb />
+<gap reason="" /> <note type="transcriber">3,23-3,32</note>
+<lb />
+</ab></div></div></body></text></TEI>

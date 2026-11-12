@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="P72">P72</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Switzerland</country>
+            <settlement>Cologny/Genf</settlement>
+            <repository>Bibliotheca Bodmeriana</repository>
+            <idno>P. Bodmer VII</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Vatican City</country>
+            <settlement>Città del Vaticano</settlement>
+            <repository>Biblioteca Apostolica Vaticana</repository>
+            <idno>P. Bodmer VIII</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="1" type="page"/><cb n="1"/><lb/><div type="book" n="B21"><div type="chapter" n="B21K1"><ab n="B21K1V1"><w>πετρος</w> <w>αποστολος</w> <w><abbr type="nomSac"><hi rend="overline">ιυ</hi></abbr></w> <w><abbr type="nomSac"><hi rend="overline">χρυ</hi></abbr></w> <w>εκλε<lb break="no"/>κτοις</w> <w>παρεπειδημοις</w> <w>διασπο<lb break="no"/>ρας</w> <w>ποντου</w> <w>γαλατειας</w> <w>καπαδο<lb break="no"/>κειας</w> <w>ασειας</w> <w>και</w> <w>βιθυνιας</w></ab> <ab n="B21K1V2"><w>κατα</w><lb/><w><unclear>π</unclear><supplied reason="unspecified">ρο</supplied>γνωσιν</w> <w><abbr type="nomSac"><hi rend="overline">θυ</hi></abbr></w> <w><abbr type="nomSac"><hi rend="overline">πρς</hi></abbr></w> <w>εν</w> <w>αγιασ<lb break="no"/>μω</w> <w><abbr type="nomSac"><hi rend="overline">πνς</hi></abbr></w> <w>εις</w> <w>υπακοην</w> <w>και</w> <w>ραν<lb break="no"/>τισμον</w> <w>αιματος</w> <w><abbr type="nomSac"><hi rend="overline">ιυ</hi></abbr></w> <w><abbr type="nomSac"><hi rend="overline">χρυ</hi></abbr></w> <w>χαρεις</w><lb/><w>υμιν</w> <w>και</w> <w>ειρηνη</w> <w>πληθυνθειη</w><lb/></ab> <ab n="B21K1V3"><w>ευλογητος</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">θς</hi></abbr></w> <w>και</w> <w><abbr type="nomSac"><hi rend="overline">παρ</hi></abbr></w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">κυ</hi></abbr></w><lb/><w>ημων</w> <w><abbr type="nomSac"><hi rend="overline">ιηυ</hi></abbr></w> <w><abbr type="nomSac"><hi rend="overline">χρυ</hi></abbr></w> <w>ο</w> <w>κατα</w> <w>πολυ</w> <w>ελε<lb break="no"/>ος</w> <w>αυτου</w> <w>αναγεννησας</w> <w>εις</w><lb/><w>ελπι<unclear>δ</unclear>αν</w><note type="local" xml:id="B21K1V3-P72-1">Korrektur?</note> <w>ζωσαν</w> <w>δι</w> <w>αναστασεως</w><lb/><w><abbr type="nomSac"><hi rend="overline">ιηυ</hi></abbr></w> <w><abbr type="nomSac"><hi rend="overline">χρυ</hi></abbr></w> <w>εκ</w> <w>νεκρων</w></ab> <ab n="B21K1V4"><w>εις</w> <w>κληρο<lb break="no"/>νομιαν</w> <w>αφθαρτον</w> <w>και</w> <w>αμιαν<lb break="no"/><supplied reason="unspecified">τον</supplied></w> <w><supplied reason="unspecified">κ</supplied><unclear>αι</unclear></w> <w>αμαραντον</w> <w>τετηρημε<lb break="no"/><supplied reason="unspecified">νην</supplied></w> <w><supplied reason="unspecified">εν</supplied></w> <w><supplied reason="unspecified">ου</supplied><unclear>ρα</unclear><supplied reason="unspecified">νοις</supplied></w> <w><unclear>εις</unclear></w> <w><unclear>ημα</unclear><supplied reason="unspecified">ς</supplied></w></ab></div> </div></body></text></TEI>

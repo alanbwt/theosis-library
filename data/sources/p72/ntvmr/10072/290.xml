@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="P72">P72</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Switzerland</country>
+            <settlement>Cologny/Genf</settlement>
+            <repository>Bibliotheca Bodmeriana</repository>
+            <idno>P. Bodmer VII</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Vatican City</country>
+            <settlement>Città del Vaticano</settlement>
+            <repository>Biblioteca Apostolica Vaticana</repository>
+            <idno>P. Bodmer VIII</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="29" type="page"/><cb n="1"/><lb/><div type="book" n="B22"><div type="chapter" n="B22K2"><ab n="B22K2V8"><w>βλεμματι</w> <w>γαρ</w> <w>και</w> <w>ακοη</w> <w>ο</w> <w>δικεος</w><lb/><w>ενκατυκων</w> <w>εν</w> <w>αυτοις</w> <w>ημεραν</w><lb/><w>εξ</w> <w>ημερας</w> <w>ψυχην</w> <w>δικεαν</w> <w>ανο<lb break="no"/>μοις</w> <w>εργοις</w> <w>εβασασανιζεν</w><lb/></ab> <ab n="B22K2V9"><w>οιδεν</w> <w>κυριος</w> <w>ευσεβεις</w> <w>εκ</w> <w>πειρασμου</w><lb/><w>ρυσασθαι</w> <w>αδικους</w> <w>δε</w> <w>εις</w> <w>ημεραν</w><lb/><w>κρισεως</w> <w>κολαζομενους</w> <app><rdg type="orig" hand="firsthand"><w>τρειν</w></rdg><rdg type="corr" hand="corrector"><w>τηρειν</w></rdg></app><lb/></ab> <ab n="B22K2V10"><w>μαλλιστα</w> <w>δε</w> <w>τους</w> <w>οπεισω</w><lb/><w>σαρκος</w> <w>εν</w> <w>επειθυμειας</w> <w>σαρκος</w><lb/><w>πορευομενους</w> <w>και</w> <w>κυριοτητος</w><lb/><w>καταφρονουντας</w> <w>τολμηται</w><lb/><w>αυδαζεις</w> <w>δοξης</w> <w>ου</w> <w>τρεμουσιν</w><lb/><w>βλασφημουντες</w></ab> <ab n="B22K2V11"><w>οπου</w> <w>αγγελοι</w><lb/><w>και</w> <w>δυναμεις</w> <w>μειζονες</w> <w>οντες</w><lb/><w>ου</w> <w>φερουσιν</w> <w>κατ</w> <w>αυτων</w> <w>παρα</w> <w><abbr type="nomSac"><hi rend="overline">κυ</hi></abbr></w><lb/><w>βλασφημον</w> <w>κρισιν</w></ab> <ab n="B22K2V12" part="I"><w>ουτοι</w> <w>δε</w> <w>ως</w><lb/><w>αλογα</w> <w>ζωα</w> <w>φυσικα</w> <w>εις</w> <w>αλωσιν</w> <w>και</w><lb/><w>φθοραν</w> <w>εν</w> <w>οις</w> <w>αγνοουσιν</w> <w part="I">βλασφη<lb break="no"/>μουντες</w></ab></div> </div></body></text></TEI>

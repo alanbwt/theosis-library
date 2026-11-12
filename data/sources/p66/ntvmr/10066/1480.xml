@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="P66">P66</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Germany</country>
+            <settlement>Köln</settlement>
+            <repository>Institut für Altertumskunde</repository>
+            <idno>Inv. Nr. 4274/4298</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Ireland</country>
+            <settlement>Dublin</settlement>
+            <repository>Chester Beatty Library</repository>
+            <idno>CBL BP XIX</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Switzerland</country>
+            <settlement>Cologny/Genf</settlement>
+            <repository>Bibliotheca Bodmeriana</repository>
+            <idno>P. Bodmer II</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="152" type="page"/><cb n="1"/><lb/><div type="book" n="B04"><div type="chapter" n="B04K21"><ab n="B04K21V7" part="F"><w part="F"><abbr type="nomSac"><supplied reason="unspecified"><hi rend="overline">κς</hi></supplied></abbr></w> <w><unclear>ε</unclear>στι<supplied reason="unspecified">ν</supplied></w> <w><supplied reason="unspecified">τον</supplied></w> <w><supplied reason="unspecified">επενδυ</supplied><unclear>τ</unclear>ην</w> <w>δ<supplied reason="unspecified">ιεζω</supplied><lb break="no"/><supplied reason="unspecified">σα</supplied><unclear>τ</unclear>ο</w> <w><unclear>ην</unclear></w> <w><supplied reason="unspecified">γαρ</supplied></w> <w><supplied reason="unspecified">γυμνος</supplied></w> <w><supplied reason="unspecified">και</supplied></w> <w><supplied reason="unspecified">εβα</supplied><lb break="no"/><supplied reason="unspecified">λεν</supplied></w> <w><supplied reason="unspecified">ε</supplied><unclear>α</unclear><supplied reason="unspecified">υ</supplied><unclear>τ</unclear>ο<unclear>ν</unclear></w> <w><supplied reason="unspecified">εις</supplied></w> <w><supplied reason="unspecified">την</supplied></w> <w><supplied reason="unspecified">θαλασ</supplied><lb break="no"/><supplied reason="unspecified">σαν</supplied></w></ab> <ab n="B04K21V8"><w><supplied reason="unspecified">οι</supplied></w> <w><supplied reason="unspecified">δε</supplied></w> <w><unclear>αλ</unclear>λ<supplied reason="unspecified">οι</supplied></w> <w><unclear>μ</unclear><supplied reason="unspecified">αθηται</supplied></w> <w><supplied reason="unspecified">τω</supplied></w> <w><supplied reason="unspecified">πλοια</supplied><lb break="no"/><supplied reason="unspecified">ριω</supplied></w> <w><supplied reason="unspecified">η</supplied><unclear>λ</unclear>θο<supplied reason="unspecified">ν</supplied></w> <w><supplied reason="unspecified">ου</supplied></w> <w><unclear>γ</unclear>αρ</w> <w><unclear>η</unclear><supplied reason="unspecified">σαν</supplied></w> <w><supplied reason="unspecified">μα</supplied><lb break="no"/><supplied reason="unspecified">κραν</supplied></w> <w><supplied reason="unspecified">απο</supplied></w> <w><supplied reason="unspecified">τ</supplied><unclear>η</unclear><supplied reason="unspecified">ς</supplied></w> <w>γης</w> <w><unclear>αλλ</unclear></w> <w>ως</w> <w>απ<unclear>ο</unclear></w> <w><supplied reason="unspecified">πη</supplied><lb break="no"/><supplied reason="unspecified">χων</supplied></w> <w><supplied reason="unspecified">διακο</supplied>σιων</w><pc>·</pc> <w>συροντες</w> <w>τ<supplied reason="unspecified">ο</supplied></w><lb/><w><supplied reason="unspecified">δικτυον</supplied></w> <w><supplied reason="unspecified">τ</supplied><unclear>ω</unclear>ν</w> <w>ιχθ<supplied reason="unspecified">υ</supplied>ων</w></ab> <ab n="B04K21V9" part="I"><w>ως</w> <w>ου<unclear>ν</unclear></w> <w><supplied reason="unspecified">α</supplied><lb break="no"/><supplied reason="unspecified">πεβησαν</supplied></w> <w><supplied reason="unspecified">εις</supplied></w> <w><unclear>τ</unclear>ην</w> <w><supplied reason="unspecified">γ</supplied><unclear>η</unclear>ν</w><pc>·</pc> <w>βλεπο<unclear>υ</unclear><lb break="no"/><supplied reason="unspecified">σιν</supplied></w> <w><supplied reason="unspecified">ανθρακιαν</supplied></w> <w><supplied reason="unspecified">κειμε</supplied><unclear>ν</unclear>ην</w> <w>και</w><note type="local" xml:id="B04K21V9-P66-1">Neues Fragment zu 21,8 in NTS 20,1974,378-379.</note></ab></div></div></body></text></TEI>
