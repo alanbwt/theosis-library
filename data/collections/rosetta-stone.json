@@ -1,0 +1,105 @@
+{
+  "collection": {
+    "key": "rosetta-stone",
+    "prefix": "verified-rosetta-stone-",
+    "label": "Rosetta Stone (Greek text)",
+    "group": "Egypt",
+    "date_sort": -196,
+    "author_name": "Synod of priests at Memphis (196 BCE)",
+    "source_url": "https://www.britishmuseum.org/collection/object/Y_EA24",
+    "critical_edition": "E. A. Wallis Budge, The Decrees of Memphis and Canopus (1904)",
+    "translator_name": "E. A. Wallis Budge (1904)",
+    "original_lang_label": "Greek · Budge 1904 transcript",
+    "original_lang_code": "grc",
+    "edition_label": "",
+    "search_terms": "rosetta stone memphis decree ptolemy v epiphanes eucharistos 196 bce greek demotic hieroglyphs champollion decipherment ogis 90 apis lykopolis",
+    "description": "The Rosetta Stone (British Museum EA 24, 196 BCE): the complete Greek text of the priests' decree for Ptolemy V, 54 lines in groups of six, each cut from the British Museum's photograph of the stone, with Budge's 1904 English."
+  },
+  "texts": [
+    {
+      "id": "verified-rosetta-stone-greek-decree",
+      "slug": "verified-rosetta-stone-greek-decree",
+      "order": 1,
+      "title": "The Rosetta Stone: Greek text of the Memphis decree (complete, lines 1-54)",
+      "author_id": "memphis-synod",
+      "language": "Greek",
+      "era": "Hellenistic",
+      "tradition": "egyptian",
+      "category": "inscription",
+      "date_approx": "27 March 196 BCE (year 9 of Ptolemy V)",
+      "century": -2,
+      "source": "Rosetta Stone, British Museum EA 24 (British Museum photograph of 1922, public domain, via Wikimedia Commons) + Greek transcript and English rendering of E. A. Wallis Budge, The Decrees of Memphis and Canopus, vol. 2 (1904, public domain)",
+      "description": "The complete Greek text of the Rosetta Stone (196 BCE), the priests' decree for Ptolemy V, line by line on the photograph of the stone, with Budge's 1904 English.",
+      "themes": [
+        "rosetta-stone",
+        "ptolemaic-egypt",
+        "decree",
+        "decipherment",
+        "greek",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "rosetta-stone/rosetta-stone-hillewaert.jpg",
+            "caption": "The Rosetta Stone, front (Hans Hillewaert, CC BY-SA 4.0)"
+          },
+          {
+            "file": "rosetta-stone/greek-register.jpg",
+            "caption": "Greek register, lines 1-54 (British Museum photograph, 1922)"
+          },
+          {
+            "file": "rosetta-stone/greek-lines-01-06.jpg",
+            "caption": "Greek lines 1-6"
+          },
+          {
+            "file": "rosetta-stone/greek-lines-07-12.jpg",
+            "caption": "Greek lines 7-12"
+          },
+          {
+            "file": "rosetta-stone/greek-lines-13-18.jpg",
+            "caption": "Greek lines 13-18"
+          },
+          {
+            "file": "rosetta-stone/greek-lines-19-24.jpg",
+            "caption": "Greek lines 19-24"
+          },
+          {
+            "file": "rosetta-stone/greek-lines-25-30.jpg",
+            "caption": "Greek lines 25-30"
+          },
+          {
+            "file": "rosetta-stone/greek-lines-31-36.jpg",
+            "caption": "Greek lines 31-36"
+          },
+          {
+            "file": "rosetta-stone/greek-lines-37-42.jpg",
+            "caption": "Greek lines 37-42"
+          },
+          {
+            "file": "rosetta-stone/greek-lines-43-48.jpg",
+            "caption": "Greek lines 43-48"
+          },
+          {
+            "file": "rosetta-stone/greek-lines-49-54.jpg",
+            "caption": "Greek lines 49-54"
+          }
+        ]
+      }
+    }
+  ],
+  "authors": [
+    {
+      "id": "memphis-synod",
+      "name": "Synod of Egyptian priests at Memphis",
+      "dates": "196 BCE",
+      "century": -2,
+      "era": "Ancient Near East",
+      "tradition": "egyptian",
+      "language": "Egyptian / Greek",
+      "bio": "The assembly of high priests, prophets and scribes from the temples of Egypt that met at Memphis for the coronation of Ptolemy V and passed the decree copied on the Rosetta Stone."
+    }
+  ]
+}
