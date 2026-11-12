@@ -9,3 +9,10 @@ site/search-index.json
 .cache/
 data/sources/washingtonianus_cache/
 data/sources/quran/
+
+# large downloaded originals (importers re-fetch them)
+data/sources/*/photos/
+data/sources/**/*.pdf
+data/sources/**/*.JPG
+data/sources/**/*.tif
+data/sources/**/*.tiff
