@@ -1,0 +1,38 @@
+{
+ "manuscript": "Columbia University, Rare Book & Manuscript Library, MS Or 320 - FOLIO (Vendidad Sade, Surat, 1131 AY = 1762 CE)",
+ "images": "OPenn web JPEGs, https://openn.library.upenn.edu/Data/0032/ms_or_320/data/web/9574_NNNN_web.jpg (NNNN = image index in the TEI)",
+ "rule": "Chapter boundaries from the Persian verse headings read on the images. Page starts inside a fargard were not accepted because the Avestan opening words could not be confirmed on the images; each fargard is therefore one section listing all its pages.",
+ "readings": [
+  {
+   "folio": "60r",
+   "image": 126,
+   "reading": "2 red Avestan lines; 4 lines of Persian verse: 'که وندیداد نامش' (whose name is Vendidad), 'کز آن ورگرد اول' (of it, the first fargard); red line with rosettes; then 10 black Avestan lines = start of Fargard 1"
+  },
+  {
+   "folio": "63v",
+   "image": 133,
+   "reading": "lines 1-4 Avestan, line 4 closing with red words and a rosette = end of Fargard 1; row of rosettes; 3 red Persian lines: 'به ورگرد دویم بدان ای عزیز / که احوال جمشید گفته ست نیز' (know the second fargard, which tells the story of Jamshid); red line with rosettes; 8 Avestan lines = start of Fargard 2"
+  },
+  {
+   "folio": "71v",
+   "image": 149,
+   "reading": "Avestan lines ending with red formula and rosettes = end of Fargard 2; row of rosettes; 3 lines of Persian verse whose first line names the third fargard ('سیوم'); red Avestan line with rosettes and the numeral 3"
+  },
+  {
+   "folio": "79v",
+   "image": 165,
+   "reading": "Persian heading with red numeral 4 (fourth fargard); not used"
+  },
+  {
+   "folio": "96r",
+   "image": 198,
+   "reading": "Persian heading with red numeral 5 (fifth fargard); not used"
+  },
+  {
+   "folio": "108v",
+   "image": 223,
+   "reading": "Persian heading naming the sixth fargard; not used"
+  }
+ ],
+ "not_accepted": "Per-page opening words of fol. 60v-63r and 64r-71r were compared with renderings of Geldner's text in the Noto Sans Avestan font; the match could not be confirmed with certainty, so no page start inside a fargard is used."
+}
