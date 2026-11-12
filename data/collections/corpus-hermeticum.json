@@ -1,0 +1,77 @@
+{
+  "collection": {
+    "key": "corpus-hermeticum",
+    "prefix": "verified-corpus-hermeticum-",
+    "label": "Corpus Hermeticum",
+    "group": "Greece",
+    "date_sort": 200,
+    "author_name": "Hermes Trismegistus (attributed), 2nd-3rd century AD; Florence manuscript Laur. Plut. 71.33",
+    "source_url": "https://cdm21059.contentdm.oclc.org/digital/collection/plutei/id/1210396",
+    "critical_edition": "Parthey, Hermetis Trismegisti Poemander (1854), via Greek Wikisource",
+    "translator_name": "G. R. S. Mead (1906)",
+    "original_lang_label": "Greek · Parthey",
+    "original_lang_code": "grc",
+    "edition_label": "",
+    "search_terms": "corpus hermeticum hermes trismegistus poimandres poemandres pimander nous logos ascent become god ficino laurenziana mead",
+    "description": "The Hermetic Poimandres, the vision of the divine Mind and of the soul's ascent to become God, shown section by section on the oldest manuscript of the Corpus Hermeticum, with Parthey's Greek and G. R. S. Mead's English."
+  },
+  "texts": [
+    {
+      "id": "verified-corpus-hermeticum-poimandres",
+      "slug": "verified-corpus-hermeticum-poimandres",
+      "order": 1,
+      "title": "Corpus Hermeticum I: Poimandres",
+      "author_id": "hermes-trismegistus",
+      "language": "Greek",
+      "era": "Imperial",
+      "tradition": "hermetic",
+      "category": "sacred-text",
+      "date_approx": "c. 2nd-3rd century AD (composition); manuscript 14th century",
+      "century": 2,
+      "source": "Florence, Biblioteca Medicea Laurenziana, Plut. 71.33 fol. 123r-125v (Biblioteca Medicea Laurenziana, Teca digitale (IIIF)) + Parthey's Greek (1854, Wikisource) + G. R. S. Mead's English (1906)",
+      "description": "The first Hermetic treatise: the vision of Poimandres, the divine Mind, on the making of the world, the fall of the archetypal Man and the soul's ascent through the seven spheres to God, shown complete on the 14th-century Florence manuscript Laur. Plut. 71.33.",
+      "themes": [
+        "hermetica",
+        "corpus-hermeticum",
+        "poimandres",
+        "nous",
+        "logos",
+        "ascent-of-the-soul",
+        "deification",
+        "theosis",
+        "gnosis",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "corpus-hermeticum/laur7133-f123r.jpg",
+            "caption": "Laur. Plut. 71.33 fol. 123r"
+          },
+          {
+            "file": "corpus-hermeticum/laur7133-f123v.jpg",
+            "caption": "Laur. Plut. 71.33 fol. 123v"
+          },
+          {
+            "file": "corpus-hermeticum/laur7133-f124r.jpg",
+            "caption": "Laur. Plut. 71.33 fol. 124r"
+          },
+          {
+            "file": "corpus-hermeticum/laur7133-f124v.jpg",
+            "caption": "Laur. Plut. 71.33 fol. 124v"
+          },
+          {
+            "file": "corpus-hermeticum/laur7133-f125r.jpg",
+            "caption": "Laur. Plut. 71.33 fol. 125r"
+          },
+          {
+            "file": "corpus-hermeticum/laur7133-f125v.jpg",
+            "caption": "Laur. Plut. 71.33 fol. 125v"
+          }
+        ]
+      }
+    }
+  ]
+}

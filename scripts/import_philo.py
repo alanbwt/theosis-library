@@ -202,8 +202,8 @@ PASSAGES = [
             "He reads the six days of Genesis 1-3 with the tools of Greek philosophy. God first formed in his own Logos (reason, word) an incorporeal, intelligible world, "
             "as an architect plans a city in his mind before building it (sections 16-25), and then made the visible world as a copy of it. "
             "Long passages on the numbers four and seven follow (sections 47-52, 89-128). "
-            "Man 'after the image' is the mind, which rises through the heavens toward God (69-71); the moulded earthly man is 'the borderland between mortal and immortal nature' (135). "
-            "The first man was a citizen of the world who tried 'to become like' the God who begot him (144). The work closes with five lessons: God exists, God is one, the world was made, the world is one, and God cares for it (170-172).</p>\n\n"
+            "Man after the image is the mind, which rises through the heavens toward God (69-71); the moulded earthly man stands, in Yonge's words, 'on the boundaries of a better and an immortal nature' (135). "
+            "The first man was a citizen of the world whose aim was 'the attaining a likeness to God who made them' (144). The work closes with five lessons: God exists, God is one, the world was made, the world is one, and God cares for it (170-172).</p>\n\n"
             "<p>The pages shown are from Vatican City, Biblioteca Apostolica Vaticana, Pal. gr. 248, a paper manuscript of the 14th or 15th century that collects Philo's works. "
             "On the Creation fills fols. 40v-56v, 33 pages of about 31-34 lines. Each section below is one section of Cohn's edition, linked to the page or pages that carry its words; "
             "the pages were identified by reading the first and last lines of each page on the image. "
@@ -220,7 +220,7 @@ PASSAGES = [
         "yonge": "C. D. Yonge, The Works of Philo Judaeus, vol. 2 (London: H. G. Bohn, 1854), 'A Treatise on the Confusion of Languages'",
         "yonge_url": "https://archive.org/details/worksphilojudaeu02philuoft",
         "date_approx": "c. 20-50 AD (composition); manuscript 14th-15th century",
-        "description": "Philo on the Logos as God's 'firstborn', the eldest of the angels, an archangel of many names, called 'the Beginning', 'the Name of God', 'the Man after his image' and 'he that sees, Israel'; whoever is not yet fit to be called a son of God may be a son of his image, the Logos. Shown on Pal. gr. 248 fol. 205r.",
+        "description": "Philo on the Logos as God's first-born, the eldest of the angels, an archangel of many names, called the Beginning, the Name of God, the Man after God's image and he who sees, Israel; whoever is not yet fit to be called a son of God may be a son of his image, the Logos. Shown on Pal. gr. 248 fol. 205r.",
         "themes": ["philo", "logos", "firstborn", "image-of-god", "sons-of-god", "archangel", "theosis", "philosophy", "greek", "verified"],
         "pages": [{"folio": "205r", "start": 145, "end": 148,
                    "custom": ("Pal. gr. 248 fol. 205r (a different hand from On the Creation). Line 1 ends section 145 ('τῆς ἡδονῆς πρὸς ἐμπειροπολέμων ἀνδρῶν ἀντιτειχίζεται πρὸς'); "
@@ -229,9 +229,9 @@ PASSAGES = [
         "intro": (
             "<p><em>On the Confusion of Tongues</em> is one of Philo's allegorical commentaries on Genesis; it treats the tower of Babel (Genesis 11:1-9). "
             "Commenting on the brothers' words 'We are all sons of one man' (Genesis 42:11), Philo says that those who know the one God are rightly called sons of God (145). "
-            "The two sections shown here add that one who is not yet worthy of that name should strive to be adorned after God's 'firstborn Logos, the eldest of the angels, an archangel as it were, who has many names': "
-            "he is called the Beginning, the Name of God, the Logos, the Man after the image, and he that sees, Israel. "
-            "If we are not yet fit to be called children of God, we may be children of his invisible image, the most holy Logos, 'for the most ancient Logos is the image of God' (146-147).</p>\n\n"
+            "The two sections shown here add that one who is not yet worthy of that name should labour to be adorned 'according to his first-born word, the eldest of his angels, as the great archangel of many names' "
+            "(Yonge's translation, where 'word' renders Logos): he is called the Beginning (Yonge: 'the authority'), the Name of God, the Word, the Man after God's image, and he who sees, Israel. "
+            "If we are not yet fit to be called sons of God, we may be children of his invisible image, the Logos, 'for the image of God is his most ancient word' (146-147).</p>\n\n"
             "<p>The page shown is fol. 205r of Vatican City, Biblioteca Apostolica Vaticana, Pal. gr. 248 (14th-15th century), where this treatise occupies fols. 196v-208 in a hand different from that of On the Creation. "
             "Both sections stand on lines 2-10 of the page. The Greek is Wendland's critical text (1897); the English is C. D. Yonge's translation (1854).</p>"
         ),
@@ -244,7 +244,7 @@ PASSAGES = [
         "yonge": "C. D. Yonge, The Works of Philo Judaeus, vol. 2 (London: H. G. Bohn, 1854), 'Who is the Heir of Divine Things'",
         "yonge_url": "https://archive.org/details/worksphilojudaeu02philuoft",
         "date_approx": "c. 20-50 AD (composition); manuscript 14th-15th century",
-        "description": "Philo on the archangel and eldest Logos, who stands on the border between the Creator and what he made, a suppliant for mortals and an ambassador of the ruler: 'neither uncreated as God, nor created as you, but midway between the extremes'. Shown on Pal. gr. 248 fol. 293r.",
+        "description": "Philo on the archangel and eldest Logos, who stands on the border between the Creator and what he made, a suppliant for mortals and an ambassador of the ruler, 'neither being uncreate as God, nor yet created as you'. Shown on Pal. gr. 248 fol. 293r.",
         "themes": ["philo", "logos", "mediator", "archangel", "high-priest", "theosis", "philosophy", "greek", "verified"],
         "pages": [{"folio": "293r", "start": 201, "end": 208,
                    "custom": ("Pal. gr. 248 fol. 293r. The page runs from 'τῶν τεθνηκότων καὶ τῶν ζώντων· εὐθὺς γάρ φησι Μωυσῆς' (section 201) to "
@@ -256,8 +256,8 @@ PASSAGES = [
             "<p><em>Who is the Heir of Divine Things</em> comments on Genesis 15, God's covenant with Abraham, and especially on the animals Abraham divided in two (Genesis 15:10). "
             "Philo reads the dividing as the work of the divine Logos, which cuts all things into their opposites. "
             "In the two sections shown, the Father who begot all things has given the archangel and eldest Logos a special gift: to stand on the border and separate the creature from the Creator. "
-            "The same Logos pleads for mortal man before the immortal and carries the ruler's message to the subject, and says with Moses, 'I stood between the Lord and you' (Deuteronomy 5:5): "
-            "'neither uncreated as God is, nor created as you are, but midway between the two extremes, a hostage to both'.</p>\n\n"
+            "The same Logos pleads for mortal man before the immortal and carries the ruler's message to the subject, and says with Moses, 'And I stood in the midst, between the Lord and you' (Deuteronomy 5:5): "
+            "in Yonge's words, 'neither being uncreate as God, nor yet created as you, but being in the midst between these two extremities, like a hostage, as it were, to both parties'.</p>\n\n"
             "<p>The page shown is fol. 293r of Vatican City, Biblioteca Apostolica Vaticana, Pal. gr. 248 (14th-15th century), where this treatise occupies fols. 280v-300v in a third, more upright hand. "
             "Both sections stand in the lower middle of the page. The Greek is Wendland's critical text (1898); the English is C. D. Yonge's translation (1854).</p>"
         ),
