@@ -4,7 +4,8 @@ import_odyssey.py: Homer, Odyssey, on Florence, Biblioteca Medicea Laurenziana, 
 (10th century, parchment, 234 folios), the oldest Odyssey manuscript with published images.
 
 One entry per book; one section per manuscript page. Only books whose every page has been
-verified (data/sources/odyssey/page_map.json, "complete_books") are built.
+verified (data/sources/odyssey/page_map.json, "complete_books") are built. A book in
+"partial_books" (book 24: the codex ends at 24.103) is built for the lines the manuscript holds.
 
 Chain of evidence
   1. SCAN     BML Teca Digitale (CONTENTdm IIIF), manifest
@@ -166,11 +167,18 @@ def build(force=False):
     pm = json.loads((SRC / "page_map.json").read_text(encoding="utf-8"))
     SCAN_DIR.mkdir(parents=True, exist_ok=True)
     svc = services()
-    rows, books = [], pm["complete_books"]
+    partial = {int(k): v for k, v in pm.get("partial_books", {}).items()}
+    rows, books = [], list(pm["complete_books"]) + sorted(partial)
     pages = pm["pages"]
     for book in books:
         G = greek_book(book)
+        full_len = len(G)
         E = english_book(book)
+        cut = partial.get(book)
+        if cut:
+            # the manuscript breaks off: only lines 1..cut["last"] are on its pages
+            G = {k: v for k, v in G.items() if k <= cut["last"]}
+            E = [(a, t) for a, t in E if a <= cut["last"]]
         bpages = [p for p in pages if any(s["book"] == book for s in p["segments"])]
         main = [p for p in bpages if not p.get("replacement")]
         # every edition line of the book is on exactly one (original) page
@@ -188,7 +196,7 @@ def build(force=False):
         # English blocks -> page by middle line
         eng_at = {}
         for i, (a, t) in enumerate(E):
-            b = (E[i + 1][0] - 1) if i + 1 < len(E) else max(G)
+            b = (E[i + 1][0] - 1) if i + 1 < len(E) else (cut["english_last"] if cut else max(G))
             b = max(a, b)
             mid = (a + b) // 2
             f = where.get(mid) or where.get(a)
@@ -209,8 +217,10 @@ def build(force=False):
                 scans.append(f"{KEY}/{scan_name(r['folio'])}")
                 extra += f" The same lines are also on fol. {r['folio']}, shown second: {r['note']}"
             others = [f"{s['book']}.{s['first']}-{s['last']}" for s in p["segments"]]
-            fw = " ".join(G[seg["first"]].split()[:4])
-            lw = " ".join(G[seg["last"]].split()[-4:])
+            # "begins"/"ends" in page_map name the first/last verse actually written on the page
+            # when an edition line at the page edge is omitted by the scribe (it stays in the range)
+            fw = " ".join(G[p.get("begins", seg["first"])].split()[:4])
+            lw = " ".join(G[p.get("ends", seg["last"])].split()[-4:])
             prev_p = main[idx - 1] if idx > 0 else None
             next_p = main[idx + 1] if idx + 1 < len(main) else None
             cont = ""
@@ -221,10 +231,13 @@ def build(force=False):
                 ns = next_p["segments"][0]
                 cont += f" Fol. {next_p['folio']} begins with {ns['book']}.{ns['first']}."
             onpage = f" The page holds {', '.join(others)}." if len(p["segments"]) > 1 else ""
-            note = (f"{MS}, fol. {f}: Odyssey {book}.{seg['first']}-{seg['last']}, begins ‹{fw}›, ends ‹{lw}›. "
+            note = (f"{MS}, fol. {f}: Odyssey {book}.{seg['first']}-{seg['last']}, begins ‹{fw}›, ends ‹{lw}›"
+                    + (f" (the first line written on the page is {book}.{p['begins']})" if "begins" in p else "")
+                    + (f" (the last line written on the page is {book}.{p['ends']})" if "ends" in p else "") + ". "
                     f"Checked on the image: first and last lines read and matched to the Greek.{cont}{onpage}"
                     + (f" {p['note']}" if p.get("note") else "") + extra
-                    + (f" English blocks here: {', '.join(f'{a}-{b}' for a, b, t in eb)}." if eb else ""))
+                    + (f" English blocks here: {', '.join(f'{a}-{b}' for a, b, t in eb)}." if eb else "")
+                    + (f" {cut['english_note']}" if cut and eb and eb[-1][1] > cut["last"] else ""))
             sections.append({
                 "section": f"fol. {f}",
                 "original_ref": f"Odyssey {book}.{seg['first']}-{seg['last']}; {MS}, fol. {f}",
@@ -232,22 +245,25 @@ def build(force=False):
                 "scan_pages": scans, "scan_note": note,
             })
         tid = f"verified-{KEY}-book-{book}"
-        title = f"Homer, Odyssey, Book {book}: {BOOK_TITLES[book]}"
+        span = f", lines 1-{cut['last']}, where the manuscript ends" if cut else ""
+        title = f"Homer, Odyssey, Book {book}: {BOOK_TITLES[book]}" + (f" (lines 1-{cut['last']})" if cut else "")
         fols = [s["section"].replace("fol. ", "") for s in sections]
         intro = (
             f"<p>The <em>Odyssey</em>, composed around 700 BCE and attributed to Homer, tells of Odysseus' ten-year journey home from Troy and his return to Ithaca. "
-            f"<strong>Book {book}</strong> ({len(G)} lines): {esc(BOOK_TITLES[book])}.</p>"
-            f"<p>The page photographs are from {esc(MS_LONG)}, in the Biblioteca Medicea Laurenziana's Teca Digitale. "
+            f"<strong>Book {book}</strong> ({full_len} lines): {esc(BOOK_TITLES[book])}.</p>"
+            + (f"<p>{esc(cut['intro'])}</p>" if cut else "")
+            + f"<p>The page photographs are from {esc(MS_LONG)}, in the Biblioteca Medicea Laurenziana's Teca Digitale. "
             f"This book is on fol. {fols[0]}-{fols[-1]}; each section below is one page, with its first and last line as read on the photograph. "
             "Many pages carry interlinear glosses and a few marginal notes in later hands.</p>"
             "<p>The Greek is A. T. Murray's Loeb text (1919) via Perseus, not a transcription of this manuscript, whose wording differs in places. "
             "The English is Murray's prose translation (1919), divided every five lines; at a page break a five-line block goes with the page holding most of it.</p>"
+            "<p>Where the scribe left out a line, wrote one in the margin, changed the order or added a line not in Murray's text, the section's note on the photograph says so; the Greek and English shown are Murray's full text for the page's range.</p>"
         )
         pub = {
             "id": tid, "slug": tid, "title": title,
             "language": "Ancient Greek / English",
             "source": f"{MS} (BML Teca Digitale IIIF) + Murray Greek (Loeb 1919, Perseus) + Murray English (Loeb 1919, Perseus)",
-            "description": f"Book {book} of Homer's Odyssey ({BOOK_TITLES[book]}), page by page on the 10th-century Florence manuscript Laur. Plut. 32.24, with Greek and English.",
+            "description": f"Book {book} of Homer's Odyssey ({BOOK_TITLES[book]}{span}), page by page on the 10th-century Florence manuscript Laur. Plut. 32.24, with Greek and English.",
             "introduction": intro,
             "translator_notes": [
                 "Greek: A. T. Murray, Homer: The Odyssey (Loeb Classical Library, 1919), via Perseus.",
@@ -291,7 +307,7 @@ def build(force=False):
             "original_lang_label": "Ancient Greek · Murray",
             "original_lang_code": "grc", "edition_label": "",
             "search_terms": "homer odyssey odysseus telemachus penelope athena ithaca epic",
-            "description": "Homer's Odyssey page by page on the oldest Odyssey manuscript with published images, Florence, Laur. Plut. 32.24 (10th century). Books are added as their pages are verified.",
+            "description": "Homer's Odyssey page by page on the oldest Odyssey manuscript with published images, Florence, Laur. Plut. 32.24 (10th century), with Murray's Greek and English. The codex ends at book 24, line 103; the rest of book 24 is not in it.",
         },
         "texts": rows,
     }
