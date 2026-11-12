@@ -1,0 +1,103 @@
+{
+  "collection": {
+    "key": "didache",
+    "prefix": "verified-didache-",
+    "label": "Didache (Codex Hierosolymitanus 54)",
+    "group": "Early Christian",
+    "date_sort": 100,
+    "author_name": "Didache (late 1st or early 2nd c.; manuscript of 1056)",
+    "source_url": "https://www.loc.gov/item/00279389694-jo/",
+    "critical_edition": "Kirsopp Lake, The Apostolic Fathers I (1912), via First1KGreek",
+    "translator_name": "J. B. Lightfoot (1891)",
+    "original_lang_label": "Greek · Lake 1912",
+    "original_lang_code": "grc",
+    "edition_label": "",
+    "search_terms": "didache teaching of the twelve apostles two ways baptism eucharist bryennios hierosolymitanus",
+    "description": "The Didache, an early Christian church manual, on the ten pages of the only complete Greek manuscript, Codex Hierosolymitanus 54 (1056)."
+  },
+  "texts": [
+    {
+      "id": "verified-didache-teaching-of-the-twelve-apostles",
+      "slug": "verified-didache-teaching-of-the-twelve-apostles",
+      "order": 1,
+      "title": "Didache (Teaching of the Twelve Apostles), on Codex Hierosolymitanus 54",
+      "author_id": "didache-anonymous",
+      "language": "Greek",
+      "era": "Apostolic",
+      "tradition": "christian",
+      "category": "sacred-text",
+      "date_approx": "late 1st or early 2nd c. AD (composition); 1056 (manuscript)",
+      "century": 1,
+      "source": "Codex Hierosolymitanus 54 (1056), fol. 76r-80v, Library of Congress microfilm + Lake 1912 Greek (First1KGreek, CC BY-SA 4.0) + Lightfoot 1891 English (public domain)",
+      "description": "The Didache, an early Christian manual of the late first or early second century, shown chapter by chapter on the ten pages of the only complete Greek manuscript (Jerusalem, 1056).",
+      "themes": [
+        "didache",
+        "apostolic-fathers",
+        "early-church",
+        "baptism",
+        "eucharist",
+        "lords-prayer",
+        "greek",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "didache/h54-f76r.jpg",
+            "caption": "Hierosolymitanus 54 fol. 76r"
+          },
+          {
+            "file": "didache/h54-f76v.jpg",
+            "caption": "Hierosolymitanus 54 fol. 76v"
+          },
+          {
+            "file": "didache/h54-f77r.jpg",
+            "caption": "Hierosolymitanus 54 fol. 77r"
+          },
+          {
+            "file": "didache/h54-f77v.jpg",
+            "caption": "Hierosolymitanus 54 fol. 77v"
+          },
+          {
+            "file": "didache/h54-f78r.jpg",
+            "caption": "Hierosolymitanus 54 fol. 78r"
+          },
+          {
+            "file": "didache/h54-f78v.jpg",
+            "caption": "Hierosolymitanus 54 fol. 78v"
+          },
+          {
+            "file": "didache/h54-f79r.jpg",
+            "caption": "Hierosolymitanus 54 fol. 79r"
+          },
+          {
+            "file": "didache/h54-f79v.jpg",
+            "caption": "Hierosolymitanus 54 fol. 79v"
+          },
+          {
+            "file": "didache/h54-f80r.jpg",
+            "caption": "Hierosolymitanus 54 fol. 80r"
+          },
+          {
+            "file": "didache/h54-f80v.jpg",
+            "caption": "Hierosolymitanus 54 fol. 80v"
+          }
+        ]
+      }
+    }
+  ],
+  "authors": [
+    {
+      "id": "didache-anonymous",
+      "name": "Didache (anonymous)",
+      "dates": "late 1st or early 2nd c. AD",
+      "century": 1,
+      "era": "Apostolic",
+      "tradition": "christian",
+      "language": "Greek",
+      "bio": "Anonymous early Christian church manual, transmitted under the title Teaching of the Twelve Apostles."
+    }
+  ]
+}

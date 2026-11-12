@@ -564,14 +564,16 @@ def auto_candidates(work, src, chapters):
                 own_group = museum in names
                 if not own_group and any(n in listed for n in names):
                     continue  # an indirect join that eBL lists as a manuscript of its own
+                photographed = []
                 for n in names:
                     if n == museum:
                         continue
                     jf = ebl_fragment(src, n)
                     if jf.get("hasPhoto") and jf.get("museum") == "THE_BRITISH_MUSEUM":
-                        split.append(n)
-                    elif not own_group:
-                        missing.append(n)   # indirectly joined piece without an open photograph
+                        photographed.append(n)
+                split += photographed
+                if not own_group and not photographed:
+                    missing += names   # an indirectly joined group with no open photograph at all
             if missing:
                 print(f"      (skipping {museum}: indirectly joined piece(s) {', '.join(missing)} have no usable photograph)")
                 continue

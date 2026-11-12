@@ -1,0 +1,102 @@
+{
+  "collection": {
+    "key": "akhmim-codex",
+    "prefix": "verified-akhmim-codex-",
+    "label": "Akhmim Codex (Gospel of Peter)",
+    "group": "Early Christian",
+    "date_sort": 150,
+    "author_name": "Gospel of Peter (2nd c. AD; Akhmim codex, 6th-9th c.)",
+    "source_url": "https://archive.org/details/MMAF9.3",
+    "critical_edition": "A. Lods, diplomatic transcription and heliogravure facsimile (1893)",
+    "translator_name": "J. Armitage Robinson (1896)",
+    "original_lang_label": "Greek · Lods 1893 (diplomatic)",
+    "original_lang_code": "grc",
+    "edition_label": "",
+    "search_terms": "gospel of peter akhmim panopolis codex panopolitanus apocrypha passion resurrection pilate herod",
+    "description": "The Gospel of Peter from the Akhmim codex, the only manuscript of the work, page by page in Lods's 1893 photographic plates with his line-by-line transcription and Robinson's English."
+  },
+  "texts": [
+    {
+      "id": "verified-akhmim-codex-gospel-of-peter",
+      "slug": "verified-akhmim-codex-gospel-of-peter",
+      "order": 1,
+      "title": "Gospel of Peter (Akhmim codex, pages 2-10)",
+      "author_id": "gospel-of-peter",
+      "language": "Greek",
+      "era": "Apostolic",
+      "tradition": "christian",
+      "category": "sacred-text",
+      "date_approx": "2nd century AD (composition); Akhmim codex 6th-9th century",
+      "century": 2,
+      "source": "Akhmim codex (P. Cair. 10759) pages 2-10 in A. Lods's heliogravure plates (1893, Internet Archive) + Lods's diplomatic transcription + English of J. Armitage Robinson (Ante-Nicene Fathers IX, public domain)",
+      "description": "The surviving fragment of the Gospel of Peter (trial, crucifixion, burial and resurrection of Jesus), in the Greek of the only manuscript, the Akhmim codex, each chapter linked to the photographed page that carries it.",
+      "themes": [
+        "gospel-of-peter",
+        "akhmim",
+        "passion-narrative",
+        "resurrection",
+        "apocrypha",
+        "greek",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "akhmim-codex/akhmim-p01.jpg",
+            "caption": "Akhmim codex, page 1 (cross)"
+          },
+          {
+            "file": "akhmim-codex/akhmim-p02.jpg",
+            "caption": "Akhmim codex, page 2 (Lods 1893)"
+          },
+          {
+            "file": "akhmim-codex/akhmim-p03.jpg",
+            "caption": "Akhmim codex, page 3 (Lods 1893)"
+          },
+          {
+            "file": "akhmim-codex/akhmim-p04.jpg",
+            "caption": "Akhmim codex, page 4 (Lods 1893)"
+          },
+          {
+            "file": "akhmim-codex/akhmim-p05.jpg",
+            "caption": "Akhmim codex, page 5 (Lods 1893)"
+          },
+          {
+            "file": "akhmim-codex/akhmim-p06.jpg",
+            "caption": "Akhmim codex, page 6 (Lods 1893)"
+          },
+          {
+            "file": "akhmim-codex/akhmim-p07.jpg",
+            "caption": "Akhmim codex, page 7 (Lods 1893)"
+          },
+          {
+            "file": "akhmim-codex/akhmim-p08.jpg",
+            "caption": "Akhmim codex, page 8 (Lods 1893)"
+          },
+          {
+            "file": "akhmim-codex/akhmim-p09.jpg",
+            "caption": "Akhmim codex, page 9 (Lods 1893)"
+          },
+          {
+            "file": "akhmim-codex/akhmim-p10.jpg",
+            "caption": "Akhmim codex, page 10 (Lods 1893)"
+          }
+        ]
+      }
+    }
+  ],
+  "authors": [
+    {
+      "id": "gospel-of-peter",
+      "name": "Gospel of Peter",
+      "dates": "2nd c. AD (composition)",
+      "century": 2,
+      "era": "Apostolic",
+      "tradition": "christian",
+      "language": "Greek",
+      "bio": "Anonymous gospel written in the name of Simon Peter, known from early church writers and from one fragment found at Akhmim in Egypt in 1886-87."
+    }
+  ]
+}

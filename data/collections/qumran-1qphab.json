@@ -1,0 +1,77 @@
+{
+  "collection": {
+    "key": "qumran-1qphab",
+    "prefix": "verified-qumran-1qphab-",
+    "label": "Pesher Habakkuk (1QpHab)",
+    "group": "Dead Sea Scrolls & Second Temple",
+    "date_sort": -30,
+    "author_name": "Qumran Cave 1 scroll (late 1st century BCE)",
+    "source_url": "http://dss.collections.imj.org.il/habakkuk",
+    "critical_edition": "ETCBC dss Text-Fabric transcription (Abegg, Bowley, Cook)",
+    "translator_name": "W. H. Brownlee (1948)",
+    "original_lang_label": "Hebrew · Qumran transcription (Abegg, ETCBC)",
+    "original_lang_code": "hbo",
+    "edition_label": "",
+    "search_terms": "dead sea scrolls qumran pesher habakkuk commentary 1qphab teacher of righteousness wicked priest kittim",
+    "description": "The Habakkuk Commentary from Qumran Cave 1, columns I-V, on photographs of the scroll, with the scroll's own Hebrew and W. H. Brownlee's 1948 English."
+  },
+  "texts": [
+    {
+      "id": "verified-qumran-1qphab-columns-1-5",
+      "slug": "verified-qumran-1qphab-columns-1-5",
+      "order": 1,
+      "title": "Pesher Habakkuk (1QpHab), columns I-V",
+      "author_id": "qumran-community",
+      "language": "Hebrew",
+      "era": "Second Temple",
+      "tradition": "jewish",
+      "category": "sacred-text",
+      "date_approx": "1st century BCE (composition and copy)",
+      "century": -1,
+      "source": "Israel Museum scroll 1QpHab photographs (Wikimedia Commons, PD-Art) + ETCBC dss transcription (Abegg; CC BY-NC 4.0) + English of W. H. Brownlee, BASOR 112 (1948), public domain",
+      "description": "The first five columns of the Habakkuk Commentary from Qumran Cave 1, a line-by-line explanation of Habakkuk 1 that names the Teacher of Righteousness, the Wicked Priest and the Kittim, each column shown on the photograph of the scroll.",
+      "themes": [
+        "dead-sea-scrolls",
+        "qumran",
+        "pesher",
+        "habakkuk",
+        "teacher-of-righteousness",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "qumran-1qphab/1qphab-cols-1-3.jpg",
+            "caption": "1QpHab columns I, II and right half of III"
+          },
+          {
+            "file": "qumran-1qphab/1qphab-col-03-left.jpg",
+            "caption": "1QpHab column III, left half"
+          },
+          {
+            "file": "qumran-1qphab/1qphab-col-04.jpg",
+            "caption": "1QpHab column IV"
+          },
+          {
+            "file": "qumran-1qphab/1qphab-col-05.jpg",
+            "caption": "1QpHab column V"
+          }
+        ]
+      }
+    }
+  ],
+  "authors": [
+    {
+      "id": "qumran-community",
+      "name": "Qumran community (Dead Sea Scrolls)",
+      "dates": "2nd century BCE - 1st century CE",
+      "century": -1,
+      "era": "Second Temple",
+      "tradition": "jewish",
+      "language": "Hebrew",
+      "bio": "The Jewish community whose library of scrolls was found in the caves near Khirbet Qumran on the Dead Sea from 1947."
+    }
+  ]
+}

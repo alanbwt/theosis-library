@@ -106,7 +106,7 @@ PERSEUS_GRC = "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/
 
 
 def fetch(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (TheosisLibrary research)"})
+    req = urllib.request.Request(url, headers={"User-Agent": "TheosisLibrary/1.0 (non-commercial research)"})
     with urllib.request.urlopen(req, timeout=240) as r:
         return r.read()
 
