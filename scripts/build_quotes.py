@@ -121,16 +121,16 @@ def build():
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Key Passages — Theosis Library</title>
+  <title>Key Passages | Theosis Library</title>
   <meta name="description" content="A compass through the verified library: the passages most often cited for, against, or ambiguous on the question of human participation in the divine nature. Each links to the full manuscript page.">
   <link rel="canonical" href="https://theosislibrary.com/quotes/">
-  <meta property="og:title" content="Key Passages — Theosis Library">
-  <meta property="og:description" content="The passages most often cited on the theosis question — arranged by position, each linked to the full verified chapter with manuscript scan.">
+  <meta property="og:title" content="Key Passages | Theosis Library">
+  <meta property="og:description" content="The passages most often cited on the theosis question, arranged by position, each linked to the full verified chapter with manuscript scan.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://theosislibrary.com/quotes/">
   <meta property="og:image" content="https://theosislibrary.com/assets/scans/sinaiticus-folios/john-1-Q80_1r_B521.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Key Passages — Theosis Library">
+  <meta name="twitter:title" content="Key Passages | Theosis Library">
   <meta name="twitter:description" content="The passages most often cited on the theosis question, linked to the full manuscript page.">
   <meta name="twitter:image" content="https://theosislibrary.com/assets/scans/sinaiticus-folios/john-1-Q80_1r_B521.jpg">
   <link rel="stylesheet" href="../css/style.css">

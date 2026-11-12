@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Theosis Library — Verified Primary Source Ancient Texts</title>
-  <meta name="description" content="2,362 verified primary-source ancient text entries. Every chapter pairs a real manuscript scan with verbatim original-language text and a public-domain English translation — from Codex Sinaiticus, Vaticanus, Bezae, Venetus A, Codex Regius,.">
+  <title>Theosis Library | Verified Primary Source Ancient Texts</title>
+  <meta name="description" content="2,363 ancient primary sources in 12 collections, from the first Sumerian writing to the New Testament. Every section pairs a photograph of the original document with the verbatim original-language text and an English translation.">
   <link rel="canonical" href="https://theosislibrary.com/">
-  <meta property="og:title" content="Theosis Library — Verified Primary Source Ancient Texts">
-  <meta property="og:description" content="2,362 verified entries across 11 manuscripts. Every chapter has a real manuscript scan, verbatim original language, and verbatim public-domain English translation.">
+  <meta property="og:title" content="Theosis Library | Verified Primary Source Ancient Texts">
+  <meta property="og:description" content="2,363 ancient primary sources in 12 collections, from the first Sumerian writing to the New Testament. Every section pairs a photograph of the original document with the verbatim original-language text and an English translation.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://theosislibrary.com/">
   <meta property="og:image" content="https://theosislibrary.com/assets/scans/sinaiticus-folios/john-1-Q80_1r_B521.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Theosis Library">
-  <meta name="twitter:description" content="2,362 verified primary-source ancient text entries across 11 manuscripts.">
+  <meta name="twitter:description" content="2,363 ancient primary sources, each with a photograph of the original document, the original language and English.">
   <meta name="twitter:image" content="https://theosislibrary.com/assets/scans/sinaiticus-folios/john-1-Q80_1r_B521.jpg">
   <link rel="stylesheet" href="css/style.css">
 <meta name="generator" content="Noble Growth (https://noblegrowth.co)">
@@ -44,33 +44,28 @@
       <div class="container">
         <div class="particle-hero-wrap" id="particle-hero"></div>
         <h1>Verify ancient texts.</h1>
-        <p class="evidence-subtitle">Every chapter in this library has a real manuscript scan, the verbatim original language, and a verbatim public-domain English translation. No exceptions.</p>
+        <p class="evidence-subtitle">Every section in this library shows a photograph of the original document, the verbatim original language, and a verbatim English translation from a named published source. No exceptions.</p>
 
         <div class="evidence-search-wrap">
           <input type="text" class="evidence-search" id="evidence-search" placeholder="Search by book, chapter, or keyword..." autocomplete="off">
           <div class="evidence-suggestions" id="evidence-suggestions"></div>
         </div>
 
+        <!-- HOME:PILLS-STATS START -->
         <div class="evidence-pills">
           <a href="/library/" class="evidence-pill">All Texts</a>
-          <a href="/library/?q=matthew+mark+luke+john+gospel" class="evidence-pill">Gospels</a>
-          <a href="/library/?q=romans+corinthians+galatians+ephesians+philippians" class="evidence-pill">Pauline Epistles</a>
-          <a href="/library/?q=psalms+proverbs+job+ecclesiastes" class="evidence-pill">Wisdom Books</a>
-          <a href="/library/?q=isaiah+jeremiah+joel+jonah+nahum+habakkuk+zephaniah+haggai+zechariah+malachi" class="evidence-pill">Prophets</a>
-          <a href="/library/?q=revelation+apocalypse" class="evidence-pill">Apocalyptic</a>
-          <a href="/library/?q=tobit+judith+maccabees+wisdom+sirach" class="evidence-pill">Apocrypha</a>
-          <a href="/library/?q=barnabas+hermas" class="evidence-pill">Apostolic Fathers</a>
-          <a href="/library/?q=leningrad+genesis+exodus+deuteronomy" class="evidence-pill">Hebrew Bible</a>
-          <a href="/library/?q=isaiah+scroll+1qisaa" class="evidence-pill">Dead Sea Scrolls</a>
-          <a href="/library/?q=quran+sura" class="evidence-pill">Quran</a>
-          <a href="/library/?q=gilgamesh+tablet" class="evidence-pill">Gilgamesh</a>
-          <a href="/library/?q=edda+voluspa+havamal+grimnismal+thrymskvida" class="evidence-pill">Poetic Edda</a>
-          <a href="/library/?q=iliad+homer+venetus" class="evidence-pill">Homer</a>
+          <a href="/library/#mesopotamia" class="evidence-pill">Mesopotamia</a>
+          <a href="/library/#old-testament" class="evidence-pill">Old Testament</a>
+          <a href="/library/#greece" class="evidence-pill">Greece</a>
+          <a href="/library/#dead-sea-scrolls-second-temple" class="evidence-pill">Dead Sea Scrolls &amp; Second Temple</a>
+          <a href="/library/#new-testament" class="evidence-pill">New Testament</a>
+          <a href="/library/#later-traditions" class="evidence-pill">Later Traditions</a>
         </div>
 
         <div class="evidence-stats">
-          <strong>2,362 verified entries</strong> · 11 manuscripts · 6 languages · Greek + Hebrew + Arabic + Akkadian + Old Norse + English · Codex Sinaiticus · Vaticanus · Alexandrinus · Bezae · Washingtonianus · Leningrad Codex · Great Isaiah Scroll · Codex Parisino-petropolitanus · Gilgamesh tablets · Venetus A · Codex Regius · every entry triple-verified
+          <strong>2,363 entries</strong> · 9,017 sections · 12 collections · 5 ancient languages (Akkadian, Arabic, Greek, Hebrew, Old Norse) · every section with its original document, original text and English
         </div>
+<!-- HOME:PILLS-STATS END -->
       </div>
     </div>
 
@@ -304,7 +299,7 @@
 
     debounce = setTimeout(function() {
       if (!loaded) {
-        Promise.all([fetch('/data/search-index.json').then(function (r) { return r.json(); }), fetch('/data/search-index-orig.json').then(function (r) { return r.json(); })])
+        fetch('/data/search/manifest.json').then(function (r) { return r.json(); }).then(function (m) { function all(urls) { return Promise.all(urls.map(function (u) { return fetch(u).then(function (r) { return r.json(); }); })); } return Promise.all([all(m.en), all(m.orig)]).then(function (x) { var en = [].concat.apply([], x[0]); var orig = {}; x[1].forEach(function (o) { for (var k in o) orig[k] = o[k]; }); return [en, orig]; }); })
       .then(function (parts) { var passages = parts[0], orig = parts[1]; for (var i = 0; i < passages.length; i++) { passages[i].orig = orig[passages[i].pid] || ''; passages[i].slug = passages[i].tid; } return passages; })
           .then(function(data) {
             miniSearch = new MiniSearch({

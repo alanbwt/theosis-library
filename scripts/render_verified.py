@@ -13,6 +13,11 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from collections_lib import find_for_id, load_all  # noqa: E402
+
+REGISTRY = {}
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "texts.json"
 PUB = ROOT / "translations" / "published"
@@ -25,7 +30,54 @@ TRADITION_LABELS = {
     "hindu": "Hindu", "buddhist": "Buddhist", "islamic": "Islamic", "sufi": "Sufi",
     "gnostic": "Gnostic", "hermetic": "Hermetic", "norse": "Norse",
     "egyptian": "Egyptian", "mesopotamian": "Mesopotamian", "zoroastrian": "Zoroastrian",
+    "jewish": "Jewish", "canaanite": "Levantine", "persian": "Persian", "taoist": "Taoist",
+    "confucian": "Confucian", "chinese": "Chinese", "roman": "Roman", "sumerian": "Sumerian",
+    "vedic": "Vedic", "ethiopian": "Ethiopian", "christian": "Christian",
 }
+
+
+# Google Fonts per original-language code (Gentium Plus covers transliterations,
+# polytonic Greek and Old Norse; script fonts for everything else).
+FONT_FAMILIES = {
+    "grc": ["Gentium+Plus:ital,wght@0,400;0,700;1,400"],
+    "non": ["Gentium+Plus:ital,wght@0,400;0,700;1,400"],
+    "la": ["Gentium+Plus:ital,wght@0,400;0,700;1,400"],
+    "akk": ["Gentium+Plus:ital,wght@0,400;0,700;1,400", "Noto+Sans+Cuneiform"],
+    "sux": ["Gentium+Plus:ital,wght@0,400;0,700;1,400", "Noto+Sans+Cuneiform"],
+    "egy": ["Gentium+Plus:ital,wght@0,400;0,700;1,400", "Noto+Sans+Egyptian+Hieroglyphs"],
+    "peo": ["Gentium+Plus:ital,wght@0,400;0,700;1,400", "Noto+Sans+Old+Persian"],
+    "ae": ["Gentium+Plus:ital,wght@0,400;0,700;1,400", "Noto+Sans+Avestan"],
+    "sa": ["Gentium+Plus:ital,wght@0,400;0,700;1,400", "Noto+Serif+Devanagari:wght@400;700"],
+    "lzh": ["Noto+Serif+TC:wght@400;700"],
+    "och": ["Noto+Serif+TC:wght@400;700"],
+    "gez": ["Noto+Serif+Ethiopic:wght@400;700", "Gentium+Plus:ital,wght@0,400;0,700;1,400"],
+    "cop": ["Noto+Sans+Coptic", "Gentium+Plus:ital,wght@0,400;0,700;1,400"],
+    "hbo": ["Noto+Serif+Hebrew:wght@400;700", "Noto+Sans+Phoenician"],
+    "he": ["Noto+Serif+Hebrew:wght@400;700"],
+    "arc": ["Noto+Serif+Hebrew:wght@400;700", "Noto+Sans+Imperial+Aramaic"],
+    "obm": ["Noto+Sans+Phoenician", "Noto+Serif+Hebrew:wght@400;700", "Gentium+Plus:ital,wght@0,400;0,700;1,400"],
+    "phn": ["Noto+Sans+Phoenician", "Noto+Serif+Hebrew:wght@400;700", "Gentium+Plus:ital,wght@0,400;0,700;1,400"],
+    "uga": ["Noto+Sans+Ugaritic", "Gentium+Plus:ital,wght@0,400;0,700;1,400"],
+    "ar": ["Amiri:ital,wght@0,400;0,700;1,400"],
+}
+# Tradition banners: new traditions borrow the closest existing banner art.
+HERO_ALIAS = {"sumerian": "mesopotamian", "vedic": "hindu", "christian": "orthodox", "roman": "greek"}
+
+
+def font_link_for(code):
+    fams = FONT_FAMILIES.get(code)
+    if not fams:
+        return ""
+    return "https://fonts.googleapis.com/css2?" + "&".join(f"family={f}" for f in fams) + "&display=swap"
+
+
+def host_label(url):
+    from urllib.parse import urlparse
+    try:
+        h = urlparse(url).netloc
+        return h[4:] if h.startswith("www.") else h
+    except Exception:
+        return url
 
 
 def wrap_paragraphs(text):
@@ -45,6 +97,8 @@ def main():
     if READING_ORDER.exists():
         reading_order = json.loads(READING_ORDER.read_text(encoding="utf-8"))
 
+    global REGISTRY
+    REGISTRY = load_all()
     env = Environment(loader=FileSystemLoader(str(TEMPLATES)), autoescape=False)
     template = env.get_template("translation.html")
 
@@ -92,7 +146,17 @@ def main():
         #   translator_name   — who produced the English (public-domain)
         #   original_lang_label / original_lang_code — label + BCP-47 for the
         #     left reading column (drives typography and column header).
-        if tid.startswith("verified-edda-"):
+        coll = find_for_id(tid, REGISTRY)
+        edition_label = "Tischendorf 8th edition (1869)"
+        if coll:
+            author_name = coll["author_name"]
+            source_url = coll["source_url"]
+            critical_edition = coll["critical_edition"]
+            translator_name = coll["translator_name"]
+            original_lang_label = coll["original_lang_label"]
+            original_lang_code = coll["original_lang_code"]
+            edition_label = coll.get("edition_label") or "Edition text"
+        elif tid.startswith("verified-edda-"):
             author_name = "Anonymous (Codex Regius, c. 1270)"
             source_url = "https://handrit.is/manuscript/view/is/GKS04-2365"
             critical_edition = "Codex Regius (GKS 2365 4to)"
@@ -214,9 +278,15 @@ def main():
             tradition_label=TRADITION_LABELS.get(tradition, tradition.title()),
             translator_name=translator_name,
             original_lang_label=original_lang_label,
-            edition_label="Tischendorf 8th edition (1869)",
+            edition_label=edition_label,
             original_lang_code=original_lang_code,
             reading=reading_order.get(tid, {}),
+            verification=pub.get("verification", {}),
+            font_link=font_link_for(original_lang_code),
+            hero_tradition=HERO_ALIAS.get(tradition, tradition),
+            collection_url=f"/collections/{reading_order.get(tid, {}).get('manuscript', '')}" if reading_order.get(tid) else "/library/",
+            source_url_label=host_label(source_url),
+            edition_lang=(coll.get("edition_lang") if coll else None) or ("grc" if original_lang_code in ("grc",) or not coll else original_lang_code),
         )
 
         out = LIB / f"{slug}.html"

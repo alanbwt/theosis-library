@@ -3151,3 +3151,54 @@ section > h2:first-child {
 .site-footer .ng-credit a:hover {
   border-bottom-color: rgba(107, 29, 42, 0.75);
 }
+
+/* ---- Scripts added with the 2026-11 expansion ---- */
+.parallel-original[lang="sux"], .parallel-original[lang="akk"] { font-family: 'Gentium Plus', 'Noto Sans Cuneiform', 'Cardo', Georgia, serif; font-size: 0.95rem; }
+.parallel-original[lang="egy"] { font-family: 'Gentium Plus', 'Noto Sans Egyptian Hieroglyphs', 'Cardo', Georgia, serif; }
+.parallel-original[lang="peo"] { font-family: 'Gentium Plus', 'Noto Sans Old Persian', Georgia, serif; }
+.parallel-original[lang="ae"] { font-family: 'Gentium Plus', 'Noto Sans Avestan', Georgia, serif; }
+.parallel-original[lang="sa"] { font-family: 'Noto Serif Devanagari', 'Gentium Plus', Georgia, serif; font-size: 1.08rem; line-height: 2; }
+.parallel-original[lang="lzh"], .parallel-original[lang="och"] { font-family: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif; font-size: 1.12rem; line-height: 2; letter-spacing: 0.04em; }
+.parallel-original[lang="gez"] { font-family: 'Noto Serif Ethiopic', 'Abyssinica SIL', 'Gentium Plus', serif; font-size: 1.08rem; line-height: 2; }
+.parallel-original[lang="cop"] { font-family: 'Noto Sans Coptic', 'Antinoou', 'Gentium Plus', serif; font-size: 1.05rem; }
+.parallel-original[lang="arc"], .parallel-original[lang="obm"], .parallel-original[lang="phn"], .parallel-original[lang="uga"] {
+  font-family: 'Noto Serif Hebrew', 'Noto Sans Phoenician', 'Noto Sans Imperial Aramaic', 'Noto Sans Ugaritic', 'Gentium Plus', serif; font-size: 1.1rem; line-height: 2;
+}
+/* Mixed lines inside an original column: native script (RTL) and transliteration (LTR) */
+.parallel-original .translit, .parallel-original [dir="ltr"] { direction: ltr; text-align: left; display: block; font-family: 'Gentium Plus', 'Cardo', Georgia, serif; font-size: 0.95rem; }
+.parallel-original .native { display: block; }
+.parallel-original .native-rtl { display: block; direction: rtl; text-align: right; }
+.parallel-original .glyphs { display: block; font-family: 'Noto Sans Egyptian Hieroglyphs', 'Noto Sans Cuneiform', 'Noto Sans Old Persian', serif; font-size: 1.35rem; line-height: 1.6; color: #3d2f1a; }
+.parallel-original .lacuna, .parallel-translation .lacuna { color: #9a8a70; }
+
+/* Where-on-the-image note under each scan */
+.scan-note { margin-top: 0.4rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 0.74rem; color: #6f6352; }
+.scan-note summary { cursor: pointer; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.66rem; color: #8a6d1f; }
+.scan-note p { margin: 0.35rem 0 0; line-height: 1.5; }
+
+/* Banners for traditions without bespoke art */
+.tradition-hero--sumerian { background: linear-gradient(135deg, #6d4c41 0%, #2e1a0e 50%, #8d6e63 100%); }
+.tradition-hero--vedic { background: linear-gradient(135deg, #c2571a 0%, #5c1a00 50%, #d4760a 100%); }
+.tradition-hero--christian { background: linear-gradient(135deg, #6b1d2a 0%, #1a0a0e 50%, #4a1520 100%); }
+.tradition-hero--roman { background: linear-gradient(135deg, #7b1f1f 0%, #2a0b0b 50%, #8e2b2b 100%); }
+
+/* ---- Library shelves and collection pages ---- */
+.lib-intro { color: #6f6352; font-size: 1rem; margin: 0.25rem 0 1.25rem; }
+.shelf-jump { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 0.78rem; letter-spacing: 0.03em; color: #8a7e6f; line-height: 2; margin: 1.25rem 0 0.5rem; }
+.shelf-jump a { color: #6b1d2a; text-decoration: none; white-space: nowrap; }
+.shelf-jump a:hover { text-decoration: underline; }
+.shelf { margin: 2.25rem 0 1rem; scroll-margin-top: 1rem; }
+.shelf-note { color: #8a7e6f; font-style: italic; margin: -0.25rem 0 1rem; font-size: 0.95rem; }
+.coll-card-desc { font-size: 0.85rem; line-height: 1.45; color: #5c5244; margin-top: 0.45rem; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.coll-header { margin: 1rem 0 2rem; }
+.coll-header h1 { margin-bottom: 0.25rem; }
+.coll-dates { color: #8a6d1f; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase; margin: 0 0 0.75rem; }
+.coll-desc { font-size: 1.05rem; line-height: 1.7; color: #2d2518; }
+.coll-stats { color: #6f6352; font-size: 0.9rem; }
+.coll-sources { font-size: 0.9rem; color: #5c5244; padding-left: 1.1rem; line-height: 1.7; }
+.coll-start-btn { display: inline-block; margin-top: 0.5rem; padding: 0.55rem 1.1rem; border: 1px solid #b8960c; border-radius: 3px; color: #6b1d2a; text-decoration: none; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 0.85rem; letter-spacing: 0.04em; }
+.coll-start-btn:hover { background: #f3e9d2; }
+.coll-list { columns: 3 16rem; column-gap: 2rem; padding-left: 2.2rem; font-size: 0.95rem; line-height: 1.75; }
+.coll-list li { break-inside: avoid; }
+.coll-list a { color: #2d2518; text-decoration: none; border-bottom: 1px solid rgba(184,150,12,0.25); }
+.coll-list a:hover { color: #6b1d2a; border-bottom-color: #6b1d2a; }

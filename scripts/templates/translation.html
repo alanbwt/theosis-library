@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }} — Theosis Library</title>
+  <title>{{ title }} | Theosis Library</title>
   <meta name="description" content="{{ description }}">
   <link rel="canonical" href="https://theosislibrary.com/library/{{ slug }}">
   <!-- OpenGraph -->
-  <meta property="og:title" content="{{ title }} — Theosis Library">
+  <meta property="og:title" content="{{ title }} | Theosis Library">
   <meta property="og:description" content="{{ description }}">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://theosislibrary.com/library/{{ slug }}">
@@ -29,10 +29,10 @@
     "description": "{{ description }}",
     "url": "https://theosislibrary.com/library/{{ slug }}",
     "inLanguage": ["en", "{{ language | lower }}"],
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/publicdomain/mark/1.0/"
+    "isAccessibleForFree": true
   }
   </script>
+  {% if font_link %}<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="{{ font_link }}">{% endif %}
   <link rel="stylesheet" href="../css/style.css">
 <meta name="generator" content="Noble Growth (https://noblegrowth.co)">
 <link rel="author" href="https://noblegrowth.co/">
@@ -46,7 +46,8 @@
       <nav class="site-nav">
         <a href="/">Home</a>
         <a href="/library/">Library</a>
-        <a href="/quotes/">Quotes</a>
+        <a href="/paths/">Paths</a>
+        <a href="/quotes/">Passages</a>
         <a href="/sources/">Sources</a>
         <a href="/about">About</a>
       </nav>
@@ -54,7 +55,7 @@
   </header>
 
   <main>
-    <div class="tradition-hero tradition-hero--{{ tradition }}">
+    <div class="tradition-hero tradition-hero--{{ hero_tradition }}">
       <pre class="tradition-hero-art" id="tradition-art"></pre>
       <div class="tradition-hero-overlay">
         <div class="tradition-hero-label">{{ tradition_label }}</div>
@@ -62,7 +63,7 @@
     </div>
     <script>
     (function(){
-      var t = '{{ tradition }}';
+      var t = '{{ hero_tradition }}';
       fetch('/data/tradition-art.json').then(function(r){return r.json()}).then(function(d){
         var art = d[t];
         if (art) document.getElementById('tradition-art').textContent = art.join('\n');
@@ -75,7 +76,7 @@
       <nav class="reading-breadcrumb" aria-label="Breadcrumb">
         <a href="/library/">Library</a>
         <span class="reading-breadcrumb-sep">›</span>
-        <a href="/library/?q={{ reading.manuscript }}">{{ reading.manuscript_label }}</a>
+        <a href="{{ collection_url }}">{{ reading.manuscript_label }}</a>
         <span class="reading-breadcrumb-sep">›</span>
         <span class="reading-breadcrumb-current">{{ title }}</span>
         <span class="reading-breadcrumb-pos">{{ reading.position }} / {{ reading.total }}</span>
@@ -84,8 +85,8 @@
 
       <div class="translation-header">
         <h1>{{ title }}</h1>
-        <div class="original-title">{{ original_title }}</div>
-        <div class="author">{{ author_name }}, {{ author_dates }}</div>
+        {% if original_title and original_title != title %}<div class="original-title">{{ original_title }}</div>{% endif %}
+        <div class="author">{{ author_name }}{% if author_dates %}, {{ author_dates }}{% endif %}</div>
         <div class="source">{{ source }}{% if critical_edition %} · {{ critical_edition }}{% endif %}</div>
         {% if is_first_translation %}<div class="first-translation-badge">First English Translation</div>{% endif %}
       </div>
@@ -118,10 +119,13 @@
         <details>
           <summary>How was this verified? (Provenance)</summary>
           <div class="provenance-body">
-            <div class="provenance-item"><strong>Manuscript:</strong> {{ author_name }} — page scan from {{ source }}.</div>
-            {% if critical_edition %}<div class="provenance-item"><strong>Original text:</strong> {{ critical_edition }} (public domain).</div>{% endif %}
-            <div class="provenance-item"><strong>English translation:</strong> {{ translator_name }} (public domain).</div>
-            <div class="provenance-item"><strong>Verify:</strong> The scan image is the physical evidence. The original-language text is verifiable against the scan. The English translation is checkable against the original. Click any Greek, Hebrew, or Latin word for morphological analysis.</div>
+            {% if verification.scan_manuscript %}<div class="provenance-item"><strong>Object:</strong> {{ verification.scan_manuscript }}</div>{% endif %}
+            <div class="provenance-item"><strong>Images:</strong> {{ verification.scan_source or source }}{% if verification.scan_license %} ({{ verification.scan_license }}){% endif %}</div>
+            {% if verification.scan_mapping %}<div class="provenance-item"><strong>Text-to-image mapping:</strong> {{ verification.scan_mapping }}</div>{% endif %}
+            <div class="provenance-item"><strong>Original text:</strong> {{ verification.original_text_source or critical_edition }}{% if verification.original_text_license %} ({{ verification.original_text_license }}){% endif %}</div>
+            <div class="provenance-item"><strong>English translation:</strong> {{ verification.translation_source or translator_name }}{% if verification.translation_license %} ({{ verification.translation_license }}){% endif %}</div>
+            {% if verification.verified_date %}<div class="provenance-item"><strong>Verified:</strong> {{ verification.verified_date }}</div>{% endif %}
+            <div class="provenance-item"><strong>Verify:</strong> The image is the physical evidence. The original-language text can be checked against the image, and the English against the original. Each section names the part of the image that carries it.</div>
             <div class="provenance-item"><strong>Challenge:</strong> Submit a correction to <a href="mailto:contact@theosislibrary.com">contact@theosislibrary.com</a>.</div>
           </div>
         </details>
@@ -133,7 +137,7 @@
 
       {% if source_url %}
       <div class="source-link-banner">
-        Verify this translation: <a href="{{ source_url }}" target="_blank" rel="noopener">view the original {{ language }} text →</a>
+        See the original at its holding institution: <a href="{{ source_url }}" target="_blank" rel="noopener">{{ source_url_label }} →</a>
       </div>
       {% endif %}
 
@@ -171,12 +175,13 @@
             <div class="parallel-col-label">Manuscript</div>
             {% for scan in section.scan_pages %}
             <img src="/assets/scans/{{ scan }}"
-                 alt="Scan {{ scan }}"
+                 alt="Manuscript image for §{{ section.section }}"
                  class="scan-thumb"
                  loading="lazy"
                  onclick="openScan('/assets/scans/{{ scan }}')"
                  title="Click to enlarge">
             {% endfor %}
+            {% if section.scan_note %}<details class="scan-note"><summary>Where on the image</summary><p>{{ section.scan_note }}</p></details>{% endif %}
           </div>
           {% endif %}
 
@@ -186,7 +191,7 @@
             {% if section.edition_text %}
             <details class="edition-reading">
               <summary>Compare: {{ edition_label }}</summary>
-              <div class="edition-text" lang="grc">{{ section.edition_text }}</div>
+              <div class="edition-text" lang="{{ edition_lang }}">{{ section.edition_text }}</div>
             </details>
             {% endif %}
           </div>
@@ -217,11 +222,11 @@
     <div class="container">
       {% if translator_notes %}
       <section class="notes-section">
-        <h2>Translator's Notes</h2>
+        <h2>Notes</h2>
         <ol class="notes-list">
           {% for note in translator_notes %}
           <li id="note-{{ loop.index }}">
-            <strong>§{{ note.ref }}:</strong> {{ note.note }}
+            {% if note is mapping %}{% if note.ref %}<strong>§{{ note.ref }}:</strong> {% endif %}{{ note.note }}{% else %}{{ note }}{% endif %}
           </li>
           {% endfor %}
         </ol>
@@ -250,9 +255,9 @@
       </section>
 
       <section class="source-section">
-        <h2>Source & Cross-References</h2>
+        <h2>Sources</h2>
         <ul>
-          <li><strong>Source text:</strong> {{ source }}{% if source_url %} — <a href="{{ source_url }}" target="_blank" rel="noopener">view original</a>{% endif %}</li>
+          <li><strong>Source:</strong> {{ source }}{% if source_url %} (<a href="{{ source_url }}" target="_blank" rel="noopener">holding institution</a>){% endif %}</li>
           {% if critical_edition %}<li><strong>Critical edition:</strong> {{ critical_edition }}</li>{% endif %}
           {% for ref in related_texts %}
           <li><a href="/library/{{ ref.slug }}">{{ ref.title }}</a> by {{ ref.author_name }}</li>
@@ -353,12 +358,12 @@
     });
   })();
   </script>
-  <script src="../js/cite.js"></script>
-  <script src="../js/scan-viewer.js"></script>
-  <script src="../js/morphology.js"></script>
-  <script src="../js/annotations.js"></script>
-  <script src="../js/decode.js"></script>
-  <script src="../js/columns.js"></script>
+  <script src="/js/cite.js"></script>
+  <script src="/js/scan-viewer.js"></script>
+  <script src="/js/morphology.js"></script>
+  <script src="/js/annotations.js"></script>
+  <script src="/js/decode.js"></script>
+  <script src="/js/columns.js"></script>
 
 </body>
 </html>

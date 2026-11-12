@@ -16,7 +16,11 @@ Order within each manuscript:
 
 import json
 import re
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from collections_lib import load_all  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "texts.json"
@@ -148,6 +152,18 @@ def build():
         return (roman.get(r, int(r) if r.isdigit() else 99), e["id"])
     order["gilgamesh"] = [e["id"] for e in sorted(buckets["gilgamesh"], key=_tab)]
 
+    # Self-describing collections (data/collections/*.json): order by each row's "order".
+    registry = load_all()
+    extra_labels = {}
+    pub_ids = {t["id"] for t in texts}
+    for key, d in registry.items():
+        rows = [r for r in d.get("texts", []) if r["id"] in pub_ids]
+        if not rows:
+            continue
+        # a registry collection overrides any legacy bucket with the same key
+        order[key] = [r["id"] for r in sorted(rows, key=lambda r: (r.get("order", 0), r["id"]))]
+        extra_labels[key] = d["collection"]["label"]
+
     # Build prev/next lookup per entry, plus pretty labels.
     by_id = {t["id"]: t for t in texts}
     reading = {}  # id -> {prev, next, manuscript, manuscript_label, position, total}
@@ -166,6 +182,7 @@ def build():
         "washingtonianus": "Codex Washingtonianus",
         "josephus": "Josephus (Vatican manuscripts)",
     }
+    MANUSCRIPT_LABEL.update(extra_labels)
     for manuscript, ids in order.items():
         total = len(ids)
         for i, tid in enumerate(ids):

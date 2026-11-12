@@ -23,8 +23,10 @@ def load_json(path):
 
 
 def strip_html(text):
-    """Remove HTML tags from text for indexing."""
-    return re.sub(r"<[^>]+>", "", text or "")
+    """Remove HTML tags for indexing; verse/line numbers become separate tokens."""
+    text = re.sub(r"<sup>(.*?)</sup>", r" \1 ", text or "")
+    text = re.sub(r"<br\s*/?>|</p>", " ", text)
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", text)).strip()
 
 
 def build():
@@ -33,6 +35,13 @@ def build():
     texts = load_json(DATA_DIR / "texts.json")
     authors = load_json(DATA_DIR / "authors.json")
     author_map = {a["id"]: a for a in authors["authors"]}
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from collections_lib import all_collections
+    coll_label = {}
+    for c in all_collections(texts["texts"]):
+        for r in c["rows"]:
+            coll_label[r["id"]] = c["label"]
 
     # --- texts-meta.json (compact, loads immediately) ---
     meta = []
@@ -41,7 +50,7 @@ def build():
         meta.append({
             "id": t["id"],
             "title": t["title"],
-            "author": author.get("name", "Unknown"),
+            "author": author.get("name") or coll_label.get(t["id"], ""),
             "dates": author.get("dates", ""),
             "century": t.get("century", 0),
             "era": t.get("era", ""),
@@ -81,20 +90,49 @@ def build():
                 "en": strip_html(section.get("text", "")),
                 "orig": strip_html(section.get("original_text", "")),
                 "title": t["title"],
-                "author": author.get("name", "Unknown"),
+                "author": author.get("name") or coll_label.get(t["id"], ""),
                 "slug": t.get("slug", ""),
             })
 
-    # Split: the original-language text goes in a second file so each stays under
-    # Cloudflare Pages' 25 MiB per-file limit; search.js merges them by pid.
+    # Shard into files of at most ~18 MB (Cloudflare Pages limit is 25 MiB per file).
+    # English+metadata shards and original-language shards; search.js merges them by pid.
     orig = {p["pid"]: p.pop("orig") for p in passages}
     for p in passages:
         p.pop("slug", None)  # identical to tid
-    with open(OUTPUT_DIR / "search-index.json", "w", encoding="utf-8") as f:
-        json.dump(passages, f, ensure_ascii=False)
-    with open(OUTPUT_DIR / "search-index-orig.json", "w", encoding="utf-8") as f:
-        json.dump(orig, f, ensure_ascii=False)
-    print(f"search-index.json: {len(passages)} passages across published texts")
+    sdir = OUTPUT_DIR / "search"
+    sdir.mkdir(parents=True, exist_ok=True)
+    for old in sdir.glob("*.json"):
+        old.unlink()
+    LIMIT = 18_000_000
+
+    def shard(items, name, as_dict):
+        files, cur, size = [], ([] if not as_dict else {}), 0
+        def flush():
+            nonlocal cur, size
+            if cur:
+                fn = f"{name}-{len(files)}.json"
+                (sdir / fn).write_text(json.dumps(cur, ensure_ascii=False), encoding="utf-8")
+                files.append(f"/data/search/{fn}")
+            cur, size = ([] if not as_dict else {}), 0
+        for it in items:
+            n = len(json.dumps(it, ensure_ascii=False).encode())
+            if size + n > LIMIT:
+                flush()
+            if as_dict:
+                cur[it[0]] = it[1]
+            else:
+                cur.append(it)
+            size += n
+        flush()
+        return files
+
+    manifest = {"en": shard(passages, "en", False), "orig": shard(list(orig.items()), "orig", True),
+                "passages": len(passages)}
+    (sdir / "manifest.json").write_text(json.dumps(manifest), encoding="utf-8")
+    for legacy in ("search-index.json", "search-index-orig.json"):
+        if (OUTPUT_DIR / legacy).exists():
+            (OUTPUT_DIR / legacy).unlink()
+    print(f"search: {len(passages)} passages in {len(manifest['en'])}+{len(manifest['orig'])} shards")
 
 
 if __name__ == "__main__":

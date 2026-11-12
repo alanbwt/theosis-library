@@ -23,8 +23,12 @@ def build():
         (f"{BASE_URL}/quotes/", today, "0.7"),
         (f"{BASE_URL}/sources/", today, "0.7"),
         (f"{BASE_URL}/about", today, "0.5"),
-        (f"{BASE_URL}/paths/words-of-jesus", today, "0.6"),
     ]
+    for f in sorted((SITE_DIR / "paths").glob("*.html")):
+        if f.stem != "index":
+            urls.append((f"{BASE_URL}/paths/{f.stem}", today, "0.6"))
+    for f in sorted((SITE_DIR / "collections").glob("*.html")):
+        urls.append((f"{BASE_URL}/collections/{f.stem}", today, "0.85"))
 
     for t in texts["texts"]:
         if t["status"] == "published":

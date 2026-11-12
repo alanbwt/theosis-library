@@ -58,7 +58,7 @@ import MiniSearch from 'https://esm.sh/minisearch@7.1.1';
     if (indexLoaded || indexLoading) return Promise.resolve();
     indexLoading = true;
 
-    return Promise.all([fetch('/data/search-index.json').then(function (r) { return r.json(); }), fetch('/data/search-index-orig.json').then(function (r) { return r.json(); })])
+    return fetch('/data/search/manifest.json').then(function (r) { return r.json(); }).then(function (m) { function all(urls) { return Promise.all(urls.map(function (u) { return fetch(u).then(function (r) { return r.json(); }); })); } return Promise.all([all(m.en), all(m.orig)]).then(function (x) { var en = [].concat.apply([], x[0]); var orig = {}; x[1].forEach(function (o) { for (var k in o) orig[k] = o[k]; }); return [en, orig]; }); })
       .then(function (parts) { var passages = parts[0], orig = parts[1]; for (var i = 0; i < passages.length; i++) { passages[i].orig = orig[passages[i].pid] || ''; passages[i].slug = passages[i].tid; } return passages; })
       .then(function (passages) {
         miniSearch = new MiniSearch({

@@ -450,28 +450,12 @@ def build_search_index(texts):
 
 
 def main():
-    texts_data = load_json(DATA_DIR / "texts.json")
-    authors_data = load_json(DATA_DIR / "authors.json")
-    resolve_authors(texts_data, authors_data)
-
-    all_texts = texts_data["texts"]
-    era_groups = group_by_era(all_texts)
-
-    # Rebuild library index page
-    html = build_library_page(era_groups)
-    output_path = LIBRARY_DIR / "index.html"
-    output_path.write_text(html, encoding="utf-8")
-    print(f"Library index rebuilt: {output_path}")
-
-    # Rebuild search index
-    search_index = build_search_index(all_texts)
-    search_path = SITE_DIR / "search-index.json"
-    with open(search_path, "w", encoding="utf-8") as f:
-        json.dump(search_index, f, indent=2, ensure_ascii=False)
-    print(f"Search index rebuilt: {search_path}")
-
-    published = [t for t in all_texts if t["status"] == "published"]
-    print(f"Total texts: {len(all_texts)} | Published: {len(published)}")
+    """The library page is now built by build_library.py (shelves of collections);
+    the search index by build_search.py. Kept as the entry point of the build chain."""
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import build_library
+    build_library.build()
 
 
 if __name__ == "__main__":
