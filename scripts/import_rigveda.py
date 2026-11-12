@@ -346,9 +346,16 @@ def load_griffith():
         text = text.strip()
         if text.startswith("[Griffith:") or (m, h, v) in LATIN:
             continue  # stanza Griffith did not translate, or rendered in Latin
+        done = []
         for wrong, right in ERRATA.get((m, h, v), []):
+            if wrong not in text:
+                # the context overlaps a correction already made in this verse: bring it up to date
+                for w0, r0 in done:
+                    wrong, right = wrong.replace(w0.split()[len(w0.split()) // 2], r0.split()[len(r0.split()) // 2]), \
+                        right.replace(w0.split()[len(w0.split()) // 2], r0.split()[len(r0.split()) // 2])
             assert wrong in text, ((m, h, v), wrong)
             text = text.replace(wrong, right)
+            done.append((wrong, right))
         out[(m, h, v)] = text
     return out
 
@@ -363,6 +370,20 @@ def load_addressees():
 
 
 # ----------------------------------------------------------------------------- manuscript pages
+
+# Penn's running foliation repeats a number twice in Item 41; the sequential number is corrected here
+# (image index, leaf) -> corrected running folio. Checked against the neighbouring labels.
+LABEL_FIX = {"penn41": {(191, "upper"): "189v", (233, "lower"): "232r"}}
+
+
+# Openings where the automatic leaf finder fails (leaves touching, or rows blacked out by the scribe):
+# leaf boxes measured by hand on the web JPEG, (x0, y0, x1, y1) upper leaf then lower leaf.
+BOX_FIX = {
+    ("penn41", 296): [(234, 231, 1571, 814), (236, 816, 1572, 1401)],
+    ("penn41", 390): [(158, 120, 1640, 755), (154, 860, 1636, 1488)],
+    ("penn41", 396): [(160, 130, 1635, 766), (160, 862, 1640, 1482)],
+}
+
 
 def tei_pages(w):
     """Ordered page list for a Penn witness: id (sequential foliation), label, image index, position."""
@@ -381,6 +402,7 @@ def tei_pages(w):
             if not m:
                 continue
             written, seq = m.group(1), m.group(2) or m.group(1)
+            seq = LABEL_FIX.get(w["key"], {}).get((idx, pos), seq)
             label = f"{seq} (numbered {written} by the scribe)" if m.group(2) else seq
             pages.append({"id": seq, "label": label, "image": idx, "web": web, "pos": pos})
     return pages
@@ -439,7 +461,7 @@ def page_scan(w, page, force=False):
     if out.exists() and not force:
         return f"{KEY}/{name}"
     img = web_image(w, page)
-    boxes = leaf_boxes(img)
+    boxes = BOX_FIX.get((w["key"], page["image"])) or leaf_boxes(img)
     if page["pos"] == "single" or len(boxes) == 1:
         box = boxes[0]
     else:
@@ -449,7 +471,7 @@ def page_scan(w, page, force=False):
     pad = 24
     crop = img.crop((max(0, x0 - pad), max(0, y0 - pad), min(img.width, x1 + pad), min(img.height, y1 + pad)))
     SCAN_DIR.mkdir(parents=True, exist_ok=True)
-    crop.save(out, quality=85)
+    crop.save(out, quality=78, optimize=True, progressive=True)
     return f"{KEY}/{name}"
 
 
@@ -789,10 +811,10 @@ def write_all(entries):
             "original_lang_code": "sa",
             "edition_label": "Padapāṭha (word-by-word text written in the manuscript; Sansknet e-text via GRETIL)",
             "search_terms": "rigveda rig veda rgveda vedic hymns sanskrit agni indra soma purusha nasadiya hiranyagarbha gayatri",
-            "description": ("The Rigveda, the oldest collection of Sanskrit hymns, hymn by hymn: Aufrecht's accented text, "
-                            "Griffith's English, and the page of a Devanagari manuscript in the University of Pennsylvania "
-                            "collection that carries each verse (a saṃhitā copy of 1711 for most of book 10, a padapāṭha copy "
-                            "of the whole Rigveda for book 1 and the first half of book 10, and a 1737 copy for the Gāyatrī hymn)."),
+            "description": ("The complete Rigveda, the oldest collection of Sanskrit hymns, hymn by hymn (1,028 hymns): "
+                            "Aufrecht's accented text, Griffith's English, and the page of a Devanagari manuscript in the "
+                            "University of Pennsylvania collection that carries each verse: a padapāṭha copy of the whole "
+                            "Rigveda, a saṃhitā copy of 1711 for 10.46-10.191, and a copy of 1737 for the Gāyatrī hymn (3.62)."),
         },
         "texts": rows,
     }

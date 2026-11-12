@@ -1,0 +1,22 @@
+"""firstline.py pages.json outdir per scale xf0 xf1"""
+import json, sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from lines import text_lines
+from PIL import Image, ImageDraw, ImageFont
+pages = json.load(open(sys.argv[1])); out = sys.argv[2]; per = int(sys.argv[3]); scale = float(sys.argv[4]); xf0, xf1 = float(sys.argv[5]), float(sys.argv[6])
+os.makedirs(out, exist_ok=True)
+font = ImageFont.truetype('/System/Library/Fonts/Supplemental/Arial Bold.ttf', 26)
+strips = []; cur = (None, None)
+for p in pages:
+    ls = text_lines(p['img'], p['box'])
+    if not ls: continue
+    if cur[0] != p['img']: cur = (p['img'], Image.open(p['img']).convert('RGB'))
+    im = cur[1]; x0, y0, x1, y1 = p['box']; w = x1 - x0; a, b = ls[0]
+    s = im.crop((x0 + int(w * xf0), a - 16, x0 + int(w * xf1), b + 12)); s = s.resize((int(s.width * scale), int(s.height * scale)))
+    lab = Image.new('RGB', (s.width + 80, s.height + 4), 'white'); lab.paste(s, (80, 2))
+    ImageDraw.Draw(lab).text((3, s.height // 2 - 13), p['id'], fill='blue', font=font); strips.append((p['id'], lab))
+for ci in range(0, len(strips), per):
+    ch = strips[ci:ci + per]; W = max(s.width for _, s in ch); H = sum(s.height for _, s in ch)
+    comp = Image.new('RGB', (W, H), 'white'); y = 0
+    for _, s in ch: comp.paste(s, (0, y)); y += s.height
+    name = f"{out}/f{ci // per:03d}_{ch[0][0]}-{ch[-1][0]}.jpg"; comp.save(name, quality=82); print(name, comp.size)

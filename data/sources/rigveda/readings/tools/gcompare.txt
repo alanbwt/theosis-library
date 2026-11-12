@@ -1,0 +1,75 @@
+"""Compare VedaWeb Griffith with the DLI OCR of the printed 2nd edition; flag likely OCR slips in VedaWeb.
+usage: gcompare.py <djvu.xml> <item_id> <file_prefix> <mandala> <h0> <h1> <outdir>"""
+import re, sys, json, difflib, os, unicodedata, urllib.request
+from PIL import Image, ImageDraw, ImageFont
+djvu, item, fprefix, M, H0, H1, out = sys.argv[1], sys.argv[2], sys.argv[3], int(sys.argv[4]), int(sys.argv[5]), int(sys.argv[6]), sys.argv[7]
+os.makedirs(out, exist_ok=True)
+GCSV = '/Users/mattimore/projects/theosis-library/data/sources/rigveda/vedaweb/griffith.csv'
+WORDS = set(w.strip().lower() for w in open('/usr/share/dict/words'))
+WORDS |= {'thee','thou','thy','thine','hath','doth','ye','art','hast','didst','wast','yea','unto'}
+s = open(djvu, encoding='utf-8').read()
+objs = re.split(r'<OBJECT ', s)[1:]
+toks = []; PW = {}
+for pi, o in enumerate(objs):
+    PW[pi] = int(re.search(r'width="(\d+)"', o).group(1))
+    for c, w in re.findall(r'<WORD coords="([^"]+)">([^<]*)</WORD>', o):
+        toks.append((w, pi, tuple(int(x) for x in c.split(',')[:4])))
+def key(w):
+    w = unicodedata.normalize('NFD', w); w = re.sub(r'[̀-ͯ]', '', w)
+    return re.sub(r"[^a-z]", '', w.lower())
+dk = [key(t[0]) for t in toks]
+tri = {}
+for i in range(len(dk) - 2):
+    tri.setdefault((dk[i], dk[i+1], dk[i+2]), []).append(i)
+VOC = {}
+for line in open(GCSV, encoding='utf-8'):
+    for w in line.split('\t', 1)[-1].split():
+        k = key(w); VOC[k] = VOC.get(k, 0) + 1
+G = {}
+for line in open(GCSV, encoding='utf-8'):
+    ref, text = line.rstrip('\n').split('\t', 1)
+    m, h, v = (int(x) for x in ref.split('.'))
+    if m == M and H0 <= h <= H1 and not text.startswith('[Griffith'):
+        G[(m, h, v)] = text
+flags = []; unaligned = []
+for kk, text in sorted(G.items()):
+    vw = text.split(); vk = [key(w) for w in vw]
+    votes = {}
+    for i in range(len(vk) - 2):
+        for p in tri.get((vk[i], vk[i+1], vk[i+2]), []):
+            votes[p - i] = votes.get(p - i, 0) + 1
+    if not votes:
+        unaligned.append('%d.%d.%d' % kk); continue
+    base = max(votes, key=votes.get); lo, hi = max(0, base - 10), base + len(vk) + 40
+    sm = difflib.SequenceMatcher(None, vk, dk[lo:hi], autojunk=False)
+    for tag, a0, a1, b0, b1 in sm.get_opcodes():
+        if tag == 'replace' and a1 - a0 == b1 - b0:
+            for j in range(a1 - a0):
+                a, b = vk[a0 + j], dk[lo + b0 + j]
+                if not a or not b or a == b: continue
+                aw = a in WORDS or a.rstrip('s') in WORDS or a.rstrip('ed') in WORDS
+                bw = b in WORDS or b.rstrip('s') in WORDS
+                close = difflib.SequenceMatcher(None, a, b).ratio() >= 0.6
+                vb = VOC.get(b, 0) >= 3 and VOC.get(a, 0) <= 2
+                if (bw and close and (not aw or len(a) == len(b))) or (vb and close and not aw):
+                    flags.append({'verse': '%d.%d.%d' % kk, 'vedaweb': vw[a0 + j], 'dli': toks[lo + b0 + j][0], 'tok': lo + b0 + j, 'page': toks[lo + b0 + j][1]})
+print('verses', len(G), 'unaligned', unaligned, 'flags', len(flags))
+json.dump(flags, open(out + '/flags.json', 'w'), ensure_ascii=False, indent=0)
+font = ImageFont.truetype('/System/Library/Fonts/Supplemental/Arial.ttf', 22)
+strips = []
+for n, f in enumerate(flags):
+    w, pi, (x0, y1, x1, y0) = toks[f['tok']]
+    fn = f"{out}/p{pi:04d}.jpg"
+    if not os.path.exists(fn):
+        url = f"https://archive.org/download/{item}/{fprefix}_jp2.zip/{fprefix}_jp2%2F{fprefix}_{pi:04d}.jp2&ext=jpg&scale=2"
+        open(fn, 'wb').write(urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'}), timeout=120).read())
+    im = Image.open(fn).convert('RGB'); sc = im.width / PW[pi]
+    c = im.crop((max(0, int((x0 - 500) * sc)), max(0, int((y0 - 25) * sc)), min(im.width, int((x1 + 500) * sc)), int((y1 + 25) * sc)))
+    lab = Image.new('RGB', (900, c.height + 30), 'white'); lab.paste(c, (0, 30))
+    ImageDraw.Draw(lab).text((4, 2), f"#{n} {f['verse']}  VedaWeb: {f['vedaweb']}   OCR2: {f['dli']}", fill='red', font=font)
+    strips.append(lab)
+for ci in range(0, len(strips), 14):
+    ch = strips[ci:ci + 14]; comp = Image.new('RGB', (900, sum(x.height for x in ch)), 'white'); y = 0
+    for x in ch: comp.paste(x, (0, y)); y += x.height
+    comp.save(f"{out}/flags_{ci // 14:02d}.jpg", quality=80)
+print('composites', (len(strips) + 13) // 14)

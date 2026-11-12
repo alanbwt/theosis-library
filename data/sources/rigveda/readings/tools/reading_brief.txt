@@ -1,0 +1,43 @@
+# Task: transcribe the opening words of each manuscript page (Rigveda padapatha, Devanagari)
+
+Each composite JPEG stacks horizontal strips. Each strip is the FIRST text line (left ~60% of the line) of one
+manuscript page; the page id (e.g. `12v`, `13r`) is printed in blue at the left of the strip. Some strips show
+two lines because line detection merged them: then read only the UPPER line. A strip may also start with
+a marginal note to the left of the vertical red ruling: ignore marginal notes (text left of the ruled margin).
+
+The manuscript is a Rigveda PADAPATHA: every word is written separately and followed by a danda (।), compound
+members are separated by an avagraha (ऽ), some words are followed by `iti` (e.g. `देवी इति`), and accent marks are
+red strokes (ignore them). Varga numbers appear as `॥१२॥`. Hymn ends are not marked except by varga numbers.
+
+For every strip, write ONE line in a TSV file:  `<page id>\t<reading>\t<note>`
+- reading: the first 8-12 words of the upper line in IAST, words separated by single spaces, compounds written
+  joined WITHOUT hyphen or avagraha (puraḥhitam), `iti` kept as a separate word, dandas/numbers omitted.
+  If the line starts in the middle of a word, start with the visible syllables (e.g. `bhāḥ paramam yat ...`).
+- note (optional): only if the line begins with something that is not Rigveda text: a varga number at the
+  very start (write `starts with varga number N`), an invocation (śrīgaṇeśāya namaḥ, hariḥ oṃ), a colophon
+  (iti ... adhyāyaḥ ...), a blank page (`BLANK`), or if the strip is illegible / not a text page (`UNREADABLE`).
+- Be accurate rather than complete: 8 well-read words are better than 15 guessed ones. If a word is unclear,
+  leave it out and continue with the next clear words (do not guess). Never invent text.
+
+Example of correct lines (from this same manuscript):
+```
+1v	śrīgaṇeśāya namaḥ hariḥ oṃ agnim īḷe puraḥhitam yajñasya devam ṛtvijam	starts with invocation
+126r	bhāḥ paramam yat sadhaḥstham arvāñ accha pitaram mātaram ca
+127r	dvādaśaaram nahi tat jarāya varvarti cakram pari dyām	starts with varga number (stained)
+```
+
+Read the composites in the order given, view each with the Read tool (they are legible at the given size;
+if one strip is hard to read you may crop it from the composite with Python/PIL and enlarge it), and append
+lines to your output TSV in page order. Do not edit or delete any other file. When done, reply with the output
+path, the number of lines written, and the page ids you marked UNREADABLE or BLANK.
+
+## Additions for the second batch (groups D0-D7)
+- Pages that have no strip in the composites (line detection found nothing) must still get a line in your TSV,
+  in page order: open the full opening image, find the page (upper leaf = verso `NNv`, lower leaf = recto `NNr`;
+  the page list with image file names is in the pages_D<g>.json file given to you), and either transcribe its
+  first text line or write `BLANK`, `TITLE PAGE (text...)` or `COLOPHON (text...)` in the note with an empty reading.
+- At the start of an adhyāya the scribe may write an anukramaṇī (index of seers, deities and metres, in verse,
+  NOT padapatha) and an invocation (hariḥ oṃ, śrīgaṇeśāya namaḥ). If a page begins with such text, still give
+  its first words as the reading, and in the note say `INDEX` or `INVOCATION` and, if you can see it, on which line
+  the padapatha text begins and its first words (e.g. `INDEX; padapatha begins line 3: agnim hotāram manye`).
+- Every page id in your pages file must appear exactly once in your TSV, in order.

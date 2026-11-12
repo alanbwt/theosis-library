@@ -1,0 +1,19 @@
+# Task: decide, for each flagged word, what the printed book actually says
+
+Each composite JPEG (flags_00.jpg ... ) stacks crops from page images of a printed book (Griffith, The Hymns of
+the Rigveda, 1896). Above each crop a red label reads:  `#N  <verse>  VedaWeb: <word A>   OCR2: <word B>`.
+Word A comes from a digital transcription, word B from a second OCR. The crop shows the printed line(s) around
+the place where that word is printed (the word is usually near the horizontal middle of the crop; the crop may
+show two lines - find the line containing A or B).
+
+For every label #N, look at the printed word and write ONE line in a TSV: `N\tDECISION`
+- `KEEP` if the print shows word A exactly (ignore differences only in diacritics like â or ṣ if the print has
+  them and A also has them).
+- `FIX` if the print shows word B exactly (including its punctuation).
+- otherwise write the printed word exactly as printed (with its punctuation and diacritics, e.g. `Ṣushṇa's`).
+- `UNSURE` if you cannot see the word clearly.
+Typical cases: A = "cat", B = "eat" and the print says "eat" -> FIX. A = "hath", B = "bath" and the print says
+"hath" (old type often looks like b) -> KEEP. Be careful with h/b, c/e, n/u, rn/m.
+
+Write the TSV to the output path you are given, in order of N, then reply with the path and the count of
+KEEP / FIX / other / UNSURE lines. Do not edit or delete any other file.

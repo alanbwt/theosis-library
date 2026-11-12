@@ -1,0 +1,60 @@
+"""Assemble data/sources/rigveda/readings/penn41.txt from the transcription TSVs plus hand-checked lines."""
+import sys, re
+W = '/Users/mattimore/projects/theosis-library/data/sources/rigveda/readings/transcriptions/'
+OUT = '/Users/mattimore/projects/theosis-library/data/sources/rigveda/readings/penn41.txt'
+manual = {}
+for l in open('/Users/mattimore/projects/theosis-library/data/sources/rigveda/readings/penn41_handchecked.tsv', encoding='utf-8'):
+    if l.strip() and not l.startswith('#'):
+        p = l.rstrip('\n').split('\t'); manual[p[0]] = p
+def block(fn, seek=None, bound_last=True):
+    rows = []
+    for l in open(W + fn, encoding='utf-8'):
+        if not l.strip(): continue
+        p = l.rstrip('\n').split('\t') + ['', '']
+        pid, rd, note = p[0].strip(), p[1].strip(), p[2].strip()
+        if pid in manual:
+            rows.append((manual[pid] + [''] * 3)[:3]); continue
+        if not rd and 'BLANK' in note.upper():
+            rows.append([pid, 'BLANK', 'blank page (only show-through from the other side)']); continue
+        assert rd and 'UNREADABLE' not in note.upper(), (fn, pid)
+        # transcriber notes are kept only as a record; they are not used as page notes, except that a page
+        # which opens with an anukramanī or invocation is located by the first padapātha words the reader gives
+        up = note.upper()
+        if ('INDEX' in up or 'INVOCATION' in up or 'TITLE PAGE' in up or 'COLOPHON' in up) and pid not in manual:
+            m = re.search(r'padapa[tṭ]ha begins[^:]*:\s*(.+)$', note, re.I)
+            if m:
+                rows.append([pid, m.group(1).strip().rstrip('.)'), 'NOTE-CHECK ' + note]); continue
+            if not rd or 'INDEX' in up and 'begins' not in note.lower():
+                rows.append([pid, 'INDEX', 'NOTE-CHECK ' + note]); continue
+        rows.append([pid, rd, ''])
+    # hand-read pages that the transcription composite missed (line detection failed): insert in folio order
+    def fkey(pid): return (int(pid[:-1]), 0 if pid[-1] == 'r' else 1)
+    have = {r[0] for r in rows}
+    lo, hi = fkey(rows[0][0]), fkey(rows[-1][0])
+    for pid, m in manual.items():
+        if pid not in have and lo < fkey(pid) < hi:
+            rows.append((m + [''] * 3)[:3])
+    rows.sort(key=lambda r: fkey(r[0]))
+    if seek and not rows[0][1].startswith(('@', 'seek:')): rows[0][1] = f'seek:{seek} ' + rows[0][1]
+    if bound_last: rows[-1][2] = 'BOUND'
+    return rows
+rows = []
+import os
+DFILES = [f'read_D{g}.tsv' for g in range(8)]
+HAVE_D = all(os.path.exists(W + f) for f in DFILES)
+rows += block('read_A1.tsv', bound_last=False) + block('read_A2.tsv', bound_last=not HAVE_D)
+if HAVE_D:
+    for i, f in enumerate(DFILES):
+        rows += block(f, bound_last=False)
+rows += block('read_B.tsv', seek=None if HAVE_D else sys.argv[1])
+rows += block('read_C.tsv', seek=sys.argv[2])
+seen = set(); out = []
+for r in rows:
+    if r[0] in seen: continue
+    seen.add(r[0]); out.append('\t'.join(r[:3]).rstrip('\t'))
+hdr = ("# Penn Ms. Coll. 390 Item 41 (Rgveda padapatha, all eight astakas): opening words of line 1 on each page, read on the images "
+       "(IAST, padapatha word division). Runs of pages read: fol. 1v-154r (RV 1.1-2.8), the astaka 7 pages around 10.1-10.45, "
+       "and the astaka 8 pages around 10.80-10.90. 'seek:' starts a new run; BOUND marks the last page of a run, read only to fix "
+       "where the previous page ends. Lines with notes were checked by eye on the full page image.\n")
+open(OUT, 'w', encoding='utf-8').write(hdr + '\n'.join(out) + '\n')
+print(len(out))
