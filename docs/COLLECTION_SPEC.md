@@ -35,6 +35,9 @@ This spec is the contract for anyone adding a collection. Read it fully before s
    verified PD). Check US copyright renewal (Stanford renewal DB, onlinebooks) for 1929-1963 works
    before treating them as PD. If no usable translation exists, do not publish the text; report it.
    Bible books use KJV (Douay-Rheims for Latin Vulgate).
+   Recorded exception (owner's decision, 2026-11-12): the Tel Dan stele (13 lines, found 1993) uses the
+   Biran and Naveh 1995 translation as quoted on Wikipedia, as a short scholarly quotation, because no
+   open translation exists; its translation_license says so. No other exceptions.
 7. **Show lacunae honestly.** Broken signs stay in brackets as the source gives them. If the English
    translates a restored or composite text that is not on the photographed witness, say so in the
    section's `scan_note`.

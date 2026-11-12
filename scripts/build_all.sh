@@ -3,6 +3,7 @@
 set -e
 cd "$(dirname "$0")/.."
 python3 scripts/integrate_collections.py
+python3 scripts/sync_legacy_rows.py
 python3 scripts/build_reading_order.py
 python3 scripts/render_verified.py
 python3 scripts/build_index.py        # library shelves + collection pages
