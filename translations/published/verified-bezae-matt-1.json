@@ -5,7 +5,7 @@
   "language": "Greek (Tischendorf) / English (KJV)",
   "source": "Codex Bezae (5th c.) via Cambridge IIIF + NTVMR mapping + Tischendorf + KJV",
   "description": "Matthew 1 from Codex Bezae (5th c., Cambridge UL). Page-specific folios via NTVMR.",
-  "introduction": "<p>Matthew 1 from <strong>Codex Bezae</strong> (Codex Cantabrigiensis, 5th c.), the most important Western text manuscript. A bilingual Greek/Latin codex containing the Gospels and Acts, held at Cambridge University Library.</p>",
+  "introduction": "<p>Matthew 1 from <strong>Codex Bezae</strong> (Codex Cantabrigiensis, 5th c.), the most important Western text manuscript. A bilingual Greek/Latin codex containing the Gospels and Acts, held at Cambridge University Library.</p><p>Codex Bezae is bilingual: at each opening the Greek is on the left-hand (verso) page and the Latin on the facing right-hand (recto) page. Only the Greek pages are shown here; the Latin column is not included.</p><p><strong>Page check:</strong> The NTVMR transcription of this chapter comes partly from pages whose files state \"All rights reserved by the INTF\", so the Greek shown is Tischendorf's edition. The sections were re-checked against the page on which the transcription places each verse, so every section shows the page(s) that carry it.</p>",
   "translation": [
     {
       "section": "1.20-25",
@@ -14,15 +14,18 @@
       "text": "<sup>20</sup>But while he thought on these things, behold, the angel of the Lord appeared unto him in a dream, saying, Joseph, thou son of David, fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Holy Ghost. <sup>21</sup>And she shall bring forth a son, and thou shalt call his name JESUS: for he shall save his people from their sins. <sup>22</sup>Now all this was done, that it might be fulfilled which was spoken of the Lord by the prophet, saying, <sup>23</sup>Behold, a virgin shall be with child, and shall bring forth a son, and they shall call his name Emmanuel, which being interpreted is, God with us. <sup>24</sup>Then Joseph being raised from sleep did as the angel of the Lord had bidden him, and took unto him his wife: <sup>25</sup>And knew her not till she had brought forth her firstborn son: and he called his name JESUS.",
       "scan_pages": [
         "bezae/bezae-matt-1-003v.jpg"
-      ]
+      ],
+      "scan_note": "Page from the NTVMR transcription (docID 20005): verses 20-25 on fol. 3v."
     }
   ],
-  "translator_notes": [],
+  "translator_notes": [
+    "Codex Bezae is bilingual: at each opening the Greek is on the left-hand (verso) page and the Latin on the facing right-hand (recto) page. Only the Greek pages are shown here; the Latin column is not included."
+  ],
   "verification": {
     "scan_source": "Cambridge University Library IIIF (images.lib.cam.ac.uk)",
     "scan_license": "CC BY-NC 3.0",
     "scan_manuscript": "Codex Bezae (MS Nn.2.41, 5th c., Cambridge UL)",
-    "scan_mapping": "NTVMR verse-level page index (CC BY 4.0)",
+    "scan_mapping": "Verse-level, from the NTVMR page transcriptions for docID 20005 (one TEI file per page): every verse, or each part of a verse that crosses a page, is assigned to the page whose transcription contains it; folio (Greek verso pages only) -> Cambridge University Library image of that folio. Each section lists every page its verses are written on. Checked 2026-11-12 by scripts/qc_swap_ntvmr_transcriptions.py.",
     "scan_local_paths": [
       "bezae/bezae-matt-1-003v.jpg"
     ],
@@ -30,6 +33,12 @@
     "original_text_license": "public domain",
     "translation_source": "bible-api.com (KJV)",
     "translation_license": "public domain",
-    "verified_date": "2026-04-14"
+    "verified_date": "2026-11-12",
+    "section_pages_verified": true,
+    "verses_not_in_manuscript": "",
+    "verses_lost_in_manuscript": "",
+    "verses_not_shown_no_image": "",
+    "primary_greek": "tischendorf",
+    "original_text_note": "Critical edition text (Tischendorf 8th edition), not a transcription of this manuscript. The NTVMR transcription of this chapter comes partly from pages whose files state \"All rights reserved by the INTF\", so the Greek shown is Tischendorf's edition."
   }
 }

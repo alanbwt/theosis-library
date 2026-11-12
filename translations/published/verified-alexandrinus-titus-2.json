@@ -2,47 +2,37 @@
   "id": "verified-alexandrinus-titus-2",
   "title": "Titus, Chapter 2 (Codex Alexandrinus)",
   "slug": "verified-alexandrinus-titus-2",
-  "language": "Greek (Tischendorf) / English (KJV)",
-  "source": "Codex Alexandrinus via 1909 British Museum facsimile (Internet Archive) + NTVMR verse mapping + Tischendorf + KJV",
-  "description": "Titus 2 from Codex Alexandrinus (5th c.). Page-specific folios via NTVMR, verified against the facsimile's printed verse captions.",
-  "introduction": "<p>Titus 2 from <strong>Codex Alexandrinus</strong> (GA 02), a fifth-century Greek Bible held by the British Library (Royal MS 1 D. VIII). In the New Testament it is the chief witness to the Byzantine text in the Gospels and to the Alexandrian text in the rest of the New Testament. Its New Testament volume lacks Matthew 1:1-25:5, John 6:50-8:52 and 2 Corinthians 4:13-12:6.</p><p>This entry meets the strict three-criteria standard of the Theosis Library:</p><ol><li><strong>Manuscript scan:</strong> the actual page(s) of Codex Alexandrinus containing this passage (folios 148r, 148v), reproduced from the British Museum's 1909 photographic facsimile edited by F. G. Kenyon, as digitised by the Getty Research Institute for the Internet Archive. The facsimile prints the verse range beneath each plate; that printed range was read for every page used and agrees with the INTF's NTVMR verse-level page index (CC BY 4.0), which supplies the page for each section.</li><li><strong>Original text:</strong> Greek from Tischendorf's 8th critical edition (1869, public domain). This is an edition, not a transcription of the manuscript: Alexandrinus is written in unaccented majuscules with nomina sacra, and its readings differ from Tischendorf in places. Where the two differ, the page image is what the manuscript actually says.</li><li><strong>English translation:</strong> the King James Version (1611), retrieved verbatim from the public-domain bible-api.com endpoint.</li></ol>",
+  "language": "Greek (Codex Alexandrinus transcription) / English (KJV)",
+  "source": "Codex Alexandrinus page images + NTVMR transcription (CC BY 4.0) + Tischendorf 8th edition + KJV",
+  "description": "Titus 2 from Codex Alexandrinus (5th c., British Library, Royal MS 1 D. VIII), shown on the 1909 British Museum photographic facsimile. The Greek is a letter-by-letter transcription of the manuscript (NTVMR, CC BY 4.0), with Tischendorf's edition for comparison and the King James Version in English; each section is shown on the page that carries it.",
+  "introduction": "<p>Titus 2 from <strong>Codex Alexandrinus</strong> (GA 02), a fifth-century Greek Bible held by the British Library (Royal MS 1 D. VIII). In the New Testament it is the chief witness to the Byzantine text in the Gospels and to the Alexandrian text in the rest of the New Testament. Its New Testament volume lacks Matthew 1:1-25:5, John 6:50-8:52 and 2 Corinthians 4:13-12:6.</p><p>This entry meets the strict three-criteria standard of the Theosis Library:</p><ol><li><strong>Manuscript scan:</strong> the actual page(s) of Codex Alexandrinus containing this passage (folios 148r, 148v), reproduced from the British Museum's 1909 photographic facsimile edited by F. G. Kenyon, as digitised by the Getty Research Institute for the Internet Archive. The facsimile prints the verse range beneath each plate; that printed range was read for every page used and agrees with the INTF's NTVMR verse-level page index (CC BY 4.0). The page for each section now comes from the NTVMR transcription itself, which records the page and column on which every verse is written.</li><li><strong>Original text:</strong> the manuscript's own text, from a diplomatic transcription (see Greek text below), with Tischendorf's 8th critical edition (1869) for comparison.</li><li><strong>English translation:</strong> the King James Version (1611), retrieved verbatim from the public-domain bible-api.com endpoint.</li></ol><p><strong>Greek text:</strong> a diplomatic transcription of Codex Alexandrinus made by the Institut für Neutestamentliche Textforschung (INTF), Münster, for the New Testament Virtual Manuscript Room (NTVMR), published under a Creative Commons Attribution 4.0 licence. It gives the letters as the first scribe wrote them: no accents or breathings, the scribe's own spelling, and the sacred names in their contracted form (θς for θεος, ις for ιησους, κς for κυριος; the overline is not reproduced). Corrections by later hands are not shown. Letters in square brackets are not legible on the page and were restored by the transcribers, a dot under a letter marks an uncertain reading, and [...] marks text lost to damage. Beneath each section, for comparison, is Tischendorf's 8th critical edition (1869). Where the two differ, the transcription is what the manuscript says. Each section is shown with the page on which the transcription places its verses.</p>",
   "translator_notes": [],
   "translation": [
     {
-      "section": "2.1-5",
-      "original_ref": "Titus 2:1-5",
-      "original_text": "<sup>1</sup>Σὺ δὲ λάλει ἃ πρέπει τῇ ὑγιαινούσῃ διδασκαλίᾳ. <sup>2</sup>πρεσβύτας νηφαλίους εἶναι, σεμνούς, σώφρονας, ὑγιαίνοντας τῇ πίστει, τῇ ἀγάπῃ, τῇ ὑπομονῇ. <sup>3</sup>πρεσβύτιδας ὡσαύτως ἐν καταστήματι ἱεροπρεπεῖς, μὴ διαβόλους μὴ οἴνῳ πολλῷ δεδουλωμένας, καλοδιδασκάλους, <sup>4</sup>ἵνα σωφρονίζωσιν τὰς νέας φιλάνδρους εἶναι, φιλοτέκνους, <sup>5</sup>σώφρονας, ἁγνάς, οἰκουργούς ἀγαθάς, ὑποτασσομένας τοῖς ἰδίοις ἀνδράσιν, ἵνα μὴ ὁ λόγος τοῦ θεοῦ βλασφημῆται.",
-      "text": "<sup>1</sup>But speak thou the things which become sound doctrine: <sup>2</sup>That the aged men be sober, grave, temperate, sound in faith, in charity, in patience. <sup>3</sup>The aged women likewise, that\nthey be in behaviour as becometh holiness, not false accusers, not given to much wine, teachers of good things; <sup>4</sup>That they may teach the young women to be sober, to love their husbands, to love their children, <sup>5</sup>To be discreet, chaste, keepers at home, good, obedient to their own husbands, that the word of God be not blasphemed.",
+      "section": "2.1-12",
+      "original_ref": "Titus 2:1-12",
+      "original_text": "<sup>1</sup>συ δε λαλει α πρεπει τη υγιαινουση διδασκαλεια · <sup>2</sup>πρεσβυτας νηφαλιους ειναι · σεμνους · σωφρονας υγιαινοντας τη πιστει τη αγαπη τη υπομονη · <sup>3</sup>πρεσβυτιδας ωσαυτως εν καταστηματι ιεροπρεπεις · μη διαβολους · μηδε οινω πολλω δεδουλωμενας καλοδιδασκαλους <sup>4</sup>ινα σωφρονιζουσιν τας νεας φιλανδρους ειναι φιλοτεκνους <sup>5</sup>σωφρονας αγνας οικουργους αγαθας υποτασσομενας τοις ιδιοις ανδρασιν · ινα μη ο λογος του θυ βλασφημηται · <sup>6</sup>τους νεωτερους ωσαυτως παρακαλει σωφρονειν · <sup>7</sup>περι παντα σεαυτον παρεχομενος τυπον καλων εργων εν τη διδασκαλεια αφθοριαν σεμνοτητα <sup>8</sup>λογον υγιη ακαταγνωστον · ινα ο εξ εναντιας εντραπη μηδεν εχων λεγειν περι υμων φαυλον · <sup>9</sup>δουλους δεσποταις ιδιοις υποτασσεσθαι · εν πασιν ευαρεστους ειναι · μη αντιλεγοντας <sup>10</sup>μη νοσφιζομενους · αλλα πασαν πιστιν ενδιγνυμενους αγαθην ινα την διδασκαλειαν την του σρς ημων θυ κοσμωσιν εν πασιν · <sup>11</sup>επεφανη γαρ η χαρις του θυ σωτηριος [...] πασιν ανοις <sup>12</sup>παιδευουσα ημας · ινα αρνησαμενοι την ασεβειαν και τας κοσμικας επιθυμιας σωφρονως και δικαιως και ευσεβως ζησωμεν εν τω νυν αιωνι",
+      "text": "<sup>1</sup>But speak thou the things which become sound doctrine: <sup>2</sup>That the aged men be sober, grave, temperate, sound in faith, in charity, in patience. <sup>3</sup>The aged women likewise, that\nthey be in behaviour as becometh holiness, not false accusers, not given to much wine, teachers of good things; <sup>4</sup>That they may teach the young women to be sober, to love their husbands, to love their children, <sup>5</sup>To be discreet, chaste, keepers at home, good, obedient to their own husbands, that the word of God be not blasphemed. <sup>6</sup>Young men likewise exhort to be sober minded. <sup>7</sup>In all things shewing thyself a pattern of good works: in doctrine\nshewing uncorruptness, gravity, sincerity, <sup>8</sup>Sound speech, that cannot be condemned; that he that is of the contrary part may be ashamed, having no evil thing to say of you. <sup>9</sup>Exhort servants to be obedient unto their own masters,\nand to please\nthem well in all\nthings; not answering again; <sup>10</sup>Not purloining, but shewing all good fidelity; that they may adorn the doctrine of God our Saviour in all things. <sup>11</sup>For the grace of God that bringeth salvation hath appeared to all men, <sup>12</sup>Teaching us that, denying ungodliness and worldly lusts, we should live soberly, righteously, and godly, in this present world;",
       "scan_pages": [
         "alexandrinus/alex-f148r-leaf259.jpg"
       ],
+      "scan_note": "Page from the NTVMR transcription (docID 20002): verses 1-12 on fol. 148r (facsimile leaf 259), col. 2.",
+      "edition_text": "<sup>1</sup>Σὺ δὲ λάλει ἃ πρέπει τῇ ὑγιαινούσῃ διδασκαλίᾳ. <sup>2</sup>πρεσβύτας νηφαλίους εἶναι, σεμνούς, σώφρονας, ὑγιαίνοντας τῇ πίστει, τῇ ἀγάπῃ, τῇ ὑπομονῇ. <sup>3</sup>πρεσβύτιδας ὡσαύτως ἐν καταστήματι ἱεροπρεπεῖς, μὴ διαβόλους μὴ οἴνῳ πολλῷ δεδουλωμένας, καλοδιδασκάλους, <sup>4</sup>ἵνα σωφρονίζωσιν τὰς νέας φιλάνδρους εἶναι, φιλοτέκνους, <sup>5</sup>σώφρονας, ἁγνάς, οἰκουργούς ἀγαθάς, ὑποτασσομένας τοῖς ἰδίοις ἀνδράσιν, ἵνα μὴ ὁ λόγος τοῦ θεοῦ βλασφημῆται. <sup>6</sup>Τοὺς νεωτέρους ὡσαύτως παρακάλει σωφρονεῖν <sup>7</sup>περὶ πάντα, σεαυτὸν παρεχόμενος τύπον καλῶν ἔργων, ἐν τῇ διδασκαλίᾳ ἀφθορίαν, σεμνότητα, <sup>8</sup>λόγον ὑγιῆ ἀκατάγνωστον, ἵνα ὁ ἐξ ἐναντίας ἐντραπῇ μηδὲν ἔχων λέγειν περὶ ἡμῶν φαῦλον. <sup>9</sup>Δούλους ἰδίοις δεσπόταις ὑποτάσσεσθαι ἐν πᾶσιν, εὐαρέστους εἶναι, μὴ ἀντιλέγοντας, <sup>10</sup>μὴ νοσφιζομένους, ἀλλὰ πᾶσαν πίστιν ἐνδεικνυμένους ἀγαθήν, ἵνα τὴν διδασκαλίαν τὴν τοῦ σωτῆρος ἡμῶν θεοῦ κοσμῶσιν ἐν πᾶσιν. <sup>11</sup>Ἐπεφάνη γὰρ ἡ χάρις τοῦ θεοῦ σωτήριος πᾶσιν ἀνθρώποις, <sup>12</sup>παιδεύουσα ἡμᾶς ἵνα ἀρνησάμενοι τὴν ἀσέβειαν καὶ τὰς κοσμικὰς ἐπιθυμίας σωφρόνως καὶ δικαίως καὶ εὐσεβῶς ζήσωμεν ἐν τῷ νῦν αἰῶνι,",
       "scan_folios": [
         "fol. 148r (facsimile leaf 259; NTVMR index: Titus inscriptio; Titus 1:1-16; Titus 2:1-12; printed caption: Tit. i. 1-ii. 12)"
       ]
     },
     {
-      "section": "2.6-10",
-      "original_ref": "Titus 2:6-10",
-      "original_text": "<sup>6</sup>Τοὺς νεωτέρους ὡσαύτως παρακάλει σωφρονεῖν <sup>7</sup>περὶ πάντα, σεαυτὸν παρεχόμενος τύπον καλῶν ἔργων, ἐν τῇ διδασκαλίᾳ ἀφθορίαν, σεμνότητα, <sup>8</sup>λόγον ὑγιῆ ἀκατάγνωστον, ἵνα ὁ ἐξ ἐναντίας ἐντραπῇ μηδὲν ἔχων λέγειν περὶ ἡμῶν φαῦλον. <sup>9</sup>Δούλους ἰδίοις δεσπόταις ὑποτάσσεσθαι ἐν πᾶσιν, εὐαρέστους εἶναι, μὴ ἀντιλέγοντας, <sup>10</sup>μὴ νοσφιζομένους, ἀλλὰ πᾶσαν πίστιν ἐνδεικνυμένους ἀγαθήν, ἵνα τὴν διδασκαλίαν τὴν τοῦ σωτῆρος ἡμῶν θεοῦ κοσμῶσιν ἐν πᾶσιν.",
-      "text": "<sup>6</sup>Young men likewise exhort to be sober minded. <sup>7</sup>In all things shewing thyself a pattern of good works: in doctrine\nshewing uncorruptness, gravity, sincerity, <sup>8</sup>Sound speech, that cannot be condemned; that he that is of the contrary part may be ashamed, having no evil thing to say of you. <sup>9</sup>Exhort servants to be obedient unto their own masters,\nand to please\nthem well in all\nthings; not answering again; <sup>10</sup>Not purloining, but shewing all good fidelity; that they may adorn the doctrine of God our Saviour in all things.",
+      "section": "2.13-15",
+      "original_ref": "Titus 2:13-15",
+      "original_text": "<sup>13</sup>προσδεχομενοι την μακαριαν ελπιδα και επιφανειαν της δοξης του μεγαλου θυ · και σρς ημων ιυ χυ <sup>14</sup>ος εδωκεν εαυτον υπερ ημων · ινα λυτρωσηται ημας απο πασης ανομιας και καθαριση εαυτω λαον περιουσιον ζηλωτην καλων εργων <sup>15</sup>ταυτα διδασκε και παρακαλει και ελεγχε μετα πασης επιταγης μηδεις σου περιφρονειτω",
+      "text": "<sup>13</sup>Looking for that blessed hope, and the glorious appearing of the great God and our Saviour Jesus Christ; <sup>14</sup>Who gave himself for us, that he might redeem us from all iniquity, and purify unto himself a peculiar people, zealous of good works. <sup>15</sup>These things speak, and exhort, and rebuke with all authority. Let no man despise thee.",
       "scan_pages": [
-        "alexandrinus/alex-f148r-leaf259.jpg"
-      ],
-      "scan_folios": [
-        "fol. 148r (facsimile leaf 259; NTVMR index: Titus inscriptio; Titus 1:1-16; Titus 2:1-12; printed caption: Tit. i. 1-ii. 12)"
-      ]
-    },
-    {
-      "section": "2.11-15",
-      "original_ref": "Titus 2:11-15",
-      "original_text": "<sup>11</sup>Ἐπεφάνη γὰρ ἡ χάρις τοῦ θεοῦ σωτήριος πᾶσιν ἀνθρώποις, <sup>12</sup>παιδεύουσα ἡμᾶς ἵνα ἀρνησάμενοι τὴν ἀσέβειαν καὶ τὰς κοσμικὰς ἐπιθυμίας σωφρόνως καὶ δικαίως καὶ εὐσεβῶς ζήσωμεν ἐν τῷ νῦν αἰῶνι, <sup>13</sup>προσδεχόμενοι τὴν μακαρίαν ἐλπίδα καὶ ἐπιφάνειαν τῆς δόξης τοῦ μεγάλου θεοῦ καὶ σωτῆρος ἡμῶν Χριστοῦ Ἰησοῦ, <sup>14</sup>ὃς ἔδωκεν ἑαυτὸν ὑπὲρ ἡμῶν ἵνα λυτρώσηται ἡμᾶς ἀπὸ πάσης ἀνομίας καὶ καθαρίσῃ ἑαυτῷ λαὸν περιούσιον, ζηλωτὴν καλῶν ἔργων. <sup>15</sup>Ταῦτα λάλει καὶ παρακάλει καὶ ἔλεγχε μετὰ πάσης ἐπιταγῆς· μηδείς σου περιφρονείτω.",
-      "text": "<sup>11</sup>For the grace of God that bringeth salvation hath appeared to all men, <sup>12</sup>Teaching us that, denying ungodliness and worldly lusts, we should live soberly, righteously, and godly, in this present world; <sup>13</sup>Looking for that blessed hope, and the glorious appearing of the great God and our Saviour Jesus Christ; <sup>14</sup>Who gave himself for us, that he might redeem us from all iniquity, and purify unto himself a peculiar people, zealous of good works. <sup>15</sup>These things speak, and exhort, and rebuke with all authority. Let no man despise thee.",
-      "scan_pages": [
-        "alexandrinus/alex-f148r-leaf259.jpg",
         "alexandrinus/alex-f148v-leaf260.jpg"
       ],
+      "scan_note": "Page from the NTVMR transcription (docID 20002): verses 13-15 on fol. 148v (facsimile leaf 260), col. 1.",
+      "edition_text": "<sup>13</sup>προσδεχόμενοι τὴν μακαρίαν ἐλπίδα καὶ ἐπιφάνειαν τῆς δόξης τοῦ μεγάλου θεοῦ καὶ σωτῆρος ἡμῶν Χριστοῦ Ἰησοῦ, <sup>14</sup>ὃς ἔδωκεν ἑαυτὸν ὑπὲρ ἡμῶν ἵνα λυτρώσηται ἡμᾶς ἀπὸ πάσης ἀνομίας καὶ καθαρίσῃ ἑαυτῷ λαὸν περιούσιον, ζηλωτὴν καλῶν ἔργων. <sup>15</sup>Ταῦτα λάλει καὶ παρακάλει καὶ ἔλεγχε μετὰ πάσης ἐπιταγῆς· μηδείς σου περιφρονείτω.",
       "scan_folios": [
-        "fol. 148r (facsimile leaf 259; NTVMR index: Titus inscriptio; Titus 1:1-16; Titus 2:1-12; printed caption: Tit. i. 1-ii. 12)",
         "fol. 148v (facsimile leaf 260; NTVMR index: Titus 2:13-15; Titus 3:1-15; Titus subscriptio; printed caption: Tit. ii. 13-iii. 15)"
       ]
     }
@@ -51,7 +41,7 @@
     "scan_source": "Internet Archive, 'The Codex Alexandrinus (Royal MS. 1 D. V-VIII) in reduced photographic facsimile', vol. 1: New Testament (British Museum, 1909), item codexalexandrinu01unse",
     "scan_license": "Public domain: 1909 British Museum photographic facsimile (ed. F. G. Kenyon), digitised by the Getty Research Institute for the Internet Archive",
     "scan_manuscript": "Codex Alexandrinus (British Library Royal MS 1 D. VIII, GA 02, 5th c.)",
-    "scan_mapping": "NTVMR verse-level page index for docID 20002 (INTF, CC BY 4.0), each page confirmed by OCR of the verse caption printed under the facsimile plate; first verse of the chapter also checked against CSNTM's GA_02 verse index",
+    "scan_mapping": "Verse-level, from the NTVMR page transcriptions for docID 20002 (one TEI file per page): every verse, or each part of a verse that crosses a page, is assigned to the page whose transcription contains it; NTVMR page -> 1909 British Museum facsimile leaf (leaf = 17 + page ordinal from fol. 26r, as in import_alexandrinus.py), each leaf's printed verse caption read and recorded in page_captions. Each section lists every page its verses are written on. Checked 2026-11-12 by scripts/qc_swap_ntvmr_transcriptions.py.",
     "scan_folios": [
       "148r",
       "148v"
@@ -92,11 +82,23 @@
       }
     ],
     "verses_absent_from_manuscript": "",
-    "original_text_source": "bolls.life (TISCH = Tischendorf 8)",
-    "original_text_license": "public domain (1869)",
-    "original_text_note": "Critical edition text, not a transcription of the manuscript",
+    "original_text_source": "NTVMR transcription of GA 02 (docID 20002), INTF Münster, per page: https://ntvmr.uni-muenster.de/community/vmr/api/transcript/get/?docID=20002&pageID=<pageID>&format=txt",
+    "original_text_license": "CC BY 4.0 (stated in the TEI header of each transcription file used)",
+    "original_text_note": "Diplomatic transcription of this manuscript. Letters as the first scribe wrote them (corrections by later hands are not shown); no accents or breathings; the scribe's spelling kept; nomina sacra in their contracted form without the overline (e.g. θς, ις, κς); letters the transcribers restored where the page is damaged in square brackets; uncertain letters with a dot below; [...] for text lost to damage.",
     "translation_source": "bible-api.com (KJV)",
     "translation_license": "public domain (1611)",
-    "verified_date": "2026-09-05"
+    "verified_date": "2026-11-12",
+    "section_pages_verified": true,
+    "verses_not_in_manuscript": "",
+    "verses_lost_in_manuscript": "",
+    "verses_not_shown_no_image": "",
+    "primary_greek": "ntvmr_transcription",
+    "original_text_attribution": "Institut für Neutestamentliche Textforschung (INTF), Münster, New Testament Virtual Manuscript Room",
+    "original_text_pages": [
+      1300,
+      1301
+    ],
+    "edition_text_source": "bolls.life (TISCH = Tischendorf 8)",
+    "edition_text_license": "public domain (1869)"
   }
 }

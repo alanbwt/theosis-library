@@ -252,6 +252,19 @@ def main():
             original_lang_label = "Greek · Codex Sinaiticus transcription" if uses_csp else "Greek · Tischendorf 8"
             original_lang_code = "grc"
 
+        # NT codices upgraded to the manuscript's own transcription (scripts/qc_swap_ntvmr_transcriptions.py)
+        pg = pub.get("verification", {}).get("primary_greek")
+        ms_names = {"verified-vaticanus-": "Codex Vaticanus", "verified-bezae-": "Codex Bezae",
+                    "verified-alexandrinus-": "Codex Alexandrinus", "verified-washingtonianus-": "Codex Washingtonianus"}
+        for pre, nm in ms_names.items():
+            if tid.startswith(pre):
+                if pg == "ntvmr_transcription":
+                    original_lang_label = f"Greek · {nm} transcription (NTVMR)"
+                    critical_edition = f"{nm} transcription, NTVMR (INTF Münster, CC BY 4.0); Tischendorf 8th edition for comparison"
+                elif pg == "igntp_transcription":
+                    original_lang_label = f"Greek · {nm} transcription (IGNTP)"
+                    critical_edition = f"{nm} transcription, IGNTP (CC BY 4.0); Tischendorf 8th edition for comparison"
+                break
         translator_name = pub.get("verification", {}).get("translator") or translator_name
         html = template.render(
             title=pub.get("title", meta.get("title", tid)),

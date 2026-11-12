@@ -2,56 +2,36 @@
   "id": "verified-alexandrinus-2tim-3",
   "title": "2 Timothy, Chapter 3 (Codex Alexandrinus)",
   "slug": "verified-alexandrinus-2tim-3",
-  "language": "Greek (Tischendorf) / English (KJV)",
-  "source": "Codex Alexandrinus via 1909 British Museum facsimile (Internet Archive) + NTVMR verse mapping + Tischendorf + KJV",
-  "description": "2 Timothy 3 from Codex Alexandrinus (5th c.). Page-specific folios via NTVMR, verified against the facsimile's printed verse captions.",
-  "introduction": "<p>2 Timothy 3 from <strong>Codex Alexandrinus</strong> (GA 02), a fifth-century Greek Bible held by the British Library (Royal MS 1 D. VIII). In the New Testament it is the chief witness to the Byzantine text in the Gospels and to the Alexandrian text in the rest of the New Testament. Its New Testament volume lacks Matthew 1:1-25:5, John 6:50-8:52 and 2 Corinthians 4:13-12:6.</p><p>This entry meets the strict three-criteria standard of the Theosis Library:</p><ol><li><strong>Manuscript scan:</strong> the actual page(s) of Codex Alexandrinus containing this passage (folio 147r), reproduced from the British Museum's 1909 photographic facsimile edited by F. G. Kenyon, as digitised by the Getty Research Institute for the Internet Archive. The facsimile prints the verse range beneath each plate; that printed range was read for every page used and agrees with the INTF's NTVMR verse-level page index (CC BY 4.0), which supplies the page for each section.</li><li><strong>Original text:</strong> Greek from Tischendorf's 8th critical edition (1869, public domain). This is an edition, not a transcription of the manuscript: Alexandrinus is written in unaccented majuscules with nomina sacra, and its readings differ from Tischendorf in places. Where the two differ, the page image is what the manuscript actually says.</li><li><strong>English translation:</strong> the King James Version (1611), retrieved verbatim from the public-domain bible-api.com endpoint.</li></ol>",
+  "language": "Greek (Codex Alexandrinus transcription) / English (KJV)",
+  "source": "Codex Alexandrinus page images + NTVMR transcription (CC BY 4.0) + Tischendorf 8th edition + KJV",
+  "description": "2 Timothy 3 from Codex Alexandrinus (5th c., British Library, Royal MS 1 D. VIII), shown on the 1909 British Museum photographic facsimile. The Greek is a letter-by-letter transcription of the manuscript (NTVMR, CC BY 4.0), with Tischendorf's edition for comparison and the King James Version in English; each section is shown on the page that carries it.",
+  "introduction": "<p>2 Timothy 3 from <strong>Codex Alexandrinus</strong> (GA 02), a fifth-century Greek Bible held by the British Library (Royal MS 1 D. VIII). In the New Testament it is the chief witness to the Byzantine text in the Gospels and to the Alexandrian text in the rest of the New Testament. Its New Testament volume lacks Matthew 1:1-25:5, John 6:50-8:52 and 2 Corinthians 4:13-12:6.</p><p>This entry meets the strict three-criteria standard of the Theosis Library:</p><ol><li><strong>Manuscript scan:</strong> the actual page(s) of Codex Alexandrinus containing this passage (folio 147r), reproduced from the British Museum's 1909 photographic facsimile edited by F. G. Kenyon, as digitised by the Getty Research Institute for the Internet Archive. The facsimile prints the verse range beneath each plate; that printed range was read for every page used and agrees with the INTF's NTVMR verse-level page index (CC BY 4.0). The page for each section now comes from the NTVMR transcription itself, which records the page and column on which every verse is written.</li><li><strong>Original text:</strong> the manuscript's own text, from a diplomatic transcription (see Greek text below), with Tischendorf's 8th critical edition (1869) for comparison.</li><li><strong>English translation:</strong> the King James Version (1611), retrieved verbatim from the public-domain bible-api.com endpoint.</li></ol><p><strong>Greek text:</strong> a diplomatic transcription of Codex Alexandrinus made by the Institut für Neutestamentliche Textforschung (INTF), Münster, for the New Testament Virtual Manuscript Room (NTVMR), published under a Creative Commons Attribution 4.0 licence. It gives the letters as the first scribe wrote them: no accents or breathings, the scribe's own spelling, and the sacred names in their contracted form (θς for θεος, ις for ιησους, κς for κυριος; the overline is not reproduced). Corrections by later hands are not shown. Letters in square brackets are not legible on the page and were restored by the transcribers, a dot under a letter marks an uncertain reading, and [...] marks text lost to damage. Beneath each section, for comparison, is Tischendorf's 8th critical edition (1869). Where the two differ, the transcription is what the manuscript says. Each section is shown with the page on which the transcription places its verses.</p>",
   "translator_notes": [],
   "translation": [
     {
-      "section": "3.1-5",
-      "original_ref": "2 Timothy 3:1-5",
-      "original_text": "<sup>1</sup>Τοῦτο δὲ γίνωσκε, ὅτι ἐν ἐσχάταις ἡμέραις ἐνστήσονται καιροὶ χαλεποί· <sup>2</sup>ἔσονται γὰρ οἱ ἄνθρωποι φίλαυτοι, φιλάργυροι, ἀλαζόνες, ὑπερήφανοι, βλάσφημοι, γονεῦσιν ἀπειθεῖς, ἀχάριστοι, ἀνόσιοι, <sup>3</sup>ἄστοργοι, ἄσπονδοι, διάβολοι, ἀκρατεῖς, ἀνήμεροι, ἀφιλάγαθοι, <sup>4</sup>προδόται, προπετεῖς, τετυφωμένοι, φιλήδονοι μᾶλλον ἢ φιλόθεοι, <sup>5</sup>ἔχοντες μόρφωσιν εὐσεβείας τὴν δὲ δύναμιν αὐτῆς ἠρνημένοι· καὶ τούτους ἀποτρέπου.",
-      "text": "<sup>1</sup>This know also, that in the last days perilous times shall come. <sup>2</sup>For men shall be lovers of their own selves, covetous, boasters, proud, blasphemers, disobedient to parents, unthankful, unholy, <sup>3</sup>Without natural affection, trucebreakers, false accusers, incontinent, fierce, despisers of those that are good, <sup>4</sup>Traitors, heady, highminded, lovers of pleasures more than lovers of God; <sup>5</sup>Having a form of godliness, but denying the power thereof: from such turn away.",
+      "section": "3.1-10",
+      "original_ref": "2 Timothy 3:1-10",
+      "original_text": "<sup>1</sup>τ̣ουτο δε γεινωσκετε οτι εν εσχαταις ημεραις ενστησονται καιροι χαλεποι <sup>2</sup>εσονται γαρ οι ανοι φιλαυτοι · φιλαργυροι αλαζονες · υπερηφανοι · βλασφημοι γονευσιν απιθεις · αχαριστοι · ανοσιοι · <sup>3</sup>αστοργοι · ασπονδοι · διαβολοι · ακρατεις · ανημεροι · φιλαγαθοι · <sup>4</sup>προδοται · προπετεις · τετυφωμενοι · φιληδονοι · μαλλον η φιλοθεοι · <sup>5</sup>εχοντες μορφωσιν ευσεβειας · την δε δυναμιν αυτης ηρνημενοι · και τουτους αποτρεπου · <sup>6</sup>εκ τουτων γαρ εσιν οι ενδυνοντες εις τας οικιας και αιχμαλωτιζοντες γυναικαρια σεσωρευμενα αμαρτιας αγομενα επιθυμιαις · και ηδοναις ποικιλαις <sup>7</sup>παντοτε μανθανοντα και μηδεποτε εις επιγνωσιν αληθειας ελθειν δυναμενα <sup>8</sup>ον τροπον δε ιαννης · και ιαμβρης αντεστησαν μωσει ουτως και ουτοι ανθιστανται τη αληθεια · ανοι κατεφθαρμενοι τον νουν αδοκιμοι περι την πιστιν · <sup>9</sup>αλλ ου προκοψουσιν επι πλιον · η γαρ διανοια αυτων εκδηλος εσται πασιν ως και η εκεινων εγενετο <sup>10</sup>συ δε παρηκολουθ̣ησας μου τη διδασκαλεια · τη αγωγη · τη προθεσει · τη πιστει τη μακροθυμια · τη υπομονη",
+      "text": "<sup>1</sup>This know also, that in the last days perilous times shall come. <sup>2</sup>For men shall be lovers of their own selves, covetous, boasters, proud, blasphemers, disobedient to parents, unthankful, unholy, <sup>3</sup>Without natural affection, trucebreakers, false accusers, incontinent, fierce, despisers of those that are good, <sup>4</sup>Traitors, heady, highminded, lovers of pleasures more than lovers of God; <sup>5</sup>Having a form of godliness, but denying the power thereof: from such turn away. <sup>6</sup>For of this sort are they which creep into houses, and lead captive silly women laden with sins, led away with divers lusts, <sup>7</sup>Ever learning, and never able to come to the knowledge of the truth. <sup>8</sup>Now as Jannes and Jambres withstood Moses, so do these also resist the truth: men of corrupt minds, reprobate concerning the faith. <sup>9</sup>But they shall proceed no further: for their folly shall be manifest unto all\nmen, as theirs also was. <sup>10</sup>But thou hast fully known my doctrine, manner of life, purpose, faith, longsuffering, charity, patience,",
       "scan_pages": [
         "alexandrinus/alex-f147r-leaf257.jpg"
       ],
+      "scan_note": "Page from the NTVMR transcription (docID 20002): verses 1-10 on fol. 147r (facsimile leaf 257), col. 1.",
+      "edition_text": "<sup>1</sup>Τοῦτο δὲ γίνωσκε, ὅτι ἐν ἐσχάταις ἡμέραις ἐνστήσονται καιροὶ χαλεποί· <sup>2</sup>ἔσονται γὰρ οἱ ἄνθρωποι φίλαυτοι, φιλάργυροι, ἀλαζόνες, ὑπερήφανοι, βλάσφημοι, γονεῦσιν ἀπειθεῖς, ἀχάριστοι, ἀνόσιοι, <sup>3</sup>ἄστοργοι, ἄσπονδοι, διάβολοι, ἀκρατεῖς, ἀνήμεροι, ἀφιλάγαθοι, <sup>4</sup>προδόται, προπετεῖς, τετυφωμένοι, φιλήδονοι μᾶλλον ἢ φιλόθεοι, <sup>5</sup>ἔχοντες μόρφωσιν εὐσεβείας τὴν δὲ δύναμιν αὐτῆς ἠρνημένοι· καὶ τούτους ἀποτρέπου. <sup>6</sup>ἐκ τούτων γάρ εἰσιν οἱ ἐνδύνοντες εἰς τὰς οἰκίας καὶ αἰχμαλωτίζοντες γυναικάρια σεσωρευμένα ἁμαρτίαις, ἀγόμενα ἐπιθυμίαις ποικίλαις, <sup>7</sup>πάντοτε μανθάνοντα καὶ μηδέποτε εἰς ἐπίγνωσιν ἀληθείας ἐλθεῖν δυνάμενα. <sup>8</sup>ὃν τρόπον δὲ Ἰάννης καὶ Ἰαμβρῆς ἀντέστησαν Μωϋσεῖ, οὕτως καὶ οὗτοι ἀνθίστανται τῇ ἀληθείᾳ, ἄνθρωποι κατεφθαρμένοι τὸν νοῦν, ἀδόκιμοι περὶ τὴν πίστιν· <sup>9</sup>ἀλλ’ οὐ προκόψουσιν ἐπὶ πλεῖον, ἡ γὰρ ἄνοια αὐτῶν ἔκδηλος ἔσται πᾶσιν, ὡς καὶ ἡ ἐκείνων ἐγένετο. <sup>10</sup>Σὺ δὲ παρηκολούθησάς μου τῇ διδασκαλίᾳ, τῇ ἀγωγῇ, τῇ προθέσει, τῇ πίστει, τῇ μακροθυμίᾳ, τῇ ἀγάπῃ, τῇ ὑπομονῇ,",
       "scan_folios": [
         "fol. 147r (facsimile leaf 257; NTVMR index: 2Tim 2:22-26; 2Tim 3:1-17; 2Tim 4:1-5; printed caption: 2 Tim. ii. 22—iv. 5)"
       ]
     },
     {
-      "section": "3.6-10",
-      "original_ref": "2 Timothy 3:6-10",
-      "original_text": "<sup>6</sup>ἐκ τούτων γάρ εἰσιν οἱ ἐνδύνοντες εἰς τὰς οἰκίας καὶ αἰχμαλωτίζοντες γυναικάρια σεσωρευμένα ἁμαρτίαις, ἀγόμενα ἐπιθυμίαις ποικίλαις, <sup>7</sup>πάντοτε μανθάνοντα καὶ μηδέποτε εἰς ἐπίγνωσιν ἀληθείας ἐλθεῖν δυνάμενα. <sup>8</sup>ὃν τρόπον δὲ Ἰάννης καὶ Ἰαμβρῆς ἀντέστησαν Μωϋσεῖ, οὕτως καὶ οὗτοι ἀνθίστανται τῇ ἀληθείᾳ, ἄνθρωποι κατεφθαρμένοι τὸν νοῦν, ἀδόκιμοι περὶ τὴν πίστιν· <sup>9</sup>ἀλλ’ οὐ προκόψουσιν ἐπὶ πλεῖον, ἡ γὰρ ἄνοια αὐτῶν ἔκδηλος ἔσται πᾶσιν, ὡς καὶ ἡ ἐκείνων ἐγένετο. <sup>10</sup>Σὺ δὲ παρηκολούθησάς μου τῇ διδασκαλίᾳ, τῇ ἀγωγῇ, τῇ προθέσει, τῇ πίστει, τῇ μακροθυμίᾳ, τῇ ἀγάπῃ, τῇ ὑπομονῇ,",
-      "text": "<sup>6</sup>For of this sort are they which creep into houses, and lead captive silly women laden with sins, led away with divers lusts, <sup>7</sup>Ever learning, and never able to come to the knowledge of the truth. <sup>8</sup>Now as Jannes and Jambres withstood Moses, so do these also resist the truth: men of corrupt minds, reprobate concerning the faith. <sup>9</sup>But they shall proceed no further: for their folly shall be manifest unto all\nmen, as theirs also was. <sup>10</sup>But thou hast fully known my doctrine, manner of life, purpose, faith, longsuffering, charity, patience,",
+      "section": "3.11-17",
+      "original_ref": "2 Timothy 3:11-17",
+      "original_text": "<sup>11</sup>τοις διωγμοις · τοις παθημασιν οια μοι εγενοντο εν αντιοχια · εν ικονιω · εν λυστροις · οιους διωγμους υπηνεγκα και εκ παντων με ερυσατο ο κς · <sup>12</sup>και παντες δε οι θελοντες ζην ευσεβως εν χω ιυ διωχθησονται <sup>13</sup>πονηροι δε ανοι · και γοητες προκοψουσιν · επι το χειρον πλανωντες και πλανωμενοι · <sup>14</sup>συ δε μενε εν οις εμαθες και επιστωθης · ειδως παρα τινων εμαθες · <sup>15</sup>και οτι απο βρεφους τα ιερα γραμματα οιδας τα δυναμενα σε σοφισαι · εις σωτηριαν δια πιστεως της εν χω ιυ · <sup>16</sup>πασα γραφη θεοπνευστος και ωφελειμος προς διδασκαλειαν · προς ελεγμον προς επανορθωσιν · προς παιδιαν την εν δικαιοσυνη · <sup>17</sup>ινα αρτιος η ο του θυ ανος προς παν εργον αγαθον εξηρτισμενος ·",
+      "text": "<sup>11</sup>Persecutions, afflictions, which came unto me at Antioch, at Iconium, at Lystra; what persecutions I endured: but out of\nthem all the Lord delivered me. <sup>12</sup>Yea, and all that will live godly in Christ Jesus shall suffer persecution. <sup>13</sup>But evil men and seducers shall wax worse and worse, deceiving, and being deceived. <sup>14</sup>But continue thou in the things which thou hast learned and hast been assured of, knowing of whom thou hast learned\nthem; <sup>15</sup>And that from a child thou hast known the holy scriptures, which are able to make thee wise unto salvation through faith which is in Christ Jesus. <sup>16</sup>All scripture\nis given by inspiration of God, and\nis\n profitable for doctrine, for reproof, for correction, for instruction in righteousness: <sup>17</sup>That the man of God may be perfect, throughly furnished unto all good works.",
       "scan_pages": [
         "alexandrinus/alex-f147r-leaf257.jpg"
       ],
-      "scan_folios": [
-        "fol. 147r (facsimile leaf 257; NTVMR index: 2Tim 2:22-26; 2Tim 3:1-17; 2Tim 4:1-5; printed caption: 2 Tim. ii. 22—iv. 5)"
-      ]
-    },
-    {
-      "section": "3.11-15",
-      "original_ref": "2 Timothy 3:11-15",
-      "original_text": "<sup>11</sup>τοῖς διωγμοῖς, τοῖς παθήμασιν, οἷά μοι ἐγένετο ἐν Ἀντιοχείᾳ, ἐν Ἰκονίῳ, ἐν Λύστροις· οἵους διωγμοὺς ὑπήνεγκα, καὶ ἐκ πάντων με ἐρύσατο ὁ κύριος. <sup>12</sup>καὶ πάντες δὲ οἱ θέλοντες ζῆν εὐσεβῶς ἐν Χριστῷ Ἰησοῦ διωχθήσονται. <sup>13</sup>Πονηροὶ δὲ ἄνθρωποι καὶ γόητες προκόψουσιν ἐπὶ τὸ χεῖρον, πλανῶντες καὶ πλανώμενοι. <sup>14</sup>σὺ δὲ μένε ἐν οἷς ἔμαθες καὶ ἐπιστώθης, εἰδὼς παρὰ τίνων ἔμαθες, <sup>15</sup>καὶ ὅτι ἀπὸ βρέφους ἱερὰ γράμματα οἶδας, τὰ δυνάμενά σε σοφίσαι εἰς σωτηρίαν διὰ πίστεως τῆς ἐν Χριστῷ Ἰησοῦ.",
-      "text": "<sup>11</sup>Persecutions, afflictions, which came unto me at Antioch, at Iconium, at Lystra; what persecutions I endured: but out of\nthem all the Lord delivered me. <sup>12</sup>Yea, and all that will live godly in Christ Jesus shall suffer persecution. <sup>13</sup>But evil men and seducers shall wax worse and worse, deceiving, and being deceived. <sup>14</sup>But continue thou in the things which thou hast learned and hast been assured of, knowing of whom thou hast learned\nthem; <sup>15</sup>And that from a child thou hast known the holy scriptures, which are able to make thee wise unto salvation through faith which is in Christ Jesus.",
-      "scan_pages": [
-        "alexandrinus/alex-f147r-leaf257.jpg"
-      ],
-      "scan_folios": [
-        "fol. 147r (facsimile leaf 257; NTVMR index: 2Tim 2:22-26; 2Tim 3:1-17; 2Tim 4:1-5; printed caption: 2 Tim. ii. 22—iv. 5)"
-      ]
-    },
-    {
-      "section": "3.16-17",
-      "original_ref": "2 Timothy 3:16-17",
-      "original_text": "<sup>16</sup>πᾶσα γραφὴ θεόπνευστος καὶ ὠφέλιμος πρὸς διδασκαλίαν, πρὸς ἐλεγμόν, πρὸς ἐπανόρθωσιν, πρὸς παιδείαν τὴν ἐν δικαιοσύνῃ, <sup>17</sup>ἵνα ἄρτιος ᾖ ὁ τοῦ θεοῦ ἄνθρωπος, πρὸς πᾶν ἔργον ἀγαθὸν ἐξηρτισμένος.",
-      "text": "<sup>16</sup>All scripture\nis given by inspiration of God, and\nis\n profitable for doctrine, for reproof, for correction, for instruction in righteousness: <sup>17</sup>That the man of God may be perfect, throughly furnished unto all good works.",
-      "scan_pages": [
-        "alexandrinus/alex-f147r-leaf257.jpg"
-      ],
+      "scan_note": "Page from the NTVMR transcription (docID 20002): verses 11-17 on fol. 147r (facsimile leaf 257), col. 2.",
+      "edition_text": "<sup>11</sup>τοῖς διωγμοῖς, τοῖς παθήμασιν, οἷά μοι ἐγένετο ἐν Ἀντιοχείᾳ, ἐν Ἰκονίῳ, ἐν Λύστροις· οἵους διωγμοὺς ὑπήνεγκα, καὶ ἐκ πάντων με ἐρύσατο ὁ κύριος. <sup>12</sup>καὶ πάντες δὲ οἱ θέλοντες ζῆν εὐσεβῶς ἐν Χριστῷ Ἰησοῦ διωχθήσονται. <sup>13</sup>Πονηροὶ δὲ ἄνθρωποι καὶ γόητες προκόψουσιν ἐπὶ τὸ χεῖρον, πλανῶντες καὶ πλανώμενοι. <sup>14</sup>σὺ δὲ μένε ἐν οἷς ἔμαθες καὶ ἐπιστώθης, εἰδὼς παρὰ τίνων ἔμαθες, <sup>15</sup>καὶ ὅτι ἀπὸ βρέφους ἱερὰ γράμματα οἶδας, τὰ δυνάμενά σε σοφίσαι εἰς σωτηρίαν διὰ πίστεως τῆς ἐν Χριστῷ Ἰησοῦ. <sup>16</sup>πᾶσα γραφὴ θεόπνευστος καὶ ὠφέλιμος πρὸς διδασκαλίαν, πρὸς ἐλεγμόν, πρὸς ἐπανόρθωσιν, πρὸς παιδείαν τὴν ἐν δικαιοσύνῃ, <sup>17</sup>ἵνα ἄρτιος ᾖ ὁ τοῦ θεοῦ ἄνθρωπος, πρὸς πᾶν ἔργον ἀγαθὸν ἐξηρτισμένος.",
       "scan_folios": [
         "fol. 147r (facsimile leaf 257; NTVMR index: 2Tim 2:22-26; 2Tim 3:1-17; 2Tim 4:1-5; printed caption: 2 Tim. ii. 22—iv. 5)"
       ]
@@ -61,7 +41,7 @@
     "scan_source": "Internet Archive, 'The Codex Alexandrinus (Royal MS. 1 D. V-VIII) in reduced photographic facsimile', vol. 1: New Testament (British Museum, 1909), item codexalexandrinu01unse",
     "scan_license": "Public domain: 1909 British Museum photographic facsimile (ed. F. G. Kenyon), digitised by the Getty Research Institute for the Internet Archive",
     "scan_manuscript": "Codex Alexandrinus (British Library Royal MS 1 D. VIII, GA 02, 5th c.)",
-    "scan_mapping": "NTVMR verse-level page index for docID 20002 (INTF, CC BY 4.0), each page confirmed by OCR of the verse caption printed under the facsimile plate; first verse of the chapter also checked against CSNTM's GA_02 verse index",
+    "scan_mapping": "Verse-level, from the NTVMR page transcriptions for docID 20002 (one TEI file per page): every verse, or each part of a verse that crosses a page, is assigned to the page whose transcription contains it; NTVMR page -> 1909 British Museum facsimile leaf (leaf = 17 + page ordinal from fol. 26r, as in import_alexandrinus.py), each leaf's printed verse caption read and recorded in page_captions. Each section lists every page its verses are written on. Checked 2026-11-12 by scripts/qc_swap_ntvmr_transcriptions.py.",
     "scan_folios": [
       "147r"
     ],
@@ -89,11 +69,22 @@
       }
     ],
     "verses_absent_from_manuscript": "",
-    "original_text_source": "bolls.life (TISCH = Tischendorf 8)",
-    "original_text_license": "public domain (1869)",
-    "original_text_note": "Critical edition text, not a transcription of the manuscript",
+    "original_text_source": "NTVMR transcription of GA 02 (docID 20002), INTF Münster, per page: https://ntvmr.uni-muenster.de/community/vmr/api/transcript/get/?docID=20002&pageID=<pageID>&format=txt",
+    "original_text_license": "CC BY 4.0 (stated in the TEI header of each transcription file used)",
+    "original_text_note": "Diplomatic transcription of this manuscript. Letters as the first scribe wrote them (corrections by later hands are not shown); no accents or breathings; the scribe's spelling kept; nomina sacra in their contracted form without the overline (e.g. θς, ις, κς); letters the transcribers restored where the page is damaged in square brackets; uncertain letters with a dot below; [...] for text lost to damage.",
     "translation_source": "bible-api.com (KJV)",
     "translation_license": "public domain (1611)",
-    "verified_date": "2026-09-05"
+    "verified_date": "2026-11-12",
+    "section_pages_verified": true,
+    "verses_not_in_manuscript": "",
+    "verses_lost_in_manuscript": "",
+    "verses_not_shown_no_image": "",
+    "primary_greek": "ntvmr_transcription",
+    "original_text_attribution": "Institut für Neutestamentliche Textforschung (INTF), Münster, New Testament Virtual Manuscript Room",
+    "original_text_pages": [
+      1290
+    ],
+    "edition_text_source": "bolls.life (TISCH = Tischendorf 8)",
+    "edition_text_license": "public domain (1869)"
   }
 }

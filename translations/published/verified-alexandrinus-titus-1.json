@@ -2,56 +2,50 @@
   "id": "verified-alexandrinus-titus-1",
   "title": "Titus, Chapter 1 (Codex Alexandrinus)",
   "slug": "verified-alexandrinus-titus-1",
-  "language": "Greek (Tischendorf) / English (KJV)",
-  "source": "Codex Alexandrinus via 1909 British Museum facsimile (Internet Archive) + NTVMR verse mapping + Tischendorf + KJV",
-  "description": "Titus 1 from Codex Alexandrinus (5th c.). Page-specific folios via NTVMR, verified against the facsimile's printed verse captions.",
-  "introduction": "<p>Titus 1 from <strong>Codex Alexandrinus</strong> (GA 02), a fifth-century Greek Bible held by the British Library (Royal MS 1 D. VIII). In the New Testament it is the chief witness to the Byzantine text in the Gospels and to the Alexandrian text in the rest of the New Testament. Its New Testament volume lacks Matthew 1:1-25:5, John 6:50-8:52 and 2 Corinthians 4:13-12:6.</p><p>This entry meets the strict three-criteria standard of the Theosis Library:</p><ol><li><strong>Manuscript scan:</strong> the actual page(s) of Codex Alexandrinus containing this passage (folio 148r), reproduced from the British Museum's 1909 photographic facsimile edited by F. G. Kenyon, as digitised by the Getty Research Institute for the Internet Archive. The facsimile prints the verse range beneath each plate; that printed range was read for every page used and agrees with the INTF's NTVMR verse-level page index (CC BY 4.0), which supplies the page for each section.</li><li><strong>Original text:</strong> Greek from Tischendorf's 8th critical edition (1869, public domain). This is an edition, not a transcription of the manuscript: Alexandrinus is written in unaccented majuscules with nomina sacra, and its readings differ from Tischendorf in places. Where the two differ, the page image is what the manuscript actually says.</li><li><strong>English translation:</strong> the King James Version (1611), retrieved verbatim from the public-domain bible-api.com endpoint.</li></ol>",
+  "language": "Greek (Codex Alexandrinus transcription) / English (KJV)",
+  "source": "Codex Alexandrinus page images + NTVMR transcription (CC BY 4.0) + Tischendorf 8th edition + KJV",
+  "description": "Titus 1 from Codex Alexandrinus (5th c., British Library, Royal MS 1 D. VIII), shown on the 1909 British Museum photographic facsimile. The Greek is a letter-by-letter transcription of the manuscript (NTVMR, CC BY 4.0), with Tischendorf's edition for comparison and the King James Version in English; each section is shown on the page that carries it.",
+  "introduction": "<p>Titus 1 from <strong>Codex Alexandrinus</strong> (GA 02), a fifth-century Greek Bible held by the British Library (Royal MS 1 D. VIII). In the New Testament it is the chief witness to the Byzantine text in the Gospels and to the Alexandrian text in the rest of the New Testament. Its New Testament volume lacks Matthew 1:1-25:5, John 6:50-8:52 and 2 Corinthians 4:13-12:6.</p><p>This entry meets the strict three-criteria standard of the Theosis Library:</p><ol><li><strong>Manuscript scan:</strong> the actual page(s) of Codex Alexandrinus containing this passage (folio 148r), reproduced from the British Museum's 1909 photographic facsimile edited by F. G. Kenyon, as digitised by the Getty Research Institute for the Internet Archive. The facsimile prints the verse range beneath each plate; that printed range was read for every page used and agrees with the INTF's NTVMR verse-level page index (CC BY 4.0). The page for each section now comes from the NTVMR transcription itself, which records the page and column on which every verse is written.</li><li><strong>Original text:</strong> the manuscript's own text, from a diplomatic transcription (see Greek text below), with Tischendorf's 8th critical edition (1869) for comparison.</li><li><strong>English translation:</strong> the King James Version (1611), retrieved verbatim from the public-domain bible-api.com endpoint.</li></ol><p><strong>Greek text:</strong> a diplomatic transcription of Codex Alexandrinus made by the Institut für Neutestamentliche Textforschung (INTF), Münster, for the New Testament Virtual Manuscript Room (NTVMR), published under a Creative Commons Attribution 4.0 licence. It gives the letters as the first scribe wrote them: no accents or breathings, the scribe's own spelling, and the sacred names in their contracted form (θς for θεος, ις for ιησους, κς for κυριος; the overline is not reproduced). Corrections by later hands are not shown. Letters in square brackets are not legible on the page and were restored by the transcribers, a dot under a letter marks an uncertain reading, and [...] marks text lost to damage. Beneath each section, for comparison, is Tischendorf's 8th critical edition (1869). Where the two differ, the transcription is what the manuscript says. Each section is shown with the page on which the transcription places its verses.</p>",
   "translator_notes": [],
   "translation": [
     {
-      "section": "1.1-5",
-      "original_ref": "Titus 1:1-5",
-      "original_text": "<sup>1</sup>Παῦλος δοῦλος θεοῦ, ἀπόστολος δὲ Ἰησοῦ Χριστοῦ κατὰ πίστιν ἐκλεκτῶν θεοῦ καὶ ἐπίγνωσιν ἀληθείας τῆς κατ’ εὐσέβειαν <sup>2</sup>ἐπ’ ἐλπίδι ζωῆς αἰωνίου, ἣν ἐπηγγείλατο ὁ ἀψευδὴς θεὸς πρὸ χρόνων αἰωνίων, <sup>3</sup>ἐφανέρωσεν δὲ καιροῖς ἰδίοις τὸν λόγον αὐτοῦ ἐν κηρύγματι ὃ ἐπιστεύθην ἐγὼ κατ’ ἐπιταγὴν τοῦ σωτῆρος ἡμῶν θεοῦ, <sup>4</sup>Τίτῳ γνησίῳ τέκνῳ κατὰ κοινὴν πίστιν· χάρις καὶ εἰρήνη ἀπὸ θεοῦ πατρὸς καὶ Χριστοῦ Ἰησοῦ τοῦ σωτῆρος ἡμῶν. <sup>5</sup>Τούτου χάριν ἀπέλιπόν σε ἐν Κρήτῃ, ἵνα τὰ λείποντα ἐπιδιορθώσῃ καὶ καταστήσῃς κατὰ πόλιν πρεσβυτέρους, ὡς ἐγώ σοι διεταξάμην,",
-      "text": "<sup>1</sup>Paul, a servant of God, and an apostle of Jesus Christ, according to the faith of God’s elect, and the acknowledging of the truth which is after godliness; <sup>2</sup>In hope of eternal life, which God, that cannot lie, promised before the world began; <sup>3</sup>But hath in due times manifested his word through preaching, which is committed unto me according to the commandment of God our Saviour; <sup>4</sup>To Titus,\nmine own son after the common faith: Grace, mercy,\nand peace, from God the Father and the Lord Jesus Christ our Saviour. <sup>5</sup>For this cause left I thee in Crete, that thou shouldest set in order the things that are wanting, and ordain elders in every city, as I had appointed thee:",
+      "section": "1.1-7",
+      "original_ref": "Titus 1:1-7",
+      "original_text": "<sup>1</sup>[παυλο]ς δουλος θυ αποστο[λος] [δε] χυ ιυ · κατα πιστιν εκλε[κτω]ν̣ θυ και επιγνωσιν αληθειας [της] [κ]ατ ευσεβειαν · <sup>2</sup>επ ελπιδι [ζωη]ς αιωνιου · ην επηγγειλα[το] [ο] [α]ψ̣ευδης θς προ χρονων [αιω]νιων · <sup>3</sup>εφανερωσεν δε [και]ροις ιδιοις τον λογον αυτου [εν] κηρυγματι · ο επιστευθην [εγ]ω κατ επιταγην του σρς ημων [θυ] <sup>4</sup>τιτω γνησιω τεκνω κατα [κ]οινην πιστιν · [χα]ρις ελεος ειρηνη απο θυ πρς και χυ ιυ του σρς ημων · <sup>5</sup>τ̣ουτου χαριν απελειπον σε εν κρητη ινα τα λιποντα επιδιορθωσης και καταστησης κατα πολιν πρεσβυτερους ως εγω σοι διεταξαμην · <sup>6</sup>ει τις εστιν ανεγκλητος μιας γυναικος ανηρ τεκνα εχων πιστα μη εν κατηγορια ασωτιας η ανυποτακτα · <sup>7</sup>δει γαρ τον επισκοπον ανεγκ̣λητον ειναι ως θυ οικονομον · μη αυθαδη · μη οργιλον μη παροινον · μη πληκτην · μη αισχροκερδη ·",
+      "text": "<sup>1</sup>Paul, a servant of God, and an apostle of Jesus Christ, according to the faith of God’s elect, and the acknowledging of the truth which is after godliness; <sup>2</sup>In hope of eternal life, which God, that cannot lie, promised before the world began; <sup>3</sup>But hath in due times manifested his word through preaching, which is committed unto me according to the commandment of God our Saviour; <sup>4</sup>To Titus,\nmine own son after the common faith: Grace, mercy,\nand peace, from God the Father and the Lord Jesus Christ our Saviour. <sup>5</sup>For this cause left I thee in Crete, that thou shouldest set in order the things that are wanting, and ordain elders in every city, as I had appointed thee: <sup>6</sup>If any be blameless, the husband of one wife, having faithful children not accused of riot or unruly. <sup>7</sup>For a bishop must be blameless, as the steward of God; not selfwilled, not soon angry, not given to wine, no striker, not given to filthy lucre;",
       "scan_pages": [
         "alexandrinus/alex-f148r-leaf259.jpg"
       ],
+      "scan_note": "Page from the NTVMR transcription (docID 20002): verses 1-7 on fol. 148r (facsimile leaf 259), col. 1.",
+      "edition_text": "<sup>1</sup>Παῦλος δοῦλος θεοῦ, ἀπόστολος δὲ Ἰησοῦ Χριστοῦ κατὰ πίστιν ἐκλεκτῶν θεοῦ καὶ ἐπίγνωσιν ἀληθείας τῆς κατ’ εὐσέβειαν <sup>2</sup>ἐπ’ ἐλπίδι ζωῆς αἰωνίου, ἣν ἐπηγγείλατο ὁ ἀψευδὴς θεὸς πρὸ χρόνων αἰωνίων, <sup>3</sup>ἐφανέρωσεν δὲ καιροῖς ἰδίοις τὸν λόγον αὐτοῦ ἐν κηρύγματι ὃ ἐπιστεύθην ἐγὼ κατ’ ἐπιταγὴν τοῦ σωτῆρος ἡμῶν θεοῦ, <sup>4</sup>Τίτῳ γνησίῳ τέκνῳ κατὰ κοινὴν πίστιν· χάρις καὶ εἰρήνη ἀπὸ θεοῦ πατρὸς καὶ Χριστοῦ Ἰησοῦ τοῦ σωτῆρος ἡμῶν. <sup>5</sup>Τούτου χάριν ἀπέλιπόν σε ἐν Κρήτῃ, ἵνα τὰ λείποντα ἐπιδιορθώσῃ καὶ καταστήσῃς κατὰ πόλιν πρεσβυτέρους, ὡς ἐγώ σοι διεταξάμην, <sup>6</sup>εἴ τίς ἐστιν ἀνέγκλητος, μιᾶς γυναικὸς ἀνήρ, τέκνα ἔχων πιστά, μὴ ἐν κατηγορίᾳ ἀσωτίας ἢ ἀνυπότακτα. <sup>7</sup>δεῖ γὰρ τὸν ἐπίσκοπον ἀνέγκλητον εἶναι ὡς θεοῦ οἰκονόμον, μὴ αὐθάδη, μὴ ὀργίλον, μὴ πάροινον, μὴ πλήκτην, μὴ αἰσχροκερδῆ,",
       "scan_folios": [
         "fol. 148r (facsimile leaf 259; NTVMR index: Titus inscriptio; Titus 1:1-16; Titus 2:1-12; printed caption: Tit. i. 1-ii. 12)"
       ]
     },
     {
-      "section": "1.6-10",
-      "original_ref": "Titus 1:6-10",
-      "original_text": "<sup>6</sup>εἴ τίς ἐστιν ἀνέγκλητος, μιᾶς γυναικὸς ἀνήρ, τέκνα ἔχων πιστά, μὴ ἐν κατηγορίᾳ ἀσωτίας ἢ ἀνυπότακτα. <sup>7</sup>δεῖ γὰρ τὸν ἐπίσκοπον ἀνέγκλητον εἶναι ὡς θεοῦ οἰκονόμον, μὴ αὐθάδη, μὴ ὀργίλον, μὴ πάροινον, μὴ πλήκτην, μὴ αἰσχροκερδῆ, <sup>8</sup>ἀλλὰ φιλόξενον, φιλάγαθον, σώφρονα, δίκαιον, ὅσιον, ἐγκρατῆ, <sup>9</sup>ἀντεχόμενον τοῦ κατὰ τὴν διδαχὴν πιστοῦ λόγου, ἵνα δυνατὸς ᾖ καὶ παρακαλεῖν ἐν τῇ διδασκαλίᾳ τῇ ὑγιαινούσῃ καὶ τοὺς ἀντιλέγοντας ἐλέγχειν. <sup>10</sup>Εἰσὶν γὰρ πολλοὶ ἀνυπότακτοι, ματαιολόγοι καὶ φρεναπάται, μάλιστα οἱ ἐκ τῆς περιτομῆς,",
-      "text": "<sup>6</sup>If any be blameless, the husband of one wife, having faithful children not accused of riot or unruly. <sup>7</sup>For a bishop must be blameless, as the steward of God; not selfwilled, not soon angry, not given to wine, no striker, not given to filthy lucre; <sup>8</sup>But a lover of hospitality, a lover of good men, sober, just, holy, temperate; <sup>9</sup>Holding fast the faithful word as he hath been taught, that he may be able by sound doctrine both to exhort and to convince the gainsayers. <sup>10</sup>For there are many unruly and vain talkers and deceivers, specially they of the circumcision:",
+      "section": "1.8-14",
+      "original_ref": "Titus 1:8-14",
+      "original_text": "<sup>8</sup>αλλα φιλοξενον φιλαγαθον · σωφρονα · δικαιον · οσιον · ενκρατη · <sup>9</sup>αντεχομενον του κατα την διδαχην πιστου λογου ινα δυνατος η και παρακαλειν τους εν παση θλιψει · και τους αντιλεγοντας ελεγχειν <sup>10</sup>εισιν γαρ πολλοι ανυποτακτοι ματαιολογοι · και φρεναπαται · μαλιστα οι εκ περιτομης · <sup>11</sup>ους δει επιστομιζειν · οιτινες ολους οικους ανατρεπουσιν · διδασκοντες α μη δει αισχρου κερδους χαριν · <sup>12</sup>ειπεν τις εξ αυτων ιδιος αυτων προφητης · κρητες · αει ψευσται · κακα θηρια γαστερες αργαι <sup>13</sup>η μαρτυρια αυτη εστιν αληθης δι ην αιτιαν ελεγχε αυτους αποτομως ινα υγιαινωσιν εν τη πιστει · <sup>14</sup>μη προσεχοντες ιουδαικοις μυθοις και εντολαις ανων αποστρεφομενων την αληθειαν ·",
+      "text": "<sup>8</sup>But a lover of hospitality, a lover of good men, sober, just, holy, temperate; <sup>9</sup>Holding fast the faithful word as he hath been taught, that he may be able by sound doctrine both to exhort and to convince the gainsayers. <sup>10</sup>For there are many unruly and vain talkers and deceivers, specially they of the circumcision: <sup>11</sup>Whose mouths must be stopped, who subvert whole houses, teaching things which they ought not, for filthy lucre’s sake. <sup>12</sup>One of themselves,\neven a prophet of their own, said, The Cretians\nare alway liars, evil beasts, slow bellies. <sup>13</sup>This witness is true. Wherefore rebuke them sharply, that they may be sound in the faith; <sup>14</sup>Not giving heed to Jewish fables, and commandments of men, that turn from the truth.",
       "scan_pages": [
         "alexandrinus/alex-f148r-leaf259.jpg"
       ],
+      "scan_note": "Page from the NTVMR transcription (docID 20002): verses 8-14 on fol. 148r (facsimile leaf 259), col. 1.",
+      "edition_text": "<sup>8</sup>ἀλλὰ φιλόξενον, φιλάγαθον, σώφρονα, δίκαιον, ὅσιον, ἐγκρατῆ, <sup>9</sup>ἀντεχόμενον τοῦ κατὰ τὴν διδαχὴν πιστοῦ λόγου, ἵνα δυνατὸς ᾖ καὶ παρακαλεῖν ἐν τῇ διδασκαλίᾳ τῇ ὑγιαινούσῃ καὶ τοὺς ἀντιλέγοντας ἐλέγχειν. <sup>10</sup>Εἰσὶν γὰρ πολλοὶ ἀνυπότακτοι, ματαιολόγοι καὶ φρεναπάται, μάλιστα οἱ ἐκ τῆς περιτομῆς, <sup>11</sup>οὓς δεῖ ἐπιστομίζειν, οἵτινες ὅλους οἴκους ἀνατρέπουσιν διδάσκοντες ἃ μὴ δεῖ αἰσχροῦ κέρδους χάριν. <sup>12</sup>εἶπέν τις ἐξ αὐτῶν, ἴδιος αὐτῶν προφήτης, Κρῆτες ἀεὶ ψεῦσται, κακὰ θηρία, γαστέρες ἀργαί. <sup>13</sup>ἡ μαρτυρία αὕτη ἐστὶν ἀληθής. δι’ ἣν αἰτίαν ἔλεγχε αὐτοὺς ἀποτόμως, ἵνα ὑγιαίνωσιν ἐν τῇ πίστει, <sup>14</sup>μὴ προσέχοντες Ἰουδαϊκοῖς μύθοις καὶ ἐντολαῖς ἀνθρώπων ἀποστρεφομένων τὴν ἀλήθειαν.",
       "scan_folios": [
         "fol. 148r (facsimile leaf 259; NTVMR index: Titus inscriptio; Titus 1:1-16; Titus 2:1-12; printed caption: Tit. i. 1-ii. 12)"
       ]
     },
     {
-      "section": "1.11-15",
-      "original_ref": "Titus 1:11-15",
-      "original_text": "<sup>11</sup>οὓς δεῖ ἐπιστομίζειν, οἵτινες ὅλους οἴκους ἀνατρέπουσιν διδάσκοντες ἃ μὴ δεῖ αἰσχροῦ κέρδους χάριν. <sup>12</sup>εἶπέν τις ἐξ αὐτῶν, ἴδιος αὐτῶν προφήτης, Κρῆτες ἀεὶ ψεῦσται, κακὰ θηρία, γαστέρες ἀργαί. <sup>13</sup>ἡ μαρτυρία αὕτη ἐστὶν ἀληθής. δι’ ἣν αἰτίαν ἔλεγχε αὐτοὺς ἀποτόμως, ἵνα ὑγιαίνωσιν ἐν τῇ πίστει, <sup>14</sup>μὴ προσέχοντες Ἰουδαϊκοῖς μύθοις καὶ ἐντολαῖς ἀνθρώπων ἀποστρεφομένων τὴν ἀλήθειαν. <sup>15</sup>πάντα καθαρὰ τοῖς καθαροῖς· τοῖς δὲ μεμιαμμένοις καὶ ἀπίστοις οὐδὲν καθαρόν, ἀλλὰ μεμίανται αὐτῶν καὶ ὁ νοῦς καὶ ἡ συνείδησις.",
-      "text": "<sup>11</sup>Whose mouths must be stopped, who subvert whole houses, teaching things which they ought not, for filthy lucre’s sake. <sup>12</sup>One of themselves,\neven a prophet of their own, said, The Cretians\nare alway liars, evil beasts, slow bellies. <sup>13</sup>This witness is true. Wherefore rebuke them sharply, that they may be sound in the faith; <sup>14</sup>Not giving heed to Jewish fables, and commandments of men, that turn from the truth. <sup>15</sup>Unto the pure all things\nare pure: but unto them that are defiled and unbelieving\nis nothing pure; but even their mind and conscience is defiled.",
+      "section": "1.15-16",
+      "original_ref": "Titus 1:15-16",
+      "original_text": "<sup>15</sup>παντα καθαρα τοις καθαροις · τοις δε μεμιαμμενοις και απιστοις ουδεν καθαρον αλλα μεμιανται αυτων και ο νους και η συνειδησεις · <sup>16</sup>θν ομολογουσιν ειδεναι τοις δε εργοις αρνουνται βδελυκτοι οντες και απιθεις και προς παν εργον αγαθον αδοκειμοι ·",
+      "text": "<sup>15</sup>Unto the pure all things\nare pure: but unto them that are defiled and unbelieving\nis nothing pure; but even their mind and conscience is defiled. <sup>16</sup>They profess that they know God; but in works they deny\nhim,\n being abominable, and disobedient, and unto every good work reprobate.",
       "scan_pages": [
         "alexandrinus/alex-f148r-leaf259.jpg"
       ],
-      "scan_folios": [
-        "fol. 148r (facsimile leaf 259; NTVMR index: Titus inscriptio; Titus 1:1-16; Titus 2:1-12; printed caption: Tit. i. 1-ii. 12)"
-      ]
-    },
-    {
-      "section": "1.16",
-      "original_ref": "Titus 1:16",
-      "original_text": "<sup>16</sup>θεὸν ὁμολογοῦσιν εἰδέναι, τοῖς δὲ ἔργοις ἀρνοῦνται, βδελυκτοὶ ὄντες καὶ ἀπειθεῖς καὶ πρὸς πᾶν ἔργον ἀγαθὸν ἀδόκιμοι.",
-      "text": "<sup>16</sup>They profess that they know God; but in works they deny\nhim,\n being abominable, and disobedient, and unto every good work reprobate.",
-      "scan_pages": [
-        "alexandrinus/alex-f148r-leaf259.jpg"
-      ],
+      "scan_note": "Page from the NTVMR transcription (docID 20002): verses 15-16 on fol. 148r (facsimile leaf 259), col. 2.",
+      "edition_text": "<sup>15</sup>πάντα καθαρὰ τοῖς καθαροῖς· τοῖς δὲ μεμιαμμένοις καὶ ἀπίστοις οὐδὲν καθαρόν, ἀλλὰ μεμίανται αὐτῶν καὶ ὁ νοῦς καὶ ἡ συνείδησις. <sup>16</sup>θεὸν ὁμολογοῦσιν εἰδέναι, τοῖς δὲ ἔργοις ἀρνοῦνται, βδελυκτοὶ ὄντες καὶ ἀπειθεῖς καὶ πρὸς πᾶν ἔργον ἀγαθὸν ἀδόκιμοι.",
       "scan_folios": [
         "fol. 148r (facsimile leaf 259; NTVMR index: Titus inscriptio; Titus 1:1-16; Titus 2:1-12; printed caption: Tit. i. 1-ii. 12)"
       ]
@@ -61,7 +55,7 @@
     "scan_source": "Internet Archive, 'The Codex Alexandrinus (Royal MS. 1 D. V-VIII) in reduced photographic facsimile', vol. 1: New Testament (British Museum, 1909), item codexalexandrinu01unse",
     "scan_license": "Public domain: 1909 British Museum photographic facsimile (ed. F. G. Kenyon), digitised by the Getty Research Institute for the Internet Archive",
     "scan_manuscript": "Codex Alexandrinus (British Library Royal MS 1 D. VIII, GA 02, 5th c.)",
-    "scan_mapping": "NTVMR verse-level page index for docID 20002 (INTF, CC BY 4.0), each page confirmed by OCR of the verse caption printed under the facsimile plate; first verse of the chapter also checked against CSNTM's GA_02 verse index",
+    "scan_mapping": "Verse-level, from the NTVMR page transcriptions for docID 20002 (one TEI file per page): every verse, or each part of a verse that crosses a page, is assigned to the page whose transcription contains it; NTVMR page -> 1909 British Museum facsimile leaf (leaf = 17 + page ordinal from fol. 26r, as in import_alexandrinus.py), each leaf's printed verse caption read and recorded in page_captions. Each section lists every page its verses are written on. Checked 2026-11-12 by scripts/qc_swap_ntvmr_transcriptions.py.",
     "scan_folios": [
       "148r"
     ],
@@ -92,11 +86,22 @@
       }
     ],
     "verses_absent_from_manuscript": "",
-    "original_text_source": "bolls.life (TISCH = Tischendorf 8)",
-    "original_text_license": "public domain (1869)",
-    "original_text_note": "Critical edition text, not a transcription of the manuscript",
+    "original_text_source": "NTVMR transcription of GA 02 (docID 20002), INTF Münster, per page: https://ntvmr.uni-muenster.de/community/vmr/api/transcript/get/?docID=20002&pageID=<pageID>&format=txt",
+    "original_text_license": "CC BY 4.0 (stated in the TEI header of each transcription file used)",
+    "original_text_note": "Diplomatic transcription of this manuscript. Letters as the first scribe wrote them (corrections by later hands are not shown); no accents or breathings; the scribe's spelling kept; nomina sacra in their contracted form without the overline (e.g. θς, ις, κς); letters the transcribers restored where the page is damaged in square brackets; uncertain letters with a dot below; [...] for text lost to damage.",
     "translation_source": "bible-api.com (KJV)",
     "translation_license": "public domain (1611)",
-    "verified_date": "2026-09-05"
+    "verified_date": "2026-11-12",
+    "section_pages_verified": true,
+    "verses_not_in_manuscript": "",
+    "verses_lost_in_manuscript": "",
+    "verses_not_shown_no_image": "",
+    "primary_greek": "ntvmr_transcription",
+    "original_text_attribution": "Institut für Neutestamentliche Textforschung (INTF), Münster, New Testament Virtual Manuscript Room",
+    "original_text_pages": [
+      1300
+    ],
+    "edition_text_source": "bolls.life (TISCH = Tischendorf 8)",
+    "edition_text_license": "public domain (1869)"
   }
 }
