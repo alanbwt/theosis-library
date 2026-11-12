@@ -11,7 +11,7 @@ Chain of evidence
                Public Domain Mark. Web JPEGs (one image per opening; a pothi leaf is turned
                top to bottom, so the verso is the upper leaf and the next recto the lower leaf).
                Witnesses used are listed in WITNESSES below with their OPenn ids.
-  2. MAPPING   Read on the images by eye. For every page the opening words of the first line
+  2. MAPPING   Read on the images. For every page the opening words of the first line
                were transcribed (data/sources/rigveda/readings/<witness>.txt, IAST, one line per
                page, with notes on khila insertions, colophons and lacunae). Each reading is
                located in Aufrecht's text by an alignment search that runs forward from the
@@ -22,6 +22,12 @@ Chain of evidence
                Places where the text runs on unevenly were checked on the full page image and
                the result is written into the readings file (khila blocks, a lost leaf).
                Varga (aṣṭaka-adhyāya-varga) concordance from the Sansknet padapāṭha (GRETIL).
+               Item 41 (padapāṭha): page openings were transcribed from first-line strips of every
+               page (readings/transcriptions/read_*.tsv) and merged with hand-checked lines
+               (readings/penn41_handchecked.tsv: invocations, anukramaṇī pages, colophons, pages the
+               strips missed) by readings/transcriptions/assemble41.txt into readings/penn41.txt.
+               Every page of a run must be listed (the build stops otherwise), so no unread page can
+               be merged silently into the page before it.
   3. SANSKRIT  Ṛgveda-Saṃhitā, Aufrecht's edition (Bonn 1877), accented text entered by
                B. A. van Nooten and G. B. Holland, revised by D. Eichler, GRETIL TEI
                sa_Rgveda-edAufrecht.xml (CC BY-NC-SA 4.0).
@@ -75,15 +81,57 @@ WITNESSES = {
                  "in Devanāgarī, 158 leaves, 6 lines to the page, with the accents marked in red; "
                  "the scribe's colophon on fol. 158 gives Saṃvat 1768 (1711 CE)"),
         "form": "samhita",
+        "refrains": True,
         "readings": "readings/penn48.txt",
         "start": (10, 46, 1),
         # page whose verses stop early because the following leaf is lost: page -> first verse NOT on it
         "cut": {"60v": (10, 87, 20)},
     },
+    "penn35": {
+        "shelfmark": "Penn Ms. Coll. 390 Item 35",
+        "openn": "mscoll390_item35",
+        "title": "Ṛgvedasaṃhitā, aṣṭaka 3",
+        "date": "1737 CE (colophon: Saṃvat 1794, copied at Vārāṇasī)",
+        "year": 1737,
+        "desc": ("a paper manuscript of the third aṣṭaka (RV 3.7-4.50) of the Ṛgveda Saṃhitā in Devanāgarī, "
+                 "77 leaves, 8-9 lines to the page, accents in red; the colophon gives Saṃvat 1794 (1737 CE) "
+                 "and names Vārāṇasī"),
+        "form": "samhita",
+        "readings": "readings/penn35.txt",
+        "start": (3, 61, 1),
+        "hymns": {(3, 62)},
+    },
+    "penn41": {
+        "shelfmark": "Penn Ms. Coll. 390 Item 41",
+        "openn": "mscoll390_item41",
+        "title": "Ṛgveda padapāṭha, aṣṭakas 1-8",
+        "date": "undated (catalogued with Penn's 18th-19th c. Vedic manuscripts)",
+        "year": None,
+        "desc": ("an undated paper manuscript of the padapāṭha (the word-by-word recitation text, in which "
+                 "every word is written separately and compounds are split) of the whole Ṛgveda in Devanāgarī, "
+                 "884 leaves in fascicles, 7-9 lines to the page, accents in red"),
+        "form": "pada",
+        "readings": "readings/penn41.txt",
+        "start": (1, 1, 1),
+    },
 }
 
 # Names used in titles for well-known hymns.
 HYMN_NAMES = {
+    (1, 1): "To Agni, the opening hymn",
+    (1, 32): "Indra slays Vritra",
+    (1, 89): "To all the gods (a bhadram karnebhih)",
+    (1, 113): "To Ushas, the Dawn",
+    (1, 154): "The three strides of Vishnu",
+    (1, 162): "The horse sacrifice",
+    (1, 163): "Praise of the sacrificial horse",
+    (1, 164): "Asya Vamasya, the riddle hymn of Dirghatamas",
+    (1, 179): "Lopamudra and Agastya",
+    (3, 62): "To Indra-Varuna, Brihaspati, Pushan, Savitar (the Gayatri), Soma and Mitra-Varuna",
+    (10, 10): "Yama and Yami",
+    (10, 14): "To Yama",
+    (10, 18): "Funeral hymn",
+    (10, 34): "The gambler's lament",
     (10, 85): "Surya's wedding (Vivaha Sukta)",
     (10, 86): "Indra, Indrani and Vrishakapi",
     (10, 90): "Purusha Sukta",
@@ -112,21 +160,26 @@ HYMN_NAMES = {
 }
 
 MANDALA_DESC = {
-    1: "book (maṇḍala) 1, a collection of hymns by many families of poets",
-    2: "book (maṇḍala) 2, the family book of Gṛtsamada",
-    3: "book (maṇḍala) 3, the family book of Viśvāmitra",
-    4: "book (maṇḍala) 4, the family book of Vāmadeva",
-    5: "book (maṇḍala) 5, the family book of the Atri clan",
-    6: "book (maṇḍala) 6, the family book of Bharadvāja",
-    7: "book (maṇḍala) 7, the family book of Vasiṣṭha",
-    8: "book (maṇḍala) 8, the book of the Kaṇva and Aṅgiras poets",
-    9: "book (maṇḍala) 9, the hymns to Soma Pavamāna",
-    10: "book (maṇḍala) 10, the last and latest book",
+    1: "a collection of hymns by many families of poets",
+    2: "the family book of Gṛtsamada",
+    3: "the family book of Viśvāmitra",
+    4: "the family book of Vāmadeva",
+    5: "the family book of the Atri clan",
+    6: "the family book of Bharadvāja",
+    7: "the family book of Vasiṣṭha",
+    8: "the book of the Kaṇva and Aṅgiras poets",
+    9: "the hymns to Soma Pavamāna",
+    10: "the last and latest book",
 }
 
-ERRATA = {
-    # verse id: [(text in digital copy, text of the printed page)], each checked on the printed book
-}
+# Stanzas Griffith rendered in Latin instead of English: not published (no English translation).
+LATIN = {(10, 61, 5), (10, 61, 6), (10, 61, 7), (10, 61, 8), (1, 179, 3), (1, 179, 4)}
+
+# OCR slips in the VedaWeb transcription, each checked by eye on the printed page of the 2nd edition
+# (data/sources/rigveda/griffith_errata.json gives the page image for every correction).
+ERRATA = {}
+for _e in json.loads((Path(__file__).resolve().parent.parent / "data" / "sources" / "rigveda" / "griffith_errata.json").read_text(encoding="utf-8")):
+    ERRATA.setdefault(tuple(int(x) for x in _e["verse"].split(".")), []).append((_e["wrong"], _e["right"]))
 
 
 # ----------------------------------------------------------------------------- utilities
@@ -236,6 +289,34 @@ class Stream:
         return sc, p
 
 
+def load_pada():
+    """Sansknet padapatha (GRETIL): (m,h,v) -> 'agnim | īḷe | puraḥ-hitam | ...'."""
+    b = (SRC / "sa_RgvedasaMhitApadapATha.xml").read_text(encoding="utf-8")
+    b = b[b.find("<body"):]
+    b = re.sub(r"<hi[^>]*>.*?</hi>", "", b, flags=re.S)
+    b = re.sub(r"<head[^>]*>.*?</head>", "", b, flags=re.S)
+    b = re.sub(r"<[^>]+>", "", b)
+    b = re.sub(r"-RV_\d+:\d+/\d+-", "", b)
+    b = re.sub(r"//\d+//\.?", "", b)
+    parts = re.split(r"// RV_(\d+),(\d+)\.(\d+) //", b)
+    out, prev = {}, None
+    for t, m, h, v in zip(parts[0::4], parts[1::4], parts[2::4], parts[3::4]):
+        key = (int(m), int(h), int(v))
+        if key == (9, 97, 36) and prev == (9, 97, 34):
+            key = (9, 97, 35)
+        out[key] = re.sub(r"\s+", " ", t).strip()
+        prev = key
+    return out
+
+
+class PadaStream(Stream):
+    """Same interface as Stream, built on the padapatha text (one pseudo-pada per verse)."""
+
+    def __init__(self, pada, order):
+        verses = {k: [(f"{k[0]}.{k[1]:03d}.{k[2]:02d}a", pada[k], pada[k])] for k in order if k in pada}
+        super().__init__(verses, [k for k in order if k in pada])
+
+
 def load_concordance():
     """(m,h,v) -> (astaka, adhyaya, varga, verse-in-varga) from the Sansknet padapatha markers."""
     body = (SRC / "sa_RgvedasaMhitApadapATha.xml").read_text(encoding="utf-8")
@@ -263,8 +344,8 @@ def load_griffith():
         ref, text = line.split("\t", 1)
         m, h, v = (int(x) for x in ref.split("."))
         text = text.strip()
-        if text.startswith("[Griffith:"):
-            continue  # stanza Griffith did not translate
+        if text.startswith("[Griffith:") or (m, h, v) in LATIN:
+            continue  # stanza Griffith did not translate, or rendered in Latin
         for wrong, right in ERRATA.get((m, h, v), []):
             assert wrong in text, ((m, h, v), wrong)
             text = text.replace(wrong, right)
@@ -296,7 +377,7 @@ def tei_pages(w):
         idx = int(re.findall(r"_(\d{4})_web", web)[0])
         halves = [x.strip() for x in n.split("-")] if re.search(r"\d[rv]\s*(=\s*\d+[rv])?\s*-", n) else [n.strip()]
         for pos, half in zip(("upper", "lower") if len(halves) == 2 else ("single",), halves):
-            m = re.match(r"^(\d+[rv])(?:\s*=\s*(\d+[rv]))?$", half)
+            m = re.match(r"^(\d+[rv])(?:\s*=?\s*(\d+[rv]))?$", half)  # one Penn label lacks its "="
             if not m:
                 continue
             written, seq = m.group(1), m.group(2) or m.group(1)
@@ -320,17 +401,26 @@ def leaf_boxes(img):
         bands.append((start, H))
     merged = []
     for b in bands:
-        if merged and b[0] - merged[-1][1] < H * 0.04:
+        if merged and b[0] - merged[-1][1] < H * 0.02:
             merged[-1] = (merged[-1][0], b[1])
         else:
             merged.append(b)
+    merged = [b for b in merged if b[1] - b[0] >= H * 0.12]
+    if len(merged) == 1 and merged[0][1] - merged[0][0] > H * 0.6:
+        # two leaves photographed touching: split at the darkest row in the middle of the image
+        lo, hi = int(H * 0.35), int(H * 0.65)
+        cut = lo + int(np.argmin(rowfrac[lo:hi]))
+        merged = [(merged[0][0], cut), (cut + 1, merged[0][1])]
     boxes = []
     for y0, y1 in merged:
-        if y1 - y0 < H * 0.12:
-            continue
         col = light[y0:y1].mean(axis=0) > 0.5
         xs = np.where(col)[0]
         boxes.append((int(xs.min()), y0, int(xs.max()) + 1, y1))
+    while len(boxes) > 2:  # a pale band inside a leaf split it: merge across the narrowest gap
+        gaps = [boxes[i + 1][1] - boxes[i][3] for i in range(len(boxes) - 1)]
+        i = gaps.index(min(gaps))
+        a, b = boxes[i], boxes[i + 1]
+        boxes[i:i + 2] = [(min(a[0], b[0]), a[1], max(a[2], b[2]), b[3])]
     return boxes
 
 
@@ -381,14 +471,22 @@ def page_map(w, S):
     m, h, v = w["start"]
     pos = S.vstart[(m, h, v)] - 50
     located = []
+    wide = False
     for r in rows:
-        if r["reading"] == "KHILA":
+        if r["reading"] in ("KHILA", "INDEX", "BLANK"):
             r["khila"] = True
             continue
+        if r["reading"].startswith("seek:"):
+            # a new run of pages elsewhere in the manuscript: start the forward search at the given verse
+            ref, r["reading"] = r["reading"][5:].split(" ", 1)
+            r["seek"] = True
+            pos = S.vstart[tuple(int(x) for x in ref.split("."))] - 50
+            wide = True
         if r["reading"].startswith("@"):
             p, sc = S.pstart[r["reading"][1:]], 1.0
         else:
-            sc, p = S.find(r["reading"], pos, pos + 3500)
+            sc, p = S.find(r["reading"], pos, pos + (60000 if wide else 3500))
+            wide = False
         # snap to a verse start when the page begins on one
         key = S.idx[p][0]
         for k in (key, S.idx[max(0, p - 3)][0]):
@@ -398,7 +496,10 @@ def page_map(w, S):
         located.append(r)
         pos = p + 1
     for i, r in enumerate(located):
-        r["end"] = located[i + 1]["start"] if i + 1 < len(located) else S.vend[max(k for k in S.vend if k[0] == 10)]
+        r["end"] = located[i + 1]["start"] if i + 1 < len(located) else len(S.s)
+        if r["note"].startswith("BOUND"):
+            r["end"] = r["start"]  # read only to fix where the previous page ends
+            r["bound"] = True
         cut = w.get("cut", {}).get(r["page"])
         if cut:
             r["end"] = S.vstart[cut]
@@ -441,92 +542,124 @@ def iast_title(m, h, addressee):
     name = HYMN_NAMES.get((m, h))
     if name:
         return f"Rigveda {m}.{h}: {name}"
-    return f"Rigveda {m}.{h}: to {addressee}" if addressee else f"Rigveda {m}.{h}"
+    if not addressee:
+        return f"Rigveda {m}.{h}"
+    a = addressee.replace("damaing", "damaging")
+    topic = ("hymn" in a.lower() or "praise of himself" in a or a.startswith(("the boy and", "the race of", "the simplified"))
+             or (a[0].islower() and not a.startswith(("all the gods", "the "))))
+    return f"Rigveda {m}.{h}: {a[0].upper() + a[1:]}" if topic else f"Rigveda {m}.{h}: To {a}"
 
 
 def build(args):
     verses, order = load_samhita()
-    S = Stream(verses, order)
+    SAM = Stream(verses, order)
+    pada = load_pada()
+    PAD = PadaStream(pada, order)
     conc = load_concordance()
     eng = load_griffith()
     addr = load_addressees()
-    entries = []
-    report = []
+    ctx = {"verses": verses, "pada": pada, "conc": conc, "eng": eng, "force": args.force_scans}
+    per_hymn = {}
     for wkey, w in WITNESSES.items():
         w["key"] = wkey
+        S = PAD if w["form"] == "pada" else SAM
         pages = {p["id"]: p for p in tei_pages(w)}
         rows, located = page_map(w, S)
         for r in rows:
             r["label"] = pages[r["page"]]["label"]
-        ids = [r["page"] for r in rows]
-        first = w["start"]
-        last = max(k for k in order if k[0] == 10)
-        assign = assign_verses(located, S, order, first, last)
+        # every page inside a run of readings must be listed: an unread page would otherwise be merged
+        # silently into the page before it
+        tei_order = {p["id"]: i for i, p in enumerate(tei_pages(w))}
+        for a, b in zip(rows, rows[1:]):
+            if b["reading"].startswith("seek:") or b.get("seek"):
+                continue
+            assert tei_order[b["page"]] == tei_order[a["page"]] + 1, (wkey, a["page"], b["page"])
+        assign = assign_verses(located, S, order, w["start"], max(order))
         if args.report:
             for r in located:
                 print(f"{wkey} {r['page']:>6} {r['score']:.2f} {r['pada']:>12} {r['start']:>7}-{r['end']:<7} {r['reading'][:40]}")
-        hymns = sorted({(k[0], k[1]) for k in assign})
-        for (m, h) in hymns:
-            hv = [k for k in order if k[:2] == (m, h)]
-            on_ms = [k for k in hv if k in assign]
-            pub = [k for k in on_ms if k in eng]
-            missing_ms = [k for k in hv if k not in assign]
-            missing_en = [k for k in on_ms if k not in eng]
-            groups = {}
-            for k in pub:
-                groups.setdefault(assign[k][0], []).append(k)
-            sections = []
-            for pi in sorted(groups):
-                ks = groups[pi]
-                start_pi = assign[ks[0]][1]
-                pg = located[pi]
-                scan_pages = []
-                for j in range(start_pi, pi + 1):
-                    scan_pages.append(page_scan(w, pages[located[j]["page"]], args.force_scans))
-                vr = f"{ks[0][2]}" if len(ks) == 1 else f"{ks[0][2]}-{ks[-1][2]}"
-                orig = "<br>".join(f"<sup>{k[2]}</sup>" + " ".join(p[1] for p in verses[k]) for k in ks)
-                text = "<br>".join(f"<sup>{k[2]}</sup>{eng[k]}" for k in ks)
-                nxt = located[pi + 1] if pi + 1 < len(located) else None
-                pgl = pages[pg["page"]]
-                note = (f"{w['shelfmark']}, fol. {pgl['label']} (OPenn image {pgl['image']}, "
-                        f"{'upper' if pgl['pos'] == 'upper' else 'lower' if pgl['pos'] == 'lower' else 'single'} leaf). "
-                        f"Checked on the image: the Rigveda text on this page begins in RV {padref(pg['pada'])} "
-                        f"‹{S.words_at(pg['start'])}›.")
-                if pg.get("note"):
-                    note += f" {pg['note'][0].upper() + pg['note'][1:]}."
-                if nxt is not None and not pg.get("cut"):
-                    note += (f" The next page with Rigveda text, fol. {pages[nxt['page']]['label']}, begins in "
-                             f"RV {padref(nxt['pada'])} ‹{S.words_at(nxt['start'])}›.")
-                if pg.get("cut"):
-                    c = pg["cut"]
-                    note += (f" This page breaks off in RV {c[0]}.{c[1]}.{c[2]}; the following leaf is lost "
-                             f"(the next surviving page, fol. {pages[nxt['page']]['label']}, begins in RV {padref(nxt['pada'])}).")
-                note += f" Verse{'s' if len(ks) > 1 else ''} {m}.{h}.{vr} end{'' if len(ks) > 1 else 's'} on this page"
-                if start_pi < pi:
-                    note += f"; {m}.{h}.{ks[0][2]} begins on fol. {pages[located[start_pi]['page']]['label']}"
-                note += "."
-                a = conc.get(ks[0])
-                ref = f"RV {m}.{h}.{vr}"
-                if a:
-                    ref += f" (aṣṭaka {a[0]}, adhyāya {a[1]}, varga {a[2]})"
-                ref += f"; {w['shelfmark']} fol. {pg['page']}"
-                sections.append({
-                    "section": vr,
-                    "original_ref": ref,
-                    "original_text": orig,
-                    "text": text,
-                    "scan_pages": scan_pages,
-                    "scan_note": note,
-                })
-            if not sections:
+        hymns = {(k[0], k[1]) for k in assign}
+        if w.get("hymns"):
+            hymns &= set(w["hymns"])
+        for mh in hymns:
+            per_hymn.setdefault(mh, []).append({"w": w, "S": S, "pages": pages, "located": located, "assign": assign})
+    entries, report = [], []
+    for (m, h) in sorted(per_hymn):
+        hv = [k for k in order if k[:2] == (m, h)]
+        covered, used, sections = set(), [], []
+        for wit in per_hymn[(m, h)]:  # WITNESSES order: saṃhitā witnesses first
+            on_ms = [k for k in hv if k in wit["assign"] and k not in covered]
+            if not on_ms:
                 continue
-            entries.append(make_entry(m, h, hv, sections, missing_ms, missing_en, w, addr, located, pages))
-            report.append((m, h, len(hv), len(pub)))
+            pub = [k for k in on_ms if k in eng]
+            secs = make_sections(m, h, pub, wit, ctx)
+            if secs:
+                used.append(wit["w"])
+                sections += secs
+            covered |= set(on_ms)
+        if not sections:
+            continue
+        sections.sort(key=lambda sec: sec.pop("_first"))
+        missing_ms = [k for k in hv if k not in covered]
+        missing_en = [k for k in hv if k in covered and k not in eng]
+        if missing_ms:
+            # a hymn cut by the edge of a run of read pages (or by a lost leaf no other witness fills) is not published
+            print(f"  skipped {m}.{h}: verses not on the pages read: {[k[2] for k in missing_ms]}")
+            continue
+        entries.append(make_entry(m, h, hv, sections, missing_ms, missing_en, used, addr))
+        report.append((m, h, len(hv), len(hv) - len(missing_ms) - len(missing_en)))
     write_all(entries)
     return report
 
 
-def make_entry(m, h, hv, sections, missing_ms, missing_en, w, addr, located, pages):
+def make_sections(m, h, pub, wit, ctx):
+    w, S, pages, located, assign = wit["w"], wit["S"], wit["pages"], wit["located"], wit["assign"]
+    verses, pada, conc, eng = ctx["verses"], ctx["pada"], ctx["conc"], ctx["eng"]
+    groups = {}
+    for k in pub:
+        groups.setdefault(assign[k][0], []).append(k)
+    out = []
+    for pi in sorted(groups):
+        ks = groups[pi]
+        start_pi = assign[ks[0]][1]
+        pg = located[pi]
+        scan_pages = [page_scan(w, pages[located[j]["page"]], ctx["force"]) for j in range(start_pi, pi + 1)]
+        vr = f"{ks[0][2]}" if len(ks) == 1 else f"{ks[0][2]}-{ks[-1][2]}"
+        orig = "<br>".join(f"<sup>{k[2]}</sup>" + " ".join(p[1] for p in verses[k]) for k in ks)
+        text = "<br>".join(f"<sup>{k[2]}</sup>{eng[k]}" for k in ks)
+        nxt = located[pi + 1] if pi + 1 < len(located) else None
+        pgl = pages[pg["page"]]
+        leaf = {"upper": "upper", "lower": "lower"}.get(pgl["pos"], "single")
+        note = (f"{w['shelfmark']}, fol. {pgl['label']} (OPenn image {pgl['image']}, {leaf} leaf). "
+                f"Checked on the image: the Rigveda text on this page begins in RV {padref(pg['pada'])} "
+                f"‹{S.words_at(pg['start'])}›.")
+        if pg.get("note") and not pg["note"].startswith("BOUND"):
+            note += f" {pg['note'][0].upper() + pg['note'][1:]}."
+        if nxt is not None and not pg.get("cut"):
+            note += (f" The next page with Rigveda text, fol. {pages[nxt['page']]['label']}, begins in "
+                     f"RV {padref(nxt['pada'])} ‹{S.words_at(nxt['start'])}›.")
+        if pg.get("cut"):
+            c = pg["cut"]
+            note += (f" This page breaks off in RV {c[0]}.{c[1]}.{c[2]}; the following leaf is lost "
+                     f"(the next surviving page, fol. {pages[nxt['page']]['label']}, begins in RV {padref(nxt['pada'])}).")
+        note += f" Verse{'s' if len(ks) > 1 else ''} {m}.{h}.{vr} end{'' if len(ks) > 1 else 's'} on this page"
+        if start_pi < pi:
+            note += f"; {m}.{h}.{ks[0][2]} begins on fol. {pages[located[start_pi]['page']]['label']}"
+        note += "."
+        a = conc.get(ks[0])
+        ref = f"RV {m}.{h}.{vr}"
+        if a:
+            ref += f" (aṣṭaka {a[0]}, adhyāya {a[1]}, varga {a[2]})"
+        ref += f"; {w['shelfmark']} fol. {pg['page']}"
+        sec = {"section": vr, "original_ref": ref, "original_text": orig, "text": text,
+               "scan_pages": scan_pages, "scan_note": note, "_first": ks[0][2]}
+        if w["form"] == "pada":
+            sec["edition_text"] = "<br>".join(f"<sup>{k[2]}</sup>{pada[k]}" for k in ks)
+        out.append(sec)
+    return out
+
+
+def make_entry(m, h, hv, sections, missing_ms, missing_en, used, addr):
     tid = f"{PREFIX}{m}-{h}"
     adr = addr.get((m, h), "")
     title = iast_title(m, h, adr)
@@ -534,79 +667,98 @@ def make_entry(m, h, hv, sections, missing_ms, missing_en, w, addr, located, pag
     gaps = []
     if missing_ms:
         gaps.append(f"verse{'s' if len(missing_ms) > 1 else ''} {', '.join(f'{k[0]}.{k[1]}.{k[2]}' for k in missing_ms)} "
-                    f"{'are' if len(missing_ms) > 1 else 'is'} not in this manuscript (a leaf is lost) and {'are' if len(missing_ms) > 1 else 'is'} not shown")
-    if missing_en:
-        gaps.append(f"verse{'s' if len(missing_en) > 1 else ''} {', '.join(f'{k[0]}.{k[1]}.{k[2]}' for k in missing_en)} "
-                    f"{'were' if len(missing_en) > 1 else 'was'} left untranslated by Griffith and {'are' if len(missing_en) > 1 else 'is'} not shown")
-    fols = []
-    for s in sections:
-        for p in s["scan_pages"]:
-            f = p.split("-f")[-1][:-4].lstrip("0")
-            if f not in fols:
-                fols.append(f)
-    folrange = fols[0] if len(fols) == 1 else f"{fols[0]}-{fols[-1]}"
+                    f"{'are' if len(missing_ms) > 1 else 'is'} not on any manuscript page used here (a leaf of the manuscript is lost) "
+                    f"and {'are' if len(missing_ms) > 1 else 'is'} not shown")
+    lat = [k for k in missing_en if k in LATIN]
+    unt = [k for k in missing_en if k not in LATIN]
+    if unt:
+        gaps.append(f"verse{'s' if len(unt) > 1 else ''} {', '.join(f'{k[0]}.{k[1]}.{k[2]}' for k in unt)} "
+                    f"{'were' if len(unt) > 1 else 'was'} left untranslated by Griffith and {'are' if len(unt) > 1 else 'is'} not shown")
+    if lat:
+        gaps.append(f"verse{'s' if len(lat) > 1 else ''} {', '.join(f'{k[0]}.{k[1]}.{k[2]}' for k in lat)} "
+                    f"{'were' if len(lat) > 1 else 'was'} rendered by Griffith in Latin, not English, and {'are' if len(lat) > 1 else 'is'} not shown")
+    sc_pages = []
+    for sec in sections:
+        for p in sec["scan_pages"]:
+            if p not in sc_pages:
+                sc_pages.append(p)
+    def fol(p):
+        return p.split("-f")[-1][:-4].lstrip("0")
+    mss = []
+    for w in used:
+        fols = [fol(p) for p in sc_pages if p.split("/")[-1].startswith(w["key"] + "-")]
+        rng = fols[0] if len(fols) == 1 else f"{fols[0]}-{fols[-1]}"
+        mss.append(f"{w['shelfmark']} (University of Pennsylvania), {w['desc']}; this hymn stands on fol. {rng}")
+    w0 = used[0]
     intro = (
         f"<p>Rigveda {m}.{h} is a hymn of {nver} verses"
-        + (f" addressed to {adr}" if adr else "") + f", in {MANDALA_DESC[m]} of the Rigveda, "
-        "the oldest collection of Sanskrit hymns, composed in the second half of the second millennium BCE "
+        + (f" addressed to {adr}" if adr else "") + f". It stands in book (maṇḍala) {m}, {MANDALA_DESC[m]}. "
+        "The Rigveda is the oldest collection of Sanskrit hymns, composed in the second half of the second millennium BCE "
         "and handed down orally for many centuries before it was written down.</p>"
-        f"<p>The manuscript shown is {w['shelfmark']} (University of Pennsylvania), {w['desc']}. "
-        f"This hymn stands on fol. {folrange}. Each section below gives the verses that end on one page; "
-        "the page boundaries were read on the images (the opening words of every page), not counted out. "
-        "Like most Rigveda manuscripts, this one writes a repeated refrain in short form after its first occurrence "
-        "(for example kasmai° for kasmai devāya haviṣā vidhema); the Sanskrit shown is the full text of Aufrecht's edition.</p>"
+        "<p>The manuscript shown is " + ". Verses missing from it are shown from ".join(mss) + ". "
+        "Each section below gives the verses that end on one page; the page boundaries were read on the images "
+        "(the opening words of every page), not counted out."
+        + (" Like most Rigveda manuscripts, " + w0["shelfmark"] + " writes a repeated refrain in short form after its first "
+           "occurrence (for example kasmai° for kasmai devāya haviṣā vidhema); the Sanskrit shown is the full text of Aufrecht's edition."
+           if any(w.get("refrains") for w in used) else "")
+        + (" Where the manuscript is a padapāṭha (the word-by-word recitation text), the section shows Aufrecht's continuous "
+           "(saṃhitā) text first and, as the edition text, the padapāṭha of the same verses, which is the form written on the page."
+           if any(w["form"] == "pada" for w in used) else "")
+        + "</p>"
     )
     if gaps:
         intro += "<p>Gaps: " + "; ".join(gaps) + ".</p>"
     notes = [
         "Sanskrit: Aufrecht's edition (1877) with the Vedic accents, as entered by van Nooten and Holland (GRETIL).",
-        "English: Ralph T. H. Griffith, The Hymns of the Rigveda (1889-1892), from the VedaWeb digital text.",
+        "English: Ralph T. H. Griffith, The Hymns of the Rigveda (1889-1892; 2nd ed. 1896-1897), from the VedaWeb digital text; "
+        "OCR slips in that text were corrected against the printed 2nd edition (data/sources/rigveda/griffith_errata.json).",
     ]
-    khila = [s for s in sections if "khila" in s["scan_note"]]
-    if khila:
+    if any(w["form"] == "pada" for w in used):
+        notes.append("Padapāṭha (edition text): Sansknet e-text via GRETIL (CC BY-NC-SA 4.0).")
+    if any("khila" in sec["scan_note"] for sec in sections):
         notes.append("This manuscript inserts khila verses (supplementary hymns outside Aufrecht's text) at some hymn ends; "
                      "they are noted in the section notes and not reproduced.")
-    sc_pages = []
-    for s in sections:
-        for p in s["scan_pages"]:
-            if p not in sc_pages:
-                sc_pages.append(p)
-    desc = (f"{title}: Sanskrit text and Griffith's English, each verse linked to the page of a {w['year']} "
-            f"Rigveda manuscript ({w['shelfmark']}) that carries it.")
+    years = [w["year"] for w in used if w["year"]]
+    desc = (f"{title}: Sanskrit text and Griffith's English, each verse linked to the page of "
+            + (f"a {w0['year']}" if w0["year"] else "an undated")
+            + f" Rigveda manuscript ({w0['shelfmark']}) that carries it.")
+    shel = "; ".join(f"{w['shelfmark']} ({w['date']})" for w in used)
     entry = {
         "id": tid, "slug": tid, "title": title,
         "language": "Vedic Sanskrit / English",
-        "source": f"{w['shelfmark']} ({w['date']}, OPenn, Public Domain Mark) + Aufrecht's accented text (GRETIL) + Griffith's English (VedaWeb)",
+        "source": f"{shel}, OPenn, Public Domain Mark + Aufrecht's accented text (GRETIL) + Griffith's English (VedaWeb)",
         "description": desc,
         "introduction": intro,
         "translator_notes": notes,
         "translation": sections,
         "verification": {
-            "scan_source": f"University of Pennsylvania Libraries, OPenn: {OPENN}/html/{w['openn']}.html",
+            "scan_source": "University of Pennsylvania Libraries, OPenn: " + "; ".join(f"{OPENN}/html/{w['openn']}.html" for w in used),
             "scan_license": "Creative Commons Public Domain Mark 1.0 (as stated by Penn Libraries on OPenn)",
-            "scan_manuscript": f"{w['shelfmark']}, {w['title']}, {w['date']}",
+            "scan_manuscript": "; ".join(f"{w['shelfmark']}, {w['title']}, {w['date']}" for w in used),
             "scan_mapping": ("Page boundaries read on the images: the opening words of every page were transcribed and located in "
                              "Aufrecht's text (data/sources/rigveda/readings); khila insertions, colophons and the lost leaf were "
                              "checked on the full page images. A section holds the verses that end on its page."),
-            "scan_mapping_urls": [f"{OPENN}/html/{w['openn']}.html", f"{OPENN}/{w['openn']}/data/{w['openn']}_TEI.xml"],
+            "scan_mapping_urls": [u for w in used for u in (f"{OPENN}/html/{w['openn']}.html", f"{OPENN}/{w['openn']}/data/{w['openn']}_TEI.xml")],
             "scan_local_paths": sc_pages,
             "original_text_source": "Ṛgveda-Saṃhitā, ed. Th. Aufrecht (Bonn 1877), accented e-text by B. A. van Nooten and G. B. Holland, rev. D. Eichler, GRETIL: https://gretil.sub.uni-goettingen.de/gretil/corpustei/sa_Rgveda-edAufrecht.xml",
             "original_text_license": "CC BY-NC-SA 4.0 (GRETIL)",
-            "translation_source": "Ralph T. H. Griffith, The Hymns of the Rigveda (Benares: E. J. Lazarus, 1889-1892); digital text VedaWeb, University of Cologne: https://github.com/VedaWebProject/vedaweb-data/blob/main/rigveda/translations/eng/griffith.csv",
-            "translation_license": "translation public domain (published 1889-1892); VedaWeb digital text CC BY-NC-SA 4.0",
-            "translator": "Ralph T. H. Griffith (1889-1892)",
+            "translation_source": "Ralph T. H. Griffith, The Hymns of the Rigveda (Benares: E. J. Lazarus, 1889-1892; 2nd ed. 1896-1897, checked against archive.org in.ernet.dli.2015.104118 and .104119); digital text VedaWeb, University of Cologne: https://github.com/VedaWebProject/vedaweb-data/blob/main/rigveda/translations/eng/griffith.csv",
+            "translation_license": "translation public domain (published 1889-1897); VedaWeb digital text CC BY-NC-SA 4.0",
+            "translator": "Ralph T. H. Griffith (1889-1897)",
             "verified_date": TODAY,
         },
     }
+    shelf_short = {"penn48": "Item 48", "penn35": "Item 35", "penn41": "Item 41"}
     row = {
         "id": tid, "slug": tid, "title": title, "author_id": "vedic-rishi", "language": "Vedic Sanskrit",
         "era": "Vedic", "tradition": "vedic", "category": "sacred-text",
-        "date_approx": f"c. 1500-1000 BCE (composition); manuscript {w['year']} CE ({w['shelfmark']})",
+        "date_approx": "c. 1500-1000 BCE (composition); manuscript " + ("; ".join(f"{w['year']} CE" if w["year"] else "undated" for w in used))
+                       + f" ({', '.join(w['shelfmark'] for w in used)})",
         "century": -12,
         "source": entry["source"], "description": desc,
         "themes": ["rigveda", "veda", "vedic", "hymn", f"mandala-{m}", "sanskrit", "verified"],
         "is_first_translation": False, "status": "published",
-        "scans": {"pages": [{"file": p, "caption": f"{w['shelfmark']}, fol. {p.split('-f')[-1][:-4].lstrip('0')}"} for p in sc_pages]},
+        "scans": {"pages": [{"file": p, "caption": f"Penn Ms. Coll. 390 {shelf_short[p.split('/')[-1].split('-f')[0]]}, fol. {fol(p)}"} for p in sc_pages]},
         "order_key": (m, h),
     }
     return entry, row
@@ -629,17 +781,18 @@ def write_all(entries):
         "collection": {
             "key": KEY, "prefix": PREFIX, "label": "Rigveda",
             "group": "India", "date_sort": -1200,
-            "author_name": "Vedic seers (c. 1500-1000 BCE); manuscripts 17th-18th c.",
+            "author_name": "Vedic seers (c. 1500-1000 BCE); manuscripts 18th-19th c.",
             "source_url": f"{OPENN}/html/mscoll390_item48.html",
             "critical_edition": "Aufrecht (1877), accented e-text via GRETIL",
-            "translator_name": "Ralph T. H. Griffith (1889-1892)",
+            "translator_name": "Ralph T. H. Griffith (1889-1897)",
             "original_lang_label": "Vedic Sanskrit · Aufrecht (accented)",
             "original_lang_code": "sa",
-            "edition_label": "",
+            "edition_label": "Padapāṭha (word-by-word text written in the manuscript; Sansknet e-text via GRETIL)",
             "search_terms": "rigveda rig veda rgveda vedic hymns sanskrit agni indra soma purusha nasadiya hiranyagarbha gayatri",
             "description": ("The Rigveda, the oldest collection of Sanskrit hymns, hymn by hymn: Aufrecht's accented text, "
-                            "Griffith's English, and the page of a dated Devanagari manuscript in the University of Pennsylvania "
-                            "collection that carries each verse."),
+                            "Griffith's English, and the page of a Devanagari manuscript in the University of Pennsylvania "
+                            "collection that carries each verse (a saṃhitā copy of 1711 for most of book 10, a padapāṭha copy "
+                            "of the whole Rigveda for book 1 and the first half of book 10, and a 1737 copy for the Gāyatrī hymn)."),
         },
         "texts": rows,
     }

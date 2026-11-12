@@ -99,7 +99,7 @@ WORK = {
         "edition_label": "",
         "search_terms": "plato critias atlantis atlantikos poseidon cleito atlas ancient athens paris a grec 1807",
         "description": ("The Critias, Plato's unfinished account of ancient Athens and the island of Atlantis, complete as far as "
-                        "Plato wrote it. Every Stephanus section is shown on the page of the oldest manuscript that carries it, "
+                        "Plato wrote it. Every Stephanus section is shown on the page of the oldest medieval manuscript that carries it, "
                         "Paris gr. 1807 (9th century), with Burnet's Greek and R. G. Bury's English."),
     },
 }

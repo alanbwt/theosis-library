@@ -52,7 +52,7 @@ COLL_DIR = ROOT / "data" / "collections"
 SCANS = ROOT / "site" / "assets" / "scans"
 TODAY = date.today().isoformat()
 TEI = "{http://www.tei-c.org/ns/1.0}"
-UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+UA = "TheosisLibrary/1.0 (non-commercial research; +https://theosislibrary.com)"
 PERSEUS = "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0059/{w}/tlg0059.{w}.{ed}.xml"
 MANIFEST_URL = "https://openapi.bnf.fr/iiif/presentation/v3/ark:/12148/btv1b8419248n/manifest.json"
 GALLICA = "https://gallica.bnf.fr/ark:/12148/btv1b8419248n"
@@ -62,7 +62,7 @@ SCAN_WIDTH = 1650
 MS_PARAGRAPH = (
     "<p>The manuscript is Paris, Bibliothèque nationale de France, <strong>grec 1807</strong>, known to editors as "
     "<strong>Plato A</strong>. It was copied in Constantinople around 850-875 by the scribe of the so-called philosophical "
-    "collection, and is the oldest surviving manuscript of the <em>Timaeus</em> and <em>Critias</em> (tetralogies VIII-IX: "
+    "collection, and is the oldest surviving medieval manuscript of the <em>Timaeus</em> and <em>Critias</em> (tetralogies VIII-IX: "
     "Clitophon, Republic, Timaeus, Critias, Minos, Laws, Epinomis, Letters). Each page has two columns of 44 lines. "
     "The <em>Timaeus</em> fills fol. 114r-144v and the <em>Critias</em> fol. 145r-151r.</p>"
 )
@@ -634,7 +634,7 @@ WORK["collection"] = {
     "edition_label": "",
     "search_terms": "plato timaeus atlantis solon sais cosmology demiurge world soul receptacle paris a grec 1807",
     "description": ("The complete Timaeus, Plato's account of the making of the world, which opens with Critias' story of Atlantis "
-                    "(20d-25d). Every Stephanus section is shown on the page of the oldest manuscript that carries it, Paris gr. 1807 "
+                    "(20d-25d). Every Stephanus section is shown on the page of the oldest medieval manuscript that carries it, Paris gr. 1807 "
                     "(9th century), with Burnet's Greek and R. G. Bury's English."),
 }
 

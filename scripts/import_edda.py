@@ -27,8 +27,7 @@ SCAN_DIR = PROJECT_ROOT / "site" / "assets" / "scans" / "codex-regius"
 SCAN_DIR.mkdir(parents=True, exist_ok=True)
 
 USER_AGENT = (
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 "
+    "TheosisLibrary/1.0 (non-commercial research; +https://theosislibrary.com)"
     "TheosisLibrary/1.0 (https://theosislibrary.com)"
 )
 

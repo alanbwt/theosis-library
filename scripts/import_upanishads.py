@@ -70,6 +70,34 @@ WS = "https://en.wikisource.org/wiki/"
 # --------------------------------------------------------------------------------------------
 # Scans: spread index -> (top leaf = verso, bottom leaf = following recto)
 # --------------------------------------------------------------------------------------------
+ITEMS = {
+    "869": {"name": "Penn Ms. Coll. 390 Item 869", "tif": "6128_{:04d}.tif", "single": {16}, "narrow": {2, 4, 6},
+            "url": "https://openn.library.upenn.edu/Data/0002/html/mscoll390_item869.html",
+            "master": "https://openn.library.upenn.edu/Data/0002/mscoll390_item869/data/master/6128_{:04d}.tif",
+            "notes": "data/sources/upanishads/mapping_notes_869.txt"},
+    "1213": {"name": "Penn Ms. Coll. 390 Item 1213", "tif": "5439_{:04d}.tif", "single": {7}, "narrow": set(),
+             "url": "https://openn.library.upenn.edu/Data/0002/html/mscoll390_item1213.html",
+             "master": "https://openn.library.upenn.edu/Data/0002/mscoll390_item1213/data/master/5439_{:04d}.tif",
+             "notes": "data/sources/upanishads/mapping_notes_1213.txt"},
+}
+ITEMS["945"] = {"name": "Penn Ms. Coll. 390 Item 945", "tif": "6239_{:04d}.tif", "single": {0, 74}, "narrow": set(),
+                "url": "https://openn.library.upenn.edu/Data/0002/html/mscoll390_item945.html",
+                "master": "https://openn.library.upenn.edu/Data/0002/mscoll390_item945/data/master/6239_{:04d}.tif",
+                "notes": "data/sources/upanishads/mapping_945.json", "width": 2000}
+MS_DESC_945 = ("University of Pennsylvania, Kislak Center for Special Collections, Ms. Coll. 390 Item 945 "
+               "(Chandogyopanisad, prapathakas 1-8), 74 paper leaves, 11 x 17 cm, 10-11 lines per side, Devanagari, "
+               "blue machine-made paper with watermarks, undated (catalogued 18th/19th c.)")
+
+
+def needed_945():
+    m = json.loads((SRC / "mapping_945.json").read_text(encoding="utf-8"))
+    return sorted({pg["page"] for pages in m.values() for pg in pages})
+
+
+NEEDED_1213 = ["f01v", "f02r", "f02v", "f03r", "f03v", "f04r", "f04v", "f05r", "f05v", "f06r", "f06v", "f07r", "f07v"]
+MS_DESC_1213 = ("University of Pennsylvania, Kislak Center for Special Collections, Ms. Coll. 390 Item 1213 "
+                "(Chandogyopanisad, sixth prapathaka), 7 paper leaves, 11 x 24 cm, 9-10 lines per side, Devanagari, "
+                "with red accent marks; dated saka 1758 (1836 CE) in the colophon on fol. 7v")
 NEEDED = ["f01v", "f02r", "f03v", "f04r", "f04v", "f05r", "f05v", "f06r", "f06v", "f07r", "f07v",
           "f08r", "f08v", "f09r", "f09v", "f10r", "f10v", "f11r", "f11v", "f12r", "f12v", "f16r", "f16v"]
 # spreads where the two leaves touch: search the cut in a narrow band
@@ -90,7 +118,7 @@ def fetch(url, binary=True):
     return data if binary else data.decode("utf-8")
 
 
-def split_spread(tif_path, n_leaves, narrow):
+def split_spread(tif_path, n_leaves, narrow, width=2400):
     """Return leaf images (top first) cropped from an OPenn spread photograph."""
     import numpy as np
     from PIL import Image
@@ -118,39 +146,44 @@ def split_spread(tif_path, n_leaves, narrow):
         box = (max(0, (x0 - pad) * f), max(0, (y0 - pad) * f), min(W, (x1 + pad) * f), min(H, (y1 + pad) * f))
         leaf = im.crop(box)
         lw, lh = leaf.size
-        if lw > 2400:
-            leaf = leaf.resize((2400, round(lh * 2400 / lw)), Image.LANCZOS)
+        if lw > width:
+            leaf = leaf.resize((width, round(lh * width / lw)), Image.LANCZOS)
         out.append(leaf)
     return out
 
 
-def make_scans(tif_dir, force):
+def make_scans(tif_dirs, force):
     SCAN_DIR.mkdir(parents=True, exist_ok=True)
-    spreads = {}
-    for fol in NEEDED:
-        s, pos = folio_source(fol)
-        spreads.setdefault(s, []).append((pos, fol))
-    for s, items in sorted(spreads.items()):
-        if not force and all((SCAN_DIR / f"penn869-{fol}.jpg").exists() for _, fol in items):
-            continue
-        local = Path(tif_dir) / f"6128_{s:04d}.tif" if tif_dir else None
-        tmp = None
-        if not (local and local.exists()):
-            tmp = tempfile.TemporaryDirectory()
-            local = Path(tmp.name) / f"6128_{s:04d}.tif"
-            print(f"  downloading {OPENN_MASTER.format(s)}")
-            local.write_bytes(fetch(OPENN_MASTER.format(s)))
-        leaves = split_spread(local, 1 if s == 16 else 2, s in NARROW)
-        for pos, fol in items:
-            p = SCAN_DIR / f"penn869-{fol}.jpg"
-            leaves[pos].save(p, quality=85)
-            print(f"  {p.relative_to(ROOT)} {leaves[pos].size}")
-        if tmp:
-            tmp.cleanup()
+    for item, needed in (("869", NEEDED), ("1213", NEEDED_1213), ("945", needed_945())):
+        cfg = ITEMS[item]
+        spreads = {}
+        for fol in needed:
+            sp, pos = folio_source(fol)
+            spreads.setdefault(sp, []).append((pos, fol))
+        for sp, items in sorted(spreads.items()):
+            if not force and all((SCAN_DIR / f"penn{item}-{fol}.jpg").exists() for _, fol in items):
+                continue
+            local = None
+            for d in tif_dirs or []:
+                if (Path(d) / cfg["tif"].format(sp)).exists():
+                    local = Path(d) / cfg["tif"].format(sp)
+            tmp = None
+            if local is None:
+                tmp = tempfile.TemporaryDirectory()
+                local = Path(tmp.name) / cfg["tif"].format(sp)
+                print(f"  downloading {cfg['master'].format(sp)}")
+                local.write_bytes(fetch(cfg["master"].format(sp)))
+            leaves = split_spread(local, 1 if sp in cfg["single"] else 2, sp in cfg["narrow"], cfg.get("width", 2400))
+            for pos, fol in items:
+                out = SCAN_DIR / f"penn{item}-{fol}.jpg"
+                leaves[pos].save(out, quality=85)
+                print(f"  {out.relative_to(ROOT)} {leaves[pos].size}")
+            if tmp:
+                tmp.cleanup()
 
 
-def scan(fol):
-    return f"{KEY}/penn869-{fol}.jpg"
+def scan(fol, item="869"):
+    return f"{KEY}/penn{item}-{fol}.jpg"
 
 
 def viewer(fol):
@@ -243,42 +276,79 @@ def load_prasna():
     return out
 
 
-def load_chandogya6():
-    """Chandogya Upanisad prapathaka 6: the mula (bold) text of GRETIL's file with Samkara's commentary.
-    Verses close at a reference 'ChUp_6,k.v' or, for 6.2.4 (entered in a different style), at '//4//'.
-    Bold khanda colophons ('iti cchāndogyopaniṣadi ... khaṇḍaḥ') are skipped."""
+def load_chandogya(pr):
+    """Chandogya Upanisad prapathaka pr: the mula (bold) text of GRETIL's file with Samkara's commentary.
+    Paragraphs close at a reference 'ChUp_pr,k.v' or, where GRETIL entered a paragraph in another style, at '//v//'
+    (its khanda is then taken from the preceding reference and khanda colophons). Khanda and chapter colophons
+    ('iti cchāndogyopaniṣadi ... khaṇḍaḥ') are skipped."""
     s = gretil("sa_chAndogyopaniSad-comm")
-    s = s[s.find("START ChUp 6,1.1"):s.find("START ChUp 7,1.1")]
-    out, buf, khanda = {}, [], 1
+    a = s.find(f"START ChUp {pr},1.1")
+    b = s.find(f"START ChUp {pr + 1},1.1") if pr < 8 else len(s)
+    s = s[a:b]
+    out, buf, cur_k, after_colophon, alt = {}, [], 1, False, set()
     for tag, body in re.findall(r'<(hi|lg|l) rend="bold">(.*?)</\1>', s, re.S):
         txt = re.sub(r"</?(p|hi|lg|l)[^>]*>", "\n", body)
         ls = [clean(x) for x in txt.split("\n")]
         ls = [x for x in ls if x]
         if not ls:
             continue
-        if re.match(r"(iti|atha) ", ls[0]) and re.search(r"khaṇḍaḥ|prapāṭhakaḥ|dhyāyaḥ", " ".join(ls)) \
-                and len(" ".join(ls)) < 80:
-            continue
         joined = " ".join(ls)
-        r = re.search(r"(\|\||//)\s*ChUp_6,(\d+)\.(\d+)\s*(\|\||//)", joined)
-        r2 = re.search(r"//(\d+)//\s*$", joined)
+        if joined.strip(" |/") in ("oṃ", "hariḥ oṃ", "oṃ hariḥ"):
+            continue                     # invocation syllable between chapters
+        if re.match(r"(iti|atha) ", ls[0]) and re.search(r"khaṇḍaḥ|prapāṭhakaḥ|dhyāyaḥ", joined) \
+                and (len(joined) < 80 or "vivaraṇe" in joined):
+            after_colophon = True        # khanda / chapter colophons (and the commentary's chapter colophon)
+            continue
+        r = re.search(r"(\|\||//)\s*ChUp_%d,(\d+)\.(\d+)\s*(\|\||//)" % pr, joined)
+        r2 = re.search(r"//\s*(\d+)\s*//\s*$", joined)
         if r:
             k, v = int(r.group(2)), int(r.group(3))
-            ls[-1] = re.sub(r"\s*(\|\||//)\s*ChUp_6,\d+\.\d+\s*(\|\||//)", " " + r.group(1), ls[-1])
+            ls[-1] = re.sub(r"\s*(\|\||//)\s*ChUp_\d+,\d+\.\d+\s*(\|\||//)", " " + r.group(1), ls[-1])
         elif r2:
-            k, v = khanda, int(r2.group(1))
-            ls[-1] = re.sub(r"//\d+//\s*$", "//", ls[-1])
+            k, v = (cur_k + 1 if after_colophon else cur_k), int(r2.group(1))
+            ls[-1] = re.sub(r"//\s*\d+\s*//\s*$", "//", ls[-1])
         else:
             buf.extend(ls)
             continue
         buf.extend(ls)
+        if (k, v) in out:
+            # GRETIL sometimes enters a paragraph twice (an unreferenced '//v//' copy next to the referenced one):
+            # the referenced copy is kept
+            assert (k, v) in alt or r is None, (pr, k, v)
+            if r is None:
+                buf, cur_k, after_colophon = [], k, False
+                continue
         out[(k, v)] = lines_html(buf)
-        buf, khanda = [], k
-    assert not buf, buf
+        if r is None:
+            alt.add((k, v))
+        else:
+            alt.discard((k, v))
+        buf, cur_k, after_colophon = [], k, False
+    assert not buf, (pr, buf)
+    # legacy-encoding artifacts in the GRETIL file, normalized (listed in the entry notes)
+    for (p2, k, v), (a, b2) in CHU_GRETIL_FIXES.items():
+        if p2 == pr:
+            assert out[(k, v)].count(a) == 1, (p2, k, v, a)
+            out[(k, v)] = out[(k, v)].replace(a, b2)
+    return out
+
+
+CHU_GRETIL_FIXES = {
+    (2, 8, 1): ("saptavidh.am", "saptavidham"),
+    (2, 12, 2): ("brahmavarcasy: annādo", "brahmavarcasy annādo"),
+    (2, 14, 2): ("tejasvy: annādo", "tejasvy annādo"),
+}
+
+
+def load_chandogya6():
+    out = load_chandogya(6)
     counts = {k: max(x[1] for x in out if x[0] == k) for k in range(1, 17)}
     assert counts == {1: 7, 2: 4, 3: 4, 4: 7, 5: 4, 6: 5, 7: 6, 8: 7, 9: 4, 10: 3, 11: 3, 12: 3, 13: 3, 14: 3,
                       15: 3, 16: 3}, counts
     assert len(out) == 69, len(out)
+    # legacy-encoding artifact in GRETIL 6.13.2: 'an;gāsyāntād' (n; = ṅ); shown as aṅgāsyāntād
+    assert out[(13, 2)].count("an;gā") == 1
+    out[(13, 2)] = out[(13, 2)].replace("an;gā", "aṅgā")
     return out
 
 
@@ -314,10 +384,19 @@ WS_PAGES = {
     "katha": "Sacred Books of the East/Volume 15/Katha-upanishad",
     "prasna": "Sacred Books of the East/Volume 15/Prasña-upanishad",
     "chandogya6": "Sacred Books of the East/Volume 1/Khândogya-upanishad/Sixth Prapâthaka",
+    "chandogya1": "Sacred Books of the East/Volume 1/Khândogya-upanishad/First Prapâthaka",
+    "chandogya2": "Sacred Books of the East/Volume 1/Khândogya-upanishad/Second Prapâthaka",
+    "chandogya3": "Sacred Books of the East/Volume 1/Khândogya-upanishad/Third Prapâthaka",
+    "chandogya4": "Sacred Books of the East/Volume 1/Khândogya-upanishad/Fourth Prapâthaka",
+    "chandogya5": "Sacred Books of the East/Volume 1/Khândogya-upanishad/Fifth Prapâthaka",
+    "chandogya7": "Sacred Books of the East/Volume 1/Khândogya-upanishad/Seventh Prapâthaka",
+    "chandogya8": "Sacred Books of the East/Volume 1/Khândogya-upanishad/Eighth Prapâthaka",
 }
 ORD = {"FIRST": 1, "SECOND": 2, "THIRD": 3, "FOURTH": 4, "FIFTH": 5, "SIXTH": 6, "SEVENTH": 7, "EIGHTH": 8,
        "NINTH": 9, "TENTH": 10, "ELEVENTH": 11, "TWELFTH": 12, "THIRTEENTH": 13, "FOURTEENTH": 14,
-       "FIFTEENTH": 15, "SIXTEENTH": 16}
+       "FIFTEENTH": 15, "SIXTEENTH": 16, "SEVENTEENTH": 17, "EIGHTEENTH": 18, "NINETEENTH": 19, "TWENTIETH": 20,
+       "TWENTY-FIRST": 21, "TWENTY-SECOND": 22, "TWENTY-THIRD": 23, "TWENTY-FOURTH": 24, "TWENTY-FIFTH": 25,
+       "TWENTY-SIXTH": 26}
 
 
 def ws_html(key):
@@ -328,6 +407,9 @@ def ws_html(key):
                + urllib.parse.quote(WS_PAGES[key]))
         p.write_bytes(fetch(url))
     return json.loads(p.read_text(encoding="utf-8"))["parse"]["text"]
+
+
+WS_LABELS = {}
 
 
 def ws_units(key):
@@ -349,10 +431,11 @@ def ws_units(key):
             break
         if plain.startswith("↑"):
             continue
-        m = re.match(r"^(\d+)\.\s+(.*)$", ln)
+        m = re.match(r"^(\d+)(?:,\s*\d+)*\.\s+(.*)$", ln)
         hm = re.match(r"^(" + "|".join(ORD) + r")\s+(\S+)", plain, re.I)
         if m:
             cur = [list(heads), int(m.group(1)), m.group(2)]
+            WS_LABELS[(key, len(units))] = re.match(r"^([\d,\s]+)\.", ln).group(1).replace(" ", "")
             units.append(cur)
         elif hm and len(plain) < 40:
             heads.append((hm.group(1).upper(), hm.group(2).rstrip(".").upper()))
@@ -374,6 +457,8 @@ WS_FIXES = {
     ("katha", (2, 23)): [("the Self can be can gained", "the Self can be gained")],
     ("katha", (3, 13)): [("the Self whichs is the Great", "the Self which is the Great")],
     ("katha", (6, 15)): [("Whean all the ties", "When all the ties")],
+    # SBE 1 p. 100 (archive.org OCR of the printed page agrees: 'a second')
+    ("chandogya6", (11, 2)): [("if it leaves at second", "if it leaves a second")],
 }
 
 
@@ -440,6 +525,58 @@ def eng_chandogya6():
     counts = {k: max(x[1] for x in out if x[0] == k) for k in range(1, 17)}
     assert counts == {1: 7, 2: 4, 3: 4, 4: 7, 5: 4, 6: 5, 7: 6, 8: 7, 9: 4, 10: 3, 11: 3, 12: 3, 13: 3, 14: 3,
                       15: 2, 16: 2}, counts
+    return apply_fixes("chandogya6", out)
+
+
+# Wikisource transcription slips in SBE 1, corrected to the printed page. 1.9.2 checked on the page image (SBE 1
+# p. 17); the others against the archive.org OCR of the same 1879 printing (copy upanishads01mluoft), which reads the
+# printed words. The heading 'Elventh Khanda.' is merged into 2.10.6 by the transcription and is removed.
+CHU_EN_FIXES = {
+    (1, 9, "2"): [("the udîttha (Om", "the udgîtha (Om")],
+    (2, 10, "6"): [(" Elventh Kha<em>nd</em>a.", "")],
+    (3, 16, "2"): [("that I, the sacrifices may not perish", "that I, the sacrificer, may not perish")],
+    (4, 6, "1"): [("drove the cows (toward the house", "drove the cows (towards the house")],
+    (7, 25, "1"): [("it is indeed alt this", "it is indeed all this")],
+}
+
+
+def eng_chandogya_labeled(pr):
+    """{khanda: [(label, text), ...]} with Müller's printed paragraph labels (e.g. '1', '1,2')."""
+    out, kh, last_head, prev_n = {}, 0, None, 0
+    for idx, (hs, n, t) in enumerate(ws_units(f"chandogya{pr}")):
+        ks = [h for h in hs if h[1].startswith("KHANDA")]
+        if not ks:
+            continue
+        head = ORD[ks[-1][0]]
+        if head != last_head:
+            kh, last_head = head, head
+        elif n <= prev_n:
+            kh += 1
+        prev_n = n
+        label = WS_LABELS[(f"chandogya{pr}", idx)]
+        for a, b in CHU_EN_FIXES.get((pr, kh, label), []):
+            assert t.count(a) == 1, (pr, kh, label, a)
+            t = t.replace(a, b)
+        out.setdefault(kh, []).append((label, t))
+    return out
+
+
+def eng_chandogya_raw(pr):
+    """Müller's paragraphs keyed (khanda, n). A khanda heading missing from the transcription is detected by the
+    paragraph number starting again at 1 (the khanda number is then advanced by one)."""
+    out, kh, last_head, prev_n = {}, 0, None, 0
+    for hs, n, t in ws_units(f"chandogya{pr}"):
+        ks = [h for h in hs if h[1].startswith("KHANDA")]
+        if not ks:
+            continue
+        head = ORD[ks[-1][0]]
+        if head != last_head:
+            kh, last_head = head, head
+        elif n <= prev_n:
+            kh += 1
+        prev_n = n
+        assert (kh, n) not in out, (pr, kh, n)
+        out[(kh, n)] = t
     return out
 
 
@@ -547,6 +684,61 @@ PRASNA_MAP = {
         ],
 }
 
+CHANDOGYA6_MAP = [  # (khanda, first, last, pages, note) -- item 1213
+    (1, 1, 4, ["f01v"], "fol. 1v (9 lines): after 'śrīgaṇeśāya namaḥ' and the invocation 'oṃ āpyāyantu mamāṅgāni ...' (lines 1-4), "
+                        "paragraph 1 begins in line 4 ‹hariḥ oṃ śvetaketur hāruṇeya āsa›; paragraph 4 ends in line 9 ‹mṛttikety eva satyaṃ›."),
+    (1, 5, 7, ["f01v", "f02r"], "Paragraph 5 begins at the end of fol. 1v line 9 ‹yathā somyaikena lohamaṇinā› and ends at fol. 2r line 1 "
+                                "‹loham ity eva satyaṃ›; paragraphs 6-7 follow to line 4 ‹tathā somyeti hovāca›, marked ‹||1||›."),
+    (2, 1, 3, ["f02r"], "fol. 2r lines 4-9: paragraph 1 begins ‹sad eva somyedam agra āsīt›; paragraph 3 ends ‹tad adhy āpo jāyante›. "
+                        "Some words in line 7 are covered in yellow (a scribal deletion)."),
+    (2, 4, 4, ["f02r", "f02v"], "Paragraph 4 begins at the end of fol. 2r line 9 ‹tā āpa aikṣanta› and ends at fol. 2v line 1 "
+                                "‹annādyaṃ jāyate›, marked ‹||2||›."),
+    (3, 1, 4, ["f02v"], "fol. 2v lines 1-6: paragraph 1 begins ‹teṣāṃ khalv eṣāṃ bhūtānāṃ›; paragraph 4 ends ‹tan me vijānīhīti›, "
+                        "marked ‹||3||›."),
+    (4, 1, 2, ["f02v"], "fol. 2v lines 6-9: paragraph 1 begins ‹yad agne rohitaṃ rūpaṃ›; paragraph 2 ends ‹trīṇi rūpāṇīty eva satyaṃ›."),
+    (4, 3, 7, ["f02v", "f03r"], "Paragraph 3 begins at fol. 2v line 9 ‹yac candramaso rohitaṃ rūpaṃ› and ends at fol. 3r line 1 "
+                                "‹trīṇi rūpāṇīty eva satyaṃ›; paragraphs 4-7 follow to line 8 ‹tan me vijānīhīti›, marked ‹||4||›."),
+    (5, 1, 1, ["f03r"], "fol. 3r lines 8-9: ‹annam aśitaṃ tredhā vidhīyate› ... ‹yo 'ṇiṣṭhas tan manaḥ›."),
+    (5, 2, 4, ["f03r", "f03v"], "Paragraph 2 begins at the end of fol. 3r line 9 ‹āpaḥ pītās tredhā vidhīyante› and ends at fol. 3v line 1 "
+                                "‹sa prāṇaḥ›; paragraphs 3-4 follow to line 4 ‹tathā somyeti hovāca›, marked ‹||5||›."),
+    (6, 1, 5, ["f03v"], "fol. 3v lines 4-8: paragraph 1 begins ‹dadhnaḥ somya mathyamānasya›; paragraph 5 ends ‹tathā somyeti hovāca›, "
+                        "marked ‹||6||›."),
+    (7, 1, 1, ["f03v"], "fol. 3v lines 8-10: ‹ṣoḍaśakalaḥ somya puruṣaḥ› ... ‹na pibato vicchetsyata iti›."),
+    (7, 2, 6, ["f03v", "f04r"], "Paragraph 2 begins at the end of fol. 3v line 10 ‹sa ha pañcadaśāhāni nāśa› and ends at fol. 4r line 1 "
+                                "‹na vai mā pratibhānti bho iti› (the words 'sa hovāca' are added in the top margin of fol. 4r); "
+                                "paragraphs 3-6 follow to line 7 ‹vijajñāv iti vijajñāv iti›, marked ‹||7||›."),
+    (8, 1, 5, ["f04r", "f04v"], "Paragraph 1 begins at fol. 4r line 8 ‹uddālako hāruṇiḥ śvetaketuṃ putram uvāca› and ends at fol. 4v "
+                                "line 1 ‹apīto bhavati›; paragraphs 2-5 follow to line 10 ‹nedam amūlaṃ bhaviṣyatīti›."),
+    (8, 6, 7, ["f04v", "f05r"], "Paragraph 6 begins at the end of fol. 4v line 10 ‹tasya kva mūlaṃ syād anyatrādbhyaḥ› and ends at fol. 5r "
+                                "line 3 ‹parasyāṃ devatāyāṃ› (words left out in fol. 5r line 1 are supplied in the top margin); "
+                                "paragraph 7 follows to line 4, marked ‹||8||›."),
+    (9, 1, 3, ["f05r"], "fol. 5r lines 4-8: paragraph 1 begins ‹yathā somya madhu madhukṛtaḥ›; paragraph 3 ends "
+                        "‹yad yad bhavanti tad ābhavanti›."),
+    (9, 4, 4, ["f05r", "f05v"], "Paragraph 4 begins at fol. 5r line 8 ‹sa ya eṣo 'ṇimaitadātmyam› and ends at fol. 5v line 1 "
+                                "‹tathā somyeti hovāca›, marked ‹||9||›."),
+    (10, 1, 3, ["f05v"], "fol. 5v lines 1-6: paragraph 1 begins ‹imāḥ somya nadyaḥ›; paragraph 3 ends ‹tathā somyeti hovāca›, "
+                         "marked ‹||10||›."),
+    (11, 1, 2, ["f05v"], "fol. 5v lines 6-9: paragraph 1 begins ‹asya somya mahato vṛkṣasya›; paragraph 2 ends ‹sarvaḥ śuṣyati›. "
+                         "Müller ends his paragraph 2 with 'In exactly the same manner, my son, know this. Thus he spoke', which "
+                         "renders the opening words of Sanskrit paragraph 3 (‹evam eva khalu somya viddhīti hovāca›, line 9)."),
+    (11, 3, 3, ["f05v", "f06r"], "Paragraph 3 begins at the end of fol. 5v line 9 ‹evam eva khalu somya viddhīti› and ends at fol. 6r "
+                                 "line 3 ‹tathā somyeti hovāca›, marked ‹||11||›."),
+    (12, 1, 3, ["f06r"], "fol. 6r lines 3-8: paragraph 1 begins ‹nyagrodhaphalam ata āhareti›; paragraph 3 ends ‹tathā somyeti hovāca›, "
+                         "marked ‹||12||›."),
+    (13, 1, 3, ["f06r", "f06v"], "Paragraph 1 begins at fol. 6r line 8 ‹lavaṇam etad udake 'vadhāya› and ends at fol. 6v line 1 "
+                                 "‹na viveda›; paragraphs 2-3 follow to line 6 ‹tathā somyeti hovāca›, marked ‹||13||›."),
+    (14, 1, 1, ["f06v"], "fol. 6v lines 6-8: ‹yathā somya puruṣaṃ gandhārebhyaḥ› ... ‹abhinaddhākṣo visṛṣṭaḥ›."),
+    (14, 2, 3, ["f06v", "f07r"], "Paragraph 2 begins at fol. 6v line 8 ‹tasya yathābhinahanaṃ› (the word 'pramucya' is added below the "
+                                 "text) and ends at fol. 7r line 1 ‹saṃpatsya iti›; paragraph 3 follows to line 2, marked ‹||14||›."),
+    (15, 1, 3, ["f07r"], "fol. 7r lines 3-7: paragraph 1 begins ‹puruṣaṃ somyotopatāpinaṃ›; paragraph 3 ends ‹tathā somyeti hovāca›, "
+                         "marked ‹||15||›. Müller numbers this khanda in two paragraphs; his 2 covers Sanskrit 2 and 3."),
+    (16, 1, 1, ["f07r"], "fol. 7r lines 7-9: ‹puruṣaṃ somyota hastagṛhītam ānayanti› ... ‹atha hanyate›."),
+    (16, 2, 3, ["f07r", "f07v"], "Paragraph 2 begins at the end of fol. 7r line 9 ‹atha yadi tasyākartā bhavati› and ends at fol. 7v "
+                                 "line 2 ‹atha mucyate›; paragraph 3 follows to line 3 ‹vijajñāv iti vijajñāv iti›, marked ‹||16||›, "
+                                 "then the colophon ‹iti chāndogye ṣaṣṭhaḥ prapāṭhakaḥ› and a dated colophon (śaka 1758). "
+                                 "Müller's paragraph 2 covers Sanskrit 2 and 3."),
+]
+
 MANDUKYA_MAP = [
     (None, 1, 8, ["f16r"], "fol. 16r (11 lines): after the invocations 'oṃ bhadraṃ karṇebhiḥ ...' and 'svasti na indro ...' "
                            "(abbreviated) and 'oṃ śāntiḥ', paragraph 1 begins in line 1 ‹om ity etad akṣaram›; paragraph 8 ends in "
@@ -562,20 +754,22 @@ def sup_join(pairs):
     return "<br>".join(f"<sup>{n}</sup>{t}" for n, t in pairs)
 
 
-def build_section(sid, ref, sa, en, pages, note, extra=""):
+def build_section(sid, ref, sa, en, pages, note, extra="", item="869"):
     pages_txt = ", ".join("fol. " + p[1:3].lstrip("0") + p[3] for p in pages)
     return {
         "section": sid,
         "original_ref": ref,
         "original_text": sa,
         "text": en,
-        "scan_pages": [scan(p) for p in pages],
-        "scan_note": f"{MS_NAME}, {pages_txt}. {note}{extra} Checked on the image; readings logged in "
-                     "data/sources/upanishads/mapping_notes_869.txt.",
+        "scan_pages": [scan(p, item) for p in pages],
+        "scan_note": f"{ITEMS[item]['name']}, {pages_txt}. {note}{extra} Checked on the image; readings logged in "
+                     f"{ITEMS[item]['notes']}.",
     }
 
 
-def entry_json(tid, title, description, intro, notes, sections, sa_src, sa_lic, en_src, en_lic, translator, mapping_urls):
+def entry_json(tid, title, description, intro, notes, sections, sa_src, sa_lic, en_src, en_lic, translator, mapping_urls,
+               item="869"):
+    cfg = ITEMS[item]
     pages = []
     for s in sections:
         for p in s["scan_pages"]:
@@ -584,19 +778,19 @@ def entry_json(tid, title, description, intro, notes, sections, sa_src, sa_lic, 
     return {
         "id": tid, "slug": tid, "title": title,
         "language": "Sanskrit (IAST) / English",
-        "source": f"{MS_NAME} (OPenn, public domain) + GRETIL Sanskrit + {translator} English",
+        "source": f"{cfg['name']} (OPenn, public domain) + GRETIL Sanskrit + {translator} English",
         "description": description,
         "introduction": intro,
         "translator_notes": notes,
         "translation": sections,
         "verification": {
-            "scan_source": f"University of Pennsylvania Libraries, OPenn: {OPENN_ITEM}",
-            "scan_license": SCAN_LICENSE,
-            "scan_manuscript": MS_DESC,
+            "scan_source": f"University of Pennsylvania Libraries, OPenn: {cfg['url']}",
+            "scan_license": SCAN_LICENSE.replace("Item 869", f"Item {item}"),
+            "scan_manuscript": {"869": MS_DESC, "1213": MS_DESC_1213, "945": MS_DESC_945}[item],
             "scan_mapping": "Each section was located by reading the manuscript page images (the manuscript has no verse "
                             "numbers; verses were identified by their words, chapter ends by the scribe's colophons and "
                             "numbers). Line-level readings are recorded in each scan_note and in "
-                            "data/sources/upanishads/mapping_notes_869.txt.",
+                            f"{cfg['notes']}.",
             "scan_mapping_urls": mapping_urls,
             "scan_local_paths": pages,
             "original_text_source": sa_src,
@@ -607,6 +801,135 @@ def entry_json(tid, title, description, intro, notes, sections, sa_src, sa_lic, 
             "verified_date": TODAY,
         },
     }
+
+
+# --------------------------------------------------------------------------------------------
+# Chandogya 1-5, 7, 8 on Item 945
+# --------------------------------------------------------------------------------------------
+CHU_TITLES = {
+    1: "the udgitha and the syllable Om",
+    2: "the Saman, fivefold and sevenfold",
+    3: "the honey of the gods; Sandilya; Ghora Angirasa",
+    4: "Raikva; Satyakama Jabala; Upakosala",
+    5: "the breath; the five fires; Asvapati and the universal self",
+    7: "Narada and Sanatkumara: the infinite (bhuman)",
+    8: "the space in the heart; Indra and Virocana",
+}
+CHU_SUMMARY = {
+    1: "It opens the Upanishad with meditations on the udgitha, the chanted portion of a Saman, identified with the "
+       "syllable Om. It tells how the gods used the udgitha against the demons, how the priests Silaka, Caikitayana "
+       "and the king Pravahana Jaivali debated the support of the Saman, how the impoverished Usasti Cakrayana "
+       "challenged the priests at a royal sacrifice, and closes with the 'udgitha of the dogs' and the stobha syllables.",
+    2: "It treats the Saman as a whole: the fivefold and sevenfold Saman meditated on in the worlds, the rain, the "
+       "waters, the seasons, the animals and the breaths, the Samans woven into the world (2.11-21), the 'three "
+       "branches of law' (2.23) and the rites that win the worlds of the three daily soma pressings (2.24).",
+    3: "It contains the meditation on the sun as the honey of the gods (3.1-11), the Gayatri (3.12), the doors of the "
+       "heart (3.13), Sandilya's teaching that 'all this is Brahman' and the self within the heart is smaller than a "
+       "grain and greater than the worlds (3.14), the universe as a chest (3.15), man as a sacrifice (3.16), Ghora "
+       "Angirasa's teaching to Krishna son of Devaki (3.17), mind and space as Brahman (3.18) and the world egg (3.19).",
+    4: "It tells of King Janasruti and Raikva 'with the cart' who teaches that wind and breath are the gatherers "
+       "(4.1-3), of Satyakama Jabala, accepted as a student for his truthfulness and taught by a bull, the fire, a "
+       "swan and a diver bird (4.4-9), of Upakosala taught by his teacher's sacred fires (4.10-15), and of the "
+       "Brahman priest who mends the sacrifice (4.16-17).",
+    5: "It tells of the dispute of the senses and the breath (5.1-2), of Svetaketu and King Pravahana Jaivali on the "
+       "five fires and the paths of the dead (5.3-10), and of King Asvapati Kaikeya teaching six learned householders "
+       "the universal self, Vaisvanara, and the offering to the breaths (5.11-24).",
+    7: "Narada, learned in all the Vedas and sciences, comes to Sanatkumara for help against sorrow. Sanatkumara leads "
+       "him step by step from name, speech and mind up to breath and to the infinite (bhuman), which is happiness: "
+       "'where one sees nothing else, hears nothing else, knows nothing else, that is the infinite'.",
+    8: "It teaches the small space within the heart, the 'city of Brahman' that holds heaven and earth (8.1-6), and "
+       "tells how the god Indra and the demon Virocana lived as students with Prajapati to learn the self that is free "
+       "from evil, age and death; Virocana leaves with the teaching that the body is the self, Indra returns three times "
+       "(8.7-12). It closes with verses on the way to Brahman (8.13-15).",
+}
+
+
+def chu_order(pr):
+    return 14 + pr
+
+
+def chandogya_sections(pr, sa, en_lab, pages):
+    """Build sections for one prapathaka from the page table (mapping_945.json).
+    A paragraph belongs to every page whose span covers it; a section holds the paragraphs that end on one page
+    (with all pages they occupy). Khandas whose paragraph division in Müller differs from the Sanskrit are kept whole
+    in one section."""
+    paras = sorted(sa)
+    pos = {k: i for i, k in enumerate(paras)}
+    omitted = set()
+    for pg in pages:
+        if pg.get("omits"):
+            a, b = [tuple(x) for x in pg["omits"]]
+            omitted |= {k for k in paras if pos[a] <= pos[k] <= pos[b]}
+    on_pages = {k: [] for k in paras}
+    for i, pg in enumerate(pages):
+        a, b = pos[tuple(pg["start"])], pos[tuple(pg["end"])]
+        for k in paras[a:b + 1]:
+            if k not in omitted:
+                on_pages[k].append(i)
+    missing = [k for k in paras if not on_pages[k] and k not in omitted]
+    assert not missing, (pr, missing)
+    mism = set()
+    for k in sorted({x[0] for x in paras}):
+        n = max(v for kk, v in paras if kk == k)
+        if [l for l, _ in en_lab.get(k, [])] != [str(v) for v in range(1, n + 1)]:
+            mism.add(k)
+    groups = {}
+    for k in paras:
+        if k in omitted:
+            continue
+        groups.setdefault(on_pages[k][-1], []).append(k)
+    seq = [groups[i] for i in sorted(groups)]
+    # merge groups so that a mismatched khanda stays in one section
+    merged = []
+    for g in seq:
+        g_mism = {k[0] for k in g if k[0] in mism}
+        if merged and g_mism & {k[0] for k in merged[-1]}:
+            merged[-1] = merged[-1] + g
+        else:
+            merged.append(g)
+    out = []
+    for g in merged:
+        pg_idx = sorted({i for k in g for i in on_pages[k]})
+        (k1, v1), (k2, v2) = g[0], g[-1]
+        sid = f"{pr}.{k1}.{v1}" if (k1, v1) == (k2, v2) else (
+            f"{pr}.{k1}.{v1}-{v2}" if k1 == k2 else f"{pr}.{k1}.{v1}-{k2}.{v2}")
+        sa_html = "<br>".join(f"<sup>{k}.{v}</sup>{sa[(k, v)]}" for k, v in g)
+        en_parts, done = [], set()
+        for k, v in g:
+            if k in mism:
+                if k in done:
+                    continue
+                done.add(k)
+                en_parts += [f"<sup>{k}.{l}</sup>{t}" for l, t in en_lab[k]]
+            else:
+                en_parts.append(f"<sup>{k}.{v}</sup>{en_lab[k][v - 1][1]}")
+        notes = []
+        for i in pg_idx:
+            pg = pages[i]
+            fol = pg["page"]
+            notes.append(f"fol. {fol[1:3].lstrip('0')}{fol[3]} begins ‹{pg['first_words']}› and ends ‹{pg['last_words']}›")
+        extra = [pages[i]["note"] for i in pg_idx if pages[i].get("note")]
+        sec_om = sorted(k for k in omitted if pos[g[0]] <= pos[k] <= pos[g[-1]])
+        if sec_om:
+            extra.append(f"Paragraphs {pr}.{sec_om[0][0]}.{sec_om[0][1]}-{sec_om[-1][1]} are not in this manuscript and are "
+                         "not shown")
+        mk = sorted({k for k, _ in g if k in mism})
+        if mk:
+            extra.append("Müller divides khanda " + ", ".join(f"{pr}.{k}" for k in mk) + " into paragraphs differently "
+                         "from the Sanskrit edition; the whole khanda is given here with his own numbers")
+        note = "; ".join(notes) + " (first and last words read on the image, transliterated). " + \
+               ("Notes: " + ". ".join(extra) + ". " if extra else "")
+        out.append({
+            "section": sid,
+            "original_ref": f"Chāndogya Upaniṣad {sid}",
+            "original_text": sa_html,
+            "text": "<br>".join(en_parts),
+            "scan_pages": [scan(pages[i]["page"], "945") for i in pg_idx],
+            "scan_note": f"{ITEMS['945']['name']}. {note}The words were located in the GRETIL text by string matching "
+                         "and the page boundaries follow from them; readings and results are stored in "
+                         "data/sources/upanishads/mapping_945.json.",
+        })
+    return out, sorted(omitted)
 
 
 MS_INTRO = (
@@ -620,7 +943,7 @@ MS_INTRO = (
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--tif-dir", default=None)
+    ap.add_argument("--tif-dir", action="append", default=[], help="directory with OPenn TIFFs (repeatable)")
     ap.add_argument("--force", action="store_true")
     args = ap.parse_args()
     make_scans(args.tif_dir, args.force)
@@ -742,6 +1065,105 @@ def main():
             "public domain (1884); Wikisource transcription CC BY-SA 4.0", "F. Max Müller (1884)", mapping_urls)))
         rows.append((tid, title, 7 + q, "prasna", f"Prasna Upanishad, question {q}"))
 
+    # ---------------- Chandogya 6 (item 1213) ----------------
+    sa, en = load_chandogya6(), eng_chandogya6()
+    secs = []
+    for k, a, b, pages, note in CHANDOGYA6_MAP:
+        vs = list(range(a, b + 1))
+        sa_html = sup_join((v, sa[(k, v)]) for v in vs)
+        en_pairs = []
+        for v in vs:
+            if k in (15, 16) and v == 3:
+                continue                        # Müller's paragraph 2 covers the edition's 2 and 3
+            label = "2-3" if (k in (15, 16) and v == 2) else v
+            en_pairs.append((label, en[(k, v)]))
+        sid = f"6.{k}.{a}" if a == b else f"6.{k}.{a}-{b}"
+        secs.append(build_section(sid, f"Chāndogya Upaniṣad {sid}", sa_html, sup_join(en_pairs), pages, note, item="1213"))
+    tid = PREFIX + "chandogya-6"
+    m1213 = ["https://openn.library.upenn.edu/Data/0002/html/mscoll390_item1213.html",
+             "https://openn.library.upenn.edu/Data/0002/mscoll390_item1213/data/mscoll390_item1213_TEI.xml"]
+    entries.append((tid, entry_json(
+        tid, "Chandogya Upanishad, Prapathaka 6 (Tat tvam asi)",
+        "The sixth chapter of the Chandogya Upanishad, Uddalaka's teaching to his son Svetaketu ending 'thou art that' "
+        "(tat tvam asi), in Sanskrit and Max Müller's English, mapped to a Sanskrit manuscript copied in 1836.",
+        "<p>The Chandogya Upanishad belongs to the Samaveda. Its sixth chapter (prapathaka) is a dialogue between the "
+        "teacher Uddalaka Aruni and his son Svetaketu, who returns home proud of his learning after twelve years of study. "
+        "Through a series of examples (clay and its products, honey gathered from many trees, rivers merging in the sea, "
+        "the seed of the banyan, salt dissolved in water) the father teaches that all things come from Being (sat), and "
+        "closes each lesson with the words 'that is the Self; thou art that, Svetaketu' (tat tvam asi). The chapter has "
+        "sixteen khandas.</p>"
+        "<p>The page images come from University of Pennsylvania Libraries, Ms. Coll. 390 Item 1213, a paper manuscript of "
+        "seven leaves (11 x 24 cm) that holds the sixth prapathaka alone, in Devanagari with red accent marks, 9 to 10 "
+        "lines to a side. Its colophon on fol. 7v is dated saka 1758 (1836 CE). The scribe marks the end of each khanda "
+        "with its number (||1|| to ||16||) but does not number paragraphs; paragraphs were located by their words. Each "
+        "section below holds the paragraphs of one khanda that end on one page; a paragraph that begins on the previous "
+        "page is shown with both pages.</p>",
+        ["Sanskrit: GRETIL, Chandogyopanisad with the commentary ascribed to Samkara, mula text only; input by the Sansknet "
+         "project. In 6.13.2 a legacy encoding artifact ('an;gāsyāntād') is shown as aṅgāsyāntād. Paragraph 6.2.4 is "
+         "entered in GRETIL without word division; it is shown as given.",
+         "English: F. Max Müller, 'Khandogya-upanishad, Sixth Prapathaka', The Upanishads part I, Sacred Books of the East 1 "
+         "(1879), from the proofread English Wikisource transcription; footnotes are not reproduced. One transcription slip "
+         "is corrected to the printed page (6.11.2 'leaves at second' for 'leaves a second').",
+         "Müller divides khandas 15 and 16 into two paragraphs each; his second paragraph covers Sanskrit paragraphs 2 and 3 "
+         "and is numbered 2-3 here. Elsewhere his paragraph breaks fall in a few places a clause earlier or later than the "
+         "Sanskrit numbering (6.7.3-5, 6.11.2-3, 6.12.2-3, 6.13.1-2); each such case lies inside one section except 6.11, "
+         "explained in its scan note."],
+        secs,
+        GRETIL + "sa_chAndogyopaniSad-comm.xml", gretil_lic,
+        f"F. Max Müller, The Upanishads I, SBE 1 (Oxford, 1879), {WS}{WS_PAGES['chandogya6'].replace(' ', '_')}",
+        "public domain (1879); Wikisource transcription CC BY-SA 4.0", "F. Max Müller (1879)", m1213, item="1213")))
+    rows.append((tid, "Chandogya Upanishad, Prapathaka 6 (Tat tvam asi)", chu_order(6), "chandogya", "Chandogya Upanishad 6"))
+
+    # ---------------- Chandogya 1-5, 7, 8 (item 945) ----------------
+    m945 = json.loads((SRC / "mapping_945.json").read_text(encoding="utf-8"))
+    urls945 = ["https://openn.library.upenn.edu/Data/0002/html/mscoll390_item945.html",
+               "https://openn.library.upenn.edu/Data/0002/mscoll390_item945/data/mscoll390_item945_TEI.xml"]
+    for pr in (1, 2, 3, 4, 5, 7, 8):
+        sa_pr, en_pr = load_chandogya(pr), eng_chandogya_labeled(pr)
+        pages_pr = m945[str(pr)]
+        secs, omitted = chandogya_sections(pr, sa_pr, en_pr, pages_pr)
+        f_first, f_last = pages_pr[0]["page"], pages_pr[-1]["page"]
+        fol = lambda f: f"{f[1:3].lstrip('0')}{f[3]}"
+        tid = PREFIX + f"chandogya-{pr}"
+        title = f"Chandogya Upanishad, Prapathaka {pr} ({CHU_TITLES[pr]})"
+        gap_txt = ""
+        if omitted:
+            gap_txt = (f" The copyist left out paragraphs {pr}.{omitted[0][0]}.{omitted[0][1]}-{omitted[-1][1]} (his eye "
+                       "passed between repeated words); they are not shown, because no page of this manuscript carries them.")
+        notes_pr = [pg["note"] for pg in pages_pr if pg.get("note")]
+        intro = (
+            "<p>The Chandogya Upanishad belongs to the Samaveda and is one of the two longest and oldest Upanishads. "
+            f"It has eight chapters (prapathakas). This entry gives chapter {pr}. {CHU_SUMMARY[pr]}</p>"
+            "<p>The page images come from University of Pennsylvania Libraries, Ms. Coll. 390 Item 945, a paper manuscript of "
+            "74 leaves (11 x 17 cm) holding the whole Chandogya Upanishad, written in Devanagari, 10 to 11 lines to a side, on "
+            "blue machine-made paper with watermarks; it is undated (catalogued 18th or 19th century). The scribe numbers the "
+            "khandas and closes each chapter with a colophon, but does not number paragraphs. "
+            f"Chapter {pr} runs from fol. {fol(f_first)} to fol. {fol(f_last)}.</p>"
+            "<p>For every page, the first and last words were read on the image and found in the edited text; the page "
+            "boundaries follow from them. Each section below holds the paragraphs that end on one page, with every page "
+            f"they occupy.{gap_txt}</p>")
+        tnotes = [
+            "Sanskrit: GRETIL, Chandogyopanisad with the commentary ascribed to Samkara, mula text only (input by the Sansknet "
+            "project). Paragraph numbers (khanda.paragraph) follow the edition. Three legacy encoding artifacts in GRETIL "
+            "chapter 2 ('saptavidh.am', 'brahmavarcasy:', 'tejasvy:') are normalized.",
+            "English: F. Max Müller, 'Khandogya-upanishad', The Upanishads part I, Sacred Books of the East 1 (1879), from the "
+            "proofread English Wikisource transcription; footnotes are not reproduced. Where Müller divides a khanda into a "
+            "different number of paragraphs than the Sanskrit edition, the whole khanda stands in one section and keeps his "
+            "numbers. In other khandas his paragraph breaks sometimes fall a clause earlier or later than the Sanskrit ones.",
+            "Transcription slips corrected to the printed page: 1.9.2 'udîttha' (printed udgîtha), 3.16.2 'sacrifices' "
+            "(sacrificer,), 4.6.1 'toward' (towards), 7.25.1 'alt' (all); the stray heading 'Elventh Khanda' inside 2.10.6 "
+            "is removed. 1.2.1 'Whent he' is a misprint in the book itself and is kept as printed.",
+            "The manuscript readings differ from the edition in places; the Sanskrit shown is the edition text."] + notes_pr
+        entries.append((tid, entry_json(
+            tid, title,
+            f"Chapter {pr} of the Chandogya Upanishad in Sanskrit and Max Müller's English, each passage linked to the page "
+            "of a Sanskrit manuscript of the whole Upanishad at the University of Pennsylvania (Ms. Coll. 390 Item 945).",
+            intro, tnotes, secs,
+            GRETIL + "sa_chAndogyopaniSad-comm.xml", gretil_lic,
+            f"F. Max Müller, The Upanishads I, SBE 1 (Oxford, 1879), {WS}{WS_PAGES[f'chandogya{pr}'].replace(' ', '_')}",
+            "public domain (1879); Wikisource transcription CC BY-SA 4.0", "F. Max Müller (1879)", urls945, item="945")))
+        rows.append((tid, title, chu_order(pr), "chandogya", f"Chandogya Upanishad {pr}"))
+
     # ---------------- Mandukya ----------------
     sa, en = load_mandukya(), eng_mandukya()
     secs = []
@@ -778,33 +1200,36 @@ def main():
         (PUB_DIR / f"{tid}.json").write_text(json.dumps(e, indent=2, ensure_ascii=False), encoding="utf-8")
     by_id = dict(entries)
     texts = []
-    for tid, title, order, work, short in rows:
+    for tid, title, order, work, short in sorted(rows, key=lambda r: r[2]):
         e = by_id[tid]
         texts.append({
             "id": tid, "slug": tid, "order": order, "title": title, "author_id": "upanishads",
             "language": "Sanskrit", "era": "Axial Age", "tradition": "hindu", "category": "sacred-text",
-            "date_approx": "c. 700-200 BCE (composition); 18th or 19th c. (Penn manuscript)", "century": -5,
+            "date_approx": ("c. 700-200 BCE (composition); manuscript copied 1836" if tid.endswith("chandogya-6")
+                            else "c. 700-200 BCE (composition); 18th or 19th c. (Penn manuscript)"), "century": -5,
             "source": e["source"], "description": e["description"],
             "themes": ["upanishads", work, "vedanta", "sanskrit", "manuscript", "verified"],
             "is_first_translation": False, "status": "published",
-            "scans": {"pages": [{"file": p, "caption": f"{MS_NAME}, fol. {Path(p).stem.split('-f')[1].lstrip('0')}"}
+            "scans": {"pages": [{"file": p, "caption": f"Penn Ms. Coll. 390 Item {Path(p).stem.split('-')[0][4:]}, "
+                                                        f"fol. {Path(p).stem.split('-f')[1].lstrip('0')}"}
                                 for p in e["verification"]["scan_local_paths"]]},
         })
     coll = {
         "collection": {
             "key": KEY, "prefix": PREFIX, "label": "Principal Upanishads",
             "group": "India", "date_sort": -600,
-            "author_name": "Principal Upanishads (c. 700-200 BCE; Penn manuscript, 18th or 19th c.)",
+            "author_name": "Principal Upanishads (c. 700-200 BCE; Penn manuscripts, 18th-19th c.)",
             "source_url": OPENN_ITEM,
-            "critical_edition": "GRETIL Sanskrit e-texts (Isa, Katha, Prasna, Mandukya)",
+            "critical_edition": "GRETIL Sanskrit e-texts (Isa, Katha, Prasna, Mandukya, Chandogya)",
             "translator_name": "F. Max Müller (1879, 1884); R. E. Hume (1921) for the Mandukya",
             "original_lang_label": "Sanskrit · GRETIL (IAST)",
             "original_lang_code": "sa",
             "edition_label": "",
-            "search_terms": "upanishad upanisad isa isavasya katha kathopanishad naciketas prasna pippalada mandukya om atman brahman vedanta",
-            "description": "Principal Upanishads in Sanskrit and English, each verse mapped to its page in one Sanskrit "
-                           "manuscript at the University of Pennsylvania (Ms. Coll. 390 Item 869): the Isa, the Katha "
-                           "(six vallis), the Prasna (six questions) and the Mandukya.",
+            "search_terms": "upanishad upanisad isa isavasya katha kathopanishad naciketas prasna pippalada mandukya chandogya uddalaka svetaketu tat tvam asi om atman brahman vedanta",
+            "description": "Principal Upanishads in Sanskrit and English, each passage mapped to its page in Sanskrit "
+                           "manuscripts at the University of Pennsylvania: the Isa, the Katha (six vallis), the Prasna "
+                           "(six questions) and the Mandukya from Ms. Coll. 390 Item 869, and the complete Chandogya in "
+                           "eight chapters from Item 945 (chapter 6, 'thou art that', from Item 1213, copied in 1836).",
         },
         "texts": texts,
         "authors": [{
@@ -817,8 +1242,12 @@ def main():
     COLL.write_text(json.dumps(coll, indent=2, ensure_ascii=False), encoding="utf-8")
 
     # mapping log
-    log = {"manuscript": MS_DESC, "images": OPENN_ITEM,
-           "notes": (SRC / "mapping_notes_869.txt").read_text(encoding="utf-8").splitlines(),
+    log = {"manuscripts": {"869": MS_DESC, "1213": MS_DESC_1213, "945": MS_DESC_945},
+           "images": [ITEMS["869"]["url"], ITEMS["1213"]["url"], ITEMS["945"]["url"]],
+           "notes_869": (SRC / "mapping_notes_869.txt").read_text(encoding="utf-8").splitlines(),
+           "notes_1213": (SRC / "mapping_notes_1213.txt").read_text(encoding="utf-8").splitlines(),
+           "pages_945": "see data/sources/upanishads/mapping_945.json (first and last words of every page, read on "
+                        "the images, and the resulting page spans)",
            "sections": {tid: [{"section": s["section"], "scan_pages": s["scan_pages"], "scan_note": s["scan_note"]}
                               for s in e["translation"]] for tid, e in entries}}
     (SRC / "mapping_log.json").write_text(json.dumps(log, indent=2, ensure_ascii=False), encoding="utf-8")

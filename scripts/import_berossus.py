@@ -252,6 +252,13 @@ def greek_sections():
     assert set(fl) == set("234567"), fl.keys()
     fl["7"] = cut(fl["7"], "Τοῦ δὲ πλοίου", "πάλιν ἐπικτίσαι τὴν Βαβυλῶνα.")   # drop Syncellus' "Τούτων δὴ ..."
     g["flood"] = {"1": f"{second} {first}", **{n: f"<sup>{n}</sup>{fl[n]}" for n in "234567"}}
+    f10 = norm_greek(apply(dfhg("dfhg-berosus.json", "Syncell. p. 44. C"), [("Πολυίστορος", "Πολυΐστορος")], "F10"))
+    f10 = cut(f10, "Ἀλεξάνδρου τοῦ Πολυΐστορος", "Προμηθέα γενέσθαι.»")          # Syncellus' comment after the quotation left out
+    ab5 = norm_greek(dfhg("dfhg-abydenus.json", "Syncell. p. 44, D"))
+    assert ab5.startswith("ΑΒΥΔΗΝΟΥ. ")
+    ab5 = ab5[len("ΑΒΥΔΗΝΟΥ. "):]                                                # Müller's heading
+    assert ab5.endswith("συστῆναι πόλεμον."), ab5[-40:]
+    g["tower"] = {"1": f10, "2": ab5}
     k = f6.index("Εἶτα ἄρξαι Εὐεδώραχον")
     g["apollodorus"] = {"1": f6[:k].strip(), "2": f6[k:].strip()}
     k = ab.index("Καὶ περὶ τοῦ κατακλυσμοῦ")
@@ -279,8 +286,8 @@ def cory_paragraphs(name, start):
             paras.append(b)
     out = []
     for t in paras:
+        t = re.sub(r"\s*—(Syncel|Sync|Euseb|Joseph|Jos)\..*$", "", t)            # Cory's citations
         t = re.sub(r"(?<=[A-Za-zæ\.,;:])\d+(?=[\s,;:\.\)]|$)", "", t)          # footnote markers
-        t = re.sub(r"\s*—Syncel\..*$", "", t)                                    # Cory's citations
         for old, new in FIXES_EN:
             t = t.replace(old, new)
         out.append(t.strip())
@@ -317,6 +324,11 @@ def english_sections():
         "4": f"<sup>4</sup>{a[8]}", "5": f"<sup>5</sup>{remained}", "6": f"<sup>6</sup>{added}",
         "7": f"<sup>7</sup>{a[10]}",
     }
+    sib = cory_paragraphs("af07.htm", "THE Sibyl says")[0]
+    assert sib.startswith("THE Sibyl says") and sib.endswith("war against Cronus."), sib[-60:]
+    tw = cory_paragraphs("af04.htm", "They say that the first inhabitants")[0]
+    assert tw.endswith("by the Hebrews called Babel."), tw[-60:]
+    e["tower"] = {"1": f"OF THE TOWER OF BABEL: FROM ALEXANDER POLYHISTOR. {sib}", "2": f"BEROSSUS: FROM ABYDENUS. THE TOWER OF BABEL. {tw}"}
     b = [x for x in cory_paragraphs("af03.htm", "THIS is the history") if not x.startswith("Next")]
     assert len(b) == 1, b
     p1, p2 = split_at(b[0], "Then reigned Euedorachus")
@@ -377,9 +389,9 @@ def josephus_sections():
     assert len(grc) == 26
     pg = (SRC / "gutenberg" / "pg2849.txt").read_text(encoding="utf-8").replace("\r", "")
     i = pg.index("19. I will now relate what hath been written")
-    j = pg.index("Accordingly Nabonnedus spent the rest of his time in that country, and there\ndied.\"") + len(
-        "Accordingly Nabonnedus spent the rest of his time in that country, and there\ndied.\"")
-    t = re.sub(r"\s+", " ", pg[i:j])
+    j = pg.index("\n\n21. These accounts agree", i)
+    t = re.sub(r"\s+", " ", pg[i:j]).strip()
+    assert t.endswith('Accordingly Nabonnedus spent the rest of his time in that country, and there died."'), t[-90:]
     t = t.replace("19. I will now", "I will now").replace(' 20. This is what', ' This is what')
     for old, new in WHISTON_FIXES:
         assert t.count(old) == 1, old
@@ -445,7 +457,19 @@ ENTRIES = [
         ],
     },
     {
-        "slug": "apollodorus", "order": 3,
+        "slug": "tower", "order": 3,
+        "title": "The tower of Babel in Alexander Polyhistor (the Sibyl) and Abydenus (George Syncellus)",
+        "description": "Two Greek accounts of the tower of Babylon copied by George Syncellus from the Babylonian tradition: Alexander Polyhistor quoting the Sibyl on a single language, a tower to heaven overthrown by winds, and Titan and Prometheus after the flood; and Abydenus on the first men, proud of their strength, whose tower was thrown down by the winds and who were given many languages, shown on the page of Paris gr. 1711 that carries them.",
+        "pages": [29],
+        "sections": [
+            ("1", "Polyhistor (Müller, Berosus fr. 10; Syncellus p. 44 Goar); Paris gr. 1711 p. 29 ll. 11-15", [29],
+             "At the end of line 11 stands Syncellus' heading 'ἀλεξάνδρου τοῦ πολυΐστορος περὶ | τῆς πυργοποιίας'; line 12 continues 'Σίβυλλα δέ φησιν ὁμοφώνων ὄντων πάντων ἀνθρώπων'; the quotation ends on line 15 '...μετὰ δὲ τὸν κατακλυσμὸν Τιτᾶνα καὶ Προμηθέα γενέσθαι', followed by Syncellus' comment to line 17 '...βεβασιλευκέναι' (not included). The last clause of Cory's English, 'when Titan undertook a war against Cronus', translates the Armenian version of Eusebius and is not in this Greek."),
+            ("2", "Abydenus fr. 5 (Müller FHG IV 282; Syncellus p. 44 Goar); Paris gr. 1711 p. 29 ll. 18-23", [29],
+             "Line 18 opens with the heading 'Ἀβυδηνοῦ περὶ τῶν αὐτῶν' followed by 'Ἐντὶ δ’ οἳ λέγουσι τοὺς πρώτους ἀνασχόντας'; the extract ends on line 23 '...μετὰ δὲ Κρόνῳ καὶ Τιτῆνι συστῆναι πόλεμον'. The last sentence of Cory's English ('The place in which they built the tower is now called Babylon ... called Babel') translates the longer text of the same fragment in Eusebius, Praeparatio evangelica 9.14, which is not on this page."),
+        ],
+    },
+    {
+        "slug": "apollodorus", "order": 4,
         "title": "Berossus in Apollodorus: the ten kings before the flood and the fish-men Annedotoi (George Syncellus)",
         "description": "Apollodorus' list, from Berossus, of the ten Chaldean kings from Aloros to Xisouthros with their reigns in sars, and of the fish-men (Oannes, the Annedotoi, Odakon) who came up from the Red Sea, shown on the two pages of Paris gr. 1711 that carry it.",
         "pages": [25, 26],
@@ -457,7 +481,7 @@ ENTRIES = [
         ],
     },
     {
-        "slug": "abydenus", "order": 4,
+        "slug": "abydenus", "order": 5,
         "title": "Berossus in Abydenus: the kings of the Chaldeans and the flood of Sisithros (George Syncellus)",
         "description": "Abydenus' retelling of Berossus in Ionic Greek: Aloros the shepherd of the people, the sar of 3,600 years, the Annedotoi who came up from the sea, and Sisithros, who hid the writings at Sippar and sailed to Armenia, shown on the page of Paris gr. 1711 that carries it.",
         "pages": [25],
@@ -517,12 +541,15 @@ def main():
         "oannes": ["In §2 Müller prints ἄφορα ('barren'); Cory translates the older reading εὔφορα ('fertile'). In §4 Müller brackets 'κατὰ δὲ ἰσόψηφον σελήνη' as an addition by Syncellus; the manuscript has it in the running text."],
         "flood": ["The first section joins Syncellus' summary of book 2 (Müller fr. 4) to the start of the quotation (fr. 7), which follow each other without a break in the manuscript.",
                   "Berossus names the ninth king Ardates here; Apollodorus' list calls him Otiartes."],
+        "tower": ["Polyhistor's quotation of the Sibyl and Abydenus' account stand one after the other on the same page; Syncellus places them in his discussion of the tower of Babel and Nimrod.",
+                  "Abydenus writes in the Ionic dialect (τύρσιν, θεοῖσι, ἐνέγκασθαι)."],
         "apollodorus": ["Cory's English does not translate Syncellus' introductory clause 'Πρὸς τούτοις καὶ Ἀπολλόδωρος ὁμοίως τούτοις τερατευόμενος οὕτω λέγει'. The words in square brackets are Syncellus' (or Eusebius') comments inside the quotation; Cory prints them in parentheses."],
         "abydenus": ["Abydenus (2nd c. AD?) wrote in the Ionic dialect of Herodotus and drew on Berossus through Polyhistor; his king list differs in several names and reign lengths from Apollodorus' version."],
     }
     intros = {
         "oannes": "<p>This entry is Polyhistor's summary of Berossus' first book: who Berossus was, the land of Babylonia, the creature Oannes, half fish and half man, who came out of the Red Sea and taught mankind letters, crafts, the founding of cities and temples, laws, geometry and agriculture, and the account of creation in which Bel cuts the woman Omoroka in two to make heaven and earth.</p>",
         "flood": "<p>This entry continues the same extract into Berossus' second book: the ten kings before the flood, who reigned 120 sars (one sar = 3,600 years, 432,000 years in all), and the flood under the tenth king Xisouthros. Kronos warns him in a dream, he buries the writings in the city of the sun at Sippar, builds a ship five stadia long, sends out birds three times, lands in Armenia and is taken to live with the gods. The story corresponds to the Babylonian flood stories of Atrahasis and Utnapishtim.</p>",
+        "tower": "<p>After the flood Syncellus turns to the tower of Babel and copies two Greek witnesses that came down from the Babylonian tradition: Alexander Polyhistor, who quotes a Sibylline oracle on a single language, a tower built to climb to heaven and overthrown by the winds, and the confusion of tongues that gave Babylon its name; and Abydenus, whose account of the tower ends with a war between Kronos and Titan.</p>",
         "apollodorus": "<p>Syncellus also quotes Apollodorus of Athens (2nd c. BCE), who gave Berossus' list of the ten kings before the flood with the length of each reign in sars, and the creatures, part fish and part man, who came up from the Red Sea under some of them: Oannes, the four Annedotoi and Odakon. The list corresponds to the antediluvian section of the cuneiform Sumerian King List.</p>",
         "abydenus": "<p>The third version in Syncellus is that of Abydenus, who retold Berossus' account of the ten kings and the flood in Ionic Greek. His Sisithros is Berossus' Xisouthros.</p>",
     }
@@ -577,7 +604,7 @@ def main():
             "scan_note": note + " Checked on the image. Viewer: " + LAUR_RECORD + " . The Greek shown is Niese's critical text.",
         })
     tid = PREFIX + "josephus-apion"
-    spec = {"slug": "josephus-apion", "order": 5,
+    spec = {"slug": "josephus-apion", "order": 6,
             "title": "Berossus in Josephus, Against Apion 1.128-153: Nabopolassar, Nebuchadnezzar and the last kings of Babylon",
             "description": "Josephus quotes Berossus' third book on Nebuchadnezzar's campaign, his building of Babylon and the hanging garden, and the kings after him down to Nabonidus and the capture of Babylon by Cyrus, shown on the four pages of the 10th-century Florence manuscript Laur. Plut. 69.22 that carry it."}
     entry = {
@@ -590,7 +617,7 @@ def main():
             "summarized what Berossus said about the flood, the ark that landed in the mountains of Armenia and the generations after Noah, and then quoted his third book word for word: "
             "Nabopolassar sends his son Nebuchadnezzar against a rebel governor in Egypt and Syria; Nebuchadnezzar hurries back across the desert on his father's death, rebuilds and walls Babylon, "
             "builds a new palace in fifteen days and a hanging garden for his Median queen; after him come Evil-Merodach, Neriglissar, Labashi-Marduk and Nabonidus, until Cyrus takes Babylon.</p>\n\n"
-            "<p>The manuscript is Florence, Biblioteca Medicea Laurenziana, Plut. 69.22, a 10th-century copy of the first book of <em>Against Apion</em>, the oldest Greek witness to the passage. "
+            "<p>The manuscript is Florence, Biblioteca Medicea Laurenziana, Plut. 69.22, a copy of the first book of <em>Against Apion</em> dated to the 10th century by the library (11th by Niese), the principal Greek manuscript of the work (Niese's siglum L). "
             "The excerpt runs from fol. 10r to fol. 11v. Each section is one of Niese's numbered sections and points at the page(s) that carry it; the page breaks were read on the images.</p>"
         ),
         "translator_notes": [

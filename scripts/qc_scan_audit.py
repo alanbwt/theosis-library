@@ -232,7 +232,7 @@ def load_lcindex():
     p = OUT / "LCIndex.xml"
     if not p.exists():
         import urllib.request
-        req = urllib.request.Request("https://tanach.us/XSL/LCIndex.xml", headers={"User-Agent": "Mozilla/5.0"})
+        req = urllib.request.Request("https://tanach.us/XSL/LCIndex.xml", headers={"User-Agent": "TheosisLibrary/1.0 (non-commercial research; +https://theosislibrary.com)"})
         p.write_bytes(urllib.request.urlopen(req, timeout=60).read())
     text = p.read_text(encoding="utf-8", errors="replace")
     out = defaultdict(list)

@@ -128,7 +128,7 @@ NOT_PRESENT_RE = re.compile(r"^\s*<em>\[Not present in Codex Sinaiticus as trans
 def get_xml_stream():
     if not XML_GZ.exists():
         OUT.mkdir(parents=True, exist_ok=True)
-        raw = urllib.request.urlopen(urllib.request.Request(XML_URL, headers={"User-Agent": "Mozilla/5.0"}), timeout=600).read()
+        raw = urllib.request.urlopen(urllib.request.Request(XML_URL, headers={"User-Agent": "TheosisLibrary/1.0 (non-commercial research; +https://theosislibrary.com)"}), timeout=600).read()
         XML_GZ.write_bytes(gzip.compress(raw))
     return gzip.open(XML_GZ, "rb")
 

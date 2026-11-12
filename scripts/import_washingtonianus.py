@@ -72,8 +72,7 @@ for d in (SCAN_DIR, CACHE_DIR, CACHE_DIR / "json", CACHE_DIR / "thumbs_csntm", C
 
 # A browser-like UA: ids.si.edu rejects bare bot UAs with "Request Rejected".
 USER_AGENT = (
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/128.0 Safari/537.36 TheosisLibraryBot/1.0"
+    "TheosisLibrary/1.0 (non-commercial research; +https://theosislibrary.com)"
 )
 CSNTM_MS_ID = 206
 CSNTM_VIEW_URL = "https://manuscripts.csntm.org/manuscript/View/GA_032"
