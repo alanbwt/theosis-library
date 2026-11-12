@@ -158,7 +158,7 @@ def build():
                 src_bits.append(f"<li><strong>{label}:</strong> {e(c[k])}</li>")
         page = head(f"{c['label']} | Theosis Library", c.get("description", c["label"]), f"/collections/{c['key']}") + f"""
   <main>
-    <div class="container">
+    <div class="container container--library">
       <nav class="reading-breadcrumb" aria-label="Breadcrumb"><a href="/library/">Library</a><span class="reading-breadcrumb-sep">›</span><a href="/library/#{e(c['group'].lower().replace(' & ', '-').replace(' ', '-'))}">{e(c['group'])}</a></nav>
       <div class="coll-header">
         <h1>{e(c['label'])}</h1>
@@ -206,7 +206,7 @@ def build():
                 "Every collection in the Theosis Library, oldest civilisations first. Each entry pairs a photograph of the original "
                 "document with the verbatim original-language text and an English translation.", "/library/") + f"""
   <main>
-    <div class="container">
+    <div class="container container--library">
       <h1>Library</h1>
       <p class="lib-intro">{total_entries:,} entries in {len(colls)} collections, oldest civilisations first. Every section shows the original document, the original language and an English translation.</p>
 

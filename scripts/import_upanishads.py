@@ -84,6 +84,15 @@ ITEMS["945"] = {"name": "Penn Ms. Coll. 390 Item 945", "tif": "6239_{:04d}.tif",
                 "url": "https://openn.library.upenn.edu/Data/0002/html/mscoll390_item945.html",
                 "master": "https://openn.library.upenn.edu/Data/0002/mscoll390_item945/data/master/6239_{:04d}.tif",
                 "notes": "data/sources/upanishads/mapping_945.json", "width": 2000}
+ITEMS["1216"] = {"name": "Penn Ms. Coll. 390 Item 1216", "tif": "5409_{:04d}.tif", "single": {0, 7}, "narrow": {1, 4, 6},
+                 "band": (0.45, 0.55),
+                 "url": "https://openn.library.upenn.edu/Data/0002/html/mscoll390_item1216.html",
+                 "master": "https://openn.library.upenn.edu/Data/0002/mscoll390_item1216/data/master/5409_{:04d}.tif",
+                 "notes": "data/sources/upanishads/mapping_notes_1216.txt", "width": 2000}
+NEEDED_1216 = ["f01v", "f02r", "f02v", "f03r", "f03v", "f04r", "f04v", "f05r", "f05v", "f06r", "f06v", "f07r"]
+MS_DESC_1216 = ("University of Pennsylvania, Kislak Center for Special Collections, Ms. Coll. 390 Item 1216 "
+                "(Aitareyopanisad, followed by the opening of a Narayanopanisad), 7 paper leaves, 10 x 24 cm, 7 lines per "
+                "side, Devanagari with red accent marks, undated (catalogued 18th/19th c.)")
 MS_DESC_945 = ("University of Pennsylvania, Kislak Center for Special Collections, Ms. Coll. 390 Item 945 "
                "(Chandogyopanisad, prapathakas 1-8), 74 paper leaves, 11 x 17 cm, 10-11 lines per side, Devanagari, "
                "blue machine-made paper with watermarks, undated (catalogued 18th/19th c.)")
@@ -118,7 +127,7 @@ def fetch(url, binary=True):
     return data if binary else data.decode("utf-8")
 
 
-def split_spread(tif_path, n_leaves, narrow, width=2400):
+def split_spread(tif_path, n_leaves, narrow, width=2400, band=(0.47, 0.53)):
     """Return leaf images (top first) cropped from an OPenn spread photograph."""
     import numpy as np
     from PIL import Image
@@ -131,7 +140,7 @@ def split_spread(tif_path, n_leaves, narrow, width=2400):
     rows = br.mean(axis=1)
     h = len(rows)
     if n_leaves == 2:
-        lo, hi = (int(h * 0.47), int(h * 0.53)) if narrow else (int(h * 0.35), int(h * 0.65))
+        lo, hi = (int(h * band[0]), int(h * band[1])) if narrow else (int(h * 0.35), int(h * 0.65))
         cut = lo + int(np.argmin(rows[lo:hi]))
         halves = [(0, cut), (cut, h)]
     else:
@@ -154,7 +163,7 @@ def split_spread(tif_path, n_leaves, narrow, width=2400):
 
 def make_scans(tif_dirs, force):
     SCAN_DIR.mkdir(parents=True, exist_ok=True)
-    for item, needed in (("869", NEEDED), ("1213", NEEDED_1213), ("945", needed_945())):
+    for item, needed in (("869", NEEDED), ("1213", NEEDED_1213), ("945", needed_945()), ("1216", NEEDED_1216)):
         cfg = ITEMS[item]
         spreads = {}
         for fol in needed:
@@ -173,7 +182,8 @@ def make_scans(tif_dirs, force):
                 local = Path(tmp.name) / cfg["tif"].format(sp)
                 print(f"  downloading {cfg['master'].format(sp)}")
                 local.write_bytes(fetch(cfg["master"].format(sp)))
-            leaves = split_spread(local, 1 if sp in cfg["single"] else 2, sp in cfg["narrow"], cfg.get("width", 2400))
+            leaves = split_spread(local, 1 if sp in cfg["single"] else 2, sp in cfg["narrow"], cfg.get("width", 2400),
+                                  cfg.get("band", (0.47, 0.53)))
             for pos, fol in items:
                 out = SCAN_DIR / f"penn{item}-{fol}.jpg"
                 leaves[pos].save(out, quality=85)
@@ -349,6 +359,24 @@ def load_chandogya6():
     # legacy-encoding artifact in GRETIL 6.13.2: 'an;gāsyāntād' (n; = ṅ); shown as aṅgāsyāntād
     assert out[(13, 2)].count("an;gā") == 1
     out[(13, 2)] = out[(13, 2)].replace("an;gā", "aṅgā")
+    return out
+
+
+def load_aitareya():
+    """Aitareya Upanisad (Samkara's division 1.1.1-3.4): the mula (bold) text of GRETIL's file with his commentary."""
+    s = gretil("sa_aitareyopaniSad-comm")
+    s = s[s.find("<body"):]
+    out = {}
+    for tag, body in re.findall(r'<(hi|lg|l) rend="bold">(.*?)</\1>', s, re.S):
+        txt = re.sub(r"</?(p|hi|lg|l)[^>]*>", "\n", body)
+        ls = [clean(x) for x in txt.split("\n") if clean(x)]
+        joined = " ".join(ls)
+        r = re.search(r"(\|\||//)\s*AitUp_(\d+(?:,\d+)?\.\d+)\s*(\|\||//)", joined)
+        if not r:
+            continue
+        ls[-1] = re.sub(r"\s*(\|\||//)\s*AitUp_[\d,.]+\s*(\|\||//)", " " + r.group(1), ls[-1])
+        out[r.group(2).replace(",", ".")] = lines_html(ls)
+    assert len(out) == 33, len(out)
     return out
 
 
@@ -684,6 +712,41 @@ PRASNA_MAP = {
         ],
 }
 
+AITAREYA_MAP = [  # (first verse, last verse, pages, note) -- item 1216
+    ("1.1.1", "1.1.3", ["f01v"], "fol. 1v (7 lines): after 'śrīgaṇeśāya namaḥ' 1.1.1 begins in line 1 ‹oṃ ātmā vā idam eka "
+                                 "evāgra āsīt›; 1.1.3 ends in line 5 ‹samuddhṛtyāmūrchayat›."),
+    ("1.1.4", "1.2.2", ["f01v", "f02r"], "1.1.4 begins at fol. 1v line 5 ‹tam abhyatapat› and ends at fol. 2r line 4 ‹retasa "
+                                         "āpaḥ ||1||›; 1.2.1 follows to line 7 ‹annam adāmeti›; 1.2.2 begins in line 7 "
+                                         "‹tābhyo gām ānayat› and is completed in two lines added in the lower margin "
+                                         "‹... na vai no 'yam alam iti›."),
+    ("1.2.3", "1.2.4", ["f02v"], "fol. 2v line 1 ‹[tā]bhyaḥ puruṣam ānayat› (1.2.3) to line 6 ‹śiśnaṃ prāviśan› (end of 1.2.4)."),
+    ("1.2.5", "1.3.3", ["f02v", "f03r"], "1.2.5 begins at fol. 2v line 6 ‹tam aśanāpipāse› and ends at fol. 3r line 2 "
+                                         "‹bhavataḥ ||2||›; 1.3.1-1.3.3 follow to line 6 ‹haivānnam atrapsyat›."),
+    ("1.3.4", "1.3.9", ["f03r", "f03v"], "1.3.4 begins at fol. 3r line 6 ‹tat prāṇenājighṛkṣat› and ends at fol. 3v line 1 "
+                                         "‹atrapsyat›; 1.3.5-1.3.9 follow to line 7."),
+    ("1.3.10", "1.3.11", ["f03v", "f04r"], "1.3.10 begins at the end of fol. 3v line 7 ‹tad apāne-› and ends at fol. 4r "
+                                           "line 1 ‹yad vāyuḥ›; 1.3.11 follows to line 5 ‹atha ko 'ham iti›."),
+    ("1.3.12", "1.3.14", ["f04r", "f04v"], "1.3.12 begins at fol. 4r line 5 ‹sa etam eva sīmānaṃ› and ends at fol. 4v "
+                                           "line 1 ‹iti›; 1.3.13-1.3.14 follow to line 4 ‹parokṣapriyā iva hi devāḥ ||3||›. "
+                                           "Some words in fol. 4v line 1 are covered in yellow (a scribal correction)."),
+    ("2.1", "2.1", ["f04v"], "fol. 4v line 4: ‹apakrāmantu garbhiṇyaḥ› (Müller: 'Let the women who are with child move "
+                             "away!'; not in the GRETIL text), then 2.1 ‹puruṣe ha vā ayam ādito garbho bhavati› to line 7 "
+                             "‹tad asya prathamaṃ janma›."),
+    ("2.2", "2.4", ["f04v", "f05r"], "2.2 begins at fol. 4v line 7 ‹tat striyā ātmabhūyaṃ gacchati› and ends at fol. 5r "
+                                     "line 1 ‹bhāvayati›; 2.3-2.4 follow to line 6 ‹tad asya tṛtīyaṃ janma›."),
+    ("2.5", "3.1", ["f05r", "f05v"], "2.5 begins at fol. 5r line 6 ‹tad uktam ṛṣiṇā› and ends at fol. 5v line 2 ‹vāmadeva "
+                                     "evam uvāca›; 2.6 follows to line 4 ‹samabhavat samabhavat ||4||›; then ‹yathāsthānaṃ "
+                                     "garbhiṇyaḥ› (Müller: 'Let the women go back to their place.'; not in the GRETIL text) "
+                                     "and 3.1 ‹ko 'yam ātmeti› to line 6 ‹vijānāti›."),
+    ("3.2", "3.2", ["f05v", "f06r"], "3.2 begins at fol. 5v line 6 ‹yad etad dhṛdayaṃ› and ends at fol. 6r line 2 "
+                                     "‹nāmadheyāni bhavanti›."),
+    ("3.3", "3.4", ["f06r", "f06v", "f07r"], "3.3 begins at fol. 6r line 2 ‹eṣa brahmaiṣa indra› and runs to line 7 ‹prajñā "
+                                             "pratiṣṭhā›; fol. 6v lines 1-6 hold the opening of a Narayanopanisad copied by "
+                                             "mistake and covered in yellow; 3.3 ends at fol. 6v line 6 ‹prajñānaṃ brahma›; "
+                                             "3.4 runs from line 6 ‹sa etena prajñenātmanā› to fol. 7r line 1 ‹samabhavat "
+                                             "samabhavat ||5||›, followed by the closing prayer and the colophon."),
+]
+
 CHANDOGYA6_MAP = [  # (khanda, first, last, pages, note) -- item 1213
     (1, 1, 4, ["f01v"], "fol. 1v (9 lines): after 'śrīgaṇeśāya namaḥ' and the invocation 'oṃ āpyāyantu mamāṅgāni ...' (lines 1-4), "
                         "paragraph 1 begins in line 4 ‹hariḥ oṃ śvetaketur hāruṇeya āsa›; paragraph 4 ends in line 9 ‹mṛttikety eva satyaṃ›."),
@@ -786,7 +849,7 @@ def entry_json(tid, title, description, intro, notes, sections, sa_src, sa_lic, 
         "verification": {
             "scan_source": f"University of Pennsylvania Libraries, OPenn: {cfg['url']}",
             "scan_license": SCAN_LICENSE.replace("Item 869", f"Item {item}"),
-            "scan_manuscript": {"869": MS_DESC, "1213": MS_DESC_1213, "945": MS_DESC_945}[item],
+            "scan_manuscript": {"869": MS_DESC, "1213": MS_DESC_1213, "945": MS_DESC_945, "1216": MS_DESC_1216}[item],
             "scan_mapping": "Each section was located by reading the manuscript page images (the manuscript has no verse "
                             "numbers; verses were identified by their words, chapter ends by the scribe's colophons and "
                             "numbers). Line-level readings are recorded in each scan_note and in "
@@ -845,7 +908,7 @@ CHU_SUMMARY = {
 
 
 def chu_order(pr):
-    return 14 + pr
+    return 15 + pr
 
 
 def chandogya_sections(pr, sa, en_lab, pages):
@@ -1114,6 +1177,60 @@ def main():
         "public domain (1879); Wikisource transcription CC BY-SA 4.0", "F. Max Müller (1879)", m1213, item="1213")))
     rows.append((tid, "Chandogya Upanishad, Prapathaka 6 (Tat tvam asi)", chu_order(6), "chandogya", "Chandogya Upanishad 6"))
 
+    # ---------------- Aitareya (item 1216) ----------------
+    sa = load_aitareya()
+    mu = json.loads((SRC / "english" / "muller1879_aitareya.json").read_text(encoding="utf-8"))
+    en = dict(mu["verses"])
+    en["1.1.1"] = mu["preface_1.1.1"] + "<br>" + en["1.1.1"]
+    en["2.1"] = mu["pre_2.1"] + "<br>" + en["2.1"]
+    en["3.1"] = mu["pre_3.1"] + "<br>" + en["3.1"]
+    order_ait = list(sa)
+    secs = []
+    for a, b, pages, note in AITAREYA_MAP:
+        vs = order_ait[order_ait.index(a):order_ait.index(b) + 1]
+        sid = a if a == b else f"{a}-{b}"
+        secs.append(build_section(sid, f"Aitareya Upaniṣad {sid}", sup_join((v, sa[v]) for v in vs),
+                                  sup_join((v, en[v]) for v in vs), pages, note, item="1216"))
+    tid = PREFIX + "aitareya"
+    m1216 = ["https://openn.library.upenn.edu/Data/0002/html/mscoll390_item1216.html",
+             "https://openn.library.upenn.edu/Data/0002/mscoll390_item1216/data/mscoll390_item1216_TEI.xml"]
+    entries.append((tid, entry_json(
+        tid, "Aitareya Upanishad",
+        "The Aitareya Upanishad of the Rigveda, on the Self that created the worlds and entered the body, ending 'knowledge "
+        "is Brahman', in Sanskrit and Max Müller's English, mapped to the pages of a Sanskrit manuscript at the University "
+        "of Pennsylvania.",
+        "<p>The Aitareya Upanishad belongs to the Rigveda and forms chapters 4-6 of the second book of the Aitareya "
+        "Aranyaka. It tells how the Self, alone in the beginning, sent forth the worlds and a cosmic person, from whose "
+        "body the senses and their gods came forth; how the gods were given a place in man; how the Self entered the body "
+        "through the suture of the skull; and, in its last chapter, identifies the Self with knowledge (prajnana): "
+        "'knowledge is Brahman'. Its second chapter speaks of the three births of a man.</p>"
+        "<p>The page images come from University of Pennsylvania Libraries, Ms. Coll. 390 Item 1216, a paper manuscript of "
+        "seven leaves (10 x 24 cm) written in Devanagari with red accent marks, 7 lines to a side, undated (catalogued 18th "
+        "or 19th century). The scribe numbers the khandas continuously from 1 to 5 and closes with a colophon naming the "
+        "text as the Aitareyopanisad of the Asvalayana school of the Rigveda. On fol. 6v he began to copy the next text, "
+        "a Narayanopanisad, by mistake, then covered those six lines in yellow and finished the Aitareya.</p>"
+        "<p>The verse division is Samkara's (1.1.1-3.4), which Müller marks with numbers in parentheses. Each section "
+        "below holds the verses that end on one page, with the pages they occupy.</p>",
+        ["Sanskrit: GRETIL, Aitareyopanisad with the commentary ascribed to Samkara, mula text only (input by the Sansknet "
+         "project).",
+         "English: F. Max Müller, The Upanishads part I, Sacred Books of the East 1 (1879), Aitareya-aranyaka II.4-6, "
+         "pp. 237-246, transcribed for this edition from the page images of the 1879 printing (Wikimedia Commons scan of "
+         "SBE vol. 1) with the archive.org OCR as a draft. Müller's paragraph numbers (after Sayana) and footnotes are left "
+         "out; his parenthesized numbers for Samkara's divisions give the verse division used here. Müller places the "
+         "words 'And this has been declared by a Rishi' at the end of 2.4; the Sanskrit edition begins 2.5 with them.",
+         "Müller's opening 'Adoration to the Highest Self. Hari, Om!' and his sentences 'Let the women who are with child "
+         "move away!' (before 2.1) and 'Let the women go back to their place.' (before 3.1) translate words that stand in "
+         "this manuscript ('apakrāmantu garbhiṇyaḥ', fol. 4v line 4; 'yathāsthānaṃ garbhiṇyaḥ', fol. 5v line 4) but not "
+         "in the GRETIL text, so the English has them while the Sanskrit shown does not.",
+         "Müller's seventh adhyaya, the closing prayer 'My speech rests in the mind' (vāṅ me manasi), is written in the "
+         "manuscript on fol. 7r but is not part of the GRETIL text and is not shown."],
+        secs,
+        GRETIL + "sa_aitareyopaniSad-comm.xml", gretil_lic,
+        "F. Max Müller, The Upanishads I, SBE 1 (Oxford, 1879), pp. 237-246, transcribed from the page images: "
+        "https://commons.wikimedia.org/wiki/File:Sacred_Books_of_the_East_-_Volume_1.djvu (pages 351-360)",
+        "public domain (1879)", "F. Max Müller (1879)", m1216, item="1216")))
+    rows.append((tid, "Aitareya Upanishad", 15, "aitareya", "Aitareya Upanishad"))
+
     # ---------------- Chandogya 1-5, 7, 8 (item 945) ----------------
     m945 = json.loads((SRC / "mapping_945.json").read_text(encoding="utf-8"))
     urls945 = ["https://openn.library.upenn.edu/Data/0002/html/mscoll390_item945.html",
@@ -1220,16 +1337,17 @@ def main():
             "group": "India", "date_sort": -600,
             "author_name": "Principal Upanishads (c. 700-200 BCE; Penn manuscripts, 18th-19th c.)",
             "source_url": OPENN_ITEM,
-            "critical_edition": "GRETIL Sanskrit e-texts (Isa, Katha, Prasna, Mandukya, Chandogya)",
+            "critical_edition": "GRETIL Sanskrit e-texts (Isa, Katha, Prasna, Mandukya, Aitareya, Chandogya)",
             "translator_name": "F. Max Müller (1879, 1884); R. E. Hume (1921) for the Mandukya",
             "original_lang_label": "Sanskrit · GRETIL (IAST)",
             "original_lang_code": "sa",
             "edition_label": "",
-            "search_terms": "upanishad upanisad isa isavasya katha kathopanishad naciketas prasna pippalada mandukya chandogya uddalaka svetaketu tat tvam asi om atman brahman vedanta",
+            "search_terms": "upanishad upanisad isa isavasya katha kathopanishad naciketas prasna pippalada mandukya aitareya prajnanam brahma chandogya uddalaka svetaketu tat tvam asi om atman brahman vedanta",
             "description": "Principal Upanishads in Sanskrit and English, each passage mapped to its page in Sanskrit "
                            "manuscripts at the University of Pennsylvania: the Isa, the Katha (six vallis), the Prasna "
-                           "(six questions) and the Mandukya from Ms. Coll. 390 Item 869, and the complete Chandogya in "
-                           "eight chapters from Item 945 (chapter 6, 'thou art that', from Item 1213, copied in 1836).",
+                           "(six questions) and the Mandukya from Ms. Coll. 390 Item 869, the Aitareya from Item 1216, "
+                           "and the complete Chandogya in eight chapters from Item 945 (chapter 6, 'thou art that', from "
+                           "Item 1213, copied in 1836).",
         },
         "texts": texts,
         "authors": [{
@@ -1242,10 +1360,11 @@ def main():
     COLL.write_text(json.dumps(coll, indent=2, ensure_ascii=False), encoding="utf-8")
 
     # mapping log
-    log = {"manuscripts": {"869": MS_DESC, "1213": MS_DESC_1213, "945": MS_DESC_945},
-           "images": [ITEMS["869"]["url"], ITEMS["1213"]["url"], ITEMS["945"]["url"]],
+    log = {"manuscripts": {"869": MS_DESC, "1213": MS_DESC_1213, "945": MS_DESC_945, "1216": MS_DESC_1216},
+           "images": [ITEMS[k]["url"] for k in ("869", "1213", "945", "1216")],
            "notes_869": (SRC / "mapping_notes_869.txt").read_text(encoding="utf-8").splitlines(),
            "notes_1213": (SRC / "mapping_notes_1213.txt").read_text(encoding="utf-8").splitlines(),
+           "notes_1216": (SRC / "mapping_notes_1216.txt").read_text(encoding="utf-8").splitlines(),
            "pages_945": "see data/sources/upanishads/mapping_945.json (first and last words of every page, read on "
                         "the images, and the resulting page spans)",
            "sections": {tid: [{"section": s["section"], "scan_pages": s["scan_pages"], "scan_note": s["scan_note"]}

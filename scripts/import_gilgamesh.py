@@ -1089,7 +1089,7 @@ GILGAMESH = {
     "collection": {
         "key": "gilgamesh",
         "prefix": "verified-gilgamesh-",
-        "label": "Epic of Gilgamesh (cuneiform tablets)",
+        "label": "Epic of Gilgamesh",
         "group": "Mesopotamia",
         "date_sort": -1200,
         "author_name": "Sin-leqi-unninni (Standard Babylonian version, c. 1200-1000 BCE)",

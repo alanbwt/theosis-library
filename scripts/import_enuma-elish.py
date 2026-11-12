@@ -188,7 +188,7 @@ WORK = {
     "collection": {
         "key": KEY,
         "prefix": f"verified-{KEY}-",
-        "label": "Enuma Elish (cuneiform tablets)",
+        "label": "Enuma Elish",
         "group": "Mesopotamia",
         "date_sort": -1150,
         "author_name": "Babylonian Poem of Creation (2nd millennium BCE; tablets 9th-2nd c. BCE)",

@@ -7,13 +7,13 @@
     "date_sort": 200,
     "author_name": "Hermes Trismegistus (attributed), 2nd-3rd century AD; Florence manuscript Laur. Plut. 71.33",
     "source_url": "https://cdm21059.contentdm.oclc.org/digital/collection/plutei/id/1210396",
-    "critical_edition": "Parthey, Hermetis Trismegisti Poemander (1854), via Greek Wikisource",
+    "critical_edition": "Parthey, Hermetis Trismegisti Poemander (1854): CH I via Greek Wikisource, CH XIII transcribed from the 1854 page images",
     "translator_name": "G. R. S. Mead (1906)",
     "original_lang_label": "Greek · Parthey",
     "original_lang_code": "grc",
     "edition_label": "",
-    "search_terms": "corpus hermeticum hermes trismegistus poimandres poemandres pimander nous logos ascent become god ficino laurenziana mead",
-    "description": "The Hermetic Poimandres, the vision of the divine Mind and of the soul's ascent to become God, shown section by section on the oldest manuscript of the Corpus Hermeticum, with Parthey's Greek and G. R. S. Mead's English."
+    "search_terms": "corpus hermeticum hermes trismegistus poimandres poemandres pimander nous logos ascent become god rebirth regeneration palingenesia tat secret hymn ficino laurenziana mead",
+    "description": "The Hermetic Poimandres (CH I), the vision of the divine Mind and of the soul's ascent to become God, and the secret discourse on rebirth (CH XIII), shown section by section on the oldest manuscript of the Corpus Hermeticum, with Parthey's Greek and G. R. S. Mead's English."
   },
   "texts": [
     {
@@ -69,6 +69,64 @@
           {
             "file": "corpus-hermeticum/laur7133-f125v.jpg",
             "caption": "Laur. Plut. 71.33 fol. 125v"
+          }
+        ]
+      }
+    },
+    {
+      "id": "verified-corpus-hermeticum-on-rebirth",
+      "slug": "verified-corpus-hermeticum-on-rebirth",
+      "order": 2,
+      "title": "Corpus Hermeticum XIII: the Secret Discourse on the Mountain, on Rebirth",
+      "author_id": "hermes-trismegistus",
+      "language": "Greek",
+      "era": "Imperial",
+      "tradition": "hermetic",
+      "category": "sacred-text",
+      "date_approx": "c. 2nd-3rd century AD (composition); manuscript 14th century",
+      "century": 2,
+      "source": "Florence, Biblioteca Medicea Laurenziana, Plut. 71.33 fol. 141v-144r (Biblioteca Medicea Laurenziana, Teca digitale (IIIF)) + Parthey's Greek (1854, transcribed from the page images) + G. R. S. Mead's English (1906)",
+      "description": "Hermes teaches his son Tat the way of rebirth: the twelve torments of matter are driven out by ten powers of God, Tat is born again in Mind and sings the secret hymn of rebirth. Complete, shown on the 14th-century Florence manuscript Laur. Plut. 71.33.",
+      "themes": [
+        "hermetica",
+        "corpus-hermeticum",
+        "rebirth",
+        "palingenesia",
+        "tat",
+        "hymn",
+        "nous",
+        "deification",
+        "theosis",
+        "gnosis",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "corpus-hermeticum/laur7133-f141v.jpg",
+            "caption": "Laur. Plut. 71.33 fol. 141v"
+          },
+          {
+            "file": "corpus-hermeticum/laur7133-f142r.jpg",
+            "caption": "Laur. Plut. 71.33 fol. 142r"
+          },
+          {
+            "file": "corpus-hermeticum/laur7133-f142v.jpg",
+            "caption": "Laur. Plut. 71.33 fol. 142v"
+          },
+          {
+            "file": "corpus-hermeticum/laur7133-f143r.jpg",
+            "caption": "Laur. Plut. 71.33 fol. 143r"
+          },
+          {
+            "file": "corpus-hermeticum/laur7133-f143v.jpg",
+            "caption": "Laur. Plut. 71.33 fol. 143v"
+          },
+          {
+            "file": "corpus-hermeticum/laur7133-f144r.jpg",
+            "caption": "Laur. Plut. 71.33 fol. 144r"
           }
         ]
       }

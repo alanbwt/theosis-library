@@ -1,0 +1,70 @@
+{
+  "collection": {
+    "key": "aeschylus-prometheus",
+    "prefix": "verified-aeschylus-prometheus-",
+    "label": "Aeschylus: Prometheus Bound",
+    "group": "Greece",
+    "date_sort": -460,
+    "author_name": "Aeschylus (c. 525-456 BCE); Medicean manuscript of the 10th century",
+    "source_url": "https://tecabml.contentdm.oclc.org/digital/collection/plutei/id/711140",
+    "critical_edition": "Smyth, Aeschylus I (Loeb 1922), via Perseus",
+    "translator_name": "H. W. Smyth (Loeb, 1922)",
+    "original_lang_label": "Greek · Smyth",
+    "original_lang_code": "grc",
+    "edition_label": "",
+    "search_terms": "aeschylus prometheus bound arts of mankind fire numbers letters writing stars medicine divination metals necessity fates medicean laurentianus",
+    "description": "Prometheus' speech on the arts he gave to mankind, from Prometheus Bound, on the 10th-century Medicean manuscript of Aeschylus."
+  },
+  "texts": [
+    {
+      "id": "verified-aeschylus-prometheus-436-525-the-gifts-of-prometheus",
+      "slug": "verified-aeschylus-prometheus-436-525-the-gifts-of-prometheus",
+      "order": 1,
+      "title": "Aeschylus, Prometheus Bound 436-525: the arts Prometheus gave to mankind",
+      "author_id": "aeschylus",
+      "language": "Greek",
+      "era": "Classical",
+      "tradition": "greek",
+      "category": "literature",
+      "date_approx": "5th century BCE (composition); manuscript 10th century",
+      "century": -5,
+      "source": "Florence, Laur. Plut. 32.9 (Medicean Aeschylus) fol. 152v-153v via Teca digitale BML + Smyth Greek (Perseus) + Smyth English (Loeb 1922, archive.org scan)",
+      "description": "Prometheus, chained to his rock, tells the chorus how mankind lived like shapes in dreams until he gave them the stars, numbers, letters, the yoke, ships, medicine, divination and metals: 'every art possessed by man comes from Prometheus'. Shown on the 10th-century Medicean manuscript, Laur. Plut. 32.9.",
+      "themes": [
+        "aeschylus",
+        "prometheus",
+        "prometheus-bound",
+        "gifts-of-civilisation",
+        "origins-of-the-arts",
+        "earliest-ages",
+        "astronomy",
+        "writing",
+        "medicine",
+        "divination",
+        "metals",
+        "fate",
+        "tragedy",
+        "greek",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "aeschylus-prometheus/laur32-9-f152v.jpg",
+            "caption": "Laur. Plut. 32.9 fol. 152v"
+          },
+          {
+            "file": "aeschylus-prometheus/laur32-9-f153r.jpg",
+            "caption": "Laur. Plut. 32.9 fol. 153r"
+          },
+          {
+            "file": "aeschylus-prometheus/laur32-9-f153v.jpg",
+            "caption": "Laur. Plut. 32.9 fol. 153v"
+          }
+        ]
+      }
+    }
+  ]
+}

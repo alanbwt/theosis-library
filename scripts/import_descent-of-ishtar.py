@@ -39,7 +39,7 @@ ENTRIES = [{
 WORK = engine.simple_work(
     key="descent-of-ishtar", ebl_text=("L", 1, 8),
     ebl_name="eBL corpus edition L I.8, Descent of Ishtar (ed. A. Setälä, rev. Z. J. Földi, A. Hätinen, E. Jiménez, G. Rozzi)",
-    label="Descent of Ishtar (cuneiform tablets)", entries=ENTRIES,
+    label="Descent of Ishtar", entries=ENTRIES,
     translator="B. R. Foster", translator_short="B. R. Foster (eBL edition)",
     translation_source="B. R. Foster, English translation of the Descent of Ishtar in the eBL corpus edition (electronic Babylonian Library, LMU Munich, 2022 and later)",
     author_id="anonymous-babylonian-poet", date_approx="composed 2nd millennium BCE; tablets 8th-7th c. BCE",

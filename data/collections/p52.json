@@ -1,0 +1,70 @@
+{
+  "collection": {
+    "key": "p52",
+    "prefix": "verified-p52-",
+    "label": "P52 (John Rylands fragment)",
+    "group": "New Testament",
+    "date_sort": 150,
+    "author_name": "Papyrus P52, Egypt (c. 125-175 AD)",
+    "source_url": "https://www.digitalcollections.manchester.ac.uk/view/MS-GREEK-P-00457/1",
+    "critical_edition": "INTF NTVMR diplomatic transcription (CC BY 4.0)",
+    "translator_name": "King James Version (1611)",
+    "original_lang_label": "Greek · NTVMR transcription",
+    "original_lang_code": "grc",
+    "edition_label": "",
+    "search_terms": "p52 rylands papyrus john 18 pilate oldest new testament fragment",
+    "description": "The oldest known New Testament manuscript: a 2nd-century papyrus scrap of John 18 in the John Rylands Library, Manchester, both sides."
+  },
+  "texts": [
+    {
+      "id": "verified-p52-john-18",
+      "slug": "verified-p52-john-18",
+      "order": 1,
+      "title": "P52 (John Rylands fragment): John 18:31-33, 37-38",
+      "author_id": "p52-scribe",
+      "language": "Greek",
+      "era": "Apostolic",
+      "tradition": "christian",
+      "category": "sacred-text",
+      "date_approx": "c. 125-175 AD (NTVMR); mid to late 2nd century (Rylands catalogue)",
+      "century": 2,
+      "source": "John Rylands Library, Manchester, Greek P 457 (P52): photographs from Manchester Digital Collections; Greek from the INTF NTVMR transcription; English from the King James Version",
+      "description": "The oldest known piece of a New Testament manuscript: a scrap of a papyrus codex of John, written in the 2nd century, with John 18:31-33 on one side and 18:37-38 on the other.",
+      "themes": [
+        "new-testament",
+        "papyrus",
+        "gospel-of-john",
+        "pilate",
+        "p52",
+        "greek",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "p52/p52-recto.jpg",
+            "caption": "P52 recto"
+          },
+          {
+            "file": "p52/p52-verso.jpg",
+            "caption": "P52 verso"
+          }
+        ]
+      }
+    }
+  ],
+  "authors": [
+    {
+      "id": "p52-scribe",
+      "name": "Papyrus P52 (scribe)",
+      "dates": "2nd century AD",
+      "century": 2,
+      "era": "Apostolic",
+      "tradition": "christian",
+      "language": "Greek",
+      "bio": "Unknown scribe of a 2nd-century papyrus codex of the Gospel of John, of which one fragment (P52) survives in Manchester."
+    }
+  ]
+}
