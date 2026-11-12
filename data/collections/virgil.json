@@ -1,0 +1,113 @@
+{
+  "collection": {
+    "key": "virgil",
+    "prefix": "verified-virgil-",
+    "label": "Virgil: the golden age and the return of souls",
+    "group": "Rome",
+    "date_sort": -40,
+    "author_name": "Virgil (70-19 BCE); Vergilius Romanus and Vergilius Vaticanus (4th-5th century)",
+    "source_url": "https://digi.vatlib.it/view/MSS_Vat.lat.3867",
+    "critical_edition": "Greenough, Virgil (Ginn), via Perseus",
+    "translator_name": "James Rhoades (Eclogues), Theodore C. Williams (Aeneid, 1910)",
+    "original_lang_label": "Latin · Greenough",
+    "original_lang_code": "la",
+    "edition_label": "",
+    "search_terms": "virgil vergil fourth eclogue golden age sibyl new race messianic aeneid book 6 anchises world soul spiritus intus alit lethe elysium vergilius romanus vaticanus",
+    "description": "Virgil's fourth Eclogue, on the return of the golden age, and Anchises' account of the world-soul and the return of souls in Aeneid 6, on the two oldest illustrated manuscripts of Virgil."
+  },
+  "texts": [
+    {
+      "id": "verified-virgil-eclogue-4",
+      "slug": "verified-virgil-eclogue-4",
+      "order": 1,
+      "title": "Virgil, Eclogue 4: the return of the golden age",
+      "author_id": "virgil",
+      "language": "Latin",
+      "era": "Late Republic",
+      "tradition": "roman",
+      "category": "literature",
+      "date_approx": "c. 40 BCE (composition); manuscript 5th century",
+      "century": -1,
+      "source": "Vat. lat. 3867 (Vergilius Romanus) fol. 9v-11r (DigiVatLib) + Greenough Latin (Perseus) + James Rhoades (1921) English (Perseus)",
+      "description": "Virgil's fourth Eclogue, written around 40 BCE: the last age foretold by the Sibyl has come, the Virgin returns and a new race is sent down from heaven, and a child is born under whom the iron age will end and the golden age return. Shown on the Vergilius Romanus (5th century).",
+      "themes": [
+        "virgil",
+        "eclogues",
+        "fourth-eclogue",
+        "golden-age",
+        "ages-of-man",
+        "sibyl",
+        "messianic-eclogue",
+        "earliest-ages",
+        "latin",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "virgil/vat-lat-3867-f9v.jpg",
+            "caption": "Vergilius Romanus, Vat. lat. 3867 fol. 9v"
+          },
+          {
+            "file": "virgil/vat-lat-3867-f10r.jpg",
+            "caption": "Vergilius Romanus, Vat. lat. 3867 fol. 10r"
+          },
+          {
+            "file": "virgil/vat-lat-3867-f10v.jpg",
+            "caption": "Vergilius Romanus, Vat. lat. 3867 fol. 10v"
+          },
+          {
+            "file": "virgil/vat-lat-3867-f11r.jpg",
+            "caption": "Vergilius Romanus, Vat. lat. 3867 fol. 11r"
+          }
+        ]
+      }
+    },
+    {
+      "id": "verified-virgil-aeneid-6-724-751",
+      "slug": "verified-virgil-aeneid-6-724-751",
+      "order": 2,
+      "title": "Virgil, Aeneid 6.724-751: Anchises on the world-soul and the return of souls",
+      "author_id": "virgil",
+      "language": "Latin",
+      "era": "Imperial",
+      "tradition": "roman",
+      "category": "literature",
+      "date_approx": "29-19 BCE (composition); manuscript c. 400 (BAV: 4th century)",
+      "century": -1,
+      "source": "Vat. lat. 3225 (Vergilius Vaticanus) fol. 55r-55v (DigiVatLib) + Greenough Latin (Perseus) + Theodore C. Williams (1910) English (Perseus)",
+      "description": "In the underworld Anchises explains to Aeneas that one spirit and mind move the whole universe, that souls have a fiery heavenly origin dulled by the body, and that after purification they drink of Lethe and return to bodies. Shown on the Vergilius Vaticanus (about 400).",
+      "themes": [
+        "virgil",
+        "aeneid",
+        "underworld",
+        "anchises",
+        "world-soul",
+        "spiritus-intus-alit",
+        "purification",
+        "reincarnation",
+        "lethe",
+        "elysium",
+        "theosis",
+        "latin",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "virgil/vat-lat-3225-f55r.jpg",
+            "caption": "Vergilius Vaticanus, Vat. lat. 3225 fol. 55r"
+          },
+          {
+            "file": "virgil/vat-lat-3225-f55v.jpg",
+            "caption": "Vergilius Vaticanus, Vat. lat. 3225 fol. 55v"
+          }
+        ]
+      }
+    }
+  ]
+}
