@@ -170,8 +170,7 @@ PASSAGES += [
             "he repeats what he says he learned from Diotima, a wise woman of Mantinea. Love, she taught, is not a god but a great spirit (<em>daimon</em>) "
             "that carries messages between gods and men; it is the desire to possess the good for ever, and so it is also a desire for immortality, "
             "which mortals reach by begetting, in body or in soul. The speech ends with the 'ladder' of love: from one beautiful body to all bodies, "
-            "to souls, practices, laws and sciences, until the lover sees beauty itself, pure and unmixed, and becomes, 'if any human being can, immortal' "
-            "and dear to the gods (212a).</p>\n\n"
+            "to souls, practices, laws and sciences, until the lover sees beauty itself, pure and unmixed; such a man, Diotima says, 'is destined to win the friendship of Heaven; he, above all men, is immortal' (212a).</p>\n\n"
             "<p>The pages shown are from the Clarke Plato (Oxford, Bodleian Library, MS. E. D. Clarke 39), copied in Constantinople in 895, the oldest manuscript of the Symposium (siglum B). "
             "The passage runs over eleven pages, fol. 213r to fol. 218r, each of 34 lines. Each section below is one Stephanus subsection, linked to the page or pages that carry its words; "
             "the pages were identified by reading the first and last lines of each page on the image. The Greek is Burnet's critical text, not a transcription of the manuscript.</p>"
@@ -228,7 +227,7 @@ PASSAGES += [
         "intro": (
             "<p>In book 4 of the <em>Laws</em>, Plato's last work, the Athenian Stranger imagines the first settlers of a new city and composes the address they should hear. "
             "It opens with 'the ancient saying' that god holds the beginning, the end and the middle of all things, and that Justice follows him to punish those who fall away from the divine law. "
-            "Then comes the reply to Protagoras' 'man is the measure of all things': for us 'god will be the measure of all things in the highest degree, much more than any man'. "
+            "Then comes the reply to Protagoras' 'man is the measure of all things': 'In our eyes God will be the measure of all things in the highest degree'. "
             "Whoever would be dear to such a being must, as far as he can, become like him: the temperate man is dear to god because he is like him.</p>\n\n"
             "<p>The page shown is from Paris, Bibliotheque nationale de France, grec 1807 (siglum A), copied in the second half of the 9th century, the oldest manuscript of the Laws. "
             "The whole passage stands on one page, fol. 189v, written in two columns of 44 lines: it begins on line 2 of the first column and ends in the second column, which closes with the opening words of 717a. "
@@ -262,10 +261,10 @@ PASSAGES += [
         "intro": (
             "<p>In his second speech on love in the <em>Phaedrus</em>, Socrates argues that every soul is immortal, since what moves itself never ceases to move. "
             "He then describes the soul in an image: a charioteer with two winged horses. The souls of the gods drive easily to the outer rim of heaven and look on what lies beyond it, "
-            "'the colourless, formless and intangible truly existing essence'; human souls follow as they can, lose their wings and fall into bodies. "
-            "The soul of the philosopher regains its wings first, 'for it is always, so far as it is able, in communion through memory with those things the communion with which causes God to be divine' (249c).</p>\n\n"
+            "'the colorless, formless, and intangible truly existing essence'; human souls follow as they can, lose their wings and fall into bodies. "
+            "The mind of the philosopher alone regains its wings, 'for he is always, so far as he is able, in communion through memory with those things the communion with which causes God to be divine' (249c).</p>\n\n"
             "<p>The pages shown are from the Clarke Plato (Oxford, Bodleian Library, MS. E. D. Clarke 39), copied in Constantinople in 895, the oldest manuscript of the Phaedrus (siglum B). "
-            "The passage runs from fol. 232v line 2 to the top of fol. 235r, six pages of 34 lines. Each section is one Stephanus subsection, linked to the page or pages that carry its words, "
+            "The passage runs from fol. 232v line 2 to the top of fol. 235r, six pages. Each section is one Stephanus subsection, linked to the page or pages that carry its words, "
             "identified by reading the first and last lines of each page on the image. The Greek is Burnet's critical text, not a transcription of the manuscript.</p>"
         ),
         "pages": [
@@ -314,10 +313,10 @@ PASSAGES += [
             "<p>The <em>Phaedo</em> tells of Socrates' last conversation in prison before he drank the hemlock. In this passage (the 'affinity argument') he divides things into two kinds: "
             "the invisible, which is always the same, and the visible, which never stays the same. The soul is more like the first, the body like the second; "
             "and 'the soul is most like the divine and immortal and intellectual and uniform and indissoluble and ever unchanging' (80b). "
-            "A soul that has lived by philosophy, keeping itself pure of the body, departs at death 'to that place which is, like itself, invisible, divine, immortal and wise' (81a), "
+            "A soul that has lived by philosophy, keeping itself pure of the body, goes away at death 'into that which is like itself, into the invisible, divine, immortal, and wise' (81a), "
             "while souls bound to the body wander and are born again; philosophy is described as the release of the soul.</p>\n\n"
             "<p>The pages shown are from the Clarke Plato (Oxford, Bodleian Library, MS. E. D. Clarke 39), copied in Constantinople in 895, the oldest manuscript of the Phaedo (siglum B). "
-            "The passage runs from fol. 37r to the top of fol. 40v, eight pages of 34 lines. On fol. 38v the inner part of the first lines is damaged and repaired, and some letters there have been retraced by a later hand. "
+            "The passage runs from fol. 37r to the top of fol. 40v, eight pages. On fol. 38v the inner part of the first lines is damaged and repaired, and some letters there have been retraced by a later hand. "
             "Each section is one Stephanus subsection, linked to the page or pages that carry its words, identified by reading the first and last lines of each page on the image. "
             "The Greek is Burnet's critical text, not a transcription of the manuscript.</p>"
         ),
@@ -462,8 +461,8 @@ def page_note(ms, p, cv):
     uuid = cv[f"fol. {p['folio']}"]["uuid"]
     if p.get("custom"):
         return p["custom"] + " Viewer: " + MSS[ms]["viewer"].format(uuid=uuid)
-    s = (f"{MSS[ms]['short']} fol. {p['folio']} (34 lines) runs from '{p['first']}' on line 1 ({p['start']}) "
-         f"to '{p['last']}' on line {MSS[ms]['lines']} ({p['end']}).")
+    s = (f"{MSS[ms]['short']} fol. {p['folio']} runs from '{p['first']}' on its first line ({p['start']}) "
+         f"to '{p['last']}' on its last line ({p['end']}).")
     if p.get("extra"):
         s += " " + p["extra"]
     s += " Viewer: " + MSS[ms]["viewer"].format(uuid=uuid)

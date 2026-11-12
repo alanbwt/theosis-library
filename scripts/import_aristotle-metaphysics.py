@@ -190,11 +190,11 @@ def main():
         "title": "Aristotle, Metaphysics 12.6-10 (Lambda): the unmoved mover and the life of god",
         "language": "Greek (Ross 1924) / English (W. D. Ross 1928)",
         "source": "Paris gr. 1853 fol. 293r-296v (Gallica, 10th c.) + Ross Greek (Perseus) + W. D. Ross English (1928, MIT Internet Classics Archive)",
-        "description": "Aristotle's account of the first principle: an eternal, unmoved substance whose activity is thought, 'thought thinking itself'; its life is 'the best and eternal', and 'this is God' (1072b). Shown on Paris gr. 1853, a 10th-century manuscript.",
+        "description": "Aristotle's account of the first principle: an eternal, unmoved substance whose activity is thought thinking itself; 'the actuality of thought is life, and God is that actuality' (1072b). Shown on Paris gr. 1853, a 10th-century manuscript.",
         "introduction": (
             "<p>Book 12 (Lambda) of the <em>Metaphysics</em> is Aristotle's theology. Chapter 6 argues that since motion and time are eternal there must be an eternal substance that is pure activity, without matter. "
-            "Chapter 7 describes it: it moves the heavens without being moved, 'as the object of love moves'; its activity is thinking, and 'the activity of thought is life, and God is that activity; "
-            "and God's essential activity is life most good and eternal' (1072b26-28). Chapter 8 asks how many such movers there are, using the astronomy of Eudoxus and Callippus, and mentions the ancient tradition that the heavenly bodies are gods. "
+            "Chapter 7 describes it: it moves the heavens without being moved, and 'produces motion as being loved'; its activity is thinking, and 'the actuality of thought is life, and God is that actuality; "
+            "and God's self-dependent actuality is life most good and eternal' (1072b26-28). Chapter 8 asks how many such movers there are, using the astronomy of Eudoxus and Callippus, and mentions the ancient tradition that the heavenly bodies are gods. "
             "Chapter 9 concludes that divine thought thinks itself, 'its thinking is a thinking on thinking' (1074b34). Chapter 10 asks how the good is present in the universe, both as its order and as its ruler, and ends with Homer's line 'The rule of many is not good; one ruler let there be.' "
             "Ancient and medieval readers, pagan, Jewish, Christian and Muslim, built on these chapters when they spoke of God as mind and of the human mind's likeness to him.</p>\n\n"
             "<p>The pages shown are from Paris, Bibliotheque nationale de France, grec 1853 (siglum E), a 10th-century collection of Aristotle's works with scholia, fol. 293r-296v, about 47 lines to the page. "
@@ -204,6 +204,7 @@ def main():
         "translator_notes": [
             "Greek: W. D. Ross, Aristotle's Metaphysics (Oxford, 1924), Perseus digital text. Square brackets mark words Ross deletes.",
             "English: W. D. Ross's translation in the revised Oxford edition (1928), as given by the MIT Internet Classics Archive. The archive's quotation marks around each paragraph are formatting and have been removed.",
+            "Ross's translation begins chapter 8 with the sentence 'It is clear, then, why these things are as they are', which the Greek edition prints as the last sentence of chapter 7 (1073a13); the English sections follow the translation's own chapter divisions.",
         ],
         "translation": sections,
         "verification": {

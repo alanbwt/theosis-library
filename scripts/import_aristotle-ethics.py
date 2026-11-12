@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-import_aristotle-ethics.py: Aristotle, Nicomachean Ethics 10.7-10.8 (1177a12-1179a32),
+import_aristotle-ethics.py: Aristotle, Nicomachean Ethics 10.6-10.8 (1176a30-1179a32),
 the life of contemplation as the divine life in man.
 
 One entry; one section per Bekker column within a chapter (e.g. 10.7, 1177b), each
@@ -15,7 +15,7 @@ Chain of evidence
      Kb has lost the text 1176a10-1177a30 between fol. 121r and fol. 121v (fol. 121r
      ends 'τὰς δὲ τῶν αὐτῶν ἀδιαφόρους εὔλογον εἶναι. διαλλάττουσι', 1176a10;
      fol. 121v begins '-μένων ὁ μὲν δίκαιος δεῖται πρὸς οὓς', 1177a30), so the
-     opening of 10.7 (1177a12-30) is shown on
+     text of 10.6 and the opening of 10.7 (1176a30-1177a30) are shown on
      Paris, BnF, grec 1854 (siglum Lb, 12th c.), Gallica IIIF ark:/12148/btv1b52511833m
      (colour digitization of the original; Pinakes diktyon 51480: Ethica fol. 1-188).
   2. MAPPING  First and last lines of every page read on the images and matched to
@@ -51,7 +51,8 @@ SCAN_DIR = ROOT / "site" / "assets" / "scans" / KEY
 PUB_DIR = ROOT / "translations" / "published"
 COLL = ROOT / "data" / "collections" / f"{KEY}.json"
 PREFIX = f"verified-{KEY}-"
-TID = PREFIX + "nicomachean-10-7-8"
+TID = PREFIX + "nicomachean-10-6-8"
+OLD_TIDS = [PREFIX + "nicomachean-10-7-8"]
 TODAY = date.today().isoformat()
 TEI = "{http://www.tei-c.org/ns/1.0}"
 PERSEUS = "https://github.com/PerseusDL/canonical-greekLit/tree/master/data/tlg0086/tlg010"
@@ -64,6 +65,10 @@ MSS = {
 }
 
 PAGES = {
+    ("lb", "175r"): "Paris gr. 1854 fol. 175r begins 'καὶ ἡδοναὶ εἶεν ἂν αἱ τούτῳ φαινόμεναι καὶ ἡδέα' (1176a18-19, chapter 5); chapter 10.6 ('εἰρημένων δὲ τῶν περί τε τὰς ἀρετάς', 1176a30) begins on this page, which ends 'εἴπομεν δὴ ὅτι οὐκ ἔστιν ἕξις· καὶ γὰρ τῷ καθεύδοντι διὰ βίου ὑπάρχοι' (1176a33-34). The margins carry scholia.",
+    ("lb", "175v"): "Paris gr. 1854 fol. 175v begins 'ἄν, φυτῶν ζῶντι βίον' (1176a34) and ends 'παρὰ τοῖς τυράννοις εὐδοκιμοῦσιν οἱ ἐν ταῖς τοιαύταις διαγωγαῖς εὐτράπελοι· ὧν γὰρ ἐφίενται, ἐν τούτοις παρέ(χουσι)' (1176b12-14).",
+    ("lb", "176r"): "Paris gr. 1854 fol. 176r begins '(παρέ)χουσι σφᾶς αὐτοὺς ἡδεῖς' (1176b14) and ends 'καὶ τῷ σπουδαίῳ δὴ ἡ κατὰ τὴν ἀρετήν' (1176b26-27).",
+    ("lb", "176v"): "Paris gr. 1854 fol. 176v begins 'οὐκ ἐν παιδιᾷ ἄρα ἡ εὐδαιμονία· καὶ γὰρ ἄτοπον τὸ τέλος εἶναι παιδιάν' (1176b27-28) and ends 'ἡ δὲ τοῦ βελτίονος κρείττων καὶ εὐδαι(μονικωτέρα)' (1177a5-6).",
     ("lb", "177r"): "Paris gr. 1854 fol. 177r: the first line of text reads '(εὐδαι)μονικωτέρα ἤδη. ἀπολαύσειε' (1177a6); chapter 10.7 begins at the end of line 9 ('εἰ δʼ', with 'ἐστὶν ἡ εὐδαιμονία κατʼ ἀρετὴν ἐνέργεια' on line 10). The page ends in 1177a21, just before 'θεωρεῖν τε γὰρ δυνάμεθα', the first words of fol. 177v. The margins and the spaces between the lines carry scholia.",
     ("lb", "177v"): "Paris gr. 1854 fol. 177v begins 'θεωρεῖν τε γὰρ δυνάμεθα συνεχῶς μᾶλλον ἢ πράττειν ὁτιοῦν' (1177a21-22) and ends 'δόξειε δʼ ἂν αὐτὴ μόνη διʼ αὑτὴν ἀγαπᾶσθαι· οὐδὲν γὰρ' (1177b1-2).",
     ("kb", "121v"): "Laur. Plut. 81.11 fol. 121v begins '(κεχορηγη)μένων ὁ μὲν δίκαιος δεῖται πρὸς οὓς δικαιοπραγήσει' (1177a29-30) and ends 'αὗται δʼ ἄσχολοι καὶ τέλους τινὸς ἐφίενται καὶ' (1177b17-18).",
@@ -77,10 +82,16 @@ PAGES = {
 
 # section -> (chapter, bekker column, citation, pages)
 SECTIONS = [
+    ("10.6-1176a", "6", "1176a", "NE 10.6, 1176a30-35", [("lb", "175r"), ("lb", "175v")],
+     "Kb lacks this chapter (loss between fol. 121r and 121v); it is shown on Lb."),
+    ("10.6-1176b", "6", "1176b", "NE 10.6, 1176b1-35", [("lb", "175v"), ("lb", "176r"), ("lb", "176v")],
+     "Kb lacks this chapter; it is shown on Lb."),
+    ("10.6-1177a", "6", "1177a", "NE 10.6, 1177a1-11", [("lb", "176v"), ("lb", "177r")],
+     "Kb lacks this chapter; it is shown on Lb."),
     ("10.7-1177a", "7", "1177a", "NE 10.7, 1177a12-35", [("lb", "177r"), ("lb", "177v"), ("kb", "121v")],
      "Kb lacks 1177a12-30 (loss between fol. 121r and 121v), so the start of the chapter is shown on Lb fol. 177r-177v; from 1177a30 ('-μένων ὁ μὲν δίκαιος') the text is on Kb fol. 121v."),
     ("10.7-1177b", "7", "1177b", "NE 10.7, 1177b1-34", [("kb", "121v"), ("kb", "122r")],
-     "The words 'we must, as far as we can, make ourselves immortal' (ἐφʼ ὅσον ἐνδέχεται ἀθανατίζειν, 1177b33) are on fol. 122r."),
+     "The words 'we ought so far as possible to achieve immortality' (ἐφʼ ὅσον ἐνδέχεται ἀθανατίζειν, 1177b33) are on fol. 122r."),
     ("10.7-1178a", "7", "1178a", "NE 10.7, 1178a1-8", [("kb", "122r"), ("kb", "122v")], ""),
     ("10.8-1178a", "8", "1178a", "NE 10.8, 1178a9-35", [("kb", "122v"), ("kb", "123r")], ""),
     ("10.8-1178b", "8", "1178b", "NE 10.8, 1178b1-35", [("kb", "123r"), ("kb", "123v")], ""),
@@ -194,23 +205,23 @@ def main():
     all_pages = list(PAGES)
     entry = {
         "id": TID, "slug": TID,
-        "title": "Aristotle, Nicomachean Ethics 10.7-10.8: the life of the mind as a divine life",
+        "title": "Aristotle, Nicomachean Ethics 10.6-10.8: happiness and the life of the mind as a divine life",
         "language": "Greek (Bywater) / English (Rackham 1926)",
-        "source": "Laur. Plut. 81.11 fol. 121v-124v (Teca Digitale, 10th c.) and Paris gr. 1854 fol. 177r-177v (Gallica, 12th c.) + Bywater Greek (Perseus) + H. Rackham English (Perseus)",
-        "description": "Aristotle's argument that the highest happiness is the activity of contemplation, a life 'higher than human' lived by the divine element in us: 'we must, as far as we can, make ourselves immortal' (1177b33). Shown on the oldest manuscript, Laur. Plut. 81.11 (10th c.), with its lost leaf supplied from Paris gr. 1854.",
+        "source": "Laur. Plut. 81.11 fol. 121v-124v (Teca Digitale, 10th c.) and Paris gr. 1854 fol. 175r-177v (Gallica, 12th c.) + Bywater Greek (Perseus) + H. Rackham English (Perseus)",
+        "description": "Aristotle's argument that the highest happiness is the activity of contemplation, a life 'higher than the human level' lived by the divine element in us: 'we ought so far as possible to achieve immortality' (1177b33). Shown on the oldest manuscript, Laur. Plut. 81.11 (10th c.), with its missing text supplied from Paris gr. 1854.",
         "introduction": (
-            "<p>In the last book of the <em>Nicomachean Ethics</em> Aristotle asks what the happiest life is. Happiness is activity in accordance with the highest virtue, "
-            "and the highest part of us is the intellect (<em>nous</em>), 'whether it be itself divine or only the most divine element in us'. "
+            "<p>In the last book of the <em>Nicomachean Ethics</em> Aristotle asks what the happiest life is. Chapter 6 sets aside amusement: happiness is an activity desirable for its own sake, in accordance with virtue. Happiness is activity in accordance with the highest virtue, "
+            "and the highest part of us is the intellect (<em>nous</em>), 'either as being itself also actually divine, or as being relatively the divinest part of us'. "
             "Its activity, contemplation (<em>theoria</em>), is the most continuous, the most pleasant, the most self-sufficient and the only activity loved for its own sake. "
-            "Such a life 'would be higher than the human level': a man lives it not in so far as he is human but in so far as something divine is present in him. "
-            "So we should not follow those who advise us to think human thoughts because we are human, 'but we must, as far as we can, make ourselves immortal' (1177b33). "
-            "Chapter 8 adds that the gods are blessed because they contemplate, and that the wise man, whose activity is most like theirs, is the one most loved by the gods. "
+            "Such a life 'will be higher than the human level': a man lives it not in so far as he is human but in so far as something divine is present in him. "
+            "So we should not follow those who advise us to think human thoughts because we are human, but 'we ought so far as possible to achieve immortality' (1177b33). "
+            "Chapter 8 adds that the gods are blessed because they contemplate, and that the wise man, whose activity is most like theirs, is 'most beloved by the gods'. "
             "Later Greek Christian writers drew on these chapters when they spoke of contemplation and deification.</p>\n\n"
             "<p>The main witness is Florence, Biblioteca Medicea Laurenziana, Plut. 81.11 (siglum Kb), written in the 10th century, the oldest manuscript of the Ethics. "
             "Between its fol. 121r and fol. 121v the text 1176a10-1177a30 is missing (fol. 121r ends at 1176a10 and fol. 121v begins at 1177a30), "
-            "so the opening of chapter 7 (1177a12-30) is shown on Paris, BnF, grec 1854 (siglum Lb, 12th century), fol. 177r-177v, a large-format copy with scholia around and between the lines. "
+            "so chapter 6 and the opening of chapter 7 (1176a30-1177a30) are shown on Paris, BnF, grec 1854 (siglum Lb, 12th century), fol. 175r-177v, a large-format copy with scholia around and between the lines. "
             "Each section is one Bekker column within a chapter; the pages listed for it were identified by reading the first and last lines of each page on the images. "
-            "The Greek is Bywater's critical text, not a transcription of either manuscript. Chapter 6 (1176a30-1177a11), which falls in the gap in Kb, is not included.</p>"
+            "The Greek is Bywater's critical text, not a transcription of either manuscript.</p>"
         ),
         "translator_notes": [
             "Greek: I. Bywater, Aristotelis Ethica Nicomachea (Oxford Classical Texts, 1894), Perseus digital text. Square brackets mark words Bywater deletes.",
@@ -218,7 +229,7 @@ def main():
         ],
         "translation": sections,
         "verification": {
-            "scan_source": "Biblioteca Medicea Laurenziana, Teca Digitale (IIIF), Plut. 81.11 fol. 121v-124v: https://tecabml.contentdm.oclc.org/digital/collection/plutei/id/917185 ; Bibliotheque nationale de France, Gallica (IIIF), grec 1854 fol. 177r-177v: https://gallica.bnf.fr/ark:/12148/btv1b52511833m",
+            "scan_source": "Biblioteca Medicea Laurenziana, Teca Digitale (IIIF), Plut. 81.11 fol. 121v-124v: https://tecabml.contentdm.oclc.org/digital/collection/plutei/id/917185 ; Bibliotheque nationale de France, Gallica (IIIF), grec 1854 fol. 175r-177v: https://gallica.bnf.fr/ark:/12148/btv1b52511833m",
             "scan_license": "Laurenziana: access rights stated as 'Pubblico' in the Teca Digitale record; reproduced for non-commercial scholarly use with credit to the Biblioteca Medicea Laurenziana (MiC). Gallica: source gallica.bnf.fr / BnF, non-commercial reuse free with credit under the Gallica terms of use.",
             "scan_manuscript": "Florence, Biblioteca Medicea Laurenziana, Plut. 81.11 (Kb), parchment, 10th century, Nicomachean Ethics fol. 1-128 (former owner Francesco Filelfo); Paris, Bibliotheque nationale de France, grec 1854 (Lb), parchment, 12th century, Nicomachean Ethics with scholia fol. 1-188",
             "scan_mapping": "First and last lines of every page read on the images and matched to Bywater's text (quoted per page in each scan_note); folio ranges of the Ethics in both manuscripts from Pinakes (diktyon 16748, 51480)",
@@ -233,6 +244,8 @@ def main():
             "verified_date": TODAY,
         },
     }
+    for old in OLD_TIDS:
+        PUB_DIR.joinpath(f"{old}.json").unlink(missing_ok=True)
     PUB_DIR.joinpath(f"{TID}.json").write_text(json.dumps(entry, indent=2, ensure_ascii=False), encoding="utf-8")
     row = {
         "id": TID, "slug": TID, "order": 1, "title": entry["title"], "author_id": "aristotle",

@@ -23,10 +23,17 @@ def main():
             p = PUB / f"{r['id']}.json"
             if p.exists():
                 n_sections += len(json.loads(p.read_text(encoding="utf-8")).get("translation", []))
+    LANG = {"grc": "Greek", "la": "Latin", "hbo": "Hebrew", "he": "Hebrew", "arc": "Aramaic", "akk": "Akkadian",
+            "sux": "Sumerian", "egy": "Egyptian", "lzh": "Classical Chinese", "och": "Old Chinese", "gez": "Ge'ez",
+            "cop": "Coptic", "sa": "Sanskrit", "ae": "Avestan", "peo": "Old Persian", "obm": "Moabite",
+            "phn": "Phoenician", "uga": "Ugaritic", "non": "Old Norse", "ar": "Arabic", "elx": "Elamite", "hit": "Hittite"}
     langs = set()
     for c in colls:
-        lab = c.get("language") or c.get("original_lang_label", "")
-        lab = re.split(r"[·(/]", lab)[0].strip()
+        code = c.get("original_lang_code")
+        lab = LANG.get(code) if code else None
+        if not lab:
+            lab = re.split(r"[·(/]", c.get("language") or c.get("original_lang_label", ""))[0].strip()
+            lab = {"Ancient Greek": "Greek", "Vedic Sanskrit": "Sanskrit"}.get(lab, lab)
         if lab:
             langs.add(lab)
     pills = ['<a href="/library/" class="evidence-pill">All Texts</a>']
