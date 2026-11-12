@@ -1417,7 +1417,7 @@
       "tradition": "neoplatonist",
       "language": "Greek",
       "name_latin": "",
-      "bio": "Plato"
+      "bio": "Athenian philosopher, pupil of Socrates and founder of the Academy, whose dialogues include the Timaeus and Critias, the only ancient sources for the story of Atlantis."
     },
     {
       "id": "aristotle",
@@ -1428,7 +1428,7 @@
       "tradition": "neoplatonist",
       "language": "Greek",
       "name_latin": "",
-      "bio": "Aristotle"
+      "bio": "Greek philosopher, pupil of Plato and tutor of Alexander the Great, whose works on ethics and first philosophy shaped all later Greek, Christian and Islamic thought."
     },
     {
       "id": "thucydides",
@@ -1461,7 +1461,7 @@
       "tradition": "neoplatonist",
       "language": "Latin",
       "name_latin": "",
-      "bio": "Tacitus"
+      "bio": "Roman senator and historian whose Annals, written c. 116 AD, describe Nero's persecution of the Christians after the fire of Rome in 64 AD."
     },
     {
       "id": "polybius",
@@ -1868,7 +1868,7 @@
       "tradition": "neoplatonist",
       "language": "Latin",
       "name_latin": "",
-      "bio": "Suetonius"
+      "bio": "Roman biographer and imperial secretary whose Lives of the Caesars (c. 121 AD) mention the expulsion of the Jews under Claudius and the punishment of Christians under Nero."
     },
     {
       "id": "livy",
@@ -1924,13 +1924,15 @@
       "id": "homer",
       "name": "Homer",
       "dates": "c. 8th century BCE",
-      "tradition": "greek"
+      "tradition": "greek",
+      "bio": "The Greek poet to whom antiquity attributed the Iliad and the Odyssey and a collection of hymns, composed in the oral tradition of the 8th-7th centuries BCE."
     },
     {
       "id": "hesiod",
       "name": "Hesiod",
       "dates": "c. 700 BCE",
-      "tradition": "greek"
+      "tradition": "greek",
+      "bio": "Greek poet of Boeotia (c. 700 BCE), author of the Theogony on the origin of the gods and the Works and Days with its five ages of mankind."
     },
     {
       "id": "aeschylus",
@@ -2168,7 +2170,8 @@
       "id": "egyptian-wisdom",
       "name": "Ancient Egyptian Sages",
       "dates": "c. 2000 BCE",
-      "tradition": "egyptian"
+      "tradition": "egyptian",
+      "bio": "The scribes and officials of ancient Egypt who composed teachings (sebayt) such as the Instruction of Ptahhotep, written down in the Middle Kingdom."
     },
     {
       "id": "nestor",
@@ -2384,7 +2387,8 @@
       "id": "laozi",
       "name": "Laozi",
       "dates": "c. 6th century BCE",
-      "tradition": "taoist"
+      "tradition": "taoist",
+      "bio": "The sage to whom Chinese tradition attributes the Daodejing; the earliest manuscripts of the text date from about 300 BCE."
     },
     {
       "id": "sunzi",
@@ -2846,7 +2850,8 @@
       "id": "mesha-moab",
       "name": "Mesha, King of Moab",
       "dates": "c. 840 BCE",
-      "tradition": "canaanite"
+      "tradition": "canaanite",
+      "bio": "King of Moab in the 9th century BCE who set up the Mesha Stele recording his revolt against Israel after the death of Ahab (2 Kings 3)."
     },
     {
       "id": "babylonian-astronomers",
@@ -3054,13 +3059,15 @@
       "id": "anonymous-norse",
       "name": "Anonymous (Codex Regius)",
       "dates": "c. 9th-13th c. AD",
-      "tradition": "norse"
+      "tradition": "norse",
+      "bio": "The unnamed Icelandic poets and scribes behind the Poetic Edda, preserved in the Codex Regius of about 1270."
     },
     {
       "id": "egyptian-scribes",
       "name": "Ancient Egyptian Scribes",
       "dates": "c. 2400-50 BCE",
-      "tradition": "egyptian"
+      "tradition": "egyptian",
+      "bio": "The anonymous scribes and priests of ancient Egypt who wrote and copied religious, literary and royal texts from the Old Kingdom to the Ptolemies."
     },
     {
       "id": "vedic-rishis",
@@ -3220,6 +3227,18 @@
       "language": "Greek",
       "name_latin": "Callimachus",
       "bio": "Poet and scholar of Cyrene who worked at the library of Alexandria; author of hymns, epigrams and the Aetia."
+    },
+    {
+      "id": "biblical-authors",
+      "name": "The biblical authors",
+      "dates": "c. 1000 BCE-100 AD",
+      "bio": "The prophets, poets, evangelists and apostles whose writings form the Old and New Testaments."
+    },
+    {
+      "id": "apostolic-fathers",
+      "name": "The Apostolic Fathers",
+      "dates": "c. 70-150 AD",
+      "bio": "The earliest Christian writers after the apostles, among them the authors of the Epistle of Barnabas, the Shepherd of Hermas and 1 Clement."
     }
   ]
 }
