@@ -1,0 +1,105 @@
+{
+  "collection": {
+    "key": "qumran-1qs",
+    "prefix": "verified-qumran-1qs-",
+    "label": "The Community Rule (1QS)",
+    "group": "Dead Sea Scrolls & Second Temple",
+    "date_sort": -90,
+    "author_name": "Qumran Cave 1 scroll (about 100-75 BCE)",
+    "source_url": "http://dss.collections.imj.org.il/community",
+    "critical_edition": "ETCBC dss Text-Fabric transcription (Abegg, Bowley, Cook)",
+    "translator_name": "W. H. Brownlee (1951)",
+    "original_lang_label": "Hebrew · Qumran transcription (Abegg, ETCBC)",
+    "original_lang_code": "hbo",
+    "edition_label": "",
+    "search_terms": "dead sea scrolls qumran community rule manual of discipline serekh hayahad 1qs yahad two spirits sons of light sons of darkness maskil many covenant essenes",
+    "description": "The Community Rule (Manual of Discipline) from Qumran Cave 1, complete in eleven columns, on the Israel Museum's photograph of the scroll, with the scroll's own Hebrew and W. H. Brownlee's 1951 English."
+  },
+  "texts": [
+    {
+      "id": "verified-qumran-1qs-community-rule",
+      "slug": "verified-qumran-1qs-community-rule",
+      "order": 1,
+      "title": "The Community Rule (1QS), columns I-XI",
+      "author_id": "qumran-community",
+      "language": "Hebrew",
+      "era": "Second Temple",
+      "tradition": "jewish",
+      "category": "sacred-text",
+      "date_approx": "c. 100-75 BCE (copy); composition 2nd century BCE",
+      "century": -1,
+      "source": "Israel Museum photograph of scroll 1QS (Digital Dead Sea Scrolls) + ETCBC dss transcription (Abegg; CC BY-NC 4.0) + English of W. H. Brownlee, The Dead Sea Manual of Discipline (1951), public domain",
+      "description": "The Community Rule from Qumran Cave 1, complete in eleven columns: the covenant ceremony, the teaching on the two spirits, the rules and penal code of the Community and its closing hymn, each column shown on the Israel Museum's photograph of the scroll.",
+      "themes": [
+        "dead-sea-scrolls",
+        "qumran",
+        "community-rule",
+        "two-spirits",
+        "covenant",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "qumran-1qs/1qs-col-01.jpg",
+            "caption": "1QS column I (Israel Museum)"
+          },
+          {
+            "file": "qumran-1qs/1qs-col-02.jpg",
+            "caption": "1QS column II (Israel Museum)"
+          },
+          {
+            "file": "qumran-1qs/1qs-col-03.jpg",
+            "caption": "1QS column III (Israel Museum)"
+          },
+          {
+            "file": "qumran-1qs/1qs-col-04.jpg",
+            "caption": "1QS column IV (Israel Museum)"
+          },
+          {
+            "file": "qumran-1qs/1qs-col-05.jpg",
+            "caption": "1QS column V (Israel Museum)"
+          },
+          {
+            "file": "qumran-1qs/1qs-col-06.jpg",
+            "caption": "1QS column VI (Israel Museum)"
+          },
+          {
+            "file": "qumran-1qs/1qs-col-07.jpg",
+            "caption": "1QS column VII (Israel Museum)"
+          },
+          {
+            "file": "qumran-1qs/1qs-col-08.jpg",
+            "caption": "1QS column VIII (Israel Museum)"
+          },
+          {
+            "file": "qumran-1qs/1qs-col-09.jpg",
+            "caption": "1QS column IX (Israel Museum)"
+          },
+          {
+            "file": "qumran-1qs/1qs-col-10.jpg",
+            "caption": "1QS column X (Israel Museum)"
+          },
+          {
+            "file": "qumran-1qs/1qs-col-11.jpg",
+            "caption": "1QS column XI (Israel Museum)"
+          }
+        ]
+      }
+    }
+  ],
+  "authors": [
+    {
+      "id": "qumran-community",
+      "name": "Qumran community (Dead Sea Scrolls)",
+      "dates": "2nd century BCE - 1st century CE",
+      "century": -1,
+      "era": "Second Temple",
+      "tradition": "jewish",
+      "language": "Hebrew",
+      "bio": "The Jewish community whose library of scrolls was found in the caves near Khirbet Qumran on the Dead Sea from 1947."
+    }
+  ]
+}
