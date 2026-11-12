@@ -1,0 +1,275 @@
+{
+  "id": "verified-manetho-dynasties-1-11-syncellus",
+  "slug": "verified-manetho-dynasties-1-11-syncellus",
+  "title": "Manetho's Dynasties I-XI (Book I), in Africanus and Eusebius (George Syncellus)",
+  "language": "Greek (Müller 1848) / English (Waddell 1940)",
+  "source": "Paris gr. 1764 (11th c.), fols. 2r-4v, via Gallica IIIF + Müller FHG II Greek (DFHG, checked against the print) + Waddell English (Loeb 1940, public domain)",
+  "description": "The first book of Manetho's king list, from Menes to the Eleventh Dynasty, in the two versions of Julius Africanus and Eusebius as copied by George Syncellus, shown on the manuscript pages of Paris gr. 1764.",
+  "introduction": "<p>Manetho's <em>Aegyptiaca</em> divided the kings of Egypt after the reigns of gods, demigods and spirits of the dead into thirty dynasties, a scheme still used by Egyptologists. Its lists survive only in epitomes: the <em>Chronographiae</em> of Julius Africanus (early 3rd century AD) and the <em>Chronicle</em> of Eusebius of Caesarea (early 4th century), both lost in Greek but quoted side by side around 810 AD by the Byzantine chronicler George Syncellus in his <em>Ecloga chronographica</em>.</p>\n\n<p>This entry gives Book I: Menes of This and the First Dynasty, the pyramid builders of the Third and Fourth Dynasties (Tosorthros, credited with building in hewn stone; Suphis, credited with the Great Pyramid), the queen Nitocris, the seventy kings of seventy days, and the Heracleopolitan and Theban houses down to Ammenemes, where Manetho's first book ended ('192 kings, 2300 years'). Each version is a separate section, in the order the manuscript gives them.</p>\n\n<p>The manuscript is Paris, Bibliothèque nationale de France, grec 1764, an 11th-century copy of Syncellus that has lost its beginning and end; the lists of Book I occupy fols. 2r-4v. The images are from the BnF microfilm. Every section names the folio(s) carrying it and the words seen there. The copy has the same order and the same displacements as Goar's and Dindorf's text: the end of Africanus' second dynasty is joined to Eusebius' second, and the end of Eusebius' second dynasty stands after Africanus' fourth.</p>",
+  "translator_notes": [
+    "Greek: C. Müller, Fragmenta Historicorum Graecorum II (Paris 1848), Manetho fragments, from the Digital FHG (DFHG, University of Leipzig) and corrected against the printed pages (archive.org fragmentahistori02mueluoft); the corrections are listed in scripts/import_manetho.py. Müller's text is a critical text based on Goar's and Dindorf's editions of Syncellus, so its spelling of names and some numbers differ from this manuscript. Müller's inline apparatus (variant readings and references in parentheses) is omitted; his square brackets (words he added or doubted) are kept.",
+    "English: W. G. Waddell, Manetho (Loeb Classical Library, 1940), as transcribed on LacusCurtius, checked against the printed Loeb (archive.org manethowithengli00maneuoft). Waddell translates his own Greek text, which follows Müller closely but not in every name and number.",
+    "Syncellus' own comment after Eusebius' sixth dynasty (on fol. 4r) is not part of Manetho and is omitted in both languages."
+  ],
+  "translation": [
+    {
+      "section": "Preface",
+      "original_ref": "Waddell fr. 6; Müller FHG II; Paris gr. 1764 fol. 2r",
+      "original_text": "Ἐπειδὴ δὲ τῶν ἀπὸ Μεστραὶμ Αἰγυπτιακῶν δυναστειῶν οἱ χρόνοι ἕως Νεκταναβῶ χρειώδεις τυγχάνουσιν ἐν πολλοῖς τοῖς περὶ τὰς χρονικὰς καταγινομένοις ζητήσεις, αὐταὶ δὲ παρὰ Μανεθῶ ληφθεῖσαι τοῖς ἐκκλησιαστικοῖς ἱστορικοῖς διαπεφωνημένως κατά τε τὰς αὐτῶν προσηγορίας καὶ τὴν ποσότητα τῶν χρόνων τῆς βασιλείας ἐκδέδονται, ἐπὶ τίνος τε αὐτῶν Ἰωσὴφ ἡγεμόνευσε τῆς Αἰγύπτου καὶ μετʼ αὐτὸν ὁ θεόπτης Μωϋσῆς τῆς τοῦ Ἰσραὴλ ἐξ Αἰγύπτου πορείας ἡγήσατο, ἀναγκαῖον ἡγησάμην δύο τῶν ἐπισημοτάτων ἐκδόσεις ἐκλέξασθαι καὶ ταύτας ἀλλήλαις παραθέσθαι, Ἀφρικανοῦ τέ φημι καὶ τοῦ μετʼ αὐτὸν Εὐσεβίου τοῦ Παμφίλου καλουμένου, ὡς ἂν τὴν ἐγγίζουσαν τῇ γραφικῇ ἀληθείᾳ δόξαν ὀρθῶς ἐπιβάλλων τις καταμάθοι, τοῦτο πρό γε πάντων εἰδὼς ἀκριβῶς, ὅτι Ἀφρικανὸς μὲν εἴκοσιν ἔτη προστίθησιν ἐν τοῖς ἀπὸ Ἀδὰμ ἕως τοῦ κατακλυσμοῦ χρόνοις, καὶ ἀντὶ ͵βσμβ' ͵βσξβ' ἔτη βούλεται εἶναι, ὅπερ οὐ δοκεῖ καλῶς ἔχειν. Εὐσέβιος δὲ ͵βσμβ' ὑγιῶς ἔθετο καὶ ὁμοφώνως τῇ γραφῇ. Ἐν δὲ τοῖς ἀπὸ τοῦ κατακλυσμοῦ ἀμφότεροι διήμαρτον ἕως τοῦ Ἀβραὰμ καὶ Μωϋσέως ἔτεσι ρλ' τοῦ δευτέρου Καϊνᾶν υἱοῦ Ἀρφαξὰδ καὶ γενεᾷ μιᾷ, τῇ ιγʹ, παρὰ τῷ θείῳ εὐαγγελιστῇ Λουκᾷ ἀπὸ Ἀδὰμ κειμένῃ. Ἀλλʼ ὁ μὲν Ἀφρικανὸς ἐν τοῖς ἀπὸ Ἀδὰμ προστεθεῖσιν αὐτῷ καὶ ἐπὶ τὸν κατακλυσμὸν ἔτεσιν κʹ προαφήρπαξε ταῦτα, καὶ ἐν τοῖς τοῦ Καϊνᾶν καὶ τῶν μετέπειτα ριʹ μόνα λείπεται. Διὸ καὶ ἕως Ἀβραὰμ πρώτου ἔτους ͵γσβ' ἔτη ἐστοιχείωσεν. Ὁ δὲ Εὐσέβιος ὁλοκλήρως τὰ ρλʹ ὑφελὼν, ͵γρπδʹ ἕως πρώτου ἔτους Ἀβραὰμ ἐξέδωκε.",
+      "text": "Since a knowledge of the periods of the Egyptian dynasties from Mestraïm down to Nectanabô is on many occasions needful to those who occupy themselves with chronological investigations, and since the dynasties taken from Manetho's <em>History</em> are set forth by ecclesiastical historians with discrepancies in respect both to the names of the kings and the length of their reigns, and also as to who was king when Joseph was governor of Egypt, and in whose reign thereafter Moses, — he who saw God, — led the Hebrews in their exodus from Egypt, I have judged it necessary to select two of the most famous recensions and to set them side by side — I mean the accounts of Africanus and of the later Eusebius, the so‑called \"son\" of Pamphilus, — so that with proper application one may apprehend the opinion which approaches nearest to Scriptural truth. It must, above all, be strictly understood that the Africanus increases by 20 years the period from Adam to the Flood, and instead of 2242 years he makes it out to be 2262 years, which appears to be incorrect. On the other hand, Eusebius keeps to the sound reckoning of 2242 years in agreement with Scripture. In regard to the period from the Flood down to Abraham and Moses, both have gone astray by 130 years belonging to the second Caïnan, son of Arphaxad, even one generation, the thirteenth, from Adam, as it is recorded by the divine evangelist Luke. But Africanus, in the 20 years which he added between Adam and the Flood, anticipated this; and in the period of Caïnan and his successors, only 110 years remain. Hence, down to the first year of Abraham he reckoned 3202 years; but Eusebius, completely omitting those 130 years, gave 3184 years as far as Abraham's first year. Dynasty I",
+      "scan_pages": [
+        "manetho/paris-gr1764-f02r.jpg"
+      ],
+      "scan_note": "Fol. 2r. Syncellus' preface to the two king lists begins below the short chapter on Noah, at the enlarged initial 'Ἐπειδὴ δὲ τῶν ἀπὸ Μεστραὶμ αἰγυπτιακῶν', and runs to 'ἕως πρώτου ἔτους Ἀβραὰμ ἐξέδωκε' in the third line from the foot of the page. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "I (Africanus)",
+      "original_ref": "Waddell fr. 6; Müller FHG II; Paris gr. 1764 fol. 2r, 2v",
+      "original_text": "Περὶ τῶν [μετὰ τὸν κατακλυσμὸν] Αἰγύπτου δυναστειῶν, ὡς ὁ Ἀφρικανός. αʹ Μετὰ νέκυας τοὺς ἡμιθέους πρώτη βασιλεία καταριθμεῖται βασιλέων ὀκτὼ, ὧν πρῶτος Μήνης Θινίτης ἐβασίλευσεν ἔτη ξβʹ· ὃς ὑπὸ ἱπποποτάμου διαρπαγεὶς διεφθάρη. βʹ Ἄθωθις υἱὸς ἔτη νζʹ, ὁ τὰ ἐν Μέμφει βασίλεια οἰκοδομήσας· οὗ φέρονται βίβλοι ἀνατομικαὶ, ἰατρὸς γὰρ ἦν. γʹ Κενκένης υἱὸς ἔτη λαʹ. δʹ Οὐενέφης υἱὸς ἔτη κγʹ· ἐφʼ οὗ λιμὸς κατέσχε τὴν Αἴγυπτον μέγας. Οὗτος τὰς περὶ Κωχώμην ἤγειρε πυραμίδας. εʹ Οὐσαφαῖδος υἱὸς ἔτη κʹ. ςʹ Μιεβιδὸς υἱὸς ἔτη κςʹ. ζʹ Σεμέμψης υἱὸς ἔτη ιηʹ· ἐφʼ οὗ φθορὰ μεγίστη κατέσχε τὴν Αἴγυπτον. ηʹ Βιηνεχὴς υἱὸς ἔτη κςʹ. Ὁμοῦ ἔτη σνγʹ. Τὰ τῆς πρώτης δυναστείας οὕτω πως καὶ Εὐσέβιος ὡς ὁ Ἀφρικανὸς ἐξέθετο.",
+      "text": "Here is the account which Africanus gives of the dynasties of Egypt [after the Flood].<br>1. In succession to the spirits of the Dead, the Demigods, — the first royal house numbers eight kings, the first of whom Mênês of This reigned for 62 years. He was carried off by a hippopotamus and perished.<br>2. Athôthis, his son, for 57 years. He built the palace at Memphis; and his anatomical works are extant, for he was a physician.<br>3. Kenkenês, his son, for 31 years.<br>4. Uenephês, his son, for 23 years. In his reign a great famine seized Egypt. He erected the pyramids near Kôchômê.<br>5. Usaphaidos, his son, for 20 years.<br>6. Miebidos, his son, for 26 years.<br>7. Semempsês, his son, for 18 years. In his reign a very great calamity befell Egypt.<br>8. Biênechês, his son, for 26 years.<br>Total, 253 years.<br>Eusebius also sets out the details of the First Dynasty in much the same way as Africanus.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f02r.jpg",
+        "manetho/paris-gr1764-f02v.jpg"
+      ],
+      "scan_note": "The heading 'Περὶ τῶν μετὰ τὸν κατακλυσμὸν Αἰγύπτου δυναστειῶν ὡς ὁ Ἀφρικανός' fills the last two lines of fol. 2r. The list begins at the top of fol. 2v 'Μετὰ νέκυας τοὺς ἡμιθέους πρώτη βασιλεία' with Menes of This, kings numbered α'-η' in the left margin, and ends 'Τὰ τῆς πρώτης δυναστείας οὕτω πως καὶ Εὐσέβιος ὡς ὁ Ἀφρικανὸς ἐξέθετο' (marginal notes beside it). Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "II (Africanus)",
+      "original_ref": "Waddell fr. 8; Müller FHG II; Paris gr. 1764 fol. 2v, 3r",
+      "original_text": "Δευτέρα δυναστεία Θινιτῶν βασιλέων ἐννέα, ὧν πρῶτος Βοηθὸς ἔτη ληʹ. Ἐφʼ οὗ χάσμα κατὰ Βούβαστον ἐγένετο καὶ ἀπώλοντο πολλοί. βʹ Καιέχως, ἔτη λθʹ. Ἐφʼ οὗ οἱ βόες Ἆπις ἐν Μέμφει καὶ Μνεῦις ἐν Ἡλιουπόλει καὶ ὁ Μενδήσιος τράγος ἐνομίσθησαν εἶναι θεοί. γʹ Βίνωθρις, ἔτη μζʹ. Ἐφʼ οὗ ἐκρίθη τὰς γυναῖκας βασιλείας γέρας ἔχειν. δʹ Τλὰς, ἔτη ιζʹ. εʹ Σεθένης, ἔτη μαʹ. ςʹ Χαίρης, ἔτη ιζʹ. ζʹ Νεφερχέρης, ἔτη κεʹ. Ἐφʼ οὗ μυθεύεται τὸν Νεῖλον μέλιτι κεκραμένον ἡμέρας ἕνδεκα ῥυῆναι. ηʹ. Σέσωχρις ἔτη μηʹ, ὃς ὕψος εἶχε πηχῶν εʹ, [παλαιστῶν] γʹ. θʹ. Χενεφρὴς, ἔτη λʹ. Ὁμοῦ ἔτη τβʹ. Ὁμοῦ πρώτης καὶ δευτέρας δυναστείας μετὰ τὸν κατακλυσμὸν ἔτη φνε' κατὰ τὴν δευτέραν ἔκδοσιν Ἀφρικανοῦ.",
+      "text": "The Second Dynasty consists of nine kings of This. The first was Boêthos, for 38 years. In his reign a chasm opened at Bubastus, and many perished.<br>2. Kaiechôs, for 39 years. In his reign the bulls, Apis at Memphis and Mnevis at Heliopolis, and the Mendesian goat were worshipped as gods.<br>3. Binôthris, for 47 years. In his reign it was decided that women might hold the kingly office.<br>4. Tlas, for 17 years.<br>5. Sethenês, for 41 years.<br>6. Chairês, for 17 years.<br>7. Nephercherês, for 25 years. In his reign, the story goes, the Nile flowed blended with honey for 11 days.<br>8. Sesôchris, for 48 years: his stature was 5 cubits 3 palms.<br>9. Chenerês, for 30 years.<br>Total, 302 years.<br>Total for the First and Second Dynasties [after the Flood], 555 years, according to the second edition of Africanus.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f02v.jpg",
+        "manetho/paris-gr1764-f03r.jpg"
+      ],
+      "scan_note": "Kings 1-7 are on fol. 2v, from 'Δευτέρα δυναστεία Θινιτῶν βασιλέων θ'' (marginal note 'οἱ βόες θεοί') to 'μέλιτι κεκραμένον ἡμέρας ια' ῥυῆναι'. Kings 8-9 (Sesochris, Cheneres) and the totals are on fol. 3r, lines 6-9, where the copyist joined them to the end of Eusebius' second dynasty: 'σέσωχρις ἔτη μη' ὃς ὕψος εἶχε πηχῶν ε'' ... 'κατὰ τὴν β' ἔκδοσιν Ἀφρικανοῦ'. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "I (Eusebius)",
+      "original_ref": "Waddell fr. 7a; Müller FHG II; Paris gr. 1764 fol. 2v, 3r",
+      "original_text": "Περὶ τῶν [μετὰ τὸν κατακλυσμὸν] Αἰγυπτίων δυναστειῶν, ὡς Εὐσέβιος. Μετὰ νέκυας καὶ τοὺς ἡμιθέους πρώτην δυναστείαν καταριθμοῦσι βασιλέων ὀκτώ· ὧν γέγονε Μήνης, ὃς διασήμως αὐτῶν ἡγήσατο. Ἀφʼ οὗ τοὺς ἐξ ἑκάστου γένους βασιλεύσαντας ἀναγράψομεν ὧν ἡ διαδοχὴ τοῦτον ἔχει τὸν τρόπον· αʹ Μήνης Θινίτης καὶ οἱ τούτου ἀπόγονοι ιζʹ (ἐν ἄλλῳ δὲ ζʹ), ὃν Ἡρόδοτος Μῆνα ὠνόμασεν, ἐβασίλευσεν ἔτεσιν ξʹ. Οὗτος ὑπερόριον στρατείαν ἐποιήσατο καὶ ἔνδοξος ἐκρίθη, ὑπὸ [ἵπου] δὲ ἱπποποτάμου ἡρπάσθη. βʹ Ἄθωθις ὁ τούτου υἱὸς ἦρξεν ἔτεσιν κζʹ, καὶ τὰ ἐν Μέμφει βασίλεια ᾠκοδόμησεν, ἰατρικήν τε ἐξήσκησε καὶ βίβλους ἀνατομικὰς συνέγραψε. γʹ Κενκένης ὁ τούτου υἱὸς ἔτη λθʹ. δʹ Οὐενέφης ἔτη μβʹ· ἐφʼ οὗ λιμὸς κατέσχε τὴν χώραν, ὃς καὶ τὰς πυραμίδας τὰς περὶ Κωχώμην εʹ Οὐσαφαὴς ἔτη κʹ. ςʹ Νιεβαὴς ἔτη κςʹ. ζʹ Σεμέμψης ἔτη ιηʹ· ἐφʼ οὗ πολλὰ παράσημα ἐγένετο καὶ μεγίστη φθορά. ηʹ Οὐβιένθης ἔτη κςʹ. Οἱ πάντες ἐβασίλευσαν ἔτη σνβʹ.",
+      "text": "Here is the account which Eusebius gives of the Egyptian dynasties [after the Flood].<br>In succession to the Spirits of the Dead and the Demigods, the Egyptians reckon the First Dynasty to consist of eight kings. Among these was Mênês, whose rule in Egypt was illustrious. I shall record the rulers of each race from the time of Mênês; their succession is as follows:<br>1. Mênês of This, with his [17, or in another copy] 7 descendants, — the king called Mên by Herodotus, — reigned for 60 years. He made a foreign expedition and won renown, but was carried off by a hippopotamus.<br>2. Athôthis, his son, ruled for 27 years. He built the palace at Memphis; he practised medicine and wrote anatomical books.<br>3. Kenkenês, his son, for 39 years.<br>4. Uenephês, for 42 years. In his reign famine seized the land. He built the pyramids near Kôchôme.<br>5. Usaphaïs, for 20 years.<br>6. Niebaïs, for 26 years.<br>7. Semempsês, for 18 years. In his reign there were many portents and a very great calamity.<br>8. Ubienthês, for 26 years.<br>The total of all reigns, 252 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f02v.jpg",
+        "manetho/paris-gr1764-f03r.jpg"
+      ],
+      "scan_note": "Fol. 2v, lower half: heading 'Περὶ τῶν μετὰ τὸν κατακλυσμὸν Αἰγυπτίων δυναστειῶν ὡς Εὐσέβιος' (marginal 'Εὐσεβίου'), then 'Μετὰ νέκυας καὶ τοὺς ἡμιθέους πρώτην δυναστείαν καταριθμοῦσι' to king η' 'Οὐβιένθης ἔτη κς'' at the foot of the page; the total 'οἱ πάντες ἐβασίλευσαν ἔτη σνβ'' opens fol. 3r. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "II (Eusebius)",
+      "original_ref": "Waddell fr. 9; Müller FHG II; Paris gr. 1764 fol. 3r",
+      "original_text": "Δευτέρα δυναστεία βασιλέων ἐννέα. Πρῶτος Βῶχος, ἐφʼ οὗ χάσμα κατὰ Βούβαστον ἐγένετο, καὶ πολλοὶ ἀπώλοντο. Μεθʼ ὃν καὶ δεύτερος Χῶος, ὅτε καὶ ὁ Ἆπις καὶ ὁ Μνεῦις, ἀλλὰ καὶ ὁ Μενδήσιος τράγος θεοὶ ἐνομίσθησαν. γʹ. Βιόφις, ἐφʼ οὗ ἐκρίθη καὶ τὰς γυναῖκας βασιλείας γέρας ἔχειν. Καὶ μετὰ τούτους ἄλλοι τρεῖς, ἐφʼ ὧν οὐδὲν παράσημον ἐγένετο. ζʹ. Ἐπὶ δὲ τοῦ ἑβδόμου μυθεύεται τὸν Νεῖλον μέλιτι κεκραμένον ἡμέραις ἕνδεκα ῥυῆναι. ηʹ. Μεθʼ ὃν Σέσωχρις μηʹ, ὃς λέγεται γεγονέναι ὕψος ἔχων πηχῶν εʹ, παλαιστῶν γʹ τὸ μέγεθος. θʹ. Ἐπὶ δὲ τοῦ θ' οὐδὲν ἀξιομνημόνευτον ὑπῆρχεν. Οἳ καὶ ἐβασίλευσαν ἔτη ͵σϟζʹ. Ὁμοῦ πρώτης καὶ δευτέρας δυναστείας ἔτη φμθ' κατὰ τὴν ἔκδοσιν Εὐσεβίου.",
+      "text": "The Second Dynasty consisted of nine kings. First came Bôchos, in whose reign a chasm opened at Bubastus, and many perished.<br>He was succeeded by Kaichôos (or Chôos), in whose time Apis and Mnevis and also the Mendesian goat were worshipped as gods.<br>3. Biophis, in whose reign it was decided that women also might hold the kingly office. In the reigns of the three succeeding kings, no notable event occurred.<br>7. In the seventh reign, as the story goes, the Nile flowed blended with honey for 11 days.<br>8. Next. Sesôchris was king for 48 years: the greatness of his stature is said to have been 5 cubits 3 palms.<br>9. In the ninth reign there happened no event worthy of mention. These kings ruled for 297 years.<br>Total for the First and Second Dynasties, 549 years, according to the recension of Eusebius.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f03r.jpg"
+      ],
+      "scan_note": "Fol. 3r. Kings 1-7 follow the total of the first dynasty on line 1: 'Δευτέρα βασιλεία βασιλέων θ'' / 'Πρῶτος Βῶχος ἐφ' οὗ χάσμα' (marginal α'), to 'μέλιτι κεκραμένον ἡμέραις ια' ῥυῆναι' on line 6. Kings 8-9 and the total stand transposed after Africanus' fourth dynasty, in the last four lines of the page: 'μεθ' ὃν Σέσωχρις ἔτη μη'' ... 'κατὰ τὴν ἔκδοσιν Εὐσεβίου' (marginal 'Εὐσεβίου'). Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "III (Africanus)",
+      "original_ref": "Waddell fr. 11; Müller FHG II; Paris gr. 1764 fol. 3r",
+      "original_text": "ΑΦΡΙΚΑΝΟΥ. Τρίτη δυναστεία Μεμφιτῶν Βασιλέων ἐννέα, αʹ ὧν Νεχερώφης ἔτη κηʹ. Ἐφʼ οὗ Λίβυες ἀπέστησαν Αἰγυπτίων καὶ τῆς σελήνης παρὰ λόγον αὐξηθείσης διὰ δέος ἑαυτοὺς παρέδοσαν. βʹ Τόσορθρος ἔτη κθʹ. Οὗτος Ἀσκληπιὸς Αἰγυπτίοις κατὰ τὴν ἰατρικὴν νενόμισται, καὶ τὴν διὰ ξεστῶν λίθων οἰκοδομίαν εὕρατο· ἀλλὰ καὶ γραφῆς ἐπεμελήθη. γʹ Τύρις ἔτη ζʹ. δʹ Μέσωχρις ἔτη ιζʹ. εʹ Σώῦφις ἔτη ιςʹ. ςʹ Τοσέρτασις ἔτη ιθʹ. ζʹ Ἄχης ἔτη μβʹ. ηʹ Σήφουρις λʹ. θʹ Κερφέρης ἔτη κςʹ. Ὁμοῦ ἔτη σιδʹ. Ὁμοῦ τῶν τριῶν δυναστειῶν κατὰ Ἀφρικανὸν ἔτη ψξθʹ.",
+      "text": "The Third Dynasty comprised nine kings of Memphis.<br>1. Necherôphês, for 28 years. In his reign the Libyans revolted against Egypt, and when the moon waxed beyond reckoning, they surrendered in terror.<br>2. Tosorthros, for 29 years. &lt;In his reign lived Imuthês,&gt; who because of his medical skill has the reputation of Asclepios among the Egyptians, and who was the inventor of the art of building with hewn stone. He also devoted attention to writing.<br>3. Tyreis (or Tyris), for 7 years.<br>4. Mesôchris, for 17 years.<br>5. Sôÿphis, for 16 years.<br>6. Tosertasis, for 19 years.<br>7. Achês, for 42 years.<br>8. Sêphuris, for 30 years.<br>9. Kerpherês, for 26 years.<br>Total, 214 years.<br>Total for the first three dynasties, according to Africanus, 769 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f03r.jpg"
+      ],
+      "scan_note": "Fol. 3r, from the line marked with a cross 'τρίτη δυναστεία Μεμφιτῶν βασιλέων θ'' to 'Ὁμοῦ τῶν τριῶν δυναστειῶν κατὰ Ἀφρικανὸν ἔτη ψξθ''. Beside it in the right margin a note on Tosorthros (building in hewn stone and writing). Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "IV (Africanus)",
+      "original_ref": "Waddell fr. 14; Müller FHG II; Paris gr. 1764 fol. 3r",
+      "original_text": "Τετάρτη δυναστεία. Μεμφιτῶν συγγενείας ἑτέρας βασιλεῖς ηʹ. αʹ Σῶρις ἔτη κθʹ. βʹ Σοῦφις ἔτη ξγʹ. Ὃς τὴν μεγίστην ἤγειρε πυραμίδα, ἥν φησιν Ἡρόδοτος ὑπὸ Χέοπος γεγονέναι. Οὗτος δὲ καὶ ὑπερόπτης εἰς θεοὺς ἐγένετο καὶ τὴν ἱερὰν συνέγραψε βίβλον, ἣν ὡς μέγα χρῆμα ἐν Αἰγύπτῳ γενόμενος ἐκτησάμην. γʹ Σοῦφις ἔτη ξςʹ. δʹ Μενχέρης ἔτη ξγʹ. εʹ Ῥατοίσης ἔτη κεʹ. ςʹ Βίχερις ἔτη κβʹ. ζʹ Σεβερχέρης ἔτη ζʹ. ηʹ Θαμφθὶς ἔτη θʹ. Ὁμοῦ ἔτη σοδʹ Ὁμοῦ τῶν δ' δυναστειῶν τῶν μετὰ τὸν κατακλυσμὸν ἔτη ͵αμςʹ κατʼ Ἀφρικανόν.",
+      "text": "The Fourth Dynasty comprised eight kings of Memphis, belonging to a different line:<br>1. Sôris, for 29 years.<br>2. Suphis [I], for 63 years. He reared the Great Pyramid, which Herodotus says was built by Cheops. Suphis conceived a contempt for the gods: he also composed the Sacred Book, which I acquired in my visit to Egypt because of its high renown.<br>3. Suphis [II], for 66 years.<br>4. Mencherês, for 63 years.<br>5. Ratoisês, for 25 years.<br>6. Bicheris, for 22 years.<br>7. Sebercherês, for 7 years.<br>8. Thamphthis, for 9 years.<br>Total, 277 years.<br>Total for the first four dynasties [after the Flood], 1046 years according to Africanus.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f03r.jpg"
+      ],
+      "scan_note": "Fol. 3r, from the line marked with a cross 'τετάρτη δυναστεία Μεμφιτῶν συγγενείας ἑτέρας βασιλεῖς η'' to 'τῶν μετὰ τὸν κατακλυσμὸν ἔτη ,αμς'' (marginal 'κατὰ Ἀφρικανόν'). The copy writes the total of the dynasty as σοζ' (277). Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "III (Eusebius)",
+      "original_ref": "Waddell fr. 12a; Müller FHG II; Paris gr. 1764 fol. 3v",
+      "original_text": "Τρίτη δυναστεία Μεμφιτῶν βασιλέων ὀκτώ, αʹ Νεχέρωχις, ἐφʼ οὗ Λίβυες ἀπέστησαν Αἰγυπτίων, καὶ τῆς σελήνης παρὰ λόγον αὐξηθείσης διὰ δέος ἑαυτοὺς παρέδοσαν. βʹ. Μεθʼ ὃν Σέσορθος, ὃς Ἀσκληπιὸς παρὰ Αἰγυπτίοις ἐκλήθη διὰ τὴν ἰατρικήν. Οὗτος καὶ τὴν διὰ ξεστῶν λίθων οἰκοδομὴν εὕρατο, ἀλλὰ καὶ γραφῆς ἐπεμελήθη. Οἱ δὲ λοιποὶ ἓξ οὐδὲν ἀξιομνημόνευτον ἔπραξαν. Οἳ καὶ ἐβασίλευσαν ἔτεσιν ρϟηʹ. Ὁμοῦ τῶν τριῶν δυναστειῶν κατὰ τὸν Εὐσέβιον ἔτη ψμζʹ.",
+      "text": "The Third Dynasty consisted of eight kings of Memphis:<br>1. Necherôchis, in whose reign the Libyans revolted against Egypt, and when the moon waxed beyond reckoning, they surrendered in terror.<br>2. He was succeeded by Sesorthos . . . : he was styled Asclepios in Egypt because of his medical skill. He was also the inventor of the art of building with hewn stone, and devoted attention to writing as well.<br>The remaining six kings achieved nothing worthy of mention. These eight kings reigned for 198 years.<br>Total for the first three dynasties, according to Eusebius, 747 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f03v.jpg"
+      ],
+      "scan_note": "Fol. 3v, top: 'τρίτη δυναστεία Μεμφιτῶν βασιλέων η'' (with a cross) to 'Ὁμοῦ τῶν γ' δυναστειῶν κατὰ τὸν Εὐσέβιον ἔτη ψμζ''. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "IV (Eusebius)",
+      "original_ref": "Waddell fr. 15; Müller FHG II; Paris gr. 1764 fol. 3v",
+      "original_text": "Τετάρτη δυναστεία βασιλέων ιζʹ Μεμφιτῶν συγγενείας ἑτέρας βασιλείας. Ὧν τρίτος Σοῦφις, ὁ τὴν μεγίστην πυραμίδα ἐγείρας, ἥν φησιν Ἡρόδοτος ὑπὸ Χέοπος γεγονέναι, ὃς καὶ ὑπερόπτης εἰς θεοὺς γέγονεν, ὡς μετανοήσαντα αὐτὸν τὴν ἱερὰν συγγράψαι βίβλον, ἣν ὡς μέγα χρῆμα Αἰγύπτιοι περιέπουσι. Τῶν δὲ λοιπῶν οὐδὲν ἀξιομνημόνευτον ἀνεγράφη. Οἳ καὶ ἐβασίλευσαν ἔτεσιν υμηʹ. Ὁμοῦ τῶν δ' δυναστειῶν μετὰ τὸν κατακλυσμὸν ͵αρϟεʹ κατὰ Εὐσέβιον.",
+      "text": "The Fourth Dynasty comprised seventeen kings of Memphis belonging to a different royal line.<br>Of these the third was Suphis, the builder of the Great Pyramid, which Herodotus says was built by Cheops. Suphis conceived a contempt for the gods, but repenting of this, he composed the Sacred Book, which the Egyptians hold in high esteem.<br>Of the remaining kings no achievement worthy of mention has been recorded.<br>This dynasty reigned for 448 years.<br>Total for the first four dynasties [after the Flood], 1195 years according to Eusebius.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f03v.jpg"
+      ],
+      "scan_note": "Fol. 3v: 'τετάρτη δυναστεία βασιλέων ιζ' Μεμφιτῶν συγγενείας ἑτέρας βασιλείας', then 'Ὧν τρίτος Σοῦφις' (enlarged initial) to 'Ὁμοῦ τῶν δ' δυναστειῶν μετὰ τὸν κατακλυσμὸν ,αρϟε' κατ' Εὐσέβιον'. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "V (Africanus)",
+      "original_ref": "Waddell fr. 18; Müller FHG II; Paris gr. 1764 fol. 3v",
+      "original_text": "Πέμπτη δυναστεία βασιλέων ηʹ ἐξ Ἐλεφαντίνης. αʹ Οὐσερχέρης ἔτη κηʹ. βʹ Σεφρὴς ἔτη ιγʹ. γʹ Νεφερχέρης ἔτη κʹ. εʹ Χείρης ἔτη κʹ. δʹ Σισίρης ἔτη ζʹ. ςʹ Ῥαθούρης ἔτη μδʹ. ζʹ Μενχέρης ἔτη θʹ. ηʹ Τανχέρης ἔτη μδʹ. θʹ Ὄννος ἔτη λγʹ. Ὁμοῦ ἔτη σμηʹ. Γίνονται σὺν τοῖς προτεταγμένοις ͵αμςʹ ἔτεσι τῶν τεσσάρων δυναστειῶν ἔτη ͵ασϟδʹ.",
+      "text": "The Fifth Dynasty was composed of eight kings of Elephantine:<br>1. Usercherês, for 28 years.<br>2. Sephrês, for 13 years.<br>3. Nephercherês, for 20 years.<br>4. Sisirês, for 7 years.<br>5. Cherês, for 20 years.<br>6. Rathurês, for 44 years.<br>7. Mencherês, for 9 years.<br>8. Tancherês (? Tatcherês), for 44 years.<br>9. Onnus, for 33 years.<br>Total, 248 years.<br>Along with the aforementioned 1046 years of the first four dynasties, this amounts to 1294 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f03v.jpg"
+      ],
+      "scan_note": "Fol. 3v, middle: 'κατὰ Ἀφρικανὸν ε' δυναστεία βασιλέων η' ἐξ Ἐλεφαντίνης', the nine kings written three to a line, to 'ἔτη ,ασϟδ''. The copy has Ὄβνος for Onnos. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "VI (Africanus)",
+      "original_ref": "Waddell fr. 20; Müller FHG II; Paris gr. 1764 fol. 3v",
+      "original_text": "Ἕκτη δυναστεία βασιλέων ἓξ Μεμφιτῶν. αʹ Ὀθόης ἔτη λʹ, ὃς ὑπὸ τῶν δορυφόρων ἀνῃρέθη. βʹ Φιὸς ἔτη νγʹ. γʹ Μεθουσοῦφις ἔτη ζʹ. δʹ Φίωψ, ἑξαέτης ἀρξάμενος βασιλεύειν διεγένετο μέχρι ἐτῶν ρʹ. εʹ Μενθεσοῦφις ἔτος ἕν. ϛʹ Νίτωκρις, γεννικωτάτη καὶ εὐμορφοτάτη τῶν κατ' αὐτὴν γενομένη, ξανθὴ τὴν χροιὰν, ἣ τὴν τρίτην ἤγειρε πυραμίδα, ἐβασίλευσεν ἔτη ιβʹ. Ὁμοῦ ἔτη σγʹ. Γίνονται σὺν τοῖς προτεταγμένοις, ͵ασϟδʹ τῶν εʹ δυναστειῶν ἔτη ͵αυϟζʹ.",
+      "text": "The Sixth Dynasty consisted of six kings of Memphis:<br>1. Othoês, for 30 years: he was murdered by his bodyguard.<br>2. Phius, for 53 years.<br>3. Methusuphis, for 7 years.<br>4. Phiôps, who began to reign at the age of six, and continued until his hundredth year.<br>5. Menthesuphis, for 1 year.<br>6. Nitôcris, the noblest and loveliest of the women of her time, of fair complexion, the builder of the third pyramid, reigned for 12 years.<br>Total, 203 years. Along with the aforementioned 1294 years of the first five dynasties, this amounts to 1497 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f03v.jpg"
+      ],
+      "scan_note": "Fol. 3v: 'ἕκτη δυναστεία βασιλέων ἓξ Μεμφιτῶν' (same line as the end of the fifth) to 'τῶν ε' δυναστειῶν ἔτη ,αυϟζ'', with Nitocris at numeral ς' in the left margin. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "VII (Africanus)",
+      "original_ref": "Waddell fr. 23; Müller FHG II; Paris gr. 1764 fol. 3v",
+      "original_text": "Ἑβδόμη δυναστεία Μεμφιτῶν βασιλέων οʹ, οἳ ἐβασίλευσαν ἡμέρας οʹ.",
+      "text": "The Seventh Dynasty consisted of seventy kings of Memphis, who reigned for 70 days.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f03v.jpg"
+      ],
+      "scan_note": "Fol. 3v, second and third lines from the foot: 'ἑβδόμη δυναστεία Μεμφιτῶν βασιλέων ο' οἳ ἐβασίλευσαν ἡμέρας ο''. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "VIII (Africanus)",
+      "original_ref": "Waddell fr. 25; Müller FHG II; Paris gr. 1764 fol. 3v, 4r",
+      "original_text": "Ὀγδόη δυναστεία Μεμφιτῶν βασιλέων κζʹ, οἳ ἐβασίλευσαν ἔτη ρμϛʹ. Γίνονται σὺν τοῖς προτεταγμένοις ἔτη ͵αχλθʹ τῶν ὀκτὼ δυναστειῶν.",
+      "text": "The Eighth Dynasty consisted of twenty-seven kings of Memphis, who reigned for 146 years. Along with the aforementioned reigns, this amounts to 1639 years for the first eight dynasties.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f03v.jpg",
+        "manetho/paris-gr1764-f04r.jpg"
+      ],
+      "scan_note": "The heading 'ὀγδόη δυναστεία Μεμφιτῶν βασιλέων κζ'' (with a cross) is the last line of fol. 3v; the reign and running total 'οἳ ἐβασίλευσαν ἔτη ρμς' γίνονται σὺν τοῖς προτεταγμένοις ἔτη ,αχλθ' τῶν η' δυναστειῶν' are the first two lines of fol. 4r. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "V (Eusebius)",
+      "original_ref": "Waddell fr. 19; Müller FHG II; Paris gr. 1764 fol. 4r",
+      "original_text": "Πέμπτη δυναστεία βασιλέων τριάκοντα ἑνὸς ἐξ Ἐλεφαντίνης. Ὧν πρῶτος Ὀθόης. Οὗτος ὑπὸ τῶν δορυφόρων ἀνῃρέθη. Ὁ δὲ δ' Φίωψ ἑξαέτης ἀρξάμενος ἐβασίλευσε μέχρις ἐτῶν ἑκατόν. Γίνονται οὖν σὺν τοῖς προτεταγμένοις ͵αρϟεʹ ἔτεσι τῶν τεσσάρων δυναστειῶν ͵ασϟεʹ.",
+      "text": "The Fifth Dynasty consisted of thirty‑one kings of Elephantine. Of these the first was Othoês, who was murdered by his bodyguard.<br>The fourth king, Phiôps, succeeding when six years old, reigned until his hundredth year. Thus, along with the aforementioned 1195 years of the first four dynasties, this amounts to 1295 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f04r.jpg"
+      ],
+      "scan_note": "Fol. 4r, lines 3-7: 'κατὰ Εὐσέβιον ε' δυναστεία βασιλέων τριάκοντα ἑνὸς ἐξ Ἐλεφαντίνης' (in capitals, with a cross), 'ὧν πρῶτος Ὀθόης' to ',ασϟε''. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "VI (Eusebius)",
+      "original_ref": "Waddell fr. 21; Müller FHG II; Paris gr. 1764 fol. 4r",
+      "original_text": "Ἕκτη δυναστεία. Γυνὴ Νίτωκρις ἐβασίλευσε τῶν κατʼ αὐτὴν γεννικωτάτη καὶ εὐμορφοτάτη, ξανθή τε τὴν χροιὰν ὑπάρξασα, ἣ καὶ λέγεται τὴν τρίτην πυραμίδα ᾠκοδομηκέναι. Οἳ καὶ ἐβασίλευσαν ἔτη τρία· ἐν ἄλλῳ σγʹ. Γίνονται σὺν τοῖς προτεταγμένοις ͵ασϟεʹ τῶν πέντε δυναστειῶν ἔτη, ͵αυϟηʹ.",
+      "text": "The Sixth Dynasty.<br>There was a queen Nitôcris, the noblest and loveliest of the women of her time; she had a fair complexion, and is said to have built the third pyramid.<br>These rulers (or this ruler) reigned for three years: in another copy, 203 years. Along with the aforementioned 1295 years of the first five dynasties, this amounts to 1498 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f04r.jpg"
+      ],
+      "scan_note": "Fol. 4r: heading 'ἕκτη δυναστεία' in capitals, then 'Γυνὴ Νίτωκρις ἐβασίλευσε' to 'τῶν πέντε δυναστειῶν ἔτη ,αυϟη''. Syncellus' remark that follows on the page ('σημειωτέον ὁπόσον Εὐσέβιος Ἀφρικανοῦ λείπεται ἀκριβείας', three lines) is not given here. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "VII (Eusebius)",
+      "original_ref": "Waddell fr. 24a; Müller FHG II; Paris gr. 1764 fol. 4r",
+      "original_text": "Ἑβδόμη δυναστεία Μεμφιτῶν βασιλέων πέντε, οἳ ἐβασίλευσαν ἡμέρας οεʹ.",
+      "text": "The Seventh Dynasty consisted of five kings of Memphis, who reigned for 75 days.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f04r.jpg"
+      ],
+      "scan_note": "Fol. 4r: 'ἑβδόμη δυναστεία Μεμφιτῶν βασιλέων ε' οἳ ἐβασίλευσαν ἡμέρας οε'' (two lines, with a cross). Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "VIII (Eusebius)",
+      "original_ref": "Waddell fr. 25a; Müller FHG II; Paris gr. 1764 fol. 4r",
+      "original_text": "Ὀγδόη δυναστεία Μεμφιτῶν βασιλέων πέντε, οἳ ἐβασίλευσαν ἔτη ἑκατόν. Γίνονται σὺν τοῖς προτεταγμένοις ἔτη ͵αφϟηʹ τῶν ὀκτὼ δυναστειῶν.",
+      "text": "The Eighth Dynasty consisted of five kings of Memphis, who reigned for 100 years. Along with the aforementioned reigns, this amounts to 1598 years for the first eight dynasties.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f04r.jpg"
+      ],
+      "scan_note": "Fol. 4r: 'ὀγδόη δυναστεία Μεμφιτῶν βασιλέων ε' οἳ ἐβασίλευσαν ἔτη ρ'' (with a large cross) and the line 'γίνονται σὺν τοῖς προτεταγμένοις ἔτη ,αφϟη' τῶν ὀκτὼ δυναστειῶν', to which the copyist joined 'κατὰ Ἀφρικανόν', the heading of what follows. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "IX (Africanus)",
+      "original_ref": "Waddell fr. 27; Müller FHG II; Paris gr. 1764 fol. 4r",
+      "original_text": "Ἐνάτη δυναστεία Ἡρακλεοπολιτῶν βασιλέων ιθʹ, οἳ ἐβασίλευσαν ἔτη υθʹ· ὧν ὁ πρῶτος Ἀχθόης, δεινότατος τῶν πρὸ αὐτοῦ γενόμενος τοῖς ἐν πάσῃ Αἰγύπτῳ κακὰ εἰργάσατο, ὕστερον δὲ μανίᾳ περιέπεσε καὶ ὑπὸ κροκοδείλου διεφθάρη.",
+      "text": "The Ninth Dynasty consisted of nineteen kings of Hêracleopolis, who reigned for 409 years. The first of these, King Achthoês, behaving more cruelly than his predecessors, wrought woes for the people of all Egypt, but afterwards he was smitten with madness, and was killed by a crocodile.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f04r.jpg"
+      ],
+      "scan_note": "Fol. 4r: 'ἐννάτη δυναστεία Ἡρακλεοπολιτῶν βασιλέων ιθ' οἳ ἐβασίλευσαν ἔτη υθ'', then 'ὧν πρῶτος Ἀχθόης' to 'ὑπὸ κροκοδείλου διεφθάρη'. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "X (Africanus)",
+      "original_ref": "Waddell fr. 29; Müller FHG II; Paris gr. 1764 fol. 4r",
+      "original_text": "Δεκάτη δυναστεία Ἡρακλεοπολιτῶν βασιλέων ιθʹ, οἳ ἐβασίλευσαν ἔτη ρπεʹ.",
+      "text": "The Tenth Dynasty consisted of nineteen kings of Hêracleopolis, who reigned for 185 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f04r.jpg"
+      ],
+      "scan_note": "Fol. 4r: 'δεκάτη δυναστεία Ἡρακλεοπολιτῶν βασιλέων ιθ' οἳ ἐβασίλευσαν ἔτη ρπε'' (two lines, with a cross). Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XI (Africanus)",
+      "original_ref": "Waddell fr. 31; Müller FHG II; Paris gr. 1764 fol. 4r, 4v",
+      "original_text": "Ἑνδεκάτη δυναστεία Διοσπολιτῶν βασιλέων ιςʹ, οἳ ἐβασίλευσαν ἔτη μγʹ. Μεθʼ οὓς Ἀμμενέμης ἔτη, ιςʹ. Μέχρι τοῦδε τὸν πρῶτον τόμον καταγήοχε Μανεθῶ. Ὁμοῦ βασιλεῖς ρϟβʹ, ἔτη, ͵βτʹ, ἡμέραι οʹ.",
+      "text": "The Eleventh Dynasty consisted of sixteen kings of Diospolis [or Thebes], who reigned for 43 years. In succession to these, Ammenemês ruled for 16 years.<br>Here ends the First Book of Manetho.<br>Total for the reigns of 192 kings, 2300 years 70 days.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f04r.jpg",
+        "manetho/paris-gr1764-f04v.jpg"
+      ],
+      "scan_note": "The last four lines of fol. 4r: 'ἑνδεκάτη δυναστεία Διοσπολιτῶν βασιλέων ις'' ... 'μέχρι τοῦδε τὸν πρῶτον τόμον κατάγει ὁ Μανεθῶ'; the total 'ὁμοῦ βασιλεῖς ρϟβ' ἔτη ,βτ' ἡμέραι ο'' is the first line of fol. 4v. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "IX (Eusebius)",
+      "original_ref": "Waddell fr. 28; Müller FHG II; Paris gr. 1764 fol. 4v",
+      "original_text": "Ἐνάτη δυναστεία Ἡρακλεοπολιτῶν βασιλέων τεσσάρων, οἳ ἐβασίλευσαν ἔτη ἑκατόν. Ὧν πρῶτος Ἀχθώης, δεινότατος τῶν πρὸ αὐτοῦ γενόμενος, τοῖς ἐν πάσῃ Αἰγύπτῳ κακὰ εἰργάσατο, ὕστερον δὲ μανίᾳ περιέπεσε καὶ ὑπὸ κροκοδείλου διεφθάρη.",
+      "text": "The Ninth Dynasty consisted of four kings of Hêracleopolis, who reigned for 100 years. The first of these, King Achthôês, behaving more cruelly than his predecessors, wrought woes for the people of all Egypt, but afterwards he was smitten with madness, and was killed by a crocodile.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f04v.jpg"
+      ],
+      "scan_note": "Fol. 4v, after the heading 'κατ' Εὐσέβιον': 'ἐννάτη δυναστεία Ἡρακλεοπολιτῶν βασιλέων τεσσάρων οἳ ἐβασίλευσαν ἔτη ρ'' (enlarged initial), 'ὧν πρῶτος Ἀχθώης' to 'ὑπὸ κροκοδείλου διεφθάρη'. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "X (Eusebius)",
+      "original_ref": "Waddell fr. 30; Müller FHG II; Paris gr. 1764 fol. 4v",
+      "original_text": "Δεκάτη δυναστεία Ἡρακλεοπολιτῶν βασιλέων ιθʹ, οἳ ἐβασίλευσαν ἔτη ρπεʹ.",
+      "text": "The Tenth Dynasty consisted of nineteen kings of Hêracleopolis, who reigned for 185 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f04v.jpg"
+      ],
+      "scan_note": "Fol. 4v: 'δεκάτη δυναστεία Ἡρακλεοπολιτῶν βασιλέων ιθ' οἳ ἐβασίλευσαν ἔτη ρπε''. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XI (Eusebius)",
+      "original_ref": "Waddell fr. 32; Müller FHG II; Paris gr. 1764 fol. 4v",
+      "original_text": "Ἑνδεκάτη δυναστεία Διοσπολιτῶν βασιλέων ιςʹ, οἳ ἐβασίλευσαν ἔτη μγʹ. Μεθʼ οὒς Ἀμμεμένης ἔτη ιςʹ. Μέχρι τοῦδε τὸν πρῶτον τόμον καταγήοχεν ὁ Μανεθῶ. Ὁμοῦ βασιλεῖς ρϟβʹ, ἔτη, ͵βτʹ, ἡμέραι οθʹ",
+      "text": "The Eleventh Dynasty consisted of sixteen kings of Diospolis [or Thebes], who reigned for 43 years. In succession to these, Ammenemês ruled for 16 years.<br>Here ends the First Book of Manetho.<br>Total for the reigns of 192 kings, 2300 years 79 days.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f04v.jpg"
+      ],
+      "scan_note": "Fol. 4v: 'ἑνδεκάτη δυναστεία Διοσπολιτῶν βασιλέων ις' οἳ ἐβασίλευσαν ἔτη μγ'' ... 'μέχρι τοῦ α' τόμου κατάγει ὁ Μανεθῶ' and 'ὁμοῦ βασιλεῖς ρϟβ' ἔτη ,βτ' ἡμέραι οθ''. Below it begins 'δευτέρου τόμου Μανεθῶ' (Book II). Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    }
+  ],
+  "verification": {
+    "scan_source": "Bibliothèque nationale de France, Gallica, Grec 1764 (https://gallica.bnf.fr/ark:/12148/btv1b10722002s), IIIF images 6-9 (fols. 2r-4v), single pages cropped from the microfilm openings",
+    "scan_license": "Bibliothèque nationale de France, Gallica: non-commercial reuse permitted with the credit 'Source gallica.bnf.fr / BnF' (Gallica terms of use); images made from the BnF microfilm",
+    "scan_manuscript": "Paris, BnF, grec 1764, parchment, 143 fols., 11th century, George Syncellus, Ecloga chronographica (acephalous; from Istanbul, bought 1687)",
+    "scan_mapping": "Read on the page images: each dynasty list located on its folio by its heading and opening words, recorded in the section notes",
+    "scan_mapping_urls": [
+      "https://gallica.bnf.fr/ark:/12148/btv1b10722002s",
+      "https://archivesetmanuscrits.bnf.fr/ark:/12148/cc21908z"
+    ],
+    "scan_local_paths": [
+      "manetho/paris-gr1764-f02r.jpg",
+      "manetho/paris-gr1764-f02v.jpg",
+      "manetho/paris-gr1764-f03r.jpg",
+      "manetho/paris-gr1764-f03v.jpg",
+      "manetho/paris-gr1764-f04r.jpg",
+      "manetho/paris-gr1764-f04v.jpg"
+    ],
+    "original_text_source": "C. Müller, FHG II (1848) pp. 539-557, via DFHG (http://www.dfhg-project.org/DFHG/api.php?author=MANETHO%20SEBENNYTA), corrected against the print (https://archive.org/details/fragmentahistori02mueluoft)",
+    "original_text_license": "edition public domain (1848); DFHG digital text CC BY-NC-SA 4.0 (as stated on dfhg-project.org)",
+    "translation_source": "W. G. Waddell, Manetho (Loeb Classical Library 350, 1940), LacusCurtius transcription https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Manetho/home.html, checked against https://archive.org/details/manethowithengli00maneuoft",
+    "translation_license": "public domain in the US: 1940 copyright not renewed (no renewal for Waddell or Manetho in the Copyright Office renewal records for 1966-1969, NYPL CCE renewals data; LacusCurtius states the same); translator died 1945",
+    "translator": "W. G. Waddell (1940)",
+    "verified_date": "2026-11-12"
+  }
+}

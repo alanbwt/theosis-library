@@ -317,6 +317,186 @@ def build_josephus(force):
     return entry, row
 
 
+# A2. Josephus, Against Apion 1.227-251 (Manetho on Osarseph and the lepers), Laur. Plut. 69.22 fols. 16r-18r
+WHISTON_FIXES_OSARSEPH = [
+    # e-text slips corrected against the printed 1860 Whiston (archive.org worksofflaviusjo00jose_0, pp. 642-643)
+    ("according to Manethe, amounted", "according to Manetho, amounted"),
+    ("Sethos east the other out", "Sethos cast the other out"),
+    ("When Manethe therefore", "When Manetho therefore"),
+    ("Manethe adds, how", "Manetho adds, how"),
+    ("priests of Hellopolis", "priests of Heliopolis"),
+    ("by birth of Hellopolls", "by birth of Heliopolis"),
+    ("the god of Hellopolls", "the god of Heliopolis"),
+    ("walls about their City", "walls about their city"),
+    ("land by Tefilmosis", "land by Tethmosis"),
+    ("with the utmost care he also sent", "with the utmost care. He also sent"),
+    ("his son Ahampses", "his son Rhampses"),
+]
+WHISTON_STARTS_OSARSEPH = {
+    227: "And now I will turn my discourse to one of their principal writers,",
+    228: "He promised to interpret the Egyptian history",
+    229: "but after this he permits himself,",
+    230: "for he mentions Amenophis, a fictitious king's name,",
+    231: "for Tethmosis was king when they went away.",
+    232: "When Manetho therefore had acknowledged",
+    233: "Manetho adds, how this namesake",
+    234: "that the king was pleased with this injunction,",
+    235: "whom he sent to those quarries",
+    236: "but that still this Amenophis, the wise man",
+    237: "After which he writes thus verbatim:",
+    238: "But when these men were gotten into it,",
+    239: "He then, in the first place, made this law",
+    240: "When he had made such laws as these,",
+    241: "while he did himself take into his friendship",
+    242: "He also promised that he would, in the first place,",
+    243: "These shepherds were all very glad",
+    244: "and, in the first place, he assembled the multitude",
+    245: "He also sent his son Sethos,",
+    246: "but thinking that would be to fight against the gods,",
+    247: "on which account he received him,",
+    248: "And this was the state of things in Ethiopia.",
+    249: "for they did not only set the cities",
+    250: "It was also reported that the priest,",
+    251: "This is what the Egyptians relate",
+}
+
+
+def whiston_split_osarseph():
+    eng = perseus_sections(SRC / "tlg0526.tlg003.perseus-eng2.xml")
+    text = re.sub(r"\s+", " ", eng[227] + " " + eng[251])
+    text = text.split(" These and the like accounts are written by Manetho.", 1)[0]
+    for old, new in WHISTON_FIXES_OSARSEPH:
+        assert text.count(old) == 1, old
+        text = text.replace(old, new)
+    pos = {}
+    for n, start in WHISTON_STARTS_OSARSEPH.items():
+        assert text.count(start) == 1, (n, start, text.count(start))
+        pos[n] = text.index(start)
+    keys = sorted(pos)
+    assert [pos[k] for k in keys] == sorted(pos.values()), "cut points out of order"
+    out = {}
+    for i, n in enumerate(keys):
+        end = pos[keys[i + 1]] if i + 1 < len(keys) else len(text)
+        out[n] = text[pos[n]:end].strip()
+    assert out[251].endswith("to the bounds of Syria."), out[251][-80:]
+    return out
+
+
+SECTIONS_OSARSEPH = [
+    ("1.227-228", range(227, 229), ["16r"],
+     "Fol. 16r, lines 25-34. 1.227 begins at the end of line 25 'ἐφ' ἑνὸς' / line 26 'δὲ πρώτου στήσω τὸν λόγον'; 1.228 begins in "
+     "line 27 'ὁ γὰρ Μανεθὼς οὗτος ὁ τὴν Αἰγυπτιακὴν ἱστορίαν' and ends in line 34 'ἠκολούθησε ταῖς ἀναγραφαῖς'."),
+    ("1.229", [229], ["16r", "16v"],
+     "1.229 straddles the page break: it begins at the end of fol. 16r line 34 'ἔπειτα δὲ δοὺς ἐξουσίαν αὑτῷ' and continues on fol. 16v "
+     "lines 1-4 'διὰ τοῦ φάναι γράψειν τὰ μυθευόμενα ...' to 'φυγεῖν ἐκ τῆς Αἰγύπτου καταγνωσθέντων'."),
+    ("1.230-235", range(230, 236), ["16v"],
+     "Fol. 16v (34 lines). 1.230 begins at the end of line 4 'Ἀμένωφιν' / line 5 'γὰρ βασιλέα προσθεὶς ψευδὲς ὄνομα'; 1.231 line 10 "
+     "'Τέθμωσις γὰρ ἦν βασιλεύς'; 1.232 line 15 'τοσούτοις οὖν πρότερον'; 1.233 line 22 'εἰπεῖν οὖν αὐτῷ'; 1.234 line 24 'ἡσθέντα δὲ "
+     "τὸν βασιλέα'; 1.235 line 26 (enlarged initial at the line start 'γενέσθαι δὲ τοῦ πλήθους μυριάδας ὀκτώ', then 'καὶ τούτους εἰς τὰς "
+     "λιθοτομίας'), ending line 30 'λέπρᾳ συγκεχυμένους'. In line 15 the manuscript writes Rhampses' years as ξς'."),
+    ("1.236", [236], ["16v", "17r"],
+     "1.236 straddles the page break: fol. 16v lines 30-34 'τὸν δὲ Ἀμένωφιν ἐκεῖνον τὸν σοφὸν καὶ μαντικὸν ἄνδρα' to 'μὴ τολμῆσαι μὲν "
+     "αὐτὸν εἰπεῖν ταῦτα τῷ βασιλεῖ'; fol. 17r lines 1-2 'γραφὴν δὲ καταλιπόντα περὶ πάντων ἑαυτὸν ἀνελεῖν' to 'ἐν ἀθυμίᾳ δὲ εἶναι τὸν "
+     "βασιλέα'."),
+    ("1.237-244", range(237, 245), ["17r"],
+     "Fol. 17r (34 lines). Manetho's verbatim quotation begins in line 2 'κἄπειτα κατὰ λέξιν οὕτως γέγραφεν· τῶν δ' ἐν ταῖς λατομίαις' "
+     "and from here every line is marked with a stroke in the left margin. 1.238 line 7 'οἱ δὲ εἰς ταύτην εἰσελθόντες'; 1.239 line 10 'ὁ δὲ "
+     "πρῶτον μὲν αὐτοῖς νόμον ἔθετο'; 1.240 line 14 'τοιαῦτα δὲ νομοθετήσας'; 1.241 line 17 'αὐτὸς δὲ προσλαβόμενος'; 1.242 line 22 "
+     "'ἐπάξειν μὲν οὖν αὐτούς'; 1.243 line 26 'οἱ δὲ ὑπερχαρεῖς γενόμενοι'; 1.244 line 30 'καὶ πρότερον συναγαγών', ending line 34 'συγκρύψαι "
+     "τὰ ξόανα'. The manuscript has the words Niese brackets in 1.237 (πρὸς), 1.238 (εἰς) and 1.244 (πρῶτα), and spells the leader's "
+     "name Ὀσάρσιφον in line 9."),
+    ("1.245-250", range(245, 251), ["17v"],
+     "Fol. 17v, lines 1-29, all marked as quotation. 1.245 begins line 1 'τὸν δὲ υἱὸν Σέθω τὸν καὶ Ῥαμεσσῆ'; 1.246 line 5 'ἀλλὰ μέλλειν "
+     "θεομαχεῖν'; 1.247 at the end of line 9 'ὃς' / line 10 'ὑποδεξάμενος'; 1.248 line 16 'καὶ τὰ μὲν κατὰ τὴν Αἰθιοπίαν'; 1.249 line 21 "
+     "(enlarged initial) 'καὶ γὰρ οὐ μόνον πόλεις'; 1.250 line 26 'λέγεται δὲ ὅτι τὴν πολιτείαν', ending line 29 'καὶ προσηγορεύθη Μωϋσῆς'."),
+    ("1.251", [251], ["17v", "18r"],
+     "1.251 straddles the page break: Josephus' own words begin on fol. 17v line 30 with an enlarged initial 'ἃ μὲν οὖν Αἰγύπτιοι φέρουσι', "
+     "then 'λέγει δὲ ὁ Μανεθὼν πάλιν' (line 31) to the end of the page; the passage ends on fol. 18r lines 1-3 'ποιμέσι καὶ τοῖς μιαροῖς "
+     "ἐνίκησαν αὐτούς' to 'ἄχρι τῶν ὁρίων τῆς Συρίας'. Line 3 continues with 1.252 'ταῦτα μὲν καὶ τὰ τοιαῦτα Μανεθὼν συνέγραψεν'."),
+]
+
+
+def build_josephus_osarseph(force):
+    grc = perseus_sections(SRC / "tlg0526.tlg003.perseus-grc2.xml")
+    grc[231] = grc[231].replace("ξ[στιγμα]", "ξϛ")
+    assert "[στιγμα]" not in " ".join(grc[n] for n in range(227, 252))
+    eng = whiston_split_osarseph()
+    secs = []
+    for sid, rng, folios, note in SECTIONS_OSARSEPH:
+        rng = list(rng)
+        pages = [laur_scan(f, force) for f in folios]
+        secs.append({
+            "section": sid,
+            "original_ref": f"Josephus, Against Apion {sid}; Laur. Plut. 69.22, fol. {', '.join(folios)}",
+            "original_text": " ".join(f"<sup>{n}</sup>{grc[n]}" for n in rng),
+            "text": " ".join(f"<sup>{n}</sup>{eng[n]}" for n in rng),
+            "scan_pages": pages,
+            "scan_note": note + f" Viewer: {LAUR_VIEWER} . Greek shown is Niese's critical text; the copyist's spelling differs in small details.",
+        })
+    tid = PREFIX + "osarseph-josephus-apion-1-227-251"
+    local = sorted({p for s in secs for p in s["scan_pages"]})
+    entry = {
+        "id": tid, "slug": tid,
+        "title": "Manetho on Osarseph and the Lepers (Josephus, Against Apion 1.227-251)",
+        "language": "Greek (Niese 1889) / English (Whiston 1737)",
+        "source": "Laur. Plut. 69.22 (10th c.), fols. 16r-18r, via BML Teca Digitale IIIF + Niese Greek (Perseus) + Whiston English (Perseus, checked against the 1860 printing)",
+        "description": "Manetho's story of King Amenophis, the lepers sent to the quarries, the priest Osarseph who led them in revolt from Avaris "
+                       "and was later called Moses, and the thirteen years of their rule, as quoted by Josephus in Against Apion 1.227-251.",
+        "introduction": (
+            "<p>After quoting Manetho on the Hyksos (Against Apion 1.73-105, a separate entry), Josephus returns to him in 1.227-251 to refute a "
+            "second story, which he says Manetho took 'from tales of uncertain origin' rather than from the temple records. In it a king "
+            "Amenophis wishes to see the gods, as his predecessor Or (Horus) had done; his namesake the seer Amenophis son of Paapis tells him "
+            "to purge Egypt of lepers and other polluted people. Eighty thousand are sent to the stone quarries east of the Nile, and are then "
+            "given the empty Hyksos city of Avaris. There they choose as leader a priest of Heliopolis, Osarseph, who gives them laws against "
+            "the Egyptian gods and sacred animals, and calls in the shepherds from Jerusalem. Amenophis withdraws to Ethiopia with the sacred "
+            "animals for the thirteen years the seer had foretold, while the invaders burn towns and temples. At the end Manetho says that "
+            "Osarseph changed his name to Moses, and that Amenophis and his son returned and drove the invaders to the borders of Syria.</p>\n\n"
+            "<p>Historians read the story as a late Egyptian tradition shaped by memories of the Hyksos, of the religious upheaval of the "
+            "Amarna period, and of later foreign rule; it is one of the oldest surviving hostile accounts of the Exodus. Josephus quotes part of "
+            "it word for word (from 1.237) and summarises the rest.</p>\n\n"
+            "<p>The manuscript is Florence, Biblioteca Medicea Laurenziana, Plut. 69.22, a 10th-century copy of <em>Against Apion</em>. The "
+            "passage runs from fol. 16r to the top of fol. 18r. Each section covers the Niese sections on one page, and sections that run "
+            "across a page break show both pages. Every section start was read on the page image and is recorded with its line number; from "
+            "1.237 the copyist marks the quoted words with strokes in the margin. The entry stops at 1.251, where Josephus ends his report of "
+            "Manetho; his refutation follows.</p>"
+        ),
+        "translator_notes": [
+            "Greek: Benedikt Niese, Flavii Iosephi opera vol. 5 (Berlin 1889), Perseus canonical-greekLit tlg0526.tlg003.perseus-grc2; "
+            "the stigma numeral in 1.231, encoded in the Perseus file as '[στιγμα]', is printed as ϛ.",
+            "English: William Whiston (1737), Perseus tlg0526.tlg003.perseus-eng2, footnotes omitted, divided at the sentences that render each "
+            "Niese section. Eleven digitization slips were corrected against the printed 1860 Whiston (archive.org worksofflaviusjo00jose_0, "
+            "pp. 642-643): 'Manethe' (three times) to 'Manetho', 'east' to 'cast', 'Hellopolis/Hellopolls' (three times) to 'Heliopolis', "
+            "'City' to 'city', 'Tefilmosis' to 'Tethmosis', a lost full stop before 'He also sent', and 'Ahampses' to 'Rhampses'.",
+            "Whiston's square brackets ('[out of his sagacity about futurities,]') are his own.",
+        ],
+        "translation": secs,
+        "verification": {
+            "scan_source": f"Biblioteca Medicea Laurenziana, Teca Digitale (IIIF manifest https://tecabml.contentdm.oclc.org/iiif/info/plutei/1350351/manifest.json), Plut. 69.22 fols. 16r, 16v, 17r, 17v, 18r; viewer {LAUR_VIEWER}",
+            "scan_license": "Biblioteca Medicea Laurenziana, Florence, on concession of the Italian Ministry of Culture; access listed as 'Pubblico'; reproduced for non-commercial scholarly use with credit (any other use requires the library's permission)",
+            "scan_manuscript": "Florence, BML, Plut. 69.22, parchment, 155 x 210 mm, 37 fols., 10th century, Josephus, Contra Apionem (ex San Marco, Niccolò Niccoli)",
+            "scan_mapping": "Read on the page images: for each page the first and last lines and the start of every Niese section were located and recorded with line numbers in the section notes (1.227 begins fol. 16r line 25; 1.251 ends fol. 18r line 3)",
+            "scan_mapping_urls": [LAUR_VIEWER, "https://pinakes.irht.cnrs.fr/notices/cote/16549/"],
+            "scan_local_paths": local,
+            "original_text_source": "Benedikt Niese, Flavii Iosephi opera vol. 5 (1889), Perseus canonical-greekLit tlg0526.tlg003.perseus-grc2, https://github.com/PerseusDL/canonical-greekLit/tree/master/data/tlg0526/tlg003",
+            "original_text_license": "edition public domain; Perseus digital text CC BY-SA 4.0",
+            "translation_source": "William Whiston, The Works of Flavius Josephus (1737), Perseus tlg0526.tlg003.perseus-eng2 (Alden and Beardsley 1856 printing), checked against the 1860 printing at https://archive.org/details/worksofflaviusjo00jose_0",
+            "translation_license": "public domain (published 1737); Perseus digital text CC BY-SA 4.0",
+            "translator": "William Whiston (1737)",
+            "verified_date": TODAY,
+        },
+    }
+    row = {
+        "id": tid, "slug": tid, "title": entry["title"], "author_id": "manetho", "language": "Greek",
+        "era": "Hellenistic", "tradition": "egyptian", "category": "history",
+        "date_approx": "c. 280 BCE (Manetho); quoted by Josephus c. 95 AD; manuscript 10th c.", "century": -3,
+        "source": entry["source"], "description": entry["description"],
+        "themes": ["manetho", "osarseph", "moses", "exodus", "lepers", "avaris", "amenophis", "josephus", "greek", "verified"],
+        "is_first_translation": False, "status": "published",
+        "scans": {"pages": [{"file": p, "caption": "Laur. Plut. 69.22 fol. " + p.split("-f")[-1].replace(".jpg", "").lstrip("0")} for p in local]},
+    }
+    return entry, row
+
+
 # ---------------------------------------------------------------------------
 # B. Manetho's king lists in George Syncellus (Paris gr. 1711 and Paris gr. 1764)
 # ---------------------------------------------------------------------------
@@ -422,6 +602,15 @@ DFHG_FIXES = {
     66: [("δυναστείαν", "δυναστεία"), ("ᾖσαν", "ἦσαν"), ("Θοίνικες", "Φοίνικες"), ("οἲ καὶ Μέμφιν", "οἳ καὶ Μέμφιν"),
          ("ἀφʹ οὗ καὶ δ Σαΐτης", "ἀφʼ οὗ καὶ ὁ Σαΐτης"), ("οἲ καὶ ἐν", "οἳ καὶ ἐν"), ("Βʹ βνῶν", "βʹ Βνῶν"),
          ("Μεφ ̓ ὃν Ἄρχλησἔτη", "Μεθʼ ὃν Ἄρχλης ἔτη")],
+    71: [("δυναστείανΔιοσπολιτῶν Βασιλέων", "δυναστεία Διοσπολιτῶν βασιλέων"), ("Ἀμὼς, ἐφ", "Ἀμώς, ἐφ"), ("ἐξῆλοεν", "ἐξῆλθεν"),
+         ("Μισφραγμούθωσις ἔτη κδ', ἐφ οὗ", "Μισφραγμούθωσις ἔτη κςʹ, ἐφʼ οὗ"),
+         ("ιβʹ. Χεβρὴς ἔτη ιβʹ. ιβʹ. Χεβρὴς ἔτη ιβʹ.", "ιβʹ. Χεβρὴς ἔτη ιβʹ."), ("ιδ ̓.", "ιδʹ.")],
+    72: [("ἀπ ̓ Ἀμώσεως", "ἀπʼ Ἀμώσεως"), ("εἰναι νομιζόμενος", "εἶναι νομιζόμενος"), ("Ὦροςἔτη", "Ὦρος ἔτη"),
+         ("(ἐν ἄλλῳ ληʹ, rectius; in latinis Euseb. 28: corrupte)", "(ἐν ἄλλῳ ληʹ)"),
+         ("[ἔτη ιβʹ.] Ἄθωρις ἔτη λθʹ (leg. θʹ). Κενχέρης]", "[ἔτη ιβʹ. Ἄθωρις ἔτη λθʹ (leg. θʹ). Κενχέρης]"),
+         ("(Addit Syncell.: Μόνος", "⟨Addit Syncell.: Μόνος"), ("ὡς μαρτυρεῖ.)", "ὡς μαρτυρεῖ.⟩"),
+         ("δʹ Ἀμμένωφις", "ιδʹ Ἀμμένωφις"), ("Εὐσίβιος", "Εὐσέβιος"), ("ἀντὶ αξγ'", "ἀντὶ σξγʹ"),
+         ("παρ ̓ Ἀφρικανῷ", "παρʼ Ἀφρικανῷ"), ("Ἰουδαίων ἠγήσατο", "Ἰουδαίων ἡγήσατο")],
     75: [("ὉμήρΠω", "Ὁμήρῳ"), ("δʹ Ῥαμεσσῆς ἔτη ξʹ. ςʹ Θούωρις", "δʹ Ῥαμεσσῆς ἔτη ξʹ. εʹ Ἀμμενεμνῆς ἔτη εʹ. ςʹ Θούωρις")],
     76: [("γʹ Ἀμμενεφοὴς ἔτη μʹ. δʹ Ἀμμενέμης ἔτη κςʹ. εʹ Θούωρις, ὁπαρ ̓ Ὁμήρῳ",
           "γʹ Ἀμμενεφθὴς ἔτη μʹ. δʹ Ἀμμενέμης ἔτη κςʹ. εʹ Θούωρις, ὁ παρʼ Ὁμήρῳ καλούμενος Πόλυβος, Ἀλκάνδρας ἀνὴρ, "
@@ -855,6 +1044,32 @@ def build_syncellus_book3(force):
     return entry, row
 
 
+def xviii_parts():
+    """Dynasty XVIII: Müller prints each version as one composite of three passages of Syncellus.
+    Split them at the passage boundaries (shown separately in the print, FHG II pp. 575, 577-578)
+    and pair each piece with the matching paragraphs of Waddell fr. 52 and 53 (a)."""
+    a = dfhg(71)
+    a1, rest = a.split(" Δεύτερος κατὰ Ἀφρικανὸν", 1)
+    a2, a3 = ("Δεύτερος κατὰ Ἀφρικανὸν" + rest).split(" ζʹ. Τούθμωσις", 1)
+    a3 = "ζʹ. Τούθμωσις" + a3
+    e = dfhg(72).replace("⟨", "(").replace("⟩", ")")
+    main, remark = e.split(" Eadem Syncellus dixit p. 62, C: ", 1)
+    e1, rest = main.split(" βʹ Χεβρὼν", 1)
+    e2, e3 = ("βʹ Χεβρὼν" + rest).split(" ϛʹ Τούθμωσις", 1)
+    e3 = "ϛʹ Τούθμωσις" + e3
+    wa = waddell("book2.html", "Fragment_52")
+    we = waddell("book2.html", "Fragment_53a")
+    assert wa[2].startswith("The second king") and wa[8].startswith("7. Tuthmôsis"), wa
+    assert we[2].startswith("2. The second") and we[7].startswith("6. Tuthmôsis"), we
+    last, syn = we[-1].split(" (Syncellus elsewhere says:", 1)
+    syn = "(Syncellus elsewhere says:" + syn
+    return {
+        "a1": (a1, wa[0:2]), "a2": (a2, wa[2:8]), "a3": (a3, wa[8:]),
+        "e1": (e1 + "<br>" + remark + ".", we[0:2] + [syn]),
+        "e2": (e2, we[2:7]), "e3": (e3, we[7:-1] + [last]),
+    }
+
+
 # Book II, dynasties XII-XVII: Paris gr. 1764 fols. 4v-5r.
 SYN_BOOK2A = [
     ("XII (Africanus)", 48, "Fragment_34", ["4v"],
@@ -897,11 +1112,43 @@ SYN_BOOK2A = [
      "Σαΐτης' to 'τρίτος Ἄφωφις ἔτη ιδ' μεθ' ὃν Ἄρχλης ἔτη λ' ὁμοῦ ἔτη ργ'' and 'κατὰ τούτους Αἰγυπτίων βασιλεὺς Ἰωσὴφ δείκνυται'. "
      "The page writes 'τρίτος' in full where Müller prints [γ']. Syncellus' comment that follows ('Σημειωτέον πῶς ὁ Εὐσέβιος ...') is "
      "not given here."),
+    ("XVIII (Africanus) 1", "a1", "Fragment_52", ["5v"],
+     "Fol. 5v, lines 3-5. After Syncellus' remarks on the seventeenth dynasty, line 3 begins with an enlarged initial "
+     "'Ὀκτωκαιδεκάτη δυναστεία Διοσπολιτῶν βασιλέων ις'', then 'ὧν πρῶτος Ἀμώς, ἐφ' οὗ Μωϋσῆς ἐξῆλθεν ἐξ Αἰγύπτου ...' to 'ἐπὶ τούτου "
+     "τὸν Μωσέα συμβαίνει νέον ἔτι ὄντα'. A marginal note beside it reads 'πότε Μωϋσῆς ἐξῆλθεν ἐξ Αἰγύπτου'. Syncellus gives only the first "
+     "king here; kings 2-6 are on fol. 9r and kings 7-16 on fol. 10r."),
+    ("XVIII (Eusebius) 1", "e1", "Fragment_53a", ["5v", "9r"],
+     "Fol. 5v, lines 6-8: enlarged initial 'Ὀκτωκαιδεκάτη δυναστεία Διοσπολιτῶν βασιλέων ιδ'· ὧν πρῶτος Ἄμωσις ἔτη κε'', followed by "
+     "Syncellus' remark 'Εὐσέβιος δύο βασιλεῖς περιέκρυψεν, ἔτη δὲ προσέθηκε πε', τμη' παραθεὶς ἀντὶ σξγ' τῶν παρὰ Ἀφρικανῷ'. "
+     "The heading and first king are written again on fol. 9r, lines 3-4: '+ Κατὰ Εὐσέβιον ιη' δυναστεία Διοσπολιτῶν βασιλέων ιδ'' "
+     "(capitals, marginal 'Εὐσέβιος') and 'ὧν πρῶτος Ἄμωσις ἔτη κε'', after which Syncellus' own discussion of Aphophis and Joseph "
+     "fills the next eight lines."),
+    ("XVIII (Africanus) 2", "a2", "Fragment_52", ["9r"],
+     "Fol. 9r, lower middle: below the line marked with a cross '+ Οἱ λοιποὶ βασιλεῖς Αἰγύπτου τῆς ιη' δυναστείας μετὰ τὸν / πρῶτον "
+     "παρὰ Ἀφρικανῷ Ἄμωσιν' (Syncellus' heading, not in Müller), the next six lines: 'Δεύτερος κατὰ Ἀφρικανὸν κατὰ τὴν ιη' δυναστείαν "
+     "ἐβασίλευσε Χεβρὼς ἔτη ιγ'', 'τρίτος Ἀμενωφθὶς ἔτη κδ'', 'τέταρτος Ἀμενσὶς ἔτη κβ'', 'πέμπτος Μίσαφρις ἔτη ιγ'', 'ἕκτος "
+     "Μισφραγμούθωσις ἔτη κς' ἐφ' οὗ ὁ ἐπὶ Δευκαλίωνος κατακλυσμός' to 'τοῦ γὰρ Ἀμὼς οὐδ' ὅλως εἶπεν ἔτη', with marginal numerals β', γ', ε'."),
+    ("XVIII (Eusebius) 2", "e2", "Fragment_53a", ["10r"],
+     "Fol. 10r, lines 1-7: '+ Οἱ λοιποὶ βασιλεῖς Αἰγύπτου τῆς ιη' δυναστείας μετὰ τὸν / πρῶτον παρ' Εὐσεβίῳ Ἄμωσιν' (Syncellus' "
+     "heading), then 'β' Χεβρὼν δεύτερος ἔτη ιγ'· γ' Ἀμμενῶφις ἔτη κα'· δ' Μίφρης ἔτη ιβ'· ε' Μισφραγμούθωσις ἔτη κς'' and the "
+     "total 'ὁμοῦ ἀπὸ Ἀμώσεως ... ἔτη γίνονται οα'' to 'ἔτη κβ' αὐτοῦ ἐκολόβωσεν'."),
+    ("XVIII (Africanus) 3", "a3", "Fragment_52", ["10r"],
+     "Fol. 10r, lines 8-14: '+ Οἱ λοιποὶ τῆς ιη' δυναστείας μετὰ τὸν Μισφραγμούθωσιν κατὰ / Ἀφρικανὸν οὕτως' (Syncellus' "
+     "heading), then 'ζ' Τούθμωσις ἔτη θ'· η' Ἀμένωφις ἔτη λα'· οὗτός ἐστιν ὁ Μέμνων ...' to 'ις' Ἀμενωφὰθ ἔτη ιθ'' and "
+     "'ὁμοῦ ἔτη σξγ'' at the start of line 14."),
     ("XIX (Africanus)", 75, "Fragment_55", ["10r"],
      "Fol. 10r, lower half, beginning on the line that ends Africanus' eighteenth dynasty ('ὁμοῦ ἔτη σξγ''): 'Ἐννεακαιδεκάτη δυναστεία "
      "βασιλέων ζ' / Διοσπολιτῶν· α' Σέθως ἔτη να'· β' Ῥαψάκης ...', with ε' Ἀμμενεμνῆς and 'ς' Θούωρις ὁ παρ' Ὁμήρῳ καλούμενος Πόλυβος, "
      "ζ' Ἀλκάνδρας ἀνήρ', to 'ὁμοῦ ἔτη σθ'' and the line 'ἐπὶ τοῦ αὐτοῦ δευτέρου τόμου Μανεθῶ βασιλεῖς ϟς' ἔτη ,βρκα''. The closing "
      "words 'ἔτη ,βρκα'' (2121 years), which Waddell translates, are on the page but stand in Müller's note, not in his text."),
+    ("XVIII (Eusebius) 3", "e3", "Fragment_53a", ["10r", "10v"],
+     "Fol. 10r, lower half, after the nineteenth dynasty of Africanus: 'Οἱ λοιποὶ τῆς ιη' δυναστείας μετὰ τὸν Μισφραγμούθωσιν "
+     "κατὰ Εὐσέβιον οὕτως' (capitals), then 'ς' Τούθμωσις ἔτη θ'' (marginal ζ'), the Memnon note, 'Ὦρος ἔτη λς' ἐν ἄλλῳ λη'', "
+     "'Ἀχενχέρσης ἔτη ις' κατὰ τοῦτον Μωϋσῆς τῆς ἐξ Αἰγύπτου πορείας τῶν Ἰουδαίων ἡγήσατο', Syncellus' remark 'μόνος Εὐσέβιος ...', "
+     "the kings to Armais (Danaus) at the foot of the page; the end ('κρατήσας τε τοῦ Ἄργους ...', Ramesses-Aegyptus, Ammenophis, "
+     "'ὁμοῦ ἔτη τμη'' and 'προσέθηκεν ὑπὲρ τὸν Ἀφρικανὸν ἔτη πε'') is fol. 10v lines 1-3. This copy does not have the words "
+     "Müller puts in square brackets after Achencherses ('ἔτη ιβ'. Ἄθωρις ἔτη λθ'. Κενχέρης'), and the marginal numerals of the "
+     "last kings differ from Müller's."),
     ("XIX (Eusebius)", 76, "Fragment_56a", ["10v"],
      "Fol. 10v, lines 4-8, after the end of Eusebius' eighteenth dynasty: '+ Ἐννεακαιδεκάτη δυναστεία βασιλέων ε' Διοσπολιτῶν', "
      "'α' Σέθως ἔτη νε'' (marginal α', δ', ς') to 'ε' Θούωρις ὁ παρ' Ὁμήρῳ καλούμενος Πόλυβος Ἀλκάνδρας ἀνήρ ...', 'ὁμοῦ ἔτη ρϟδ'' and "
@@ -911,13 +1158,17 @@ SYN_BOOK2A = [
 
 def build_syncellus_book2a(force):
     secs = []
+    parts = xviii_parts()
     for sid, idx, wid, folios, note in SYN_BOOK2A:
-        paras = waddell("book2.html", wid)
+        if isinstance(idx, str):
+            greek, paras = parts[idx]
+        else:
+            greek, paras = dfhg(idx), waddell("book2.html", wid)
         pages = [scan_B(f, force) for f in folios]
         secs.append({
             "section": sid,
             "original_ref": f"Waddell fr. {wid.split('_')[1]}; Müller FHG II; Paris gr. 1764 fol. {', '.join(folios)}",
-            "original_text": dfhg(idx),
+            "original_text": greek,
             "text": w_html(paras),
             "scan_pages": pages,
             "scan_note": note + f" Checked on the image (Gallica {B_VIEWER}).",
@@ -930,11 +1181,12 @@ def build_syncellus_book2a(force):
                 local.append(p)
     entry = {
         "id": tid, "slug": tid,
-        "title": "Manetho's Dynasties XII-XVII and XIX (Book II): Sesostris, the Shepherd Kings and the Fall of Troy, in Africanus and Eusebius (George Syncellus)",
+        "title": "Manetho's Dynasties XII-XIX (Book II): Sesostris, the Shepherd Kings, the Exodus and the Fall of Troy, in Africanus and Eusebius (George Syncellus)",
         "language": "Greek (Müller 1848) / English (Waddell 1940)",
-        "source": "Paris gr. 1764 (11th c.), fols. 4v-5r and 10r-10v, via Gallica IIIF + Müller FHG II Greek (DFHG, checked against the print) + Waddell English (Loeb 1940, public domain)",
+        "source": "Paris gr. 1764 (11th c.), fols. 4v-5v and 9r-10v, via Gallica IIIF + Müller FHG II Greek (DFHG, checked against the print) + Waddell English (Loeb 1940, public domain)",
         "description": "The start of Manetho's second book: the Twelfth Dynasty with Sesostris, conqueror of Asia, and the builder of the Labyrinth, "
-                       "the Thirteenth to Seventeenth Dynasties with the Shepherd Kings (Hyksos), and the Nineteenth Dynasty, ending with Thuoris, "
+                       "the Thirteenth to Seventeenth Dynasties with the Shepherd Kings (Hyksos), the Eighteenth Dynasty with Amosis and the Exodus, and the "
+                       "Nineteenth Dynasty, ending with Thuoris, "
                        "in whose reign Troy was taken, in the versions of Africanus and Eusebius, on the manuscript pages of Paris gr. 1764.",
         "introduction": (
             "<p>Manetho's second book began with the Twelfth Dynasty of Diospolis (Thebes). Its third king, Sesostris, is credited with "
@@ -944,23 +1196,30 @@ def build_syncellus_book2a(force):
             "them in the Fifteenth Dynasty, Eusebius in the Seventeenth, adding that Joseph ruled Egypt in their time. Josephus' longer "
             "quotation of Manetho on the same people is a separate entry in this collection.</p>\n\n"
             "<p>The lists come from the epitomes of Julius Africanus and Eusebius as copied by George Syncellus about 810 AD. The manuscript "
-            "is Paris, Bibliothèque nationale de France, grec 1764 (11th century), fols. 4v-5r and 10r-10v, from the BnF microfilm. In this "
+            "is Paris, Bibliothèque nationale de France, grec 1764 (11th century), fols. 4v-5v and 9r-10v, from the BnF microfilm. In this "
             "copy Africanus' Twelfth Dynasty stands directly after his first book, before the Eusebian list; the printed editions place it later. "
-            "The book closes with the Nineteenth Dynasty, whose last king Thuoris Manetho equates with Polybus, husband of Alcandra in the "
-            "Odyssey, 'in whose reign Troy was taken'.</p>\n\n"
-            "<p>Gap: the Eighteenth Dynasty is not included. Syncellus breaks both versions of it into pieces and spreads them, with his own "
-            "arguments about Joseph and Moses, over fols. 5v, 9r and 10r-10v of this manuscript; those pieces have not yet been mapped line by line.</p>"
+            "Syncellus breaks both versions of the Eighteenth Dynasty into three pieces each (the first king on fol. 5v; the next kings on "
+            "fols. 9r and 10r; the rest on fols. 10r-10v), between his own arguments about the dates of Joseph and Moses: Africanus places the "
+            "Exodus under Amos, Eusebius under Achencherses. The sections follow the order of the pieces on the pages. The book closes with the "
+            "Nineteenth Dynasty, whose last king Thuoris Manetho equates with Polybus, husband of Alcandra in the Odyssey, 'in whose reign Troy "
+            "was taken'.</p>"
         ),
-        "translator_notes": SYN_TR_NOTES,
+        "translator_notes": SYN_TR_NOTES + [
+            "Dynasty XVIII: Müller prints each version as one continuous list made from three passages of Syncellus; here each passage is "
+            "a separate section on its own page. Syncellus' short headings that introduce the second and third passages ('Οἱ λοιποὶ "
+            "βασιλεῖς ...') are not in Müller's text and are given only in the section notes. His remark that Eusebius left out two kings "
+            "is printed by Müller after the list and translated by Waddell in parentheses; it stands on fol. 5v and is given with the first "
+            "Eusebian section.",
+        ],
         "translation": secs,
         "verification": {
-            "scan_source": f"Bibliothèque nationale de France, Gallica, Grec 1764 ({B_VIEWER}), IIIF images 9 (fols. 4v, 5r), 14 (fol. 10r) and 15 (fol. 10v), single pages cropped from the microfilm openings",
+            "scan_source": f"Bibliothèque nationale de France, Gallica, Grec 1764 ({B_VIEWER}), IIIF images 9 (fols. 4v, 5r), 10 (fol. 5v), 13 (fol. 9r), 14 (fol. 10r) and 15 (fol. 10v), single pages cropped from the microfilm openings",
             "scan_license": GALLICA_LICENSE,
             "scan_manuscript": "Paris, BnF, grec 1764, parchment, 143 fols., 11th century, George Syncellus, Ecloga chronographica (acephalous; from Istanbul, bought 1687)",
             "scan_mapping": "Read on the page images: each dynasty located by its heading and opening words and recorded with line numbers in the section notes",
             "scan_mapping_urls": [B_VIEWER, "https://archivesetmanuscrits.bnf.fr/ark:/12148/cc21908z"],
             "scan_local_paths": local,
-            "original_text_source": f"C. Müller, FHG II (1848) pp. 560-570 and 581, via DFHG (http://www.dfhg-project.org/DFHG/api.php?author=MANETHO%20SEBENNYTA), corrected against the print ({FHG_ARCHIVE})",
+            "original_text_source": f"C. Müller, FHG II (1848) pp. 560-570, 575-578 and 581, via DFHG (http://www.dfhg-project.org/DFHG/api.php?author=MANETHO%20SEBENNYTA), corrected against the print ({FHG_ARCHIVE})",
             "original_text_license": "edition public domain (1848); DFHG digital text CC BY-NC-SA 4.0 (as stated on dfhg-project.org)",
             "translation_source": f"W. G. Waddell, Manetho (Loeb Classical Library 350, 1940), LacusCurtius transcription {WADDELL_URL}, checked against {WADDELL_SCAN}",
             "translation_license": "public domain in the US: 1940 copyright not renewed (no renewal for Waddell or Manetho in the Copyright Office renewal records for 1966-1969, NYPL CCE renewals data; LacusCurtius states the same); translator died 1945",
@@ -973,7 +1232,7 @@ def build_syncellus_book2a(force):
         "era": "Hellenistic", "tradition": "egyptian", "category": "history",
         "date_approx": "c. 280 BCE (Manetho); epitomes 3rd-4th c. AD; Syncellus c. 810 AD; manuscript 11th c.", "century": -3,
         "source": entry["source"], "description": entry["description"],
-        "themes": ["manetho", "egypt", "dynasties", "pharaohs", "sesostris", "labyrinth", "hyksos", "shepherd-kings", "troy", "syncellus", "king-list", "greek", "verified"],
+        "themes": ["manetho", "egypt", "dynasties", "pharaohs", "sesostris", "labyrinth", "hyksos", "shepherd-kings", "exodus", "moses", "troy", "syncellus", "king-list", "greek", "verified"],
         "is_first_translation": False, "status": "published",
         "scans": {"pages": [{"file": p, "caption": "Paris gr. 1764 fol. " + p.split("-f")[-1].replace(".jpg", "").lstrip("0")} for p in local]},
     }
@@ -1084,6 +1343,7 @@ def main():
     built.append((20, *build_syncellus_book1(args.force)))
     built.append((30, *build_syncellus_book2a(args.force)))
     built.append((50, *build_josephus(args.force)))
+    built.append((55, *build_josephus_osarseph(args.force)))
     built.append((60, *build_syncellus_book3(args.force)))
 
     rows = []

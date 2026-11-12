@@ -1,0 +1,243 @@
+{
+  "id": "verified-manetho-dynasties-12-19-syncellus",
+  "slug": "verified-manetho-dynasties-12-19-syncellus",
+  "title": "Manetho's Dynasties XII-XIX (Book II): Sesostris, the Shepherd Kings, the Exodus and the Fall of Troy, in Africanus and Eusebius (George Syncellus)",
+  "language": "Greek (Müller 1848) / English (Waddell 1940)",
+  "source": "Paris gr. 1764 (11th c.), fols. 4v-5v and 9r-10v, via Gallica IIIF + Müller FHG II Greek (DFHG, checked against the print) + Waddell English (Loeb 1940, public domain)",
+  "description": "The start of Manetho's second book: the Twelfth Dynasty with Sesostris, conqueror of Asia, and the builder of the Labyrinth, the Thirteenth to Seventeenth Dynasties with the Shepherd Kings (Hyksos), the Eighteenth Dynasty with Amosis and the Exodus, and the Nineteenth Dynasty, ending with Thuoris, in whose reign Troy was taken, in the versions of Africanus and Eusebius, on the manuscript pages of Paris gr. 1764.",
+  "introduction": "<p>Manetho's second book began with the Twelfth Dynasty of Diospolis (Thebes). Its third king, Sesostris, is credited with conquering Asia and Europe as far as Thrace in nine years and setting up pillars in every land; his successor Lachares (or Lamaris) built the Labyrinth in the Arsinoite nome as his tomb. Then come the long dynasties of the Middle Kingdom and the Second Intermediate Period, and the Shepherd Kings (the Hyksos), foreigners from Phoenicia who took Memphis. Africanus puts them in the Fifteenth Dynasty, Eusebius in the Seventeenth, adding that Joseph ruled Egypt in their time. Josephus' longer quotation of Manetho on the same people is a separate entry in this collection.</p>\n\n<p>The lists come from the epitomes of Julius Africanus and Eusebius as copied by George Syncellus about 810 AD. The manuscript is Paris, Bibliothèque nationale de France, grec 1764 (11th century), fols. 4v-5v and 9r-10v, from the BnF microfilm. In this copy Africanus' Twelfth Dynasty stands directly after his first book, before the Eusebian list; the printed editions place it later. Syncellus breaks both versions of the Eighteenth Dynasty into three pieces each (the first king on fol. 5v; the next kings on fols. 9r and 10r; the rest on fols. 10r-10v), between his own arguments about the dates of Joseph and Moses: Africanus places the Exodus under Amos, Eusebius under Achencherses. The sections follow the order of the pieces on the pages. The book closes with the Nineteenth Dynasty, whose last king Thuoris Manetho equates with Polybus, husband of Alcandra in the Odyssey, 'in whose reign Troy was taken'.</p>",
+  "translator_notes": [
+    "Greek: C. Müller, Fragmenta Historicorum Graecorum II (Paris 1848), Manetho fragments, from the Digital FHG (DFHG, University of Leipzig) and corrected against the printed pages (archive.org fragmentahistori02mueluoft); the corrections are listed in scripts/import_manetho.py. Müller's text is a critical text based on Goar's and Dindorf's editions of Syncellus, so its spelling of names and some numbers differ from this manuscript. Müller's inline apparatus (variant readings and references in parentheses) is omitted; his square brackets (words he added or doubted) are kept.",
+    "English: W. G. Waddell, Manetho (Loeb Classical Library, 1940), as transcribed on LacusCurtius, checked against the printed Loeb (archive.org manethowithengli00maneuoft). Waddell translates his own Greek text, which follows Müller closely but not in every name and number.",
+    "Dynasty XVIII: Müller prints each version as one continuous list made from three passages of Syncellus; here each passage is a separate section on its own page. Syncellus' short headings that introduce the second and third passages ('Οἱ λοιποὶ βασιλεῖς ...') are not in Müller's text and are given only in the section notes. His remark that Eusebius left out two kings is printed by Müller after the list and translated by Waddell in parentheses; it stands on fol. 5v and is given with the first Eusebian section."
+  ],
+  "translation": [
+    {
+      "section": "XII (Africanus)",
+      "original_ref": "Waddell fr. 34; Müller FHG II; Paris gr. 1764 fol. 4v",
+      "original_text": "Δευτέρου τόμου Μανεθῶ. Δωδεκάτη δυναστεία Διοσπολιτῶν βασιλέων ἑπτά. αʹ Σεσόγχοσις Ἀμμανέμου υἱὸς ἔτη μςʹ. βʹ Ἀμμανέμης ἔτη ληʹ, ὃς ὑπὸ τῶν ἰδίων εὐνούχων ἀνῃρέθη. γ' Σέσωστρις ἔτη μηʹ, ὃς ἅπασαν ἐχειρώσατο τὴν Ἀσίαν ἐν ἐνιαυτοῖς ἐννέα, καὶ τῆς Εὐρώπης τὰ μέχρι Θρᾴκης, πανταχόσε μνημόσυνα ἐγείρας τῆς τῶν ἐθνῶν σχέσεως ἐπὶ μὲν τοῖς γενναίοις ἀνδρῶν, ἐπὶ δὲ τοῖς ἀγεννέσι γυναικῶν μόρια ταῖς στήλαις ἐγχαράσσων, ὡς ὑπὸ Αἰγυπτίων μετὰ Ὄσιριν πρῶτον νομισθῆναι. δ' Λαχάρης ἔτη ηʹ, ὃς τὸν ἐν Ἀρσινοΐτῃ λαβύρινθον ἑαυτῷ τάφον κατεσκεύασε. εʹ Ἀμερὴς ἔτη ηʹ. ςʹ Ἀμενέμης ἔτη ηʹ. ζʹ Σκεμίοφρις, ἀδελφή, ἔτη δʹ. Ὁμοῦ ἔτη ρξʹ.",
+      "text": "From the Second Book of Manetho.<br>The Twelfth Dynasty consisted of seven kings of Diospolis.<br>1. Sesonchosis, son of Ammanemês, for 46 years.<br>2. Ammanemês, for 38 years: he was murdered by his own eunuchs.<br>3. Sesôstris, for 48 years: in nine years he subdued the whole of Asia, and Europe as far as Thrace, everywhere erecting memorials of his conquest of the tribes. Upon <em>stelae</em> [pillars] he engraved for a valiant race the secret parts of a man, for an ignoble race those of a woman. Accordingly he was esteemed by the Egyptians as the next in rank to Osiris.<br>4. Lacharês (Lamarês), for 8 years: he built the Labyrinth in the Arsinoïte nome as his own tomb.<br>5. Amerês, for 8 years.<br>6. Ammenemês, for 8 years.<br>7. Scemiophris, his sister, for 4 years.<br>Total, 160 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f04v.jpg"
+      ],
+      "scan_note": "Fol. 4v, lines 2-10, directly after the total of Africanus' first book: '+ Δευτέρου τόμου Μανεθῶ· Δωδεκάτη δυ/ναστεία Διοσπολιτῶν βασι(λέων) ζ'', then 'Σεσόγχοσις Ἀμμανέμου υἱὸς ἔτη μς'' (marginal α'), Sesostris' conquests, Lachares and the labyrinth, to 'ζ' Σκεμίοφρις ἀδελφὴ ἔτη δ' ὁμοῦ ἔτη ρξ''. Goar and Müller print this list later in Syncellus (Goar p. 69); in this manuscript it stands here, before the heading 'κατ' Εὐσέβιον'. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XII (Eusebius)",
+      "original_ref": "Waddell fr. 35; Müller FHG II; Paris gr. 1764 fol. 4v, 5r",
+      "original_text": "Δωδεκάτη δυναστεία Διοσπολιτῶν βασιλέων ἑπτά. Ὧν ὁ πρῶτος Σεσόγχωσις Ἀμμενέμου υἱὸς ἔτη μςʹ. βʹ Ἀμμανέμης ἔτη ληʹ, ὃς ὑπὸ τῶν ἰδίων εὐνούχων ἀνῃρέθη. γʹ Σέσωστρις ἔτη μηʹ, ὃς λέγεται γεγονέναι πηχῶν δʹ, παλαιστῶν γʹ, δακτύλων βʹ. Ὃς πᾶσαν ἐχειρώσατο τὴν Ἀσίαν ἐν ἐνιαυτοῖς ἐννέα, καὶ τῆς Εὐρώπης τὰ μέχρι Θρᾴκης, πανταχόσε μνημόσυνα ἐγείρας τῆς τῶν ἐθνῶν κατασχέσεως, ἐπὶ μὲν τοῖς γενναίοις ἀνδρῶν, ἐπὶ δὲ τοῖς ἀγεννέσι γυναικῶν μόρια ταῖς στήλαις ἐγχαράσσων, ὡς καὶ ὑπὸ τῶν Αἰγυπτίων μετὰ Ὄσιριν νομισθῆναι. Μεθʼ ὃν Λάμαρις ἔτη ηʹ, ὃς τὴν ἐν Ἀρσενοΐτῃ λαβύρινθον ἑαυτῷ τάφον κατεσκεύασεν. Οἱ δὲ τούτου διάδοχοι ἐπὶ ἔτη μβʹ, οἳ πάντες ἐβασίλευσαν ἔτεσι σμεʹ.",
+      "text": "From the Second Book of Manetho.<br>The twelfth Dynasty consisted of seven kings of Diospolis. The first of these, Sesonchosis, son of Ammenemês, reigned for 46 years.<br>1. Ammanemês, for 38 years: he was murdered by his own eunuchs.<br>2. Sesôstris, for 48 years: he is said to have been 4 cubits 3 palms 2 fingers' breadths in stature. In nine years he subdued the whole of Asia, and Europe as far as Thrace, everywhere erecting memorials of his conquest of the tribes. Upon <em>stelae</em> [pillars] he engraved for a valiant race the secret parts of a man, for an ignoble race those of a woman. Accordingly he was esteemed by the Egyptians as the next in rank to Osiris.<br>Next to him Lamaris reigned for 8 years: he built the Labyrinth in the Arsinoïte nome as his own tomb.<br>His successors ruled for 42 years, and the reigns of the whole dynasty amounted to 245 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f04v.jpg",
+        "manetho/paris-gr1764-f05r.jpg"
+      ],
+      "scan_note": "Begins on fol. 4v below the total of Eusebius' first book: 'Δευτέρου τόμου Μανεθῶ' in capitals, 'Δωδεκάτη δυναστεία Διοσπολιτῶν βασιλέων ζ'', 'ὧν ὁ πρῶτος Σεσόγχωσις Ἀμμενέμου υἱὸς ἔτη μς'' to the foot of the page; continues on fol. 5r lines 1-4 'ὑπὸ τῶν Αἰγυπτίων μετὰ Ὄσιριν νομισθῆναι· μεθ' ὃν Λάμαρις ...' to 'οἱ πάντες ἐβασίλευσαν ἔτεσι σμε''. The heading 'Δευτέρου τόμου Μανεθῶ' is on the page and in Waddell's English but not in Müller's text of this fragment. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XIII (Africanus)",
+      "original_ref": "Waddell fr. 38; Müller FHG II; Paris gr. 1764 fol. 5r",
+      "original_text": "Τρισκαιδεκάτη δυναστεία Διοσπολιτῶν βασιλέων ξʹ, οἳ ἐβασίλευσαν ἔτη υνγʹ.",
+      "text": "The Thirteenth Dynasty consisted of sixty kings of Diospolis, who reigned for 453 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f05r.jpg"
+      ],
+      "scan_note": "Fol. 5r, line 5, under the heading 'κατὰ Ἀφρικανόν' at the end of line 4: 'Τρισκαιδεκάτη δυναστεία Διοσπολιτῶν βασιλέων ξ' οἳ ἐβασίλευσαν ἔτη υνγ''. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XIV (Africanus)",
+      "original_ref": "Waddell fr. 41a; Müller FHG II; Paris gr. 1764 fol. 5r",
+      "original_text": "Τεσσαρεσκαιδεκάτη δυναστεία Ξοϊτῶν βασιλέων οςʹ, οἳ ἐβασίλευσαν ἔτη ρπδʹ.",
+      "text": "The Fourteenth Dynasty consisted of seventy‑six kings of Xoïs, who reigned for 184 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f05r.jpg"
+      ],
+      "scan_note": "Fol. 5r, line 6: 'Τεσσαρεσκαιδεκάτη δυναστεία Ξοϊτῶν βασιλέων ος' οἳ ἐβασίλευσαν ἔτη ρπδ''. Müller notes that this line is found only in this manuscript (B); Paris gr. 1711 has a gap here. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XV (Africanus)",
+      "original_ref": "Waddell fr. 43; Müller FHG II; Paris gr. 1764 fol. 5r",
+      "original_text": "Πεντεκαιδεκάτη δυναστεία ποιμένων. Ἦσαν δὲ Φοίνικες ξένοι βασιλεῖς ϛʹ, οἳ καὶ Μέμφιν εἷλον, οἳ καὶ ἐν τῷ Σεθροΐτῃ νομῷ πόλιν ἔκτισαν, ἀφʼ ἧς ὁρμώμενοι Αἰγυπτίους ἐχειρώσαντο. Ὧν πρῶτος Σαΐτης ἐβασίλευσεν ἔτη ιθʹ, ἀφʼ οὗ καὶ ὁ Σαΐτης νομός. βʹ Βνῶν ἔτη μδʹ. γʹ Παχνὰν ἔτη ξαʹ. δʹ Σταὰν ἔτη νʹ. εʹ Ἄρχλης ἔτη μθʹ. ϛʹ Ἄφοβις ἔτη ξαʹ. Ὁμοῦ ἔτη σπδʹ.",
+      "text": "The Fifteenth Dynasty consisted of Shepherd Kings. There were six foreign kings from Phoenicia, who seized Memphis: in the Sethroïte nome they founded a town, from which base they subdued Egypt.<br>The first of these kings, Saïtês, reigned for 19 years: the Saïte nome is called after him.<br>2. Bnôn, for 44 years.<br>3. Pachnan [Apachnan], for 61 years.<br>4. Staan, for 50 years.<br>5. Archlês, for 49 years.<br>6. Aphôphis, (Aphobis), for 61 years.<br>Total, 284 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f05r.jpg"
+      ],
+      "scan_note": "Fol. 5r, lines 7-11: 'Πεντεκαιδεκάτη δυναστεία ποιμένων· ἦσαν δὲ Φοίνικες ξένοι βασιλεῖς ς' οἳ καὶ Μέμφιν εἷλον' to 'ς' Ἄφοβις ἔτη ξα'' and 'ὁμοῦ ἔτη σπδ''. In the manuscript the sentence on Saites ('ὧν πρῶτος Σαΐτης ...') comes before the founding of the town in the Sethroite nome; Müller and Waddell print it after. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XVI (Africanus)",
+      "original_ref": "Waddell fr. 45; Müller FHG II; Paris gr. 1764 fol. 5r",
+      "original_text": "Ἑκκαιδεκάτη δυναστεία ποιμένες ἄλλοι βασιλεῖς λβʹ· ἐβασίλευσαν ἔτη φιηʹ.",
+      "text": "The Sixteenth Dynasty were Shepherd Kings again, 32 in number: they reigned for 518 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f05r.jpg"
+      ],
+      "scan_note": "Fol. 5r, lines 12-13, in capitals: 'Ἑξκαιδεκάτη δυναστεία ποιμένες ἄλλοι βασιλεῖς λβ' ἐβα/σίλευσαν ἔτη φιη''. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XVII (Africanus)",
+      "original_ref": "Waddell fr. 47; Müller FHG II; Paris gr. 1764 fol. 5r",
+      "original_text": "Ἑπτακαιδεκάτη δυναστεία ποιμένες ἄλλοι βασιλεῖς μγʹ καὶ Θηβαῖοι [ἢ] Διοσπολῖται μγʹ. Ὁμοῦ οἱ ποιμένες καὶ οἱ Θηβαῖοι ἐβασίλευσαν ἔτη ρναʹ.",
+      "text": "The Seventeenth Dynasty were Shepherd Kings again, 43 in number, and kings of Thebes or Diospolis, 43 in number.<br>Total of the reigns of the Shepherd Kings and the Theban kings, 151 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f05r.jpg"
+      ],
+      "scan_note": "Fol. 5r, lines 14-15: 'Ἑπτακαιδεκάτη δυναστεία ποιμένες ἄλλοι βασιλεῖς μγ' καὶ Θη/βαῖοι Διοσπολῖται μγ'· ὁμοῦ οἱ ποιμένες καὶ οἱ Θηβαῖοι ἐβασίλευσαν ἔτη ρνα''. The word ἢ ('or') in square brackets is Müller's addition and is not on the page. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XIII (Eusebius)",
+      "original_ref": "Waddell fr. 39a; Müller FHG II; Paris gr. 1764 fol. 5r",
+      "original_text": "Τρισκαιδεκάτη δυναστεία Διοσπολιτῶν βασιλέων ξʹ, οἳ ἐβασίλευσαν ἔτη υνγʹ.",
+      "text": "The Thirteenth Dynasty consisted of sixty kings of Diospolis, who reigned for 453 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f05r.jpg"
+      ],
+      "scan_note": "Fol. 5r, line 17, under the heading 'κατ' Εὐσέβιον' (line 16): 'Τρισκαιδεκάτη δυναστεία Διοσπολιτῶν βασιλέων ξ' οἳ ἐβασίλευσαν ἔτη υνγ''. Müller does not print this line separately, stating that Syncellus' Eusebius has it word for word as Africanus (FHG II p. 565); the Greek shown is his text of Africanus' line, which agrees with what is written here. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XIV (Eusebius)",
+      "original_ref": "Waddell fr. 41b; Müller FHG II; Paris gr. 1764 fol. 5r",
+      "original_text": "Τεσσαρεσκαιδεκάτη δυναστεία Ξοϊτῶν βασιλέων οςʹ, οἳ ἐβασίλευσαν ἔτη ρπδʹ· ἐν ἄλλῳ υπδʹ.",
+      "text": "The Fourteenth Dynasty consisted of seventy‑six kings of Xoïs, who reigned for 184 years, — in another copy, 484 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f05r.jpg"
+      ],
+      "scan_note": "Fol. 5r, lines 18-19: 'Τεσσαρεσκαιδεκάτη δυναστεία Ξοϊτῶν βασιλέων ος' οἳ ἐβασίλευσαν ἔτη ρπδ' / ἐν ἄλλῳ υπδ''. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XV (Eusebius)",
+      "original_ref": "Waddell fr. 44a; Müller FHG II; Paris gr. 1764 fol. 5r",
+      "original_text": "Πεντεκαιδεκάτη δυναστεία Διοσπολιτῶν βασιλέων, οἳ ἐβασίλευσαν ἔτη σνʹ.",
+      "text": "The Fifteenth Dynasty consisted of kings of Diospolis, who reigned for 250 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f05r.jpg"
+      ],
+      "scan_note": "Fol. 5r, lines 19-20: 'Πεντεκαιδεκάτη δυναστεία Διοσπολιτῶν βασιλέων / οἳ ἐβασίλευσαν ἔτη σν''. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XVI (Eusebius)",
+      "original_ref": "Waddell fr. 46a; Müller FHG II; Paris gr. 1764 fol. 5r",
+      "original_text": "Ἑκκαιδεκάτη δυναστεία Θηβαῖοι βασιλεῖς εʹ, οἳ καὶ ἐβασίλευσαν ἔτη ρϟʹ.",
+      "text": "The Sixteenth Dynasty were kings of Thebes, 5 in number: they reigned for 190 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f05r.jpg"
+      ],
+      "scan_note": "Fol. 5r, lines 20-21: 'Ἑξκαιδεκάτη δυναστεία Θηβαῖοι βασιλεῖς / ε' οἳ καὶ ἐβασίλευσαν ἔτη ρϟ''. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XVII (Eusebius)",
+      "original_ref": "Waddell fr. 48a; Müller FHG II; Paris gr. 1764 fol. 5r",
+      "original_text": "Ἑπτακαιδεκάτη δυναστεία ποιμένες ἦσαν ἀδελφοὶ Φοίνικες ξένοι βασιλεῖς, οἳ καὶ Μέμφιν εἷλον. Ὧν πρῶτος Σαΐτης ἐβασίλευσεν ἔτη ιθʹ, ἀφʼ οὗ καὶ ὁ Σαΐτης νομὸς ἐκλήθη, οἳ καὶ ἐν τῷ Σεθροΐτῃ νομῷ πόλιν ἔκτισαν, ἀφʼ ἧς ὁρμώμενοι Αἰγυπτίους ἐχειρώσαντο. βʹ Βνῶν ἔτη μʹ. [γʹ] Ἄφωφις ἔτη ιδʹ. Μεθʼ ὃν Ἄρχλης ἔτη λʹ. Ὁμοῦ ἔτη ργʹ. Κατὰ τούτους Αἰγυπτίων βασιλεὺς Ἰωσὴφ δείκνυται.",
+      "text": "The Seventeenth Dynasty were Shepherds and brothers: they were foreign kings from Phoenicia, who seized Memphis.<br>The first of these kings, Saïtês, reigned for 19 years: the Saïte nome is called after him. These kings founded in the Sethroïte nome a town, from which as a base they subdued Egypt.<br>2. Bnôn, for 40 years.<br>3. Aphôphis, for 14 years.<br>After him Archlês reigned for 30 years.<br>Total, 103 years.<br>It was in their time that Joseph was appointed king of Egypt.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f05r.jpg"
+      ],
+      "scan_note": "Fol. 5r, lines 21-27: 'Ἑπτακαιδεκάτη δυναστεία ποιμένες ἦσαν ἀδελφοὶ Φοίνικες ξένοι βασιλεῖς οἳ καὶ Μέμφιν εἷλον· ὧν πρῶτος Σαΐτης' to 'τρίτος Ἄφωφις ἔτη ιδ' μεθ' ὃν Ἄρχλης ἔτη λ' ὁμοῦ ἔτη ργ'' and 'κατὰ τούτους Αἰγυπτίων βασιλεὺς Ἰωσὴφ δείκνυται'. The page writes 'τρίτος' in full where Müller prints [γ']. Syncellus' comment that follows ('Σημειωτέον πῶς ὁ Εὐσέβιος ...') is not given here. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XVIII (Africanus) 1",
+      "original_ref": "Waddell fr. 52; Müller FHG II; Paris gr. 1764 fol. 5v",
+      "original_text": "Ὀκτωκαιδεκάτη δυναστεία Διοσπολιτῶν βασιλέων ιςʹ. Ὧν πρῶτος Ἀμώς, ἐφʼ οὗ Μωυσῆς ἐξῆλθεν ἐξ Αἰγύπτου, ὡς ἡμεῖς ἀποδεικνύομεν, ὡς δὲ ἡ παροῦσα ψῆφος ἀναγκάζει, ἐπὶ τούτου τὸν Μωυσέα συμβαίνει νέον ἔτι ὄντα.",
+      "text": "The Eighteenth Dynasty consisted of 16 kings of Diospolis.<br>The first of these was Amôs, in whose reign Moses went forth from Egypt, as I here declare; but, according to the convincing evidence of the present calculation it follows that in this reign Moses was still young.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f05v.jpg"
+      ],
+      "scan_note": "Fol. 5v, lines 3-5. After Syncellus' remarks on the seventeenth dynasty, line 3 begins with an enlarged initial 'Ὀκτωκαιδεκάτη δυναστεία Διοσπολιτῶν βασιλέων ις'', then 'ὧν πρῶτος Ἀμώς, ἐφ' οὗ Μωϋσῆς ἐξῆλθεν ἐξ Αἰγύπτου ...' to 'ἐπὶ τούτου τὸν Μωσέα συμβαίνει νέον ἔτι ὄντα'. A marginal note beside it reads 'πότε Μωϋσῆς ἐξῆλθεν ἐξ Αἰγύπτου'. Syncellus gives only the first king here; kings 2-6 are on fol. 9r and kings 7-16 on fol. 10r. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XVIII (Eusebius) 1",
+      "original_ref": "Waddell fr. 53a; Müller FHG II; Paris gr. 1764 fol. 5v, 9r",
+      "original_text": "Ὀκτωκαιδεκάτη δυναστεία Διοσπολιτῶν βασιλέων ιδʹ. Ὧν πρῶτος Ἄμωσις ἔτη κεʹ.<br>Εὐσέβιος δύο βασιλεῖς περιέκρυψεν, ἔτη δὲ προσέθηκε πεʹ, τμηʹ παραθεὶς ἀντὶ σξγʹ τῶν παρʼ Ἀφρικανῷ.",
+      "text": "The Eighteenth Dynasty consisted of fourteen kings of Diospolis.<br>The first of these, Amôsis, reigned for 25 years.<br>(Syncellus elsewhere says: Eusebius leaves out two kings, but adds 85 years, setting down 348 years instead of the 263 years of the reckoning of Africanus.)",
+      "scan_pages": [
+        "manetho/paris-gr1764-f05v.jpg",
+        "manetho/paris-gr1764-f09r.jpg"
+      ],
+      "scan_note": "Fol. 5v, lines 6-8: enlarged initial 'Ὀκτωκαιδεκάτη δυναστεία Διοσπολιτῶν βασιλέων ιδ'· ὧν πρῶτος Ἄμωσις ἔτη κε'', followed by Syncellus' remark 'Εὐσέβιος δύο βασιλεῖς περιέκρυψεν, ἔτη δὲ προσέθηκε πε', τμη' παραθεὶς ἀντὶ σξγ' τῶν παρὰ Ἀφρικανῷ'. The heading and first king are written again on fol. 9r, lines 3-4: '+ Κατὰ Εὐσέβιον ιη' δυναστεία Διοσπολιτῶν βασιλέων ιδ'' (capitals, marginal 'Εὐσέβιος') and 'ὧν πρῶτος Ἄμωσις ἔτη κε'', after which Syncellus' own discussion of Aphophis and Joseph fills the next eight lines. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XVIII (Africanus) 2",
+      "original_ref": "Waddell fr. 52; Müller FHG II; Paris gr. 1764 fol. 9r",
+      "original_text": "Δεύτερος κατὰ Ἀφρικανὸν κατὰ τὴν ιηʹ δυναστείαν ἐβασίλευσε Χεβρὼς ἔτη ιγʹ. Τρίτος Ἀμενωφθὶς ἔτη κδʹ. Τέταρτος Ἀμενσὶς. ἔτη κβʹ. Πέμπτος Μίσαφρις ἔτη ιγʹ. Ἕκτος Μισφραγμούθωσις ἔτη κςʹ, ἐφʼ οὗ ὁ ἐπὶ Δευκαλίωνος κατακλυσμός. Ὁμοῦ ἐπὶ Ἀμώσεως τοῦ καὶ Μισφραγμουθώσεως ἀρχῆς κατὰ Ἀφρικανὸν γίνονται ἔτη ξθʹ. Τοῦ γὰρ Ἀμὼς οὐδ' ὅλως εἶπεν ἔτη.",
+      "text": "The second king of the Eighteenth Dynasty, according to Africanus, was Chebrôs, who reigned for 13 years.<br>The third king, Amenôphthis, reigned for 24 (21) years.<br>The fourth king (queen), Amensis (Amersis), reigned for 22 years.<br>The fifth, Misaphris, for 13 years.<br>The sixth, Misphragmuthôsis, for 26 years: in his reign the flood of Deucalion's time occurred.<br>Total, according to Africanus, down to the reign of Amôsis, also called Misphragmuthôsis, 69 years. Of the length of the reign of Amôs he said nothing at all.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f09r.jpg"
+      ],
+      "scan_note": "Fol. 9r, lower middle: below the line marked with a cross '+ Οἱ λοιποὶ βασιλεῖς Αἰγύπτου τῆς ιη' δυναστείας μετὰ τὸν / πρῶτον παρὰ Ἀφρικανῷ Ἄμωσιν' (Syncellus' heading, not in Müller), the next six lines: 'Δεύτερος κατὰ Ἀφρικανὸν κατὰ τὴν ιη' δυναστείαν ἐβασίλευσε Χεβρὼς ἔτη ιγ'', 'τρίτος Ἀμενωφθὶς ἔτη κδ'', 'τέταρτος Ἀμενσὶς ἔτη κβ'', 'πέμπτος Μίσαφρις ἔτη ιγ'', 'ἕκτος Μισφραγμούθωσις ἔτη κς' ἐφ' οὗ ὁ ἐπὶ Δευκαλίωνος κατακλυσμός' to 'τοῦ γὰρ Ἀμὼς οὐδ' ὅλως εἶπεν ἔτη', with marginal numerals β', γ', ε'. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XVIII (Eusebius) 2",
+      "original_ref": "Waddell fr. 53a; Müller FHG II; Paris gr. 1764 fol. 10r",
+      "original_text": "βʹ Χεβρὼν δεύτερος ἔτη ιγʹ. γʹ Ἀμμενῶφις ἔτη καʹ. δʹ Μίφρης ἔτη ιβʹ. εʹ Μισφραγμούθωσις ἔτη κςʹ. Ὁμοῦ ἀπʼ Ἀμώσεως τοῦ πρώτου τῆς προκειμένης ιηʹ δυναστείας ἕως Μισφραγμουθώσεως ἀρχῆς κατὰ Εὐσέβιον ἔτη γίγνονται οαʹ, βασιλεῖς πέντε ἀντὶ τῶν ἕξ· τὸν γὰρ τέταρτον Ἀμένσην παραδραμὼν, οὗ ὁ Ἀφρικανὸς καὶ οἱ λοιποὶ μέμνηνται, ἔτη κβʹ αὐτοῦ ἐκολόβωσεν.",
+      "text": "2. The second, Chebrôn, for 13 years.<br>3. Ammenôphis, for 21 years.<br>4. Miphrês, for 12 years.<br>5. Misphragmuthôsis, for 26 years.<br>Total from Amôsis, the first king of this Eighteenth Dynasty, down to the reign of Misphragmuthôsis amounts, according to Eusebius, to 71 years; and there are five kings, not six. For he omitted the fourth king, Amensês, mentioned by Africanus and the others, and thus cut off the 22 years of his reign.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f10r.jpg"
+      ],
+      "scan_note": "Fol. 10r, lines 1-7: '+ Οἱ λοιποὶ βασιλεῖς Αἰγύπτου τῆς ιη' δυναστείας μετὰ τὸν / πρῶτον παρ' Εὐσεβίῳ Ἄμωσιν' (Syncellus' heading), then 'β' Χεβρὼν δεύτερος ἔτη ιγ'· γ' Ἀμμενῶφις ἔτη κα'· δ' Μίφρης ἔτη ιβ'· ε' Μισφραγμούθωσις ἔτη κς'' and the total 'ὁμοῦ ἀπὸ Ἀμώσεως ... ἔτη γίνονται οα'' to 'ἔτη κβ' αὐτοῦ ἐκολόβωσεν'. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XVIII (Africanus) 3",
+      "original_ref": "Waddell fr. 52; Müller FHG II; Paris gr. 1764 fol. 10r",
+      "original_text": "ζʹ. Τούθμωσις ἔτη θʹ. ηʹ. Ἀμενῶφις ἔτη λαʹ. Οὗτός ἐστιν ὁ Μέμνων εἶναι νομιζόμενος καὶ φθεγγόμενος λίθος. θʹ. Ὦρος ἔτη λζʹ. ιʹ. Ἀχερρῆς ἔτη λβʹ. ιαʹ. Ῥαθῶς ἔτη ἕξ. ιβʹ. Χεβρὴς ἔτη ιβʹ. ιγʹ. Ἀχερρῆς ἔτη ιβʹ. ιδʹ. Ἀρμεσσῆς ἔτη εʹ. ιεʹ. Ῥαμεσσῆς ἔτος αʹ. ιςʹ. Ἀμενωφὰθ ἔτη ιθʹ. Ὁμοῦ ἔτη σξγʹ.",
+      "text": "7. Tuthmôsis, for 9 years.<br>8. Amenôphis, for 31 years. This is the king who was reputed to be Memnôn and a speaking statue.<br>9. Ôrus, for 37 years.<br>10. Acherrês, for 32 years.<br>11. Rathôs, for 6 years.<br>12. Chebrês, for 12 years.<br>13. Acherrês, for 12 years.<br>14. Armesis, for 5 years.<br>15. Ramessês, for 1 year.<br>16. Amenôphath (Amenôph), for 19 years.<br>Total, 263 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f10r.jpg"
+      ],
+      "scan_note": "Fol. 10r, lines 8-14: '+ Οἱ λοιποὶ τῆς ιη' δυναστείας μετὰ τὸν Μισφραγμούθωσιν κατὰ / Ἀφρικανὸν οὕτως' (Syncellus' heading), then 'ζ' Τούθμωσις ἔτη θ'· η' Ἀμένωφις ἔτη λα'· οὗτός ἐστιν ὁ Μέμνων ...' to 'ις' Ἀμενωφὰθ ἔτη ιθ'' and 'ὁμοῦ ἔτη σξγ'' at the start of line 14. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XIX (Africanus)",
+      "original_ref": "Waddell fr. 55; Müller FHG II; Paris gr. 1764 fol. 10r",
+      "original_text": "Ἐννεακαιδεκάτη δυναστεία βασιλέων ζʹ Διοσπολιτῶν. αʹ Σέθως ἔτη ναʹ. βʹ Ῥαψάκης ἔτη ξαʹ. γʹ Ἀμμενέφθης ἔτη κʹ. δʹ Ῥαμεσσῆς ἔτη ξʹ. εʹ Ἀμμενεμνῆς ἔτη εʹ. ςʹ Θούωρις, ὁ παρʼ Ὁμήρῳ καλούμενος Πόλυβος, Ἀλκάνδρας ἀνὴρ, ἐφʼ οὗ τὸ Ἴλιον ἑάλω, ἔτη ζʹ. Ὁμοῦ ἔτη σθʹ. Ἐπὶ τοῦ αὐτοῦ δευτέρου τόμου Μανεθῶ βασιλεῖς ϟϛʹ.",
+      "text": "The Nineteenth Dynasty consisted of seven (six) kings of Diospolis.<br>1. Sethôs, for 51 years.<br>2. Rapsacês, for 61 (66) years.<br>3. Ammenephthês, for 20 years.<br>4. Ramessês, for 60 years.<br>5. Ammenemnês, for 5 years.<br>6. Thuôris, who in Homer is called Polybus, husband of Alcandra, and in whose time Troy was taken, reigned for 7 years.<br>Total, 209 years.<br>Sum total in the Second Book of Manetho, ninety‑six kings, for 2121 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f10r.jpg"
+      ],
+      "scan_note": "Fol. 10r, lower half, beginning on the line that ends Africanus' eighteenth dynasty ('ὁμοῦ ἔτη σξγ''): 'Ἐννεακαιδεκάτη δυναστεία βασιλέων ζ' / Διοσπολιτῶν· α' Σέθως ἔτη να'· β' Ῥαψάκης ...', with ε' Ἀμμενεμνῆς and 'ς' Θούωρις ὁ παρ' Ὁμήρῳ καλούμενος Πόλυβος, ζ' Ἀλκάνδρας ἀνήρ', to 'ὁμοῦ ἔτη σθ'' and the line 'ἐπὶ τοῦ αὐτοῦ δευτέρου τόμου Μανεθῶ βασιλεῖς ϟς' ἔτη ,βρκα''. The closing words 'ἔτη ,βρκα'' (2121 years), which Waddell translates, are on the page but stand in Müller's note, not in his text. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XVIII (Eusebius) 3",
+      "original_ref": "Waddell fr. 53a; Müller FHG II; Paris gr. 1764 fol. 10r, 10v",
+      "original_text": "ϛʹ Τούθμωσις ἔτη θʹ. ζʹ Ἀμένωφις ἔτη λαʹ. Οὗτός ἐστιν ὁ Μέμνων εἶναι νομιζόμενος καὶ φθεγγόμενος λίθος. ηʹ Ὦρος ἔτη λςʹ (ἐν ἄλλῳ ληʹ). θʹ Ἀχενχέρσης [ἔτη ιβʹ. Ἄθωρις ἔτη λθʹ. Κενχέρης] ἔτη ιϛʹ. Κατὰ τοῦτον Μωυσῆς τῆς ἐξ Αἰγύπτου πορείας τῶν Ἰουδαίων ἡγήσατο. (Addit Syncell.: Μόνος Εὐσέβιος ἐπὶ τούτου λέγει τὴν τοῦ Ἰσραὴλ διὰ Μωυσέως ἔξοδον, μηδενὸς αὐτῷ λόγου μαρτυροῦντος, ἀλλὰ καὶ πάντων ἐναντιουμένων τῶν πρὸ αὐτοῦ, ὡς μαρτυρεῖ.) ιʹ Ἀχερρῆς ἔτη ηʹ. ιαʹ Χερρῆς ἔτη ιεʹ. ιβʹ Ἄρμαϊς ὁ καὶ Δαναὸς ἔτη εʹ, μεθ' ἃ ἐκ τῆς Αἰγύπτου ἐκπεσὼν καὶ φεύγων τὸν ἀδελφὸν Αἴγυπτον εἰς τὴν Ἑλλάδα ἀφικνεῖται, κρατήσας τε τοῦ Ἄργους βασιλεύει τῶν Ἀργείων. ιγʹ Ῥαμεσσῆς ὁ καὶ Αἴγυπτος, ἔτη ξηʹ. ιδʹ Ἀμμένωφις ἔτη μʹ. Ὁμοῦ ἔτη τμη'. Προσέθηκεν ὑπὲρ τὸν Ἀφρικανὸν ἔτη πεʹ Εὐσέβιος κατὰ τὴν ιη' δυναστείαν.",
+      "text": "6. Tuthmôsis, for 9 years.<br>7. Amenôphis, for 31 years. This is the king who was reputed to be Memnôn and a speaking statue.<br>8. Ôrus, for 36 years (in another copy, 38 years).<br>9. Achenchersês [for 12 years].<br>[Athôris, for 39 years (? 9).]<br>[Cencherês] for 16 years.<br>About this time Moses led the Jews in their march out of Egypt. (Syncellus adds: Eusebius alone places in this reign the exodus of Israel under Moses, although no argument supports him, but all his predecessors hold a contrary view, as he testifies.)<br>10. Acherrês, for 8 years.<br>11. Cherrês, for 15 years.<br>12. Armaïs, also called Danaus, for 5 years: thereafter, he was banished from Egypt and, fleeing from his brother Aegyptus, he arrived in Greece, and, seizing Argos, he ruled over the Argives.<br>13. Ramessês, also called Aegyptus, for 68 years.<br>14. Ammenôphis, for 40 years.<br>Total, 348 years.<br>Eusebius assigns 85 years more than Africanus to the Eighteenth Dynasty.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f10r.jpg",
+        "manetho/paris-gr1764-f10v.jpg"
+      ],
+      "scan_note": "Fol. 10r, lower half, after the nineteenth dynasty of Africanus: 'Οἱ λοιποὶ τῆς ιη' δυναστείας μετὰ τὸν Μισφραγμούθωσιν κατὰ Εὐσέβιον οὕτως' (capitals), then 'ς' Τούθμωσις ἔτη θ'' (marginal ζ'), the Memnon note, 'Ὦρος ἔτη λς' ἐν ἄλλῳ λη'', 'Ἀχενχέρσης ἔτη ις' κατὰ τοῦτον Μωϋσῆς τῆς ἐξ Αἰγύπτου πορείας τῶν Ἰουδαίων ἡγήσατο', Syncellus' remark 'μόνος Εὐσέβιος ...', the kings to Armais (Danaus) at the foot of the page; the end ('κρατήσας τε τοῦ Ἄργους ...', Ramesses-Aegyptus, Ammenophis, 'ὁμοῦ ἔτη τμη'' and 'προσέθηκεν ὑπὲρ τὸν Ἀφρικανὸν ἔτη πε'') is fol. 10v lines 1-3. This copy does not have the words Müller puts in square brackets after Achencherses ('ἔτη ιβ'. Ἄθωρις ἔτη λθ'. Κενχέρης'), and the marginal numerals of the last kings differ from Müller's. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XIX (Eusebius)",
+      "original_ref": "Waddell fr. 56a; Müller FHG II; Paris gr. 1764 fol. 10v",
+      "original_text": "Ἐννεακαιδεκάτη δυναστεία βασιλέων εʹ Διοσπολιτῶν. αʹ Σέθως ἔτη νεʹ. βʹ Ῥαμψὴς ἔτη ξςʹ. γʹ Ἀμμενεφθὴς ἔτη μʹ. δʹ Ἀμμενέμης ἔτη κςʹ. εʹ Θούωρις, ὁ παρʼ Ὁμήρῳ καλούμενος Πόλυβος, Ἀλκάνδρας ἀνὴρ, ἐφʼ οὗ τὸ Ἴλιον ἑάλω, ἔτη ζʹ. Ὁμοῦ ἔτη ρϟδʹ. Ἐπὶ τὸ αὐτὸ βʹ τόμου Μανεθῶ βασιλέων ϟβʹ ἔτη ͵αρκαʹ.",
+      "text": "The Nineteenth Dynasty consisted of five kings of Diospolis.<br>1. Sethôs, for 55 years.<br>2. Rampsês, for 66 years.<br>3. Ammenephthis, for 40 years.<br>4. Ammenemês, for 26 years.<br>5. Thuôris, who in Homer is called Polybus, husband of Alcandra, and in whose reign Troy was taken, reigned for 7 years.<br>Total, 194 years.<br>Sum total in the Second Book of Manetho, for ninety‑two kings, 1121 (2121) years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f10v.jpg"
+      ],
+      "scan_note": "Fol. 10v, lines 4-8, after the end of Eusebius' eighteenth dynasty: '+ Ἐννεακαιδεκάτη δυναστεία βασιλέων ε' Διοσπολιτῶν', 'α' Σέθως ἔτη νε'' (marginal α', δ', ς') to 'ε' Θούωρις ὁ παρ' Ὁμήρῳ καλούμενος Πόλυβος Ἀλκάνδρας ἀνήρ ...', 'ὁμοῦ ἔτη ρϟδ'' and 'ἐπὶ τὸ αὐτὸ δευτέρου τόμου Μανεθῶ βασιλέων ϟβ' ἔτη ,βρκα''. Müller prints ,αρκα' with the note 'scr. ,βρκα''; the page has ,βρκα'. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    }
+  ],
+  "verification": {
+    "scan_source": "Bibliothèque nationale de France, Gallica, Grec 1764 (https://gallica.bnf.fr/ark:/12148/btv1b10722002s), IIIF images 9 (fols. 4v, 5r), 10 (fol. 5v), 13 (fol. 9r), 14 (fol. 10r) and 15 (fol. 10v), single pages cropped from the microfilm openings",
+    "scan_license": "Bibliothèque nationale de France, Gallica: non-commercial reuse permitted with the credit 'Source gallica.bnf.fr / BnF' (Gallica terms of use); images made from the BnF microfilm",
+    "scan_manuscript": "Paris, BnF, grec 1764, parchment, 143 fols., 11th century, George Syncellus, Ecloga chronographica (acephalous; from Istanbul, bought 1687)",
+    "scan_mapping": "Read on the page images: each dynasty located by its heading and opening words and recorded with line numbers in the section notes",
+    "scan_mapping_urls": [
+      "https://gallica.bnf.fr/ark:/12148/btv1b10722002s",
+      "https://archivesetmanuscrits.bnf.fr/ark:/12148/cc21908z"
+    ],
+    "scan_local_paths": [
+      "manetho/paris-gr1764-f04v.jpg",
+      "manetho/paris-gr1764-f05r.jpg",
+      "manetho/paris-gr1764-f05v.jpg",
+      "manetho/paris-gr1764-f09r.jpg",
+      "manetho/paris-gr1764-f10r.jpg",
+      "manetho/paris-gr1764-f10v.jpg"
+    ],
+    "original_text_source": "C. Müller, FHG II (1848) pp. 560-570, 575-578 and 581, via DFHG (http://www.dfhg-project.org/DFHG/api.php?author=MANETHO%20SEBENNYTA), corrected against the print (https://archive.org/details/fragmentahistori02mueluoft)",
+    "original_text_license": "edition public domain (1848); DFHG digital text CC BY-NC-SA 4.0 (as stated on dfhg-project.org)",
+    "translation_source": "W. G. Waddell, Manetho (Loeb Classical Library 350, 1940), LacusCurtius transcription https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Manetho/home.html, checked against https://archive.org/details/manethowithengli00maneuoft",
+    "translation_license": "public domain in the US: 1940 copyright not renewed (no renewal for Waddell or Manetho in the Copyright Office renewal records for 1966-1969, NYPL CCE renewals data; LacusCurtius states the same); translator died 1945",
+    "translator": "W. G. Waddell (1940)",
+    "verified_date": "2026-11-12"
+  }
+}

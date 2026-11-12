@@ -1,0 +1,67 @@
+{
+  "id": "verified-manetho-gods-and-demigods-syncellus",
+  "slug": "verified-manetho-gods-and-demigods-syncellus",
+  "title": "Manetho on the Reigns of the Gods and Demigods (George Syncellus)",
+  "language": "Greek (Müller 1848) / English (Waddell 1940)",
+  "source": "Paris gr. 1711 (11th c.), pp. 11-12, via Gallica IIIF + Müller FHG II Greek (DFHG, checked against the print) + Waddell English (Loeb 1940, public domain)",
+  "description": "Manetho's list of the gods who ruled Egypt before men, from Hephaestus (Ptah) for 9000 years to Typhon, and of the demigods Horus to Zeus, as quoted by George Syncellus, on the page of Paris gr. 1711 that carries it.",
+  "introduction": "<p>Before the thirty dynasties of human kings, Manetho set reigns of gods, demigods and spirits of the dead, totalling many thousands of years. The Byzantine chronicler George Syncellus (c. 810 AD), who rejected these figures as invented, quotes the list near the start of his chronicle: six gods ruling for 11,985 years, the first of them Hephaestus (the Greek name for Ptah) for 9000 years, followed by Helios, Agathodaemon, Cronos, Osiris and Isis, and Typhon (Seth), then nine demigods from Horus to Zeus. Syncellus also reports how later Christian chronographers reduced Hephaestus' 9000 years to 727¾ by treating them as lunar months.</p>\n\n<p>The page is p. 12 of Paris, Bibliothèque nationale de France, grec 1711, an 11th-century manuscript whose first part (pp. 1-230) contains Syncellus. The list is laid out as a table; the page before it (p. 11) ends with the matching table of the ten Chaldean kings before the Flood from Berossus, and its last line is the heading of this passage. The images are from the BnF microfilm.</p>\n\n<p>Syncellus also preserves, from the Byzantine monk Panodorus, an attempt to convert these reigns into solar years (Waddell fr. 2); that passage is not included here.</p>",
+  "translator_notes": [
+    "Greek: C. Müller, Fragmenta Historicorum Graecorum II (Paris 1848), Manetho fragments, from the Digital FHG (DFHG, University of Leipzig) and corrected against the printed pages (archive.org fragmentahistori02mueluoft); the corrections are listed in scripts/import_manetho.py. Müller's text is a critical text based on Goar's and Dindorf's editions of Syncellus, so its spelling of names and some numbers differ from this manuscript. Müller's inline apparatus (variant readings and references in parentheses) is omitted; his square brackets (words he added or doubted) are kept.",
+    "English: W. G. Waddell, Manetho (Loeb Classical Library, 1940), as transcribed on LacusCurtius, checked against the printed Loeb (archive.org manethowithengli00maneuoft). Waddell translates his own Greek text, which follows Müller closely but not in every name and number.",
+    "The figures 727¾, 80⅙ and so on are the reduced reigns given in the table; the 9000 years of Hephaestus are Manetho's."
+  ],
+  "translation": [
+    {
+      "section": "Fr. 3.1",
+      "original_ref": "Waddell fr. 3 (Müller fr. 3); Paris gr. 1711 pp. 11-12",
+      "original_text": "Περὶ τῆς τῶν Αἰγυπτίων ἀρχαιολογίας.<br>Μανεθῶ ὁ Σεβεννύτης ἀρχιερεὺς τῶν ἐν Αἰγύπτῳ μιαρῶν ἱερῶν μετὰ Βήρωσσον γενόμενος ἐπὶ Πτολεμαίου τοῦ Φιλαδέλφου γράφει τῷ αὐτῷ Πτολεμαίῳ, ψευδηγορῶν καὶ αὐτὸς ὡς ὁ Βήρωσσος, περὶ δυναστειῶν ςʹ, ἤτοι θεῶν τῶν μηδέποτε γεγονότων ζʹ, οἳ, φησὶ, διαγεγόνασιν ἐπὶ ἔτη αʹ ͵αϡπεʹ. Ὧν πρῶτος θεὸς Ἥφαιστος ἔτη ͵θ ἐβασίλευσε. Ταῦτα τὰ ͵θ ἔτη πάλιν τινὲς τῶν καθʼ ἡμᾶς ἱστορικῶν ἀντὶ μηνῶν σεληνιακῶν λογισάμενοι καὶ μερίσαντες τὸ τῶν ἡμερῶν πλῆθος τῶν αὐτῶν ͵θ σεληνίων παρὰ τὰς τριακοσίας ἑξήκοντα πέντε ἡμέρας τοῦ ἐνιαυτοῦ συνῆξαν ἔτη ψκζʹ ‿δʹ, ξένον τι δοκοῦντες κατωρθωκέναι, γελοίων δὲ μᾶλλον εἰπεῖν ἄξιον τὸ ψεῦδος τῇ ἀληθείᾳ συμβιβάζοντες.",
+      "text": "On the Antiquity of Egypt<br>Manetho of Sebennytus, chief priest of the accursed temples of Egypt, who lived later than Bêrôssos in the time of Ptolemy Philadelphus, writes to this Ptolemy, with the same utterance of lies as Bêrôssos, concerning six dynasties or six gods who never existed: these, he says, reigned for 11,985 years. The first of them, the god Hêphaestus, was king for 9000 years. Now some of our historians, reckoning these 9000 years as so many lunar months, and dividing the number of days in these 9000 lunar months by the 365 days in a year, find a total of 727¾ years. They imagine that they have attained a striking result, but one must rather say that it is a ludicrous falsehood which they have tried to pit against Truth.",
+      "scan_pages": [
+        "manetho/paris-gr1711-p011.jpg",
+        "manetho/paris-gr1711-p012.jpg"
+      ],
+      "scan_note": "The heading 'περὶ τῆς τῶν αἰγυπτίων ἀρχαιολογίας' is the last line of p. 11, below the table of the ten Chaldean kings before the Flood. The text fills the first eight lines of p. 12: 'Μανεθῶ ὁ Σεβεννύτης ἀρχιερεὺς τῶν ἐν Αἰγύπτῳ μιαρῶν ἱερῶν' to 'τῇ ἀληθείᾳ συμβιβάζοντες'. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10723005g, images 19 and 20)."
+    },
+    {
+      "section": "Fr. 3.2",
+      "original_ref": "Waddell fr. 3 (Müller fr. 3); Paris gr. 1711 p. 12",
+      "original_text": "Αἰγυπτίων αʹ ἐβασίλευσεν Ἥφαιστος ἔτη ψκζʹ ‿δʹ. Πρώτη δυναστεία. βʹ Ἥλιος Ἡφαίστου ἔτη πʹ‿ϛʹ. γʹ Ἀγαθοδαίμων ἔτη νςʹ ‿ιβʹ. δʹ Κρόνος ἔτη μʹ. εʹ Ὄσιρις καὶ Ἶσις ἔτη λεʹ. ςʹ Τύφων ἔτη κθʹ.",
+      "text": "The First Dynasty of Egypt<br>1. Hêphaestus reigned for 727¾ years.<br>2. Hêlios (the Sun), son of Hêphaestus, for 80⅙ years.<br>3. Agathodaemôn, for 56 7/12 years.<br>4. Cronos, for 40½ years.<br>5. Osiris and Isis, for 35 years.<br>6. Typhon, for 29 years.",
+      "scan_pages": [
+        "manetho/paris-gr1711-p012.jpg"
+      ],
+      "scan_note": "P. 12, the table below the text: each row begins 'Αἰγυπτίων' in the left column, then the numeral and 'ἐβασίλευσεν' with the god's name, and the years at the right. The gods are rows α' Ἥφαιστος ('πρώτη δυναστεία') to the row of Typhon. The manuscript numbers the rows α'-ις' and leaves row ς' without a name, so Typhon stands at ζ'; Müller renumbers (his note: 'pro η', θ' scripsimus ζ', θ''). Checked on the image."
+    },
+    {
+      "section": "Fr. 3.3",
+      "original_ref": "Waddell fr. 3 (Müller fr. 3); Paris gr. 1711 p. 12",
+      "original_text": "ζʹ Ὦρος ἡμίθεος ἔτη κεʹ. ηʹ Ἄρης ἡμίθεος κγʹ. θʹ Ἄνουβις ἡμίθεος ἔτη ιζʹ. ιʹ Ἡρακλῆς ἡμίθεος ἔτη ιεʹ. ιαʹ Ἀπολλῶ ἡμίθεος ἔτη κεʹ. ιβʹ Ἀμμῶν ἡμίθεος ἔτη λʹ. ιγʹ Τιθόης ἡμίθεος ἔτη κζʹ. ιδʹ Σῶσος ἡμίθεος ἔτη λβʹ. ιεʹ Ζεὺς ἡμίθεος ἔτη κʹ.",
+      "text": "Demigods:<br>7. Ôrus, for 25 years.<br>8. Arês, for 23 years.<br>9. Anubis, for 17 years.<br>10. Hêraclês, for 15 years.<br>11. Apollô, for 25 years.<br>12. Ammôn, for 30 years.<br>13. Tithoês, for 27 years.<br>14. Sôsus, for 32 years.<br>15 Zeus, for 20 years.",
+      "scan_pages": [
+        "manetho/paris-gr1711-p012.jpg"
+      ],
+      "scan_note": "P. 12, lower rows of the same table: 'Ὦρος ἡμίθεος' to 'Ζεὺς ἡμίθεος', each name followed by 'ἡμίθεος'. Below the table Syncellus' own text resumes with a starred line 'γενέσεως κόσμου ἔτη ... ἐγρηγόρων παράβασις'. Checked on the image."
+    }
+  ],
+  "verification": {
+    "scan_source": "Bibliothèque nationale de France, Gallica, Grec 1711 (https://gallica.bnf.fr/ark:/12148/btv1b10723005g), IIIF images 19 (right page, p. 11) and 20 (left page, p. 12)",
+    "scan_license": "Bibliothèque nationale de France, Gallica: non-commercial reuse permitted with the credit 'Source gallica.bnf.fr / BnF' (Gallica terms of use); images made from the BnF microfilm",
+    "scan_manuscript": "Paris, BnF, grec 1711, parchment, 11th century; pp. 1-230 George Syncellus, Ecloga chronographica; then Theophanes, Leo Grammaticus and others",
+    "scan_mapping": "Read on the page images: heading on p. 11 last line, text and table on p. 12, recorded in the section notes",
+    "scan_mapping_urls": [
+      "https://gallica.bnf.fr/ark:/12148/btv1b10723005g",
+      "https://archivesetmanuscrits.bnf.fr/ark:/12148/cc21847c"
+    ],
+    "scan_local_paths": [
+      "manetho/paris-gr1711-p011.jpg",
+      "manetho/paris-gr1711-p012.jpg"
+    ],
+    "original_text_source": "C. Müller, FHG II (1848) pp. 530-531 (fr. 3), via DFHG, corrected against the print (https://archive.org/details/fragmentahistori02mueluoft)",
+    "original_text_license": "edition public domain (1848); DFHG digital text CC BY-NC-SA 4.0 (as stated on dfhg-project.org)",
+    "translation_source": "W. G. Waddell, Manetho (Loeb Classical Library 350, 1940), fr. 3, LacusCurtius transcription https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Manetho/home.html",
+    "translation_license": "public domain in the US: 1940 copyright not renewed (no renewal for Waddell or Manetho in the Copyright Office renewal records for 1966-1969, NYPL CCE renewals data; LacusCurtius states the same); translator died 1945",
+    "translator": "W. G. Waddell (1940)",
+    "verified_date": "2026-11-12"
+  }
+}

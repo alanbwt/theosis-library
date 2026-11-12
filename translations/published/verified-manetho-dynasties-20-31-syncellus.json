@@ -1,0 +1,279 @@
+{
+  "id": "verified-manetho-dynasties-20-31-syncellus",
+  "slug": "verified-manetho-dynasties-20-31-syncellus",
+  "title": "Manetho's Dynasties XX-XXXI (Book III), in Africanus and Eusebius (George Syncellus)",
+  "language": "Greek (Müller 1848) / English (Waddell 1940)",
+  "source": "Paris gr. 1764 (11th c.), fols. 10v-11v, via Gallica IIIF + Müller FHG II Greek (DFHG, checked against the print) + Waddell English (Loeb 1940, public domain)",
+  "description": "The third book of Manetho's king list, from the Twentieth Dynasty to the Persian kings conquered by Alexander, in the versions of Africanus and Eusebius as copied by George Syncellus, on the manuscript pages of Paris gr. 1764.",
+  "introduction": "<p>Manetho's third book carried the kings of Egypt from the Twentieth Dynasty to the second Persian conquest. It includes the Tanite and Bubastite houses (Smendes, Psusennes, Sesonchis, Osorthon), Bocchoris of Sais, under whom 'a lamb spoke', the Ethiopian conquerors Sabacon, Sebichos and Taracus, the Saite kings Psammetichus, Nechao II and Amosis, the Persian kings from Cambyses to Darius II, the last native houses of Mendes and Sebennytus (Nectanebes and Teos), and the brief Persian dynasty of Ochus, Arses and Darius III, 'whom Alexander of Macedon overthrew'.</p>\n\n<p>As with the earlier books, the lists survive in the two epitomes of Julius Africanus and Eusebius, which George Syncellus copied side by side about 810 AD. The manuscript is Paris, Bibliothèque nationale de France, grec 1764 (11th century), fols. 10v-11v, where the dynasties are numbered κ'-λα' in the margin; the images are from the BnF microfilm. Each section is one dynasty in one version, in the order of the manuscript, with the folio and the words read on it.</p>",
+  "translator_notes": [
+    "Greek: C. Müller, Fragmenta Historicorum Graecorum II (Paris 1848), Manetho fragments, from the Digital FHG (DFHG, University of Leipzig) and corrected against the printed pages (archive.org fragmentahistori02mueluoft); the corrections are listed in scripts/import_manetho.py. Müller's text is a critical text based on Goar's and Dindorf's editions of Syncellus, so its spelling of names and some numbers differ from this manuscript. Müller's inline apparatus (variant readings and references in parentheses) is omitted; his square brackets (words he added or doubted) are kept.",
+    "English: W. G. Waddell, Manetho (Loeb Classical Library, 1940), as transcribed on LacusCurtius, checked against the printed Loeb (archive.org manethowithengli00maneuoft). Waddell translates his own Greek text, which follows Müller closely but not in every name and number.",
+    "In Eusebius' twenty-sixth dynasty Müller abbreviates the notes on Nechao II and Uaphris with κτλ. ('and so on', as in Africanus); Waddell translates them in full.",
+    "At Eusebius' twenty-ninth dynasty the printed FHG page has damaged type in the word δυναστεία and the DFHG text lost two kings; the list was restored from the printed page."
+  ],
+  "translation": [
+    {
+      "section": "XX (Africanus)",
+      "original_ref": "Waddell fr. 57; Müller FHG II; Paris gr. 1764 fol. 10v",
+      "original_text": "ΚΑΤΑ ΑΦΡΙΚΑΝΟΝ. Τρίτου τόμου Μανεθῶ. Εἰκοστὴ δυναστεία βασιλέων Διοσπολιτῶν ιβʹ, οἳ ἐβασίλευσαν ἔτη ρλεʹ.",
+      "text": "From the Third Book of Manetho.<br>The Twentieth Dynasty consisted of twelve kings of Diospolis, who reigned for 135 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f10v.jpg"
+      ],
+      "scan_note": "Fol. 10v, lines 8-9, marked κ' in the margin: 'κατὰ δὲ Ἀφρικανὸν τρίτου τόμου Μανεθῶ εἰκοστὴ δυναστεία / βασιλέων Διοσπολιτῶν ιβ' οἳ ἐβασίλευσαν ἔτη ρλε''. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXI (Africanus)",
+      "original_ref": "Waddell fr. 58; Müller FHG II; Paris gr. 1764 fol. 10v",
+      "original_text": "Πρώτη καὶ εἰκοστὴ δυναστεία βασιλέων Τανιτῶν ζʹ. αʹ Σμενδῆς ἔτη κςʹ. βʹ Ψουσέννης ἔτη μςʹ. γʹ Νεφερχερὴς ἔτη δʹ. δʹ Ἀμενωφθὶς ἔτη θʹ. εʹ Ὀσοχὼρ ἔτη ςʹ. ςʹ Ψιναχῆς ἔτη θ'. ζ' Ψουσέννης ἔτη ιδ'. Ὁμοῦ ἔτη ρλ'.",
+      "text": "The Twenty-first Dynasty consisted of seven kings of Tanis.<br>1. Smendês, for 26 years.<br>2. Psusen(n)ês I, for 46 years.<br>3. Nephercherês (Nephelcherês), for 4 years.<br>4. Amenôphthis, for 9 years.<br>5. Osochôr, for 6 years.<br>6. Psinachês, for 9 years.<br>7. Psusennes [II] (Susennês), for 14 years.<br>Total, 130 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f10v.jpg"
+      ],
+      "scan_note": "Fol. 10v: 'πρώτη καὶ εἰκοστὴ δυναστεία βασιλέων Τανιτῶν ζ'', then three lines of kings (α' Σμένδης ... ζ' Ψουσέννης ἔτη ιδ') and 'ὁμοῦ ἔτη ρλ''. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXII (Africanus)",
+      "original_ref": "Waddell fr. 60; Müller FHG II; Paris gr. 1764 fol. 10v",
+      "original_text": "Εἰκοστὴ δευτέρα δυναστεία Βουβαστιτῶν Βασιλέων θʹ. αʹ Σέσωγχις ἔτη καʹ. βʹ Ὀσορθῶν ἔτη ιεʹ. γʹ δʹ εʹ Ἄλλοι τρεῖς ἔτη κεʹ ςʹ Τακέλωθις ἔτη ιγʹ. ζʹ ηʹ θʹ Ἄλλοι τρεῖς ἔτη μβʹ. Ὁμοῦ ἔτη ρκʹ.",
+      "text": "The Twenty-second Dynasty consisted of nine kings of Bubastus.<br>1. Sesônchis, for 21 years.<br>2. Osorthôn, for 15 years.<br>3, 4, 5. Three other kings, for 25 [29] years.<br>6. Takelôthis, for 13 years.<br>7, 8, 9. Three other kings, for 42 years.<br>Total, 120 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f10v.jpg"
+      ],
+      "scan_note": "Fol. 10v: 'εἰκοστὴ δευτέρα δυναστεία Βουβαστιτῶν βασιλέων θ'', two lines of kings (Σέσωγχις, Ὀσορθών, 'ἄλλοι τρεῖς', Τακέλωθις, 'ἄλλοι τρεῖς') ending 'ὁμοῦ ἔτη ρκ''. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXIII (Africanus)",
+      "original_ref": "Waddell fr. 62; Müller FHG II; Paris gr. 1764 fol. 10v",
+      "original_text": "Τρίτη καὶ εἰκοστὴ δυναστεία Τανιτῶν βασιλέων δʹ. αʹ. Πετουβάτης ἔτη μʹ, ἐφʼ οὗ Ὀλυμπιὰς ἤχθη πρώτη. βʹ. Ὀσορχὼ ἔτη ηʹ, ὃν Ἡρακλέα Αἰγύπτιοι καλοῦσι. γʹ. Ψαμμοῦς ἔτη ιʹ. δʹ. Ζὴτ ἔτη λαʹ. Ὁμοῦ ἔτη πθʹ.",
+      "text": "The Twenty-third Dynasty consisted of four kings of Tanis.<br>1. Petubatês, for 40 years: in his reign the Olympic festival was first celebrated.<br>2. Osorchô, for 8 years: the Egyptians call him Hêraclês.<br>3. Psammûs, for 10 years.<br>4. Zêt, for 31 years (34).<br>Total, 89 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f10v.jpg"
+      ],
+      "scan_note": "Fol. 10v: 'τρίτη καὶ εἰκοστὴ δυναστεία Τανιτῶν βασιλέων δ'', 'α' Πετουβάτης ἔτη μ' ἐφ' οὗ Ὀλυμπιὰς ἤχθη α'' to 'ὁμοῦ ἔτη πθ''. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXIV (Africanus)",
+      "original_ref": "Waddell fr. 64; Müller FHG II; Paris gr. 1764 fol. 10v",
+      "original_text": "Τετάρτη καὶ εἰκοστὴ δυναστεία. Βόχχωρις Σαΐτης ἔτη ϛʹ· ἐφʼ οὗ ἀρνίον ἐφθέγξατο [ἔτη ϡϟʹ].",
+      "text": "The Twenty-fourth Dynasty.<br>Bochchôris of Saïs, for 6 years: in his reign a lamb spoke . . . 990 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f10v.jpg"
+      ],
+      "scan_note": "Fol. 10v: 'τετάρτη καὶ εἰκοστὴ δυναστεία· Βόχχωρις Σαΐτης ἔτη ς' ἐφ' οὗ / ἀρνίον ἐφθέγξατο ἔτη ϡϟ''; a marginal note at left reads 'ἐπὶ τούτου ἀρνίον'. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXV (Africanus)",
+      "original_ref": "Waddell fr. 66; Müller FHG II; Paris gr. 1764 fol. 10v",
+      "original_text": "Πέμπτη καὶ εἰκοστὴ δυναστεία Αἰθιόπων Βασιλέων τριῶν. αʹ Σαβάκων, ὃς αἰχμάλωτον Βόχχωριν ἑλὼν ἔκαυσε ζῶντα, καὶ ἐβασίλευσεν ἔτη ηʹ. βʹ Σεβιχὼς υἱὸς ἔτη ιδʹ. γʹ Τάρκος ἔτη ιηʹ. Ὁμοῦ ἔτη μʹ.",
+      "text": "The Twenty-fifth Dynasty consisted of three Ethiopian kings.<br>1. Sabacôn, who, taking Bochchôris captive, burned him alive, and reigned for 8 years.<br>2. Sebichôs, his son, for 14 years.<br>3. Tarcus, for 18 years.<br>Total, 40 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f10v.jpg"
+      ],
+      "scan_note": "Fol. 10v: 'πέμπτη καὶ εἰκοστὴ δυναστεία Αἰθιόπων βασιλέων γ'', 'α' Σαβάκων ὃς αἰχμάλωτον Βόχχωριν ἑλὼν ἔκαυσε ζῶντα' to 'γ' Τάρκος ἔτη ιη'' and the total. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XX (Eusebius)",
+      "original_ref": "Waddell fr. 57b; Müller FHG II; Paris gr. 1764 fol. 10v",
+      "original_text": "ΚΑΤʼ ΕΥΣΕΒΙΟΝ. Εἰκοστὴ δυναστεία βασιλέων Διοσπολιτῶν ιβʹ, οἳ ἐβασίλευσαν ἔτη ροηʹ.",
+      "text": "From the Third Book of Manetho.<br>The Twentieth Dynasty consisted of twelve kings of Diospolis, who reigned for 178 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f10v.jpg"
+      ],
+      "scan_note": "Fol. 10v, lines 26-27, marked κ': 'κατ' Εὐσέβιον τρίτου τόμου Μανεθῶ κ' δυναστεία βα/σιλέων Διοσπολιτῶν ιβ' οἳ ἐβασίλευσαν ἔτη ροη''. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXI (Eusebius)",
+      "original_ref": "Waddell fr. 59a; Müller FHG II; Paris gr. 1764 fol. 10v, 11r",
+      "original_text": "Εἰκοστὴ πρώτη δυναστεία Βασιλέων Τανιτῶν ἑπτά. αʹ Σμένδις ἔτη κςʹ. βʹ Ψουσέννης ἔτη μαʹ. γʹ Νεφερχερὴς ἔτη δʹ. δʹ Ἀμενωφθὶς ἔτη θʹ. εʹ Ὀσοχὼρ ἔτη ςʹ. ςʹ Ψιναχῆς ἔτη θʹ. ζʹ Ψουσέννης ἔτη λεʹ. Ὁμοῦ ἔτη ρλʹ.",
+      "text": "The Twenty-first Dynasty consisted of seven kings of Tanis.<br>1. Smendis, for 26 years.<br>2. Psusennês, for 41 years.<br>3. Nephercherês, for 4 years.<br>4. Amenôphthis, for 9 years.<br>5. Osochôr, for 6 years.<br>6. Psinachês, for 9 years.<br>7. Psusennês, for 35 years.<br>Total, 130 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f10v.jpg",
+        "manetho/paris-gr1764-f11r.jpg"
+      ],
+      "scan_note": "The heading 'εἰκοστὴ πρώτη δυναστεία βασιλέων Τανιτῶν ζ'' (marked κα') is the last line of fol. 10v; the seven kings (α' Σμένδης ἔτη κς' ... ζ' Ψουσέννης) and 'ὁμοῦ ἔτη ρλ'' are the first three lines of fol. 11r. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXII (Eusebius)",
+      "original_ref": "Waddell fr. 61a; Müller FHG II; Paris gr. 1764 fol. 11r",
+      "original_text": "Εἰκοστὴ δευτέρα δυναστεία Βουβαστιτῶν Βασιλέων τριῶν. αʹ Σεσώγχωσις ἔτη καʹ. βʹ Ὀσορθὼν ἔτη ιεʹ. γʹ Τακέλωθις ἔτη ιγʹ. Ὁμοῦ μθʹ.",
+      "text": "The Twenty-second Dynasty consisted of three kings of Bubastus.<br>1. Sesônchôsis, for 21 years.<br>2. Osorthôn, for 15 years.<br>3. Takelôthis, for 13 years.<br>Total, 49 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f11r.jpg"
+      ],
+      "scan_note": "Fol. 11r, lines 4-5, marked κβ': 'εἰκοστὴ δευτέρα δυναστεία Βουβαστιτῶν βασιλέων γ'', 'α' Σεσώγχωσις ἔτη κα'' to 'ἔτη μθ''. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXIII (Eusebius)",
+      "original_ref": "Waddell fr. 63a; Müller FHG II; Paris gr. 1764 fol. 11r",
+      "original_text": "Εἰκοστὴ τρίτη δυναστεία Τανιτῶν βασιλέων τριῶν. αʹ Πετουβάστις ἔτη κεʹ. βʹ. Ὀσορθὼν ἔτη θʹ. γʹ. Ψαμμοῦς ἔτη ιʹ. Ὁμοῦ ἔτη μδʹ.",
+      "text": "The Twenty-third Dynasty consisted of three kings of Tanis.<br>1. Petubastis, for 25 years.<br>2. Osorthôn, for 9 years: the Egyptians called him Hêraclês.<br>3. Psammûs, for 10 years.<br>Total, 44 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f11r.jpg"
+      ],
+      "scan_note": "Fol. 11r, lines 6-8, marked κγ': 'εἰκοστὴ τρίτη δυναστεία Τανιτῶν βασιλέων γ'' to 'ὁμοῦ ἔτη μδ''. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXIV (Eusebius)",
+      "original_ref": "Waddell fr. 65a; Müller FHG II; Paris gr. 1764 fol. 11r",
+      "original_text": "Εἰκοστὴ τετάρτη δυναστεία. Βόχχωρις Σαΐτης ἔτη μδʹ, ἐφʼ οὗ ἀρνίον ἐφθέγξατο. Ὁμοῦ ἔτη μδʹ.",
+      "text": "The Twenty-fourth Dynasty.<br>Bochchôris of Saïs, for 44 years: in his reign a lamb spoke. Total, 44 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f11r.jpg"
+      ],
+      "scan_note": "Fol. 11r, lines 9-10, marked κδ': 'εἰκοστὴ τετάρτη δυναστεία', 'Βόχχωρις Σαΐτης ἔτη μδ' ἐφ' οὗ ἀρνίον ἐφθέγξατο'; in the right margin 'ἐπὶ τούτου ἀρνίον'. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXV (Eusebius)",
+      "original_ref": "Waddell fr. 67a; Müller FHG II; Paris gr. 1764 fol. 11r",
+      "original_text": "Εἰκοστὴ πέμπτη δυναστεία Αἰθιόπων Βασιλέων τριῶν. αʹ Σαβάκων, ὃς αἰχμάλωτον Βόχχωριν ἑλὼν ἔκαυσε ζῶντα, καὶ ἐβασίλευσε ἔτη ιβʹ. βʹ Σεβιχὼς υἱὸς ἔτη ιβʹ. γʹ Ταρακὸς ἔτη κʹ. Ὁμοῦ ἔτη μδʹ.",
+      "text": "The Twenty-fifth Dynasty consisted of three Ethiopian kings.<br>1. Sabacôn, who, taking Bochchôris captive, burned him alive, and reigned for 12 years.<br>2. Sebichôs, his son, for 12 years.<br>3. Taracus, for 20 years.<br>Total, 44 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f11r.jpg"
+      ],
+      "scan_note": "Fol. 11r, lines 11-13, marked κε': 'εἰκοστὴ πέμπτη δυναστεία Αἰθιόπων βασιλέων γ'' to 'γ' Ταρακὸς ἔτη κ'' and the total. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXVI (Africanus)",
+      "original_ref": "Waddell fr. 68; Müller FHG II; Paris gr. 1764 fol. 11r",
+      "original_text": "Ἕκτη καὶ εἰκοστὴ δυναστεία Σαϊτῶν Βασιλέων ἐννέα. αʹ Στεφινάτης ἔτη ζʹ. βʹ Νεχεψὼς ἔτη ςʹ. γʹ Νεχαὼ ἔτη ηʹ. δʹ Ψαμμήτιχος ἔτη νδʹ. εʹ Νεχαὼ δεύτερος ἔτη ςʹ. Οὗτος εἷλε τὴν Ἱερουσαλὴμ καὶ Ἰωάχαζ τὸν βασιλέα αἰχμάλωτον εἰς Αἴγυπτον ἀπήγαγε. ςʹ Ψάμμουθις ἕτερος ἔτη ἕξ. ζʹ Οὔαφρις ἔτη ιθʹ, ᾧ προσέφυγον ἁλούσης ὑπὸ Ἀσσυρίων Ἱερουσαλὴμ οἱ τῶν Ἰουδαίων ὑπόλοιποι. ηʹ Ἄμωσις ἔτη μδʹ. θʹ Ψαμμεχερίτης μῆνας ϛʹ. Ὁμοῦ ἔτη ρνʹ καὶ μῆνας ϛʹ.",
+      "text": "The Twenty-sixth Dynasty consisted of nine kings of Saïs.<br>1. Stephinatês, for 7 years.<br>2. Nechepsôs, for 6 years.<br>3. Nechaô, for 8 years.<br>4. Psammêtichus, for 54 years.<br>5. Nechaô the Second, for 6 years: he took Jerusalem, and led King Iôachaz captive into Egypt.<br>6. Psammuthis the Second, for 6 years.<br>7. Uaphris, for 19 years: the remnant of the Jews fled to him, when Jerusalem was captured by the Assyrians.<br>8. Amôsis, for 44 years.<br>Psammecheritês, for 6 months.<br>Total, 150 years 6 months.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f11r.jpg"
+      ],
+      "scan_note": "Fol. 11r, marked κς': 'κατὰ Ἀφρικανὸν ἕκτη καὶ εἰκοστὴ δυναστεία Σαϊτῶν βασιλέων θ'', six lines from 'α' Στεφινάτης' to 'θ' Ψαμμεχερίτης μῆνας ς'' and the total. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXVII (Africanus)",
+      "original_ref": "Waddell fr. 70; Müller FHG II; Paris gr. 1764 fol. 11r",
+      "original_text": "Ἑβδόμη καὶ εἰκοστὴ δυναστεία Περσῶν βασιλέων ηʹ. αʹ Καμβύσης ἔτει εʹ τῆς ἑαυτοῦ βασιλείας Περσῶν ἐβασίλευσεν Αἰγύπτου ἔτη ςʹ. βʹ Δαρεῖος Ὑστάσπου ἔτη λςʹ. γʹ Ξέρξης ὁ μέγας ἔτη καʹ. δʹ Ἀρτάβανος μῆνας ζʹ. εʹ Ἀρταξέρξης ἔτη μαʹ. ςʹ Ξέρξης μῆνας δύο. ζʹ Σογδιανὸς μῆνας ζʹ. ηʹ Δαρεῖος Ξέρξου ἔτη ιθʹ. Ὁμοῦ ἔτη ρκδʹ, μῆνας δʹ.",
+      "text": "The Twenty-seventh Dynasty consisted of eight Persian kings.<br>1. Cambysês in the fifth year of his kingship over the Persians became king of Egypt and ruled for 6 years.<br>2. Darius, son of Hystaspês, for 36 years.<br>3. Xerxês the Great, for 21 years.<br>4. Artabanus, for 7 months.<br>5. Artaxerxês, for 41 years.<br>6. Xerxês, for 2 months.<br>7. Sogdianus, for 7 months.<br>8. Darius, son of Xerxês, for 19 years.<br>Total, 124 years 4 months.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f11r.jpg"
+      ],
+      "scan_note": "Fol. 11r, marked κζ': 'ἑβδόμη καὶ εἰκοστὴ δυναστεία Περσῶν βασιλέων η'', five lines from 'α' Καμβύσης' to 'ὁμοῦ ἔτη ρκδ' μῆνας δ''. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXVIII (Africanus)",
+      "original_ref": "Waddell fr. 72a; Müller FHG II; Paris gr. 1764 fol. 11r",
+      "original_text": "Εἰκοστὴ ὀγδόη δυναστεία. Ἀμύρτεος Σαΐτης ἔτη ϛʹ.",
+      "text": "The Twenty-eighth Dynasty. Amyrteos of Saïs, for 6 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f11r.jpg"
+      ],
+      "scan_note": "Fol. 11r, one line marked κη': 'εἰκοστὴ ὀγδόη δυναστεία Ἀμυρτέος Σαΐτης ἔτη ς''. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXIX (Africanus)",
+      "original_ref": "Waddell fr. 73a; Müller FHG II; Paris gr. 1764 fol. 11r",
+      "original_text": "Ἐνάτη καὶ εἰκοστὴ δυναστεία. Μενδήσιοι βασιλεῖς δʹ. αʹ Νεφερίτης ἔτη ϛʹ. βʹ Ἄχωρις ἔτη ιγʹ. γʹ Ψάμμουθις ἔτος αʹ. δʹ Νεφερίτης μῆνας δʹ. Ὁμοῦ ἔτη κʹ, μῆνας δʹ.",
+      "text": "The Twenty-ninth Dynasty: four kings of Mendês.<br>1. Nepheritês, for 6 years.<br>2. Achôris, for 13 years.<br>3. Psammuthis, for 1 year.<br>4. Nepheritês [II], for 4 months.<br>Total, 20 years 4 months.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f11r.jpg"
+      ],
+      "scan_note": "Fol. 11r, last three lines, marked κθ': 'ἐννάτη καὶ εἰκοστὴ δυναστεία Μενδήσιοι βασιλεῖς δ'' to 'ὁμοῦ ἔτη κ' μῆνας δ''. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXVI (Eusebius)",
+      "original_ref": "Waddell fr. 69a; Müller FHG II; Paris gr. 1764 fol. 11v",
+      "original_text": "Ἕκτη καὶ εἰκοστὴ δυναστεία Σαϊτῶν βασιλέων θʹ. αʹ Ἀμμέρις Αἰθίοψ ἔτη ιβʹ. βʹ Στεφινάθις ἔτη ζʹ. γʹ Νεχεψὼς ἔτη ςʹ. δʹ Νεχαὼ ἔτη ηʹ. εʹ Ψαμμήτιχος ἔτη μεʹ. ϛʹ Νεχαὼ δεύτερος ἔτη ϛʹ. Οὗτος εἷλε κτλ. ζʹ Ψάμμουθις ἕτερος, ὁ καὶ Ψαμμήτιχος, ἔτη ιζʹ. ηʹ Οὔαφρις ἔτη κεʹ, ᾧ προσέφυγον κτλ. θʹ Ἄμωσις ἔτη μβʹ. Ὁμοῦ ἔτη ρξγʹ.",
+      "text": "The Twenty-sixth Dynasty consisted of nine kings of Saïs.<br>1. Ammeris the Ethiopian, for 12 years.<br>2. Stephinathis, for 7 years.<br>3. Nechepsôs, for 6 years.<br>4. Nechaô, for 8 years.<br>5. Psammêtichus, for 45 [44] years.<br>6. Nechaô the Second, for 6 years: he took Jerusalem, and led King Iôachaz captive into Egypt.<br>7. Psammuthis the Second, also called Psammêtichus, for 17 years.<br>8. Uaphris, for 25 years: the remnant of the Jews fled to him, when Jerusalem was captured by the Assyrians.<br>9. Amôsis, for 42 years.<br>Total, 163 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f11v.jpg"
+      ],
+      "scan_note": "Fol. 11v, top, marked κς' and 'Εὐσεβίου' in the margin: 'κατὰ Εὐσέβιον κς' δυναστεία Σαϊτῶν βασιλεῖς θ'', six lines from 'α' Ἀμμέρις Αἰθίοψ ἔτη ιβ'' to 'ὁμοῦ ἔτη ρξγ''. The manuscript writes out the notes on Nechao II and Uaphris, which Müller shortens with κτλ. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXVII (Eusebius)",
+      "original_ref": "Waddell fr. 71a; Müller FHG II; Paris gr. 1764 fol. 11v",
+      "original_text": "Εἰκοστὴ ἑβδόμη δυναστεία Περσῶν βασιλέων ηʹ. αʹ Καμβύσης ἔτει πέμπτῳ τῆς ἑαυτοῦ βασιλείας ἐβασίλευσεν Αἰγύπτου ἔτη γʹ. βʹ Μάγοι μῆνας ζʹ. γʹ Δαρεῖος ἔτη λςʹ. δʹ Ξέρξης ὁ Δαρείου ἔτη καʹ. εʹ Ἀρταξέρξης ὁ μακρόχειρ ἔτη μʹ. ϛʹ Ξέρξης ὁ δεύτερος μῆνας βʹ. ζʹ Σογδιανὸς μῆνας ζʹ. ηʹ Δαρεῖος ὁ Ξέρξου ἔτη ιθʹ. Ὁμοῦ ἔτη ρκʹ καὶ μῆνας δʹ.",
+      "text": "The Twenty-seventh Dynasty consisted of eight Persian kings.<br>1. Cambysês in the fifth year of his kingship became king of Egypt, and ruled for 3 years.<br>2. Magi, for 7 months.<br>3. Darius, for 36 years.<br>4. Xerxês, son of Darius, for 21 years.<br>5. Artaxerxês of the long hand, for 40 years.<br>6. Xerxês the Second, for 2 months.<br>7. Sogdianus, for 7 months.<br>8. Darius, son of Xerxês, for 19 years.<br>Total, 120 years 4 months.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f11v.jpg"
+      ],
+      "scan_note": "Fol. 11v, marked κζ': 'εἰκοστὴ ἑβδόμη δυναστεία Περσῶν βασιλέων η'', five lines from 'α' Καμβύσης' to 'ὁμοῦ ἔτη ρκ' καὶ μῆνας δ''. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXVIII (Eusebius)",
+      "original_ref": "Waddell fr. 72b; Müller FHG II; Paris gr. 1764 fol. 11v",
+      "original_text": "Εἰκοστὴ ὀγδόη δυναστεία. Ἀμυρταῖος Σαΐτης ἔτη ϛʹ.",
+      "text": "The Twenty-eighth Dynasty. Amyrtaeus of Saïs, for 6 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f11v.jpg"
+      ],
+      "scan_note": "Fol. 11v, one line marked κη': 'εἰκοστὴ ὀγδόη δυναστεία Ἀμυρταῖος Σαΐτης ἔτη ς''. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXIX (Eusebius)",
+      "original_ref": "Waddell fr. 73b; Müller FHG II; Paris gr. 1764 fol. 11v",
+      "original_text": "Εἰκοστὴ ἐνάτη δυναστεία. Μενδήσιοι βασιλεῖς δʹ. αʹ Νεφερίτης ἔτη ϛʹ. βʹ Ἄχωρις ἔτη ιγʹ. γʹ Ψάμμουθις ἔτος αʹ. δʹ Νεφερίτης μῆνας δʹ. εʹ Μοῦθις ἔτος αʹ. Ὁμοῦ ἔτη καʹ καὶ μῆνας δʹ.",
+      "text": "The Twenty-ninth Dynasty: four kings of Mendês.<br>1. Nepheritês, for 6 years.<br>2. Achôris, for 13 years.<br>3. Psammuthis, for 1 year.<br>4. Nepheritês [II], for 4 months.<br>5. Muthis, for 1 year.<br>Total, 21 years 4 months.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f11v.jpg"
+      ],
+      "scan_note": "Fol. 11v, marked κθ': 'εἰκοστὴ θ' δυναστεία Μενδήσιοι βασιλεῖς δ'' and two lines of kings, the fifth 'ε' Μοῦθις ἔτος α'', and the total. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXX (Africanus)",
+      "original_ref": "Waddell fr. 74a; Müller FHG II; Paris gr. 1764 fol. 11v",
+      "original_text": "Τριακοστὴ δυναστεία Σεβεννυτῶν Βασιλέων τριῶν. αʹ Νεκτανέβης ἔτη ιηʹ. βʹ Τεὼς ἔτη βʹ. γʹ Νεκτανεβὸς ἔτη ιηʹ. Ὁμοῦ ἔτη ληʹ.",
+      "text": "The Thirtieth Dynasty consisted of three kings of Sebennytus.<br>1. Nectanebês, for 18 years.<br>2. Teôs, for 2 years.<br>3. Nectanebus, for 18 years.<br>Total, 38 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f11v.jpg"
+      ],
+      "scan_note": "Fol. 11v, marked λ' and 'Ἀφρικανοῦ' in the margin: 'κατὰ Ἀφρικανὸν λ' δυναστεία Σεβεννυτῶν βασιλέων γ'' and one line of kings (Νεκτανέβης ἔτη ιη', Τεὼς ἔτη β', Νεκτανεβὸς ἔτη ιη'). Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXXI (Africanus)",
+      "original_ref": "Waddell fr. 75a; Müller FHG II; Paris gr. 1764 fol. 11v",
+      "original_text": "Πρώτη καὶ τριακοστὴ δυναστεία Περσῶν βασιλέων τριῶν. αʹ Ὦχος εἰκοστῷ ἔτει τῆς ἑαυτοῦ βασιλείας Περσῶν ἐβασίλευσεν Αἰγύπτου ἔτη βʹ. βʹ Ἀρσῆς ἔτη γʹ. γʹ Δαρεῖος ἔτη δʹ. Ὁμοῦ ἔτη τρίτου τόμου ͵ανʹ. Μέχρι τῶνδε Μανεθῶ.",
+      "text": "The Thirty-first Dynasty consisted of three Persian kings.<br>1. Ôchus in the twentieth year of his kingship over the Persians became king of Egypt, and ruled for 2 years.<br>2. Arsês, for 3 years.<br>3. Darius, for 4 years.<br>Total of years in Book III, 1050 years [850].<br>Here ends the <em>History</em> of Manetho.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f11v.jpg"
+      ],
+      "scan_note": "Fol. 11v, marked λα': 'πρώτη καὶ τριακοστὴ δυναστεία Περσῶν βασιλέων γ'', two lines of kings and the total of the third book, then the centred line 'μέχρι τῶνδε Μανεθῶς'. The next line, 'τὰ δὲ μετὰ ταῦτα ἐξ Ἑλληνικῶν συγγραφέων' (the Macedonian kings), is Syncellus and is not given here. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXX (Eusebius)",
+      "original_ref": "Waddell fr. 74b; Müller FHG II; Paris gr. 1764 fol. 11v",
+      "original_text": "Τριακοστὴ δυναστεία Σεβεννυτῶν βασιλέων τριῶν. αʹ Νεκτανέβης ἔτη ιʹ. βʹ Τεὼς ἔτη βʹ. γʹ Νεκτανεβὸς ἔτη ηʹ. Ὁμοῦ ἔτη κʹ.",
+      "text": "The Thirtieth Dynasty consisted of three kings of Sebennytus.<br>1. Nectanebês, for 10 years.<br>2. Teôs, for 2 years.<br>3. Nectanebus, for 8 years.<br>Total, 20 years.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f11v.jpg"
+      ],
+      "scan_note": "Fol. 11v, marked λ' and 'Εὐσεβίου': 'κατὰ Εὐσέβιον τριακοστὴ δυναστεία Σεβεννυτῶν βασιλέων γ'' and one line of kings (Νεκτανέβης ἔτη ι', Τεὼς ἔτη β', Νεκτανεβὸς ἔτη η'). Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    },
+    {
+      "section": "XXXI (Eusebius)",
+      "original_ref": "Waddell fr. 75b; Müller FHG II; Paris gr. 1764 fol. 11v",
+      "original_text": "Τριακοστὴ πρώτη δυναστεία Περσῶν βασιλέων τριῶν. αʹ. Ὦχος εἰκοστῷ ἔτει τῆς αὑτοῦ Περσῶν βασιλείας κρατεῖ τῆς Αἰγύπτου ἔτη ςʹ. βʹ. Μεθʼ ὃν Ἀρσῆς Ὦχου ἔτη δʹ. γʹ. Μεθʼ ὃν Δαρεῖος ἔτη ἕξ· ὃν Ἀλέξανδρος ὁ Μακεδὼν καθεῖλε. Ταῦτα τοῦ τρίτου Μανεθῶ. Μέχρι τῶνδε Μανεθῶ.",
+      "text": "The Thirty-first Dynasty consisted of three Persian kings.<br>1. Ôchus in the twentieth year of his kingship over the Persians conquered Egypt, and ruled for 6 years.<br>2. His successor was Arsês, son of Ôchus, who reigned for 4 years.<br>3. Next, Darius reigned for 6 years: he was put to death by Alexander of Macedon.<br>These are the contents of the Third Book of Manetho.<br>Here ends the <em>History</em> of Manetho.",
+      "scan_pages": [
+        "manetho/paris-gr1764-f11v.jpg"
+      ],
+      "scan_note": "Fol. 11v, last four lines, marked λα': 'τριακοστὴ πρώτη δυναστεία Περσῶν βασιλέων γ'' to 'ὃν Ἀλέξανδρος ὁ Μακεδὼν καθεῖλε· ταῦτα τοῦ τρίτου Μανεθῶ'. A later hand has written 'p. 78 ed. Paris.' in the left margin. Checked on the image (Gallica https://gallica.bnf.fr/ark:/12148/btv1b10722002s)."
+    }
+  ],
+  "verification": {
+    "scan_source": "Bibliothèque nationale de France, Gallica, Grec 1764 (https://gallica.bnf.fr/ark:/12148/btv1b10722002s), IIIF images 15-16 (fols. 10v-11v), single pages cropped from the microfilm openings",
+    "scan_license": "Bibliothèque nationale de France, Gallica: non-commercial reuse permitted with the credit 'Source gallica.bnf.fr / BnF' (Gallica terms of use); images made from the BnF microfilm",
+    "scan_manuscript": "Paris, BnF, grec 1764, parchment, 143 fols., 11th century, George Syncellus, Ecloga chronographica (acephalous; from Istanbul, bought 1687)",
+    "scan_mapping": "Read on the page images: each dynasty located by its heading and its marginal dynasty numeral, recorded in the section notes",
+    "scan_mapping_urls": [
+      "https://gallica.bnf.fr/ark:/12148/btv1b10722002s",
+      "https://archivesetmanuscrits.bnf.fr/ark:/12148/cc21908z"
+    ],
+    "scan_local_paths": [
+      "manetho/paris-gr1764-f10v.jpg",
+      "manetho/paris-gr1764-f11r.jpg",
+      "manetho/paris-gr1764-f11v.jpg"
+    ],
+    "original_text_source": "C. Müller, FHG II (1848) pp. 589-598, via DFHG (http://www.dfhg-project.org/DFHG/api.php?author=MANETHO%20SEBENNYTA), corrected against the print (https://archive.org/details/fragmentahistori02mueluoft)",
+    "original_text_license": "edition public domain (1848); DFHG digital text CC BY-NC-SA 4.0 (as stated on dfhg-project.org)",
+    "translation_source": "W. G. Waddell, Manetho (Loeb Classical Library 350, 1940), LacusCurtius transcription https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Manetho/home.html, checked against https://archive.org/details/manethowithengli00maneuoft",
+    "translation_license": "public domain in the US: 1940 copyright not renewed (no renewal for Waddell or Manetho in the Copyright Office renewal records for 1966-1969, NYPL CCE renewals data; LacusCurtius states the same); translator died 1945",
+    "translator": "W. G. Waddell (1940)",
+    "verified_date": "2026-11-12"
+  }
+}
