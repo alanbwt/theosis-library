@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>And in those days, when the number of the disciples was multiplied, there arose a murmuring of the Grecians against the Hebrews, because their widows were neglected in the daily ministration. <sup>2</sup>Then the twelve called the multitude of the disciples\nunto them,\n and said, It is not reason that we should leave the word of God, and serve tables. <sup>3</sup>Wherefore, brethren, look ye out among you seven men of honest report, full of the Holy Ghost and wisdom, whom we may appoint over this business. <sup>4</sup>But we will give ourselves continually to prayer, and to the ministry of the word. <sup>5</sup>And the saying pleased the whole multitude: and they chose Stephen, a man full of faith and of the Holy Ghost, and Philip, and Prochorus, and Nicanor, and Timon, and Parmenas, and Nicolas a proselyte of Antioch:",
       "scan_pages": [
         "sinaiticus-folios/acts-6-Q87_2r_B631.jpg"
-      ]
+      ],
+      "scan_note": "fol. 302r (Q87_2r_B631), col. 2 line 45 to col. 3 line 40. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "6.6-10",
@@ -25,7 +26,8 @@
       "text": "<sup>6</sup>Whom they set before the apostles: and when they had prayed, they laid\ntheir hands on them. <sup>7</sup>And the word of God increased; and the number of the disciples multiplied in Jerusalem greatly; and a great company of the priests were obedient to the faith. <sup>8</sup>And Stephen, full of faith and power, did great wonders and miracles among the people. <sup>9</sup>Then there arose certain of\nthe synagogue, which is called the synagogue of the Libertines, and Cyrenians, and Alexandrians, and of them of Cilicia and of Asia, disputing with Stephen. <sup>10</sup>And they were not able to resist the wisdom and the spirit by which he spake.",
       "scan_pages": [
         "sinaiticus-folios/acts-6-Q87_2r_B631.jpg"
-      ]
+      ],
+      "scan_note": "fol. 302r (Q87_2r_B631), col. 3 line 40 to col. 4 line 23. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "6.11-15",
@@ -36,7 +38,8 @@
       "scan_pages": [
         "sinaiticus-folios/acts-6-Q87_2r_B631.jpg",
         "sinaiticus-folios/acts-7-Q87_2v_B632.jpg"
-      ]
+      ],
+      "scan_note": "fol. 302r (Q87_2r_B631), col. 4, lines 24-48 (6:11-14); fol. 302v (Q87_2v_B632), col. 1, lines 1-9 (6:14-15). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -61,14 +64,16 @@
       "Q87_2v_B632"
     ],
     "scan_folio_ranges": [
-      "Q87_2r_B631 (lib. folio 302): Acts, 5:30  - 6:14",
-      "Q87_2v_B632 (lib. folio 302): Acts, 6:14  - 7:27"
+      "Q87_2r_B631 (lib. folio 302): Acts, 5:30 - 6:14",
+      "Q87_2v_B632 (lib. folio 302): Acts, 6:14 - 7:27"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

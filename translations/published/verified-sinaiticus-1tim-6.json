@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>Let as many servants as are under the yoke count their own masters worthy of all honour, that the name of God and\nhis doctrine be not blasphemed. <sup>2</sup>And they that have believing masters, let them not despise\nthem,\n because they are brethren; but rather do\nthem service, because they are faithful and beloved, partakers of the benefit. These things teach and exhort. <sup>3</sup>If any man teach otherwise, and consent not to wholesome words,\neven the words of our Lord Jesus Christ, and to the doctrine which is according to godliness; <sup>4</sup>He is proud, knowing nothing, but doting about questions and strifes of words, whereof cometh envy, strife, railings, evil surmisings, <sup>5</sup>Perverse disputings of men of corrupt minds, and destitute of the truth, supposing that gain is godliness: from such withdraw thyself. <sup>6</sup>But godliness with contentment is great gain. <sup>7</sup>For we brought nothing into\nthis world,\nand it is\n certain we can carry nothing out. <sup>8</sup>And having food and raiment let us be therewith content.",
       "scan_pages": [
         "sinaiticus-folios/1tim-5-Q86_3r_B617.jpg"
-      ]
+      ],
+      "scan_note": "fol. 295r (Q86_3r_B617), col. 3 line 40 to col. 4 line 42. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "6.9-16",
@@ -26,7 +27,8 @@
       "scan_pages": [
         "sinaiticus-folios/1tim-5-Q86_3r_B617.jpg",
         "sinaiticus-folios/2tim-1-Q86_3v_B618.jpg"
-      ]
+      ],
+      "scan_note": "fol. 295r (Q86_3r_B617), col. 4, lines 43-48 (6:9); fol. 295v (Q86_3v_B618), col. 1 line 1 to col. 2 line 8 (6:9-16). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "6.17-21",
@@ -36,7 +38,8 @@
       "text": "<sup>17</sup>Charge them that are rich in this world, that they be not highminded, nor trust in uncertain riches, but in the living God, who giveth us richly all things to enjoy; <sup>18</sup>That they do good, that they be rich in good works, ready to distribute, willing to communicate; <sup>19</sup>Laying up in store for themselves a good foundation against the time to come, that they may lay hold on eternal life. <sup>20</sup>O Timothy, keep that which is committed to thy trust, avoiding profane\nand vain babblings, and oppositions of science falsely so called: <sup>21</sup>Which some professing have erred concerning the faith. Grace\nbe\n with thee. Amen.",
       "scan_pages": [
         "sinaiticus-folios/2tim-1-Q86_3v_B618.jpg"
-      ]
+      ],
+      "scan_note": "fol. 295v (Q86_3v_B618), col. 2, lines 9-40. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -61,14 +64,16 @@
       "Q86_3v_B618"
     ],
     "scan_folio_ranges": [
-      "Q86_3r_B617 (lib. folio 295): 1 Timothy, 4:16  - 6:9",
-      "Q86_3v_B618 (lib. folio 295): 1 Timothy, 6:9  - 6:21  /  2 Timothy, 1:1  - 1:15"
+      "Q86_3r_B617 (lib. folio 295): 1 Timothy, 4:16 - 6:9",
+      "Q86_3v_B618 (lib. folio 295): 1 Timothy, 6:9 - 6:21  /  2 Timothy, 1:1 - 1:15"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

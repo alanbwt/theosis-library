@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>The elders which are among you I exhort, who am also an elder, and a witness of the sufferings of Christ, and also a partaker of the glory that shall be revealed: <sup>2</sup>Feed the flock of God which is among you, taking the oversight\nthereof, not by constraint, but willingly; not for filthy lucre, but of a ready mind; <sup>3</sup>Neither as being lords over\nGod’s heritage, but being ensamples to the flock. <sup>4</sup>And when the chief Shepherd shall appear, ye shall receive a crown of glory that fadeth not away. <sup>5</sup>Likewise, ye younger, submit yourselves unto the elder. Yea, all\nof you be subject one to another, and be clothed with humility: for God resisteth the proud, and giveth grace to the humble.",
       "scan_pages": [
         "sinaiticus-folios/1peter-5-Q89_4v_B668.jpg"
-      ]
+      ],
+      "scan_note": "fol. 320v (Q89_4v_B668), col. 3 line 15 to col. 4 line 3. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "5.6-10",
@@ -25,7 +26,8 @@
       "text": "<sup>6</sup>Humble yourselves therefore under the mighty hand of God, that he may exalt you in due time: <sup>7</sup>Casting all your care upon him; for he careth for you. <sup>8</sup>Be sober, be vigilant; because your adversary the devil, as a roaring lion, walketh about, seeking whom he may devour: <sup>9</sup>Whom resist stedfast in the faith, knowing that the same afflictions are accomplished in your brethren that are in the world. <sup>10</sup>But the God of all grace, who hath called us unto his eternal glory by Christ Jesus, after that ye have suffered a while, make you perfect, stablish, strengthen, settle\nyou.",
       "scan_pages": [
         "sinaiticus-folios/1peter-5-Q89_4v_B668.jpg"
-      ]
+      ],
+      "scan_note": "fol. 320v (Q89_4v_B668), col. 4, lines 4-33. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "5.11-14",
@@ -36,7 +38,8 @@
       "scan_pages": [
         "sinaiticus-folios/1peter-5-Q89_4v_B668.jpg",
         "sinaiticus-folios/2peter-2-Q89_5r_B669.jpg"
-      ]
+      ],
+      "scan_note": "fol. 320v (Q89_4v_B668), col. 4, lines 34-47 (5:11-13); fol. 321r (Q89_5r_B669), col. 1, lines 1-9 (5:13-14). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -61,14 +64,16 @@
       "Q89_5r_B669"
     ],
     "scan_folio_ranges": [
-      "Q89_4v_B668 (lib. folio 320): 1 Peter, 4:1  - 5:13",
-      "Q89_5r_B669 (lib. folio 321): 1 Peter, 5:13  - 5:14  /  2 Peter, 1:1  - 2:1"
+      "Q89_4v_B668 (lib. folio 320): 1 Peter, 4:1 - 5:13",
+      "Q89_5r_B669 (lib. folio 321): 1 Peter, 5:13 - 5:14  /  2 Peter, 1:1 - 2:1"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

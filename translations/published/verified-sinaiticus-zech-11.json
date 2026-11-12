@@ -14,7 +14,8 @@
       "text": "<sup>1</sup>Open thy doors, O Lebanon, that the fire may devour thy cedars. <sup>2</sup>Howl, fir tree; for the cedar is fallen; because the mighty are spoiled: howl, O ye oaks of Bashan; for the forest of the vintage is come down. <sup>3</sup>There is a voice of the howling of the shepherds; for their glory is spoiled: a voice of the roaring of young lions; for the pride of Jordan is spoiled. <sup>4</sup>Thus saith the LORD my God; Feed the flock of the slaughter; <sup>5</sup>Whose possessors slay them, and hold themselves not guilty: and they that sell them say, Blessed\nbe the LORD; for I am rich: and their own shepherds pity them not.",
       "scan_pages": [
         "sinaiticus-folios/zech-11-Q58_3v_B176.jpg"
-      ]
+      ],
+      "scan_note": "fol. 84v (Q58_3v_B176), col. 3 line 19 to col. 4 line 8. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "11.6-10",
@@ -24,7 +25,8 @@
       "scan_pages": [
         "sinaiticus-folios/zech-11-Q58_3v_B176.jpg",
         "sinaiticus-folios/zech-12-Q58_4r_B177.jpg"
-      ]
+      ],
+      "scan_note": "fol. 84v (Q58_3v_B176), col. 4, lines 9-48 (11:6-9); fol. 85r (Q58_4r_B177), col. 1, lines 1-10 (11:9-10). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "11.11-15",
@@ -33,7 +35,8 @@
       "text": "<sup>11</sup>And it was broken in that day: and so the poor of the flock that waited upon me knew that it\nwas the word of the LORD. <sup>12</sup>And I said unto them, If ye think good, give\nme my price; and if not, forbear. So they weighed for my price thirty\npieces of silver. <sup>13</sup>And the LORD said unto me, Cast it unto the potter: a goodly price that I was prised at of them. And I took the thirty\npieces of silver, and cast them to the potter in the house of the LORD. <sup>14</sup>Then I cut asunder mine other staff,\neven Bands, that I might break the brotherhood between Judah and Israel. <sup>15</sup>And the LORD said unto me, Take unto thee yet the instruments of a foolish shepherd.",
       "scan_pages": [
         "sinaiticus-folios/zech-12-Q58_4r_B177.jpg"
-      ]
+      ],
+      "scan_note": "fol. 85r (Q58_4r_B177), col. 1 line 11 to col. 2 line 3. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "11.16-17",
@@ -42,7 +45,8 @@
       "text": "<sup>16</sup>For, lo, I will raise up a shepherd in the land,\nwhich shall not visit those that be cut off, neither shall seek the young one, nor heal that that is broken, nor feed that that standeth still: but he shall eat the flesh of the fat, and tear their claws in pieces. <sup>17</sup>Woe to the idol shepherd that leaveth the flock! the sword\nshall be upon his arm, and upon his right eye: his arm shall be clean dried up, and his right eye shall be utterly darkened.",
       "scan_pages": [
         "sinaiticus-folios/zech-12-Q58_4r_B177.jpg"
-      ]
+      ],
+      "scan_note": "fol. 85r (Q58_4r_B177), col. 2, lines 3-34. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -68,11 +72,13 @@
       "Q58_4r_B177"
     ],
     "scan_folio_ranges": [
-      "Q58_3v_B176 (lib. folio 84): Zechariah, 10:1  - 11:9",
-      "Q58_4r_B177 (lib. folio 85): Zechariah, 11:9  - 12:12"
+      "Q58_3v_B176 (lib. folio 84): Zechariah, 10:1 - 11:9",
+      "Q58_4r_B177 (lib. folio 85): Zechariah, 11:9 - 12:12"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>Paul and Timotheus, the servants of Jesus Christ, to all the saints in Christ Jesus which are at Philippi, with the bishops and deacons: <sup>2</sup>Grace\nbe unto you, and peace, from God our Father, and\nfrom the Lord Jesus Christ. <sup>3</sup>I thank my God upon every remembrance of you, <sup>4</sup>Always in every prayer of mine for you all making request with joy, <sup>5</sup>For your fellowship in the gospel from the first day until now; <sup>6</sup>Being confident of this very thing, that he which hath begun a good work in you will perform\nit until the day of Jesus Christ: <sup>7</sup>Even as it is meet for me to think this of you all, because I have you in my heart; inasmuch as both in my bonds, and in the defence and confirmation of the gospel, ye all are partakers of my grace. <sup>8</sup>For God is my record, how greatly I long after you all in the bowels of Jesus Christ.",
       "scan_pages": [
         "sinaiticus-folios/phil-1-Q84_7r_B593.jpg"
-      ]
+      ],
+      "scan_note": "fol. 283r (Q84_7r_B593), col. 3, lines 1-45. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "1.9-16",
@@ -25,7 +26,8 @@
       "text": "<sup>9</sup>And this I pray, that your love may abound yet more and more in knowledge and\nin all judgment; <sup>10</sup>That ye may approve things that are excellent; that ye may be sincere and without offence till the day of Christ; <sup>11</sup>Being filled with the fruits of righteousness, which are by Jesus Christ, unto the glory and praise of God. <sup>12</sup>But I would ye should understand, brethren, that the things\nwhich happened unto me have fallen out rather unto the furtherance of the gospel; <sup>13</sup>So that my bonds in Christ are manifest in all the palace, and in all other\nplaces; <sup>14</sup>And many of the brethren in the Lord, waxing confident by my bonds, are much more bold to speak the word without fear. <sup>15</sup>Some indeed preach Christ even of envy and strife; and some also of good will: <sup>16</sup>The one preach Christ of contention, not sincerely, supposing to add affliction to my bonds:",
       "scan_pages": [
         "sinaiticus-folios/phil-1-Q84_7r_B593.jpg"
-      ]
+      ],
+      "scan_note": "fol. 283r (Q84_7r_B593), col. 3 line 46 to col. 4 line 39. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "1.17-24",
@@ -36,7 +38,8 @@
       "scan_pages": [
         "sinaiticus-folios/phil-1-Q84_7r_B593.jpg",
         "sinaiticus-folios/phil-2-Q84_7v_B594.jpg"
-      ]
+      ],
+      "scan_note": "fol. 283r (Q84_7r_B593), col. 4, lines 39-48 (1:17-18); fol. 283v (Q84_7v_B594), col. 1, lines 1-34 (1:18-24). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "1.25-30",
@@ -46,7 +49,8 @@
       "text": "<sup>25</sup>And having this confidence, I know that I shall abide and continue with you all for your furtherance and joy of faith; <sup>26</sup>That your rejoicing may be more abundant in Jesus Christ for me by my coming to you again. <sup>27</sup>Only let your conversation be as it becometh the gospel of Christ: that whether I come and see you, or else be absent, I may hear of your affairs, that ye stand fast in one spirit, with one mind striving together for the faith of the gospel; <sup>28</sup>And in nothing terrified by your adversaries: which is to them an evident token of perdition, but to you of salvation, and that of God. <sup>29</sup>For unto you it is given in the behalf of Christ, not only to believe on him, but also to suffer for his sake; <sup>30</sup>Having the same conflict which ye saw in me, and now hear\nto be\n in me.",
       "scan_pages": [
         "sinaiticus-folios/phil-2-Q84_7v_B594.jpg"
-      ]
+      ],
+      "scan_note": "fol. 283v (Q84_7v_B594), col. 1 line 35 to col. 2 line 25. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q84_7v_B594"
     ],
     "scan_folio_ranges": [
-      "Q84_7r_B593 (lib. folio 283): Ephesians, 6:15  - 6:24  /  Philippians, 1:1  - 1:18",
-      "Q84_7v_B594 (lib. folio 283): Philippians, 1:18  - 2:24"
+      "Q84_7r_B593 (lib. folio 283): Ephesians, 6:15 - 6:24  /  Philippians, 1:1 - 1:18",
+      "Q84_7v_B594 (lib. folio 283): Philippians, 1:18 - 2:24"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

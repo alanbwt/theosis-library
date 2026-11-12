@@ -15,7 +15,8 @@
       "scan_pages": [
         "sinaiticus-folios/isa-38-Q44_7v_B120.jpg",
         "sinaiticus-folios/isa-39-Q44_8r_B121.jpg"
-      ]
+      ],
+      "scan_note": "fol. 56v (Q44_7v_B120), col. 4, lines 12-48 (38:1-5); fol. 57r (Q44_8r_B121), col. 1, lines 1-25 (38:5-8). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "38.9-16",
@@ -24,7 +25,8 @@
       "text": "<sup>9</sup>The writing of Hezekiah king of Judah, when he had been sick, and was recovered of his sickness: <sup>10</sup>I said in the cutting off of my days, I shall go to the gates of the grave: I am deprived of the residue of my years. <sup>11</sup>I said, I shall not see the LORD,\neven the LORD, in the land of the living: I shall behold man no more with the inhabitants of the world. <sup>12</sup>Mine age is departed, and is removed from me as a shepherd’s tent: I have cut off like a weaver my life: he will cut me off with pining sickness: from day\neven to night wilt thou make an end of me. <sup>13</sup>I reckoned till morning,\nthat, as a lion, so will he break all my bones: from day\neven to night wilt thou make an end of me. <sup>14</sup>Like a crane\nor a swallow, so did I chatter: I did mourn as a dove: mine eyes fail\nwith looking upward: O LORD, I am oppressed; undertake for me. <sup>15</sup>What shall I say? he hath both spoken unto me, and himself hath done\nit: I shall go softly all my years in the bitterness of my soul. <sup>16</sup>O Lord, by these\nthings men live, and in all these\nthings is the life of my spirit: so wilt thou recover me, and make me to live.",
       "scan_pages": [
         "sinaiticus-folios/isa-39-Q44_8r_B121.jpg"
-      ]
+      ],
+      "scan_note": "fol. 57r (Q44_8r_B121), col. 1 line 26 to col. 2 line 29. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "38.17-22",
@@ -33,7 +35,8 @@
       "text": "<sup>17</sup>Behold, for peace I had great bitterness: but thou hast in love to my soul\ndelivered it from the pit of corruption: for thou hast cast all my sins behind thy back. <sup>18</sup>For the grave cannot praise thee, death can\nnot celebrate thee: they that go down into the pit cannot hope for thy truth. <sup>19</sup>The living, the living, he shall praise thee, as I\ndo this day: the father to the children shall make known thy truth. <sup>20</sup>The LORD\nwas ready to save me: therefore we will sing my songs to the stringed instruments all the days of our life in the house of the LORD. <sup>21</sup>For Isaiah had said, Let them take a lump of figs, and lay\nit\n for a plaister upon the boil, and he shall recover. <sup>22</sup>Hezekiah also had said, What\nis the sign that I shall go up to the house of the LORD?",
       "scan_pages": [
         "sinaiticus-folios/isa-39-Q44_8r_B121.jpg"
-      ]
+      ],
+      "scan_note": "fol. 57r (Q44_8r_B121), col. 2 line 30 to col. 3 line 20. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -59,11 +62,13 @@
       "Q44_8r_B121"
     ],
     "scan_folio_ranges": [
-      "Q44_7v_B120 (lib. folio 56): Isaiah, 37:19  - 38:5",
-      "Q44_8r_B121 (lib. folio 57): Isaiah, 38:5  - 39:8"
+      "Q44_7v_B120 (lib. folio 56): Isaiah, 37:19 - 38:5",
+      "Q44_8r_B121 (lib. folio 57): Isaiah, 38:5 - 39:8"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

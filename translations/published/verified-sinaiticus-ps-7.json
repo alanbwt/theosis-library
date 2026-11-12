@@ -15,7 +15,8 @@
       "scan_pages": [
         "sinaiticus-folios/ps-5-Q59_1v_B184.jpg",
         "sinaiticus-folios/ps-8-Q59_2r_B185.jpg"
-      ]
+      ],
+      "scan_note": "fol. 88v (Q59_1v_B184), col. 2, lines 45-48 (7:1-2); fol. 89r (Q59_2r_B185), col. 1, lines 1-11 (7:2-5). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "7.6-10",
@@ -24,7 +25,8 @@
       "text": "<sup>5</sup>Let the enemy persecute my soul, and take\nit; yea, let him tread down my life upon the earth, and lay mine honour in the dust. Selah. <sup>6</sup>Arise, O LORD, in thine anger, lift up thyself because of the rage of mine enemies: and awake for me\nto the judgment\nthat thou hast commanded. <sup>7</sup>So shall the congregation of the people compass thee about: for their sakes therefore return thou on high. <sup>8</sup>The LORD shall judge the people: judge me, O LORD, according to my righteousness, and according to mine integrity\nthat is in me. <sup>9</sup>Oh let the wickedness of the wicked come to an end; but establish the just: for the righteous God trieth the hearts and reins.",
       "scan_pages": [
         "sinaiticus-folios/ps-8-Q59_2r_B185.jpg"
-      ]
+      ],
+      "scan_note": "fol. 89r (Q59_2r_B185), col. 1, lines 12-30. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "7.11-15",
@@ -33,7 +35,8 @@
       "text": "<sup>10</sup>My defence\nis of God, which saveth the upright in heart. <sup>11</sup>God judgeth the righteous, and God is angry\nwith the wicked\n every day. <sup>12</sup>If he turn not, he will whet his sword; he hath bent his bow, and made it ready. <sup>13</sup>He hath also prepared for him the instruments of death; he ordaineth his arrows against the persecutors. <sup>14</sup>Behold, he travaileth with iniquity, and hath conceived mischief, and brought forth falsehood.",
       "scan_pages": [
         "sinaiticus-folios/ps-8-Q59_2r_B185.jpg"
-      ]
+      ],
+      "scan_note": "fol. 89r (Q59_2r_B185), col. 1, lines 31-45. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "7.16-18",
@@ -42,7 +45,8 @@
       "text": "<sup>15</sup>He made a pit, and digged it, and is fallen into the ditch\nwhich\n he made. <sup>16</sup>His mischief shall return upon his own head, and his violent dealing shall come down upon his own pate. <sup>17</sup>I will praise the LORD according to his righteousness: and will sing praise to the name of the LORD most high.",
       "scan_pages": [
         "sinaiticus-folios/ps-8-Q59_2r_B185.jpg"
-      ]
+      ],
+      "scan_note": "fol. 89r (Q59_2r_B185), col. 1 line 46 to col. 2 line 7. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,11 +75,13 @@
       "Q59_2r_B185"
     ],
     "scan_folio_ranges": [
-      "Q59_1v_B184 (lib. folio 88): Psalms, 4:5  - 7:2",
-      "Q59_2r_B185 (lib. folio 89): Psalms, 7:2  - 9:4"
+      "Q59_1v_B184 (lib. folio 88): Psalms, 4:5 - 7:2",
+      "Q59_2r_B185 (lib. folio 89): Psalms, 7:2 - 9:4"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

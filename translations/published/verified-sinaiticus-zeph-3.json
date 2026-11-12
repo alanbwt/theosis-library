@@ -15,7 +15,8 @@
       "scan_pages": [
         "sinaiticus-folios/zeph-3-Q57_6v_B166.jpg",
         "sinaiticus-folios/zeph-3-Q57_7r_B167.jpg"
-      ]
+      ],
+      "scan_note": "fol. 79v (Q57_6v_B166), col. 4, lines 45-49 (3:1-2); fol. 80r (Q57_7r_B167), col. 1, lines 1-27 (3:2-5). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.6-10",
@@ -24,7 +25,8 @@
       "text": "<sup>6</sup>I have cut off the nations: their towers are desolate; I made their streets waste, that none passeth by: their cities are destroyed, so that there is no man, that there is none inhabitant. <sup>7</sup>I said, Surely thou wilt fear me, thou wilt receive instruction; so their dwelling should not be cut off, howsoever I punished them: but they rose early,\nand corrupted all their doings. <sup>8</sup>Therefore wait ye upon me, saith the LORD, until the day that I rise up to the prey: for my determination\nis to gather the nations, that I may assemble the kingdoms, to pour upon them mine indignation,\neven\n all my fierce anger: for all the earth shall be devoured with the fire of my jealousy. <sup>9</sup>For then will I turn to the people a pure language, that they may all call upon the name of the LORD, to serve him with one consent. <sup>10</sup>From beyond the rivers of Ethiopia my suppliants,\neven the daughter of my dispersed, shall bring mine offering.",
       "scan_pages": [
         "sinaiticus-folios/zeph-3-Q57_7r_B167.jpg"
-      ]
+      ],
+      "scan_note": "fol. 80r (Q57_7r_B167), col. 1 line 27 to col. 2 line 27. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.11-15",
@@ -33,7 +35,8 @@
       "text": "<sup>11</sup>In that day shalt thou not be ashamed for all thy doings, wherein thou hast transgressed against me: for then I will take away out of the midst of thee them that rejoice in thy pride, and thou shalt no more be haughty because of my holy mountain. <sup>12</sup>I will also leave in the midst of thee an afflicted and poor people, and they shall trust in the name of the LORD. <sup>13</sup>The remnant of Israel shall not do iniquity, nor speak lies; neither shall a deceitful tongue be found in their mouth: for they shall feed and lie down, and none shall make\nthem afraid. <sup>14</sup>Sing, O daughter of Zion; shout, O Israel; be glad and rejoice with all the heart, O daughter of Jerusalem. <sup>15</sup>The LORD hath taken away thy judgments, he hath cast out thine enemy: the king of Israel,\neven the LORD,\nis in the midst of thee: thou shalt not see evil any more.",
       "scan_pages": [
         "sinaiticus-folios/zeph-3-Q57_7r_B167.jpg"
-      ]
+      ],
+      "scan_note": "fol. 80r (Q57_7r_B167), col. 2 line 27 to col. 3 line 21. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.16-20",
@@ -42,7 +45,8 @@
       "text": "<sup>16</sup>In that day it shall be said to Jerusalem, Fear thou not:\nand to\n Zion, Let not thine hands be slack. <sup>17</sup>The LORD thy God in the midst of thee\nis mighty; he will save, he will rejoice over thee with joy; he will rest in his love, he will joy over thee with singing. <sup>18</sup>I will gather\nthem that are sorrowful for the solemn assembly,\nwho are of thee,\nto whom the reproach of it\nwas\n a burden. <sup>19</sup>Behold, at that time I will undo all that afflict thee: and I will save her that halteth, and gather her that was driven out; and I will get them praise and fame in every land where they have been put to shame. <sup>20</sup>At that time will I bring you\nagain, even in the time that I gather you: for I will make you a name and a praise among all people of the earth, when I turn back your captivity before your eyes, saith the LORD.",
       "scan_pages": [
         "sinaiticus-folios/zeph-3-Q57_7r_B167.jpg"
-      ]
+      ],
+      "scan_note": "fol. 80r (Q57_7r_B167), col. 3 line 21 to col. 4 line 16. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -68,11 +72,13 @@
       "Q57_7r_B167"
     ],
     "scan_folio_ranges": [
-      "Q57_6v_B166 (lib. folio 79): Zephaniah, 1:12  - 3:2",
-      "Q57_7r_B167 (lib. folio 80): Zephaniah, 3:2  - 3:20"
+      "Q57_6v_B166 (lib. folio 79): Zephaniah, 1:12 - 3:2",
+      "Q57_7r_B167 (lib. folio 80): Zephaniah, 3:2 - 3:20"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

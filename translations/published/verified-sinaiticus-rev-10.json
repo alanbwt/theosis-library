@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>And I saw another mighty angel come down from heaven, clothed with a cloud: and a rainbow\nwas upon his head, and his face\nwas\n as it were the sun, and his feet as pillars of fire: <sup>2</sup>And he had in his hand a little book open: and he set his right foot upon the sea, and\nhis left\nfoot on the earth, <sup>3</sup>And cried with a loud voice, as\nwhen a lion roareth: and when he had cried, seven thunders uttered their voices. <sup>4</sup>And when the seven thunders had uttered their voices, I was about to write: and I heard a voice from heaven saying unto me, Seal up those things which the seven thunders uttered, and write them not. <sup>5</sup>And the angel which I saw stand upon the sea and upon the earth lifted up his hand to heaven,",
       "scan_pages": [
         "sinaiticus-folios/rev-10-Q90_4v_B684.jpg"
-      ]
+      ],
+      "scan_note": "fol. 328v (Q90_4v_B684), col. 3 line 38 to col. 4 line 31. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "10.6-10",
@@ -26,7 +27,8 @@
       "scan_pages": [
         "sinaiticus-folios/rev-10-Q90_4v_B684.jpg",
         "sinaiticus-folios/rev-11-Q90_5r_B685.jpg"
-      ]
+      ],
+      "scan_note": "fol. 328v (Q90_4v_B684), col. 4, lines 31-48 (10:6-8); fol. 329r (Q90_5r_B685), col. 1, lines 1-27 (10:8-10). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "10.11",
@@ -36,7 +38,8 @@
       "text": "<sup>11</sup>And he said unto me, Thou must prophesy again before many peoples, and nations, and tongues, and kings.",
       "scan_pages": [
         "sinaiticus-folios/rev-11-Q90_5r_B685.jpg"
-      ]
+      ],
+      "scan_note": "fol. 329r (Q90_5r_B685), col. 1, lines 27-32. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -61,14 +64,16 @@
       "Q90_5r_B685"
     ],
     "scan_folio_ranges": [
-      "Q90_4v_B684 (lib. folio 328): Revelation, 9:5  - 10:8",
-      "Q90_5r_B685 (lib. folio 329): Revelation, 10:8  - 11:19"
+      "Q90_4v_B684 (lib. folio 328): Revelation, 9:5 - 10:8",
+      "Q90_5r_B685 (lib. folio 329): Revelation, 10:8 - 11:19"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

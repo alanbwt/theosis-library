@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/col-2-Q85_1r_B597.jpg",
         "sinaiticus-folios/col-3-Q85_1v_B598.jpg"
-      ]
+      ],
+      "scan_note": "fol. 285r (Q85_1r_B597), col. 4, lines 11-48 (2:1-7); fol. 285v (Q85_1v_B598), col. 1, lines 1-14 (2:7-8). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "2.9-16",
@@ -26,7 +27,8 @@
       "text": "<sup>9</sup>For in him dwelleth all the fulness of the Godhead bodily. <sup>10</sup>And ye are complete in him, which is the head of all principality and power: <sup>11</sup>In whom also ye are circumcised with the circumcision made without hands, in putting off the body of the sins of the flesh by the circumcision of Christ: <sup>12</sup>Buried with him in baptism, wherein also ye are risen with\nhim\n through the faith of the operation of God, who hath raised him from the dead. <sup>13</sup>And you, being dead in your sins and the uncircumcision of your flesh, hath he quickened together with him, having forgiven you all trespasses; <sup>14</sup>Blotting out the handwriting of ordinances that was against us, which was contrary to us, and took it out of the way, nailing it to his cross; <sup>15</sup>And having spoiled principalities and powers, he made a shew of them openly, triumphing over them in it. <sup>16</sup>Let no man therefore judge you in meat, or in drink, or in respect of an holyday, or of the new moon, or of the sabbath\ndays:",
       "scan_pages": [
         "sinaiticus-folios/col-3-Q85_1v_B598.jpg"
-      ]
+      ],
+      "scan_note": "fol. 285v (Q85_1v_B598), col. 1 line 15 to col. 2 line 18. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "2.17-23",
@@ -36,7 +38,8 @@
       "text": "<sup>17</sup>Which are a shadow of things to come; but the body\nis of Christ. <sup>18</sup>Let no man beguile you of your reward in a voluntary humility and worshipping of angels, intruding into those things which he hath not seen, vainly puffed up by his fleshly mind, <sup>19</sup>And not holding the Head, from which all the body by joints and bands having nourishment ministered, and knit together, increaseth with the increase of God. <sup>20</sup>Wherefore if ye be dead with Christ from the rudiments of the world, why, as though living in the world, are ye subject to ordinances, <sup>21</sup>(Touch not; taste not; handle not; <sup>22</sup>Which all are to perish with the using;) after the commandments and doctrines of men? <sup>23</sup>Which things have indeed a shew of wisdom in will worship, and humility, and neglecting of the body; not in any honour to the satisfying of the flesh.",
       "scan_pages": [
         "sinaiticus-folios/col-3-Q85_1v_B598.jpg"
-      ]
+      ],
+      "scan_note": "fol. 285v (Q85_1v_B598), col. 2 line 18 to col. 3 line 13. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -61,14 +64,16 @@
       "Q85_1v_B598"
     ],
     "scan_folio_ranges": [
-      "Q85_1r_B597 (lib. folio 285): Colossians, 1:9  - 2:7",
-      "Q85_1v_B598 (lib. folio 285): Colossians, 2:7  - 3:16"
+      "Q85_1r_B597 (lib. folio 285): Colossians, 1:9 - 2:7",
+      "Q85_1v_B598 (lib. folio 285): Colossians, 2:7 - 3:16"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

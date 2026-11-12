@@ -14,7 +14,8 @@
       "text": "<sup>1</sup>The burden of the word of the LORD to Israel by Malachi. <sup>2</sup>I have loved you, saith the LORD. Yet ye say, Wherein hast thou loved us?\nWas not Esau Jacob’s brother? saith the LORD: yet I loved Jacob, <sup>3</sup>And I hated Esau, and laid his mountains and his heritage waste for the dragons of the wilderness. <sup>4</sup>Whereas Edom saith, We are impoverished, but we will return and build the desolate places; thus saith the LORD of hosts, They shall build, but I will throw down; and they shall call them, The border of wickedness, and, The people against whom the LORD hath indignation for ever. <sup>5</sup>And your eyes shall see, and ye shall say, The LORD will be magnified from the border of Israel.",
       "scan_pages": [
         "sinaiticus-folios/mal-1-Q58_5r_B179.jpg"
-      ]
+      ],
+      "scan_note": "fol. 86r (Q58_5r_B179), col. 4, lines 1-40. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "1.6-10",
@@ -24,7 +25,8 @@
       "scan_pages": [
         "sinaiticus-folios/mal-1-Q58_5r_B179.jpg",
         "sinaiticus-folios/mal-2-Q58_5v_B180.jpg"
-      ]
+      ],
+      "scan_note": "fol. 86r (Q58_5r_B179), col. 4, lines 40-48 (1:6); fol. 86v (Q58_5v_B180), col. 1 line 1 to col. 2 line 6 (1:6-10). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "1.11-14",
@@ -33,7 +35,8 @@
       "text": "<sup>11</sup>For from the rising of the sun even unto the going down of the same my name\nshall be great among the Gentiles; and in every place incense\nshall be offered unto my name, and a pure offering: for my name\nshall be great among the heathen, saith the LORD of hosts. <sup>12</sup>But ye have profaned it, in that ye say, The table of the LORD\nis polluted; and the fruit thereof,\neven his meat,\nis contemptible. <sup>13</sup>Ye said also, Behold, what a weariness\nis it! and ye have snuffed at it, saith the LORD of hosts; and ye brought\nthat which was\n torn, and the lame, and the sick; thus ye brought an offering: should I accept this of your hand? saith the LORD. <sup>14</sup>But cursed\nbe the deceiver, which hath in his flock a male, and voweth, and sacrificeth unto the LORD a corrupt thing: for I\nam\n a great King, saith the LORD of hosts, and my name\nis dreadful among the heathen.",
       "scan_pages": [
         "sinaiticus-folios/mal-2-Q58_5v_B180.jpg"
-      ]
+      ],
+      "scan_note": "fol. 86v (Q58_5v_B180), col. 2 line 7 to col. 3 line 7. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -59,11 +62,13 @@
       "Q58_5v_B180"
     ],
     "scan_folio_ranges": [
-      "Q58_5r_B179 (lib. folio 86): Zechariah, 14:8  - 14:21  /  Malachi, 1:1  - 1:6",
-      "Q58_5v_B180 (lib. folio 86): Malachi, 1:6  - 2:11"
+      "Q58_5r_B179 (lib. folio 86): Zechariah, 14:8 - 14:21  /  Malachi, 1:1 - 1:6",
+      "Q58_5v_B180 (lib. folio 86): Malachi, 1:6 - 2:11"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

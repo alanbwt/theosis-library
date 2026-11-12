@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>After these things Paul departed from Athens, and came to Corinth; <sup>2</sup>And found a certain Jew named Aquila, born in Pontus, lately come from Italy, with his wife Priscilla; (because that Claudius had commanded all Jews to depart from Rome:) and came unto them. <sup>3</sup>And because he was of the same craft, he abode with them, and wrought: for by their occupation they were tentmakers. <sup>4</sup>And he reasoned in the synagogue every sabbath, and persuaded the Jews and the Greeks. <sup>5</sup>And when Silas and Timotheus were come from Macedonia, Paul was pressed in the spirit, and testified to the Jews\nthat Jesus\nwas\n Christ. <sup>6</sup>And when they opposed themselves, and blasphemed, he shook\nhis\n raiment, and said unto them, Your blood\nbe upon your own heads; I\nam clean: from henceforth I will go unto the Gentiles. <sup>7</sup>And he departed thence, and entered into a certain\nman’s house, named Justus,\none that worshipped God, whose house joined hard to the synagogue. <sup>8</sup>And Crispus, the chief ruler of the synagogue, believed on the Lord with all his house; and many of the Corinthians hearing believed, and were baptized.",
       "scan_pages": [
         "sinaiticus-folios/acts-18-Q88_2r_B647.jpg"
-      ]
+      ],
+      "scan_note": "fol. 310r (Q88_2r_B647), col. 3 line 31 to col. 4 line 45. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "18.9-16",
@@ -26,7 +27,8 @@
       "scan_pages": [
         "sinaiticus-folios/acts-18-Q88_2r_B647.jpg",
         "sinaiticus-folios/acts-19-Q88_2v_B648.jpg"
-      ]
+      ],
+      "scan_note": "fol. 310r (Q88_2r_B647), col. 4, lines 45-48 (18:9); fol. 310v (Q88_2v_B648), col. 1, lines 1-43 (18:9-16). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "18.17-24",
@@ -36,7 +38,8 @@
       "text": "<sup>17</sup>Then all the Greeks took Sosthenes, the chief ruler of the synagogue, and beat\nhim before the judgment seat. And Gallio cared for none of those things. <sup>18</sup>And Paul\nafter this tarried\nthere yet a good while, and then took his leave of the brethren, and sailed thence into Syria, and with him Priscilla and Aquila; having shorn\nhis head in Cenchrea: for he had a vow. <sup>19</sup>And he came to Ephesus, and left them there: but he himself entered into the synagogue, and reasoned with the Jews. <sup>20</sup>When they desired\nhim to tarry longer time with them, he consented not; <sup>21</sup>But bade them farewell, saying, I must by all means keep this feast that cometh in Jerusalem: but I will return again unto you, if God will. And he sailed from Ephesus. <sup>22</sup>And when he had landed at Caesarea, and gone up, and saluted the church, he went down to Antioch. <sup>23</sup>And after he had spent some time\nthere, he departed, and went over\nall the country of Galatia and Phrygia in order, strengthening all the disciples. <sup>24</sup>And a certain Jew named Apollos, born at Alexandria, an eloquent man,\nand mighty in the scriptures, came to Ephesus.",
       "scan_pages": [
         "sinaiticus-folios/acts-19-Q88_2v_B648.jpg"
-      ]
+      ],
+      "scan_note": "fol. 310v (Q88_2v_B648), col. 1 line 43 to col. 3 line 1. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "18.25-28",
@@ -46,7 +49,8 @@
       "text": "<sup>25</sup>This man was instructed in the way of the Lord; and being fervent in the spirit, he spake and taught diligently the things of the Lord, knowing only the baptism of John. <sup>26</sup>And he began to speak boldly in the synagogue: whom when Aquila and Priscilla had heard, they took him unto\nthem, and expounded unto him the way of God more perfectly. <sup>27</sup>And when he was disposed to pass into Achaia, the brethren wrote, exhorting the disciples to receive him: who, when he was come, helped them much which had believed through grace: <sup>28</sup>For he mightily convinced the Jews,\nand that publickly, shewing by the scriptures that Jesus was Christ.",
       "scan_pages": [
         "sinaiticus-folios/acts-19-Q88_2v_B648.jpg"
-      ]
+      ],
+      "scan_note": "fol. 310v (Q88_2v_B648), col. 3, lines 1-36. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q88_2v_B648"
     ],
     "scan_folio_ranges": [
-      "Q88_2r_B647 (lib. folio 310): Acts, 17:17  - 18:9",
-      "Q88_2v_B648 (lib. folio 310): Acts, 18:9  - 19:10"
+      "Q88_2r_B647 (lib. folio 310): Acts, 17:17 - 18:9",
+      "Q88_2v_B648 (lib. folio 310): Acts, 18:9 - 19:10"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

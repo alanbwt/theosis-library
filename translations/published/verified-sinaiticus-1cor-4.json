@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>Let a man so account of us, as of the ministers of Christ, and stewards of the mysteries of God. <sup>2</sup>Moreover it is required in stewards, that a man be found faithful. <sup>3</sup>But with me it is a very small thing that I should be judged of you, or of man’s judgment: yea, I judge not mine own self. <sup>4</sup>For I know nothing by myself; yet am I not hereby justified: but he that judgeth me is the Lord. <sup>5</sup>Therefore judge nothing before the time, until the Lord come, who both will bring to light the hidden things of darkness, and will make manifest the counsels of the hearts: and then shall every man have praise of God. <sup>6</sup>And these things, brethren, I have in a figure transferred to myself and\nto Apollos for your sakes; that ye might learn in us not to think\nof men above that which is written, that no one of you be puffed up for one against another. <sup>7</sup>For who maketh thee to differ\nfrom another? and what hast thou that thou didst not receive? now if thou didst receive\nit, why dost thou glory, as if thou hadst not received\nit? <sup>8</sup>Now ye are full, now ye are rich, ye have reigned as kings without us: and I would to God ye did reign, that we also might reign with you.",
       "scan_pages": [
         "sinaiticus-folios/1cor-4-Q82_8v_B564.jpg"
-      ]
+      ],
+      "scan_note": "fol. 268v (Q82_8v_B564), col. 3 line 2 to col. 4 line 7. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "4.9-16",
@@ -26,7 +27,8 @@
       "scan_pages": [
         "sinaiticus-folios/1cor-4-Q82_8v_B564.jpg",
         "sinaiticus-folios/1cor-6-Q83_1r_B565.jpg"
-      ]
+      ],
+      "scan_note": "fol. 268v (Q82_8v_B564), col. 4, lines 8-48 (4:9-15); fol. 269r (Q83_1r_B565), col. 1, lines 1-8 (4:15-16). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "4.17-21",
@@ -36,7 +38,8 @@
       "text": "<sup>17</sup>For this cause have I sent unto you Timotheus, who is my beloved son, and faithful in the Lord, who shall bring you into remembrance of my ways which be in Christ, as I teach every where in every church. <sup>18</sup>Now some are puffed up, as though I would not come to you. <sup>19</sup>But I will come to you shortly, if the Lord will, and will know, not the speech of them which are puffed up, but the power. <sup>20</sup>For the kingdom of God\nis not in word, but in power. <sup>21</sup>What will ye? shall I come unto you with a rod, or in love, and\nin the spirit of meekness?",
       "scan_pages": [
         "sinaiticus-folios/1cor-6-Q83_1r_B565.jpg"
-      ]
+      ],
+      "scan_note": "fol. 269r (Q83_1r_B565), col. 1, lines 8-35. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -61,14 +64,16 @@
       "Q83_1r_B565"
     ],
     "scan_folio_ranges": [
-      "Q82_8v_B564 (lib. folio 268): 1 Corinthians, 3:5  - 4:15",
-      "Q83_1r_B565 (lib. folio 269): 1 Corinthians, 4:15  - 6:13"
+      "Q82_8v_B564 (lib. folio 268): 1 Corinthians, 3:5 - 4:15",
+      "Q83_1r_B565 (lib. folio 269): 1 Corinthians, 4:15 - 6:13"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

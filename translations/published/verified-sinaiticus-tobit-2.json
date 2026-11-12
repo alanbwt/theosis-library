@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/tobit-1-Q37_3v_L019.jpg",
         "sinaiticus-folios/tobit-2-Q37_4r_B011.jpg"
-      ]
+      ],
+      "scan_note": "quire 37, leaf 3v (Q37_3v_L019), col. 4, lines 27-48 (2:1-2); fol. 2r (Q37_4r_B011), col. 1, lines 1-39 (2:2-5). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "2.6-10",
@@ -25,7 +26,8 @@
       "text": "<sup>6</sup>Remembering that prophecy of Amos, as he said, Your feasts shall be turned into mourning, and all your mirth into lamentation. <sup>7</sup>Therefore I wept: and after the going down of the sun I went and made a grave, and buried him. <sup>8</sup>But my neighbours mocked me, and said, This man is not yet afraid to be put to death for this matter: who fled away; and yet, lo, he burieth the dead again. <sup>9</sup>The same night also I returned from the burial, and slept by the wall of my courtyard, being polluted and my face was uncovered: <sup>10</sup>And I knew not that there were sparrows in the wall, and mine eyes being open, the sparrows muted warm dung into mine eyes, and a whiteness came in mine eyes: and I went to the physicians, but they helped me not: moreover Achiacharus did nourish me, until I went into Elymais.",
       "scan_pages": [
         "sinaiticus-folios/tobit-2-Q37_4r_B011.jpg"
-      ]
+      ],
+      "scan_note": "fol. 2r (Q37_4r_B011), col. 1 line 39 to col. 3 line 5. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "2.11-14",
@@ -34,7 +36,8 @@
       "text": "<sup>11</sup>And my wife Anna did take women’s works to do. <sup>12</sup>And when she had sent them home to the owners, they paid her wages, and gave her also besides a kid. <sup>13</sup>And when it was in my house, and began to cry, I said unto her, From whence is this kid? is it not stolen? render it to the owners; for it is not lawful to eat any thing that is stolen. <sup>14</sup>But she replied upon me, It was given for a gift more than the wages. Howbeit I did not believe her, but bade her render it to the owners: and I was abashed at her. But she replied upon me, Where are thine alms and thy righteous deeds? behold, thou and all thy works are known.",
       "scan_pages": [
         "sinaiticus-folios/tobit-2-Q37_4r_B011.jpg"
-      ]
+      ],
+      "scan_note": "fol. 2r (Q37_4r_B011), col. 3 line 6 to col. 4 line 4. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "verification": {
@@ -51,8 +54,8 @@
       "sinaiticus-folios/tobit-2-Q37_4r_B011.jpg"
     ],
     "scan_folio_ranges": [
-      "Q37_3v_L019 (lib. folio ): Tobit, 1:7  - 2:2",
-      "Q37_4r_B011 (lib. folio 2): Tobit, 2:2  - 3:6"
+      "Q37_3v_L019 (lib. folio xix_v): Tobit, 1:7 - 2:2",
+      "Q37_4r_B011 (lib. folio 2): Tobit, 2:2 - 3:6"
     ],
     "scan_verse_info": "Tobit, 1:7  - 2:2",
     "section_folios_verified": true,
@@ -64,6 +67,9 @@
     "translation_source": "ebible.org eng-kjv USFM (KJV with Apocrypha)",
     "translation_license": "public domain",
     "translator": "King James Version Apocrypha (1611; 1769 text)",
-    "verified_date": "2026-09-05"
+    "verified_date": "2026-09-05",
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

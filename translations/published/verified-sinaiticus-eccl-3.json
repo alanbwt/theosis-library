@@ -14,7 +14,8 @@
       "text": "<sup>1</sup>To every\nthing there is a season, and a time to every purpose under the heaven: <sup>2</sup>A time to be born, and a time to die; a time to plant, and a time to pluck up\nthat which is planted; <sup>3</sup>A time to kill, and a time to heal; a time to break down, and a time to build up; <sup>4</sup>A time to weep, and a time to laugh; a time to mourn, and a time to dance; <sup>5</sup>A time to cast away stones, and a time to gather stones together; a time to embrace, and a time to refrain from embracing; <sup>6</sup>A time to get, and a time to lose; a time to keep, and a time to cast away; <sup>7</sup>A time to rend, and a time to sew; a time to keep silence, and a time to speak; <sup>8</sup>A time to love, and a time to hate; a time of war, and a time of peace.",
       "scan_pages": [
         "sinaiticus-folios/eccl-3-Q66_1r_B295.jpg"
-      ]
+      ],
+      "scan_note": "fol. 144r (Q66_1r_B295), col. 1, lines 16-43. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.9-16",
@@ -23,7 +24,8 @@
       "text": "<sup>9</sup>What profit hath he that worketh in that wherein he laboureth? <sup>10</sup>I have seen the travail, which God hath given to the sons of men to be exercised in it. <sup>11</sup>He hath made every\nthing beautiful in his time: also he hath set the world in their heart, so that no man can find out the work that God maketh from the beginning to the end. <sup>12</sup>I know that\nthere is no good in them, but for\na man\n to rejoice, and to do good in his life. <sup>13</sup>And also that every man should eat and drink, and enjoy the good of all his labour, it\nis the gift of God. <sup>14</sup>I know that, whatsoever God doeth, it shall be for ever: nothing can be put to it, nor any thing taken from it: and God doeth\nit, that\nmen should fear before him. <sup>15</sup>That which hath been is now; and that which is to be hath already been; and God requireth that which is past. <sup>16</sup>And moreover I saw under the sun the place of judgment,\nthat\n wickedness\nwas there; and the place of righteousness,\nthat iniquity\nwas there.",
       "scan_pages": [
         "sinaiticus-folios/eccl-3-Q66_1r_B295.jpg"
-      ]
+      ],
+      "scan_note": "fol. 144r (Q66_1r_B295), col. 1 line 44 to col. 2 line 33. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.17-22",
@@ -33,7 +35,8 @@
       "scan_pages": [
         "sinaiticus-folios/eccl-3-Q66_1r_B295.jpg",
         "sinaiticus-folios/eccl-5-Q66_1v_B296.jpg"
-      ]
+      ],
+      "scan_note": "fol. 144r (Q66_1r_B295), col. 2, lines 34-48 (3:17-19); fol. 144v (Q66_1v_B296), col. 1, lines 1-17 (3:19-22). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -59,11 +62,13 @@
       "Q66_1v_B296"
     ],
     "scan_folio_ranges": [
-      "Q66_1r_B295 (lib. folio 144): Ecclesiastes, 2:24  - 3:19",
-      "Q66_1v_B296 (lib. folio 144): Ecclesiastes, 3:19  - 5:1"
+      "Q66_1r_B295 (lib. folio 144): Ecclesiastes, 2:24 - 3:19",
+      "Q66_1v_B296 (lib. folio 144): Ecclesiastes, 3:19 - 5:1"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

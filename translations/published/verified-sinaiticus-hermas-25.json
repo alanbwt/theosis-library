@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/hermas-23-Q93_6r_B719.jpg",
         "sinaiticus-folios/hermas-26-Q93_6v_B720.jpg"
-      ]
+      ],
+      "scan_note": "fol. 346r (Q93_6r_B719), col. 4, lines 31-48 (25:0-2); fol. 346v (Q93_6v_B720), col. 1, lines 1-34 (25:2-4). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "25.5-7",
@@ -25,7 +26,8 @@
       "text": "<sup>5</sup>But he answered and said unto me, \"Be not confounded, but strengthen thyself in my commandments which I am about to command thee. For I was sent,\" saith he, \"that I might show thee again all the things which thou didst see before, merely the heads which are convenient for you. First of all, write down my commandments and my parables; and the other matters thou shalt write down as I shall show them to thee. The reason why,\" saith he, \"I command thee to write down first the commandments and parables is, that thou mayest read them off-hand, and mayest be able to keep them.\" <sup>6</sup>So I wrote down the commandments and parables, as he commanded me. <sup>7</sup>If then, when ye hear them, ye keep them and walk in them, and do them with a pure heart, ye shall receive from the Lord all things that He promised you; but if, when ye hear them, ye do not repent, but still add to your sins, ye shall receive from the Lord the opposite. All these the shepherd, the angel of repentance. commanded me to write.",
       "scan_pages": [
         "sinaiticus-folios/hermas-26-Q93_6v_B720.jpg"
-      ]
+      ],
+      "scan_note": "fol. 346v (Q93_6v_B720), col. 1 line 34 to col. 2 line 39. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "verification": {
@@ -42,8 +44,8 @@
       "sinaiticus-folios/hermas-26-Q93_6v_B720.jpg"
     ],
     "scan_folio_ranges": [
-      "Q93_6r_B719 (lib. folio 346): Shepherd of Hermas, 22:10  - 25:2",
-      "Q93_6v_B720 (lib. folio 346b): Shepherd of Hermas, 25:2  - 27:6"
+      "Q93_6r_B719 (lib. folio 346): Shepherd of Hermas, 22:10 - 25:2",
+      "Q93_6v_B720 (lib. folio 346b): Shepherd of Hermas, 25:2 - 27:6"
     ],
     "scan_verse_info": "Shepherd of Hermas, 22:10  - 25:2",
     "section_folios_verified": true,
@@ -55,6 +57,9 @@
     "translation_source": "Lightfoot 1891 via earlychristianwritings.com transcription",
     "translation_license": "public domain",
     "translator": "J. B. Lightfoot, The Apostolic Fathers (1891)",
-    "verified_date": "2026-09-05"
+    "verified_date": "2026-09-05",
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

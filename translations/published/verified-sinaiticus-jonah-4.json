@@ -14,7 +14,8 @@
       "text": "<sup>1</sup>But it displeased Jonah exceedingly, and he was very angry. <sup>2</sup>And he prayed unto the LORD, and said, I pray thee, O LORD,\nwas\n not this my saying, when I was yet in my country? Therefore I fled before unto Tarshish: for I knew that thou\nart a gracious God, and merciful, slow to anger, and of great kindness, and repentest thee of the evil. <sup>3</sup>Therefore now, O LORD, take, I beseech thee, my life from me; for\nit is better for me to die than to live. <sup>4</sup>Then said the LORD, Doest thou well to be angry? <sup>5</sup>So Jonah went out of the city, and sat on the east side of the city, and there made him a booth, and sat under it in the shadow, till he might see what would become of the city.",
       "scan_pages": [
         "sinaiticus-folios/jonah-4-Q57_3v_B160.jpg"
-      ]
+      ],
+      "scan_note": "fol. 76v (Q57_3v_B160), col. 3 line 40 to col. 4 line 29. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "4.6-10",
@@ -24,7 +25,8 @@
       "scan_pages": [
         "sinaiticus-folios/jonah-4-Q57_3v_B160.jpg",
         "sinaiticus-folios/nahum-1-Q57_4r_B161.jpg"
-      ]
+      ],
+      "scan_note": "fol. 76v (Q57_3v_B160), col. 4, lines 30-48 (4:6-7); fol. 77r (Q57_4r_B161), col. 1, lines 1-32 (4:8-10). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "4.11",
@@ -33,7 +35,8 @@
       "text": "<sup>11</sup>And should not I spare Nineveh, that great city, wherein are more than sixscore thousand persons that cannot discern between their right hand and their left hand; and\nalso much cattle?",
       "scan_pages": [
         "sinaiticus-folios/nahum-1-Q57_4r_B161.jpg"
-      ]
+      ],
+      "scan_note": "fol. 77r (Q57_4r_B161), col. 1, lines 32-44. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -59,11 +62,13 @@
       "Q57_4r_B161"
     ],
     "scan_folio_ranges": [
-      "Q57_3v_B160 (lib. folio 76): Jonah, 2:3  - 4:7",
-      "Q57_4r_B161 (lib. folio 77): Jonah, 4:7  - 4:11  /  Nahum, 1:1  - 2:6"
+      "Q57_3v_B160 (lib. folio 76): Jonah, 2:4 - 4:7",
+      "Q57_4r_B161 (lib. folio 77): Jonah, 4:8 - 4:11  /  Nahum, 1:1 - 2:6"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

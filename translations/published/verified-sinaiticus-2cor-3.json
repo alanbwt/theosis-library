@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/2cor-2-Q83_6v_B576.jpg",
         "sinaiticus-folios/2cor-4-Q83_7r_B577.jpg"
-      ]
+      ],
+      "scan_note": "fol. 274v (Q83_6v_B576), col. 4, lines 30-48 (3:1-3); fol. 275r (Q83_7r_B577), col. 1, lines 1-15 (3:3-5). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.6-10",
@@ -26,7 +27,8 @@
       "text": "<sup>6</sup>Who also hath made us able ministers of the new testament; not of the letter, but of the spirit: for the letter killeth, but the spirit giveth life. <sup>7</sup>But if the ministration of death, written\nand engraven in stones, was glorious, so that the children of Israel could not stedfastly behold the face of Moses for the glory of his countenance; which\nglory\n was to be done away: <sup>8</sup>How shall not the ministration of the spirit be rather glorious? <sup>9</sup>For if the ministration of condemnation\nbe glory, much more doth the ministration of righteousness exceed in glory. <sup>10</sup>For even that which was made glorious had no glory in this respect, by reason of the glory that excelleth.",
       "scan_pages": [
         "sinaiticus-folios/2cor-4-Q83_7r_B577.jpg"
-      ]
+      ],
+      "scan_note": "fol. 275r (Q83_7r_B577), col. 1, lines 16-48. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.11-15",
@@ -36,7 +38,8 @@
       "text": "<sup>11</sup>For if that which is done away\nwas glorious, much more that which remaineth\nis glorious. <sup>12</sup>Seeing then that we have such hope, we use great plainness of speech: <sup>13</sup>And not as Moses,\nwhich put a vail over his face, that the children of Israel could not stedfastly look to the end of that which is abolished: <sup>14</sup>But their minds were blinded: for until this day remaineth the same vail untaken away in the reading of the old testament; which\nvail is done away in Christ. <sup>15</sup>But even unto this day, when Moses is read, the vail is upon their heart.",
       "scan_pages": [
         "sinaiticus-folios/2cor-4-Q83_7r_B577.jpg"
-      ]
+      ],
+      "scan_note": "fol. 275r (Q83_7r_B577), col. 2, lines 1-31. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.16-18",
@@ -46,7 +49,8 @@
       "text": "<sup>16</sup>Nevertheless when it shall turn to the Lord, the vail shall be taken away. <sup>17</sup>Now the Lord is that Spirit: and where the Spirit of the Lord\nis, there\nis liberty. <sup>18</sup>But we all, with open face beholding as in a glass the glory of the Lord, are changed into the same image from glory to glory,\neven\n as by the Spirit of the Lord.",
       "scan_pages": [
         "sinaiticus-folios/2cor-4-Q83_7r_B577.jpg"
-      ]
+      ],
+      "scan_note": "fol. 275r (Q83_7r_B577), col. 2, lines 32-48. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q83_7r_B577"
     ],
     "scan_folio_ranges": [
-      "Q83_6v_B576 (lib. folio 274): 2 Corinthians, 1:12  - 3:3",
-      "Q83_7r_B577 (lib. folio 275): 2 Corinthians, 3:3  - 4:15"
+      "Q83_6v_B576 (lib. folio 274): 2 Corinthians, 1:12 - 3:3",
+      "Q83_7r_B577 (lib. folio 275): 2 Corinthians, 3:3 - 4:15"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

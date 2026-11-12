@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>And I saw a new heaven and a new earth: for the first heaven and the first earth were passed away; and there was no more sea. <sup>2</sup>And I John saw the holy city, new Jerusalem, coming down from God out of heaven, prepared as a bride adorned for her husband. <sup>3</sup>And I heard a great voice out of heaven saying, Behold, the tabernacle of God\nis with men, and he will dwell with them, and they shall be his people, and God himself shall be with them,\nand be their God. <sup>4</sup>And God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain: for the former things are passed away. <sup>5</sup>And he that sat upon the throne said, Behold, I make all things new. And he said unto me, Write: for these words are true and faithful. <sup>6</sup>And he said unto me, It is done. I am Alpha and Omega, the beginning and the end. I will give unto him that is athirst of the fountain of the water of life freely. <sup>7</sup>He that overcometh shall inherit all things; and I will be his God, and he shall be my son. <sup>8</sup>But the fearful, and unbelieving, and the abominable, and murderers, and whoremongers, and sorcerers, and idolaters, and all liars, shall have their part in the lake which burneth with fire and brimstone: which is the second death.",
       "scan_pages": [
         "sinaiticus-folios/rev-21-Q91_1r_B693.jpg"
-      ]
+      ],
+      "scan_note": "fol. 333r (Q91_1r_B693), col. 1 line 48 to col. 3 line 13. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "21.9-16",
@@ -25,7 +26,8 @@
       "text": "<sup>9</sup>And there came unto me one of the seven angels which had the seven vials full of the seven last plagues, and talked with me, saying, Come hither, I will shew thee the bride, the Lamb’s wife. <sup>10</sup>And he carried me away in the spirit to a great and high mountain, and shewed me that great city, the holy Jerusalem, descending out of heaven from God, <sup>11</sup>Having the glory of God: and her light\nwas like unto a stone most precious, even like a jasper stone, clear as crystal; <sup>12</sup>And had a wall great and high,\nand had twelve gates, and at the gates twelve angels, and names written thereon, which are\nthe names\n of the twelve tribes of the children of Israel: <sup>13</sup>On the east three gates; on the north three gates; on the south three gates; and on the west three gates. <sup>14</sup>And the wall of the city had twelve foundations, and in them the names of the twelve apostles of the Lamb. <sup>15</sup>And he that talked with me had a golden reed to measure the city, and the gates thereof, and the wall thereof. <sup>16</sup>And the city lieth foursquare, and the length is as large as the breadth: and he measured the city with the reed, twelve thousand furlongs. The length and the breadth and the height of it are equal.",
       "scan_pages": [
         "sinaiticus-folios/rev-21-Q91_1r_B693.jpg"
-      ]
+      ],
+      "scan_note": "fol. 333r (Q91_1r_B693), col. 3 line 13 to col. 4 line 29. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "21.17-24",
@@ -36,7 +38,8 @@
       "scan_pages": [
         "sinaiticus-folios/rev-21-Q91_1r_B693.jpg",
         "sinaiticus-folios/rev-22-Q91_1v_B694.jpg"
-      ]
+      ],
+      "scan_note": "fol. 333r (Q91_1r_B693), col. 4, lines 29-48 (21:17-20); fol. 333v (Q91_1v_B694), col. 1, lines 1-37 (21:20-24). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "21.25-27",
@@ -46,7 +49,8 @@
       "text": "<sup>25</sup>And the gates of it shall not be shut at all by day: for there shall be no night there. <sup>26</sup>And they shall bring the glory and honour of the nations into it. <sup>27</sup>And there shall in no wise enter into it any thing that defileth, neither\nwhatsoever worketh abomination, or\nmaketh a lie: but they which are written in the Lamb’s book of life.",
       "scan_pages": [
         "sinaiticus-folios/rev-22-Q91_1v_B694.jpg"
-      ]
+      ],
+      "scan_note": "fol. 333v (Q91_1v_B694), col. 1 line 37 to col. 2 line 5. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q91_1v_B694"
     ],
     "scan_folio_ranges": [
-      "Q91_1r_B693 (lib. folio 333): Revelation, 20:10  - 21:20",
-      "Q91_1v_B694 (lib. folio 333): Revelation, 21:20  - 22:19"
+      "Q91_1r_B693 (lib. folio 333): Revelation, 20:10 - 21:20",
+      "Q91_1v_B694 (lib. folio 333): Revelation, 21:20 - 22:19"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

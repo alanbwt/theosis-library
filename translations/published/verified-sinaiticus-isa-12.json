@@ -15,7 +15,8 @@
       "scan_pages": [
         "sinaiticus-folios/isa-11-Q43_5v_B100.jpg",
         "sinaiticus-folios/isa-14-Q43_6r_B101.jpg"
-      ]
+      ],
+      "scan_note": "fol. 46v (Q43_5v_B100), col. 4, lines 17-48 (12:1-4); fol. 47r (Q43_6r_B101), col. 1, lines 1-5 (12:5). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "12.6",
@@ -24,7 +25,8 @@
       "text": "<sup>6</sup>Cry out and shout, thou inhabitant of Zion: for great\nis the Holy One of Israel in the midst of thee.",
       "scan_pages": [
         "sinaiticus-folios/isa-14-Q43_6r_B101.jpg"
-      ]
+      ],
+      "scan_note": "fol. 47r (Q43_6r_B101), col. 1, lines 5-11. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -50,11 +52,13 @@
       "Q43_6r_B101"
     ],
     "scan_folio_ranges": [
-      "Q43_5v_B100 (lib. folio 46): Isaiah, 10:29  - 12:4",
-      "Q43_6r_B101 (lib. folio 47): Isaiah, 12:4  - 14:2"
+      "Q43_5v_B100 (lib. folio 46): Isaiah, 10:30 - 12:4",
+      "Q43_6r_B101 (lib. folio 47): Isaiah, 12:5 - 14:2"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

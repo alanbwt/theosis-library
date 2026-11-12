@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>Paul, and Silvanus, and Timotheus, unto the church of the Thessalonians\nwhich is in God the Father and\nin the Lord Jesus Christ: Grace\nbe unto you, and peace, from God our Father, and the Lord Jesus Christ. <sup>2</sup>We give thanks to God always for you all, making mention of you in our prayers; <sup>3</sup>Remembering without ceasing your work of faith, and labour of love, and patience of hope in our Lord Jesus Christ, in the sight of God and our Father; <sup>4</sup>Knowing, brethren beloved, your election of God. <sup>5</sup>For our gospel came not unto you in word only, but also in power, and in the Holy Ghost, and in much assurance; as ye know what manner of men we were among you for your sake.",
       "scan_pages": [
         "sinaiticus-folios/1thess-2-Q85_2v_B600.jpg"
-      ]
+      ],
+      "scan_note": "quire 85, leaf 2v (Q85_2v_B600), col. 1, lines 1-38. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "1.6-10",
@@ -25,7 +26,8 @@
       "text": "<sup>6</sup>And ye became followers of us, and of the Lord, having received the word in much affliction, with joy of the Holy Ghost: <sup>7</sup>So that ye were ensamples to all that believe in Macedonia and Achaia. <sup>8</sup>For from you sounded out the word of the Lord not only in Macedonia and Achaia, but also in every place your faith to God-ward is spread abroad; so that we need not to speak any thing. <sup>9</sup>For they themselves shew of us what manner of entering in we had unto you, and how ye turned to God from idols to serve the living and true God; <sup>10</sup>And to wait for his Son from heaven, whom he raised from the dead,\neven Jesus, which delivered us from the wrath to come.",
       "scan_pages": [
         "sinaiticus-folios/1thess-2-Q85_2v_B600.jpg"
-      ]
+      ],
+      "scan_note": "quire 85, leaf 2v (Q85_2v_B600), col. 1 line 39 to col. 2 line 29. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -48,13 +50,15 @@
       "Q85_2v_B600"
     ],
     "scan_folio_ranges": [
-      "Q85_2v_B600 (lib. folio 286): 1 Thessalonians, 1:1  - 2:14"
+      "Q85_2v_B600 (lib. folio 286): 1 Thessalonians, 1:1 - 2:14"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

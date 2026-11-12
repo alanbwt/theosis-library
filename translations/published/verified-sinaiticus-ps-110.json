@@ -14,7 +14,8 @@
       "text": "<sup>1</sup>Praise ye the LORD. I will praise the LORD with\nmy whole heart, in the assembly of the upright, and\nin the congregation. <sup>2</sup>The works of the LORD\nare great, sought out of all them that have pleasure therein. <sup>3</sup>His work\nis honourable and glorious: and his righteousness endureth for ever. <sup>4</sup>He hath made his wonderful works to be remembered: the LORD\nis\n gracious and full of compassion. <sup>5</sup>He hath given meat unto them that fear him: he will ever be mindful of his covenant.",
       "scan_pages": [
         "sinaiticus-folios/ps-110-Q62_8r_B245.jpg"
-      ]
+      ],
+      "scan_note": "fol. 119r (Q62_8r_B245), col. 2, lines 21-38. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "110.6-10",
@@ -24,7 +25,8 @@
       "scan_pages": [
         "sinaiticus-folios/ps-110-Q62_8r_B245.jpg",
         "sinaiticus-folios/ps-112-Q62_8v_B246.jpg"
-      ]
+      ],
+      "scan_note": "fol. 119r (Q62_8r_B245), col. 2, lines 39-48 (110:6-8); fol. 119v (Q62_8v_B246), col. 1, lines 1-9 (110:9-10). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -53,11 +55,13 @@
       "Q62_8v_B246"
     ],
     "scan_folio_ranges": [
-      "Q62_8r_B245 (lib. folio 119): Psalms, 108:18  - 110:8",
-      "Q62_8v_B246 (lib. folio 119): Psalms, 110:8  - 113:14"
+      "Q62_8r_B245 (lib. folio 119): Psalms, 108:18 - 110:8",
+      "Q62_8v_B246 (lib. folio 119): Psalms, 110:9 - 113:14"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

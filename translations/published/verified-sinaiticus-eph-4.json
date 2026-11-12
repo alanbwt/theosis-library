@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>I therefore, the prisoner of the Lord, beseech you that ye walk worthy of the vocation wherewith ye are called, <sup>2</sup>With all lowliness and meekness, with longsuffering, forbearing one another in love; <sup>3</sup>Endeavouring to keep the unity of the Spirit in the bond of peace. <sup>4</sup>There is one body, and one Spirit, even as ye are called in one hope of your calling; <sup>5</sup>One Lord, one faith, one baptism, <sup>6</sup>One God and Father of all, who\nis above all, and through all, and in you all. <sup>7</sup>But unto every one of us is given grace according to the measure of the gift of Christ. <sup>8</sup>Wherefore he saith, When he ascended up on high, he led captivity captive, and gave gifts unto men.",
       "scan_pages": [
         "sinaiticus-folios/eph-4-Q84_5v_B590.jpg"
-      ]
+      ],
+      "scan_note": "fol. 281v (Q84_5v_B590), col. 3 line 47 to col. 4 line 32. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "4.9-16",
@@ -26,7 +27,8 @@
       "scan_pages": [
         "sinaiticus-folios/eph-4-Q84_5v_B590.jpg",
         "sinaiticus-folios/eph-5-Q84_6r_B591.jpg"
-      ]
+      ],
+      "scan_note": "fol. 281v (Q84_5v_B590), col. 4, lines 32-48 (4:9-12); fol. 282r (Q84_6r_B591), col. 1, lines 1-41 (4:12-16). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "4.17-24",
@@ -36,7 +38,8 @@
       "text": "<sup>17</sup>This I say therefore, and testify in the Lord, that ye henceforth walk not as other Gentiles walk, in the vanity of their mind, <sup>18</sup>Having the understanding darkened, being alienated from the life of God through the ignorance that is in them, because of the blindness of their heart: <sup>19</sup>Who being past feeling have given themselves over unto lasciviousness, to work all uncleanness with greediness. <sup>20</sup>But ye have not so learned Christ; <sup>21</sup>If so be that ye have heard him, and have been taught by him, as the truth is in Jesus: <sup>22</sup>That ye put off concerning the former conversation the old man, which is corrupt according to the deceitful lusts; <sup>23</sup>And be renewed in the spirit of your mind; <sup>24</sup>And that ye put on the new man, which after God is created in righteousness and true holiness.",
       "scan_pages": [
         "sinaiticus-folios/eph-5-Q84_6r_B591.jpg"
-      ]
+      ],
+      "scan_note": "fol. 282r (Q84_6r_B591), col. 1 line 42 to col. 2 line 36. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "4.25-32",
@@ -46,7 +49,8 @@
       "text": "<sup>25</sup>Wherefore putting away lying, speak every man truth with his neighbour: for we are members one of another. <sup>26</sup>Be ye angry, and sin not: let not the sun go down upon your wrath: <sup>27</sup>Neither give place to the devil. <sup>28</sup>Let him that stole steal no more: but rather let him labour, working with\nhis hands the thing which is good, that he may have to give to him that needeth. <sup>29</sup>Let no corrupt communication proceed out of your mouth, but that which is good to the use of edifying, that it may minister grace unto the hearers. <sup>30</sup>And grieve not the holy Spirit of God, whereby ye are sealed unto the day of redemption. <sup>31</sup>Let all bitterness, and wrath, and anger, and clamour, and evil speaking, be put away from you, with all malice: <sup>32</sup>And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you.",
       "scan_pages": [
         "sinaiticus-folios/eph-5-Q84_6r_B591.jpg"
-      ]
+      ],
+      "scan_note": "fol. 282r (Q84_6r_B591), col. 2 line 37 to col. 3 line 35. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q84_6r_B591"
     ],
     "scan_folio_ranges": [
-      "Q84_5v_B590 (lib. folio 281): Ephesians, 2:18  - 4:12",
-      "Q84_6r_B591 (lib. folio 282): Ephesians, 4:12  - 5:13"
+      "Q84_5v_B590 (lib. folio 281): Ephesians, 2:18 - 4:12",
+      "Q84_6r_B591 (lib. folio 282): Ephesians, 4:12 - 5:13"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

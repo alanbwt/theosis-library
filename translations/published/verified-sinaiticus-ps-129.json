@@ -14,7 +14,8 @@
       "text": "<sup>1</sup>Out of the depths have I cried unto thee, O LORD. <sup>2</sup>Lord, hear my voice: let thine ears be attentive to the voice of my supplications. <sup>3</sup>If thou, LORD, shouldest mark iniquities, O Lord, who shall stand? <sup>4</sup>But\nthere is forgiveness with thee, that thou mayest be feared. <sup>5</sup>I wait for the LORD, my soul doth wait, and in his word do I hope.",
       "scan_pages": [
         "sinaiticus-folios/ps-129-Q63_5r_B255.jpg"
-      ]
+      ],
+      "scan_note": "fol. 124r (Q63_5r_B255), col. 1, lines 17-28. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "129.6-8",
@@ -23,7 +24,8 @@
       "text": "<sup>6</sup>My soul\nwaiteth for the Lord more than they that watch for the morning:\nI say, more than they that watch for the morning. <sup>7</sup>Let Israel hope in the LORD: for with the LORD\nthere is mercy, and with him\nis plenteous redemption. <sup>8</sup>And he shall redeem Israel from all his iniquities.",
       "scan_pages": [
         "sinaiticus-folios/ps-129-Q63_5r_B255.jpg"
-      ]
+      ],
+      "scan_note": "fol. 124r (Q63_5r_B255), col. 1, lines 29-34. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -50,10 +52,12 @@
       "Q63_5r_B255"
     ],
     "scan_folio_ranges": [
-      "Q63_5r_B255 (lib. folio 124): Psalms, 128:2  - 131:18"
+      "Q63_5r_B255 (lib. folio 124): Psalms, 128:3 - 131:18"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/romans-10-Q82_4v_B556.jpg",
         "sinaiticus-folios/romans-11-Q82_5r_B557.jpg"
-      ]
+      ],
+      "scan_note": "fol. 264v (Q82_4v_B556), col. 4, lines 40-48 (10:1-3); fol. 265r (Q82_5r_B557), col. 1, lines 1-35 (10:3-8). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "10.9-16",
@@ -26,7 +27,8 @@
       "text": "<sup>9</sup>That if thou shalt confess with thy mouth the Lord Jesus, and shalt believe in thine heart that God hath raised him from the dead, thou shalt be saved. <sup>10</sup>For with the heart man believeth unto righteousness; and with the mouth confession is made unto salvation. <sup>11</sup>For the scripture saith, Whosoever believeth on him shall not be ashamed. <sup>12</sup>For there is no difference between the Jew and the Greek: for the same Lord over all is rich unto all that call upon him. <sup>13</sup>For whosoever shall call upon the name of the Lord shall be saved. <sup>14</sup>How then shall they call on him in whom they have not believed? and how shall they believe in him of whom they have not heard? and how shall they hear without a preacher? <sup>15</sup>And how shall they preach, except they be sent? as it is written, How beautiful are the feet of them that preach the gospel of peace, and bring glad tidings of good things! <sup>16</sup>But they have not all obeyed the gospel. For Esaias saith, Lord, who hath believed our report?",
       "scan_pages": [
         "sinaiticus-folios/romans-11-Q82_5r_B557.jpg"
-      ]
+      ],
+      "scan_note": "fol. 265r (Q82_5r_B557), col. 1 line 35 to col. 2 line 29. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "10.17-21",
@@ -36,7 +38,8 @@
       "text": "<sup>17</sup>So then faith\ncometh by hearing, and hearing by the word of God. <sup>18</sup>But I say, Have they not heard? Yes verily, their sound went into all the earth, and their words unto the ends of the world. <sup>19</sup>But I say, Did not Israel know? First Moses saith, I will provoke you to jealousy by\nthem that are no people,\nand by a foolish nation I will anger you. <sup>20</sup>But Esaias is very bold, and saith, I was found of them that sought me not; I was made manifest unto them that asked not after me. <sup>21</sup>But to Israel he saith, All day long I have stretched forth my hands unto a disobedient and gainsaying people.",
       "scan_pages": [
         "sinaiticus-folios/romans-11-Q82_5r_B557.jpg"
-      ]
+      ],
+      "scan_note": "fol. 265r (Q82_5r_B557), col. 2 line 30 to col. 3 line 10. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -61,14 +64,16 @@
       "Q82_5r_B557"
     ],
     "scan_folio_ranges": [
-      "Q82_4v_B556 (lib. folio 264): Romans, 8:38  - 10:3",
-      "Q82_5r_B557 (lib. folio 265): Romans, 10:3  - 11:15"
+      "Q82_4v_B556 (lib. folio 264): Romans, 8:38 - 10:3",
+      "Q82_5r_B557 (lib. folio 265): Romans, 10:3 - 11:15"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

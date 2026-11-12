@@ -14,7 +14,8 @@
       "text": "<sup>1</sup>I will bless the LORD at all times: his praise\nshall continually\nbe in my mouth. <sup>2</sup>My soul shall make her boast in the LORD: the humble shall hear\nthereof, and be glad. <sup>3</sup>O magnify the LORD with me, and let us exalt his name together. <sup>4</sup>I sought the LORD, and he heard me, and delivered me from all my fears. <sup>5</sup>They looked unto him, and were lightened: and their faces were not ashamed. <sup>6</sup>This poor man cried, and the LORD heard\nhim, and saved him out of all his troubles. <sup>7</sup>The angel of the LORD encampeth round about them that fear him, and delivereth them.",
       "scan_pages": [
         "sinaiticus-folios/ps-33-Q59_8v_B198.jpg"
-      ]
+      ],
+      "scan_note": "fol. 95v (Q59_8v_B198), col. 2, lines 19-43. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "33.9-16",
@@ -24,7 +25,8 @@
       "scan_pages": [
         "sinaiticus-folios/ps-33-Q59_8v_B198.jpg",
         "sinaiticus-folios/ps-33-Q60_1r_B199.jpg"
-      ]
+      ],
+      "scan_note": "fol. 95v (Q59_8v_B198), col. 2, lines 44-48 (33:9-10); fol. 96r (Q60_1r_B199), col. 1, lines 1-14 (33:11-16). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "33.17-23",
@@ -33,7 +35,8 @@
       "text": "<sup>16</sup>The face of the LORD\nis against them that do evil, to cut off the remembrance of them from the earth. <sup>17</sup>The righteous cry, and the LORD heareth, and delivereth them out of all their troubles. <sup>18</sup>The LORD\nis nigh unto them that are of a broken heart; and saveth such as be of a contrite spirit. <sup>19</sup>Many\nare the afflictions of the righteous: but the LORD delivereth him out of them all. <sup>20</sup>He keepeth all his bones: not one of them is broken. <sup>21</sup>Evil shall slay the wicked: and they that hate the righteous shall be desolate. <sup>22</sup>The LORD redeemeth the soul of his servants: and none of them that trust in him shall be desolate.",
       "scan_pages": [
         "sinaiticus-folios/ps-33-Q60_1r_B199.jpg"
-      ]
+      ],
+      "scan_note": "fol. 96r (Q60_1r_B199), col. 1, lines 15-34. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -62,11 +65,13 @@
       "Q60_1r_B199"
     ],
     "scan_folio_ranges": [
-      "Q59_8v_B198 (lib. folio 95): Psalms, 31:9  - 33:10",
-      "Q60_1r_B199 (lib. folio 96): Psalms, 33:10  - 34:19"
+      "Q59_8v_B198 (lib. folio 95): Psalms, 31:9 - 33:10",
+      "Q60_1r_B199 (lib. folio 96): Psalms, 33:11 - 34:19"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

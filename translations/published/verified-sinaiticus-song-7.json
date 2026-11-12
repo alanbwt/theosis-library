@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/song-5-Q66_7r_B307.jpg",
         "sinaiticus-folios/song-8-Q66_7v_B308.jpg"
-      ]
+      ],
+      "scan_note": "fol. 150r (Q66_7r_B307), col. 2, lines 45-48 (7:1); fol. 150v (Q66_7v_B308), col. 1, lines 1-22 (7:1-5). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "7.6-10",
@@ -25,7 +26,8 @@
       "text": "<sup>6</sup>How fair and how pleasant art thou, O love, for delights! <sup>7</sup>This thy stature is like to a palm tree, and thy breasts to clusters\nof grapes. <sup>8</sup>I said, I will go up to the palm tree, I will take hold of the boughs thereof: now also thy breasts shall be as clusters of the vine, and the smell of thy nose like apples; <sup>9</sup>And the roof of thy mouth like the best wine for my beloved, that goeth\ndown sweetly, causing the lips of those that are asleep to speak. <sup>10</sup>I\nam my beloved’s, and his desire\nis toward me.",
       "scan_pages": [
         "sinaiticus-folios/song-8-Q66_7v_B308.jpg"
-      ]
+      ],
+      "scan_note": "fol. 150v (Q66_7v_B308), col. 1, lines 23-42. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "7.11-14",
@@ -34,7 +36,8 @@
       "text": "<sup>11</sup>Come, my beloved, let us go forth into the field; let us lodge in the villages. <sup>12</sup>Let us get up early to the vineyards; let us see if the vine flourish,\nwhether the tender grape appear,\nand the pomegranates bud forth: there will I give thee my loves. <sup>13</sup>The mandrakes give a smell, and at our gates\nare all manner of pleasant\nfruits, new and old,\nwhich I have laid up for thee, O my beloved.",
       "scan_pages": [
         "sinaiticus-folios/song-8-Q66_7v_B308.jpg"
-      ]
+      ],
+      "scan_note": "fol. 150v (Q66_7v_B308), col. 1 line 43 to col. 2 line 8. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "verification": {
@@ -51,8 +54,8 @@
       "sinaiticus-folios/song-8-Q66_7v_B308.jpg"
     ],
     "scan_folio_ranges": [
-      "Q66_7r_B307 (lib. folio 150): Song of Songs, 5:9  - 7:1",
-      "Q66_7v_B308 (lib. folio 150): Song of Songs, 7:1  - 8:8"
+      "Q66_7r_B307 (lib. folio 150): Song of Songs, 5:9 - 7:1",
+      "Q66_7v_B308 (lib. folio 150): Song of Songs, 7:1 - 8:8"
     ],
     "scan_verse_info": "Song of Songs, 5:9  - 7:1",
     "section_folios_verified": true,
@@ -64,6 +67,9 @@
     "translation_source": "bible-api.com (KJV)",
     "translation_license": "public domain",
     "translator": "King James Version (1611)",
-    "verified_date": "2026-09-05"
+    "verified_date": "2026-09-05",
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

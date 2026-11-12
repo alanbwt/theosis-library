@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/barnabas-14-Q92_1r_B705.jpg",
         "sinaiticus-folios/barnabas-16-Q92_1v_B706.jpg"
-      ]
+      ],
+      "scan_note": "fol. 339r (Q92_1r_B705), col. 4, lines 47-48 (16:1); fol. 339v (Q92_1v_B706), col. 1 line 1 to col. 2 line 13 (16:1-5). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "16.6-10",
@@ -25,7 +26,8 @@
       "text": "<sup>6</sup>But let us enquire whether there be any temple of God. There is; in the place where he himself undertakes to make and finish it. For it is written And it shall come to pass, when the week is being accomplished, the temple of God shall be built gloriously in the name of the Lord. <sup>7</sup>I find then that there is a temple, How then shall it be built in the name of the Lord? Understand ye. Before we believed on God, the abode of our heart was corrupt and weak, a temple truly built by hands; for it was full of idolatry and was a house of demons, because we did whatsoever was contrary to God. <sup>8</sup>But it shall be built in the name of the Lord. Give heed then that the temple of the Lord may be built gloriously. <sup>9</sup>How? Understand ye. By receiving the remission of our sins and hoping on the Name we became new, created afresh from the beginning. Wherefore God dwelleth truly in our habitation within us. How? The word of his faith, the calling of his promise, the wisdom of the ordinances, the commandments of the teaching, He Himself prophesying in us, He Himself dwelling in us, opening for us who had been in bondage unto death the door of the temple, which is the mouth, and giving us repentance leadeth us to the incorruptible temple. <sup>10</sup>For he that desireth to be saved looketh not to the man, but to Him that dwelleth and speaketh in him, being amazed at this that he has never at any time heard these words from the mouth of the speaker, nor himself ever desired to hear them. This is the spiritual temple built up to the Lord.",
       "scan_pages": [
         "sinaiticus-folios/barnabas-16-Q92_1v_B706.jpg"
-      ]
+      ],
+      "scan_note": "fol. 339v (Q92_1v_B706), col. 2 line 14 to col. 4 line 12. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "verification": {
@@ -42,8 +44,8 @@
       "sinaiticus-folios/barnabas-16-Q92_1v_B706.jpg"
     ],
     "scan_folio_ranges": [
-      "Q92_1r_B705 (lib. folio 339): Barnabas, 14:4  - 16:1",
-      "Q92_1v_B706 (lib. folio 339b): Barnabas, 16:1  - 19:1"
+      "Q92_1r_B705 (lib. folio 339): Barnabas, 14:4 - 14:9  /  Barnabas, 14:8 - 16:1",
+      "Q92_1v_B706 (lib. folio 339b): Barnabas, 16:1 - 19:1"
     ],
     "scan_verse_info": "Barnabas, 14:4  - 16:1",
     "section_folios_verified": true,
@@ -55,6 +57,9 @@
     "translation_source": "Lightfoot 1891 via earlychristianwritings.com transcription",
     "translation_license": "public domain",
     "translator": "J. B. Lightfoot, The Apostolic Fathers (1891)",
-    "verified_date": "2026-09-05"
+    "verified_date": "2026-09-05",
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

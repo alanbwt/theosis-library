@@ -15,7 +15,8 @@
       "scan_pages": [
         "sinaiticus-folios/job-37-Q72_6r_B401.jpg",
         "sinaiticus-folios/job-38-Q72_6v_B402.jpg"
-      ]
+      ],
+      "scan_note": "fol. 197r (Q72_6r_B401), col. 2, lines 32-48 (37:1-6); fol. 197v (Q72_6v_B402), col. 1, lines 1-4 (37:7-8). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "37.9-16",
@@ -24,7 +25,8 @@
       "text": "<sup>9</sup>Out of the south cometh the whirlwind: and cold out of the north. <sup>10</sup>By the breath of God frost is given: and the breadth of the waters is straitened. <sup>11</sup>Also by watering he wearieth the thick cloud: he scattereth his bright cloud: <sup>12</sup>And it is turned round about by his counsels: that they may do whatsoever he commandeth them upon the face of the world in the earth. <sup>13</sup>He causeth it to come, whether for correction, or for his land, or for mercy. <sup>14</sup>Hearken unto this, O Job: stand still, and consider the wondrous works of God. <sup>15</sup>Dost thou know when God disposed them, and caused the light of his cloud to shine? <sup>16</sup>Dost thou know the balancings of the clouds, the wondrous works of him which is perfect in knowledge?",
       "scan_pages": [
         "sinaiticus-folios/job-38-Q72_6v_B402.jpg"
-      ]
+      ],
+      "scan_note": "fol. 197v (Q72_6v_B402), col. 1, lines 5-22. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "37.17-24",
@@ -33,7 +35,8 @@
       "text": "<sup>17</sup>How thy garments\nare warm, when he quieteth the earth by the south\nwind? <sup>18</sup>Hast thou with him spread out the sky,\nwhich is strong,\nand as a molten looking glass? <sup>19</sup>Teach us what we shall say unto him;\nfor we cannot order\nour speech by reason of darkness. <sup>20</sup>Shall it be told him that I speak? if a man speak, surely he shall be swallowed up. <sup>21</sup>And now\nmen see not the bright light which is in the clouds: but the wind passeth, and cleanseth them. <sup>22</sup>Fair weather cometh out of the north: with God is terrible majesty. <sup>23</sup>Touching the Almighty, we cannot find him out:\nhe is\n excellent in power, and in judgment, and in plenty of justice: he will not afflict. <sup>24</sup>Men do therefore fear him: he respecteth not any\nthat are\n wise of heart.",
       "scan_pages": [
         "sinaiticus-folios/job-38-Q72_6v_B402.jpg"
-      ]
+      ],
+      "scan_note": "fol. 197v (Q72_6v_B402), col. 1, lines 23-43. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -59,11 +62,13 @@
       "Q72_6v_B402"
     ],
     "scan_folio_ranges": [
-      "Q72_6r_B401 (lib. folio 197): Job, 36:5  - 37:6",
-      "Q72_6v_B402 (lib. folio 197): Job, 37:6  - 38:24"
+      "Q72_6r_B401 (lib. folio 197): Job, 36:5 - 37:6",
+      "Q72_6v_B402 (lib. folio 197): Job, 37:7 - 38:24"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

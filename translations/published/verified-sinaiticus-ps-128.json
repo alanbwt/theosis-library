@@ -15,7 +15,8 @@
       "scan_pages": [
         "sinaiticus-folios/ps-128-Q63_4v_B254.jpg",
         "sinaiticus-folios/ps-129-Q63_5r_B255.jpg"
-      ]
+      ],
+      "scan_note": "fol. 123v (Q63_4v_B254), col. 2, lines 42-48 (128:1-2); fol. 124r (Q63_5r_B255), col. 1, lines 1-7 (128:3-5). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "128.6-8",
@@ -24,7 +25,8 @@
       "text": "<sup>6</sup>Let them be as the grass\nupon the housetops, which withereth afore it groweth up: <sup>7</sup>Wherewith the mower filleth not his hand; nor he that bindeth sheaves his bosom. <sup>8</sup>Neither do they which go by say, The blessing of the LORD\nbe\n upon you: we bless you in the name of the LORD.",
       "scan_pages": [
         "sinaiticus-folios/ps-129-Q63_5r_B255.jpg"
-      ]
+      ],
+      "scan_note": "fol. 124r (Q63_5r_B255), col. 1, lines 8-16. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -53,11 +55,13 @@
       "Q63_5r_B255"
     ],
     "scan_folio_ranges": [
-      "Q63_4v_B254 (lib. folio 123): Psalms, 123:2  - 128:2",
-      "Q63_5r_B255 (lib. folio 124): Psalms, 128:2  - 131:18"
+      "Q63_4v_B254 (lib. folio 123): Psalms, 123:2 - 128:2",
+      "Q63_5r_B255 (lib. folio 124): Psalms, 128:3 - 131:18"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

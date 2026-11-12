@@ -14,7 +14,8 @@
       "text": "<sup>1</sup>Sing aloud unto God our strength: make a joyful noise unto the God of Jacob. <sup>2</sup>Take a psalm, and bring hither the timbrel, the pleasant harp with the psaltery. <sup>3</sup>Blow up the trumpet in the new moon, in the time appointed, on our solemn feast day. <sup>4</sup>For this\nwas a statute for Israel,\nand a law of the God of Jacob.",
       "scan_pages": [
         "sinaiticus-folios/ps-80-Q61_7r_B227.jpg"
-      ]
+      ],
+      "scan_note": "fol. 110r (Q61_7r_B227), col. 2, lines 2-11. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "80.6-10",
@@ -23,7 +24,8 @@
       "text": "<sup>5</sup>This he ordained in Joseph\nfor a testimony, when he went out through the land of Egypt:\nwhere I heard a language\nthat\n I understood not. <sup>6</sup>I removed his shoulder from the burden: his hands were delivered from the pots. <sup>7</sup>Thou calledst in trouble, and I delivered thee; I answered thee in the secret place of thunder: I proved thee at the waters of Meribah. Selah. <sup>8</sup>Hear, O my people, and I will testify unto thee: O Israel, if thou wilt hearken unto me; <sup>9</sup>There shall no strange god be in thee; neither shalt thou worship any strange god.",
       "scan_pages": [
         "sinaiticus-folios/ps-80-Q61_7r_B227.jpg"
-      ]
+      ],
+      "scan_note": "fol. 110r (Q61_7r_B227), col. 2, lines 12-27. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "80.11-15",
@@ -32,7 +34,8 @@
       "text": "<sup>10</sup>I\nam the LORD thy God, which brought thee out of the land of Egypt: open thy mouth wide, and I will fill it. <sup>11</sup>But my people would not hearken to my voice; and Israel would none of me. <sup>12</sup>So I gave them up unto their own hearts’ lust:\nand they walked in their own counsels. <sup>13</sup>Oh that my people had hearkened unto me,\nand Israel had walked in my ways! <sup>14</sup>I should soon have subdued their enemies, and turned my hand against their adversaries.",
       "scan_pages": [
         "sinaiticus-folios/ps-80-Q61_7r_B227.jpg"
-      ]
+      ],
+      "scan_note": "fol. 110r (Q61_7r_B227), col. 2, lines 28-44. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "80.16-17",
@@ -40,8 +43,10 @@
       "original_text": "<sup>16</sup>οι εχθροι κυ εψευϲαντο αυτω και εϲται ο καιροϲ αυτων ειϲ τον αιωνα <sup>17</sup>και εψωμιϲεν αυτουϲ εκ ϲτεατοϲ πυρου και εκ πετραϲ μελι εχορταϲεν αυτουϲ",
       "text": "<sup>15</sup>The haters of the LORD should have submitted themselves unto him: but their time should have endured for ever. <sup>16</sup>He should have fed them also with the finest of the wheat: and with honey out of the rock should I have satisfied thee.",
       "scan_pages": [
-        "sinaiticus-folios/ps-80-Q61_7r_B227.jpg"
-      ]
+        "sinaiticus-folios/ps-80-Q61_7r_B227.jpg",
+        "sinaiticus-folios/ps-80-Q61_7v_B228.jpg"
+      ],
+      "scan_note": "fol. 110r (Q61_7r_B227), col. 2, lines 45-48 (80:16-17); fol. 110v (Q61_7v_B228), col. 1, line 1 (80:17). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -62,16 +67,21 @@
     "kjv_psalm": "81",
     "lxx_title_verse_offset": 1,
     "scan_local_paths": [
-      "sinaiticus-folios/ps-80-Q61_7r_B227.jpg"
+      "sinaiticus-folios/ps-80-Q61_7r_B227.jpg",
+      "sinaiticus-folios/ps-80-Q61_7v_B228.jpg"
     ],
     "scan_folio_ids": [
-      "Q61_7r_B227"
+      "Q61_7r_B227",
+      "Q61_7v_B228"
     ],
     "scan_folio_ranges": [
-      "Q61_7r_B227 (lib. folio 110): Psalms, 79:4  - 80:17"
+      "Q61_7r_B227 (lib. folio 110): Psalms, 79:5 - 80:17",
+      "Q61_7v_B228 (lib. folio 110b): Psalms, 80:17 - 83:7"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

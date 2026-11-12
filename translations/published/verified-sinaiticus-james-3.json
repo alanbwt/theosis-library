@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>My brethren, be not many masters, knowing that we shall receive the greater condemnation. <sup>2</sup>For in many things we offend all. If any man offend not in word, the same\nis a perfect man,\nand able also to bridle the whole body. <sup>3</sup>Behold, we put bits in the horses’ mouths, that they may obey us; and we turn about their whole body. <sup>4</sup>Behold also the ships, which though\nthey be so great, and\nare driven of fierce winds, yet are they turned about with a very small helm, whithersoever the governor listeth. <sup>5</sup>Even so the tongue is a little member, and boasteth great things. Behold, how great a matter a little fire kindleth!",
       "scan_pages": [
         "sinaiticus-folios/james-3-Q89_2r_B663.jpg"
-      ]
+      ],
+      "scan_note": "fol. 318r (Q89_2r_B663), col. 3, lines 15-47. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.6-10",
@@ -25,7 +26,8 @@
       "text": "<sup>6</sup>And the tongue\nis a fire, a world of iniquity: so is the tongue among our members, that it defileth the whole body, and setteth on fire the course of nature; and it is set on fire of hell. <sup>7</sup>For every kind of beasts, and of birds, and of serpents, and of things in the sea, is tamed, and hath been tamed of mankind: <sup>8</sup>But the tongue can no man tame;\nit is an unruly evil, full of deadly poison. <sup>9</sup>Therewith bless we God, even the Father; and therewith curse we men, which are made after the similitude of God. <sup>10</sup>Out of the same mouth proceedeth blessing and cursing. My brethren, these things ought not so to be.",
       "scan_pages": [
         "sinaiticus-folios/james-3-Q89_2r_B663.jpg"
-      ]
+      ],
+      "scan_note": "fol. 318r (Q89_2r_B663), col. 3 line 48 to col. 4 line 35. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.11-15",
@@ -36,7 +38,8 @@
       "scan_pages": [
         "sinaiticus-folios/james-3-Q89_2r_B663.jpg",
         "sinaiticus-folios/james-4-Q89_2v_B664.jpg"
-      ]
+      ],
+      "scan_note": "fol. 318r (Q89_2r_B663), col. 4, lines 35-48 (3:11-13); fol. 318v (Q89_2v_B664), col. 1, lines 1-14 (3:13-15). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.16-18",
@@ -46,7 +49,8 @@
       "text": "<sup>16</sup>For where envying and strife\nis, there\nis confusion and every evil work. <sup>17</sup>But the wisdom that is from above is first pure, then peaceable, gentle,\nand easy to be intreated, full of mercy and good fruits, without partiality, and without hypocrisy. <sup>18</sup>And the fruit of righteousness is sown in peace of them that make peace.",
       "scan_pages": [
         "sinaiticus-folios/james-4-Q89_2v_B664.jpg"
-      ]
+      ],
+      "scan_note": "fol. 318v (Q89_2v_B664), col. 1, lines 15-31. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q89_2v_B664"
     ],
     "scan_folio_ranges": [
-      "Q89_2r_B663 (lib. folio 318): James, 2:6  - 3:13",
-      "Q89_2v_B664 (lib. folio 318): James, 3:13  - 5:9"
+      "Q89_2r_B663 (lib. folio 318): James, 2:6 - 3:13",
+      "Q89_2v_B664 (lib. folio 318): James, 3:13 - 5:9"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

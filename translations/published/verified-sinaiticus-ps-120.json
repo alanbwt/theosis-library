@@ -14,7 +14,8 @@
       "text": "<sup>1</sup>I will lift up mine eyes unto the hills, from whence cometh my help. <sup>2</sup>My help\ncometh from the LORD, which made heaven and earth. <sup>3</sup>He will not suffer thy foot to be moved: he that keepeth thee will not slumber. <sup>4</sup>Behold, he that keepeth Israel shall neither slumber nor sleep. <sup>5</sup>The LORD\nis thy keeper: the LORD\nis thy shade upon thy right hand.",
       "scan_pages": [
         "sinaiticus-folios/ps-120-Q63_4r_B253.jpg"
-      ]
+      ],
+      "scan_note": "fol. 123r (Q63_4r_B253), col. 1, lines 36-46. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "120.6-8",
@@ -23,7 +24,8 @@
       "text": "<sup>6</sup>The sun shall not smite thee by day, nor the moon by night. <sup>7</sup>The LORD shall preserve thee from all evil: he shall preserve thy soul. <sup>8</sup>The LORD shall preserve thy going out and thy coming in from this time forth, and even for evermore.",
       "scan_pages": [
         "sinaiticus-folios/ps-120-Q63_4r_B253.jpg"
-      ]
+      ],
+      "scan_note": "fol. 123r (Q63_4r_B253), col. 1 line 47 to col. 2 line 5. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -50,10 +52,12 @@
       "Q63_4r_B253"
     ],
     "scan_folio_ranges": [
-      "Q63_4r_B253 (lib. folio 123): Psalms, 118:169  - 123:2"
+      "Q63_4r_B253 (lib. folio 123): Psalms, 118:169 - 123:2"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

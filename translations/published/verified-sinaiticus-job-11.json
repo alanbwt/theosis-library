@@ -14,7 +14,8 @@
       "text": "<sup>1</sup>Then answered Zophar the Naamathite, and said, <sup>2</sup>Should not the multitude of words be answered? and should a man full of talk be justified? <sup>3</sup>Should thy lies make men hold their peace? and when thou mockest, shall no man make thee ashamed? <sup>4</sup>For thou hast said, My doctrine\nis pure, and I am clean in thine eyes. <sup>5</sup>But oh that God would speak, and open his lips against thee;",
       "scan_pages": [
         "sinaiticus-folios/job-11-Q71_6r_B385.jpg"
-      ]
+      ],
+      "scan_note": "fol. 189r (Q71_6r_B385), col. 2, lines 28-37. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "11.6-10",
@@ -24,7 +25,8 @@
       "scan_pages": [
         "sinaiticus-folios/job-11-Q71_6r_B385.jpg",
         "sinaiticus-folios/job-13-Q71_6v_B386.jpg"
-      ]
+      ],
+      "scan_note": "fol. 189r (Q71_6r_B385), col. 2, lines 38-48 (11:6-9); fol. 189v (Q71_6v_B386), col. 1, lines 1-2 (11:10). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "11.11-15",
@@ -33,7 +35,8 @@
       "text": "<sup>11</sup>For he knoweth vain men: he seeth wickedness also; will he not then consider\nit? <sup>12</sup>For vain man would be wise, though man be born\nlike a wild ass’s colt. <sup>13</sup>If thou prepare thine heart, and stretch out thine hands toward him; <sup>14</sup>If iniquity\nbe in thine hand, put it far away, and let not wickedness dwell in thy tabernacles. <sup>15</sup>For then shalt thou lift up thy face without spot; yea, thou shalt be stedfast, and shalt not fear:",
       "scan_pages": [
         "sinaiticus-folios/job-13-Q71_6v_B386.jpg"
-      ]
+      ],
+      "scan_note": "fol. 189v (Q71_6v_B386), col. 1, lines 3-15. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "11.16-20",
@@ -42,7 +45,8 @@
       "text": "<sup>16</sup>Because thou shalt forget\nthy misery,\nand remember\nit as waters\nthat pass away: <sup>17</sup>And\nthine age shall be clearer than the noonday; thou shalt shine forth, thou shalt be as the morning. <sup>18</sup>And thou shalt be secure, because there is hope; yea, thou shalt dig\nabout thee, and thou shalt take thy rest in safety. <sup>19</sup>Also thou shalt lie down, and none shall make\nthee afraid; yea, many shall make suit unto thee. <sup>20</sup>But the eyes of the wicked shall fail, and they shall not escape, and their hope\nshall be as the giving up of the ghost.",
       "scan_pages": [
         "sinaiticus-folios/job-13-Q71_6v_B386.jpg"
-      ]
+      ],
+      "scan_note": "fol. 189v (Q71_6v_B386), col. 1, lines 16-28. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -68,11 +72,13 @@
       "Q71_6v_B386"
     ],
     "scan_folio_ranges": [
-      "Q71_6r_B385 (lib. folio 189): Job, 9:24  - 11:9",
-      "Q71_6v_B386 (lib. folio 189): Job, 11:9  - 13:7"
+      "Q71_6r_B385 (lib. folio 189): Job, 9:24 - 11:9",
+      "Q71_6v_B386 (lib. folio 189): Job, 11:10 - 13:7"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

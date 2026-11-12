@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>Stand fast therefore in the liberty wherewith Christ hath made us free, and be not entangled again with the yoke of bondage. <sup>2</sup>Behold, I Paul say unto you, that if ye be circumcised, Christ shall profit you nothing. <sup>3</sup>For I testify again to every man that is circumcised, that he is a debtor to do the whole law. <sup>4</sup>Christ is become of no effect unto you, whosoever of you are justified by the law; ye are fallen from grace. <sup>5</sup>For we through the Spirit wait for the hope of righteousness by faith. <sup>6</sup>For in Jesus Christ neither circumcision availeth any thing, nor uncircumcision; but faith which worketh by love. <sup>7</sup>Ye did run well; who did hinder you that ye should not obey the truth? <sup>8</sup>This persuasion\ncometh not of him that calleth you.",
       "scan_pages": [
         "sinaiticus-folios/gal-5-Q84_4r_B587.jpg"
-      ]
+      ],
+      "scan_note": "fol. 280r (Q84_4r_B587), col. 3, lines 5-40. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "5.9-16",
@@ -25,7 +26,8 @@
       "text": "<sup>9</sup>A little leaven leaveneth the whole lump. <sup>10</sup>I have confidence in you through the Lord, that ye will be none otherwise minded: but he that troubleth you shall bear his judgment, whosoever he be. <sup>11</sup>And I, brethren, if I yet preach circumcision, why do I yet suffer persecution? then is the offence of the cross ceased. <sup>12</sup>I would they were even cut off which trouble you. <sup>13</sup>For, brethren, ye have been called unto liberty; only\nuse\n not liberty for an occasion to the flesh, but by love serve one another. <sup>14</sup>For all the law is fulfilled in one word,\neven in this; Thou shalt love thy neighbour as thyself. <sup>15</sup>But if ye bite and devour one another, take heed that ye be not consumed one of another. <sup>16</sup>This I say then, Walk in the Spirit, and ye shall not fulfil the lust of the flesh.",
       "scan_pages": [
         "sinaiticus-folios/gal-5-Q84_4r_B587.jpg"
-      ]
+      ],
+      "scan_note": "fol. 280r (Q84_4r_B587), col. 3 line 40 to col. 4 line 32. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "5.17-24",
@@ -36,7 +38,8 @@
       "scan_pages": [
         "sinaiticus-folios/gal-5-Q84_4r_B587.jpg",
         "sinaiticus-folios/gal-6-Q84_4v_B588.jpg"
-      ]
+      ],
+      "scan_note": "fol. 280r (Q84_4r_B587), col. 4, lines 32-48 (5:17-20); fol. 280v (Q84_4v_B588), col. 1, lines 1-35 (5:20-24). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "5.25-26",
@@ -46,7 +49,8 @@
       "text": "<sup>25</sup>If we live in the Spirit, let us also walk in the Spirit. <sup>26</sup>Let us not be desirous of vain glory, provoking one another, envying one another.",
       "scan_pages": [
         "sinaiticus-folios/gal-6-Q84_4v_B588.jpg"
-      ]
+      ],
+      "scan_note": "fol. 280v (Q84_4v_B588), col. 1, lines 36-42. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q84_4v_B588"
     ],
     "scan_folio_ranges": [
-      "Q84_4r_B587 (lib. folio 280): Galatians, 4:12  - 5:20",
-      "Q84_4v_B588 (lib. folio 280): Galatians, 5:20  - 6:18  /  Ephesians, 1:1  - 1:10"
+      "Q84_4r_B587 (lib. folio 280): Galatians, 4:12 - 5:20",
+      "Q84_4v_B588 (lib. folio 280): Galatians, 5:20 - 6:18  /  Ephesians, 1:1 - 1:10"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

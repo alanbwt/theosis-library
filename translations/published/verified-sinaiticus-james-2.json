@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/james-1-Q89_1v_B662.jpg",
         "sinaiticus-folios/james-3-Q89_2r_B663.jpg"
-      ]
+      ],
+      "scan_note": "fol. 317v (Q89_1v_B662), col. 4, lines 10-48 (2:1-6); fol. 318r (Q89_2r_B663), col. 1, lines 1-14 (2:6-8). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "2.9-16",
@@ -26,7 +27,8 @@
       "text": "<sup>9</sup>But if ye have respect to persons, ye commit sin, and are convinced of the law as transgressors. <sup>10</sup>For whosoever shall keep the whole law, and yet offend in one\npoint, he is guilty of all. <sup>11</sup>For he that said, Do not commit adultery, said also, Do not kill. Now if thou commit no adultery, yet if thou kill, thou art become a transgressor of the law. <sup>12</sup>So speak ye, and so do, as they that shall be judged by the law of liberty. <sup>13</sup>For he shall have judgment without mercy, that hath shewed no mercy; and mercy rejoiceth against judgment. <sup>14</sup>What\ndoth it profit, my brethren, though a man say he hath faith, and have not works? can faith save him? <sup>15</sup>If a brother or sister be naked, and destitute of daily food, <sup>16</sup>And one of you say unto them, Depart in peace, be ye warmed and filled; notwithstanding ye give them not those things which are needful to the body; what\ndoth it profit?",
       "scan_pages": [
         "sinaiticus-folios/james-3-Q89_2r_B663.jpg"
-      ]
+      ],
+      "scan_note": "fol. 318r (Q89_2r_B663), col. 1 line 14 to col. 2 line 9. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "2.17-24",
@@ -36,7 +38,8 @@
       "text": "<sup>17</sup>Even so faith, if it hath not works, is dead, being alone. <sup>18</sup>Yea, a man may say, Thou hast faith, and I have works: shew me thy faith without thy works, and I will shew thee my faith by my works. <sup>19</sup>Thou believest that there is one God; thou doest well: the devils also believe, and tremble. <sup>20</sup>But wilt thou know, O vain man, that faith without works is dead? <sup>21</sup>Was not Abraham our father justified by works, when he had offered Isaac his son upon the altar? <sup>22</sup>Seest thou how faith wrought with his works, and by works was faith made perfect? <sup>23</sup>And the scripture was fulfilled which saith, Abraham believed God, and it was imputed unto him for righteousness: and he was called the Friend of God. <sup>24</sup>Ye see then how that by works a man is justified, and not by faith only.",
       "scan_pages": [
         "sinaiticus-folios/james-3-Q89_2r_B663.jpg"
-      ]
+      ],
+      "scan_note": "fol. 318r (Q89_2r_B663), col. 2 line 10 to col. 3 line 3. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "2.25-26",
@@ -46,7 +49,8 @@
       "text": "<sup>25</sup>Likewise also was not Rahab the harlot justified by works, when she had received the messengers, and had sent\nthem out another way? <sup>26</sup>For as the body without the spirit is dead, so faith without works is dead also.",
       "scan_pages": [
         "sinaiticus-folios/james-3-Q89_2r_B663.jpg"
-      ]
+      ],
+      "scan_note": "fol. 318r (Q89_2r_B663), col. 3, lines 4-14. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q89_2r_B663"
     ],
     "scan_folio_ranges": [
-      "Q89_1v_B662 (lib. folio 317): James, 1:1  - 2:6",
-      "Q89_2r_B663 (lib. folio 318): James, 2:6  - 3:13"
+      "Q89_1v_B662 (lib. folio 317): James, 1:1 - 2:6",
+      "Q89_2r_B663 (lib. folio 318): James, 2:6 - 3:13"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

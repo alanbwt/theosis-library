@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/tobit-3-Q37_4v_B012.jpg",
         "sinaiticus-folios/tobit-4-Q37_5r_B013.jpg"
-      ]
+      ],
+      "scan_note": "fol. 2v (Q37_4v_B012), col. 4, lines 20-48 (4:1-3); fol. 3r (Q37_5r_B013), col. 1, lines 1-26 (4:3-7). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "4.9-16",
@@ -25,7 +26,8 @@
       "text": "<sup>9</sup>For thou layest up a good treasure for thyself against the day of necessity. <sup>10</sup>Because that alms do deliver from death, and suffereth not to come into darkness. <sup>11</sup>For alms is a good gift unto all that give it in the sight of the most High. <sup>12</sup>Beware of all whoredom, my son, and chiefly take a wife of the seed of thy fathers, and take not a strange woman to wife, which is not of thy father’s tribe: for we are the children of the prophets, Noe, Abraham, Isaac, and Jacob: remember, my son, that our fathers from the beginning, even that they all married wives of their own kindred, and were blessed in their children, and their seed shall inherit the land. <sup>13</sup>Now therefore, my son, love thy brethren, and despise not in thy heart thy brethren, the sons and daughters of thy people, in not taking a wife of them: for in pride is destruction and much trouble, and in lewdness is decay and great want: for lewdness is the mother of famine. <sup>14</sup>Let not the wages of any man, which hath wrought for thee, tarry with thee, but give him it out of hand: for if thou serve God, he will also repay thee: be circumspect my son, in all things thou doest, and be wise in all thy conversation. <sup>15</sup>Do that to no man which thou hatest: drink not wine to make thee drunken: neither let drunkenness go with thee in thy journey. <sup>16</sup>Give of thy bread to the hungry, and of thy garments to them that are naked; and according to thine abundance give alms: and let not thine eye be envious, when thou givest alms.",
       "scan_pages": [
         "sinaiticus-folios/tobit-4-Q37_5r_B013.jpg"
-      ]
+      ],
+      "scan_note": "These verses are not in the Codex Sinaiticus Project transcription. The page shown, fol. 3r (Q37_5r_B013), is the last page with text of this chapter before them (4:7 ends there, col. 1, line 26); positions from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "4.17-21",
@@ -34,7 +36,8 @@
       "text": "<sup>17</sup>Pour out thy bread on the burial of the just, but give nothing to the wicked. <sup>18</sup>Ask counsel of all that are wise, and despise not any counsel that is profitable. <sup>19</sup>Bless the Lord thy God alway, and desire of him that thy ways may be directed, and that all thy paths and counsels may prosper: for every nation hath not counsel; but the Lord himself giveth all good things, and he humbleth whom he will, as he will; now therefore, my son, remember my commandments, neither let them be put out of thy mind. <sup>20</sup>And now I signify this to they that I committed ten talents to Gabael the son of Gabrias at Rages in Media. <sup>21</sup>And fear not, my son, that we are made poor: for thou hast much wealth, if thou fear God, and depart from all sin, and do that which is pleasing in his sight.",
       "scan_pages": [
         "sinaiticus-folios/tobit-4-Q37_5r_B013.jpg"
-      ]
+      ],
+      "scan_note": "fol. 3r (Q37_5r_B013), col. 1 line 27 to col. 2 line 4. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "verification": {
@@ -51,8 +54,8 @@
       "sinaiticus-folios/tobit-4-Q37_5r_B013.jpg"
     ],
     "scan_folio_ranges": [
-      "Q37_4v_B012 (lib. folio 2b): Tobit, 3:6  - 4:3",
-      "Q37_5r_B013 (lib. folio 3): Tobit, 4:3  - 5:10"
+      "Q37_4v_B012 (lib. folio 2b): Tobit, 3:6 - 4:3",
+      "Q37_5r_B013 (lib. folio 3): Tobit, 4:3 - 5:10"
     ],
     "scan_verse_info": "Tobit, 3:6  - 4:3",
     "section_folios_verified": true,
@@ -64,6 +67,9 @@
     "translation_source": "ebible.org eng-kjv USFM (KJV with Apocrypha)",
     "translation_license": "public domain",
     "translator": "King James Version Apocrypha (1611; 1769 text)",
-    "verified_date": "2026-09-05"
+    "verified_date": "2026-09-05",
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

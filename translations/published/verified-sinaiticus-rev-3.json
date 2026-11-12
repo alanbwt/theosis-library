@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/rev-3-Q90_2r_B679.jpg",
         "sinaiticus-folios/rev-4-Q90_2v_B680.jpg"
-      ]
+      ],
+      "scan_note": "fol. 326r (Q90_2r_B679), col. 4, lines 12-48 (3:1-5); fol. 326v (Q90_2v_B680), col. 1, lines 1-32 (3:5-8). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.9-16",
@@ -26,7 +27,8 @@
       "text": "<sup>9</sup>Behold, I will make them of the synagogue of Satan, which say they are Jews, and are not, but do lie; behold, I will make them to come and worship before thy feet, and to know that I have loved thee. <sup>10</sup>Because thou hast kept the word of my patience, I also will keep thee from the hour of temptation, which shall come upon all the world, to try them that dwell upon the earth. <sup>11</sup>Behold, I come quickly: hold that fast which thou hast, that no man take thy crown. <sup>12</sup>Him that overcometh will I make a pillar in the temple of my God, and he shall go no more out: and I will write upon him the name of my God, and the name of the city of my God,\nwhich is new Jerusalem, which cometh down out of heaven from my God: and\nI will write upon him\n my new name. <sup>13</sup>He that hath an ear, let him hear what the Spirit saith unto the churches. <sup>14</sup>And unto the angel of the church of the Laodiceans write; These things saith the Amen, the faithful and true witness, the beginning of the creation of God; <sup>15</sup>I know thy works, that thou art neither cold nor hot: I would thou wert cold or hot. <sup>16</sup>So then because thou art lukewarm, and neither cold nor hot, I will spue thee out of my mouth.",
       "scan_pages": [
         "sinaiticus-folios/rev-4-Q90_2v_B680.jpg"
-      ]
+      ],
+      "scan_note": "fol. 326v (Q90_2v_B680), col. 1 line 32 to col. 2 line 42. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.17-22",
@@ -36,7 +38,8 @@
       "text": "<sup>17</sup>Because thou sayest, I am rich, and increased with goods, and have need of nothing; and knowest not that thou art wretched, and miserable, and poor, and blind, and naked: <sup>18</sup>I counsel thee to buy of me gold tried in the fire, that thou mayest be rich; and white raiment, that thou mayest be clothed, and\nthat\n the shame of thy nakedness do not appear; and anoint thine eyes with eyesalve, that thou mayest see. <sup>19</sup>As many as I love, I rebuke and chasten: be zealous therefore, and repent. <sup>20</sup>Behold, I stand at the door, and knock: if any man hear my voice, and open the door, I will come in to him, and will sup with him, and he with me. <sup>21</sup>To him that overcometh will I grant to sit with me in my throne, even as I also overcame, and am set down with my Father in his throne. <sup>22</sup>He that hath an ear, let him hear what the Spirit saith unto the churches.",
       "scan_pages": [
         "sinaiticus-folios/rev-4-Q90_2v_B680.jpg"
-      ]
+      ],
+      "scan_note": "fol. 326v (Q90_2v_B680), col. 2 line 42 to col. 3 line 37. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -61,14 +64,16 @@
       "Q90_2v_B680"
     ],
     "scan_folio_ranges": [
-      "Q90_2r_B679 (lib. folio 326): Revelation, 2:7  - 3:5",
-      "Q90_2v_B680 (lib. folio 326): Revelation, 3:5  - 4:8"
+      "Q90_2r_B679 (lib. folio 326): Revelation, 2:7 - 3:5",
+      "Q90_2v_B680 (lib. folio 326): Revelation, 3:5 - 4:8"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

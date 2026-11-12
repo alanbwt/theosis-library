@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>Now concerning spiritual\ngifts, brethren, I would not have you ignorant. <sup>2</sup>Ye know that ye were Gentiles, carried away unto these dumb idols, even as ye were led. <sup>3</sup>Wherefore I give you to understand, that no man speaking by the Spirit of God calleth Jesus accursed: and\nthat no man can say that Jesus is the Lord, but by the Holy Ghost. <sup>4</sup>Now there are diversities of gifts, but the same Spirit. <sup>5</sup>And there are differences of administrations, but the same Lord. <sup>6</sup>And there are diversities of operations, but it is the same God which worketh all in all. <sup>7</sup>But the manifestation of the Spirit is given to every man to profit withal. <sup>8</sup>For to one is given by the Spirit the word of wisdom; to another the word of knowledge by the same Spirit;",
       "scan_pages": [
         "sinaiticus-folios/1cor-12-Q83_3v_B570.jpg"
-      ]
+      ],
+      "scan_note": "fol. 271v (Q83_3v_B570), col. 3 line 25 to col. 4 line 10. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "12.9-16",
@@ -26,7 +27,8 @@
       "scan_pages": [
         "sinaiticus-folios/1cor-12-Q83_3v_B570.jpg",
         "sinaiticus-folios/1cor-13-Q83_4r_B571.jpg"
-      ]
+      ],
+      "scan_note": "fol. 271v (Q83_3v_B570), col. 4, lines 10-48 (12:9-15); fol. 272r (Q83_4r_B571), col. 1, lines 1-11 (12:15-16). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "12.17-24",
@@ -36,7 +38,8 @@
       "text": "<sup>17</sup>If the whole body\nwere an eye, where\nwere the hearing? If the whole\nwere hearing, where\nwere the smelling? <sup>18</sup>But now hath God set the members every one of them in the body, as it hath pleased him. <sup>19</sup>And if they were all one member, where\nwere the body? <sup>20</sup>But now\nare they many members, yet but one body. <sup>21</sup>And the eye cannot say unto the hand, I have no need of thee: nor again the head to the feet, I have no need of you. <sup>22</sup>Nay, much more those members of the body, which seem to be more feeble, are necessary: <sup>23</sup>And those\nmembers of the body, which we think to be less honourable, upon these we bestow more abundant honour; and our uncomely\nparts have more abundant comeliness. <sup>24</sup>For our comely\nparts have no need: but God hath tempered the body together, having given more abundant honour to that\npart which lacked:",
       "scan_pages": [
         "sinaiticus-folios/1cor-13-Q83_4r_B571.jpg"
-      ]
+      ],
+      "scan_note": "fol. 272r (Q83_4r_B571), col. 1 line 11 to col. 2 line 3. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "12.25-31",
@@ -46,7 +49,8 @@
       "text": "<sup>25</sup>That there should be no schism in the body; but\nthat the members should have the same care one for another. <sup>26</sup>And whether one member suffer, all the members suffer with it; or one member be honoured, all the members rejoice with it. <sup>27</sup>Now ye are the body of Christ, and members in particular. <sup>28</sup>And God hath set some in the church, first apostles, secondarily prophets, thirdly teachers, after that miracles, then gifts of healings, helps, governments, diversities of tongues. <sup>29</sup>Are all apostles?\nare all prophets?\nare\n all teachers?\nare all workers of miracles? <sup>30</sup>Have all the gifts of healing? do all speak with tongues? do all interpret? <sup>31</sup>But covet earnestly the best gifts: and yet shew I unto you a more excellent way.",
       "scan_pages": [
         "sinaiticus-folios/1cor-13-Q83_4r_B571.jpg"
-      ]
+      ],
+      "scan_note": "fol. 272r (Q83_4r_B571), col. 2 line 4 to col. 3 line 1. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q83_4r_B571"
     ],
     "scan_folio_ranges": [
-      "Q83_3v_B570 (lib. folio 271): 1 Corinthians, 11:15  - 12:15",
-      "Q83_4r_B571 (lib. folio 272): 1 Corinthians, 12:15  - 14:5"
+      "Q83_3v_B570 (lib. folio 271): 1 Corinthians, 11:15 - 12:15",
+      "Q83_4r_B571 (lib. folio 272): 1 Corinthians, 12:15 - 14:5"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

@@ -15,7 +15,8 @@
       "scan_pages": [
         "sinaiticus-folios/zech-3-Q58_1r_B171.jpg",
         "sinaiticus-folios/zech-5-Q58_1v_B172.jpg"
-      ]
+      ],
+      "scan_note": "fol. 82r (Q58_1r_B171), col. 4, lines 40-48 (4:1-2); fol. 82v (Q58_1v_B172), col. 1, lines 1-25 (4:2-5). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "4.6-10",
@@ -24,7 +25,8 @@
       "text": "<sup>6</sup>Then he answered and spake unto me, saying, This\nis the word of the LORD unto Zerubbabel, saying, Not by might, nor by power, but by my spirit, saith the LORD of hosts. <sup>7</sup>Who\nart thou, O great mountain? before Zerubbabel\nthou shalt become a plain: and he shall bring forth the headstone\nthereof with shoutings,\ncrying, Grace, grace unto it. <sup>8</sup>Moreover the word of the LORD came unto me, saying, <sup>9</sup>The hands of Zerubbabel have laid the foundation of this house; his hands shall also finish it; and thou shalt know that the LORD of hosts hath sent me unto you. <sup>10</sup>For who hath despised the day of small things? for they shall rejoice, and shall see the plummet in the hand of Zerubbabel\nwith those seven; they\nare the eyes of the LORD, which run to and fro through the whole earth.",
       "scan_pages": [
         "sinaiticus-folios/zech-5-Q58_1v_B172.jpg"
-      ]
+      ],
+      "scan_note": "fol. 82v (Q58_1v_B172), col. 1 line 25 to col. 2 line 15. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "4.11-14",
@@ -33,7 +35,8 @@
       "text": "<sup>11</sup>Then answered I, and said unto him, What\nare these two olive trees upon the right\nside of the candlestick and upon the left\nside thereof? <sup>12</sup>And I answered again, and said unto him, What\nbe these two olive branches which through the two golden pipes empty the golden\noil\n out of themselves? <sup>13</sup>And he answered me and said, Knowest thou not what these\nbe?\n And I said, No, my lord. <sup>14</sup>Then said he, These\nare the two anointed ones, that stand by the LORD of the whole earth.",
       "scan_pages": [
         "sinaiticus-folios/zech-5-Q58_1v_B172.jpg"
-      ]
+      ],
+      "scan_note": "fol. 82v (Q58_1v_B172), col. 2, lines 16-39. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -59,11 +62,13 @@
       "Q58_1v_B172"
     ],
     "scan_folio_ranges": [
-      "Q58_1r_B171 (lib. folio 82): Zechariah, 2:4  - 4:2",
-      "Q58_1v_B172 (lib. folio 82): Zechariah, 4:2  - 6:3"
+      "Q58_1r_B171 (lib. folio 82): Zechariah, 2:5 - 4:2",
+      "Q58_1v_B172 (lib. folio 82): Zechariah, 4:2 - 6:3"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

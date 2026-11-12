@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>I exhort therefore, that, first of all, supplications, prayers, intercessions,\nand giving of thanks, be made for all men; <sup>2</sup>For kings, and\nfor all that are in authority; that we may lead a quiet and peaceable life in all godliness and honesty. <sup>3</sup>For this\nis good and acceptable in the sight of God our Saviour; <sup>4</sup>Who will have all men to be saved, and to come unto the knowledge of the truth. <sup>5</sup>For\nthere is one God, and one mediator between God and men, the man Christ Jesus;",
       "scan_pages": [
         "sinaiticus-folios/1tim-2-Q86_2r_B615.jpg"
-      ]
+      ],
+      "scan_note": "fol. 294r (Q86_2r_B615), col. 3 line 33 to col. 4 line 10. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "2.6-10",
@@ -25,7 +26,8 @@
       "text": "<sup>6</sup>Who gave himself a ransom for all, to be testified in due time. <sup>7</sup>Whereunto I am ordained a preacher, and an apostle, (I speak the truth in Christ,\nand lie not;) a teacher of the Gentiles in faith and verity. <sup>8</sup>I will therefore that men pray every where, lifting up holy hands, without wrath and doubting. <sup>9</sup>In like manner also, that women adorn themselves in modest apparel, with shamefacedness and sobriety; not with broided hair, or gold, or pearls, or costly array; <sup>10</sup>But (which becometh women professing godliness) with good works.",
       "scan_pages": [
         "sinaiticus-folios/1tim-2-Q86_2r_B615.jpg"
-      ]
+      ],
+      "scan_note": "fol. 294r (Q86_2r_B615), col. 4, lines 10-43. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "2.11-15",
@@ -36,7 +38,8 @@
       "scan_pages": [
         "sinaiticus-folios/1tim-2-Q86_2r_B615.jpg",
         "sinaiticus-folios/1tim-4-Q86_2v_B616.jpg"
-      ]
+      ],
+      "scan_note": "fol. 294r (Q86_2r_B615), col. 4, lines 44-48 (2:11-12); fol. 294v (Q86_2v_B616), col. 1, lines 1-15 (2:12-15). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -61,14 +64,16 @@
       "Q86_2v_B616"
     ],
     "scan_folio_ranges": [
-      "Q86_2r_B615 (lib. folio 294): 1 Timothy, 1:1  - 2:12",
-      "Q86_2v_B616 (lib. folio 294): 1 Timothy, 2:12  - 4:16"
+      "Q86_2r_B615 (lib. folio 294): 1 Timothy, 1:1 - 2:12",
+      "Q86_2v_B616 (lib. folio 294): 1 Timothy, 2:12 - 4:16"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

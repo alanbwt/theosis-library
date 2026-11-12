@@ -15,7 +15,8 @@
       "scan_pages": [
         "sinaiticus-folios/job-16-Q71_7v_B388.jpg",
         "sinaiticus-folios/job-19-Q71_8r_B389.jpg"
-      ]
+      ],
+      "scan_note": "fol. 190v (Q71_7v_B388), col. 2, lines 38-48 (16:1-5); fol. 191r (Q71_8r_B389), col. 1, lines 1-7 (16:6-8). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "16.9-16",
@@ -24,7 +25,8 @@
       "text": "<sup>9</sup>He teareth\nme in his wrath, who hateth me: he gnasheth upon me with his teeth; mine enemy sharpeneth his eyes upon me. <sup>10</sup>They have gaped upon me with their mouth; they have smitten me upon the cheek reproachfully; they have gathered themselves together against me. <sup>11</sup>God hath delivered me to the ungodly, and turned me over into the hands of the wicked. <sup>12</sup>I was at ease, but he hath broken me asunder: he hath also taken\nme by my neck, and shaken me to pieces, and set me up for his mark. <sup>13</sup>His archers compass me round about, he cleaveth my reins asunder, and doth not spare; he poureth out my gall upon the ground. <sup>14</sup>He breaketh me with breach upon breach, he runneth upon me like a giant. <sup>15</sup>I have sewed sackcloth upon my skin, and defiled my horn in the dust. <sup>16</sup>My face is foul with weeping, and my eyelids is the shadow of death;",
       "scan_pages": [
         "sinaiticus-folios/job-19-Q71_8r_B389.jpg"
-      ]
+      ],
+      "scan_note": "fol. 191r (Q71_8r_B389), col. 1, lines 8-27. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "16.17-22",
@@ -33,7 +35,8 @@
       "text": "<sup>17</sup>Not for\nany injustice in mine hands: also my prayer\nis pure. <sup>18</sup>O earth, cover not thou my blood, and let my cry have no place. <sup>19</sup>Also now, behold, my witness\nis in heaven, and my record\nis on high. <sup>20</sup>My friends scorn me:\nbut mine eye poureth out\ntears\n unto God. <sup>21</sup>Oh that one might plead for a man with God, as a man\npleadeth\n for his neighbour! <sup>22</sup>When a few years are come, then I shall go the way\nwhence\n I shall not return.",
       "scan_pages": [
         "sinaiticus-folios/job-19-Q71_8r_B389.jpg"
-      ]
+      ],
+      "scan_note": "fol. 191r (Q71_8r_B389), col. 1, lines 28-31. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -59,11 +62,13 @@
       "Q71_8r_B389"
     ],
     "scan_folio_ranges": [
-      "Q71_7v_B388 (lib. folio 190): Job, 14:20  - 16:5",
-      "Q71_8r_B389 (lib. folio 191): Job, 16:5  - 19:5"
+      "Q71_7v_B388 (lib. folio 190): Job, 14:20 - 16:5",
+      "Q71_8r_B389 (lib. folio 191): Job, 16:6 - 19:5"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

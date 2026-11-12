@@ -15,7 +15,8 @@
       "scan_pages": [
         "sinaiticus-folios/job-13-Q71_6v_B386.jpg",
         "sinaiticus-folios/job-14-Q71_7r_B387.jpg"
-      ]
+      ],
+      "scan_note": "fol. 189v (Q71_6v_B386), col. 2, lines 35-48 (13:1-7); fol. 190r (Q71_7r_B387), col. 1, lines 1-2 (13:8). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "13.9-16",
@@ -24,7 +25,8 @@
       "text": "<sup>9</sup>Is it good that he should search you out? or as one man mocketh another, do ye\nso mock him? <sup>10</sup>He will surely reprove you, if ye do secretly accept persons. <sup>11</sup>Shall not his excellency make you afraid? and his dread fall upon you? <sup>12</sup>Your remembrances\nare like unto ashes, your bodies to bodies of clay. <sup>13</sup>Hold your peace, let me alone, that I may speak, and let come on me what\nwill. <sup>14</sup>Wherefore do I take my flesh in my teeth, and put my life in mine hand? <sup>15</sup>Though he slay me, yet will I trust in him: but I will maintain mine own ways before him. <sup>16</sup>He also\nshall be my salvation: for an hypocrite shall not come before him.",
       "scan_pages": [
         "sinaiticus-folios/job-14-Q71_7r_B387.jpg"
-      ]
+      ],
+      "scan_note": "fol. 190r (Q71_7r_B387), col. 1, lines 3-20. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "13.17-24",
@@ -33,7 +35,8 @@
       "text": "<sup>17</sup>Hear diligently my speech, and my declaration with your ears. <sup>18</sup>Behold now, I have ordered\nmy cause; I know that I shall be justified. <sup>19</sup>Who\nis he\nthat will plead with me? for now, if I hold my tongue, I shall give up the ghost. <sup>20</sup>Only do not two\nthings unto me: then will I not hide myself from thee. <sup>21</sup>Withdraw thine hand far from me: and let not thy dread make me afraid. <sup>22</sup>Then call thou, and I will answer: or let me speak, and answer thou me. <sup>23</sup>How many\nare mine iniquities and sins? make me to know my transgression and my sin. <sup>24</sup>Wherefore hidest thou thy face, and holdest me for thine enemy?",
       "scan_pages": [
         "sinaiticus-folios/job-14-Q71_7r_B387.jpg"
-      ]
+      ],
+      "scan_note": "fol. 190r (Q71_7r_B387), col. 1, lines 21-36. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "13.25-28",
@@ -42,7 +45,8 @@
       "text": "<sup>25</sup>Wilt thou break a leaf driven to and fro? and wilt thou pursue the dry stubble? <sup>26</sup>For thou writest bitter things against me, and makest me to possess the iniquities of my youth. <sup>27</sup>Thou puttest my feet also in the stocks, and lookest narrowly unto all my paths; thou settest a print upon the heels of my feet. <sup>28</sup>And he, as a rotten thing, consumeth, as a garment that is moth eaten.",
       "scan_pages": [
         "sinaiticus-folios/job-14-Q71_7r_B387.jpg"
-      ]
+      ],
+      "scan_note": "fol. 190r (Q71_7r_B387), col. 1, lines 37-47. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -68,11 +72,13 @@
       "Q71_7r_B387"
     ],
     "scan_folio_ranges": [
-      "Q71_6v_B386 (lib. folio 189): Job, 11:9  - 13:7",
-      "Q71_7r_B387 (lib. folio 190): Job, 13:7  - 14:20"
+      "Q71_6v_B386 (lib. folio 189): Job, 11:10 - 13:7",
+      "Q71_7r_B387 (lib. folio 190): Job, 13:8 - 14:20"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

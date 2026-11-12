@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>And after these things I saw another angel come down from heaven, having great power; and the earth was lightened with his glory. <sup>2</sup>And he cried mightily with a strong voice, saying, Babylon the great is fallen, is fallen, and is become the habitation of devils, and the hold of every foul spirit, and a cage of every unclean and hateful bird. <sup>3</sup>For all nations have drunk of the wine of the wrath of her fornication, and the kings of the earth have committed fornication with her, and the merchants of the earth are waxed rich through the abundance of her delicacies. <sup>4</sup>And I heard another voice from heaven, saying, Come out of her, my people, that ye be not partakers of her sins, and that ye receive not of her plagues. <sup>5</sup>For her sins have reached unto heaven, and God hath remembered her iniquities. <sup>6</sup>Reward her even as she rewarded you, and double unto her double according to her works: in the cup which she hath filled fill to her double. <sup>7</sup>How much she hath glorified herself, and lived deliciously, so much torment and sorrow give her: for she saith in her heart, I sit a queen, and am no widow, and shall see no sorrow. <sup>8</sup>Therefore shall her plagues come in one day, death, and mourning, and famine; and she shall be utterly burned with fire: for strong\nis\n the Lord God who judgeth her.",
       "scan_pages": [
         "sinaiticus-folios/rev-18-Q90_7v_B690.jpg"
-      ]
+      ],
+      "scan_note": "fol. 331v (Q90_7v_B690), col. 3 line 6 to col. 4 line 31. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "18.9-16",
@@ -26,7 +27,8 @@
       "scan_pages": [
         "sinaiticus-folios/rev-18-Q90_7v_B690.jpg",
         "sinaiticus-folios/rev-19-Q90_8r_B691.jpg"
-      ]
+      ],
+      "scan_note": "fol. 331v (Q90_7v_B690), col. 4, lines 31-48 (18:9-11); fol. 332r (Q90_8r_B691), col. 1 line 1 to col. 2 line 8 (18:11-16). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "18.17-24",
@@ -36,7 +38,8 @@
       "text": "<sup>17</sup>For in one hour so great riches is come to nought. And every shipmaster, and all the company in ships, and sailors, and as many as trade by sea, stood afar off, <sup>18</sup>And cried when they saw the smoke of her burning, saying, What\ncity is like unto this great city! <sup>19</sup>And they cast dust on their heads, and cried, weeping and wailing, saying, Alas, alas, that great city, wherein were made rich all that had ships in the sea by reason of her costliness! for in one hour is she made desolate. <sup>20</sup>Rejoice over her,\nthou heaven, and\nye holy apostles and prophets; for God hath avenged you on her. <sup>21</sup>And a mighty angel took up a stone like a great millstone, and cast\nit into the sea, saying, Thus with violence shall that great city Babylon be thrown down, and shall be found no more at all. <sup>22</sup>And the voice of harpers, and musicians, and of pipers, and trumpeters, shall be heard no more at all in thee; and no craftsman, of whatsoever craft\nhe be, shall be found any more in thee; and the sound of a millstone shall be heard no more at all in thee; <sup>23</sup>And the light of a candle shall shine no more at all in thee; and the voice of the bridegroom and of the bride shall be heard no more at all in thee: for thy merchants were the great men of the earth; for by thy sorceries were all nations deceived. <sup>24</sup>And in her was found the blood of prophets, and of saints, and of all that were slain upon the earth.",
       "scan_pages": [
         "sinaiticus-folios/rev-19-Q90_8r_B691.jpg"
-      ]
+      ],
+      "scan_note": "fol. 332r (Q90_8r_B691), col. 2 line 8 to col. 3 line 30. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -61,14 +64,16 @@
       "Q90_8r_B691"
     ],
     "scan_folio_ranges": [
-      "Q90_7v_B690 (lib. folio 331): Revelation, 17:6  - 18:11",
-      "Q90_8r_B691 (lib. folio 332): Revelation, 18:11  - 19:9"
+      "Q90_7v_B690 (lib. folio 331): Revelation, 17:6 - 18:11",
+      "Q90_8r_B691 (lib. folio 332): Revelation, 18:11 - 19:9"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

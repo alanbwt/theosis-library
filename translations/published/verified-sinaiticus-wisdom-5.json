@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/wisdom-4-Q67_1v_B312.jpg",
         "sinaiticus-folios/wisdom-5-Q67_2r_B313.jpg"
-      ]
+      ],
+      "scan_note": "fol. 152v (Q67_1v_B312), col. 2, lines 28-48 (5:1-7); fol. 153r (Q67_2r_B313), col. 1, lines 1-6 (5:7-8). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "5.9-16",
@@ -25,7 +26,8 @@
       "text": "<sup>9</sup>All those things are passed away like a shadow, and as a post that hasted by; <sup>10</sup>And as a ship that passeth over the waves of the water, which when it is gone by, the trace thereof cannot be found, neither the pathway of the keel in the waves; <sup>11</sup>Or as when a bird hath flown through the air, there is no token of her way to be found, but the light air being beaten with the stroke of her wings and parted with the violent noise and motion of them, is passed through, and therein afterwards no sign where she went is to be found; <sup>12</sup>Or like as when an arrow is shot at a mark, it parteth the air, which immediately cometh together again, so that a man cannot know where it went through: <sup>13</sup>Even so we in like manner, as soon as we were born, began to draw to our end, and had no sign of virtue to shew; but were consumed in our own wickedness. <sup>14</sup>For the hope of the ungodly is like dust that is blown away with the wind; like a thin froth that is driven away with the storm; like as the smoke which is dispersed here and there with a tempest, and passeth away as the remembrance of a guest that tarrieth but a day. <sup>15</sup>But the righteous live for evermore; their reward also is with the Lord, and the care of them is with the most High. <sup>16</sup>Therefore shall they receive a glorious kingdom, and a beautiful crown from the Lord’s hand: for with his right hand shall he cover them, and with his arm shall he protect them.",
       "scan_pages": [
         "sinaiticus-folios/wisdom-5-Q67_2r_B313.jpg"
-      ]
+      ],
+      "scan_note": "fol. 153r (Q67_2r_B313), col. 1, lines 7-45. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "5.17-23",
@@ -34,7 +36,8 @@
       "text": "<sup>17</sup>He shall take to him his jealousy for complete armour, and make the creature his weapon for the revenge of his enemies. <sup>18</sup>He shall put on righteousness as a breastplate, and true judgment instead of an helmet. <sup>19</sup>He shall take holiness for an invincible shield. <sup>20</sup>His severe wrath shall he sharpen for a sword, and the world shall fight with him against the unwise. <sup>21</sup>Then shall the right aiming thunderbolts go abroad; and from the clouds, as from a well drawn bow, shall they fly to the mark. <sup>22</sup>And hailstones full of wrath shall be cast as out of a stone bow, and the water of the sea shall rage against them, and the floods shall cruelly drown them. <sup>23</sup>Yea, a mighty wind shall stand up against them, and like a storm shall blow them away: thus iniquity shall lay waste the whole earth, and ill dealing shall overthrow the thrones of the mighty.",
       "scan_pages": [
         "sinaiticus-folios/wisdom-5-Q67_2r_B313.jpg"
-      ]
+      ],
+      "scan_note": "fol. 153r (Q67_2r_B313), col. 1 line 46 to col. 2 line 21. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "verification": {
@@ -51,8 +54,8 @@
       "sinaiticus-folios/wisdom-5-Q67_2r_B313.jpg"
     ],
     "scan_folio_ranges": [
-      "Q67_1v_B312 (lib. folio 152b): Wisdom of Solomon, 4:1  - 5:7",
-      "Q67_2r_B313 (lib. folio 153): Wisdom of Solomon, 5:7  - 6:10"
+      "Q67_1v_B312 (lib. folio 152b): Wisdom of Solomon, 4:1 - 5:7",
+      "Q67_2r_B313 (lib. folio 153): Wisdom of Solomon, 5:7 - 6:10"
     ],
     "scan_verse_info": "Wisdom of Solomon, 4:1  - 5:7",
     "section_folios_verified": true,
@@ -64,6 +67,9 @@
     "translation_source": "ebible.org eng-kjv USFM (KJV with Apocrypha)",
     "translation_license": "public domain",
     "translator": "King James Version Apocrypha (1611; 1769 text)",
-    "verified_date": "2026-09-05"
+    "verified_date": "2026-09-05",
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>And the apostles and brethren that were in Judaea heard that the Gentiles had also received the word of God. <sup>2</sup>And when Peter was come up to Jerusalem, they that were of the circumcision contended with him, <sup>3</sup>Saying, Thou wentest in to men uncircumcised, and didst eat with them. <sup>4</sup>But Peter rehearsed\nthe matter from the beginning, and expounded\nit by order unto them, saying, <sup>5</sup>I was in the city of Joppa praying: and in a trance I saw a vision, A certain vessel descend, as it had been a great sheet, let down from heaven by four corners; and it came even to me: <sup>6</sup>Upon the which when I had fastened mine eyes, I considered, and saw fourfooted beasts of the earth, and wild beasts, and creeping things, and fowls of the air. <sup>7</sup>And I heard a voice saying unto me,\nArise, Peter; slay and eat. <sup>8</sup>But I said, Not so, Lord: for nothing common or unclean hath at any time entered into my mouth.",
       "scan_pages": [
         "sinaiticus-folios/acts-11-Q87_5v_B638.jpg"
-      ]
+      ],
+      "scan_note": "fol. 305v (Q87_5v_B638), col. 3 line 45 to col. 4 line 40. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "11.9-16",
@@ -26,7 +27,8 @@
       "scan_pages": [
         "sinaiticus-folios/acts-11-Q87_5v_B638.jpg",
         "sinaiticus-folios/acts-12-Q87_6r_B639.jpg"
-      ]
+      ],
+      "scan_note": "fol. 305v (Q87_5v_B638), col. 4, lines 40-48 (11:9-11); fol. 306r (Q87_6r_B639), col. 1, lines 1-40 (11:11-16). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "11.17-24",
@@ -36,7 +38,8 @@
       "text": "<sup>17</sup>Forasmuch then as God gave them the like gift as\nhe did unto us, who believed on the Lord Jesus Christ; what was I, that I could withstand God? <sup>18</sup>When they heard these things, they held their peace, and glorified God, saying, Then hath God also to the Gentiles granted repentance unto life. <sup>19</sup>Now they which were scattered abroad upon the persecution that arose about Stephen travelled as far as Phenice, and Cyprus, and Antioch, preaching the word to none but unto the Jews only. <sup>20</sup>And some of them were men of Cyprus and Cyrene, which, when they were come to Antioch, spake unto the Grecians, preaching the Lord Jesus. <sup>21</sup>And the hand of the Lord was with them: and a great number believed, and turned unto the Lord. <sup>22</sup>Then tidings of these things came unto the ears of the church which was in Jerusalem: and they sent forth Barnabas, that he should go as far as Antioch. <sup>23</sup>Who, when he came, and had seen the grace of God, was glad, and exhorted them all, that with purpose of heart they would cleave unto the Lord. <sup>24</sup>For he was a good man, and full of the Holy Ghost and of faith: and much people was added unto the Lord.",
       "scan_pages": [
         "sinaiticus-folios/acts-12-Q87_6r_B639.jpg"
-      ]
+      ],
+      "scan_note": "fol. 306r (Q87_6r_B639), col. 1 line 41 to col. 3 line 3. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "11.25-30",
@@ -46,7 +49,8 @@
       "text": "<sup>25</sup>Then departed Barnabas to Tarsus, for to seek Saul: <sup>26</sup>And when he had found him, he brought him unto Antioch. And it came to pass, that a whole year they assembled themselves with the church, and taught much people. And the disciples were called Christians first in Antioch. <sup>27</sup>And in these days came prophets from Jerusalem unto Antioch. <sup>28</sup>And there stood up one of them named Agabus, and signified by the spirit that there should be great dearth throughout all the world: which came to pass in the days of Claudius Caesar. <sup>29</sup>Then the disciples, every man according to his ability, determined to send relief unto the brethren which dwelt in Judaea: <sup>30</sup>Which also they did, and sent it to the elders by the hands of Barnabas and Saul.",
       "scan_pages": [
         "sinaiticus-folios/acts-12-Q87_6r_B639.jpg"
-      ]
+      ],
+      "scan_note": "fol. 306r (Q87_6r_B639), col. 3, lines 4-44. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q87_6r_B639"
     ],
     "scan_folio_ranges": [
-      "Q87_5v_B638 (lib. folio 305): Acts, 10:28  - 11:11",
-      "Q87_6r_B639 (lib. folio 306): Acts, 11:11  - 12:8"
+      "Q87_5v_B638 (lib. folio 305): Acts, 10:28 - 11:11",
+      "Q87_6r_B639 (lib. folio 306): Acts, 11:11 - 12:8"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

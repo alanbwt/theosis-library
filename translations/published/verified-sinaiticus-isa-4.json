@@ -15,7 +15,8 @@
       "scan_pages": [
         "sinaiticus-folios/isa-4-Q43_2r_B093.jpg",
         "sinaiticus-folios/isa-5-Q43_2v_B094.jpg"
-      ]
+      ],
+      "scan_note": "fol. 43r (Q43_2r_B093), col. 4, lines 30-47 (4:1-2); fol. 43v (Q43_2v_B094), col. 1, lines 1-27 (4:2-5). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "4.6",
@@ -24,7 +25,8 @@
       "text": "<sup>6</sup>And there shall be a tabernacle for a shadow in the daytime from the heat, and for a place of refuge, and for a covert from storm and from rain.",
       "scan_pages": [
         "sinaiticus-folios/isa-5-Q43_2v_B094.jpg"
-      ]
+      ],
+      "scan_note": "fol. 43v (Q43_2v_B094), col. 1, lines 27-32. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -50,11 +52,13 @@
       "Q43_2v_B094"
     ],
     "scan_folio_ranges": [
-      "Q43_2r_B093 (lib. folio 43): Isaiah, 3:2  - 4:2",
-      "Q43_2v_B094 (lib. folio 43): Isaiah, 4:2  - 5:20"
+      "Q43_2r_B093 (lib. folio 43): Isaiah, 3:2 - 4:2",
+      "Q43_2v_B094 (lib. folio 43): Isaiah, 4:2 - 5:20"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

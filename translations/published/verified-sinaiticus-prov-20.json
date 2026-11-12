@@ -15,7 +15,8 @@
       "scan_pages": [
         "sinaiticus-folios/prov-19-Q65_1v_B280.jpg",
         "sinaiticus-folios/prov-21-Q65_2r_B281.jpg"
-      ]
+      ],
+      "scan_note": "fol. 136v (Q65_1v_B280), col. 2, line 48 (20:1); fol. 137r (Q65_2r_B281), col. 1, lines 1-25 (20:1-8). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "20.9-16",
@@ -24,7 +25,8 @@
       "text": "<sup>9</sup>Who can say, I have made my heart clean, I am pure from my sin? <sup>10</sup>Divers weights,\nand divers measures, both of them\nare\n alike abomination to the LORD. <sup>11</sup>Even a child is known by his doings, whether his work\nbe\n pure, and whether\nit be right. <sup>12</sup>The hearing ear, and the seeing eye, the LORD hath made even both of them. <sup>13</sup>Love not sleep, lest thou come to poverty; open thine eyes,\nand\n thou shalt be satisfied with bread. <sup>14</sup>It is naught,\nit is naught, saith the buyer: but when he is gone his way, then he boasteth. <sup>15</sup>There is gold, and a multitude of rubies: but the lips of knowledge\nare a precious jewel. <sup>16</sup>Take his garment that is surety\nfor a stranger: and take a pledge of him for a strange woman.",
       "scan_pages": [
         "sinaiticus-folios/prov-21-Q65_2r_B281.jpg"
-      ]
+      ],
+      "scan_note": "fol. 137r (Q65_2r_B281), col. 1 line 26 to col. 2 line 5. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "20.17-24",
@@ -33,7 +35,8 @@
       "text": "<sup>17</sup>Bread of deceit\nis sweet to a man; but afterwards his mouth shall be filled with gravel. <sup>18</sup>Every purpose is established by counsel: and with good advice make war. <sup>19</sup>He that goeth about\nas a talebearer revealeth secrets: therefore meddle not with him that flattereth with his lips. <sup>20</sup>Whoso curseth his father or his mother, his lamp shall be put out in obscure darkness. <sup>21</sup>An inheritance\nmay be gotten hastily at the beginning; but the end thereof shall not be blessed. <sup>22</sup>Say not thou, I will recompense evil;\nbut wait on the LORD, and he shall save thee. <sup>23</sup>Divers weights\nare an abomination unto the LORD; and a false balance\nis not good. <sup>24</sup>Man’s goings\nare of the LORD; how can a man then understand his own way?",
       "scan_pages": [
         "sinaiticus-folios/prov-21-Q65_2r_B281.jpg"
-      ]
+      ],
+      "scan_note": "fol. 137r (Q65_2r_B281), col. 1 line 30 to col. 2 line 11. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "20.25-30",
@@ -42,7 +45,8 @@
       "text": "<sup>25</sup>It is a snare to the man\nwho devoureth\nthat which is holy, and after vows to make enquiry. <sup>26</sup>A wise king scattereth the wicked, and bringeth the wheel over them. <sup>27</sup>The spirit of man\nis the candle of the LORD, searching all the inward parts of the belly. <sup>28</sup>Mercy and truth preserve the king: and his throne is upholden by mercy. <sup>29</sup>The glory of young men\nis their strength: and the beauty of old men\nis the grey head. <sup>30</sup>The blueness of a wound cleanseth away evil: so\ndo stripes the inward parts of the belly.",
       "scan_pages": [
         "sinaiticus-folios/prov-21-Q65_2r_B281.jpg"
-      ]
+      ],
+      "scan_note": "fol. 137r (Q65_2r_B281), col. 2, lines 12-27. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -68,12 +72,14 @@
       "Q65_2r_B281"
     ],
     "scan_folio_ranges": [
-      "Q65_1v_B280 (lib. folio 136): Proverbs, 18:21  - 20:1",
-      "Q65_2r_B281 (lib. folio 137): Proverbs, 20:1  - 21:9"
+      "Q65_1v_B280 (lib. folio 136): Proverbs, 18:22 - 18:22  /  Proverbs, 19:3 - 20:1",
+      "Q65_2r_B281 (lib. folio 137): Proverbs, 20:1 - 20:22  /  Proverbs, 20:10 - 21:9"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "versification_note": "KJV verses 14, 15, 16, 17, 18, 19 of this chapter have no counterpart in the Septuagint text as it stands in Codex Sinaiticus (the Greek either omits, relocates, or numbers them differently). Compare by content rather than by verse number. Where the Septuagint lacks a verse found in the Hebrew, that is itself a documented textual difference between the two traditions.",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

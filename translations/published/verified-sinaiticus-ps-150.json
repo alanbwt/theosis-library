@@ -14,7 +14,8 @@
       "text": "<sup>1</sup>Praise ye the LORD. Praise God in his sanctuary: praise him in the firmament of his power. <sup>2</sup>Praise him for his mighty acts: praise him according to his excellent greatness. <sup>3</sup>Praise him with the sound of the trumpet: praise him with the psaltery and harp. <sup>4</sup>Praise him with the timbrel and dance: praise him with stringed instruments and organs. <sup>5</sup>Praise him upon the loud cymbals: praise him upon the high sounding cymbals.",
       "scan_pages": [
         "sinaiticus-folios/ps-150-Q64_1r_B263.jpg"
-      ]
+      ],
+      "scan_note": "fol. 128r (Q64_1r_B263), col. 1, lines 32-48. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "150.6",
@@ -23,7 +24,8 @@
       "text": "<sup>6</sup>Let every thing that hath breath praise the LORD. Praise ye the LORD.",
       "scan_pages": [
         "sinaiticus-folios/ps-150-Q64_1r_B263.jpg"
-      ]
+      ],
+      "scan_note": "fol. 128r (Q64_1r_B263), col. 2, lines 1-2. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -50,10 +52,12 @@
       "Q64_1r_B263"
     ],
     "scan_folio_ranges": [
-      "Q64_1r_B263 (lib. folio 128): Psalms, 148:14  - 151:7"
+      "Q64_1r_B263 (lib. folio 128): Psalms, 148:14 - 151:7"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

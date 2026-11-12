@@ -6,3 +6,5 @@
 - akhmim-codex: Lods Greek hand-transcribed from print; spot-proofread.
 - authors.json: tacitus and suetonius carry placeholder bios.
 - gilgamesh: old 19 entries deleted in commit 4b0586df pending the eBL rebuild; restore from bb3d99ad if the rebuild fails.
+- venetus: Iliad Book 1 English is still Butler (1898); transcribe A. T. Murray 1924 Book 1 from the archive.org Loeb scan (Perseus Book 1 is a later revision).
+- sinaiticus: Shepherd of Hermas 28-31 have Greek in the CSP XML but no entries; add them.

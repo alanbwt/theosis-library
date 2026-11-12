@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>We then,\nas workers together\nwith him, beseech\nyou also that ye receive not the grace of God in vain. <sup>2</sup>(For he saith, I have heard thee in a time accepted, and in the day of salvation have I succoured thee: behold, now\nis the accepted time; behold, now\nis the day of salvation.) <sup>3</sup>Giving no offence in any thing, that the ministry be not blamed: <sup>4</sup>But in all\nthings approving ourselves as the ministers of God, in much patience, in afflictions, in necessities, in distresses, <sup>5</sup>In stripes, in imprisonments, in tumults, in labours, in watchings, in fastings;",
       "scan_pages": [
         "sinaiticus-folios/2cor-5-Q83_7v_B578.jpg"
-      ]
+      ],
+      "scan_note": "fol. 275v (Q83_7v_B578), col. 4, lines 11-40. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "6.6-10",
@@ -26,7 +27,8 @@
       "scan_pages": [
         "sinaiticus-folios/2cor-5-Q83_7v_B578.jpg",
         "sinaiticus-folios/2cor-7-Q83_8r_B579.jpg"
-      ]
+      ],
+      "scan_note": "fol. 275v (Q83_7v_B578), col. 4, lines 41-48 (6:6-7); fol. 276r (Q83_8r_B579), col. 1, lines 1-23 (6:7-10). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "6.11-15",
@@ -36,7 +38,8 @@
       "text": "<sup>11</sup>O\nye Corinthians, our mouth is open unto you, our heart is enlarged. <sup>12</sup>Ye are not straitened in us, but ye are straitened in your own bowels. <sup>13</sup>Now for a recompence in the same, (I speak as unto\nmy children,) be ye also enlarged. <sup>14</sup>Be ye not unequally yoked together with unbelievers: for what fellowship hath righteousness with unrighteousness? and what communion hath light with darkness? <sup>15</sup>And what concord hath Christ with Belial? or what part hath he that believeth with an infidel?",
       "scan_pages": [
         "sinaiticus-folios/2cor-7-Q83_8r_B579.jpg"
-      ]
+      ],
+      "scan_note": "fol. 276r (Q83_8r_B579), col. 1, lines 24-47. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "6.16-18",
@@ -46,7 +49,8 @@
       "text": "<sup>16</sup>And what agreement hath the temple of God with idols? for ye are the temple of the living God; as God hath said, I will dwell in them, and walk in\nthem; and I will be their God, and they shall be my people. <sup>17</sup>Wherefore come out from among them, and be ye separate, saith the Lord, and touch not the unclean\nthing; and I will receive you, <sup>18</sup>And will be a Father unto you, and ye shall be my sons and daughters, saith the Lord Almighty.",
       "scan_pages": [
         "sinaiticus-folios/2cor-7-Q83_8r_B579.jpg"
-      ]
+      ],
+      "scan_note": "fol. 276r (Q83_8r_B579), col. 1 line 47 to col. 2 line 22. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q83_8r_B579"
     ],
     "scan_folio_ranges": [
-      "Q83_7v_B578 (lib. folio 275): 2 Corinthians, 4:15  - 6:7",
-      "Q83_8r_B579 (lib. folio 276): 2 Corinthians, 6:7  - 7:15"
+      "Q83_7v_B578 (lib. folio 275): 2 Corinthians, 4:15 - 6:7",
+      "Q83_8r_B579 (lib. folio 276): 2 Corinthians, 6:7 - 7:15"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

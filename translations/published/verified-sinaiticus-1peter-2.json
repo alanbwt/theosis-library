@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>Wherefore laying aside all malice, and all guile, and hypocrisies, and envies, and all evil speakings, <sup>2</sup>As newborn babes, desire the sincere milk of the word, that ye may grow thereby: <sup>3</sup>If so be ye have tasted that the Lord\nis gracious. <sup>4</sup>To whom coming,\nas unto a living stone, disallowed indeed of men, but chosen of God,\nand precious, <sup>5</sup>Ye also, as lively stones, are built up a spiritual house, an holy priesthood, to offer up spiritual sacrifices, acceptable to God by Jesus Christ. <sup>6</sup>Wherefore also it is contained in the scripture, Behold, I lay in Sion a chief corner stone, elect, precious: and he that believeth on him shall not be confounded. <sup>7</sup>Unto you therefore which believe\nhe is precious: but unto them which be disobedient, the stone which the builders disallowed, the same is made the head of the corner, <sup>8</sup>And a stone of stumbling, and a rock of offence,\neven to them\n which stumble at the word, being disobedient: whereunto also they were appointed.",
       "scan_pages": [
         "sinaiticus-folios/1peter-2-Q89_3v_B666.jpg"
-      ]
+      ],
+      "scan_note": "fol. 319v (Q89_3v_B666), col. 2 line 17 to col. 3 line 19. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "2.9-16",
@@ -25,7 +26,8 @@
       "text": "<sup>9</sup>But ye\nare a chosen generation, a royal priesthood, an holy nation, a peculiar people; that ye should shew forth the praises of him who hath called you out of darkness into his marvellous light: <sup>10</sup>Which in time past\nwere not a people, but\nare now the people of God: which had not obtained mercy, but now have obtained mercy. <sup>11</sup>Dearly beloved, I beseech\nyou as strangers and pilgrims, abstain from fleshly lusts, which war against the soul; <sup>12</sup>Having your conversation honest among the Gentiles: that, whereas they speak against you as evildoers, they may by\nyour good works, which they shall behold, glorify God in the day of visitation. <sup>13</sup>Submit yourselves to every ordinance of man for the Lord’s sake: whether it be to the king, as supreme; <sup>14</sup>Or unto governors, as unto them that are sent by him for the punishment of evildoers, and for the praise of them that do well. <sup>15</sup>For so is the will of God, that with well doing ye may put to silence the ignorance of foolish men: <sup>16</sup>As free, and not using\nyour liberty for a cloke of maliciousness, but as the servants of God.",
       "scan_pages": [
         "sinaiticus-folios/1peter-2-Q89_3v_B666.jpg"
-      ]
+      ],
+      "scan_note": "fol. 319v (Q89_3v_B666), col. 3 line 19 to col. 4 line 25. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "2.17-24",
@@ -36,7 +38,8 @@
       "scan_pages": [
         "sinaiticus-folios/1peter-2-Q89_3v_B666.jpg",
         "sinaiticus-folios/1peter-3-Q89_4r_B667.jpg"
-      ]
+      ],
+      "scan_note": "fol. 319v (Q89_3v_B666), col. 4, lines 25-47 (2:17-20); fol. 320r (Q89_4r_B667), col. 1, lines 1-28 (2:20-24). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "2.25",
@@ -46,7 +49,8 @@
       "text": "<sup>25</sup>For ye were as sheep going astray; but are now returned unto the Shepherd and Bishop of your souls.",
       "scan_pages": [
         "sinaiticus-folios/1peter-3-Q89_4r_B667.jpg"
-      ]
+      ],
+      "scan_note": "fol. 320r (Q89_4r_B667), col. 1, lines 29-35. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q89_4r_B667"
     ],
     "scan_folio_ranges": [
-      "Q89_3v_B666 (lib. folio 319): 1 Peter, 1:15  - 2:20",
-      "Q89_4r_B667 (lib. folio 320): 1 Peter, 2:20  - 4:1"
+      "Q89_3v_B666 (lib. folio 319): 1 Peter, 1:15 - 2:20",
+      "Q89_4r_B667 (lib. folio 320): 1 Peter, 2:20 - 4:1"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

@@ -14,7 +14,8 @@
       "text": "<sup>1</sup>Then Job answered the LORD, and said, <sup>2</sup>I know that thou canst do every\nthing, and\nthat\n no thought can be withholden from thee. <sup>3</sup>Who\nis he that hideth counsel without knowledge? therefore have I uttered that I understood not; things too wonderful for me, which I knew not. <sup>4</sup>Hear, I beseech thee, and I will speak: I will demand of thee, and declare thou unto me. <sup>5</sup>I have heard of thee by the hearing of the ear: but now mine eye seeth thee.",
       "scan_pages": [
         "sinaiticus-folios/job-42-Q72_8r_B405.jpg"
-      ]
+      ],
+      "scan_note": "fol. 199r (Q72_8r_B405), col. 2, lines 11-22. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "42.6-10",
@@ -24,7 +25,8 @@
       "scan_pages": [
         "sinaiticus-folios/job-42-Q72_8r_B405.jpg",
         "sinaiticus-folios/job-42-Q72_8v_B406.jpg"
-      ]
+      ],
+      "scan_note": "fol. 199r (Q72_8r_B405), col. 2, lines 23-48 (42:6-9); fol. 199v (Q72_8v_B406), col. 1, lines 1-7 (42:9-10). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "42.11-15",
@@ -33,7 +35,8 @@
       "text": "<sup>11</sup>Then came there unto him all his brethren, and all his sisters, and all they that had been of his acquaintance before, and did eat bread with him in his house: and they bemoaned him, and comforted him over all the evil that the LORD had brought upon him: every man also gave him a piece of money, and every one an earring of gold. <sup>12</sup>So the LORD blessed the latter end of Job more than his beginning: for he had fourteen thousand sheep, and six thousand camels, and a thousand yoke of oxen, and a thousand she asses. <sup>13</sup>He had also seven sons and three daughters. <sup>14</sup>And he called the name of the first, Jemima; and the name of the second, Kezia; and the name of the third, Keren-happuch. <sup>15</sup>And in all the land were no women found\nso fair as the daughters of Job: and their father gave them inheritance among their brethren.",
       "scan_pages": [
         "sinaiticus-folios/job-42-Q72_8v_B406.jpg"
-      ]
+      ],
+      "scan_note": "fol. 199v (Q72_8v_B406), col. 1, lines 8-36. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "42.16-17",
@@ -42,7 +45,8 @@
       "text": "<sup>16</sup>After this lived Job an hundred and forty years, and saw his sons, and his sons’ sons,\neven four generations. <sup>17</sup>So Job died,\nbeing old and full of days.",
       "scan_pages": [
         "sinaiticus-folios/job-42-Q72_8v_B406.jpg"
-      ]
+      ],
+      "scan_note": "fol. 199v (Q72_8v_B406), col. 1 line 37 to col. 2 line 27. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -68,11 +72,13 @@
       "Q72_8v_B406"
     ],
     "scan_folio_ranges": [
-      "Q72_8r_B405 (lib. folio 199): Job, 41:4  - 42:9",
-      "Q72_8v_B406 (lib. folio 199): Job, 42:9  - 42:17"
+      "Q72_8r_B405 (lib. folio 199): Job, 41:4 - 42:9",
+      "Q72_8v_B406 (lib. folio 199): Job, 42:9 - 42:17"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

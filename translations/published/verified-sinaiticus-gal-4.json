@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>Now I say,\nThat the heir, as long as he is a child, differeth nothing from a servant, though he be lord of all; <sup>2</sup>But is under tutors and governors until the time appointed of the father. <sup>3</sup>Even so we, when we were children, were in bondage under the elements of the world: <sup>4</sup>But when the fulness of the time was come, God sent forth his Son, made of a woman, made under the law, <sup>5</sup>To redeem them that were under the law, that we might receive the adoption of sons. <sup>6</sup>And because ye are sons, God hath sent forth the Spirit of his Son into your hearts, crying, Abba, Father. <sup>7</sup>Wherefore thou art no more a servant, but a son; and if a son, then an heir of God through Christ. <sup>8</sup>Howbeit then, when ye knew not God, ye did service unto them which by nature are no gods.",
       "scan_pages": [
         "sinaiticus-folios/gal-4-Q84_3v_B586.jpg"
-      ]
+      ],
+      "scan_note": "fol. 279v (Q84_3v_B586), col. 3 line 41 to col. 4 line 31. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "4.9-16",
@@ -26,7 +27,8 @@
       "scan_pages": [
         "sinaiticus-folios/gal-4-Q84_3v_B586.jpg",
         "sinaiticus-folios/gal-5-Q84_4r_B587.jpg"
-      ]
+      ],
+      "scan_note": "fol. 279v (Q84_3v_B586), col. 4, lines 31-48 (4:9-12); fol. 280r (Q84_4r_B587), col. 1, lines 1-24 (4:12-16). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "4.17-24",
@@ -36,7 +38,8 @@
       "text": "<sup>17</sup>They zealously affect you,\nbut not well; yea, they would exclude you, that ye might affect them. <sup>18</sup>But\nit is good to be zealously affected always in\na\n good\nthing, and not only when I am present with you. <sup>19</sup>My little children, of whom I travail in birth again until Christ be formed in you, <sup>20</sup>I desire to be present with you now, and to change my voice; for I stand in doubt of you. <sup>21</sup>Tell me, ye that desire to be under the law, do ye not hear the law? <sup>22</sup>For it is written, that Abraham had two sons, the one by a bondmaid, the other by a freewoman. <sup>23</sup>But he\nwho was of the bondwoman was born after the flesh; but he of the freewoman\nwas by promise. <sup>24</sup>Which things are an allegory: for these are the two covenants; the one from the mount Sinai, which gendereth to bondage, which is Agar.",
       "scan_pages": [
         "sinaiticus-folios/gal-5-Q84_4r_B587.jpg"
-      ]
+      ],
+      "scan_note": "fol. 280r (Q84_4r_B587), col. 1 line 24 to col. 2 line 16. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "4.25-31",
@@ -46,7 +49,8 @@
       "text": "<sup>25</sup>For this Agar is mount Sinai in Arabia, and answereth to Jerusalem which now is, and is in bondage with her children. <sup>26</sup>But Jerusalem which is above is free, which is the mother of us all. <sup>27</sup>For it is written, Rejoice,\nthou barren that bearest not; break forth and cry, thou that travailest not: for the desolate hath many more children than she which hath an husband. <sup>28</sup>Now we, brethren, as Isaac was, are the children of promise. <sup>29</sup>But as then he that was born after the flesh persecuted him\nthat was born after the Spirit, even so\nit is now. <sup>30</sup>Nevertheless what saith the scripture? Cast out the bondwoman and her son: for the son of the bondwoman shall not be heir with the son of the free woman. <sup>31</sup>So then, brethren, we are not children of the bondwoman, but of the free.",
       "scan_pages": [
         "sinaiticus-folios/gal-5-Q84_4r_B587.jpg"
-      ]
+      ],
+      "scan_note": "fol. 280r (Q84_4r_B587), col. 2 line 16 to col. 3 line 5. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q84_4r_B587"
     ],
     "scan_folio_ranges": [
-      "Q84_3v_B586 (lib. folio 279): Galatians, 3:6  - 4:12",
-      "Q84_4r_B587 (lib. folio 280): Galatians, 4:12  - 5:20"
+      "Q84_3v_B586 (lib. folio 279): Galatians, 3:6 - 4:12",
+      "Q84_4r_B587 (lib. folio 280): Galatians, 4:12 - 5:20"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

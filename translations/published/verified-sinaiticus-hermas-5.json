@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/hermas-3-Q93_1v_B710.jpg",
         "sinaiticus-folios/hermas-5-Q93_2r_B711.jpg"
-      ]
+      ],
+      "scan_note": "fol. 341v (Q93_1v_B710), col. 4, lines 22-48 (5:0-3); fol. 342r (Q93_2r_B711), col. 1, lines 1-28 (5:3-4). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "verification": {
@@ -33,8 +34,8 @@
       "sinaiticus-folios/hermas-5-Q93_2r_B711.jpg"
     ],
     "scan_folio_ranges": [
-      "Q93_1v_B710 (lib. folio 341b): Shepherd of Hermas, 2:4  - 5:3",
-      "Q93_2r_B711 (lib. folio 342): Shepherd of Hermas, 5:3  - 7:4"
+      "Q93_1v_B710 (lib. folio 341b): Shepherd of Hermas, 2:4 - 5:3",
+      "Q93_2r_B711 (lib. folio 342): Shepherd of Hermas, 5:3 - 7:4"
     ],
     "scan_verse_info": "Shepherd of Hermas, 2:4  - 5:3",
     "section_folios_verified": true,
@@ -46,6 +47,9 @@
     "translation_source": "Lightfoot 1891 via earlychristianwritings.com transcription",
     "translation_license": "public domain",
     "translator": "J. B. Lightfoot, The Apostolic Fathers (1891)",
-    "verified_date": "2026-09-05"
+    "verified_date": "2026-09-05",
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

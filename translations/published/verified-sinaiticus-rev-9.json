@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/rev-8-Q90_4r_B683.jpg",
         "sinaiticus-folios/rev-10-Q90_4v_B684.jpg"
-      ]
+      ],
+      "scan_note": "fol. 328r (Q90_4r_B683), col. 4, lines 15-48 (9:1-5); fol. 328v (Q90_4v_B684), col. 1, lines 1-26 (9:5-8). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "9.9-16",
@@ -26,7 +27,8 @@
       "text": "<sup>9</sup>And they had breastplates, as it were breastplates of iron; and the sound of their wings\nwas as the sound of chariots of many horses running to battle. <sup>10</sup>And they had tails like unto scorpions, and there were stings in their tails: and their power\nwas to hurt men five months. <sup>11</sup>And they had a king over them,\nwhich is the angel of the bottomless pit, whose name in the Hebrew tongue\nis Abaddon, but in the Greek tongue hath\nhis name Apollyon. <sup>12</sup>One woe is past;\nand, behold, there come two woes more hereafter. <sup>13</sup>And the sixth angel sounded, and I heard a voice from the four horns of the golden altar which is before God, <sup>14</sup>Saying to the sixth angel which had the trumpet, Loose the four angels which are bound in the great river Euphrates. <sup>15</sup>And the four angels were loosed, which were prepared for an hour, and a day, and a month, and a year, for to slay the third part of men. <sup>16</sup>And the number of the army of the horsemen\nwere two hundred thousand thousand: and I heard the number of them.",
       "scan_pages": [
         "sinaiticus-folios/rev-10-Q90_4v_B684.jpg"
-      ]
+      ],
+      "scan_note": "fol. 328v (Q90_4v_B684), col. 1 line 26 to col. 2 line 30. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "9.17-21",
@@ -36,7 +38,8 @@
       "text": "<sup>17</sup>And thus I saw the horses in the vision, and them that sat on them, having breastplates of fire, and of jacinth, and brimstone: and the heads of the horses\nwere as the heads of lions; and out of their mouths issued fire and smoke and brimstone. <sup>18</sup>By these three was the third part of men killed, by the fire, and by the smoke, and by the brimstone, which issued out of their mouths. <sup>19</sup>For their power is in their mouth, and in their tails: for their tails\nwere like unto serpents, and had heads, and with them they do hurt. <sup>20</sup>And the rest of the men which were not killed by these plagues yet repented not of the works of their hands, that they should not worship devils, and idols of gold, and silver, and brass, and stone, and of wood: which neither can see, nor hear, nor walk: <sup>21</sup>Neither repented they of their murders, nor of their sorceries, nor of their fornication, nor of their thefts.",
       "scan_pages": [
         "sinaiticus-folios/rev-10-Q90_4v_B684.jpg"
-      ]
+      ],
+      "scan_note": "fol. 328v (Q90_4v_B684), col. 2 line 30 to col. 3 line 38. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -61,14 +64,16 @@
       "Q90_4v_B684"
     ],
     "scan_folio_ranges": [
-      "Q90_4r_B683 (lib. folio 328): Revelation, 7:12  - 9:5",
-      "Q90_4v_B684 (lib. folio 328): Revelation, 9:5  - 10:8"
+      "Q90_4r_B683 (lib. folio 328): Revelation, 7:12 - 9:5",
+      "Q90_4v_B684 (lib. folio 328): Revelation, 9:5 - 10:8"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>And I saw when the Lamb opened one of the seals, and I heard, as it were the noise of thunder, one of the four beasts saying, Come and see. <sup>2</sup>And I saw, and behold a white horse: and he that sat on him had a bow; and a crown was given unto him: and he went forth conquering, and to conquer. <sup>3</sup>And when he had opened the second seal, I heard the second beast say, Come and see. <sup>4</sup>And there went out another horse\nthat was red: and\npower\n was given to him that sat thereon to take peace from the earth, and that they should kill one another: and there was given unto him a great sword. <sup>5</sup>And when he had opened the third seal, I heard the third beast say, Come and see. And I beheld, and lo a black horse; and he that sat on him had a pair of balances in his hand.",
       "scan_pages": [
         "sinaiticus-folios/rev-5-Q90_3r_B681.jpg"
-      ]
+      ],
+      "scan_note": "fol. 327r (Q90_3r_B681), col. 4, lines 4-42. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "6.6-10",
@@ -26,7 +27,8 @@
       "scan_pages": [
         "sinaiticus-folios/rev-5-Q90_3r_B681.jpg",
         "sinaiticus-folios/rev-7-Q90_3v_B682.jpg"
-      ]
+      ],
+      "scan_note": "fol. 327r (Q90_3r_B681), col. 4, lines 43-48 (6:6); fol. 327v (Q90_3v_B682), col. 1, lines 1-42 (6:6-10). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "6.11-15",
@@ -36,7 +38,8 @@
       "text": "<sup>11</sup>And white robes were given unto every one of them; and it was said unto them, that they should rest yet for a little season, until their fellowservants also and their brethren, that should be killed as they\nwere, should be fulfilled. <sup>12</sup>And I beheld when he had opened the sixth seal, and, lo, there was a great earthquake; and the sun became black as sackcloth of hair, and the moon became as blood; <sup>13</sup>And the stars of heaven fell unto the earth, even as a fig tree casteth her untimely figs, when she is shaken of a mighty wind. <sup>14</sup>And the heaven departed as a scroll when it is rolled together; and every mountain and island were moved out of their places. <sup>15</sup>And the kings of the earth, and the great men, and the rich men, and the chief captains, and the mighty men, and every bondman, and every free man, hid themselves in the dens and in the rocks of the mountains;",
       "scan_pages": [
         "sinaiticus-folios/rev-7-Q90_3v_B682.jpg"
-      ]
+      ],
+      "scan_note": "fol. 327v (Q90_3v_B682), col. 1 line 42 to col. 2 line 37. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "6.16-17",
@@ -46,7 +49,8 @@
       "text": "<sup>16</sup>And said to the mountains and rocks, Fall on us, and hide us from the face of him that sitteth on the throne, and from the wrath of the Lamb: <sup>17</sup>For the great day of his wrath is come; and who shall be able to stand?",
       "scan_pages": [
         "sinaiticus-folios/rev-7-Q90_3v_B682.jpg"
-      ]
+      ],
+      "scan_note": "fol. 327v (Q90_3v_B682), col. 2 line 37 to col. 3 line 2. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q90_3v_B682"
     ],
     "scan_folio_ranges": [
-      "Q90_3r_B681 (lib. folio 327): Revelation, 4:8  - 6:6",
-      "Q90_3v_B682 (lib. folio 327): Revelation, 6:6  - 7:12"
+      "Q90_3r_B681 (lib. folio 327): Revelation, 4:8 - 6:6",
+      "Q90_3v_B682 (lib. folio 327): Revelation, 6:6 - 7:12"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

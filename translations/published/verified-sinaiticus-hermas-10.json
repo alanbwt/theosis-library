@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/hermas-8-Q93_2v_B712.jpg",
         "sinaiticus-folios/hermas-10-Q93_3r_B713.jpg"
-      ]
+      ],
+      "scan_note": "fol. 342v (Q93_2v_B712), col. 4, lines 24-48 (10:1-2); fol. 343r (Q93_3r_B713), col. 1 line 1 to col. 2 line 6 (10:2-5). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "10.6-9",
@@ -25,7 +26,8 @@
       "text": "<sup>6</sup>The stones that were dragged from the deep they placed in every case, just as they were, into the building, for they had been shaped, and they fitted in their joining with the other stones; and they adhered so closely one with another that their joining could not possibly be detected; and the building of the tower appeared as if it were built of one stone. <sup>7</sup>But of the other stones which were brought from the dry land, some they threw away, and some they put into the building; and others they broke in pieces, and threw to a distance from the tower. <sup>8</sup>Now many other stones were lying round the tower, and they did not use them for the building; for some of them were mildewed, and others had cracks in them, and others were too short, and others were white and round, and did not fit into the building. <sup>9</sup>And I saw other stones thrown to a distance from the tower, and coming to the way, and yet not staying in the way, but rolling to where there was no way; and others falling into the fire and burning there; and others falling near the waters, and yet not able to roll into the water, although they desired to roll and to come to the water.",
       "scan_pages": [
         "sinaiticus-folios/hermas-10-Q93_3r_B713.jpg"
-      ]
+      ],
+      "scan_note": "fol. 343r (Q93_3r_B713), col. 2 line 7 to col. 3 line 15. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "verification": {
@@ -42,8 +44,8 @@
       "sinaiticus-folios/hermas-10-Q93_3r_B713.jpg"
     ],
     "scan_folio_ranges": [
-      "Q93_2v_B712 (lib. folio 342b): Shepherd of Hermas, 7:4  - 10:2",
-      "Q93_3r_B713 (lib. folio 343): Shepherd of Hermas, 10:2  - 11:5"
+      "Q93_2v_B712 (lib. folio 342b): Shepherd of Hermas, 7:4 - 10:2",
+      "Q93_3r_B713 (lib. folio 343): Shepherd of Hermas, 10:2 - 11:5"
     ],
     "scan_verse_info": "Shepherd of Hermas, 7:4  - 10:2",
     "section_folios_verified": true,
@@ -55,6 +57,9 @@
     "translation_source": "Lightfoot 1891 via earlychristianwritings.com transcription",
     "translation_license": "public domain",
     "translator": "J. B. Lightfoot, The Apostolic Fathers (1891)",
-    "verified_date": "2026-09-05"
+    "verified_date": "2026-09-05",
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/hermas-12-Q93_3v_B714.jpg",
         "sinaiticus-folios/hermas-15-Q93_4r_B715.jpg"
-      ]
+      ],
+      "scan_note": "fol. 343v (Q93_3v_B714), col. 4, lines 23-48 (14:1-2); fol. 344r (Q93_4r_B715), col. 1, lines 1-47 (14:2-5). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "14.6-7",
@@ -25,7 +26,8 @@
       "text": "<sup>6</sup>And I answered and said unto her, \"When then, lady, will they be useful for the building?\" \"When,\" she replied, \"their wealth, which leadeth their souls astray, shall be cut away, then will they be useful for God. For just as the round stone, unless it be cut away, and lose some portion of itself, cannot become square, so also they that are rich in this world, unless their riches be cut away, cannot become useful to the Lord. <sup>7</sup>Learn first from thyself When thou hadst riches, thou wast useless; but now thou art useful and profitable unto life. Be ye useful unto God, for thou thyself also art taken from the same stones.",
       "scan_pages": [
         "sinaiticus-folios/hermas-15-Q93_4r_B715.jpg"
-      ]
+      ],
+      "scan_note": "fol. 344r (Q93_4r_B715), col. 1 line 47 to col. 2 line 28. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "verification": {
@@ -42,8 +44,8 @@
       "sinaiticus-folios/hermas-15-Q93_4r_B715.jpg"
     ],
     "scan_folio_ranges": [
-      "Q93_3v_B714 (lib. folio 343b): Shepherd of Hermas, 11:5  - 14:2",
-      "Q93_4r_B715 (lib. folio 344): Shepherd of Hermas, 14:2  - 16:3"
+      "Q93_3v_B714 (lib. folio 343b): Shepherd of Hermas, 11:5 - 14:2",
+      "Q93_4r_B715 (lib. folio 344): Shepherd of Hermas, 14:2 - 16:3"
     ],
     "scan_verse_info": "Shepherd of Hermas, 11:5  - 14:2",
     "section_folios_verified": true,
@@ -55,6 +57,9 @@
     "translation_source": "Lightfoot 1891 via earlychristianwritings.com transcription",
     "translation_license": "public domain",
     "translator": "J. B. Lightfoot, The Apostolic Fathers (1891)",
-    "verified_date": "2026-09-05"
+    "verified_date": "2026-09-05",
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

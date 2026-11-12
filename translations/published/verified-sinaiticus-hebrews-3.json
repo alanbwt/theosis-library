@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/hebrews-3-Q85_5r_B605.jpg",
         "sinaiticus-folios/hebrews-4-Q85_5v_B606.jpg"
-      ]
+      ],
+      "scan_note": "fol. 289r (Q85_5r_B605), col. 4, lines 28-48 (3:1-4); fol. 289v (Q85_5v_B606), col. 1, lines 1-7 (3:4-5). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.6-10",
@@ -26,7 +27,8 @@
       "text": "<sup>6</sup>But Christ as a son over his own house; whose house are we, if we hold fast the confidence and the rejoicing of the hope firm unto the end. <sup>7</sup>Wherefore (as the Holy Ghost saith, To day if ye will hear his voice, <sup>8</sup>Harden not your hearts, as in the provocation, in the day of temptation in the wilderness: <sup>9</sup>When your fathers tempted me, proved me, and saw my works forty years. <sup>10</sup>Wherefore I was grieved with that generation, and said, They do alway err in\ntheir heart; and they have not known my ways.",
       "scan_pages": [
         "sinaiticus-folios/hebrews-4-Q85_5v_B606.jpg"
-      ]
+      ],
+      "scan_note": "fol. 289v (Q85_5v_B606), col. 1, lines 7-35. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.11-15",
@@ -36,7 +38,8 @@
       "text": "<sup>11</sup>So I sware in my wrath, They shall not enter into my rest.) <sup>12</sup>Take heed, brethren, lest there be in any of you an evil heart of unbelief, in departing from the living God. <sup>13</sup>But exhort one another daily, while it is called To day; lest any of you be hardened through the deceitfulness of sin. <sup>14</sup>For we are made partakers of Christ, if we hold the beginning of our confidence stedfast unto the end; <sup>15</sup>While it is said, To day if ye will hear his voice, harden not your hearts, as in the provocation.",
       "scan_pages": [
         "sinaiticus-folios/hebrews-4-Q85_5v_B606.jpg"
-      ]
+      ],
+      "scan_note": "fol. 289v (Q85_5v_B606), col. 1 line 36 to col. 2 line 19. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.16-19",
@@ -46,7 +49,8 @@
       "text": "<sup>16</sup>For some, when they had heard, did provoke: howbeit not all that came out of Egypt by Moses. <sup>17</sup>But with whom was he grieved forty years?\nwas it not with them that had sinned, whose carcases fell in the wilderness? <sup>18</sup>And to whom sware he that they should not enter into his rest, but to them that believed not? <sup>19</sup>So we see that they could not enter in because of unbelief.",
       "scan_pages": [
         "sinaiticus-folios/hebrews-4-Q85_5v_B606.jpg"
-      ]
+      ],
+      "scan_note": "fol. 289v (Q85_5v_B606), col. 2, lines 20-40. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q85_5v_B606"
     ],
     "scan_folio_ranges": [
-      "Q85_5r_B605 (lib. folio 289): Hebrews, 1:7  - 3:4",
-      "Q85_5v_B606 (lib. folio 289): Hebrews, 3:4  - 4:15"
+      "Q85_5r_B605 (lib. folio 289): Hebrews, 1:7 - 3:4",
+      "Q85_5v_B606 (lib. folio 289): Hebrews, 3:4 - 4:15"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

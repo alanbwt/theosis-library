@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/sirach-22-Q69_3r_B347.jpg",
         "sinaiticus-folios/sirach-23-Q69_3v_B348.jpg"
-      ]
+      ],
+      "scan_note": "fol. 170r (Q69_3r_B347), col. 2, lines 43-48 (23:1-2); fol. 170v (Q69_3v_B348), col. 1, lines 1-24 (23:2-8). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "23.9-16",
@@ -25,7 +26,8 @@
       "text": "<sup>9</sup>Accustom not thy mouth to swearing; neither use thyself to the naming of the Holy One. <sup>10</sup>For as a servant that is continually beaten shall not be without a blue mark: so he that sweareth and nameth God continually shall not be faultless. <sup>11</sup>A man that useth much swearing shall be filled with iniquity, and the plague shall never depart from his house: if he shall offend, his sin shall be upon him: and if he acknowledge not his sin, he maketh a double offence: and if he swear in vain, he shall not be innocent, but his house shall be full of calamities. <sup>12</sup>There is a word that is clothed about with death: God grant that it be not found in the heritage of Jacob; for all such things shall be far from the godly, and they shall not wallow in their sins. <sup>13</sup>Use not thy mouth to intemperate swearing, for therein is the word of sin. <sup>14</sup>Remember thy father and thy mother, when thou sittest among great men. Be not forgetful before them, and so thou by thy custom become a fool, and wish that thou hadst not been born, and curse they day of thy nativity. <sup>15</sup>The man that is accustomed to opprobrious words will never be reformed all the days of his life. <sup>16</sup>Two sorts of men multiply sin, and the third will bring wrath: a hot mind is as a burning fire, it will never be quenched till it be consumed: a fornicator in the body of his flesh will never cease till he hath kindled a fire.",
       "scan_pages": [
         "sinaiticus-folios/sirach-23-Q69_3v_B348.jpg"
-      ]
+      ],
+      "scan_note": "fol. 170v (Q69_3v_B348), col. 1 line 25 to col. 2 line 19. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "23.17-24",
@@ -35,7 +37,8 @@
       "scan_pages": [
         "sinaiticus-folios/sirach-23-Q69_3v_B348.jpg",
         "sinaiticus-folios/sirach-23-Q69_4r_B349.jpg"
-      ]
+      ],
+      "scan_note": "fol. 170v (Q69_3v_B348), col. 2, lines 20-48 (23:17-22); fol. 171r (Q69_4r_B349), col. 1, lines 1-12 (23:22-24). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "23.25-28",
@@ -44,7 +47,8 @@
       "text": "<sup>25</sup>Her children shall not take root, and her branches shall bring forth no fruit. <sup>26</sup>She shall leave her memory to be cursed, and her reproach shall not be blotted out. <sup>27</sup>And they that remain shall know that there is nothing better than the fear of the Lord, and that there is nothing sweeter than to take heed unto the commandments of the Lord. <sup>28</sup>It is great glory to follow the Lord, and to be received of him is long life.",
       "scan_pages": [
         "sinaiticus-folios/sirach-23-Q69_4r_B349.jpg"
-      ]
+      ],
+      "scan_note": "fol. 171r (Q69_4r_B349), col. 1, lines 13-26. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "verification": {
@@ -63,9 +67,9 @@
       "sinaiticus-folios/sirach-23-Q69_4r_B349.jpg"
     ],
     "scan_folio_ranges": [
-      "Q69_3r_B347 (lib. folio 170): Sirach, 22:3  - 23:2",
-      "Q69_3v_B348 (lib. folio 170b): Sirach, 23:2  - 23:22",
-      "Q69_4r_B349 (lib. folio 171): Sirach, 23:22  - 24:22"
+      "Q69_3r_B347 (lib. folio 170): Sirach, 22:4 - 23:2",
+      "Q69_3v_B348 (lib. folio 170b): Sirach, 23:2 - 23:22",
+      "Q69_4r_B349 (lib. folio 171): Sirach, 23:22 - 24:22"
     ],
     "scan_verse_info": "Sirach, 22:3  - 23:2",
     "section_folios_verified": true,
@@ -77,6 +81,9 @@
     "translation_source": "ebible.org eng-kjv USFM (KJV with Apocrypha)",
     "translation_license": "public domain",
     "translator": "King James Version Apocrypha (1611; 1769 text)",
-    "verified_date": "2026-09-05"
+    "verified_date": "2026-09-05",
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

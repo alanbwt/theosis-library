@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/tobit-1-Q37_3r_L019.jpg",
         "sinaiticus-folios/tobit-1-Q37_3v_L019.jpg"
-      ]
+      ],
+      "scan_note": "quire 37, leaf 3r (Q37_3r_L019), col. 3 line 1 to col. 4 line 48 (1:1-7); quire 37, leaf 3v (Q37_3v_L019), col. 1, lines 1-27 (1:7-8). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "1.9-16",
@@ -25,7 +26,8 @@
       "text": "<sup>9</sup>Furthermore, when I was come to the age of a man, I married Anna of mine own kindred, and of her I begat Tobias. <sup>10</sup>And when we were carried away captives to Nineve, all my brethren and those that were of my kindred did eat of the bread of the Gentiles. <sup>11</sup>But I kept myself from eating; <sup>12</sup>Because I remembered God with all my heart. <sup>13</sup>And the most High gave me grace and favour before Enemessar, so that I was his purveyor. <sup>14</sup>And I went into Media, and left in trust with Gabael, the brother of Gabrias, at Rages a city of Media ten talents of silver. <sup>15</sup>Now when Enemessar was dead, Sennacherib his son reigned in his stead; whose estate was troubled, that I could not go into Media. <sup>16</sup>And in the time of Enemessar I gave many alms to my brethren, and gave my bread to the hungry,",
       "scan_pages": [
         "sinaiticus-folios/tobit-1-Q37_3v_L019.jpg"
-      ]
+      ],
+      "scan_note": "quire 37, leaf 3v (Q37_3v_L019), col. 1 line 28 to col. 2 line 37. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "1.17-22",
@@ -34,7 +36,8 @@
       "text": "<sup>17</sup>And my clothes to the naked: and if I saw any of my nation dead, or cast about the walls of Nineve, I buried him. <sup>18</sup>And if the king Sennacherib had slain any, when he was come, and fled from Judea, I buried them privily; for in his wrath he killed many; but the bodies were not found, when they were sought for of the king. <sup>19</sup>And when one of the Ninevites went and complained of me to the king, that I buried them, and hid myself; understanding that I was sought for to be put to death, I withdrew myself for fear. <sup>20</sup>Then all my goods were forcibly taken away, neither was there any thing left me, beside my wife Anna and my son Tobias. <sup>21</sup>And there passed not five and fifty days, before two of his sons killed him, and they fled into the mountains of Ararath; and Sarchedonus his son reigned in his stead; who appointed over his father’s accounts, and over all his affairs, Achiacharus my brother Anael’s son. <sup>22</sup>And Achiacharus intreating for me, I returned to Nineve. Now Achiacharus was cupbearer, and keeper of the signet, and steward, and overseer of the accounts: and Sarchedonus appointed him next unto him: and he was my brother’s son.",
       "scan_pages": [
         "sinaiticus-folios/tobit-1-Q37_3v_L019.jpg"
-      ]
+      ],
+      "scan_note": "quire 37, leaf 3v (Q37_3v_L019), col. 2 line 37 to col. 4 line 27. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "verification": {
@@ -51,8 +54,8 @@
       "sinaiticus-folios/tobit-1-Q37_3v_L019.jpg"
     ],
     "scan_folio_ranges": [
-      "Q37_3r_L019 (lib. folio ): Esther, 10:3f - 10:3l /  Tobit, 1:1  - 1:7",
-      "Q37_3v_L019 (lib. folio ): Tobit, 1:7  - 2:2"
+      "Q37_3r_L019 (lib. folio xix): 9, 10:3 - 10:3  /  Tobit, 1:1 - 1:7",
+      "Q37_3v_L019 (lib. folio xix_v): Tobit, 1:7 - 2:2"
     ],
     "scan_verse_info": "Esther, 10:3f - 10:3l /  Tobit, 1:1  - 1:7",
     "section_folios_verified": true,
@@ -64,6 +67,9 @@
     "translation_source": "ebible.org eng-kjv USFM (KJV with Apocrypha)",
     "translation_license": "public domain",
     "translator": "King James Version Apocrypha (1611; 1769 text)",
-    "verified_date": "2026-09-05"
+    "verified_date": "2026-09-05",
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

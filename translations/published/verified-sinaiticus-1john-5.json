@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/1john-4-Q89_7v_B674.jpg",
         "sinaiticus-folios/1john-5-Q89_8r_B675.jpg"
-      ]
+      ],
+      "scan_note": "fol. 323v (Q89_7v_B674), col. 4, lines 19-47 (5:1-5); fol. 324r (Q89_8r_B675), col. 1, lines 1-18 (5:5-8). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "5.9-16",
@@ -26,7 +27,8 @@
       "text": "<sup>9</sup>If we receive the witness of men, the witness of God is greater: for this is the witness of God which he hath testified of his Son. <sup>10</sup>He that believeth on the Son of God hath the witness in himself: he that believeth not God hath made him a liar; because he believeth not the record that God gave of his Son. <sup>11</sup>And this is the record, that God hath given to us eternal life, and this life is in his Son. <sup>12</sup>He that hath the Son hath life;\nand he that hath not the Son of God hath not life. <sup>13</sup>These things have I written unto you that believe on the name of the Son of God; that ye may know that ye have eternal life, and that ye may believe on the name of the Son of God. <sup>14</sup>And this is the confidence that we have in him, that, if we ask any thing according to his will, he heareth us: <sup>15</sup>And if we know that he hear us, whatsoever we ask, we know that we have the petitions that we desired of him. <sup>16</sup>If any man see his brother sin a sin\nwhich is not unto death, he shall ask, and he shall give him life for them that sin not unto death. There is a sin unto death: I do not say that he shall pray for it.",
       "scan_pages": [
         "sinaiticus-folios/1john-5-Q89_8r_B675.jpg"
-      ]
+      ],
+      "scan_note": "fol. 324r (Q89_8r_B675), col. 1 line 18 to col. 2 line 30. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "5.17-21",
@@ -36,7 +38,8 @@
       "text": "<sup>17</sup>All unrighteousness is sin: and there is a sin not unto death. <sup>18</sup>We know that whosoever is born of God sinneth not; but he that is begotten of God keepeth himself, and that wicked one toucheth him not. <sup>19</sup>And we know that we are of God, and the whole world lieth in wickedness. <sup>20</sup>And we know that the Son of God is come, and hath given us an understanding, that we may know him that is true, and we are in him that is true,\neven in his Son Jesus Christ. This is the true God, and eternal life. <sup>21</sup>Little children, keep yourselves from idols. Amen.",
       "scan_pages": [
         "sinaiticus-folios/1john-5-Q89_8r_B675.jpg"
-      ]
+      ],
+      "scan_note": "fol. 324r (Q89_8r_B675), col. 2 line 30 to col. 3 line 12. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -61,14 +64,16 @@
       "Q89_8r_B675"
     ],
     "scan_folio_ranges": [
-      "Q89_7v_B674 (lib. folio 323): 1 John, 3:23  - 5:5",
-      "Q89_8r_B675 (lib. folio 324): 1 John, 5:5  - 5:21  /  2 John, 1:1  - 1:7"
+      "Q89_7v_B674 (lib. folio 323): 1 John, 3:23 - 5:5",
+      "Q89_8r_B675 (lib. folio 324): 1 John, 5:5 - 5:21  /  2 John, 1:1 - 1:7"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

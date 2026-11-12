@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/barnabas-19-Q92_2r_B707.jpg",
         "sinaiticus-folios/barnabas-20-Q92_2v_B708.jpg"
-      ]
+      ],
+      "scan_note": "fol. 340r (Q92_2r_B707), col. 4, lines 27-48 (20:1); fol. 340v (Q92_2v_B708), col. 1, lines 1-40 (20:1-2). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "verification": {
@@ -33,8 +34,8 @@
       "sinaiticus-folios/barnabas-20-Q92_2v_B708.jpg"
     ],
     "scan_folio_ranges": [
-      "Q92_2r_B707 (lib. folio 340): Barnabas, 19:1  - 20:1",
-      "Q92_2v_B708 (lib. folio 340b): Barnabas, 20:1  - 21:9"
+      "Q92_2r_B707 (lib. folio 340): Barnabas, 19:1 - 20:1",
+      "Q92_2v_B708 (lib. folio 340b): Barnabas, 20:1 - 21:9"
     ],
     "scan_verse_info": "Barnabas, 19:1  - 20:1",
     "section_folios_verified": true,
@@ -46,6 +47,9 @@
     "translation_source": "Lightfoot 1891 via earlychristianwritings.com transcription",
     "translation_license": "public domain",
     "translator": "J. B. Lightfoot, The Apostolic Fathers (1891)",
-    "verified_date": "2026-09-05"
+    "verified_date": "2026-09-05",
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

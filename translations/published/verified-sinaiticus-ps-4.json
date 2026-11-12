@@ -13,8 +13,10 @@
       "original_text": "<sup>1</sup>ειϲ το τελοϲ εν ψαλμοιϲ ωδη τω δαυειδ <sup>2</sup>εν τω επικαλειϲθαι με ειϲηκουϲεν μου ο θϲ τηϲ δικαιοϲυνηϲ μου εν θλιψει επλατυναϲ μοι οικτειρηϲον με και ειϲακουϲον τηϲ προϲευχηϲ μου <sup>3</sup>ϋιοι ανθρωπων εωϲ ποτε βαρυκαρδιοι ϊνα τι αγαπατε ματαιοτητα και ζητειτε ψευδοϲ διαψαλμα <sup>4</sup>και γνωτε οτι εθαυμαϲτωϲεν κϲ τον οϲιον αυτου κϲ ειϲακουϲεται μου εν τω κεκραγεναι με προϲ αυτον <sup>5</sup>οργιζεϲθε και μη αμαρτανετε α λεγετε εν ταιϲ καρδιαιϲ υμων επι ταιϲ κοιταιϲ ϋμων κατανυγητε διαψαλμα",
       "text": "<sup>1</sup>Hear me when I call, O God of my righteousness: thou hast enlarged me\nwhen I was in distress; have mercy upon me, and hear my prayer. <sup>2</sup>O ye sons of men, how long\nwill ye turn my glory into shame?\nhow long will ye love vanity,\nand seek after leasing? Selah. <sup>3</sup>But know that the LORD hath set apart him that is godly for himself: the LORD will hear when I call unto him. <sup>4</sup>Stand in awe, and sin not: commune with your own heart upon your bed, and be still. Selah.",
       "scan_pages": [
-        "sinaiticus-folios/ps-1-Q59_1r_B183.jpg"
-      ]
+        "sinaiticus-folios/ps-1-Q59_1r_B183.jpg",
+        "sinaiticus-folios/ps-5-Q59_1v_B184.jpg"
+      ],
+      "scan_note": "fol. 88r (Q59_1r_B183), col. 2, lines 32-48 (4:1-5); fol. 88v (Q59_1v_B184), col. 1, lines 1-2 (4:5). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "4.6-9",
@@ -23,7 +25,8 @@
       "text": "<sup>5</sup>Offer the sacrifices of righteousness, and put your trust in the LORD. <sup>6</sup>There be many that say, Who will shew us\nany good? LORD, lift thou up the light of thy countenance upon us. <sup>7</sup>Thou hast put gladness in my heart, more than in the time\nthat\n their corn and their wine increased. <sup>8</sup>I will both lay me down in peace, and sleep: for thou, LORD, only makest me dwell in safety.",
       "scan_pages": [
         "sinaiticus-folios/ps-5-Q59_1v_B184.jpg"
-      ]
+      ],
+      "scan_note": "fol. 88v (Q59_1v_B184), col. 1, lines 3-16. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -52,11 +55,13 @@
       "Q59_1v_B184"
     ],
     "scan_folio_ranges": [
-      "Q59_1r_B183 (lib. folio 88): Psalms, 1:1  - 4:5",
-      "Q59_1v_B184 (lib. folio 88): Psalms, 4:5  - 7:2"
+      "Q59_1r_B183 (lib. folio 88): Psalms, 1:1 - 4:5",
+      "Q59_1v_B184 (lib. folio 88): Psalms, 4:5 - 7:2"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

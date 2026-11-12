@@ -15,7 +15,8 @@
       "scan_pages": [
         "sinaiticus-folios/eccl-5-Q66_1v_B296.jpg",
         "sinaiticus-folios/eccl-6-Q66_2r_B297.jpg"
-      ]
+      ],
+      "scan_note": "fol. 144v (Q66_1v_B296), col. 2, lines 44-48 (5:1); fol. 145r (Q66_2r_B297), col. 1, lines 1-17 (5:1-5). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "5.6-10",
@@ -24,7 +25,8 @@
       "text": "<sup>7</sup>For in the multitude of dreams and many words\nthere are also\ndivers vanities: but fear thou God. <sup>8</sup>If thou seest the oppression of the poor, and violent perverting of judgment and justice in a province, marvel not at the matter: for\nhe that is higher than the highest regardeth; and\nthere be higher than they. <sup>9</sup>Moreover the profit of the earth is for all: the king\nhimself\n is served by the field. <sup>10</sup>He that loveth silver shall not be satisfied with silver; nor he that loveth abundance with increase: this\nis also vanity. <sup>11</sup>When goods increase, they are increased that eat them: and what good\nis there to the owners thereof, saving the beholding\nof them\n with their eyes?",
       "scan_pages": [
         "sinaiticus-folios/eccl-6-Q66_2r_B297.jpg"
-      ]
+      ],
+      "scan_note": "fol. 145r (Q66_2r_B297), col. 1, lines 17-38. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "5.11-15",
@@ -33,7 +35,8 @@
       "text": "<sup>12</sup>The sleep of a labouring man\nis sweet, whether he eat little or much: but the abundance of the rich will not suffer him to sleep. <sup>13</sup>There is a sore evil\nwhich I have seen under the sun,\nnamely, riches kept for the owners thereof to their hurt. <sup>14</sup>But those riches perish by evil travail: and he begetteth a son, and\nthere is nothing in his hand. <sup>15</sup>As he came forth of his mother’s womb, naked shall he return to go as he came, and shall take nothing of his labour, which he may carry away in his hand. <sup>16</sup>And this also\nis a sore evil,\nthat in all points as he came, so shall he go: and what profit hath he that hath laboured for the wind?",
       "scan_pages": [
         "sinaiticus-folios/eccl-6-Q66_2r_B297.jpg"
-      ]
+      ],
+      "scan_note": "fol. 145r (Q66_2r_B297), col. 1 line 39 to col. 2 line 12. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "5.16-19",
@@ -42,7 +45,8 @@
       "text": "<sup>17</sup>All his days also he eateth in darkness, and\nhe hath much sorrow and wrath with his sickness. <sup>18</sup>Behold\nthat which I have seen:\nit is good and comely\nfor one to eat and to drink, and to enjoy the good of all his labour that he taketh under the sun all the days of his life, which God giveth him: for it\nis his portion. <sup>19</sup>Every man also to whom God hath given riches and wealth, and hath given him power to eat thereof, and to take his portion, and to rejoice in his labour; this\nis the gift of God. <sup>20</sup>For he shall not much remember the days of his life; because God answereth\nhim in the joy of his heart.",
       "scan_pages": [
         "sinaiticus-folios/eccl-6-Q66_2r_B297.jpg"
-      ]
+      ],
+      "scan_note": "fol. 145r (Q66_2r_B297), col. 2, lines 12-34. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -68,12 +72,14 @@
       "Q66_2r_B297"
     ],
     "scan_folio_ranges": [
-      "Q66_1v_B296 (lib. folio 144): Ecclesiastes, 3:19  - 5:1",
-      "Q66_2r_B297 (lib. folio 145): Ecclesiastes, 5:1  - 6:3"
+      "Q66_1v_B296 (lib. folio 144): Ecclesiastes, 3:19 - 5:1",
+      "Q66_2r_B297 (lib. folio 145): Ecclesiastes, 5:1 - 6:3"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "versification_fixed": true,
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

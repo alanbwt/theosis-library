@@ -15,7 +15,8 @@
       "scan_pages": [
         "sinaiticus-folios/eccl-6-Q66_2r_B297.jpg",
         "sinaiticus-folios/eccl-7-Q66_2v_B298.jpg"
-      ]
+      ],
+      "scan_note": "fol. 145r (Q66_2r_B297), col. 2, lines 35-48 (6:1-3); fol. 145v (Q66_2v_B298), col. 1, lines 1-11 (6:3-5). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "6.6-10",
@@ -24,7 +25,8 @@
       "text": "<sup>6</sup>Yea, though he live a thousand years twice\ntold, yet hath he seen no good: do not all go to one place? <sup>7</sup>All the labour of man\nis for his mouth, and yet the appetite is not filled. <sup>8</sup>For what hath the wise more than the fool? what hath the poor, that knoweth to walk before the living? <sup>9</sup>Better\nis the sight of the eyes than the wandering of the desire: this\nis also vanity and vexation of spirit. <sup>10</sup>That which hath been is named already, and it is known that it\nis man: neither may he contend with him that is mightier than he.",
       "scan_pages": [
         "sinaiticus-folios/eccl-7-Q66_2v_B298.jpg"
-      ]
+      ],
+      "scan_note": "fol. 145v (Q66_2v_B298), col. 1, lines 12-29. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "6.11-12",
@@ -33,7 +35,8 @@
       "text": "<sup>11</sup>Seeing there be many things that increase vanity, what\nis\n man the better? <sup>12</sup>For who knoweth what\nis good for man in\nthis life, all the days of his vain life which he spendeth as a shadow? for who can tell a man what shall be after him under the sun?",
       "scan_pages": [
         "sinaiticus-folios/eccl-7-Q66_2v_B298.jpg"
-      ]
+      ],
+      "scan_note": "fol. 145v (Q66_2v_B298), col. 1, lines 29-39. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -59,11 +62,13 @@
       "Q66_2v_B298"
     ],
     "scan_folio_ranges": [
-      "Q66_2r_B297 (lib. folio 145): Ecclesiastes, 5:1  - 6:3",
-      "Q66_2v_B298 (lib. folio 145): Ecclesiastes, 6:3  - 7:16"
+      "Q66_2r_B297 (lib. folio 145): Ecclesiastes, 5:1 - 6:3",
+      "Q66_2v_B298 (lib. folio 145): Ecclesiastes, 6:3 - 7:16"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

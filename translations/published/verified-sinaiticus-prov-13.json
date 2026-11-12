@@ -14,7 +14,8 @@
       "text": "<sup>1</sup>A wise son\nheareth his father’s instruction: but a scorner heareth not rebuke. <sup>2</sup>A man shall eat good by the fruit of\nhis mouth: but the soul of the transgressors\nshall eat violence. <sup>3</sup>He that keepeth his mouth keepeth his life:\nbut he that openeth wide his lips shall have destruction. <sup>4</sup>The soul of the sluggard desireth, and\nhath nothing: but the soul of the diligent shall be made fat. <sup>5</sup>A righteous\nman hateth lying: but a wicked\nman is loathsome, and cometh to shame. <sup>6</sup>Righteousness keepeth\nhim that is upright in the way: but wickedness overthroweth the sinner. <sup>7</sup>There is that maketh himself rich, yet\nhath nothing:\nthere is that maketh himself poor, yet\nhath great riches. <sup>8</sup>The ransom of a man’s life\nare his riches: but the poor heareth not rebuke.",
       "scan_pages": [
         "sinaiticus-folios/prov-13-Q64_6v_B274.jpg"
-      ]
+      ],
+      "scan_note": "fol. 133v (Q64_6v_B274), col. 2, lines 3-24. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "13.9-16",
@@ -24,7 +25,8 @@
       "scan_pages": [
         "sinaiticus-folios/prov-13-Q64_6v_B274.jpg",
         "sinaiticus-folios/prov-14-Q64_7r_B275.jpg"
-      ]
+      ],
+      "scan_note": "fol. 133v (Q64_6v_B274), col. 2, lines 25-48 (13:9-13); fol. 134r (Q64_7r_B275), col. 1, lines 1-9 (13:13-16). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "13.17-24",
@@ -33,7 +35,8 @@
       "text": "<sup>17</sup>A wicked messenger falleth into mischief: but a faithful ambassador\nis health. <sup>18</sup>Poverty and shame\nshall be to him that refuseth instruction: but he that regardeth reproof shall be honoured. <sup>19</sup>The desire accomplished is sweet to the soul: but\nit is abomination to fools to depart from evil. <sup>20</sup>He that walketh with wise\nmen shall be wise: but a companion of fools shall be destroyed. <sup>21</sup>Evil pursueth sinners: but to the righteous good shall be repaid. <sup>22</sup>A good\nman leaveth an inheritance to his children’s children: and the wealth of the sinner is laid up for the just. <sup>23</sup>Much food\nis in the tillage of the poor: but there is\nthat is destroyed for want of judgment. <sup>24</sup>He that spareth his rod hateth his son: but he that loveth him chasteneth him betimes.",
       "scan_pages": [
         "sinaiticus-folios/prov-14-Q64_7r_B275.jpg"
-      ]
+      ],
+      "scan_note": "fol. 134r (Q64_7r_B275), col. 1, lines 10-29. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "13.25",
@@ -42,7 +45,8 @@
       "text": "<sup>25</sup>The righteous eateth to the satisfying of his soul: but the belly of the wicked shall want.",
       "scan_pages": [
         "sinaiticus-folios/prov-14-Q64_7r_B275.jpg"
-      ]
+      ],
+      "scan_note": "fol. 134r (Q64_7r_B275), col. 1, lines 30-32. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -68,12 +72,14 @@
       "Q64_7r_B275"
     ],
     "scan_folio_ranges": [
-      "Q64_6v_B274 (lib. folio 133): Proverbs, 12:12  - 13:13",
-      "Q64_7r_B275 (lib. folio 134): Proverbs, 13:13  - 14:22"
+      "Q64_6v_B274 (lib. folio 133): Proverbs, 12:13 - 13:13",
+      "Q64_7r_B275 (lib. folio 134): Proverbs, 13:13 - 14:22"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "versification_note": "KJV verse 6 of this chapter has no counterpart in the Septuagint text as it stands in Codex Sinaiticus (the Greek either omits, relocates, or numbers it differently). Compare by content rather than by verse number. Where the Septuagint lacks a verse found in the Hebrew, that is itself a documented textual difference between the two traditions.",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

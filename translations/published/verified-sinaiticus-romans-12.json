@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>I beseech you therefore, brethren, by the mercies of God, that ye present your bodies a living sacrifice, holy, acceptable unto God,\nwhich is\n your reasonable service. <sup>2</sup>And be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what is that good, and acceptable, and perfect, will of God. <sup>3</sup>For I say, through the grace given unto me, to every man that is among you, not to think\nof himself more highly than he ought to think; but to think soberly, according as God hath dealt to every man the measure of faith. <sup>4</sup>For as we have many members in one body, and all members have not the same office: <sup>5</sup>So we,\nbeing many, are one body in Christ, and every one members one of another. <sup>6</sup>Having then gifts differing according to the grace that is given to us, whether prophecy,\nlet us prophesy according to the proportion of faith; <sup>7</sup>Or ministry,\nlet us wait on\nour ministering: or he that teacheth, on teaching; <sup>8</sup>Or he that exhorteth, on exhortation: he that giveth,\nlet him do it\n with simplicity; he that ruleth, with diligence; he that sheweth mercy, with cheerfulness.",
       "scan_pages": [
         "sinaiticus-folios/romans-12-Q82_5v_B558.jpg"
-      ]
+      ],
+      "scan_note": "fol. 265v (Q82_5v_B558), col. 3 line 13 to col. 4 line 21. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "12.9-16",
@@ -26,7 +27,8 @@
       "scan_pages": [
         "sinaiticus-folios/romans-12-Q82_5v_B558.jpg",
         "sinaiticus-folios/romans-14-Q82_6r_B559.jpg"
-      ]
+      ],
+      "scan_note": "fol. 265v (Q82_5v_B558), col. 4, lines 22-48 (12:9-15); fol. 266r (Q82_6r_B559), col. 1, lines 1-10 (12:15-16). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "12.17-21",
@@ -36,7 +38,8 @@
       "text": "<sup>17</sup>Recompense to no man evil for evil. Provide things honest in the sight of all men. <sup>18</sup>If it be possible, as much as lieth in you, live peaceably with all men. <sup>19</sup>Dearly beloved, avenge not yourselves, but\nrather give place unto wrath: for it is written, Vengeance\nis mine; I will repay, saith the Lord. <sup>20</sup>Therefore if thine enemy hunger, feed him; if he thirst, give him drink: for in so doing thou shalt heap coals of fire on his head. <sup>21</sup>Be not overcome of evil, but overcome evil with good.",
       "scan_pages": [
         "sinaiticus-folios/romans-14-Q82_6r_B559.jpg"
-      ]
+      ],
+      "scan_note": "fol. 266r (Q82_6r_B559), col. 1, lines 11-40. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -61,14 +64,16 @@
       "Q82_6r_B559"
     ],
     "scan_folio_ranges": [
-      "Q82_5v_B558 (lib. folio 265): Romans, 11:15  - 12:15",
-      "Q82_6r_B559 (lib. folio 266): Romans, 12:15  - 14:9"
+      "Q82_5v_B558 (lib. folio 265): Romans, 11:15 - 12:15",
+      "Q82_6r_B559 (lib. folio 266): Romans, 12:15 - 14:9"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

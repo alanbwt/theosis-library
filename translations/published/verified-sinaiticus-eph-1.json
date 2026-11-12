@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>Paul, an apostle of Jesus Christ by the will of God, to the saints which are at Ephesus, and to the faithful in Christ Jesus: <sup>2</sup>Grace\nbe to you, and peace, from God our Father, and\nfrom the Lord Jesus Christ. <sup>3</sup>Blessed\nbe the God and Father of our Lord Jesus Christ, who hath blessed us with all spiritual blessings in heavenly\nplaces\n in Christ: <sup>4</sup>According as he hath chosen us in him before the foundation of the world, that we should be holy and without blame before him in love: <sup>5</sup>Having predestinated us unto the adoption of children by Jesus Christ to himself, according to the good pleasure of his will, <sup>6</sup>To the praise of the glory of his grace, wherein he hath made us accepted in the beloved. <sup>7</sup>In whom we have redemption through his blood, the forgiveness of sins, according to the riches of his grace; <sup>8</sup>Wherein he hath abounded toward us in all wisdom and prudence;",
       "scan_pages": [
         "sinaiticus-folios/gal-6-Q84_4v_B588.jpg"
-      ]
+      ],
+      "scan_note": "fol. 280v (Q84_4v_B588), col. 4, lines 1-43. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "1.9-16",
@@ -26,7 +27,8 @@
       "scan_pages": [
         "sinaiticus-folios/gal-6-Q84_4v_B588.jpg",
         "sinaiticus-folios/eph-2-Q84_5r_B589.jpg"
-      ]
+      ],
+      "scan_note": "fol. 280v (Q84_4v_B588), col. 4, lines 43-48 (1:9-10); fol. 281r (Q84_5r_B589), col. 1, lines 1-45 (1:10-16). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "1.17-23",
@@ -36,7 +38,8 @@
       "text": "<sup>17</sup>That the God of our Lord Jesus Christ, the Father of glory, may give unto you the spirit of wisdom and revelation in the knowledge of him: <sup>18</sup>The eyes of your understanding being enlightened; that ye may know what is the hope of his calling, and what the riches of the glory of his inheritance in the saints, <sup>19</sup>And what\nis the exceeding greatness of his power to us-ward who believe, according to the working of his mighty power, <sup>20</sup>Which he wrought in Christ, when he raised him from the dead, and set\nhim at his own right hand in the heavenly\nplaces, <sup>21</sup>Far above all principality, and power, and might, and dominion, and every name that is named, not only in this world, but also in that which is to come: <sup>22</sup>And hath put all\nthings under his feet, and gave him\nto be the head over all\nthings to the church, <sup>23</sup>Which is his body, the fulness of him that filleth all in all.",
       "scan_pages": [
         "sinaiticus-folios/eph-2-Q84_5r_B589.jpg"
-      ]
+      ],
+      "scan_note": "fol. 281r (Q84_5r_B589), col. 1 line 45 to col. 2 line 45. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -61,14 +64,16 @@
       "Q84_5r_B589"
     ],
     "scan_folio_ranges": [
-      "Q84_4v_B588 (lib. folio 280): Galatians, 5:20  - 6:18  /  Ephesians, 1:1  - 1:10",
-      "Q84_5r_B589 (lib. folio 281): Ephesians, 1:10  - 2:18"
+      "Q84_4v_B588 (lib. folio 280): Galatians, 5:20 - 6:18  /  Ephesians, 1:1 - 1:10",
+      "Q84_5r_B589 (lib. folio 281): Ephesians, 1:10 - 2:18"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

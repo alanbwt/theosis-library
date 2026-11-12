@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>And I looked, and, lo, a Lamb stood on the mount Sion, and with him an hundred forty\nand four thousand, having his Father’s name written in their foreheads. <sup>2</sup>And I heard a voice from heaven, as the voice of many waters, and as the voice of a great thunder: and I heard the voice of harpers harping with their harps: <sup>3</sup>And they sung as it were a new song before the throne, and before the four beasts, and the elders: and no man could learn that song but the hundred\nand forty\nand four thousand, which were redeemed from the earth. <sup>4</sup>These are they which were not defiled with women; for they are virgins. These are they which follow the Lamb whithersoever he goeth. These were redeemed from among men,\nbeing the firstfruits unto God and to the Lamb. <sup>5</sup>And in their mouth was found no guile: for they are without fault before the throne of God.",
       "scan_pages": [
         "sinaiticus-folios/rev-14-Q90_6r_B687.jpg"
-      ]
+      ],
+      "scan_note": "fol. 330r (Q90_6r_B687), col. 3 line 22 to col. 4 line 23. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "14.6-10",
@@ -26,7 +27,8 @@
       "scan_pages": [
         "sinaiticus-folios/rev-14-Q90_6r_B687.jpg",
         "sinaiticus-folios/rev-15-Q90_6v_B688.jpg"
-      ]
+      ],
+      "scan_note": "fol. 330r (Q90_6r_B687), col. 4, lines 23-48 (14:6-9); fol. 330v (Q90_6v_B688), col. 1, lines 1-19 (14:9-10). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "14.11-15",
@@ -36,7 +38,8 @@
       "text": "<sup>11</sup>And the smoke of their torment ascendeth up for ever and ever: and they have no rest day nor night, who worship the beast and his image, and whosoever receiveth the mark of his name. <sup>12</sup>Here is the patience of the saints: here\nare they that keep the commandments of God, and the faith of Jesus. <sup>13</sup>And I heard a voice from heaven saying unto me, Write, Blessed\nare the dead which die in the Lord from henceforth: Yea, saith the Spirit, that they may rest from their labours; and their works do follow them. <sup>14</sup>And I looked, and behold a white cloud, and upon the cloud\none\n sat like unto the Son of man, having on his head a golden crown, and in his hand a sharp sickle. <sup>15</sup>And another angel came out of the temple, crying with a loud voice to him that sat on the cloud, Thrust in thy sickle, and reap: for the time is come for thee to reap; for the harvest of the earth is ripe.",
       "scan_pages": [
         "sinaiticus-folios/rev-15-Q90_6v_B688.jpg"
-      ]
+      ],
+      "scan_note": "fol. 330v (Q90_6v_B688), col. 1 line 19 to col. 2 line 23. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "14.16-20",
@@ -46,7 +49,8 @@
       "text": "<sup>16</sup>And he that sat on the cloud thrust in his sickle on the earth; and the earth was reaped. <sup>17</sup>And another angel came out of the temple which is in heaven, he also having a sharp sickle. <sup>18</sup>And another angel came out from the altar, which had power over fire; and cried with a loud cry to him that had the sharp sickle, saying, Thrust in thy sharp sickle, and gather the clusters of the vine of the earth; for her grapes are fully ripe. <sup>19</sup>And the angel thrust in his sickle into the earth, and gathered the vine of the earth, and cast\nit into the great winepress of the wrath of God. <sup>20</sup>And the winepress was trodden without the city, and blood came out of the winepress, even unto the horse bridles, by the space of a thousand\nand six hundred furlongs.",
       "scan_pages": [
         "sinaiticus-folios/rev-15-Q90_6v_B688.jpg"
-      ]
+      ],
+      "scan_note": "fol. 330v (Q90_6v_B688), col. 2 line 24 to col. 3 line 17. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q90_6v_B688"
     ],
     "scan_folio_ranges": [
-      "Q90_6r_B687 (lib. folio 330): Revelation, 13:4  - 14:9",
-      "Q90_6v_B688 (lib. folio 330): Revelation, 14:9  - 16:1"
+      "Q90_6r_B687 (lib. folio 330): Revelation, 13:4 - 14:9",
+      "Q90_6v_B688 (lib. folio 330): Revelation, 14:9 - 16:1"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

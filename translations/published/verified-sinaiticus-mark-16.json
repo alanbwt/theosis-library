@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/mark-16-Q77_4v_B482.jpg",
         "sinaiticus-folios/luke-1-Q77_5r_B483.jpg"
-      ]
+      ],
+      "scan_note": "fol. 227v (Q77_4v_B482), col. 4, lines 41-48 (16:1); fol. 228r (Q77_5r_B483), col. 1, lines 1-24 (16:2-5). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "16.6-10",
@@ -26,7 +27,8 @@
       "text": "<sup>6</sup>And he saith unto them, Be not affrighted: Ye seek Jesus of Nazareth, which was crucified: he is risen; he is not here: behold the place where they laid him. <sup>7</sup>But go your way, tell his disciples and Peter that he goeth before you into Galilee: there shall ye see him, as he said unto you. <sup>8</sup>And they went out quickly, and fled from the sepulchre; for they trembled and were amazed: neither said they any thing to any\nman; for they were afraid. <sup>9</sup>Now when\nJesus was risen early the first\nday of the week, he appeared first to Mary Magdalene, out of whom he had cast seven devils. <sup>10</sup>And she went and told them that had been with him, as they mourned and wept.",
       "scan_pages": [
         "sinaiticus-folios/luke-1-Q77_5r_B483.jpg"
-      ]
+      ],
+      "scan_note": "fol. 228r (Q77_5r_B483), col. 1 line 25 to col. 2 line 4. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "16.11-15",
@@ -37,7 +39,7 @@
       "scan_pages": [
         "sinaiticus-folios/luke-1-Q77_5r_B483.jpg"
       ],
-      "scan_note": "These verses are not present in Codex Sinaiticus; the folio shown is where the manuscript's text of this chapter ends."
+      "scan_note": "These verses are not in the Codex Sinaiticus Project transcription. The page shown, fol. 228r (Q77_5r_B483), is the last page with text of this chapter before them (16:8 ends there, col. 2, line 4); positions from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "16.16-20",
@@ -48,7 +50,7 @@
       "scan_pages": [
         "sinaiticus-folios/luke-1-Q77_5r_B483.jpg"
       ],
-      "scan_note": "These verses are not present in Codex Sinaiticus; the folio shown is where the manuscript's text of this chapter ends."
+      "scan_note": "These verses are not in the Codex Sinaiticus Project transcription. The page shown, fol. 228r (Q77_5r_B483), is the last page with text of this chapter before them (16:8 ends there, col. 2, line 4); positions from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -76,11 +78,11 @@
       "Q77_5r_B483"
     ],
     "scan_folio_ranges": [
-      "Q77_4v_B482 (lib. folio 227): Mark, 15:16  - 16:1",
-      "Q77_5r_B483 (lib. folio 228): Mark, 16:1  - 16:8  /  Luke, 1:1  - 1:18"
+      "Q77_4v_B482 (lib. folio 227): Mark, 15:16 - 16:1",
+      "Q77_5r_B483 (lib. folio 228): Mark, 16:2 - 16:8  /  Luke, 1:1 - 1:18"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "absent_in_manuscript": [
       "16:9",
       "16:10",
@@ -95,6 +97,8 @@
       "16:19",
       "16:20"
     ],
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

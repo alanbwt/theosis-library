@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/barnabas-7-Q91_4v_B700.jpg",
         "sinaiticus-folios/barnabas-9-Q91_5r_B701.jpg"
-      ]
+      ],
+      "scan_note": "fol. 336v (Q91_4v_B700), col. 4, lines 29-48 (9:1-2); fol. 337r (Q91_5r_B701), col. 1 line 1 to col. 2 line 1 (9:2-5). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "9.6-9",
@@ -25,7 +26,8 @@
       "text": "<sup>6</sup>Learn therefore, children of love, concerning all things abundantly, that Abraham, who first appointed circumcision, looked forward in the spirit unto Jesus, when he circumcised having received the ordinances of three letters. <sup>7</sup>For the scripture saith; And Abraham circumcised of his household eighteen males and three hundred. What then was the knowledge given unto him? Understand ye that He saith the eighteen first, and then after an interval three hundred In the eighteen 'I' stands for ten, 'H' for eight. Here thou hast JESUS (IHSOYS). And because the cross in the 'T' was to have grace, He saith also three hundred . So He revealeth Jesus in the two letters, and in the remaining one the cross. <sup>8</sup>He who placed within us the innate gift of His covenant knoweth; no man hath ever learnt from me a more genuine word; but I know that ye are worthy.",
       "scan_pages": [
         "sinaiticus-folios/barnabas-9-Q91_5r_B701.jpg"
-      ]
+      ],
+      "scan_note": "fol. 337r (Q91_5r_B701), col. 2 line 1 to col. 3 line 4. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "verification": {
@@ -42,8 +44,8 @@
       "sinaiticus-folios/barnabas-9-Q91_5r_B701.jpg"
     ],
     "scan_folio_ranges": [
-      "Q91_4v_B700 (lib. folio 336b): Barnabas, 7:5  - 9:2",
-      "Q91_5r_B701 (lib. folio 337): Barnabas, 9:2  - 10:6"
+      "Q91_4v_B700 (lib. folio 336b): Barnabas, 7:5 - 9:2",
+      "Q91_5r_B701 (lib. folio 337): Barnabas, 9:2 - 10:6"
     ],
     "scan_verse_info": "Barnabas, 7:5  - 9:2",
     "section_folios_verified": true,
@@ -55,6 +57,9 @@
     "translation_source": "Lightfoot 1891 via earlychristianwritings.com transcription",
     "translation_license": "public domain",
     "translator": "J. B. Lightfoot, The Apostolic Fathers (1891)",
-    "verified_date": "2026-09-05"
+    "verified_date": "2026-09-05",
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

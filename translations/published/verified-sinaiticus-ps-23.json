@@ -14,7 +14,8 @@
       "text": "<sup>1</sup>The earth\nis the LORD’S, and the fulness thereof; the world, and they that dwell therein. <sup>2</sup>For he hath founded it upon the seas, and established it upon the floods. <sup>3</sup>Who shall ascend into the hill of the LORD? or who shall stand in his holy place? <sup>4</sup>He that hath clean hands, and a pure heart; who hath not lifted up his soul unto vanity, nor sworn deceitfully. <sup>5</sup>He shall receive the blessing from the LORD, and righteousness from the God of his salvation.",
       "scan_pages": [
         "sinaiticus-folios/ps-23-Q59_6r_B193.jpg"
-      ]
+      ],
+      "scan_note": "fol. 93r (Q59_6r_B193), col. 2, lines 33-48. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "23.6-10",
@@ -23,7 +24,8 @@
       "text": "<sup>6</sup>This\nis the generation of them that seek him, that seek thy face, O Jacob. Selah. <sup>7</sup>Lift up your heads, O ye gates; and be ye lift up, ye everlasting doors; and the King of glory shall come in. <sup>8</sup>Who\nis this King of glory? The LORD strong and mighty, the LORD mighty in battle. <sup>9</sup>Lift up your heads, O ye gates; even lift\nthem up, ye everlasting doors; and the King of glory shall come in. <sup>10</sup>Who is this King of glory? The LORD of hosts, he\nis the King of glory. Selah.",
       "scan_pages": [
         "sinaiticus-folios/ps-23-Q59_6v_B194.jpg"
-      ]
+      ],
+      "scan_note": "fol. 93v (Q59_6v_B194), col. 1, lines 1-16. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -49,14 +51,16 @@
       "Q59_6v_B194"
     ],
     "scan_folio_ranges": [
-      "Q59_6r_B193 (lib. folio 93): Psalms, 21:15  - 23:5",
-      "Q59_6v_B194 (lib. folio 93): Psalms, 23:5  - 25:10"
+      "Q59_6r_B193 (lib. folio 93): Psalms, 21:16 - 23:5",
+      "Q59_6v_B194 (lib. folio 93): Psalms, 23:6 - 25:10"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "lxx_psalm_numbering_fixed": true,
     "kjv_psalm": "24",
     "lxx_title_verse_offset": 0,
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

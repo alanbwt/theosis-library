@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>Paul, a prisoner of Jesus Christ, and Timothy our brother, unto Philemon our dearly beloved, and fellowlabourer, <sup>2</sup>And to\nour beloved Apphia, and Archippus our fellowsoldier, and to the church in thy house: <sup>3</sup>Grace to you, and peace, from God our Father and the Lord Jesus Christ. <sup>4</sup>I thank my God, making mention of thee always in my prayers, <sup>5</sup>Hearing of thy love and faith, which thou hast toward the Lord Jesus, and toward all saints; <sup>6</sup>That the communication of thy faith may become effectual by the acknowledging of every good thing which is in you in Christ Jesus. <sup>7</sup>For we have great joy and consolation in thy love, because the bowels of the saints are refreshed by thee, brother. <sup>8</sup>Wherefore, though I might be much bold in Christ to enjoin thee that which is convenient,",
       "scan_pages": [
         "sinaiticus-folios/titus-3-Q86_5v_B622.jpg"
-      ]
+      ],
+      "scan_note": "fol. 297v (Q86_5v_B622), col. 4, lines 1-41. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "1.9-16",
@@ -26,7 +27,8 @@
       "scan_pages": [
         "sinaiticus-folios/titus-3-Q86_5v_B622.jpg",
         "sinaiticus-folios/philemon-1-Q86_6r_B623.jpg"
-      ]
+      ],
+      "scan_note": "fol. 297v (Q86_5v_B622), col. 4, lines 41-48 (1:9-10); fol. 298r (Q86_6r_B623), col. 1, lines 1-33 (1:10-16). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "1.17-24",
@@ -36,7 +38,8 @@
       "text": "<sup>17</sup>If thou count me therefore a partner, receive him as myself. <sup>18</sup>If he hath wronged thee, or oweth\nthee ought, put that on mine account; <sup>19</sup>I Paul have written\nit with mine own hand, I will repay\nit: albeit I do not say to thee how thou owest unto me even thine own self besides. <sup>20</sup>Yea, brother, let me have joy of thee in the Lord: refresh my bowels in the Lord. <sup>21</sup>Having confidence in thy obedience I wrote unto thee, knowing that thou wilt also do more than I say. <sup>22</sup>But withal prepare me also a lodging: for I trust that through your prayers I shall be given unto you. <sup>23</sup>There salute thee Epaphras, my fellowprisoner in Christ Jesus; <sup>24</sup>Marcus, Aristarchus, Demas, Lucas, my fellowlabourers.",
       "scan_pages": [
         "sinaiticus-folios/philemon-1-Q86_6r_B623.jpg"
-      ]
+      ],
+      "scan_note": "fol. 298r (Q86_6r_B623), col. 1 line 34 to col. 2 line 21. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "1.25",
@@ -46,7 +49,8 @@
       "text": "<sup>25</sup>The grace of our Lord Jesus Christ\nbe with your spirit. Amen.",
       "scan_pages": [
         "sinaiticus-folios/philemon-1-Q86_6r_B623.jpg"
-      ]
+      ],
+      "scan_note": "fol. 298r (Q86_6r_B623), col. 2, lines 22-24. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q86_6r_B623"
     ],
     "scan_folio_ranges": [
-      "Q86_5v_B622 (lib. folio 297): Titus, 2:9  - 3:15  /  Philemon, 1:1  - 1:10",
-      "Q86_6r_B623 (lib. folio 298): Philemon, 1:10  - 1:25"
+      "Q86_5v_B622 (lib. folio 297): Titus, 2:9 - 3:15  /  Philemon, 1:1 - 1:10",
+      "Q86_6r_B623 (lib. folio 298): Philemon, 1:10 - 1:25"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/sirach-8-Q68_5r_B335.jpg",
         "sinaiticus-folios/sirach-10-Q68_5v_B336.jpg"
-      ]
+      ],
+      "scan_note": "fol. 164r (Q68_5r_B335), col. 2, lines 29-48 (10:1-6); fol. 164v (Q68_5v_B336), col. 1, lines 1-7 (10:7-8). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "10.9-16",
@@ -25,7 +26,8 @@
       "text": "<sup>9</sup>Why is earth and ashes proud? There is not a more wicked thing than a covetous man: for such an one setteth his own soul to sale; because while he liveth he casteth away his bowels. <sup>10</sup>The physician cutteth off a long disease; and he that is to day a king to morrow shall die. <sup>11</sup>For when a man is dead, he shall inherit creeping things, beasts, and worms. <sup>12</sup>The beginning of pride is when one departeth from God, and his heart is turned away from his Maker. <sup>13</sup>For pride is the beginning of sin, and he that hath it shall pour out abomination: and therefore the Lord brought upon them strange calamities, and overthrew them utterly. <sup>14</sup>The Lord hath cast down the thrones of proud princes, and set up the meek in their stead. <sup>15</sup>The Lord hath plucked up the roots of the proud nations, and planted the lowly in their place. <sup>16</sup>The Lord overthrew countries of the heathen, and destroyed them to the foundations of the earth.",
       "scan_pages": [
         "sinaiticus-folios/sirach-10-Q68_5v_B336.jpg"
-      ]
+      ],
+      "scan_note": "fol. 164v (Q68_5v_B336), col. 1, lines 8-31. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "10.17-24",
@@ -34,7 +36,8 @@
       "text": "<sup>17</sup>He took some of them away, and destroyed them, and hath made their memorial to cease from the earth. <sup>18</sup>Pride was not made for men, nor furious anger for them that are born of a woman. <sup>19</sup>They that fear the Lord are a sure seed, and they that love him an honourable plant: they that regard not the law are a dishonourable seed; they that transgress the commandments are a deceivable seed. <sup>20</sup>Among brethren he that is chief is honorable; so are they that fear the Lord in his eyes. <sup>21</sup>The fear of the Lord goeth before the obtaining of authority: but roughness and pride is the losing thereof. <sup>22</sup>Whether he be rich, noble, or poor, their glory is the fear of the Lord. <sup>23</sup>It is not meet to despise the poor man that hath understanding; neither is it convenient to magnify a sinful man. <sup>24</sup>Great men, and judges, and potentates, shall be honoured; yet is there none of them greater than he that feareth the Lord.",
       "scan_pages": [
         "sinaiticus-folios/sirach-10-Q68_5v_B336.jpg"
-      ]
+      ],
+      "scan_note": "fol. 164v (Q68_5v_B336), col. 1 line 32 to col. 2 line 8. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "10.25-31",
@@ -43,7 +46,8 @@
       "text": "<sup>25</sup>Unto the servant that is wise shall they that are free do service: and he that hath knowledge will not grudge when he is reformed. <sup>26</sup>Be not overwise in doing thy business; and boast not thyself in the time of thy distress. <sup>27</sup>Better is he that laboureth, and aboundeth in all things, than he that boasteth himself, and wanteth bread. <sup>28</sup>My son, glorify thy soul in meekness, and give it honour according to the dignity thereof. <sup>29</sup>Who will justify him that sinneth against his own soul? and who will honour him that dishonoureth his own life? <sup>30</sup>The poor man is honoured for his skill, and the rich man is honoured for his riches. <sup>31</sup>He that is honoured in poverty, how much more in riches? and he that is dishonourable in riches, how much more in poverty?",
       "scan_pages": [
         "sinaiticus-folios/sirach-10-Q68_5v_B336.jpg"
-      ]
+      ],
+      "scan_note": "fol. 164v (Q68_5v_B336), col. 2, lines 9-31. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "verification": {
@@ -60,8 +64,8 @@
       "sinaiticus-folios/sirach-10-Q68_5v_B336.jpg"
     ],
     "scan_folio_ranges": [
-      "Q68_5r_B335 (lib. folio 164): Sirach, 8:16  - 10:6",
-      "Q68_5v_B336 (lib. folio 164b): Sirach, 10:6  - 11:6"
+      "Q68_5r_B335 (lib. folio 164): Sirach, 8:16 - 10:6",
+      "Q68_5v_B336 (lib. folio 164b): Sirach, 10:7 - 11:6"
     ],
     "scan_verse_info": "Sirach, 8:16  - 10:6",
     "section_folios_verified": true,
@@ -73,6 +77,9 @@
     "translation_source": "ebible.org eng-kjv USFM (KJV with Apocrypha)",
     "translation_license": "public domain",
     "translator": "King James Version Apocrypha (1611; 1769 text)",
-    "verified_date": "2026-09-05"
+    "verified_date": "2026-09-05",
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

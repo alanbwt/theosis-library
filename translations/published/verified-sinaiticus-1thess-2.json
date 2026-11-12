@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>For yourselves, brethren, know our entrance in unto you, that it was not in vain: <sup>2</sup>But even after that we had suffered before, and were shamefully entreated, as ye know, at Philippi, we were bold in our God to speak unto you the gospel of God with much contention. <sup>3</sup>For our exhortation\nwas not of deceit, nor of uncleanness, nor in guile: <sup>4</sup>But as we were allowed of God to be put in trust with the gospel, even so we speak; not as pleasing men, but God, which trieth our hearts. <sup>5</sup>For neither at any time used we flattering words, as ye know, nor a cloke of covetousness; God\nis witness:",
       "scan_pages": [
         "sinaiticus-folios/1thess-2-Q85_2v_B600.jpg"
-      ]
+      ],
+      "scan_note": "quire 85, leaf 2v (Q85_2v_B600), col. 2 line 30 to col. 3 line 17. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "2.6-10",
@@ -25,7 +26,8 @@
       "text": "<sup>6</sup>Nor of men sought we glory, neither of you, nor\nyet of others, when we might have been burdensome, as the apostles of Christ. <sup>7</sup>But we were gentle among you, even as a nurse cherisheth her children: <sup>8</sup>So being affectionately desirous of you, we were willing to have imparted unto you, not the gospel of God only, but also our own souls, because ye were dear unto us. <sup>9</sup>For ye remember, brethren, our labour and travail: for labouring night and day, because we would not be chargeable unto any of you, we preached unto you the gospel of God. <sup>10</sup>Ye\nare witnesses, and God\nalso, how holily and justly and unblameably we behaved ourselves among you that believe:",
       "scan_pages": [
         "sinaiticus-folios/1thess-2-Q85_2v_B600.jpg"
-      ]
+      ],
+      "scan_note": "quire 85, leaf 2v (Q85_2v_B600), col. 3 line 17 to col. 4 line 6. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "2.11-15",
@@ -36,7 +38,8 @@
       "scan_pages": [
         "sinaiticus-folios/1thess-2-Q85_2v_B600.jpg",
         "sinaiticus-folios/1thess-3-Q85_3r_B601.jpg"
-      ]
+      ],
+      "scan_note": "quire 85, leaf 2v (Q85_2v_B600), col. 4, lines 6-48 (2:11-14); fol. 287r (Q85_3r_B601), col. 1, lines 1-10 (2:14-15). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "2.16-20",
@@ -46,7 +49,8 @@
       "text": "<sup>16</sup>Forbidding us to speak to the Gentiles that they might be saved, to fill up their sins alway: for the wrath is come upon them to the uttermost. <sup>17</sup>But we, brethren, being taken from you for a short time in presence, not in heart, endeavoured the more abundantly to see your face with great desire. <sup>18</sup>Wherefore we would have come unto you, even I Paul, once and again; but Satan hindered us. <sup>19</sup>For what\nis our hope, or joy, or crown of rejoicing?\nAre not even ye in the presence of our Lord Jesus Christ at his coming? <sup>20</sup>For ye are our glory and joy.",
       "scan_pages": [
         "sinaiticus-folios/1thess-3-Q85_3r_B601.jpg"
-      ]
+      ],
+      "scan_note": "fol. 287r (Q85_3r_B601), col. 1, lines 10-38. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q85_3r_B601"
     ],
     "scan_folio_ranges": [
-      "Q85_2v_B600 (lib. folio 286): 1 Thessalonians, 1:1  - 2:14",
-      "Q85_3r_B601 (lib. folio 287): 1 Thessalonians, 2:14  - 4:13"
+      "Q85_2v_B600 (lib. folio 286): 1 Thessalonians, 1:1 - 2:14",
+      "Q85_3r_B601 (lib. folio 287): 1 Thessalonians, 2:14 - 4:13"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

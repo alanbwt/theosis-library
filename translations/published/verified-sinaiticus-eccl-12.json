@@ -14,7 +14,8 @@
       "text": "<sup>1</sup>Remember now thy Creator in the days of thy youth, while the evil days come not, nor the years draw nigh, when thou shalt say, I have no pleasure in them; <sup>2</sup>While the sun, or the light, or the moon, or the stars, be not darkened, nor the clouds return after the rain: <sup>3</sup>In the day when the keepers of the house shall tremble, and the strong men shall bow themselves, and the grinders cease because they are few, and those that look out of the windows be darkened, <sup>4</sup>And the doors shall be shut in the streets, when the sound of the grinding is low, and he shall rise up at the voice of the bird, and all the daughters of musick shall be brought low; <sup>5</sup>Also\nwhen they shall be afraid of\nthat which is\n high, and fears\nshall be in the way, and the almond tree shall flourish, and the grasshopper shall be a burden, and desire shall fail: because man goeth to his long home, and the mourners go about the streets:",
       "scan_pages": [
         "sinaiticus-folios/eccl-11-Q66_4v_B302.jpg"
-      ]
+      ],
+      "scan_note": "fol. 147v (Q66_4v_B302), col. 2, lines 12-40. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "12.6-10",
@@ -24,7 +25,8 @@
       "scan_pages": [
         "sinaiticus-folios/eccl-11-Q66_4v_B302.jpg",
         "sinaiticus-folios/eccl-12-Q66_5r_B303.jpg"
-      ]
+      ],
+      "scan_note": "fol. 147v (Q66_4v_B302), col. 2, lines 40-48 (12:6-7); fol. 148r (Q66_5r_B303), col. 1, lines 1-11 (12:8-10). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "12.11-14",
@@ -33,7 +35,8 @@
       "text": "<sup>11</sup>The words of the wise\nare as goads, and as nails fastened by the masters of assemblies,\nwhich are given from one shepherd. <sup>12</sup>And further, by these, my son, be admonished: of making many books\nthere is no end; and much study\nis a weariness of the flesh. <sup>13</sup>Let us hear the conclusion of the whole matter: Fear God, and keep his commandments: for this\nis the whole\nduty of man. <sup>14</sup>For God shall bring every work into judgment, with every secret thing, whether\nit be good, or whether\nit be evil.",
       "scan_pages": [
         "sinaiticus-folios/eccl-12-Q66_5r_B303.jpg"
-      ]
+      ],
+      "scan_note": "fol. 148r (Q66_5r_B303), col. 1, lines 12-25. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -59,11 +62,13 @@
       "Q66_5r_B303"
     ],
     "scan_folio_ranges": [
-      "Q66_4v_B302 (lib. folio 147): Ecclesiastes, 10:17  - 12:7",
-      "Q66_5r_B303 (lib. folio 148): Ecclesiastes, 12:7  - 12:14  /  Song of Songs, 1:1  - 1:8"
+      "Q66_4v_B302 (lib. folio 147): Ecclesiastes, 10:17 - 12:7",
+      "Q66_5r_B303 (lib. folio 148): Ecclesiastes, 12:8 - 12:14  /  Song of Songs, 1:1 - 1:8"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

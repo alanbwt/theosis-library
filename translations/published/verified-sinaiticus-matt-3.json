@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>In those days came John the Baptist, preaching in the wilderness of Judaea, <sup>2</sup>And saying, Repent ye: for the kingdom of heaven is at hand. <sup>3</sup>For this is he that was spoken of by the prophet Esaias, saying, The voice of one crying in the wilderness, Prepare ye the way of the Lord, make his paths straight. <sup>4</sup>And the same John had his raiment of camel’s hair, and a leathern girdle about his loins; and his meat was locusts and wild honey. <sup>5</sup>Then went out to him Jerusalem, and all Judaea, and all the region round about Jordan,",
       "scan_pages": [
         "sinaiticus-folios/matt-3-Q74_1v_B428.jpg"
-      ]
+      ],
+      "scan_note": "fol. 200v (Q74_1v_B428), col. 3 line 47 to col. 4 line 32. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.6-10",
@@ -26,7 +27,8 @@
       "scan_pages": [
         "sinaiticus-folios/matt-3-Q74_1v_B428.jpg",
         "sinaiticus-folios/matt-4-Q74_2r_B429.jpg"
-      ]
+      ],
+      "scan_note": "fol. 200v (Q74_1v_B428), col. 4, lines 33-48 (3:6-7); fol. 201r (Q74_2r_B429), col. 1, lines 1-20 (3:7-10). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.11-15",
@@ -36,7 +38,8 @@
       "text": "<sup>11</sup>I indeed baptize you with water unto repentance: but he that cometh after me is mightier than I, whose shoes I am not worthy to bear: he shall baptize you with the Holy Ghost, and\nwith fire: <sup>12</sup>Whose fan\nis in his hand, and he will throughly purge his floor, and gather his wheat into the garner; but he will burn up the chaff with unquenchable fire. <sup>13</sup>Then cometh Jesus from Galilee to Jordan unto John, to be baptized of him. <sup>14</sup>But John forbad him, saying, I have need to be baptized of thee, and comest thou to me? <sup>15</sup>And Jesus answering said unto him,\nSuffer\nit to be so\n now: for thus it becometh us to fulfil all righteousness.\n Then he suffered him.",
       "scan_pages": [
         "sinaiticus-folios/matt-4-Q74_2r_B429.jpg"
-      ]
+      ],
+      "scan_note": "fol. 201r (Q74_2r_B429), col. 1 line 21 to col. 2 line 12. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.16-17",
@@ -46,7 +49,8 @@
       "text": "<sup>16</sup>And Jesus, when he was baptized, went up straightway out of the water: and, lo, the heavens were opened unto him, and he saw the Spirit of God descending like a dove, and lighting upon him: <sup>17</sup>And lo a voice from heaven, saying, This is my beloved Son, in whom I am well pleased.",
       "scan_pages": [
         "sinaiticus-folios/matt-4-Q74_2r_B429.jpg"
-      ]
+      ],
+      "scan_note": "fol. 201r (Q74_2r_B429), col. 2, lines 13-27. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q74_2r_B429"
     ],
     "scan_folio_ranges": [
-      "Q74_1v_B428 (lib. folio 200): Matthew, 2:5  - 3:7",
-      "Q74_2r_B429 (lib. folio 201): Matthew, 3:7  - 4:19"
+      "Q74_1v_B428 (lib. folio 200): Matthew, 2:5 - 3:7",
+      "Q74_2r_B429 (lib. folio 201): Matthew, 3:7 - 4:19"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

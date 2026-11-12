@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>Though I speak with the tongues of men and of angels, and have not charity, I am become\nas\nsounding brass, or a tinkling cymbal. <sup>2</sup>And though I have\nthe gift of prophecy, and understand all mysteries, and all knowledge; and though I have all faith, so that I could remove mountains, and have not charity, I am nothing. <sup>3</sup>And though I bestow all my goods to feed\nthe poor, and though I give my body to be burned, and have not charity, it profiteth me nothing. <sup>4</sup>Charity suffereth long,\nand is kind; charity envieth not; charity vaunteth not itself, is not puffed up, <sup>5</sup>Doth not behave itself unseemly, seeketh not her own, is not easily provoked, thinketh no evil;",
       "scan_pages": [
         "sinaiticus-folios/1cor-13-Q83_4r_B571.jpg"
-      ]
+      ],
+      "scan_note": "fol. 272r (Q83_4r_B571), col. 3, lines 1-26. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "13.6-10",
@@ -25,7 +26,8 @@
       "text": "<sup>6</sup>Rejoiceth not in iniquity, but rejoiceth in the truth; <sup>7</sup>Beareth all things, believeth all things, hopeth all things, endureth all things. <sup>8</sup>Charity never faileth: but whether\nthere be prophecies, they shall fail; whether\nthere be tongues, they shall cease; whether\nthere be knowledge, it shall vanish away. <sup>9</sup>For we know in part, and we prophesy in part. <sup>10</sup>But when that which is perfect is come, then that which is in part shall be done away.",
       "scan_pages": [
         "sinaiticus-folios/1cor-13-Q83_4r_B571.jpg"
-      ]
+      ],
+      "scan_note": "fol. 272r (Q83_4r_B571), col. 3, lines 27-47. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "13.11-13",
@@ -35,7 +37,8 @@
       "text": "<sup>11</sup>When I was a child, I spake as a child, I understood as a child, I thought as a child: but when I became a man, I put away childish things. <sup>12</sup>For now we see through a glass, darkly; but then face to face: now I know in part; but then shall I know even as also I am known. <sup>13</sup>And now abideth faith, hope, charity, these three; but the greatest of these\nis charity.",
       "scan_pages": [
         "sinaiticus-folios/1cor-13-Q83_4r_B571.jpg"
-      ]
+      ],
+      "scan_note": "fol. 272r (Q83_4r_B571), col. 3 line 48 to col. 4 line 21. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -58,13 +61,15 @@
       "Q83_4r_B571"
     ],
     "scan_folio_ranges": [
-      "Q83_4r_B571 (lib. folio 272): 1 Corinthians, 12:15  - 14:5"
+      "Q83_4r_B571 (lib. folio 272): 1 Corinthians, 12:15 - 14:5"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

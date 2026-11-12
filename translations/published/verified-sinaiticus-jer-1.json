@@ -14,7 +14,8 @@
       "text": "<sup>1</sup>The words of Jeremiah the son of Hilkiah, of the priests that\nwere\n in Anathoth in the land of Benjamin: <sup>2</sup>To whom the word of the LORD came in the days of Josiah the son of Amon king of Judah, in the thirteenth year of his reign. <sup>3</sup>It came also in the days of Jehoiakim the son of Josiah king of Judah, unto the end of the eleventh year of Zedekiah the son of Josiah king of Judah, unto the carrying away of Jerusalem captive in the fifth month. <sup>4</sup>Then the word of the LORD came unto me, saying, <sup>5</sup>Before I formed thee in the belly I knew thee; and before thou camest forth out of the womb I sanctified thee,\nand I ordained thee a prophet unto the nations.",
       "scan_pages": [
         "sinaiticus-folios/jer-1-Q46_3r_B143.jpg"
-      ]
+      ],
+      "scan_note": "fol. 68r (Q46_3r_B143), col. 4, lines 2-36. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "1.6-10",
@@ -24,7 +25,8 @@
       "scan_pages": [
         "sinaiticus-folios/jer-1-Q46_3r_B143.jpg",
         "sinaiticus-folios/jer-2-Q46_3v_B144.jpg"
-      ]
+      ],
+      "scan_note": "fol. 68r (Q46_3r_B143), col. 4, lines 37-49 (1:6-7); fol. 68v (Q46_3v_B144), col. 1, lines 1-22 (1:7-10). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "1.11-15",
@@ -33,7 +35,8 @@
       "text": "<sup>11</sup>Moreover the word of the LORD came unto me, saying, Jeremiah, what seest thou? And I said, I see a rod of an almond tree. <sup>12</sup>Then said the LORD unto me, Thou hast well seen: for I will hasten my word to perform it. <sup>13</sup>And the word of the LORD came unto me the second time, saying, What seest thou? And I said, I see a seething pot; and the face thereof\nis\n toward the north. <sup>14</sup>Then the LORD said unto me, Out of the north an evil shall break forth upon all the inhabitants of the land. <sup>15</sup>For, lo, I will call all the families of the kingdoms of the north, saith the LORD; and they shall come, and they shall set every one his throne at the entering of the gates of Jerusalem, and against all the walls thereof round about, and against all the cities of Judah.",
       "scan_pages": [
         "sinaiticus-folios/jer-2-Q46_3v_B144.jpg"
-      ]
+      ],
+      "scan_note": "fol. 68v (Q46_3v_B144), col. 1, lines 23-46. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "1.16-19",
@@ -42,7 +45,8 @@
       "text": "<sup>16</sup>And I will utter my judgments against them touching all their wickedness, who have forsaken me, and have burned incense unto other gods, and worshipped the works of their own hands. <sup>17</sup>Thou therefore gird up thy loins, and arise, and speak unto them all that I command thee: be not dismayed at their faces, lest I confound thee before them. <sup>18</sup>For, behold, I have made thee this day a defenced city, and an iron pillar, and brasen walls against the whole land, against the kings of Judah, against the princes thereof, against the priests thereof, and against the people of the land. <sup>19</sup>And they shall fight against thee; but they shall not prevail against thee; for I\nam with thee, saith the LORD, to deliver thee.",
       "scan_pages": [
         "sinaiticus-folios/jer-2-Q46_3v_B144.jpg"
-      ]
+      ],
+      "scan_note": "fol. 68v (Q46_3v_B144), col. 1 line 47 to col. 2 line 37. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -68,11 +72,13 @@
       "Q46_3v_B144"
     ],
     "scan_folio_ranges": [
-      "Q46_3r_B143 (lib. folio 68): Isaiah, 66:12  - 66:24  /  Jeremiah, 1:1  - 1:7",
-      "Q46_3v_B144 (lib. folio 68): Jeremiah, 1:7  - 2:16"
+      "Q46_3r_B143 (lib. folio 68): Isaiah, 66:12 - 66:24  /  Jeremiah, 1:1 - 1:7",
+      "Q46_3v_B144 (lib. folio 68): Jeremiah, 1:7 - 1:19  /  Jeremiah, 2:2 - 2:16"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

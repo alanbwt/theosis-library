@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/rev-15-Q90_6v_B688.jpg",
         "sinaiticus-folios/rev-17-Q90_7r_B689.jpg"
-      ]
+      ],
+      "scan_note": "fol. 330v (Q90_6v_B688), col. 4, lines 43-48 (16:1); fol. 331r (Q90_7r_B689), col. 1, lines 1-44 (16:1-8). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "16.9-16",
@@ -26,7 +27,8 @@
       "text": "<sup>9</sup>And men were scorched with great heat, and blasphemed the name of God, which hath power over these plagues: and they repented not to give him glory. <sup>10</sup>And the fifth angel poured out his vial upon the seat of the beast; and his kingdom was full of darkness; and they gnawed their tongues for pain, <sup>11</sup>And blasphemed the God of heaven because of their pains and their sores, and repented not of their deeds. <sup>12</sup>And the sixth angel poured out his vial upon the great river Euphrates; and the water thereof was dried up, that the way of the kings of the east might be prepared. <sup>13</sup>And I saw three unclean spirits like frogs\ncome out of the mouth of the dragon, and out of the mouth of the beast, and out of the mouth of the false prophet. <sup>14</sup>For they are the spirits of devils, working miracles,\nwhich\n go forth unto the kings of the earth and of the whole world, to gather them to the battle of that great day of God Almighty. <sup>15</sup>Behold, I come as a thief. Blessed\nis he that watcheth, and keepeth his garments, lest he walk naked, and they see his shame. <sup>16</sup>And he gathered them together into a place called in the Hebrew tongue Armageddon.",
       "scan_pages": [
         "sinaiticus-folios/rev-17-Q90_7r_B689.jpg"
-      ]
+      ],
+      "scan_note": "fol. 331r (Q90_7r_B689), col. 1 line 44 to col. 3 line 7. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "16.17-21",
@@ -36,7 +38,8 @@
       "text": "<sup>17</sup>And the seventh angel poured out his vial into the air; and there came a great voice out of the temple of heaven, from the throne, saying, It is done. <sup>18</sup>And there were voices, and thunders, and lightnings; and there was a great earthquake, such as was not since men were upon the earth, so mighty an earthquake,\nand so great. <sup>19</sup>And the great city was divided into three parts, and the cities of the nations fell: and great Babylon came in remembrance before God, to give unto her the cup of the wine of the fierceness of his wrath. <sup>20</sup>And every island fled away, and the mountains were not found. <sup>21</sup>And there fell upon men a great hail out of heaven,\nevery stone\n about the weight of a talent: and men blasphemed God because of the plague of the hail; for the plague thereof was exceeding great.",
       "scan_pages": [
         "sinaiticus-folios/rev-17-Q90_7r_B689.jpg"
-      ]
+      ],
+      "scan_note": "fol. 331r (Q90_7r_B689), col. 3, lines 8-47. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -61,14 +64,16 @@
       "Q90_7r_B689"
     ],
     "scan_folio_ranges": [
-      "Q90_6v_B688 (lib. folio 330): Revelation, 14:9  - 16:1",
-      "Q90_7r_B689 (lib. folio 331): Revelation, 16:1  - 17:6"
+      "Q90_6v_B688 (lib. folio 330): Revelation, 14:9 - 16:1",
+      "Q90_7r_B689 (lib. folio 331): Revelation, 16:1 - 17:6"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

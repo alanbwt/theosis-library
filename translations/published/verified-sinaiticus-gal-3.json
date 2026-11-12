@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/gal-3-Q84_3r_B585.jpg",
         "sinaiticus-folios/gal-4-Q84_3v_B586.jpg"
-      ]
+      ],
+      "scan_note": "fol. 279r (Q84_3r_B585), col. 4, lines 27-48 (3:1-6); fol. 279v (Q84_3v_B586), col. 1, lines 1-14 (3:6-8). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.9-16",
@@ -26,7 +27,8 @@
       "text": "<sup>9</sup>So then they which be of faith are blessed with faithful Abraham. <sup>10</sup>For as many as are of the works of the law are under the curse: for it is written, Cursed\nis every one that continueth not in all things which are written in the book of the law to do them. <sup>11</sup>But that no man is justified by the law in the sight of God,\nit is\n evident: for, The just shall live by faith. <sup>12</sup>And the law is not of faith: but, The man that doeth them shall live in them. <sup>13</sup>Christ hath redeemed us from the curse of the law, being made a curse for us: for it is written, Cursed\nis every one that hangeth on a tree: <sup>14</sup>That the blessing of Abraham might come on the Gentiles through Jesus Christ; that we might receive the promise of the Spirit through faith. <sup>15</sup>Brethren, I speak after the manner of men; Though\nit be but a man’s covenant, yet\nif it be confirmed, no man disannulleth, or addeth thereto. <sup>16</sup>Now to Abraham and his seed were the promises made. He saith not, And to seeds, as of many; but as of one, And to thy seed, which is Christ.",
       "scan_pages": [
         "sinaiticus-folios/gal-4-Q84_3v_B586.jpg"
-      ]
+      ],
+      "scan_note": "fol. 279v (Q84_3v_B586), col. 1 line 14 to col. 2 line 17. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.17-24",
@@ -36,7 +38,8 @@
       "text": "<sup>17</sup>And this I say,\nthat the covenant, that was confirmed before of God in Christ, the law, which was four hundred and thirty years after, cannot disannul, that it should make the promise of none effect. <sup>18</sup>For if the inheritance\nbe of the law,\nit is no more of promise: but God gave\nit to Abraham by promise. <sup>19</sup>Wherefore then\nserveth the law? It was added because of transgressions, till the seed should come to whom the promise was made;\nand it was ordained by angels in the hand of a mediator. <sup>20</sup>Now a mediator is not\na mediator of one, but God is one. <sup>21</sup>Is the law then against the promises of God? God forbid: for if there had been a law given which could have given life, verily righteousness should have been by the law. <sup>22</sup>But the scripture hath concluded all under sin, that the promise by faith of Jesus Christ might be given to them that believe. <sup>23</sup>But before faith came, we were kept under the law, shut up unto the faith which should afterwards be revealed. <sup>24</sup>Wherefore the law was our schoolmaster\nto bring us unto Christ, that we might be justified by faith.",
       "scan_pages": [
         "sinaiticus-folios/gal-4-Q84_3v_B586.jpg"
-      ]
+      ],
+      "scan_note": "fol. 279v (Q84_3v_B586), col. 2 line 18 to col. 3 line 21. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "3.25-29",
@@ -46,7 +49,8 @@
       "text": "<sup>25</sup>But after that faith is come, we are no longer under a schoolmaster. <sup>26</sup>For ye are all the children of God by faith in Christ Jesus. <sup>27</sup>For as many of you as have been baptized into Christ have put on Christ. <sup>28</sup>There is neither Jew nor Greek, there is neither bond nor free, there is neither male nor female: for ye are all one in Christ Jesus. <sup>29</sup>And if ye\nbe Christ’s, then are ye Abraham’s seed, and heirs according to the promise.",
       "scan_pages": [
         "sinaiticus-folios/gal-4-Q84_3v_B586.jpg"
-      ]
+      ],
+      "scan_note": "fol. 279v (Q84_3v_B586), col. 3, lines 21-40. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q84_3v_B586"
     ],
     "scan_folio_ranges": [
-      "Q84_3r_B585 (lib. folio 279): Galatians, 1:17  - 3:6",
-      "Q84_3v_B586 (lib. folio 279): Galatians, 3:6  - 4:12"
+      "Q84_3r_B585 (lib. folio 279): Galatians, 1:17 - 3:6",
+      "Q84_3v_B586 (lib. folio 279): Galatians, 3:6 - 4:12"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

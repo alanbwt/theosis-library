@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/hebrews-7-Q85_6v_B608.jpg",
         "sinaiticus-folios/hebrews-9-Q85_7r_B609.jpg"
-      ]
+      ],
+      "scan_note": "fol. 290v (Q85_6v_B608), col. 4, lines 44-48 (8:1); fol. 291r (Q85_7r_B609), col. 1, lines 1-32 (8:1-5). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "8.6-10",
@@ -26,7 +27,8 @@
       "text": "<sup>6</sup>But now hath he obtained a more excellent ministry, by how much also he is the mediator of a better covenant, which was established upon better promises. <sup>7</sup>For if that first\ncovenant had been faultless, then should no place have been sought for the second. <sup>8</sup>For finding fault with them, he saith, Behold, the days come, saith the Lord, when I will make a new covenant with the house of Israel and with the house of Judah: <sup>9</sup>Not according to the covenant that I made with their fathers in the day when I took them by the hand to lead them out of the land of Egypt; because they continued not in my covenant, and I regarded them not, saith the Lord. <sup>10</sup>For this\nis the covenant that I will make with the house of Israel after those days, saith the Lord; I will put my laws into their mind, and write them in their hearts: and I will be to them a God, and they shall be to me a people:",
       "scan_pages": [
         "sinaiticus-folios/hebrews-9-Q85_7r_B609.jpg"
-      ]
+      ],
+      "scan_note": "fol. 291r (Q85_7r_B609), col. 1 line 33 to col. 2 line 27. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "8.11-13",
@@ -36,7 +38,8 @@
       "text": "<sup>11</sup>And they shall not teach every man his neighbour, and every man his brother, saying, Know the Lord: for all shall know me, from the least to the greatest. <sup>12</sup>For I will be merciful to their unrighteousness, and their sins and their iniquities will I remember no more. <sup>13</sup>In that he saith, A new\ncovenant, he hath made the first old. Now that which decayeth and waxeth old\nis ready to vanish away.",
       "scan_pages": [
         "sinaiticus-folios/hebrews-9-Q85_7r_B609.jpg"
-      ]
+      ],
+      "scan_note": "fol. 291r (Q85_7r_B609), col. 2, lines 27-46. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -61,14 +64,16 @@
       "Q85_7r_B609"
     ],
     "scan_folio_ranges": [
-      "Q85_6v_B608 (lib. folio 290): Hebrews, 6:18  - 8:1",
-      "Q85_7r_B609 (lib. folio 291): Hebrews, 8:1  - 9:14"
+      "Q85_6v_B608 (lib. folio 290): Hebrews, 6:18 - 8:1",
+      "Q85_7r_B609 (lib. folio 291): Hebrews, 8:1 - 9:14"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

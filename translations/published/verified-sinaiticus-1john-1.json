@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>That which was from the beginning, which we have heard, which we have seen with our eyes, which we have looked upon, and our hands have handled, of the Word of life; <sup>2</sup>(For the life was manifested, and we have seen\nit, and bear witness, and shew unto you that eternal life, which was with the Father, and was manifested unto us;) <sup>3</sup>That which we have seen and heard declare we unto you, that ye also may have fellowship with us: and truly our fellowship\nis with the Father, and with his Son Jesus Christ. <sup>4</sup>And these things write we unto you, that your joy may be full. <sup>5</sup>This then is the message which we have heard of him, and declare unto you, that God is light, and in him is no darkness at all.",
       "scan_pages": [
         "sinaiticus-folios/1john-1-Q89_6r_B671.jpg"
-      ]
+      ],
+      "scan_note": "fol. 322r (Q89_6r_B671), col. 4, lines 1-41. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "1.6-10",
@@ -26,7 +27,8 @@
       "scan_pages": [
         "sinaiticus-folios/1john-1-Q89_6r_B671.jpg",
         "sinaiticus-folios/1john-2-Q89_6v_B672.jpg"
-      ]
+      ],
+      "scan_note": "fol. 322r (Q89_6r_B671), col. 4, lines 41-47 (1:6); fol. 322v (Q89_6v_B672), col. 1, lines 1-29 (1:6-10). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -51,14 +53,16 @@
       "Q89_6v_B672"
     ],
     "scan_folio_ranges": [
-      "Q89_6r_B671 (lib. folio 322): 2 Peter, 3:3  - 3:18  /  1 John, 1:1  - 1:6",
-      "Q89_6v_B672 (lib. folio 322): 1 John, 1:6  - 2:24"
+      "Q89_6r_B671 (lib. folio 322): 2 Peter, 3:3 - 3:18  /  1 John, 1:1 - 1:6",
+      "Q89_6v_B672 (lib. folio 322): 1 John, 1:6 - 2:24"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

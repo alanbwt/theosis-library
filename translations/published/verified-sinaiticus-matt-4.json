@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>Then was Jesus led up of the Spirit into the wilderness to be tempted of the devil. <sup>2</sup>And when he had fasted forty days and forty nights, he was afterward an hungred. <sup>3</sup>And when the tempter came to him, he said, If thou be the Son of God, command that these stones be made bread. <sup>4</sup>But he answered and said,\nIt is written, Man shall not live by bread alone, but by every word that proceedeth out of the mouth of God. <sup>5</sup>Then the devil taketh him up into the holy city, and setteth him on a pinnacle of the temple, <sup>6</sup>And saith unto him, If thou be the Son of God, cast thyself down: for it is written, He shall give his angels charge concerning thee: and in\ntheir hands they shall bear thee up, lest at any time thou dash thy foot against a stone. <sup>7</sup>Jesus said unto him,\nIt is written again, Thou shalt not tempt the Lord thy God. <sup>8</sup>Again, the devil taketh him up into an exceeding high mountain, and sheweth him all the kingdoms of the world, and the glory of them;",
       "scan_pages": [
         "sinaiticus-folios/matt-4-Q74_2r_B429.jpg"
-      ]
+      ],
+      "scan_note": "fol. 201r (Q74_2r_B429), col. 2 line 28 to col. 3 line 32. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "4.9-16",
@@ -25,7 +26,8 @@
       "text": "<sup>9</sup>And saith unto him, All these things will I give thee, if thou wilt fall down and worship me. <sup>10</sup>Then saith Jesus unto him,\nGet thee hence, Satan: for it is written, Thou shalt worship the Lord thy God, and him only shalt thou serve. <sup>11</sup>Then the devil leaveth him, and, behold, angels came and ministered unto him. <sup>12</sup>Now when Jesus had heard that John was cast into prison, he departed into Galilee; <sup>13</sup>And leaving Nazareth, he came and dwelt in Capernaum, which is upon the sea coast, in the borders of Zabulon and Nephthalim: <sup>14</sup>That it might be fulfilled which was spoken by Esaias the prophet, saying, <sup>15</sup>The land of Zabulon, and the land of Nephthalim,\nby the way of the sea, beyond Jordan, Galilee of the Gentiles; <sup>16</sup>The people which sat in darkness saw great light; and to them which sat in the region and shadow of death light is sprung up.",
       "scan_pages": [
         "sinaiticus-folios/matt-4-Q74_2r_B429.jpg"
-      ]
+      ],
+      "scan_note": "fol. 201r (Q74_2r_B429), col. 3 line 33 to col. 4 line 29. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "4.17-24",
@@ -36,7 +38,8 @@
       "scan_pages": [
         "sinaiticus-folios/matt-4-Q74_2r_B429.jpg",
         "sinaiticus-folios/matt-5-Q74_2v_B430.jpg"
-      ]
+      ],
+      "scan_note": "fol. 201r (Q74_2r_B429), col. 4, lines 30-48 (4:17-19); fol. 201v (Q74_2v_B430), col. 1 line 1 to col. 2 line 2 (4:19-24). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "4.25",
@@ -46,7 +49,8 @@
       "text": "<sup>25</sup>And there followed him great multitudes of people from Galilee, and\nfrom Decapolis, and\nfrom Jerusalem, and\nfrom\n Judaea, and\nfrom beyond Jordan.",
       "scan_pages": [
         "sinaiticus-folios/matt-5-Q74_2v_B430.jpg"
-      ]
+      ],
+      "scan_note": "fol. 201v (Q74_2v_B430), col. 2, lines 3-10. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q74_2v_B430"
     ],
     "scan_folio_ranges": [
-      "Q74_2r_B429 (lib. folio 201): Matthew, 3:7  - 4:19",
-      "Q74_2v_B430 (lib. folio 201): Matthew, 4:19  - 5:22"
+      "Q74_2r_B429 (lib. folio 201): Matthew, 3:7 - 4:19",
+      "Q74_2v_B430 (lib. folio 201): Matthew, 4:19 - 5:22"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

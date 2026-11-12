@@ -14,7 +14,8 @@
       "text": "<sup>1</sup>O God, thou\nart my God; early will I seek thee: my soul thirsteth for thee, my flesh longeth for thee in a dry and thirsty land, where no water is; <sup>2</sup>To see thy power and thy glory, so\nas I have seen thee in the sanctuary. <sup>3</sup>Because thy lovingkindness\nis better than life, my lips shall praise thee. <sup>4</sup>Thus will I bless thee while I live: I will lift up my hands in thy name.",
       "scan_pages": [
         "sinaiticus-folios/ps-62-Q60_8v_B214.jpg"
-      ]
+      ],
+      "scan_note": "fol. 103v (Q60_8v_B214), col. 2, lines 32-45. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "62.6-10",
@@ -24,7 +25,8 @@
       "scan_pages": [
         "sinaiticus-folios/ps-62-Q60_8v_B214.jpg",
         "sinaiticus-folios/ps-63-Q61_1r_B215.jpg"
-      ]
+      ],
+      "scan_note": "fol. 103v (Q60_8v_B214), col. 2, lines 46-49 (62:6); fol. 104r (Q61_1r_B215), col. 1, lines 1-11 (62:7-10). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "62.11-12",
@@ -33,7 +35,8 @@
       "text": "<sup>10</sup>They shall fall by the sword: they shall be a portion for foxes. <sup>11</sup>But the king shall rejoice in God; every one that sweareth by him shall glory: but the mouth of them that speak lies shall be stopped.",
       "scan_pages": [
         "sinaiticus-folios/ps-63-Q61_1r_B215.jpg"
-      ]
+      ],
+      "scan_note": "fol. 104r (Q61_1r_B215), col. 1, lines 11-16. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -62,11 +65,13 @@
       "Q61_1r_B215"
     ],
     "scan_folio_ranges": [
-      "Q60_8v_B214 (lib. folio 103): Psalms, 59:11  - 62:6",
-      "Q61_1r_B215 (lib. folio 104): Psalms, 62:6  - 65:3"
+      "Q60_8v_B214 (lib. folio 103): Psalms, 59:11 - 62:6",
+      "Q61_1r_B215 (lib. folio 104): Psalms, 62:7 - 65:3"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

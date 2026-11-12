@@ -15,7 +15,8 @@
       "scan_pages": [
         "sinaiticus-folios/job-36-Q72_5v_B400.jpg",
         "sinaiticus-folios/job-37-Q72_6r_B401.jpg"
-      ]
+      ],
+      "scan_note": "fol. 196v (Q72_5v_B400), col. 2, lines 40-48 (36:1-5); fol. 197r (Q72_6r_B401), col. 1, lines 1-11 (36:5-8). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "36.9-16",
@@ -24,7 +25,8 @@
       "text": "<sup>9</sup>Then he sheweth them their work, and their transgressions that they have exceeded. <sup>10</sup>He openeth also their ear to discipline, and commandeth that they return from iniquity. <sup>11</sup>If they obey and serve\nhim, they shall spend their days in prosperity, and their years in pleasures. <sup>12</sup>But if they obey not, they shall perish by the sword, and they shall die without knowledge. <sup>13</sup>But the hypocrites in heart heap up wrath: they cry not when he bindeth them. <sup>14</sup>They die in youth, and their life\nis among the unclean. <sup>15</sup>He delivereth the poor in his affliction, and openeth their ears in oppression. <sup>16</sup>Even so would he have removed thee out of the strait\ninto\n a broad place, where\nthere is no straitness; and that which\nshould be set on thy table should be full of fatness.",
       "scan_pages": [
         "sinaiticus-folios/job-37-Q72_6r_B401.jpg"
-      ]
+      ],
+      "scan_note": "fol. 197r (Q72_6r_B401), col. 1, lines 12-38. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "36.17-24",
@@ -33,7 +35,8 @@
       "text": "<sup>17</sup>But thou hast fulfilled the judgment of the wicked: judgment and justice take hold\non thee. <sup>18</sup>Because\nthere is wrath,\nbeware lest he take thee away with\nhis stroke: then a great ransom cannot deliver thee. <sup>19</sup>Will he esteem thy riches?\nno, not gold, nor all the forces of strength. <sup>20</sup>Desire not the night, when people are cut off in their place. <sup>21</sup>Take heed, regard not iniquity: for this hast thou chosen rather than affliction. <sup>22</sup>Behold, God exalteth by his power: who teacheth like him? <sup>23</sup>Who hath enjoined him his way? or who can say, Thou hast wrought iniquity? <sup>24</sup>Remember that thou magnify his work, which men behold.",
       "scan_pages": [
         "sinaiticus-folios/job-37-Q72_6r_B401.jpg"
-      ]
+      ],
+      "scan_note": "fol. 197r (Q72_6r_B401), col. 1 line 39 to col. 2 line 7. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "36.25-32",
@@ -42,7 +45,8 @@
       "text": "<sup>25</sup>Every man may see it; man may behold\nit afar off. <sup>26</sup>Behold, God\nis great, and we know\nhim not, neither can the number of his years be searched out. <sup>27</sup>For he maketh small the drops of water: they pour down rain according to the vapour thereof: <sup>28</sup>Which the clouds do drop\nand distil upon man abundantly. <sup>29</sup>Also can\nany understand the spreadings of the clouds,\nor the noise of his tabernacle? <sup>30</sup>Behold, he spreadeth his light upon it, and covereth the bottom of the sea. <sup>31</sup>For by them judgeth he the people; he giveth meat in abundance. <sup>32</sup>With clouds he covereth the light; and commandeth it\nnot to shine\n by\nthe cloud that cometh betwixt.",
       "scan_pages": [
         "sinaiticus-folios/job-37-Q72_6r_B401.jpg"
-      ]
+      ],
+      "scan_note": "fol. 197r (Q72_6r_B401), col. 2, lines 8-29. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "36.33",
@@ -51,7 +55,8 @@
       "text": "<sup>33</sup>The noise thereof sheweth concerning it, the cattle also concerning the vapour.",
       "scan_pages": [
         "sinaiticus-folios/job-37-Q72_6r_B401.jpg"
-      ]
+      ],
+      "scan_note": "fol. 197r (Q72_6r_B401), col. 2, lines 30-31. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -77,11 +82,13 @@
       "Q72_6r_B401"
     ],
     "scan_folio_ranges": [
-      "Q72_5v_B400 (lib. folio 196): Job, 34:17  - 36:5",
-      "Q72_6r_B401 (lib. folio 197): Job, 36:5  - 37:6"
+      "Q72_5v_B400 (lib. folio 196): Job, 34:17 - 36:5",
+      "Q72_6r_B401 (lib. folio 197): Job, 36:5 - 37:6"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

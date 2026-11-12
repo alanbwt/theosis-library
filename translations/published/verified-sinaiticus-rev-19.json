@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>And after these things I heard a great voice of much people in heaven, saying, Alleluia; Salvation, and glory, and honour, and power, unto the Lord our God: <sup>2</sup>For true and righteous\nare his judgments: for he hath judged the great whore, which did corrupt the earth with her fornication, and hath avenged the blood of his servants at her hand. <sup>3</sup>And again they said, Alleluia. And her smoke rose up for ever and ever. <sup>4</sup>And the four and twenty elders and the four beasts fell down and worshipped God that sat on the throne, saying, Amen; Alleluia. <sup>5</sup>And a voice came out of the throne, saying, Praise our God, all ye his servants, and ye that fear him, both small and great. <sup>6</sup>And I heard as it were the voice of a great multitude, and as the voice of many waters, and as the voice of mighty thunderings, saying, Alleluia: for the Lord God omnipotent reigneth. <sup>7</sup>Let us be glad and rejoice, and give honour to him: for the marriage of the Lamb is come, and his wife hath made herself ready. <sup>8</sup>And to her was granted that she should be arrayed in fine linen, clean and white: for the fine linen is the righteousness of saints.",
       "scan_pages": [
         "sinaiticus-folios/rev-19-Q90_8r_B691.jpg"
-      ]
+      ],
+      "scan_note": "fol. 332r (Q90_8r_B691), col. 3 line 31 to col. 4 line 48. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "19.9-16",
@@ -26,7 +27,8 @@
       "scan_pages": [
         "sinaiticus-folios/rev-19-Q90_8r_B691.jpg",
         "sinaiticus-folios/rev-20-Q90_8v_B692.jpg"
-      ]
+      ],
+      "scan_note": "fol. 332r (Q90_8r_B691), col. 4, line 48 (19:9); fol. 332v (Q90_8v_B692), col. 1 line 1 to col. 2 line 16 (19:9-16). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "19.17-21",
@@ -36,7 +38,8 @@
       "text": "<sup>17</sup>And I saw an angel standing in the sun; and he cried with a loud voice, saying to all the fowls that fly in the midst of heaven, Come and gather yourselves together unto the supper of the great God; <sup>18</sup>That ye may eat the flesh of kings, and the flesh of captains, and the flesh of mighty men, and the flesh of horses, and of them that sit on them, and the flesh of all\nmen, both free and bond, both small and great. <sup>19</sup>And I saw the beast, and the kings of the earth, and their armies, gathered together to make war against him that sat on the horse, and against his army. <sup>20</sup>And the beast was taken, and with him the false prophet that wrought miracles before him, with which he deceived them that had received the mark of the beast, and them that worshipped his image. These both were cast alive into a lake of fire burning with brimstone. <sup>21</sup>And the remnant were slain with the sword of him that sat upon the horse, which\nsword proceeded out of his mouth: and all the fowls were filled with their flesh.",
       "scan_pages": [
         "sinaiticus-folios/rev-20-Q90_8v_B692.jpg"
-      ]
+      ],
+      "scan_note": "fol. 332v (Q90_8v_B692), col. 2 line 16 to col. 3 line 24. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -61,14 +64,16 @@
       "Q90_8v_B692"
     ],
     "scan_folio_ranges": [
-      "Q90_8r_B691 (lib. folio 332): Revelation, 18:11  - 19:9",
-      "Q90_8v_B692 (lib. folio 332): Revelation, 19:9  - 20:10"
+      "Q90_8r_B691 (lib. folio 332): Revelation, 18:11 - 19:9",
+      "Q90_8v_B692 (lib. folio 332): Revelation, 19:9 - 20:10"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

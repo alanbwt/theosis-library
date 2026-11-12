@@ -6,7 +6,9 @@
   "source": "Codex Sinaiticus folio + transcription (codexsinaiticus.org) + King James Version Apocrypha (1611; 1769 text)",
   "description": "Judith chapter 12. Manuscript page scan(s) from Codex Sinaiticus hosted by the Codex Sinaiticus Project, with the Project's verbatim transcription of the Greek and the English of King James Version Apocrypha (1611; 1769 text).",
   "introduction": "<p>This entry meets the strict three-criteria standard of the Theosis Library:</p><ol><li><strong>Manuscript scan:</strong> The actual folio(s) of Codex Sinaiticus containing this chapter, from the Codex Sinaiticus Project (codexsinaiticus.org). Each section links to the specific folio holding its verses.</li><li><strong>Original text:</strong> The Codex Sinaiticus Project's verbatim transcription of the folio shown (uncial letters, lunate sigma, nomina sacra preserved).</li><li><strong>English translation:</strong> King James Version Apocrypha (1611; 1769 text), public domain, retrieved verbatim from ebible.org eng-kjv USFM (KJV with Apocrypha).</li></ol><p><strong>Numbering:</strong> English verses 4, 17 have no Greek under that number in the codex as transcribed. Compare by content.</p>",
-  "translator_notes": [],
+  "translator_notes": [
+    "Greek checked against the Codex Sinaiticus Project XML transcription (v1.95) on 2026-11-12; verses 12:11 were missing or cut short on the site and are now given from the XML (first hand, abbreviations as written, κ(αι) for the kai compendium, a dot below uncertain letters, as on the Codex Sinaiticus Project website)."
+  ],
   "translation": [
     {
       "section": "12.1-5",
@@ -15,7 +17,8 @@
       "text": "<sup>1</sup>Then he commanded to bring her in where his plate was set; and bade that they should prepare for her of his own meats, and that she should drink of his own wine. <sup>2</sup>And Judith said, I will not eat thereof, lest there be an offence: but provision shall be made for me of the things that I have brought. <sup>3</sup>Then Holofernes said unto her, If thy provision should fail, how should we give thee the like? for there be none with us of thy nation. <sup>4</sup>Then said Judith unto him As thy soul liveth, my lord, thine handmaid shall not spend those things that I have, before the Lord work by mine hand the things that he hath determined. <sup>5</sup>Then the servants of Holofernes brought her into the tent, and she slept till midnight, and she arose when it was toward the morning watch,",
       "scan_pages": [
         "sinaiticus-folios/judith-11-Q38_8r_P005.jpg"
-      ]
+      ],
+      "scan_note": "quire 38, leaf 8r (Q38_8r_P005), col. 3 line 8 to col. 4 line 4. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "12.6-10",
@@ -25,16 +28,18 @@
       "scan_pages": [
         "sinaiticus-folios/judith-11-Q38_8r_P005.jpg",
         "sinaiticus-folios/judith-12-Q38_8v_P006.jpg"
-      ]
+      ],
+      "scan_note": "quire 38, leaf 8r (Q38_8r_P005), col. 4, lines 5-34 (12:6-9); quire 38, leaf 8v (Q38_8v_P006), col. 1, line 1 (12:10). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "12.11-15",
       "original_ref": "Judith 12:11-15",
-      "original_text": "<sup>11</sup>κα̣ι̣ ε̣ι̣πεν β̣αγωα τω ευνουχω̣ πειϲον δη πορευθειϲ την γυναικα την εβραιαν η εϲτιν παρα ϲοι του ελ̣θ̣ειν προϲ ημαϲ κα̣ι φ̣αγειν και πιει μεθ ημων <sup>12</sup>ϊδου γαρ αιϲχρον τω προϲωπω ημων ει γυναικ̣α τοιαυτην̣ παρηϲομεν ουχ̣ ομιληϲαντεϲ αυτη ο̣τι εαν ταυτην μ̣η επιϲπαϲωμεθα καταγελαϲεται ημων <sup>13</sup>και εξηλθεν βαγωαϲ απο προϲωπου ολοφερνου και ειϲηλθεν προϲ α̣υτην και ειπε προϲ αυτην μη οκνηϲατω η παιδι̣̣ϲκη η καλη ελθουϲα προϲ τον κν μου δοξαϲ̣θηναι κατα προϲωπων̣ των αυτου <sup>14</sup>τοιϲ οφθ̣αλμοι̣ϲ̣ αυτου αρεϲτον ϲπευϲαϲα ποιηϲ̣ω̣ και εϲται τουτο μοι αγαλμα εωϲ ημεραϲ θανατου μου <sup>15</sup>και αναϲταϲα εκοϲμηθη τω ιματιϲμω και πα̣τι τω κοϲμω τω γυναικειω και προϲηλθεν η δουλη αυτηϲ και εϲτρωϲεν αυτη κατεναντι ολοφερνου χαμαι τα κωδια α ελαβεν παρα βαγωου ειϲ την καθημερινην διαιταν αυτηϲ ειϲ το εϲθιειν κατακλινομενην επ αυτων",
+      "original_text": "<sup>11</sup>κα̣ι̣ ε̣ι̣πεν β̣αγωα τω ευνουχω̣ οϲ ην εφεϲτηκωϲ επι παντων των αυτου πειϲον δη πορευθειϲ την γυναικα την εβραιαν η εϲτιν παρα ϲοι του ελ̣θ̣ειν προϲ ημαϲ κα̣ι φ̣αγειν και πιει μεθ ημων <sup>12</sup>ϊδου γαρ αιϲχρον τω προϲωπω ημων ει γυναικ̣α τοιαυτην̣ παρηϲομεν ουχ̣ ομιληϲαντεϲ αυτη ο̣τι εαν ταυτην μ̣η επιϲπαϲωμεθα καταγελαϲεται ημων <sup>13</sup>και εξηλθεν βαγωαϲ απο προϲωπου ολοφερνου και ειϲηλθεν προϲ α̣υτην και ειπε προϲ αυτην μη οκνηϲατω η παιδι̣̣ϲκη η καλη ελθουϲα προϲ τον κν μου δοξαϲ̣θηναι κατα προϲωπων̣ των αυτου <sup>14</sup>τοιϲ οφθ̣αλμοι̣ϲ̣ αυτου αρεϲτον ϲπευϲαϲα ποιηϲ̣ω̣ και εϲται τουτο μοι αγαλμα εωϲ ημεραϲ θανατου μου <sup>15</sup>και αναϲταϲα εκοϲμηθη τω ιματιϲμω και πα̣τι τω κοϲμω τω γυναικειω και προϲηλθεν η δουλη αυτηϲ και εϲτρωϲεν αυτη κατεναντι ολοφερνου χαμαι τα κωδια α ελαβεν παρα βαγωου ειϲ την καθημερινην διαιταν αυτηϲ ειϲ το εϲθιειν κατακλινομενην επ αυτων",
       "text": "<sup>11</sup>Then said he to Bagoas the eunuch, who had charge over all that he had, Go now, and persuade this Hebrew woman which is with thee, that she come unto us, and eat and drink with us. <sup>12</sup>For, lo, it will be a shame for our person, if we shall let such a woman go, not having had her company; for if we draw her not unto us, she will laugh us to scorn. <sup>13</sup>Then went Bagoas from the presence of Holofernes, and came to her, and he said, Let not this fair damsel fear to come to my lord, and to be honoured in his presence, and drink wine, and be merry with us and be made this day as one of the daughters of the Assyrians, which serve in the house of Nabuchodonosor. <sup>14</sup>Then said Judith unto him, Who am I now, that I should gainsay my lord? surely whatsoever pleaseth him I will do speedily, and it shall be my joy unto the day of my death. <sup>15</sup>So she arose, and decked herself with her apparel and all her woman’s attire, and her maid went and laid soft skins on the ground for her over against Holofernes, which she had received of Bagoas for her daily use, that she might sit and eat upon them.",
       "scan_pages": [
         "sinaiticus-folios/judith-12-Q38_8v_P006.jpg"
-      ]
+      ],
+      "scan_note": "quire 38, leaf 8v (Q38_8v_P006), col. 1 line 2 to col. 2 line 23. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "12.16-20",
@@ -43,7 +48,8 @@
       "text": "<sup>16</sup>Now when Judith came in and sat down, Holofernes his heart was ravished with her, and his mind was moved, and he desired greatly her company; for he waited a time to deceive her, from the day that he had seen her. <sup>17</sup>Then said Holofernes unto her, Drink now, and be merry with us. <sup>18</sup>So Judith said, I will drink now, my lord, because my life is magnified in me this day more than all the days since I was born. <sup>19</sup>Then she took and ate and drank before him what her maid had prepared. <sup>20</sup>And Holofernes took great delight in her, and drank more wine than he had drunk at any time in one day since he was born.",
       "scan_pages": [
         "sinaiticus-folios/judith-12-Q38_8v_P006.jpg"
-      ]
+      ],
+      "scan_note": "quire 38, leaf 8v (Q38_8v_P006), col. 2 line 23 to col. 3 line 13. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "verification": {
@@ -60,8 +66,8 @@
       "sinaiticus-folios/judith-12-Q38_8v_P006.jpg"
     ],
     "scan_folio_ranges": [
-      "Q38_8r_P005 (lib. folio 0): Judith, 11:19  - 12:9",
-      "Q38_8v_P006 (lib. folio 0): Judith, 12:10  - 13:2"
+      "Q38_8r_P005 (lib. folio 0): Judith, 11:19 - 12:9",
+      "Q38_8v_P006 (lib. folio 0): Judith, 12:10 - 13:2"
     ],
     "scan_verse_info": "Judith, 11:19  - 12:9",
     "section_folios_verified": true,
@@ -73,6 +79,10 @@
     "translation_source": "ebible.org eng-kjv USFM (KJV with Apocrypha)",
     "translation_license": "public domain",
     "translator": "King James Version Apocrypha (1611; 1769 text)",
-    "verified_date": "2026-09-05"
+    "verified_date": "2026-09-05",
+    "greek_checked_against": "CSP XML transcription v1.95 (github.com/itsee-birmingham/codex-sinaiticus)",
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

@@ -14,7 +14,8 @@
       "text": "<sup>1</sup>How long wilt thou forget me, O LORD? for ever? how long wilt thou hide thy face from me? <sup>2</sup>How long shall I take counsel in my soul,\nhaving sorrow in my heart daily? how long shall mine enemy be exalted over me? <sup>3</sup>Consider\nand hear me, O LORD my God: lighten mine eyes, lest I sleep the\nsleep of death; <sup>4</sup>Lest mine enemy say, I have prevailed against him;\nand those that trouble me rejoice when I am moved. <sup>5</sup>But I have trusted in thy mercy; my heart shall rejoice in thy salvation.",
       "scan_pages": [
         "sinaiticus-folios/ps-12-Q59_3r_B187.jpg"
-      ]
+      ],
+      "scan_note": "fol. 90r (Q59_3r_B187), col. 2, lines 34-49. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "12.6",
@@ -23,7 +24,8 @@
       "text": "<sup>6</sup>I will sing unto the LORD, because he hath dealt bountifully with me.",
       "scan_pages": [
         "sinaiticus-folios/ps-13-Q59_3v_B188.jpg"
-      ]
+      ],
+      "scan_note": "fol. 90v (Q59_3v_B188), col. 1, lines 1-5. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -52,11 +54,13 @@
       "Q59_3v_B188"
     ],
     "scan_folio_ranges": [
-      "Q59_3r_B187 (lib. folio 90): Psalms, 9:32  - 12:5",
-      "Q59_3v_B188 (lib. folio 90): Psalms, 12:5  - 15:10"
+      "Q59_3r_B187 (lib. folio 90): Psalms, 9:32 - 12:5",
+      "Q59_3v_B188 (lib. folio 90): Psalms, 12:6 - 15:10"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

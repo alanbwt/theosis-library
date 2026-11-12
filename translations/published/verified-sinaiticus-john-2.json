@@ -15,7 +15,8 @@
       "text": "<sup>1</sup>And the third day there was a marriage in Cana of Galilee; and the mother of Jesus was there: <sup>2</sup>And both Jesus was called, and his disciples, to the marriage. <sup>3</sup>And when they wanted wine, the mother of Jesus saith unto him, They have no wine. <sup>4</sup>Jesus saith unto her,\nWoman, what have I to do with thee? mine hour is not yet come. <sup>5</sup>His mother saith unto the servants, Whatsoever he saith unto you, do\nit. <sup>6</sup>And there were set there six waterpots of stone, after the manner of the purifying of the Jews, containing two or three firkins apiece. <sup>7</sup>Jesus saith unto them,\nFill the waterpots with water. And they filled them up to the brim. <sup>8</sup>And he saith unto them,\nDraw out now, and bear unto the governor of the feast. And they bare\nit.",
       "scan_pages": [
         "sinaiticus-folios/john-2-Q80_1v_B522.jpg"
-      ]
+      ],
+      "scan_note": "fol. 247v (Q80_1v_B522), col. 2 line 44 to col. 3 line 33. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "2.9-16",
@@ -25,7 +26,8 @@
       "text": "<sup>9</sup>When the ruler of the feast had tasted the water that was made wine, and knew not whence it was: (but the servants which drew the water knew;) the governor of the feast called the bridegroom, <sup>10</sup>And saith unto him, Every man at the beginning doth set forth good wine; and when men have well drunk, then that which is worse:\nbut thou hast kept the good wine until now. <sup>11</sup>This beginning of miracles did Jesus in Cana of Galilee, and manifested forth his glory; and his disciples believed on him. <sup>12</sup>After this he went down to Capernaum, he, and his mother, and his brethren, and his disciples: and they continued there not many days. <sup>13</sup>And the Jews’ passover was at hand, and Jesus went up to Jerusalem, <sup>14</sup>And found in the temple those that sold oxen and sheep and doves, and the changers of money sitting: <sup>15</sup>And when he had made a scourge of small cords, he drove them all out of the temple, and the sheep, and the oxen; and poured out the changers’ money, and overthrew the tables; <sup>16</sup>And said unto them that sold doves,\nTake these things hence; make not my Father’s house an house of merchandise.",
       "scan_pages": [
         "sinaiticus-folios/john-2-Q80_1v_B522.jpg"
-      ]
+      ],
+      "scan_note": "fol. 247v (Q80_1v_B522), col. 3 line 33 to col. 4 line 46. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "2.17-24",
@@ -36,7 +38,8 @@
       "scan_pages": [
         "sinaiticus-folios/john-2-Q80_1v_B522.jpg",
         "sinaiticus-folios/john-3-Q80_2r_B523.jpg"
-      ]
+      ],
+      "scan_note": "fol. 247v (Q80_1v_B522), col. 4, lines 47-48 (2:17); fol. 248r (Q80_2r_B523), col. 1, lines 1-43 (2:17-24). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "2.25",
@@ -46,7 +49,8 @@
       "text": "<sup>25</sup>And needed not that any should testify of man: for he knew what was in man.",
       "scan_pages": [
         "sinaiticus-folios/john-3-Q80_2r_B523.jpg"
-      ]
+      ],
+      "scan_note": "fol. 248r (Q80_2r_B523), col. 1 line 43 to col. 2 line 2. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q80_2r_B523"
     ],
     "scan_folio_ranges": [
-      "Q80_1v_B522 (lib. folio 247): John, 1:38  - 2:17",
-      "Q80_2r_B523 (lib. folio 248): John, 2:17  - 3:25"
+      "Q80_1v_B522 (lib. folio 247): John, 1:38 - 2:17",
+      "Q80_2r_B523 (lib. folio 248): John, 2:17 - 3:25"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

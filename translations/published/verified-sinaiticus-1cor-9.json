@@ -16,7 +16,8 @@
       "scan_pages": [
         "sinaiticus-folios/1cor-9-Q83_2r_B567.jpg",
         "sinaiticus-folios/1cor-10-Q83_2v_B568.jpg"
-      ]
+      ],
+      "scan_note": "fol. 270r (Q83_2r_B567), col. 4, lines 24-48 (9:1-6); fol. 270v (Q83_2v_B568), col. 1, lines 1-17 (9:6-8). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "9.9-16",
@@ -26,7 +27,8 @@
       "text": "<sup>9</sup>For it is written in the law of Moses, Thou shalt not muzzle the mouth of the ox that treadeth out the corn. Doth God take care for oxen? <sup>10</sup>Or saith he\nit altogether for our sakes? For our sakes, no doubt,\nthis is written: that he that ploweth should plow in hope; and that he that thresheth in hope should be partaker of his hope. <sup>11</sup>If we have sown unto you spiritual things,\nis it a great thing if we shall reap your carnal things? <sup>12</sup>If others be partakers of\nthis power over you,\nare\n not we rather? Nevertheless we have not used this power; but suffer all things, lest we should hinder the gospel of Christ. <sup>13</sup>Do ye not know that they which minister about holy things live\nof the things of the temple? and they which wait at the altar are partakers with the altar? <sup>14</sup>Even so hath the Lord ordained that they which preach the gospel should live of the gospel. <sup>15</sup>But I have used none of these things: neither have I written these things, that it should be so done unto me: for\nit were better for me to die, than that any man should make my glorying void. <sup>16</sup>For though I preach the gospel, I have nothing to glory of: for necessity is laid upon me; yea, woe is unto me, if I preach not the gospel!",
       "scan_pages": [
         "sinaiticus-folios/1cor-10-Q83_2v_B568.jpg"
-      ]
+      ],
+      "scan_note": "fol. 270v (Q83_2v_B568), col. 1 line 17 to col. 2 line 24. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "9.17-24",
@@ -36,7 +38,8 @@
       "text": "<sup>17</sup>For if I do this thing willingly, I have a reward: but if against my will, a dispensation\nof the gospel is committed unto me. <sup>18</sup>What is my reward then?\nVerily that, when I preach the gospel, I may make the gospel of Christ without charge, that I abuse not my power in the gospel. <sup>19</sup>For though I be free from all\nmen, yet have I made myself servant unto all, that I might gain the more. <sup>20</sup>And unto the Jews I became as a Jew, that I might gain the Jews; to them that are under the law, as under the law, that I might gain them that are under the law; <sup>21</sup>To them that are without law, as without law, (being not without law to God, but under the law to Christ,) that I might gain them that are without law. <sup>22</sup>To the weak became I as weak, that I might gain the weak: I am made all things to all\nmen, that I might by all means save some. <sup>23</sup>And this I do for the gospel’s sake, that I might be partaker thereof with\nyou. <sup>24</sup>Know ye not that they which run in a race run all, but one receiveth the prize? So run, that ye may obtain.",
       "scan_pages": [
         "sinaiticus-folios/1cor-10-Q83_2v_B568.jpg"
-      ]
+      ],
+      "scan_note": "fol. 270v (Q83_2v_B568), col. 2 line 24 to col. 3 line 26. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "9.25-27",
@@ -46,7 +49,8 @@
       "text": "<sup>25</sup>And every man that striveth for the mastery is temperate in all things. Now they\ndo it to obtain a corruptible crown; but we an incorruptible. <sup>26</sup>I therefore so run, not as uncertainly; so fight I, not as one that beateth the air: <sup>27</sup>But I keep under my body, and bring\nit into subjection: lest that by any means, when I have preached to others, I myself should be a castaway.",
       "scan_pages": [
         "sinaiticus-folios/1cor-10-Q83_2v_B568.jpg"
-      ]
+      ],
+      "scan_note": "fol. 270v (Q83_2v_B568), col. 3, lines 27-44. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -71,14 +75,16 @@
       "Q83_2v_B568"
     ],
     "scan_folio_ranges": [
-      "Q83_2r_B567 (lib. folio 270): 1 Corinthians, 7:27  - 9:6",
-      "Q83_2v_B568 (lib. folio 270): 1 Corinthians, 9:6  - 10:10"
+      "Q83_2r_B567 (lib. folio 270): 1 Corinthians, 7:27 - 9:6",
+      "Q83_2v_B568 (lib. folio 270): 1 Corinthians, 9:6 - 10:10"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
     "primary_greek": "csp_transcription",
     "edition_text_source": "bolls.life API (TISCH = Tischendorf 8)",
     "edition_text_license": "public domain (1869)",
-    "csp_greek_refreshed": true
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }

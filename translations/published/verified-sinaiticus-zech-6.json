@@ -15,7 +15,8 @@
       "scan_pages": [
         "sinaiticus-folios/zech-5-Q58_1v_B172.jpg",
         "sinaiticus-folios/zech-7-Q58_2r_B173.jpg"
-      ]
+      ],
+      "scan_note": "fol. 82v (Q58_1v_B172), col. 4, lines 34-48 (6:1-3); fol. 83r (Q58_2r_B173), col. 1, lines 1-18 (6:3-5). Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "6.6-10",
@@ -24,7 +25,8 @@
       "text": "<sup>6</sup>The black horses which\nare therein go forth into the north country; and the white go forth after them; and the grisled go forth toward the south country. <sup>7</sup>And the bay went forth, and sought to go that they might walk to and fro through the earth: and he said, Get you hence, walk to and fro through the earth. So they walked to and fro through the earth. <sup>8</sup>Then cried he upon me, and spake unto me, saying, Behold, these that go toward the north country have quieted my spirit in the north country. <sup>9</sup>And the word of the LORD came unto me, saying, <sup>10</sup>Take of\nthem of the captivity,\neven of Heldai, of Tobijah, and of Jedaiah, which are come from Babylon, and come thou the same day, and go into the house of Josiah the son of Zephaniah;",
       "scan_pages": [
         "sinaiticus-folios/zech-7-Q58_2r_B173.jpg"
-      ]
+      ],
+      "scan_note": "fol. 83r (Q58_2r_B173), col. 1 line 18 to col. 2 line 10. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     },
     {
       "section": "6.11-15",
@@ -33,7 +35,8 @@
       "text": "<sup>11</sup>Then take silver and gold, and make crowns, and set\nthem\n upon the head of Joshua the son of Josedech, the high priest; <sup>12</sup>And speak unto him, saying, Thus speaketh the LORD of hosts, saying, Behold the man whose name\nis The BRANCH; and he shall grow up out of his place, and he shall build the temple of the LORD: <sup>13</sup>Even he shall build the temple of the LORD; and he shall bear the glory, and shall sit and rule upon his throne; and he shall be a priest upon his throne: and the counsel of peace shall be between them both. <sup>14</sup>And the crowns shall be to Helem, and to Tobijah, and to Jedaiah, and to Hen the son of Zephaniah, for a memorial in the temple of the LORD. <sup>15</sup>And they\nthat are far off shall come and build in the temple of the LORD, and ye shall know that the LORD of hosts hath sent me unto you. And\nthis shall come to pass, if ye will diligently obey the voice of the LORD your God.",
       "scan_pages": [
         "sinaiticus-folios/zech-7-Q58_2r_B173.jpg"
-      ]
+      ],
+      "scan_note": "fol. 83r (Q58_2r_B173), col. 2 line 11 to col. 3 line 10. Page, column and line from the Codex Sinaiticus Project XML transcription (v1.95)."
     }
   ],
   "translator_notes": [],
@@ -59,11 +62,13 @@
       "Q58_2r_B173"
     ],
     "scan_folio_ranges": [
-      "Q58_1v_B172 (lib. folio 82): Zechariah, 4:2  - 6:3",
-      "Q58_2r_B173 (lib. folio 83): Zechariah, 6:3  - 7:12"
+      "Q58_1v_B172 (lib. folio 82): Zechariah, 4:2 - 6:3",
+      "Q58_2r_B173 (lib. folio 83): Zechariah, 6:3 - 7:12"
     ],
     "section_folios_verified": true,
-    "section_folios_note": "Each section links to the specific folio(s) containing its verses, resolved per verse via the Codex Sinaiticus Project page index.",
-    "csp_greek_refreshed": true
+    "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
+    "csp_greek_refreshed": true,
+    "section_folios_source": "csp_xml_v1.95",
+    "section_folios_checked_date": "2026-11-12"
   }
 }
