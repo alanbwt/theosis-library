@@ -1,0 +1,57 @@
+{
+  "collection": {
+    "key": "eridu-genesis",
+    "prefix": "verified-eridu-genesis-",
+    "label": "Sumerian Flood Story (Eridu Genesis)",
+    "group": "Mesopotamia",
+    "date_sort": -1700,
+    "author_name": "Sumerian scribes (Nippur tablet, c. 1800-1600 BCE)",
+    "source_url": "https://cdli.earth/artifacts/265876",
+    "critical_edition": "ETCSL 1.7.4 (from CBS 10673)",
+    "translator_name": "ETCSL (Black et al., 1998-2006)",
+    "original_lang_label": "Sumerian · ETCSL transliteration",
+    "original_lang_code": "sux",
+    "edition_label": "",
+    "search_terms": "eridu genesis sumerian flood story ziusudra deluge nippur poebel",
+    "description": "The Sumerian Flood story (Eridu Genesis) on its Nippur tablet: creation, the first cities, the flood and Ziusudra."
+  },
+  "texts": [
+    {
+      "id": "verified-eridu-genesis-cbs-10673",
+      "slug": "verified-eridu-genesis-cbs-10673",
+      "order": 1,
+      "title": "The Sumerian Flood Story (Eridu Genesis): Nippur tablet CBS 10673",
+      "author_id": "sumerian-scribes",
+      "language": "Sumerian",
+      "era": "Ancient Near East",
+      "tradition": "sumerian",
+      "category": "sacred-text",
+      "date_approx": "c. 1800-1600 BCE (Old Babylonian tablet from Nippur)",
+      "century": -17,
+      "source": "Penn Museum CBS 10673 photograph via CDLI (P265876) + ETCSL 1.7.4 transliteration and English translation (CC BY-NC-SA 3.0); columns after Poebel 1914",
+      "description": "The Sumerian account of the Flood: the creation of mankind, the first cities, and Ziusudra's survival in a boat, on the Nippur tablet CBS 10673 (c. 1800-1600 BCE).",
+      "themes": [
+        "flood",
+        "eridu-genesis",
+        "ziusudra",
+        "creation",
+        "sumer",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "eridu-genesis/cbs-10673-obverse.jpg",
+            "caption": "CBS 10673, obverse (columns i-iii)"
+          },
+          {
+            "file": "eridu-genesis/cbs-10673-reverse.jpg",
+            "caption": "CBS 10673, reverse (columns iv-vi)"
+          }
+        ]
+      }
+    }
+  ]
+}

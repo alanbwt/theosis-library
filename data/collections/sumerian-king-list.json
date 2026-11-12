@@ -1,0 +1,77 @@
+{
+  "collection": {
+    "key": "sumerian-king-list",
+    "prefix": "verified-sumerian-king-list-",
+    "label": "Sumerian King List",
+    "group": "Mesopotamia",
+    "date_sort": -1800,
+    "author_name": "Sumerian scribes (Weld-Blundell Prism, c. 1800 BCE)",
+    "source_url": "https://cdli.earth/artifacts/384786",
+    "critical_edition": "CDLI transliteration of the prism (P384786); ETCSL 2.1.1 composite",
+    "translator_name": "ETCSL (Black et al., 1998-2006)",
+    "original_lang_label": "Sumerian · CDLI transliteration",
+    "original_lang_code": "sux",
+    "edition_label": "",
+    "search_terms": "sumerian king list weld-blundell prism wb 444 antediluvian kings flood kish uruk ur isin",
+    "description": "The Sumerian King List on the Weld-Blundell Prism in the Ashmolean Museum: the kings before the Flood, the Flood, and the dynasties after it, shown face by face."
+  },
+  "texts": [
+    {
+      "id": "verified-sumerian-king-list-wb444",
+      "slug": "verified-sumerian-king-list-wb444",
+      "order": 1,
+      "title": "Sumerian King List: the Weld-Blundell Prism (WB 444)",
+      "author_id": "sumerian-scribes",
+      "language": "Sumerian",
+      "era": "Ancient Near East",
+      "tradition": "sumerian",
+      "category": "history",
+      "date_approx": "c. 1800 BCE (prism, reign of Sin-magir of Isin or soon after)",
+      "century": -19,
+      "source": "Ashmolean Museum AN1923.444 photograph via CDLI (P384786) + CDLI transliteration of the prism + ETCSL 2.1.1 English translation (CC BY-NC-SA 3.0)",
+      "description": "The Sumerian King List on the Weld-Blundell Prism (Ashmolean Museum, c. 1800 BCE), all four faces: the kings before the Flood, the Flood, and the dynasties after it down to Isin.",
+      "themes": [
+        "sumerian-king-list",
+        "antediluvian-kings",
+        "flood",
+        "sumer",
+        "kingship",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "sumerian-king-list/wb444-face-a.jpg",
+            "caption": "WB 444, face a"
+          },
+          {
+            "file": "sumerian-king-list/wb444-face-b.jpg",
+            "caption": "WB 444, face b"
+          },
+          {
+            "file": "sumerian-king-list/wb444-face-c.jpg",
+            "caption": "WB 444, face c"
+          },
+          {
+            "file": "sumerian-king-list/wb444-face-d.jpg",
+            "caption": "WB 444, face d"
+          }
+        ]
+      }
+    }
+  ],
+  "authors": [
+    {
+      "id": "sumerian-scribes",
+      "name": "Sumerian scribes (anonymous)",
+      "dates": "c. 2600-1700 BCE",
+      "century": -20,
+      "era": "Ancient Near East",
+      "tradition": "sumerian",
+      "language": "Sumerian",
+      "bio": "The anonymous scribes of Sumer and Babylonia who composed and copied Sumerian literature, from the earliest literary tablets of the mid-third millennium BCE to the Old Babylonian school copies."
+    }
+  ]
+}

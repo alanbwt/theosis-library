@@ -1,0 +1,91 @@
+{
+  "collection": {
+    "key": "exaltation-of-inana",
+    "prefix": "verified-exaltation-of-inana-",
+    "label": "Exaltation of Inana (Enheduanna)",
+    "group": "Mesopotamia",
+    "date_sort": -2300,
+    "author_name": "Enheduanna (c. 2300 BCE; Old Babylonian copies)",
+    "source_url": "https://cdli.earth/artifacts/composites-score/Q000623",
+    "critical_edition": "CDLI transliterations of the tablets; ETCSL 4.07.2 composite",
+    "translator_name": "ETCSL (Black et al., 1998-2006)",
+    "original_lang_label": "Sumerian · CDLI transliteration",
+    "original_lang_code": "sux",
+    "edition_label": "",
+    "search_terms": "enheduanna exaltation of inana inanna nin-me-sara ninmesara hymn first author sargon",
+    "description": "Enheduanna's Exaltation of Inana, on the Old Babylonian tablets that carry it."
+  },
+  "texts": [
+    {
+      "id": "verified-exaltation-of-inana-ob",
+      "slug": "verified-exaltation-of-inana-ob",
+      "order": 1,
+      "title": "The Exaltation of Inana (Enheduanna, Inana B)",
+      "author_id": "enheduanna",
+      "language": "Sumerian",
+      "era": "Ancient Near East",
+      "tradition": "sumerian",
+      "category": "sacred-text",
+      "date_approx": "composed c. 2300 BCE (attributed to Enheduanna); Old Babylonian copies shown, c. 1900-1700 BCE",
+      "century": -23,
+      "source": "CDLI photographs and transliterations of Old Babylonian tablets + ETCSL 4.07.2 English translation (CC BY-NC-SA 3.0)",
+      "description": "Enheduanna's hymn to Inana (nin-me-šara), by the first author known by name, on the Old Babylonian tablets that carry it.",
+      "themes": [
+        "enheduanna",
+        "inana",
+        "inanna",
+        "hymn",
+        "first-author",
+        "akkad",
+        "sumer",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "exaltation-of-inana/uet-6-107b-u-16900a.jpg",
+            "caption": "UET 6 107b = U 16900a (P464307)"
+          },
+          {
+            "file": "exaltation-of-inana/uet-6-107a-u-07750.jpg",
+            "caption": "UET 6 107a = U 07750 (P346192)"
+          },
+          {
+            "file": "exaltation-of-inana/kress-047.jpg",
+            "caption": "Kress 047 (P342799)"
+          },
+          {
+            "file": "exaltation-of-inana/hma-9-01808.jpg",
+            "caption": "HMA 9-01808 (P247905)"
+          },
+          {
+            "file": "exaltation-of-inana/uet-6-109-u-16879f.jpg",
+            "caption": "UET 6 109 = U 16879F (P346194)"
+          },
+          {
+            "file": "exaltation-of-inana/uet-6-567-u-08820.jpg",
+            "caption": "UET 6 567 = U 08820 (P346604)"
+          },
+          {
+            "file": "exaltation-of-inana/uet-6-110.jpg",
+            "caption": "UET 6 110 (P346195)"
+          }
+        ]
+      }
+    }
+  ],
+  "authors": [
+    {
+      "id": "enheduanna",
+      "name": "Enheduanna",
+      "dates": "c. 2300 BCE",
+      "century": -23,
+      "era": "Ancient Near East",
+      "tradition": "sumerian",
+      "language": "Sumerian",
+      "bio": "Daughter of Sargon of Akkad and high priestess of Nanna at Ur, to whom later tradition ascribed hymns to Inana and the temple hymns; the earliest author known by name."
+    }
+  ]
+}

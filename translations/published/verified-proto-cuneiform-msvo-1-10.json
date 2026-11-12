@@ -1,0 +1,54 @@
+{
+  "id": "verified-proto-cuneiform-msvo-1-10",
+  "slug": "verified-proto-cuneiform-msvo-1-10",
+  "title": "Proto-cuneiform barley and field account from Jemdet Nasr (MSVO 1, 10)",
+  "language": "Proto-cuneiform (transliteration) / English",
+  "source": "OIM A02515 photograph, transliteration and English translation via CDLI (P005077)",
+  "description": "Proto-cuneiform barley and field account from Jemdet Nasr: a clay tablet from Jemdet Nasr of about 3200-3000 BCE, among the earliest written documents, with CDLI's transliteration and English.",
+  "introduction": "<p>This clay tablet (OIM A02515, Institute for the Study of Ancient Cultures West Asia & North Africa Museum, Chicago, Illinois, USA) is a proto-cuneiform document of the Uruk III period, about 3200-3000 BCE, from Jemdet Nasr (CDLI catalogues the provenience as uncertain, attributed to Jemdet Nasr). It is a short account of 150 units of barley for a field of 10 bur, recorded by the pigsty accountant.</p><p>Proto-cuneiform is the earliest stage of cuneiform writing, used for bookkeeping in southern Mesopotamia. It records numbers in several counting systems (shown in the transliteration as signs N01, N14, N34 and so on) together with signs for goods, offices and places. It does not yet write full sentences, so the English is an interpretation of the entries rather than a translation of connected language.</p><p>The sections follow the faces and columns of the tablet. The transliteration and the English are CDLI's, line by line with the same line numbers.</p>",
+  "translator_notes": [
+    "Transliteration: CDLI ATF (proto-cuneiform). Numerals are written as counts of numeral signs, e.g. 4(N14) = four N14 signs; ~a, ~b mark sign variants; [ ] broken, # damaged; sz is shown as š.",
+    "English: CDLI's line-by-line translation (#tr.en lines of the ATF).",
+    "CDLI notes: reverse, line 1: calculation: 150N1 ÷ 10 = 15N1 barley per bur3; reverse, line 1: following later tradition and assuming this is a seeding account, it would support an identification of the base unit in grain metrology, N1, with ca. 20-25 liters"
+  ],
+  "translation": [
+    {
+      "section": "obv",
+      "original_ref": "MSVO 1, 010 (OIM A02515), obverse, lines 1-2.b",
+      "original_text": "<sup>1</sup>2(N45) 5(N14)# , ŠE~a<br>\n<sup>2.a</sup>, |GIŠ.TE|# DU ME~a<br>\n<sup>2.b</sup>, ŠUBUR E2~a# SANGA~a#",
+      "text": "<p><sup>1</sup>150 N1 units of barley,<br>\n<sup>2.a</sup>for ...,<br>\n<sup>2.b</sup>pigsty accountant;</p>",
+      "scan_pages": [
+        "proto-cuneiform/msvo-1-10.jpg"
+      ],
+      "scan_note": "MSVO 1, 010 (OIM A02515), obverse. The photograph shows the whole tablet (obverse above, reverse below, edges beside); face and column as given in the CDLI transliteration, checked by eye on the photograph."
+    },
+    {
+      "section": "rev",
+      "original_ref": "MSVO 1, 010 (OIM A02515), reverse, lines 1-1",
+      "original_text": "<sup>1</sup>1(N50) , GAN2",
+      "text": "<p><sup>1</sup>10 bur3 field.</p>",
+      "scan_pages": [
+        "proto-cuneiform/msvo-1-10.jpg"
+      ],
+      "scan_note": "MSVO 1, 010 (OIM A02515), reverse. The photograph shows the whole tablet (obverse above, reverse below, edges beside); face and column as given in the CDLI transliteration, checked by eye on the photograph."
+    }
+  ],
+  "verification": {
+    "scan_source": "CDLI photograph https://cdli.earth/dl/photo/P005077.jpg (artifact page https://cdli.earth/artifacts/5077)",
+    "scan_license": "Institute for the Study of Ancient Cultures West Asia & North Africa Museum, Chicago, Illinois, USA; CDLI terms of use (https://cdli.earth/terms-of-use): images are for the non-commercial use of students, scholars and the public; copyright the institution that owns the object",
+    "scan_manuscript": "OIM A02515 (MSVO 1, 010), clay tablet, Jemdet Nasr (CDLI catalogues the provenience as uncertain, attributed to Jemdet Nasr), Uruk III period (c. 3200-3000 BCE)",
+    "scan_mapping": "Faces and columns from the CDLI transliteration; one photograph shows the whole tablet; checked by eye",
+    "scan_mapping_urls": [
+      "https://cdli.earth/artifacts/5077"
+    ],
+    "scan_local_paths": [
+      "proto-cuneiform/msvo-1-10.jpg"
+    ],
+    "original_text_source": "CDLI transliteration of P005077 (https://cdli.earth/inscriptions/2305330/atf)",
+    "original_text_license": "CDLI terms of use: transliterations and translations may be freely copied and re-used according to common academic practice, with reference to CDLI (https://cdli.earth)",
+    "translation_source": "CDLI English translation lines of P005077 (https://cdli.earth/artifacts/5077)",
+    "translation_license": "CDLI terms of use: transliterations and translations may be freely copied and re-used according to common academic practice, with reference to CDLI (https://cdli.earth)",
+    "translator": "CDLI (cdli.earth)",
+    "verified_date": "2026-11-12"
+  }
+}

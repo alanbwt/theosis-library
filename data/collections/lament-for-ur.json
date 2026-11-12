@@ -1,0 +1,66 @@
+{
+  "collection": {
+    "key": "lament-for-ur",
+    "prefix": "verified-lament-for-ur-",
+    "label": "Lament for Ur",
+    "group": "Mesopotamia",
+    "date_sort": -2000,
+    "author_name": "Sumerian scribes (composed c. 2000 BCE; Old Babylonian copies)",
+    "source_url": "https://cdli.earth/artifacts/composites-score/Q000379",
+    "critical_edition": "CDLI transliterations of the tablets; ETCSL 2.2.2 composite",
+    "translator_name": "ETCSL (Black et al., 1998-2006)",
+    "original_lang_label": "Sumerian · CDLI transliteration",
+    "original_lang_code": "sux",
+    "edition_label": "",
+    "search_terms": "lament for ur urim city lament ningal nanna elam destruction",
+    "description": "The Lament for Ur, on the Old Babylonian tablets that carry it."
+  },
+  "texts": [
+    {
+      "id": "verified-lament-for-ur-ob",
+      "slug": "verified-lament-for-ur-ob",
+      "order": 1,
+      "title": "The Lament for Ur",
+      "author_id": "sumerian-scribes",
+      "language": "Sumerian",
+      "era": "Ancient Near East",
+      "tradition": "sumerian",
+      "category": "literature",
+      "date_approx": "composed soon after c. 2004 BCE; Old Babylonian copies, c. 1900-1700 BCE",
+      "century": -20,
+      "source": "CDLI photographs and transliterations of Old Babylonian tablets + ETCSL 2.2.2 English translation (CC BY-NC-SA 3.0)",
+      "description": "The Sumerian lament over the destruction of Ur at the end of the Third Dynasty (c. 2000 BCE), on the Old Babylonian tablets that carry it.",
+      "themes": [
+        "lament",
+        "ur",
+        "ningal",
+        "nanna",
+        "city-lament",
+        "sumer",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "lament-for-ur/uet-6-135.jpg",
+            "caption": "UET 6 135 (P346220)"
+          },
+          {
+            "file": "lament-for-ur/uet-6-139b-u-16900n.jpg",
+            "caption": "UET 6 139b = U 16900n (P464308)"
+          },
+          {
+            "file": "lament-for-ur/uet-6-138-u-16900l.jpg",
+            "caption": "UET 6 138 = U 16900l (P346223)"
+          },
+          {
+            "file": "lament-for-ur/uet-6-139a-u-16900m.jpg",
+            "caption": "UET 6 139a = U 16900m (P346224)"
+          }
+        ]
+      }
+    }
+  ]
+}
