@@ -13,9 +13,23 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import import_gilgamesh as engine  # noqa: E402
 
-CHECKS = {}
-EXCLUDED = {}
-SPLIT = {}
+CHECKS = {
+    'BM.17596.A': "Photograph checked: inscribed face and blank back (inks 17596A and 94-1-15,310A on the back), fragment about 5 cm high. A double vertical ruling with line-end traces to its left (column i) and about 15 lines to its right; broadly consistent with eBL's columns i (10) and ii (21) once broken lines are counted.",
+    'K.10082': "Photograph checked: one face only, fragment about 5 cm wide with about 8 lines and a column ruling near the right edge with a few signs beyond it; no ink number visible. Consistent with eBL's column i (8) and the start of column ii (4).",
+    'K.6235': "Photograph checked: obverse, reverse and edges of a fragment about 3 x 5 cm, about 10 lines on each face, no ink number visible. Alone it holds about 20 of eBL's 37 lines; with the linked piece K.7109+K.9979 (about 16 lines) the total fits eBL's column ii and reverse column i.",
+    'K.6831': "Photograph checked: obverse and reverse of a fragment about 5 x 6 cm, no ink number visible. About 12 to 14 worn lines on the obverse and a patch of about 8 on the reverse, consistent with eBL's obverse 14 and reverse 8.",
+    'BM.41330': "Photograph checked: obverse, reverse and edges of a narrow fragment about 3.5 cm long, ink 41330 on the edge. About 14 faint lines on one face and about 9 on the other, consistent with eBL's obverse 14 and reverse 9.",
+    'K.6634': "Photograph checked: obverse, reverse and edges, ink K.6634 on the edge. About 7 lines on the obverse of a fragment about 4 cm wide, consistent with eBL's obverse 7.",
+    'K.17853': "Photograph checked: one face of a fragment about 2 cm high with 6 or 7 lines; no ink number visible. Consistent with eBL's 7 lines.",
+    'K.14697': "Photograph checked: one face of a fragment about 2.5 cm high with about 9 lines, ink K.14697 on the left edge. Consistent with eBL's 10 lines.",
+    'K.4539': "Photograph checked: one face only, a fragment about 3.5 cm wide with about 9 lines; no legible ink number. Alone it cannot carry eBL's 54 lines (obverse column ii 37, reverse column iii 17), but with the three linked pieces (K.5902, K.7816+K.13863, K.17752) the set shows about 45 to 50 lines on both faces.",
+}
+EXCLUDED = {
+}
+SPLIT = {
+    'K.6235': ['K.7109'],
+    'K.4539': ['K.5902', 'K.7816', 'K.17752'],
+}
 
 GENERAL = ("Atrahasis ('Exceedingly Wise') is the Babylonian story of humanity from its creation to the Flood. The lesser gods rebel against their labour; humankind is created from clay and the flesh and blood of a slain god to do the work instead; when people multiply and their noise disturbs Enlil, he sends plague, drought and famine, and finally the Flood, which Atrahasis survives in a boat on the advice of Enki (Ea). The oldest near-complete copy was written at Sippar by the scribe Ipiq-Aya in the 17th century BCE. This page follows the line numbering of the electronic Babylonian Library edition.")
 

@@ -1,0 +1,91 @@
+{
+  "collection": {
+    "key": "cuthaean-legend",
+    "prefix": "verified-cuthaean-legend-",
+    "label": "Cuthaean Legend of Naram-Sin (cuneiform tablets)",
+    "group": "Mesopotamia",
+    "date_sort": -1800,
+    "author_name": "Anonymous Babylonian poet (early 2nd millennium BCE)",
+    "source_url": "https://www.ebl.lmu.de/corpus/L/1/12",
+    "critical_edition": "electronic Babylonian Library, Cuthaean Legend of Naram-Sin (ed. T. D. N. Mitto), manuscript transliterations",
+    "translator_name": "B. R. Foster (eBL edition)",
+    "original_lang_label": "Akkadian · eBL transliteration of each tablet",
+    "original_lang_code": "akk",
+    "edition_label": "",
+    "search_terms": "cuthaean legend naram-sin akkad cutha kutha naru inscription umman-manda",
+    "description": "The Cuthaean Legend of Naram-Sin, Standard Babylonian version, read line by line on photographed clay tablets, with each tablet's own transliteration and B. R. Foster's English translation from the electronic Babylonian Library."
+  },
+  "texts": [
+    {
+      "id": "verified-cuthaean-legend-standard-babylonian",
+      "slug": "verified-cuthaean-legend-standard-babylonian",
+      "order": 1,
+      "title": "Cuthaean Legend of Naram-Sin (Standard Babylonian version)",
+      "author_id": "anonymous-babylonian-poet",
+      "language": "Akkadian",
+      "era": "Ancient Near East",
+      "tradition": "mesopotamian",
+      "category": "literature",
+      "date_approx": "composed early 2nd millennium BCE; tablets 7th c. BCE",
+      "century": -18,
+      "source": "British Museum tablet photographs + eBL manuscript transliterations (eBL corpus edition L I.12, Cuthaean Legend of Naram-Sin (ed. T. D. N. Mitto), SB -) + English of the eBL edition (B. R. Foster (eBL edition))",
+      "description": "The Cuthaean Legend of Naram-Sin, Standard Babylonian version: 175 of 180 lines, each shown on a photographed cuneiform tablet (7 tablets), with the eBL transliteration of that tablet and B. R. Foster's English translation.",
+      "themes": [
+        "naram-sin",
+        "akkad",
+        "cuthah",
+        "narû",
+        "mesopotamian",
+        "akkadian",
+        "cuneiform",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "cuthaean-legend/cuthaean-legend-K.1351.jpg",
+            "caption": "British Museum K.1351"
+          },
+          {
+            "file": "cuthaean-legend/cuthaean-legend-1881-0204.219.jpg",
+            "caption": "British Museum 1881-0204.219"
+          },
+          {
+            "file": "cuthaean-legend/cuthaean-legend-K.5640.jpg",
+            "caption": "British Museum K.5640"
+          },
+          {
+            "file": "cuthaean-legend/cuthaean-legend-K.5418.A.jpg",
+            "caption": "British Museum K.5418.A"
+          },
+          {
+            "file": "cuthaean-legend/cuthaean-legend-K.8582.jpg",
+            "caption": "British Museum K.8582"
+          },
+          {
+            "file": "cuthaean-legend/cuthaean-legend-K.21047.jpg",
+            "caption": "British Museum K.21047"
+          },
+          {
+            "file": "cuthaean-legend/cuthaean-legend-1881-0727.271.jpg",
+            "caption": "British Museum 1881-0727.271"
+          }
+        ]
+      }
+    }
+  ],
+  "authors": [
+    {
+      "id": "anonymous-babylonian-poet",
+      "name": "Anonymous (Babylonian poets)",
+      "dates": "2nd-1st millennium BCE",
+      "century": -12,
+      "era": "Ancient Near East",
+      "tradition": "mesopotamian",
+      "language": "Akkadian",
+      "bio": "Unnamed Babylonian and Assyrian poets and scribes who composed and copied the Akkadian myths and epics preserved on cuneiform tablets."
+    }
+  ]
+}

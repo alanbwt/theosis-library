@@ -1,0 +1,111 @@
+{
+  "collection": {
+    "key": "theodicy",
+    "prefix": "verified-theodicy-",
+    "label": "Babylonian Theodicy (cuneiform tablets)",
+    "group": "Mesopotamia",
+    "date_sort": -1000,
+    "author_name": "Saggil-kinam-ubbib (c. 1000 BCE)",
+    "source_url": "https://www.ebl.lmu.de/corpus/L/2/1",
+    "critical_edition": "electronic Babylonian Library, Theodicy, manuscript transliterations",
+    "translator_name": "B. R. Foster (eBL edition)",
+    "original_lang_label": "Akkadian · eBL transliteration of each tablet",
+    "original_lang_code": "akk",
+    "edition_label": "",
+    "search_terms": "babylonian theodicy saggil-kinam-ubbib acrostic dialogue sufferer friend wisdom",
+    "description": "The Babylonian Theodicy, read line by line on photographed clay tablets, with each tablet's own transliteration and B. R. Foster's English translation from the electronic Babylonian Library."
+  },
+  "texts": [
+    {
+      "id": "verified-theodicy-dialogue",
+      "slug": "verified-theodicy-dialogue",
+      "order": 1,
+      "title": "The Babylonian Theodicy (dialogue of the sufferer and his friend)",
+      "author_id": "saggil-kinam-ubbib",
+      "language": "Akkadian",
+      "era": "Ancient Near East",
+      "tradition": "mesopotamian",
+      "category": "literature",
+      "date_approx": "composed c. 1000 BCE; tablets 7th-2nd c. BCE",
+      "century": -10,
+      "source": "British Museum tablet photographs + eBL manuscript transliterations (eBL corpus edition L II.1, Theodicy, SB -) + English of the eBL edition (B. R. Foster (eBL edition))",
+      "description": "The Babylonian Theodicy, dialogue: 258 of 288 lines, each shown on a photographed cuneiform tablet (10 tablets), with the eBL transliteration of that tablet and B. R. Foster's English translation.",
+      "themes": [
+        "theodicy",
+        "wisdom",
+        "dialogue",
+        "acrostic",
+        "mesopotamian",
+        "akkadian",
+        "cuneiform",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "theodicy/theodicy-K.8463.jpg",
+            "caption": "British Museum K.8463"
+          },
+          {
+            "file": "theodicy/theodicy-BM.35405.jpg",
+            "caption": "British Museum BM.35405"
+          },
+          {
+            "file": "theodicy/theodicy-K.9290.jpg",
+            "caption": "British Museum K.9290"
+          },
+          {
+            "file": "theodicy/theodicy-BM.36704.jpg",
+            "caption": "British Museum BM.36704"
+          },
+          {
+            "file": "theodicy/theodicy-BM.40098.jpg",
+            "caption": "British Museum BM.40098"
+          },
+          {
+            "file": "theodicy/theodicy-BM.40124.jpg",
+            "caption": "British Museum BM.40124"
+          },
+          {
+            "file": "theodicy/theodicy-K.4267.jpg",
+            "caption": "British Museum K.4267"
+          },
+          {
+            "file": "theodicy/theodicy-K.1743.jpg",
+            "caption": "British Museum K.1743"
+          },
+          {
+            "file": "theodicy/theodicy-BM.47745.jpg",
+            "caption": "British Museum BM.47745"
+          },
+          {
+            "file": "theodicy/theodicy-BM.94273.jpg",
+            "caption": "British Museum BM.94273"
+          },
+          {
+            "file": "theodicy/theodicy-K.3452.jpg",
+            "caption": "British Museum K.3452"
+          },
+          {
+            "file": "theodicy/theodicy-K.17474.jpg",
+            "caption": "British Museum K.17474"
+          }
+        ]
+      }
+    }
+  ],
+  "authors": [
+    {
+      "id": "saggil-kinam-ubbib",
+      "name": "Saggil-kinam-ubbib",
+      "dates": "c. 1000 BCE",
+      "century": -10,
+      "era": "Ancient Near East",
+      "tradition": "mesopotamian",
+      "language": "Akkadian",
+      "bio": "Babylonian incantation priest whose name is spelled out by the acrostic of the Babylonian Theodicy."
+    }
+  ]
+}

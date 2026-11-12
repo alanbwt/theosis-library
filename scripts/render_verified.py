@@ -307,6 +307,12 @@ def main():
         out.write_text(html, encoding="utf-8")
         rendered += 1
 
+    # Remove pages of entries no longer in the catalog (their URLs redirect via site/_redirects).
+    stale = [f for f in LIB.glob("verified-*.html") if f.stem not in by_id]
+    for f in stale:
+        f.unlink()
+    if stale:
+        print(f"Removed stale pages: {len(stale)}")
     print(f"Rendered: {rendered}")
     print(f"Skipped: {skipped}")
 

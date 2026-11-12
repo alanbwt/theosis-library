@@ -1,0 +1,80 @@
+{
+  "collection": {
+    "key": "adapa",
+    "prefix": "verified-adapa-",
+    "label": "Adapa (cuneiform tablets)",
+    "group": "Mesopotamia",
+    "date_sort": -1400,
+    "author_name": "Anonymous Babylonian poet (2nd millennium BCE)",
+    "source_url": "https://www.ebl.lmu.de/corpus/L/1/7",
+    "critical_edition": "electronic Babylonian Library, Adapa, manuscript transliterations",
+    "translator_name": "B. R. Foster (eBL edition)",
+    "original_lang_label": "Akkadian · eBL transliteration of each tablet",
+    "original_lang_code": "akk",
+    "edition_label": "",
+    "search_terms": "adapa eridu south wind anu ea bread of life water of life immortality sage",
+    "description": "The story of Adapa, read line by line on photographed clay tablets, with each tablet's own transliteration and B. R. Foster's English translation from the electronic Babylonian Library."
+  },
+  "texts": [
+    {
+      "id": "verified-adapa-standard-babylonian",
+      "slug": "verified-adapa-standard-babylonian",
+      "order": 1,
+      "title": "Adapa (Standard Babylonian fragments)",
+      "author_id": "anonymous-babylonian-poet",
+      "language": "Akkadian",
+      "era": "Ancient Near East",
+      "tradition": "mesopotamian",
+      "category": "literature",
+      "date_approx": "composed 2nd millennium BCE; tablets 14th-7th c. BCE",
+      "century": -14,
+      "source": "British Museum tablet photographs + eBL manuscript transliterations (eBL corpus edition L I.7, Adapa, SB -) + English of the eBL edition (B. R. Foster (eBL edition))",
+      "description": "Adapa, Standard Babylonian version: 73 of 97 lines, each shown on a photographed cuneiform tablet (4 tablets), with the eBL transliteration of that tablet and B. R. Foster's English translation.",
+      "themes": [
+        "adapa",
+        "eridu",
+        "ea",
+        "anu",
+        "immortality",
+        "mesopotamian",
+        "akkadian",
+        "cuneiform",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "adapa/adapa-K.15072.jpg",
+            "caption": "British Museum K.15072"
+          },
+          {
+            "file": "adapa/adapa-K.9994.jpg",
+            "caption": "British Museum K.9994"
+          },
+          {
+            "file": "adapa/adapa-K.8743.jpg",
+            "caption": "British Museum K.8743"
+          },
+          {
+            "file": "adapa/adapa-K.8214.jpg",
+            "caption": "British Museum K.8214"
+          }
+        ]
+      }
+    }
+  ],
+  "authors": [
+    {
+      "id": "anonymous-babylonian-poet",
+      "name": "Anonymous (Babylonian poets)",
+      "dates": "2nd-1st millennium BCE",
+      "century": -12,
+      "era": "Ancient Near East",
+      "tradition": "mesopotamian",
+      "language": "Akkadian",
+      "bio": "Unnamed Babylonian and Assyrian poets and scribes who composed and copied the Akkadian myths and epics preserved on cuneiform tablets."
+    }
+  ]
+}

@@ -14,7 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import import_gilgamesh as engine  # noqa: E402
 
 CHECKS = {
-    "K.162": "Photograph checked: obverse, reverse and edges of a tall single-column tablet, ink number K.162 on the right edge; the obverse and the reverse are fully inscribed, consistent with eBL's obverse (80 lines) and reverse (58 lines).",
+    "K.162": "Photograph checked: obverse, reverse and edges of a tall single-column tablet, ink number K.162 and 'W.A.I. IV 31' on the right edge; the obverse is fully inscribed and the reverse ends with a ruling, one more line and an uninscribed area, consistent with eBL's obverse (80 lines) and reverse (58 lines). Each face is shown as a crop of the British Museum photograph.",
 }
 
 ENTRIES = [{
@@ -55,6 +55,13 @@ WORK = engine.simple_work(
               "century": -12, "era": "Ancient Near East", "tradition": "mesopotamian", "language": "Akkadian",
               "bio": "Unnamed Babylonian and Assyrian poets and scribes who composed and copied the Akkadian myths and epics preserved on cuneiform tablets."}],
 )
+
+# K.162 is a tall tablet photographed as obverse, edges and reverse stacked vertically (14191 px tall);
+# each face is published as its own crop so the script stays legible.  Bands measured on the photograph:
+# obverse with its side edges y 359-5911, lower edge 6071-6639, reverse 6871-12343 (of 14191).  The upper
+# face is fully inscribed and the lower face ends in an uninscribed area, consistent with eBL's 80 obverse
+# and 58 reverse lines, so the upper face is the obverse.
+WORK["crops"] = {"K.162": {"obverse": (0.0, 0.020, 1.0, 0.421), "reverse": (0.0, 0.480, 1.0, 0.874)}}
 
 if __name__ == "__main__":
     engine.build_work(WORK)

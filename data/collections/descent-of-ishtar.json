@@ -1,0 +1,71 @@
+{
+  "collection": {
+    "key": "descent-of-ishtar",
+    "prefix": "verified-descent-of-ishtar-",
+    "label": "Descent of Ishtar (cuneiform tablets)",
+    "group": "Mesopotamia",
+    "date_sort": -1100,
+    "author_name": "Anonymous Babylonian poet (2nd millennium BCE; tablets 8th-7th c. BCE)",
+    "source_url": "https://www.ebl.lmu.de/corpus/L/1/8",
+    "critical_edition": "electronic Babylonian Library, Descent of Ishtar (ed. A. Setälä, rev. Z. J. Földi, A. Hätinen, E. Jiménez, G. Rozzi), manuscript transliterations",
+    "translator_name": "B. R. Foster (eBL edition)",
+    "original_lang_label": "Akkadian · eBL transliteration of each tablet",
+    "original_lang_code": "akk",
+    "edition_label": "",
+    "search_terms": "descent of ishtar inanna ereshkigal netherworld land of no return dumuzi tammuz seven gates",
+    "description": "The Akkadian Descent of Ishtar to the Netherworld, read line by line on photographed clay tablets, with each tablet's own transliteration and B. R. Foster's English translation from the electronic Babylonian Library."
+  },
+  "texts": [
+    {
+      "id": "verified-descent-of-ishtar-standard-babylonian",
+      "slug": "verified-descent-of-ishtar-standard-babylonian",
+      "order": 1,
+      "title": "Descent of Ishtar to the Netherworld (Standard Babylonian version)",
+      "author_id": "anonymous-babylonian-poet",
+      "language": "Akkadian",
+      "era": "Ancient Near East",
+      "tradition": "mesopotamian",
+      "category": "literature",
+      "date_approx": "composed 2nd millennium BCE; tablets 8th-7th c. BCE",
+      "century": -12,
+      "source": "British Museum tablet photographs + eBL manuscript transliterations (eBL corpus edition L I.8, Descent of Ishtar (ed. A. Setälä, rev. Z. J. Földi, A. Hätinen, E. Jiménez, G. Rozzi), SB -) + English of the eBL edition (B. R. Foster (eBL edition))",
+      "description": "The Akkadian Descent of Ishtar to the Netherworld: 138 of 148 lines, each shown on a photographed cuneiform tablet (1 tablets), with the eBL transliteration of that tablet and B. R. Foster's English translation.",
+      "themes": [
+        "descent-of-ishtar",
+        "ishtar",
+        "ereshkigal",
+        "netherworld",
+        "mesopotamian",
+        "akkadian",
+        "cuneiform",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "descent-of-ishtar/descent-of-ishtar-K.162-obverse.jpg",
+            "caption": "British Museum K.162-obverse"
+          },
+          {
+            "file": "descent-of-ishtar/descent-of-ishtar-K.162-reverse.jpg",
+            "caption": "British Museum K.162-reverse"
+          }
+        ]
+      }
+    }
+  ],
+  "authors": [
+    {
+      "id": "anonymous-babylonian-poet",
+      "name": "Anonymous (Babylonian poets)",
+      "dates": "2nd-1st millennium BCE",
+      "century": -12,
+      "era": "Ancient Near East",
+      "tradition": "mesopotamian",
+      "language": "Akkadian",
+      "bio": "Unnamed Babylonian and Assyrian poets and scribes who composed and copied the Akkadian myths and epics preserved on cuneiform tablets."
+    }
+  ]
+}

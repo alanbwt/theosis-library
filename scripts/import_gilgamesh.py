@@ -182,6 +182,23 @@ def ensure_scan(key, museum, raw_dir, dry=False):
     return rel
 
 
+def ensure_crop(key, museum, face, box, raw_dir, dry=False):
+    """One face of an eBL photograph, cropped (box = fractions x0, y0, x1, y1 of the photograph)."""
+    rel = f"{key}/{scan_name(key, museum)[:-4]}-{face.replace(' ', '-')}.jpg"
+    dest = SCANS / rel
+    if dest.exists() and dest.stat().st_size > 10_000 or dry:
+        return rel
+    ensure_scan(key, museum, raw_dir)  # makes sure the raw photograph is downloaded
+    from PIL import Image
+    Image.MAX_IMAGE_PIXELS = None
+    im = Image.open(Path(raw_dir) / f"photo_{museum}.jpg").convert("RGB")
+    W, H = im.size
+    im = im.crop((int(box[0] * W), int(box[1] * H), int(box[2] * W), int(box[3] * H)))
+    im.thumbnail((MAX_SIDE, MAX_SIDE), Image.LANCZOS)
+    im.save(dest, "JPEG", quality=85, optimize=True, progressive=True)
+    return rel
+
+
 def ensure_external(key, spec, dry=False):
     """Photograph from another open source (e.g. Yale IIIF), stored once."""
     rel = f"{key}/{spec['file']}"
@@ -455,6 +472,8 @@ def chapter_sections(work, chapter, all_chapters, usable, raw_dir, dry=False, lo
             if not face:
                 face = fkey
             photos = [ensure_external(key, ext["faces"][fkey], dry)]
+        elif face in (work.get("crops") or {}).get(museum, {}):
+            photos = [ensure_crop(key, museum, face, work["crops"][museum][face], raw_dir, dry)]
         else:
             photos = [ensure_scan(key, p, raw_dir, dry) for p in u["photos"]]
         where = where_text(face, col)
@@ -465,9 +484,9 @@ def chapter_sections(work, chapter, all_chapters, usable, raw_dir, dry=False, lo
                 f"{ms_range}. eBL's corpus edition ({chap_url}) attributes {chap_label} {sid} to this manuscript "
                 f"at these column and line numbers. {u['check']}")
         if len(photos) > 1:
-            note += (" eBL treats " + " + ".join(u["photos"]) + " as one manuscript, but the British Museum "
-                     "photographed the pieces separately and eBL does not say which piece carries which line, "
-                     "so all of their photographs are linked; the lines are on one of them.")
+            note += (" eBL treats " + " + ".join(u["photos"]) + " as one manuscript and holds a separate "
+                     "photograph of each of these pieces; it does not say which piece carries which line, so all "
+                     "of these photographs are linked, and the lines are on one or more of them.")
         note += (" The English translates eBL's composite text: words in square brackets are restored, "
                  "partly from other manuscripts, and may not be legible on this tablet.")
         if no_tr:
@@ -712,19 +731,19 @@ def standard_entry(work, ent, ch, secs, cov, used, usable, order):
     intro = (
         ent["intro"]
         + f"<p><strong>How this page is built.</strong> Each section is a run of consecutive lines as written on one "
-        f"photographed clay tablet. For every line the eBL edition ({html.escape(chap_url)}) lists the manuscripts "
+        f"photographed clay tablet. For every line the eBL edition ({html.escape(chap_url, quote=False)}) lists the manuscripts "
         "that carry it, with each tablet's own column and line numbers; the tablet chosen for each run is the "
         "photographed manuscript with the most signs preserved there. The original text is eBL's transliteration of "
         "that tablet's signs (not a modern composite text): square brackets mark broken signs, x an illegible sign, "
         "# a damaged sign, ? an uncertain reading, and words in {braces} are determinatives. Superscript numbers are the "
-        f"line numbers of the eBL edition, used in both the Akkadian and the English. {html.escape(work['translator_line'])}"
+        f"line numbers of the eBL edition, used in both the Akkadian and the English. {html.escape(work['translator_line'], quote=False)}"
         "</p><p><strong>Finding a line on the photograph.</strong> Each section names the tablet, the face and column, "
         "and the tablet's own line numbers (a prime, as in 5', counts from the first preserved line of a broken "
         "column). On a tablet with six columns the obverse carries columns i-iii from left to right; the reverse, "
         "turned over from bottom to top, carries columns iv-vi from right to left. The photographs often show the "
         "obverse above the reverse with the edges around them; a fragment preserves only part of this layout.</p>"
         f"<p>This page shows {cov['covered']} of the {cov['lines']} lines of the eBL edition ({pct}%), from "
-        f"{len(used)} tablet{'s' if len(used) != 1 else ''} in the {html.escape(holder_txt)}: {', '.join(html.escape(x) for x in used_desc)}.</p>"
+        f"{len(used)} tablet{'s' if len(used) != 1 else ''} in the {html.escape(holder_txt, quote=False)}: {', '.join(html.escape(x, quote=False) for x in used_desc)}.</p>"
         + gap_html
     )
     entry = {
@@ -769,7 +788,7 @@ def standard_entry(work, ent, ch, secs, cov, used, usable, order):
     }
     row = {
         "id": tid, "slug": tid, "order": order, "title": ent["title"],
-        "author_id": work["author_id"], "language": "Akkadian",
+        "author_id": ent.get("author_id", work["author_id"]), "language": "Akkadian",
         "era": "Ancient Near East", "tradition": "mesopotamian", "category": work.get("category", "literature"),
         "date_approx": ent.get("date_approx", work["date_approx"]), "century": ent.get("century", work["century"]),
         "source": entry["source"], "description": entry["description"],
@@ -1040,6 +1059,7 @@ GILGAMESH = {
                         "{covered} of {lines} lines, each shown on the Yale Peabody Museum photographs, with the eBL "
                         "transliteration and A. R. George's English translation."),
         "date_approx": "c. 1800-1700 BCE (Old Babylonian tablet)",
+        "author_id": "anonymous-babylonian-poet",
         "century": -18,
         "intro": ("<p>The 'Yale tablet' (Yale Babylonian Collection YBC 2178, now YPM BC 016806) is one of the two "
                   "large Old Babylonian tablets of the epic, written about a thousand years before the Nineveh copies. "
@@ -1088,6 +1108,10 @@ GILGAMESH = {
         "id": "sin-leqi-unninni", "name": "Sin-leqi-unninni", "dates": "c. 1200-1000 BCE", "century": -12,
         "era": "Ancient Near East", "tradition": "mesopotamian", "language": "Akkadian",
         "bio": "Babylonian scholar to whom later tradition ascribed the Standard Babylonian version of the Epic of Gilgamesh.",
+    }, {
+        "id": "anonymous-babylonian-poet", "name": "Anonymous (Babylonian poets)", "dates": "2nd-1st millennium BCE",
+        "century": -12, "era": "Ancient Near East", "tradition": "mesopotamian", "language": "Akkadian",
+        "bio": "Unnamed Babylonian and Assyrian poets and scribes who composed and copied the Akkadian myths and epics preserved on cuneiform tablets.",
     }],
 }
 

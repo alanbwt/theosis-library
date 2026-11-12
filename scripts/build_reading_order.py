@@ -147,7 +147,10 @@ def build():
     order["parisino-petropolitanus"] = [e["id"] for e in sorted(buckets["parisino-petropolitanus"], key=lambda e: int(re.search(r"quran-(\d+)", e["id"]).group(1)))]
     order["josephus"] = [e["id"] for e in buckets["josephus"]]
     def _tab(e):
-        m = re.search(r"tablet-([IVXLC]+|\d+)", e["id"]); r = m.group(1)
+        m = re.search(r"tablet-([IVXLC]+|\d+)", e["id"])
+        if not m:
+            return (99, e["id"])  # registry collection supplies its own order
+        r = m.group(1)
         roman = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6, "VII": 7, "VIII": 8, "IX": 9, "X": 10, "XI": 11, "XII": 12}
         return (roman.get(r, int(r) if r.isdigit() else 99), e["id"])
     order["gilgamesh"] = [e["id"] for e in sorted(buckets["gilgamesh"], key=_tab)]
