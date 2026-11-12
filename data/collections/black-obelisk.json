@@ -1,0 +1,84 @@
+{
+  "collection": {
+    "key": "black-obelisk",
+    "prefix": "verified-black-obelisk-",
+    "label": "Black Obelisk of Shalmaneser III",
+    "group": "Mesopotamia",
+    "date_sort": -825,
+    "author_name": "Shalmaneser III, king of Assyria (858-824 BCE)",
+    "source_url": "https://oracc.museum.upenn.edu/riao/Q004693/",
+    "critical_edition": "A. K. Grayson, RIMA 3 (1996), A.0.102.87-91, via ORACC RIAo",
+    "translator_name": "A. K. Grayson / ORACC RIAo",
+    "original_lang_label": "Akkadian · ORACC transliteration",
+    "original_lang_code": "akk",
+    "edition_label": "",
+    "search_terms": "black obelisk shalmaneser iii jehu omri israel tribute nimrud kalhu layard british museum bm 118885 sua musri patina suhu",
+    "description": "The five tribute captions of Shalmaneser III's Black Obelisk (about 825 BCE), among them the tribute of Jehu of Israel, with ORACC's text and translation and photographs of the four sides."
+  },
+  "texts": [
+    {
+      "id": "verified-black-obelisk-epigraphs",
+      "slug": "verified-black-obelisk-epigraphs",
+      "order": 1,
+      "title": "Black Obelisk of Shalmaneser III: the five epigraphs (Jehu's tribute), BM 118885",
+      "author_id": "shalmaneser-iii",
+      "language": "Akkadian",
+      "era": "Ancient Near East",
+      "tradition": "mesopotamian",
+      "category": "inscription",
+      "date_approx": "about 825 BCE",
+      "century": -9,
+      "source": "British Museum BM 118885, photographs on Wikimedia Commons (CC BY-SA 4.0) + ORACC RIAo text and translation (CC BY-SA 3.0)",
+      "description": "The five tribute captions of Shalmaneser III's Black Obelisk (about 825 BCE), including the tribute of Jehu of Israel, with ORACC's Akkadian and English and photographs of the four sides.",
+      "themes": [
+        "black-obelisk",
+        "shalmaneser-iii",
+        "jehu",
+        "omri",
+        "israel",
+        "assyria",
+        "tribute",
+        "2-kings",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "black-obelisk/black-obelisk-side-a-register-2-jehu.jpg",
+            "caption": "Black Obelisk, side A, register 2: Jehu"
+          },
+          {
+            "file": "black-obelisk/black-obelisk-side-a-registers.jpg",
+            "caption": "Black Obelisk, side A, registers 1-5"
+          },
+          {
+            "file": "black-obelisk/black-obelisk-side-b-registers.jpg",
+            "caption": "Black Obelisk, side B, registers 1-5"
+          },
+          {
+            "file": "black-obelisk/black-obelisk-side-c-registers.jpg",
+            "caption": "Black Obelisk, side C, registers 1-5"
+          },
+          {
+            "file": "black-obelisk/black-obelisk-side-d-registers.jpg",
+            "caption": "Black Obelisk, side D, registers 1-5"
+          }
+        ]
+      }
+    }
+  ],
+  "authors": [
+    {
+      "id": "shalmaneser-iii",
+      "name": "Shalmaneser III",
+      "dates": "reigned 858-824 BCE",
+      "century": -9,
+      "era": "Ancient Near East",
+      "tradition": "mesopotamian",
+      "language": "Akkadian",
+      "bio": "King of Assyria whose annals record battles with Ahab and the tribute of Jehu of Israel."
+    }
+  ]
+}

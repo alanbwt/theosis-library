@@ -1,0 +1,67 @@
+{
+  "collection": {
+    "key": "ketef-hinnom",
+    "prefix": "verified-ketef-hinnom-",
+    "label": "Ketef Hinnom Amulet",
+    "group": "Levant & Israel",
+    "date_sort": -600,
+    "author_name": "Burial cave at Ketef Hinnom, Jerusalem (about 600 BCE)",
+    "source_url": "https://en.wikipedia.org/wiki/Ketef_Hinnom_scrolls",
+    "critical_edition": "Wikipedia, 'Ketef Hinnom scrolls' (text and transliteration of KH2)",
+    "translator_name": "Wikipedia contributors",
+    "original_lang_label": "Hebrew · Hebrew letters and transliteration",
+    "original_lang_code": "hbo",
+    "edition_label": "",
+    "search_terms": "ketef hinnom silver amulet scroll kh2 priestly blessing numbers 6:24-26 birkat kohanim barkay jerusalem yhwh",
+    "description": "The smaller of the two Ketef Hinnom silver amulets (about 600 BCE), carrying the priestly blessing of Numbers 6:24-26, the oldest surviving words also found in the Old Testament."
+  },
+  "texts": [
+    {
+      "id": "verified-ketef-hinnom-kh2",
+      "slug": "verified-ketef-hinnom-kh2",
+      "order": 1,
+      "title": "Ketef Hinnom silver amulet KH2 (the priestly blessing), Israel Museum",
+      "author_id": "ketef-hinnom-scribe",
+      "language": "Hebrew",
+      "era": "Ancient Near East",
+      "tradition": "jewish",
+      "category": "inscription",
+      "date_approx": "late 7th or early 6th century BCE",
+      "century": -7,
+      "source": "Ketef Hinnom amulet KH2, Israel Museum: photograph via Wikimedia Commons + text, transliteration and English from English Wikipedia (CC BY-SA 4.0)",
+      "description": "The smaller Ketef Hinnom silver amulet (about 600 BCE), whose twelve surviving lines include the priestly blessing of Numbers 6:24-26, with its text, transliteration and translation and a photograph of the unrolled amulet.",
+      "themes": [
+        "ketef-hinnom",
+        "amulet",
+        "priestly-blessing",
+        "numbers-6",
+        "yhwh",
+        "jerusalem",
+        "hebrew-inscription",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "ketef-hinnom/ketef-hinnom-kh2.jpg",
+            "caption": "Ketef Hinnom amulet KH2, unrolled"
+          }
+        ]
+      }
+    }
+  ],
+  "authors": [
+    {
+      "id": "ketef-hinnom-scribe",
+      "name": "Engraver of the Ketef Hinnom amulets",
+      "dates": "about 600 BCE",
+      "century": -7,
+      "era": "Ancient Near East",
+      "tradition": "jewish",
+      "language": "Hebrew",
+      "bio": "The unnamed engraver of the two silver amulets found in a burial cave at Ketef Hinnom, Jerusalem."
+    }
+  ]
+}

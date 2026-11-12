@@ -1,0 +1,71 @@
+{
+  "collection": {
+    "key": "siloam-inscription",
+    "prefix": "verified-siloam-inscription-",
+    "label": "Siloam Inscription",
+    "group": "Levant & Israel",
+    "date_sort": -701,
+    "author_name": "Hezekiah's tunnel, Jerusalem (late 8th century BCE)",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Siloam_Inscription_from_Hezekiahs_Tunnel_Istanbul_Archaeology_Museums.jpg",
+    "critical_edition": "S. R. Driver, Notes on the Hebrew Text ... of Samuel, 2nd ed. (1913), p. ix",
+    "translator_name": "S. R. Driver (1913)",
+    "original_lang_label": "Hebrew · square script (Driver) and transliteration",
+    "original_lang_code": "hbo",
+    "edition_label": "",
+    "search_terms": "siloam inscription hezekiah tunnel shiloah gihon jerusalem 2 kings 20:20 2 chronicles 32:30 kai 189 istanbul",
+    "description": "The Siloam inscription (late 8th century BCE) from the water tunnel under the City of David, which tells how the miners met in the rock: Driver's 1913 text and translation with photographs of the stone in Istanbul."
+  },
+  "texts": [
+    {
+      "id": "verified-siloam-inscription-istanbul-2195",
+      "slug": "verified-siloam-inscription-istanbul-2195",
+      "order": 1,
+      "title": "Siloam inscription (Hezekiah's tunnel), Istanbul 2195 T",
+      "author_id": "siloam-tunnel-scribe",
+      "language": "Hebrew",
+      "era": "Ancient Near East",
+      "tradition": "jewish",
+      "category": "inscription",
+      "date_approx": "late 8th century BCE",
+      "century": -8,
+      "source": "Istanbul Archaeology Museums 2195 T, photographs on Wikimedia Commons (CC0) + S. R. Driver's 1913 text and translation (public domain)",
+      "description": "The Siloam inscription from Hezekiah's tunnel in Jerusalem (late 8th century BCE), six lines on the meeting of the two tunnelling teams, with Driver's 1913 Hebrew text and translation and photographs of the stone.",
+      "themes": [
+        "siloam",
+        "hezekiah",
+        "jerusalem",
+        "tunnel",
+        "2-kings",
+        "2-chronicles",
+        "hebrew-inscription",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "siloam-inscription/siloam-panel-ywpark.jpg",
+            "caption": "Siloam inscription, Istanbul 2195 T"
+          },
+          {
+            "file": "siloam-inscription/siloam-panel-oncenawhile.jpg",
+            "caption": "Siloam inscription, second view"
+          }
+        ]
+      }
+    }
+  ],
+  "authors": [
+    {
+      "id": "siloam-tunnel-scribe",
+      "name": "Scribe of Hezekiah's tunnel",
+      "dates": "late 8th century BCE",
+      "century": -8,
+      "era": "Ancient Near East",
+      "tradition": "jewish",
+      "language": "Hebrew",
+      "bio": "The unnamed writer of the inscription cut into the wall of the Siloam water tunnel in Jerusalem."
+    }
+  ]
+}

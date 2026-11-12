@@ -1,0 +1,69 @@
+{
+  "collection": {
+    "key": "gezer-calendar",
+    "prefix": "verified-gezer-calendar-",
+    "label": "Gezer Calendar",
+    "group": "Levant & Israel",
+    "date_sort": -925,
+    "author_name": "Gezer (about 10th century BCE)",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_Gezer_Calendar_tablet,_early_iron_age,_10th_century_BCE,_Museum_of_Archaeology,_Istanbul,_Turkey.jpg",
+    "critical_edition": "M. Lidzbarski's reading, in S. R. Driver, Notes on the Hebrew Text ... of Samuel, 2nd ed. (1913), p. vii",
+    "translator_name": "S. R. Driver (1913)",
+    "original_lang_label": "Hebrew · square script (Lidzbarski/Driver) and transliteration",
+    "original_lang_code": "hbo",
+    "edition_label": "",
+    "search_terms": "gezer calendar tablet macalister lidzbarski agricultural months kai 182 istanbul old hebrew",
+    "description": "The Gezer calendar (about 10th century BCE), a small limestone tablet listing the farming months, with Lidzbarski's reading, Driver's 1913 translation and photographs of the tablet."
+  },
+  "texts": [
+    {
+      "id": "verified-gezer-calendar-istanbul-2089",
+      "slug": "verified-gezer-calendar-istanbul-2089",
+      "order": 1,
+      "title": "Gezer calendar, Istanbul 2089 T",
+      "author_id": "gezer-scribe",
+      "language": "Hebrew",
+      "era": "Ancient Near East",
+      "tradition": "jewish",
+      "category": "inscription",
+      "date_approx": "about 10th century BCE",
+      "century": -10,
+      "source": "Gezer tablet, Istanbul 2089 T: Driver 1913 Plate I (public domain) and a Commons photograph (CC BY-SA 4.0) + Driver's 1913 text and translation (public domain)",
+      "description": "The Gezer calendar (about 10th century BCE), seven lines naming the months of the farming year, with Lidzbarski's reading and Driver's 1913 translation and photographs of the tablet.",
+      "themes": [
+        "gezer",
+        "calendar",
+        "agriculture",
+        "hebrew-inscription",
+        "palestine-exploration-fund",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "gezer-calendar/gezer-tablet-driver-1913-plate-i.jpg",
+            "caption": "Gezer calendar, Driver 1913 Plate I"
+          },
+          {
+            "file": "gezer-calendar/gezer-tablet-istanbul.jpg",
+            "caption": "Gezer calendar, Istanbul 2089 T"
+          }
+        ]
+      }
+    }
+  ],
+  "authors": [
+    {
+      "id": "gezer-scribe",
+      "name": "Writer of the Gezer calendar",
+      "dates": "about 10th century BCE",
+      "century": -10,
+      "era": "Ancient Near East",
+      "tradition": "jewish",
+      "language": "Hebrew",
+      "bio": "The unnamed writer of the farming calendar scratched on a limestone tablet found at Gezer."
+    }
+  ]
+}

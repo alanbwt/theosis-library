@@ -1,0 +1,72 @@
+{
+  "collection": {
+    "key": "cyrus-cylinder",
+    "prefix": "verified-cyrus-cylinder-",
+    "label": "Cyrus Cylinder",
+    "group": "Persia",
+    "date_sort": -539,
+    "author_name": "Cyrus II (the Great), king of Persia (559-530 BCE)",
+    "source_url": "https://oracc.museum.upenn.edu/ario/Q006653/",
+    "critical_edition": "ORACC ARIo Cyrus II 1 (after I. Finkel)",
+    "translator_name": "J. Novotny (ARIo)",
+    "original_lang_label": "Akkadian · ARIo transliteration",
+    "original_lang_code": "akk",
+    "edition_label": "",
+    "search_terms": "cyrus cylinder cyrus the great babylon marduk nabonidus british museum bm 90920 ezra return persia achaemenid",
+    "description": "The Cyrus Cylinder (after 539 BCE), Cyrus the Great's account of taking Babylon and restoring its gods and peoples: lines 6-36 with ARIo's text and translation and photographs of the cylinder."
+  },
+  "texts": [
+    {
+      "id": "verified-cyrus-cylinder-bm-90920",
+      "slug": "verified-cyrus-cylinder-bm-90920",
+      "order": 1,
+      "title": "Cyrus Cylinder, lines 6-36 (BM 90920)",
+      "author_id": "cyrus-ii",
+      "language": "Akkadian",
+      "era": "Ancient Near East",
+      "tradition": "persian",
+      "category": "inscription",
+      "date_approx": "after 539 BCE",
+      "century": -6,
+      "source": "British Museum BM 90920, photographs by Prioryman on Wikimedia Commons (CC BY-SA 3.0) + ORACC ARIo text and translation (CC BY-SA 3.0)",
+      "description": "The Cyrus Cylinder (after 539 BCE), Cyrus the Great's account of his entry into Babylon and the return of the gods and peoples, lines 6-36 with ARIo's text and translation and photographs of the cylinder.",
+      "themes": [
+        "cyrus",
+        "cyrus-cylinder",
+        "babylon",
+        "marduk",
+        "nabonidus",
+        "persia",
+        "ezra",
+        "return-from-exile",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "cyrus-cylinder/cyrus-cylinder-back-view-lines-5-22.jpg",
+            "caption": "Cyrus Cylinder, side with lines 5-22 (turned upright)"
+          },
+          {
+            "file": "cyrus-cylinder/cyrus-cylinder-front-view-lines-20-36.jpg",
+            "caption": "Cyrus Cylinder, side with lines 20-36"
+          }
+        ]
+      }
+    }
+  ],
+  "authors": [
+    {
+      "id": "cyrus-ii",
+      "name": "Cyrus II (the Great)",
+      "dates": "reigned 559-530 BCE",
+      "century": -6,
+      "era": "Ancient Near East",
+      "tradition": "persian",
+      "language": "Old Persian",
+      "bio": "Founder of the Achaemenid Persian empire, who took Babylon in 539 BCE; named in Isaiah and Ezra."
+    }
+  ]
+}

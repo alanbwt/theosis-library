@@ -155,7 +155,7 @@ def main():
             "original_text_source": f"A. Biran and J. Naveh's transcription as given in English Wikipedia, 'Tel Dan stele', section Text (revision {REVID}): {WIKI}",
             "original_text_license": "CC BY-SA 4.0 (Wikipedia article text)",
             "translation_source": f"A. Biran (and J. Naveh), Israel Exploration Journal 45 (1995), as quoted in English Wikipedia, 'Tel Dan stele', revision {REVID}: {WIKI}",
-            "translation_license": "CC BY-SA 4.0 as Wikipedia article text (quoted there from Biran and Naveh 1995; used under the owner's instruction for post-1929 finds)",
+            "translation_license": "Not openly licensed: Biran and Naveh's 1995 translation (Israel Exploration Journal 45), quoted on English Wikipedia. Reproduced here as a short scholarly quotation of a 13-line inscription, by the owner's decision (2026-11-12); replace if an open translation appears.",
             "translator": "A. Biran (1995), via Wikipedia",
             "verified_date": TODAY,
         },
