@@ -26,7 +26,7 @@ e = html.escape
 
 
 def anchor(section):
-    return "s" + str(section).replace(".", "-")
+    return "s" + str(section).replace(".", "-").replace(" ", "-")
 
 
 def page(p, steps_html):

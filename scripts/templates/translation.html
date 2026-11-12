@@ -153,13 +153,13 @@
 
       <section class="translation-body {% if has_scans %}view-parallel-3{% endif %}" id="translation-body">
         {% for section in translation %}
-        <div class="parallel-section" id="s{{ section.section | replace('.', '-') }}"
+        <div class="parallel-section" id="s{{ section.section | replace('.', '-') | replace(' ', '-') }}"
              data-author="{{ author_name }}"
              data-title="{{ original_title }}"
              data-section="{% if section.original_ref %}{{ section.original_ref }}{% else %}ch. {{ section.section }}{% endif %}"
              data-translator="{{ translator_name }}"
              data-year="{{ pub_year }}"
-             data-url-path="/library/{{ slug }}#s{{ section.section | replace('.', '-') }}">
+             data-url-path="/library/{{ slug }}#s{{ section.section | replace('.', '-') | replace(' ', '-') }}">
 
           <div class="section-header">
             <span class="section-ref">§{{ section.section }}{% if section.original_ref %} · {{ section.original_ref }}{% endif %}</span>
@@ -210,7 +210,7 @@
       <section class="translation-body">
         <h2>Translation</h2>
         {% for section in translation %}
-        <div class="section-block" id="s{{ section.section | replace('.', '-') }}">
+        <div class="section-block" id="s{{ section.section | replace('.', '-') | replace(' ', '-') }}">
           <span class="section-ref">§{{ section.section }}{% if section.original_ref %} · {{ section.original_ref }}{% endif %}</span>
           {{ section.text }}
         </div>

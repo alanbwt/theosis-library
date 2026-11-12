@@ -14,4 +14,5 @@ python3 scripts/build_sitemap.py
 python3 scripts/check_collection.py --all
 python3 scripts/validate_strict.py
 python3 scripts/audit_sections.py
+python3 scripts/check_links.py
 echo "build ok: $(find site -type f | wc -l) files, $(du -sh site | cut -f1)"

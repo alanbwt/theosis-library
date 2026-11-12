@@ -59,12 +59,12 @@
       "id": "sin-leqi-unninni",
       "name": "Sin-leqi-unninni",
       "name_latin": "",
-      "dates": "c. 1300–1000 BCE",
+      "dates": "c. 1200-1000 BCE",
       "century": -12,
       "era": "Ancient Near East",
       "tradition": "mesopotamian",
       "language": "Akkadian",
-      "bio": "Babylonian scribe traditionally credited with compiling the Standard Babylonian version of the Epic of Gilgamesh from older Sumerian sources. The most important literary editor in recorded history."
+      "bio": "Babylonian scholar to whom later tradition ascribed the Standard Babylonian version of the Epic of Gilgamesh."
     },
     {
       "id": "peter-attributed",
@@ -1976,9 +1976,13 @@
     },
     {
       "id": "sumerian-scribes",
-      "name": "Sumerian Scribes",
-      "dates": "c. 2100-1900 BCE",
-      "tradition": "mesopotamian"
+      "name": "Sumerian scribes (anonymous)",
+      "dates": "c. 2600-1700 BCE",
+      "tradition": "sumerian",
+      "century": -20,
+      "era": "Ancient Near East",
+      "language": "Sumerian",
+      "bio": "The anonymous scribes of Sumer and Babylonia who composed and copied Sumerian literature, from the earliest literary tablets of the mid-third millennium BCE to the Old Babylonian school copies."
     },
     {
       "id": "gautama-buddha",
@@ -2991,8 +2995,12 @@
     {
       "id": "enheduanna",
       "name": "Enheduanna",
-      "dates": "c. 2285-2250 BCE",
-      "tradition": "mesopotamian"
+      "dates": "c. 2300 BCE",
+      "tradition": "sumerian",
+      "century": -23,
+      "era": "Ancient Near East",
+      "language": "Sumerian",
+      "bio": "Daughter of Sargon of Akkad and high priestess of Nanna at Ur, to whom later tradition ascribed hymns to Inana and the temple hymns; the earliest author known by name."
     },
     {
       "id": "shulgi-king",
@@ -3070,6 +3078,148 @@
       "language": "Greek",
       "bio": "Jewish priest, commander in the revolt of 66 AD and later historian under the Flavian emperors; author of the Jewish War and the Jewish Antiquities.",
       "name_latin": "Flavius Iosephus"
+    },
+    {
+      "id": "gospel-of-peter",
+      "name": "Gospel of Peter",
+      "dates": "2nd c. AD (composition)",
+      "century": 2,
+      "era": "Apostolic",
+      "tradition": "christian",
+      "language": "Greek",
+      "bio": "Anonymous gospel written in the name of Simon Peter, known from early church writers and from one fragment found at Akhmim in Egypt in 1886-87."
+    },
+    {
+      "id": "clement-of-rome",
+      "name": "Clement of Rome",
+      "dates": "fl. c. 96 AD",
+      "century": 1,
+      "era": "Apostolic",
+      "tradition": "christian",
+      "language": "Greek",
+      "bio": "Leader of the church at Rome at the end of the first century, to whom early tradition ascribes the letter known as 1 Clement."
+    },
+    {
+      "id": "second-clement-anonymous",
+      "name": "2 Clement (anonymous preacher)",
+      "dates": "2nd c. AD",
+      "century": 2,
+      "era": "Apostolic",
+      "tradition": "christian",
+      "language": "Greek",
+      "bio": "Unknown author of the second-century sermon transmitted as Clement's second letter to the Corinthians."
+    },
+    {
+      "id": "didache-anonymous",
+      "name": "Didache (anonymous)",
+      "dates": "late 1st or early 2nd c. AD",
+      "century": 1,
+      "era": "Apostolic",
+      "tradition": "christian",
+      "language": "Greek",
+      "bio": "Anonymous early Christian church manual, transmitted under the title Teaching of the Twelve Apostles."
+    },
+    {
+      "id": "gospel-of-thomas",
+      "name": "Gospel of Thomas",
+      "dates": "1st/2nd c. AD (composition)",
+      "century": 2,
+      "era": "Apostolic",
+      "tradition": "gnostic",
+      "language": "Coptic",
+      "bio": "Anonymous early Christian collection of sayings of Jesus, attributed to Didymos Judas Thomas; complete only in Coptic in Nag Hammadi Codex II."
+    },
+    {
+      "id": "ptahhotep",
+      "name": "Ptahhotep (attributed)",
+      "dates": "5th Dynasty, c. 2400 BCE (attributed)",
+      "century": -24,
+      "era": "Ancient Near East",
+      "tradition": "egyptian",
+      "language": "Egyptian",
+      "bio": "Vizier of King Isesi of the 5th Dynasty, named as the author of the Instruction of Ptahhotep; the text itself survives in Middle Kingdom copies."
+    },
+    {
+      "id": "proto-cuneiform-scribes",
+      "name": "Proto-cuneiform scribes (anonymous)",
+      "dates": "c. 3300-3000 BCE",
+      "century": -31,
+      "era": "Ancient Near East",
+      "tradition": "sumerian",
+      "language": "Proto-cuneiform",
+      "bio": "The administrators of Uruk and neighbouring towns who kept the first written records, accounts of grain, fields, animals and labor, on clay tablets."
+    },
+    {
+      "id": "qumran-community",
+      "name": "Qumran community (Dead Sea Scrolls)",
+      "dates": "2nd century BCE - 1st century CE",
+      "century": -1,
+      "era": "Second Temple",
+      "tradition": "jewish",
+      "language": "Hebrew",
+      "bio": "The Jewish community whose library of scrolls was found in the caves near Khirbet Qumran on the Dead Sea from 1947."
+    },
+    {
+      "id": "anonymous-babylonian-poet",
+      "name": "Anonymous (Babylonian poets)",
+      "dates": "2nd-1st millennium BCE",
+      "century": -12,
+      "era": "Ancient Near East",
+      "tradition": "mesopotamian",
+      "language": "Akkadian",
+      "bio": "Unnamed Babylonian and Assyrian poets and scribes who composed and copied the Akkadian myths and epics preserved on cuneiform tablets."
+    },
+    {
+      "id": "kabti-ilani-marduk",
+      "name": "Kabti-ilani-Marduk",
+      "dates": "c. 8th c. BCE",
+      "century": -8,
+      "era": "Ancient Near East",
+      "tradition": "mesopotamian",
+      "language": "Akkadian",
+      "bio": "Babylonian scholar named in the poem's epilogue as the author of Erra and Ishum, who says the text was revealed to him in a dream."
+    },
+    {
+      "id": "shubshi-meshre-shakkan",
+      "name": "Shubshi-meshre-Shakkan",
+      "dates": "late 2nd millennium BCE",
+      "century": -12,
+      "era": "Ancient Near East",
+      "tradition": "mesopotamian",
+      "language": "Akkadian",
+      "bio": "Babylonian official named as the speaker of Ludlul bel nemeqi; a man of this name is attested in the time of the Kassite king Nazi-Maruttash (13th c. BCE)."
+    },
+    {
+      "id": "saggil-kinam-ubbib",
+      "name": "Saggil-kinam-ubbib",
+      "dates": "c. 1000 BCE",
+      "century": -10,
+      "era": "Ancient Near East",
+      "tradition": "mesopotamian",
+      "language": "Akkadian",
+      "bio": "Babylonian incantation priest whose name is spelled out by the acrostic of the Babylonian Theodicy."
+    },
+    {
+      "id": "pomponius-mela",
+      "name": "Pomponius Mela",
+      "dates": "fl. c. 43 AD",
+      "century": 1,
+      "era": "Imperial",
+      "tradition": "roman",
+      "language": "Latin",
+      "name_latin": "Pomponius Mela",
+      "bio": "Roman geographer from Tingentera in southern Spain, author of the Chorographia, the oldest surviving Latin geography."
+    },
+    {
+      "id": "callimachus",
+      "name": "Callimachus",
+      "dates": "c. 305-240 BCE",
+      "century": -3,
+      "era": "Hellenistic",
+      "tradition": "greek",
+      "language": "Greek",
+      "name_latin": "Callimachus",
+      "bio": "Poet and scholar of Cyrene who worked at the library of Alexandria; author of hymns, epigrams and the Aetia."
     }
   ]
 }
