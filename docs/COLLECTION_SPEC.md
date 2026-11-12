@@ -38,7 +38,15 @@ This spec is the contract for anyone adding a collection. Read it fully before s
 7. **Show lacunae honestly.** Broken signs stay in brackets as the source gives them. If the English
    translates a restored or composite text that is not on the photographed witness, say so in the
    section's `scan_note`.
-8. **Cover the whole work.** Aim for the complete text of each work. Where one witness is incomplete,
+8. **Never get around access controls.** No CAPTCHA solving, no Cloudflare/bot-check bypass, no
+   browser impersonation (curl-impersonate, TLS spoofing), no rate-limit evasion. If a site blocks
+   automated access, use another source (Wikimedia Commons copies, archive.org, another library,
+   another manuscript) or report the gap.
+9. **Photograph licensing (owner's instruction, 2026-11-12):** the library is non-commercial and the
+   owner accepts restrictive or unstated photo terms. Museum, library and scholarly photographs of the
+   ancient object may be used with credit even when the terms are non-commercial or unstated; record the
+   terms as stated in `scan_license`. Translation licensing (rule 6) is unchanged.
+10. **Cover the whole work.** Aim for the complete text of each work. Where one witness is incomplete,
    cover the gaps with other witnesses (other tablets, other manuscripts). State any remaining gaps
    in the introduction.
 

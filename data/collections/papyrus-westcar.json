@@ -1,0 +1,65 @@
+{
+  "collection": {
+    "key": "papyrus-westcar",
+    "prefix": "verified-papyrus-westcar-",
+    "label": "Papyrus Westcar (Tales of the Magicians)",
+    "group": "Egypt",
+    "date_sort": -1600,
+    "author_name": "Papyrus Westcar (Second Intermediate Period, c. 1650-1550 BCE)",
+    "source_url": "https://id.smb.museum/object/606402",
+    "critical_edition": "Thesaurus Linguae Aegyptiae (2018 data, AED-TEI)",
+    "translator_name": "W. M. Flinders Petrie (1899)",
+    "original_lang_label": "Egyptian · TLA transliteration",
+    "original_lang_code": "egy",
+    "edition_label": "Hieroglyphic transcription (TLA, Unicode)",
+    "search_terms": "westcar papyrus khufu cheops magicians djedi dedi webaoner wax crocodile sneferu rowing girls ruddjedet tales",
+    "description": "Papyrus Westcar (Berlin P 3033): the tales of wonders told at the court of King Khufu, column by column on the Berlin photographs, with TLA transliteration and hieroglyphs and Petrie's English."
+  },
+  "texts": [
+    {
+      "id": "verified-papyrus-westcar-tales-of-the-magicians",
+      "slug": "verified-papyrus-westcar-tales-of-the-magicians",
+      "order": 1,
+      "title": "The Tales of the Magicians (Papyrus Westcar)",
+      "author_id": "egyptian-scribes",
+      "language": "Egyptian",
+      "era": "Ancient Near East",
+      "tradition": "egyptian",
+      "category": "literature",
+      "date_approx": "Middle Kingdom composition; manuscript c. 1650-1550 BCE",
+      "century": -17,
+      "source": "Papyrus Westcar, Berlin P 3033 (SMB photographs by Sandra Steiss, CC BY-SA 4.0) + TLA transliteration and hieroglyphs (CC BY-SA 4.0) + English of W. M. Flinders Petrie (1899, public domain)",
+      "description": "The stories told to King Khufu by his sons about the magicians Webaoner, Djadjaemankh and Djedi, ending with the birth of the first three kings of the 5th Dynasty, on the twelve columns of Papyrus Westcar (c. 1600 BCE).",
+      "themes": [
+        "westcar",
+        "khufu",
+        "magic",
+        "tales",
+        "egypt",
+        "verified"
+      ],
+      "is_first_translation": false,
+      "status": "published",
+      "scans": {
+        "pages": [
+          {
+            "file": "papyrus-westcar/westcar-cols-01-03-recto.jpg",
+            "caption": "Papyrus Westcar, Kol. I-III, recto"
+          },
+          {
+            "file": "papyrus-westcar/westcar-cols-04-05-recto.jpg",
+            "caption": "Papyrus Westcar, Kol. IV-V, recto"
+          },
+          {
+            "file": "papyrus-westcar/westcar-cols-06-09-recto.jpg",
+            "caption": "Papyrus Westcar, Kol. VI-IX, recto"
+          },
+          {
+            "file": "papyrus-westcar/westcar-cols-10-12-verso.jpg",
+            "caption": "Papyrus Westcar, Kol. X-XII, verso"
+          }
+        ]
+      }
+    }
+  ]
+}
