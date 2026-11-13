@@ -1430,7 +1430,7 @@ section > h2:first-child {
 }
 
 .parallel-original {
-  font-family: 'Gentium Plus', 'Gentium Book Basic', 'Cardo', 'Palatino Linotype', 'Book Antiqua', Palatino, 'URW Palladio L', Georgia, serif;
+  font-family: 'Gentium Plus', 'Noto Serif', 'Gentium Book Basic', 'Cardo', 'Palatino Linotype', 'Book Antiqua', Palatino, 'URW Palladio L', Georgia, serif;
   font-size: 1.02rem;
   line-height: 1.85;
   color: #2d2518;
@@ -1439,7 +1439,7 @@ section > h2:first-child {
 }
 
 .parallel-translation {
-  font-family: 'Gentium Plus', 'Gentium Book Basic', 'Cardo', Georgia, serif;
+  font-family: 'Gentium Plus', 'Noto Serif', 'Gentium Book Basic', 'Cardo', Georgia, serif;
   font-size: 1rem;
   line-height: 1.8;
   color: #2d2518;
@@ -3131,7 +3131,7 @@ section > h2:first-child {
 }
 .parallel-original[lang="ar"] { font-family: 'Amiri', 'Scheherazade New', 'Noto Naskh Arabic', 'Times New Roman', serif; font-size: 1.25rem; line-height: 2.1; }
 .parallel-original[lang="hbo"] sup, .parallel-original[lang="ar"] sup { margin-left: 0.1em; margin-right: 0; }
-.parallel-original[lang="akk"] { font-family: 'Gentium Plus', 'Cardo', Georgia, serif; font-size: 0.95rem; white-space: pre-line; }
+.parallel-original[lang="akk"] { font-family: 'Gentium Plus', 'Noto Serif', 'Cardo', Georgia, serif; font-size: 0.95rem; white-space: pre-line; }
 
 /* Build credit */
 .site-footer .ng-credit {
@@ -3153,19 +3153,19 @@ section > h2:first-child {
 }
 
 /* ---- Scripts added with the 2026-11 expansion ---- */
-.parallel-original[lang="sux"], .parallel-original[lang="akk"] { font-family: 'Gentium Plus', 'Noto Sans Cuneiform', 'Cardo', Georgia, serif; font-size: 0.95rem; }
-.parallel-original[lang="egy"] { font-family: 'Gentium Plus', 'Noto Sans Egyptian Hieroglyphs', 'Cardo', Georgia, serif; }
-.parallel-original[lang="peo"] { font-family: 'Gentium Plus', 'Noto Sans Old Persian', Georgia, serif; }
-.parallel-original[lang="ae"] { font-family: 'Gentium Plus', 'Noto Sans Avestan', Georgia, serif; }
-.parallel-original[lang="sa"] { font-family: 'Noto Serif Devanagari', 'Gentium Plus', Georgia, serif; font-size: 1.08rem; line-height: 2; }
+.parallel-original[lang="sux"], .parallel-original[lang="akk"] { font-family: 'Gentium Plus', 'Noto Serif', 'Noto Sans Cuneiform', 'Cardo', Georgia, serif; font-size: 0.95rem; }
+.parallel-original[lang="egy"] { font-family: 'Gentium Plus', 'Noto Serif', 'Noto Sans Egyptian Hieroglyphs', 'Cardo', Georgia, serif; }
+.parallel-original[lang="peo"] { font-family: 'Gentium Plus', 'Noto Serif', 'Noto Sans Old Persian', Georgia, serif; }
+.parallel-original[lang="ae"] { font-family: 'Gentium Plus', 'Noto Serif', 'Noto Sans Avestan', Georgia, serif; }
+.parallel-original[lang="sa"] { font-family: 'Noto Serif Devanagari', 'Gentium Plus', 'Noto Serif', Georgia, serif; font-size: 1.08rem; line-height: 2; }
 .parallel-original[lang="lzh"], .parallel-original[lang="och"] { font-family: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif; font-size: 1.12rem; line-height: 2; letter-spacing: 0.04em; }
-.parallel-original[lang="gez"] { font-family: 'Noto Serif Ethiopic', 'Abyssinica SIL', 'Gentium Plus', serif; font-size: 1.08rem; line-height: 2; }
-.parallel-original[lang="cop"] { font-family: 'Noto Sans Coptic', 'Antinoou', 'Gentium Plus', serif; font-size: 1.05rem; }
+.parallel-original[lang="gez"] { font-family: 'Noto Serif Ethiopic', 'Abyssinica SIL', 'Gentium Plus', 'Noto Serif', serif; font-size: 1.08rem; line-height: 2; }
+.parallel-original[lang="cop"] { font-family: 'Noto Sans Coptic', 'Antinoou', 'Gentium Plus', 'Noto Serif', serif; font-size: 1.05rem; }
 .parallel-original[lang="arc"], .parallel-original[lang="obm"], .parallel-original[lang="phn"], .parallel-original[lang="uga"] {
   font-family: 'Noto Serif Hebrew', 'Noto Sans Phoenician', 'Noto Sans Imperial Aramaic', 'Noto Sans Ugaritic', 'Gentium Plus', serif; font-size: 1.1rem; line-height: 2;
 }
 /* Mixed lines inside an original column: native script (RTL) and transliteration (LTR) */
-.parallel-original .translit, .parallel-original [dir="ltr"] { direction: ltr; text-align: left; display: block; font-family: 'Gentium Plus', 'Cardo', Georgia, serif; font-size: 0.95rem; }
+.parallel-original .translit, .parallel-original [dir="ltr"] { direction: ltr; text-align: left; display: block; font-family: 'Gentium Plus', 'Noto Serif', 'Cardo', Georgia, serif; font-size: 0.95rem; }
 .parallel-original .native { display: block; }
 .parallel-original .native-rtl { display: block; direction: rtl; text-align: right; }
 .parallel-original .glyphs { display: block; font-family: 'Noto Sans Egyptian Hieroglyphs', 'Noto Sans Cuneiform', 'Noto Sans Old Persian', serif; font-size: 1.35rem; line-height: 1.6; color: #3d2f1a; }

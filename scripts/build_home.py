@@ -26,7 +26,7 @@ def main():
     LANG = {"grc": "Greek", "la": "Latin", "hbo": "Hebrew", "he": "Hebrew", "arc": "Aramaic", "akk": "Akkadian",
             "sux": "Sumerian", "egy": "Egyptian", "lzh": "Classical Chinese", "och": "Old Chinese", "gez": "Ge'ez",
             "cop": "Coptic", "sa": "Sanskrit", "ae": "Avestan", "peo": "Old Persian", "obm": "Moabite",
-            "phn": "Phoenician", "uga": "Ugaritic", "non": "Old Norse", "ar": "Arabic", "elx": "Elamite", "hit": "Hittite"}
+            "phn": "Phoenician", "uga": "Ugaritic", "non": "Old Norse", "ar": "Arabic", "elx": "Elamite", "hit": "Hittite", "pi": "Pali", "pra": "Prakrit", "inc": "Prakrit"}
     langs = set()
     for c in colls:
         code = c.get("original_lang_code")

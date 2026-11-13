@@ -59,9 +59,36 @@ FONT_FAMILIES = {
     "phn": ["Noto+Sans+Phoenician", "Noto+Serif+Hebrew:wght@400;700", "Gentium+Plus:ital,wght@0,400;0,700;1,400"],
     "uga": ["Noto+Sans+Ugaritic", "Gentium+Plus:ital,wght@0,400;0,700;1,400"],
     "ar": ["Amiri:ital,wght@0,400;0,700;1,400"],
+    "pi": ["Gentium+Plus:ital,wght@0,400;0,700;1,400"],
+    "pra": ["Gentium+Plus:ital,wght@0,400;0,700;1,400", "Noto+Sans+Brahmi"],
+    "inc": ["Gentium+Plus:ital,wght@0,400;0,700;1,400", "Noto+Sans+Brahmi"],
 }
 # Tradition banners: new traditions borrow the closest existing banner art.
 HERO_ALIAS = {"sumerian": "mesopotamian", "vedic": "hindu", "christian": "orthodox", "roman": "greek"}
+
+
+RARE_RANGES = [(0x02B0, 0x02FF), (0x0300, 0x036F), (0x1AB0, 0x1AFF), (0x1DC0, 0x1DFF), (0x1E00, 0x1EFF),
+               (0x2070, 0x209F), (0x2E00, 0x2E7F), (0x3008, 0x3009), (0xA720, 0xA7FF)]
+
+
+def rare_char_link(sections):
+    """Google Fonts request for exactly the uncommon Latin-script characters a page uses
+    (Egyptological alef/ayin, combining half-rings, subscript digits, half brackets...), served
+    from Noto Serif, so no transliteration character renders as an empty box."""
+    import re as _re
+    from urllib.parse import quote
+    chars = set()
+    for sec in sections:
+        for fld in ("original_text", "edition_text", "text"):
+            for ch in _re.sub(r"<[^>]+>", "", sec.get(fld) or ""):
+                cp = ord(ch)
+                if any(a <= cp <= b for a, b in RARE_RANGES):
+                    chars.add(ch)
+    if not chars:
+        return ""
+    # include base letters so combining marks have something to attach to in the subset
+    text = "".join(sorted(chars)) + "aeiouhkstdgnmrwjAEIOUHKSTDG"
+    return "https://fonts.googleapis.com/css2?family=Noto+Serif&text=" + quote(text, safe="") + "&display=swap"
 
 
 def font_link_for(code):
@@ -297,6 +324,7 @@ def main():
             reading=reading_order.get(tid, {}),
             verification=pub.get("verification", {}),
             font_link=font_link_for(original_lang_code),
+            rare_font_link=rare_char_link(translation),
             hero_tradition=HERO_ALIAS.get(tradition, tradition),
             collection_url=f"/collections/{reading_order.get(tid, {}).get('manuscript', '')}" if reading_order.get(tid) else "/library/",
             source_url_label=host_label(source_url),
