@@ -1,0 +1,20 @@
+{
+ "checked_on": "2026-11-12",
+ "checks": [
+  {"file": "sinaiticus-folios/prov-30-Q65_4r_B285.jpg", "folio": "BL fol. 139r", "seen": "col. 1 begins 'εαν γαρ ευρηϲ εϲται καλη η τελευτη ϲου' (Prov 24:14), 'φοβου τον θν υιε και βαϲιλεα' (24:21); col. 2 has 'τιϲ ανεβη ειϲ τον ουρανον' (30:4), 'εκγονον κακον πατερα καταραται' (30:11) and ends 'ταυτα δε λεγω υμιν τοιϲ ϲοφοιϲ ... μιϲητοϲ ειϲ εθνη' (24:23-24)", "conclusion": "page carries Prov 24:14-24 and 30:1-14 only; sections Prov 24:25-34 and all of Prov 25-29 linked to it do not appear on it"},
+  {"file": "sinaiticus-folios/prov-25-Q65_5r_B287.jpg", "folio": "BL fol. 140r", "seen": "col. 1 top 'τι τεκνον τηρηϲειϲ' (31:2), mid-column 'αυται αι παιδιαι ϲαλομωντοϲ αι αδιακριτοι αϲ εξεγραψαντο οι φιλοι εζεκιου' (25:1)", "conclusion": "Prov 25 begins here; this file is still on disk and is the texts.json thumbnail of prov-25, but no section links it"},
+  {"file": "sinaiticus-folios/sirach-30-Q69_7r_B355.jpg", "folio": "BL fol. 174r", "seen": "col. 1 'περι τεκνων ο αγαπων τον υιον αυτου' (Sir 30:1); col. 2 'περι βρωματων' (30:16) ... 'ζηλοϲ και θυμοϲ ελαττουϲιν ημεραϲ' (30:24), then 'καγω εϲχατοϲ ηγρυπνηϲα' (33:16), 'ακουϲατε μου μεγιϲτανεϲ λαου' (33:18), ends 'κριϲϲον γαρ εϲτιν τα τεκνα δεηθηναι ϲου' (33:22)", "conclusion": "page carries Sir 30:1-24 and 33:16-22; sections Sir 31, 32 and 33:1-15 linked to it are not on it; the entry also marks 33:17-24 'not present' although 33:17-22 are visible here"},
+  {"file": "sinaiticus-folios/john-8-Q80_6r_B531.jpg", "folio": "BL fol. 252r", "seen": "col. 1 begins 'κρινει τον ανθρωπον εαν μη ακουϲη πρωτον παρ αυτου' (John 7:51), 'μη και ϲυ εκ τηϲ γαλιλαιαϲ ει' (7:52), then 8:12", "conclusion": "John 7:51-52 are on 252r; section john-7 7.51-53 links 251v and 252v instead"},
+  {"file": "leningrad/leningrad-f312b.jpg", "folio": "312v", "seen": "right column: end of Obadiah, Masoretic note, 'ויהי דבר יהוה אל יונה בן אמתי'; left column ends 'ירדתי הארץ בריחה בעדי'", "conclusion": "matches LCIndex 312B Jonah 1:1-2:7a"},
+  {"file": "1qisaa/1qisaa-col-10.jpg", "folio": "col. X", "seen": "line 1 'היתפאר הגרזן על החוצב בו' (Isa 10:15), line 3 'לכן ישלח האדון יהוה צבאות במשמניו רזון' (10:16)", "conclusion": "matches the transcription (col. X line 1 = end of 10:14 and 10:15)"},
+  {"file": "parisino-petropolitanus/pp-f50r.jpg", "folio": "50r", "seen": "same page as Corpus Coranicum image of 50r (different crop)", "conclusion": "the signature test flagged it as closer to 52r; visual check shows it is 50r, false alarm"},
+  {"file": "venetus-a/venetus-a-VA017VN_0519.jpg", "folio": "17v", "seen": "first main-text line 'μήτε σὺ πηλείδη θέλ ἐριζέμεναι βασιλῆϊ' (Iliad 1.277)", "conclusion": "Iliad 1.277-300 are on 17v; section 1.276-300 links only 17r"},
+  {"file": "gilgamesh/gilgamesh-K.2756.D.jpg, K.2756.C, K.3375, K.8584", "seen": "BM composite photos showing the inscribed faces (K.3375 obverse, reverse and edges)", "conclusion": "one image per tablet is consistent with the sections"},
+  {"file": "josephus/vatgr984-f152v.jpg", "seen": "red initial near the foot of the page, passage runs to the last line", "conclusion": "not resolved by eye whether Ant. 18.64 ends on 152v or runs onto 153r (Schmidt gives lines 27-31 of 152v); left as an open question"}
+ ],
+ "non_scan_findings": [
+  "Venetus A (all 24 books): English (Butler) was cut into sections by paragraph count in proportion to the Greek (import_homer.py, 'Proportional English assignment'); e.g. section 1.76-100 English starts 'Thus did he pray, and Apollo heard' (Iliad 1.43) and section 1.276-300 English starts Nestor's speech (1.254). English and Greek do not correspond line for line.",
+  "Sinaiticus Sirach 30-36: Greek marked 'Not present in Codex Sinaiticus' for 30:25 and 33:17-24 although 33:16-22 are visible on fol. 174r; the chapter walker did not follow the Greek transposition of Sir 30:25-33:16a / 33:16b-36:13a.",
+  "Gilgamesh K.2252: section 'SB XI 10-81' is labelled 'col. i ll. 10-24' but contains poem lines 53-57 and 81 as well; labels only, same tablet image."
+ ]
+}

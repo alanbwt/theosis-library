@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="05">05</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>United Kingdom</country>
+            <settlement>Cambridge</settlement>
+            <repository>Cambridge University Library</repository>
+            <idno>Ms. Nn. 2.41</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="g-l"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector1"></witness>
+<witness n="corrector2"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="162v" type="folio"/><w>ει</w> <w>τον</w> <w>λογον</w> <w>μου</w> <w>ετηρησαν</w> <w>και</w> <w>τον</w>
+<cb n="1"/>
+<lb/><div n="B04" type="book" part="M"><div n="B04K15" type="chapter" part="F"><ab n="B04K15V20" part="F"><w>υμετερον</w> <w>τηρησουσιν</w><pc>·</pc></ab> <ab n="B04K15V21"><w>αλλα</w> <w>ταυτα</w>
+<lb/><w>ποιησουσιν</w> <app><rdg type="orig" hand="firsthand"><w>εις</w> <w>υμας</w></rdg><rdg type="corr" hand="corrector1"><w>υμιν</w></rdg></app><note type="local">Scri. B</note> <w>δια</w> <w>το</w> <w>ονομα</w> <w>μου</w>
+<lb/><w>οτι</w> <w>ουκ</w> <w>οιδασιν</w> <w>τον</w> <w>πεμψαντα</w> <w>με</w>
+<lb/></ab> <ab n="B04K15V22"><w>ει</w> <w>μη</w> <w>ηλθον</w> <w>και</w> <w>ελαλησα</w> <w>αυτοις</w>
+<lb/><w>αμαρτιαν</w> <w>ουκ</w> <app><rdg type="orig" hand="firsthand"><w>ειχαν</w></rdg><rdg type="altZ" hand="corrector1"><w>ειχον</w></rdg></app><note type="local">Scri. B</note> <w>νυν</w> <w>δε</w>
+<lb/><w>προφασιν</w> <w>ουκ</w> <w>εχουσιν</w> <w>περι</w> <w>της</w> <w>αμαρτιας</w>
+<lb/><w>αυτων</w><pc>·</pc></ab> <ab n="B04K15V23"><w>ο</w> <w>εμε</w> <w>μεισων</w> <w>και</w> <w>τον</w> <w>πατερα</w> <w>μου</w>
+<lb/><w>μεισει</w><pc>·</pc></ab> <ab n="B04K15V24"><w>ει</w> <w>τα</w> <w>εργα</w> <w>μη</w> <w>εποιησα</w>
+<lb/><w>εν</w> <w>αυτοις</w> <w>α</w> <w>ουδεις</w> <w>αλλος</w> <w>εποιησεν</w>
+<lb/><w>αμαρτειαν</w> <w>ουκ</w> <app><rdg type="orig" hand="firsthand"><w>ειχαν</w></rdg><rdg type="altZ" hand="corrector1"><w>ειχον</w></rdg></app><note type="local">Scri. B</note> <w>νυν</w> <w>δε</w> <w>και</w>
+<lb/><w>εωρακασιν</w> <w>και</w> <app><rdg type="orig" hand="firsthand"><w>μεμεισηκασιν</w></rdg><rdg type="corr" hand="corrector1"><w>εμειμεισηκασιν</w></rdg><rdg type="corr" hand="corrector2"><w>εμεμεισηκασιν</w></rdg></app><note type="local">Scri. 1.Korr. B, 2. ohne Angabe</note> <w>με</w>
+<lb/><w>και</w> <w>τον</w> <w>πατερα</w> <w>μου</w></ab> <ab n="B04K15V25"><w>αλλ</w> <w>ινα</w> <w>πληρωθη</w>
+<lb/><w>ο</w> <w>λογος</w> <w>ο</w> <w>εν</w> <w>τω</w> <w>νομω</w> <w>αυτων</w> <w>γεγραμμενος</w>
+<lb/><w>οτι</w> <w>εμεισησαν</w> <w>με</w> <w>δωρεαν</w></ab> <ab n="B04K15V26"><w>οταν</w> <w>δε</w>
+<lb/><w>ελθη</w> <w>ο</w> <w>παρακλητος</w> <w>ον</w> <w>εγω</w> <w>πεμπω</w> <w>υμειν</w>
+<lb/><w>παρα</w> <w>του</w> <app><rdg type="orig" hand="firsthand"><w><abbr type="nomSac"><hi rend="overline">πρα</hi></abbr></w></rdg><rdg type="corr" hand="corrector1"><w><abbr type="nomSac"><hi rend="overline">πρς</hi></abbr></w></rdg></app><note type="local">Scri. p.m.</note> <w>μου</w> <w>το</w> <w><abbr type="nomSac"><hi rend="overline">πνα</hi></abbr></w> <w>της</w> <w>αληθειας</w><note type="local">to bis alh ueber Rasur geschrieben</note>
+<lb/><w>ο</w> <w>παρα</w> <w>του</w> <w>πατρος</w> <w>μου</w> <w>εκπορευετε</w> <w>εκεινος</w>
+<lb/><w>μαρτυρησει</w> <w>περι</w> <w>εμου</w><pc>·</pc></ab> <ab n="B04K15V27"><w>και</w> <w>υμεις</w>
+<lb/><w>μαρτυρειτε</w> <w>οτι</w> <w>απ</w> <w>αρχης</w> <w>μετ</w> <w>εμου</w> <w>εστε</w>
+<lb/></ab></div><div n="B04K16" type="chapter" part="I"><ab n="B04K16V1"><w>ταυτα</w> <w>λελαληκα</w> <w>υμειν</w> <w>ινα</w> <w>μη</w> <w>σκανδαλισθητε</w>
+<lb/></ab> <ab n="B04K16V2"><w>αποσυναγωγους</w> <w>ποιησουσιν</w> <w>υμας</w>
+<lb/><w>αλλ</w> <w>ερχεται</w> <w>ωρα</w> <w>ινα</w> <w>πας</w> <w>ο</w> <w>αποκτεινας</w>
+<lb/><w>υμας</w> <w>δοξη</w> <w>λατρειαν</w> <w>προσφερειν</w> <w>τω</w> <w><abbr type="nomSac"><hi rend="overline">θω</hi></abbr></w><pc>·</pc>
+<lb/></ab> <ab n="B04K16V3"><w>και</w> <w>ταυτα</w> <w>ποιησουσιν</w> <w>υμειν</w> <w>οτι</w> <w>ουκ</w>
+<lb/><w>εγνωσαν</w> <w>τον</w> <w><abbr type="nomSac"><hi rend="overline">πρα</hi></abbr></w> <w>ουδε</w> <w>εμε</w><pc>·</pc></ab> <ab n="B04K16V4"><app><rdg type="orig" hand="firsthand"/><rdg type="altZ" hand="corrector2"><w>αλλα</w></rdg></app><note type="local">Scri. F</note>
+<lb/><w>ταυτα</w> <w>λελαληκα</w> <w>υμειν</w> <w>ινα</w> <w>οταν</w> <w>ελθη</w>
+<lb/><w>η</w> <w>ωρα</w> <app><rdg type="orig" hand="firsthand"><w>μνημονευτε</w></rdg><rdg type="corr" hand="corrector1"><w>μνημονευσητε</w></rdg></app><note type="local">Scri. A</note> <w>οτι</w>
+<lb/><w>εγω</w> <w>ειπον</w> <w>υμειν</w><pc>·</pc> <w>ταυτα</w> <w>δε</w> <w>εξ</w> <w>αρχης</w>
+<lb/><w>υμειν</w> <w>ουκ</w> <w>ειπον</w> <w>οτι</w> <w>μεθ</w> <w>υμων</w> <w>ημην</w>
+<lb/></ab> <ab n="B04K16V5"><w>νυν</w> <w>δε</w> <w>υπαγω</w> <w>προς</w> <w>τον</w> <w>πεμψαντα</w> <w>με</w>
+<lb/><w>και</w> <w>ουδεις</w> <w>εξ</w> <w>υμων</w> <w>ερωτα</w> <w>με</w>
+<lb/><w>που</w> <w>υπαγεις</w></ab> <ab n="B04K16V6" part="I"><w>αλλ</w> <w>οτι</w> <w>ταυτα</w> <w>λελαληκα</w>
+</ab></div></div></body></text></TEI>

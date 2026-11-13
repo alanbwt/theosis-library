@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="05">05</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>United Kingdom</country>
+            <settlement>Cambridge</settlement>
+            <repository>Cambridge University Library</repository>
+            <idno>Ms. Nn. 2.41</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="g-l"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector1"></witness>
+<witness n="corrector2"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+
+<pb n="241v" type="folio"/>
+<cb n="1"/>
+<lb/><div type="book" n="Luke"><div type="chapter" n="Luke.13"><ab n="Luke.13.4" part="F"><w>και</w> <w>απεκτεινεν</w> <w>αυτους</w> <w>δοκειτε</w> <w>οτι</w>
+<lb/><w>οφειλεται</w> <w>εγενοντο</w> <w>παρα</w> <w>παντας</w> <w>τους</w>
+<lb/><w>ανθρωπους</w> <w>τους</w> <app><rdg type="orig" hand="firsthand"><w>ενοικουνταο</w></rdg><rdg type="corr" hand="corrector1"><w>ενοικουντας</w></rdg></app><note type="local">Scrivener p.m.</note> <w>ιερουσαλημ</w>
+<lb/></ab> <ab n="Luke.13.5"><w>ουχι</w><pc>·</pc> <w>λεγω</w> <w>δε</w> <w>υμειν</w> <w>οτι</w> <w>εαν</w> <w>μη</w> <w>μετανοησηται</w>
+<lb/><w>παντες</w> <w>ομοιως</w> <w>απολεισθαι</w>
+<lb/></ab> <ab n="Luke.13.6"><w>ελεγεν</w> <w>δε</w> <w>ταυτην</w> <w>την</w> <w>παραβολην</w> <w>συκην</w>
+<lb/><w>τις</w> <w>ειχεν</w> <w>πεφυτευμενην</w> <w>εν</w> <w>τω</w>
+<lb/><w>αμπελωνι</w> <w>αυτου</w> <w>και</w> <w>ηλθεν</w> <w>ζητων</w>
+<lb/><w>καρπον</w> <w>απ</w> <w>αυτης</w> <w>και</w> <w>μη</w> <w>ευρων</w>
+<lb/></ab> <ab n="Luke.13.7"><w>ειπεν</w> <w>προς</w> <w>τον</w> <w>αμπελουργον</w> <w>ιδου</w><note type="local">u nachgezogen</note>
+<lb/><w>ετη</w> <w>τρια</w> <w>αφ</w> <w>ου</w> <w>ερχομαι</w> <w>ζητων</w> <w>καρπον</w><note type="local">-pon nachgezogen</note>
+<lb/><w>εν</w> <w>τη</w> <w>συκη</w> <w>ταυτη</w> <w>και</w> <w>ουκ</w> <w>ευρισκω</w>
+<lb/><w>φερε</w> <w>την</w> <w>αξεινην</w> <w>εκκοψον</w> <w>αυτην</w>
+<lb/><w>ινατι</w> <w>και</w> <w>την</w> <w>γην</w> <w>καταργει</w></ab> <ab n="Luke.13.8"><w>ο</w> <w>δε</w>
+<lb/><w>αποκριθεις</w> <w>λεγει</w> <w>αυτω</w> <w><abbr type="nomSac"><hi rend="overline">κε</hi></abbr></w> <w>αφες</w> <w>αυτην</w>
+<lb/><w>ετι</w> <w>τουτον</w> <w>τον</w> <w>ενιαυτον</w> <w>εως</w> <w>οτου</w>
+<lb/><w>σκαψω</w> <w>περι</w> <w>αυτην</w> <w>και</w> <w>βαλω</w> <w>κοφινον</w>
+<lb/><w>κοπριων</w></ab> <ab n="Luke.13.9"><w>και</w> <w>εαν</w> <w>μεν</w> <w>ποιηση</w> <w>καρπον</w>
+<lb/><w>ει</w> <w>δε</w> <w>μη</w> <w>γε</w> <w>εις</w> <w>το</w> <w>μελλον</w> <w>εκκοψεις</w> <w>αυτην</w>
+<lb/></ab> <ab n="Luke.13.10"><w>ην</w> <w>δε</w> <w>διδασκων</w> <w>εν</w> <w>μια</w> <w>των</w> <w>συναγωγων</w>
+<lb/><w>σαββατω</w></ab> <ab n="Luke.13.11"><w>και</w> <w>ιδου</w> <w>γυνη</w> <w>εν</w> <w>ασθενεια</w> <w>ην</w>
+<lb/><w><abbr type="nomSac"><hi rend="overline">πνς</hi></abbr></w> <w>ετη</w> <w><abbr type="nomSac"><hi rend="overline">ιη</hi></abbr></w> <w>και</w> <w>ην</w> <app><rdg type="orig" hand="firsthand"><w>συνκαπτουσα</w></rdg><rdg type="corr" hand="corrector2"><w>συνκαμπτουσα</w></rdg></app><note type="local">Scrivener D</note> <w>και</w>
+<lb/><w>μη</w> <w>δυναμενη</w> <w>ανακυψαι</w> <w>εις</w> <w>το</w>
+<lb/><w>παντελες</w></ab> <ab n="Luke.13.12"><w>ειδων</w> <w>δε</w> <w>αυτην</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">ιης</hi></abbr></w> <w>ειπεν</w>
+<lb/><w>αυτη</w> <w>γυναι</w> <w>απολελυσαι</w> <w>απο</w> <w>της</w>
+<lb/><w>ασθενειας</w> <w>σου</w></ab> <ab n="Luke.13.13"><w>και</w> <w>επεθηκεν</w> <w>τας</w>
+<lb/><w>χειρας</w> <w>αυτη</w> <w>και</w> <w>παραχρημα</w> <w>ανορθωθη</w>
+<lb/><w>και</w> <w>εδοξασεν</w> <w>τον</w> <w><abbr type="nomSac"><hi rend="overline">θν</hi></abbr></w><pc>·</pc></ab> <ab n="Luke.13.14"><w>αποκριθεις</w> <w>δε</w>
+<lb/><w>ο</w> <w>αρχισυναγωγος</w> <w>αγανακτων</w> <w>ελεγεν</w>
+<lb/><w>τω</w> <w>οχλω</w> <w>οτι</w> <w>τω</w> <w>σαββατω</w> <w>εθεραπευσεν</w>
+<lb/><w><abbr type="nomSac"><hi rend="overline">ιης</hi></abbr></w> <w>εξ</w> <w>ημεραι</w> <w>εισιν</w> <w>εν</w> <w>αις</w> <w>δει</w> <w>εργαζεσθαι</w>
+<lb/><w>εν</w> <w>ταυταις</w> <w>ουν</w> <w>ερχομενοι</w> <w>θεραπευεσθαι</w>
+<lb/><w>και</w> <w>μη</w> <w>τη</w> <w>ημερα</w> <w>του</w> <w>σαββατου</w></ab></div> </div></body></text></TEI>

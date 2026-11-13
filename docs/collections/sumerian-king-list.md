@@ -28,3 +28,6 @@ Face order a-d in the CDLI photo was checked by eye against the broken areas in 
 ## Open questions
 - The English is a composite translation; ETCSL's numbers follow WB unless a note names another
   manuscript (notes kept in italics).
+
+## QC fixes (2026-11-12)
+The importer's ATF parser now also reads CDLI links written through an alias ('#link: def A = Q000371', then '>>A n'). WB 444 uses direct links only, so the output is unchanged (21 sections, re-run and compared). Review: docs/qc/review-near-east.md; fixes: docs/qc/fixes-near-east.md.

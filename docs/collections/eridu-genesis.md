@@ -26,3 +26,6 @@ the bottom edge; reverse right-hand column (iv) has every line broken at the rig
 
 ## Open questions
 - The joined fragment CBS 10867 is visible in the photo; ETCSL names only CBS 10673 as its source.
+
+## QC fixes (2026-11-12)
+The shared ETCSL/CDLI engine was updated (alias links, order-preserving alignment, ETCSL gap rows). This entry does not use CDLI witnesses; re-run and compared: output unchanged. Review: docs/qc/review-near-east.md; fixes: docs/qc/fixes-near-east.md.

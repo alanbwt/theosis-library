@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="05">05</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>United Kingdom</country>
+            <settlement>Cambridge</settlement>
+            <repository>Cambridge University Library</repository>
+            <idno>Ms. Nn. 2.41</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="g-l"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="348v Suppl" type="folio"/><cb n="1"/><lb/><div type="book" n="B02"><div type="chapter" n="B02K16"><ab n="B02K16V15" part="F"><w>παση</w><note type="local" xml:id="B02K16V15-05-1">Supplement: Schluss des Mk im 9.Iahrhundert ergänzt.</note> <w>τη</w> <w>κτισει</w><pc>·</pc></ab> <ab n="B02K16V16"><w>οτι</w> <w>ο</w> <w>πιστευσας</w><lb/><w>και</w> <w>βαπτισθεις</w><pc>·</pc> <w>σωθησεται</w><pc>·</pc><lb/><w>ο</w> <w>δε</w> <w>απιστησας</w><pc>·</pc> <w>κατακριθησεται</w><pc>·</pc><lb/></ab> <ab n="B02K16V17"><w>σημια</w> <w>δε</w> <w>τεις</w> <w>πιστευσασειν</w><pc>·</pc><lb/><w>ταυτα</w> <w>παρακολουθησει</w><pc>·</pc><lb/><w>εν</w> <w>τω</w> <w>ονοματι</w> <w>μου</w><pc>.</pc> <w>δαιμονια</w><lb/><w>εκβαλλουσι</w><pc>·</pc> <w>γλωσσεις</w> <w>λαλη<lb break="no"/>σωσιν</w> <w>καινεις</w><pc>·</pc></ab> <ab n="B02K16V18"><w>οφεις</w> <w>αρουσιν</w><pc>·</pc><lb/><w>καν</w> <w>θανασειμον</w> <w>τι</w> <app><rdg type="orig" hand="firsthand"><w>ποιωσιν</w></rdg><rdg type="corr" hand="corrector"><w>πιωσιν</w></rdg></app><pc>.</pc><lb/><w>ου</w> <w>μη</w> <w>αυτους</w> <w>βλαψη</w><pc>·</pc><lb/><w>επ</w> <w>αρρωστους</w> <w>χειρας</w> <app><rdg type="orig" hand="firsthand"><w>επιθησουσειν</w></rdg><rdg type="corr" hand="corrector"><w>επιθησουσιν</w></rdg></app><pc>.</pc><lb/><w>και</w> <w>καλως</w> <w>εξουσιν</w><pc>·</pc><lb/></ab> <ab n="B02K16V19"><w>ο</w> <w>μεν</w> <w>ουν</w> <w><abbr type="nomSac"><hi rend="overline">κς</hi></abbr></w> <w>μετα</w> <w>το</w><lb/><w>λαλησει</w> <w>αυτοις</w><pc>·</pc> <w>ανελημφθη</w><lb/><w>εις</w> <w>τον</w> <w>ουρανον</w><pc>·</pc> <w>και</w> <w>εκαθισεν</w><lb/><w>εν</w> <w>δεξιων</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">θυ</hi></abbr></w><pc>·</pc><lb/></ab> <ab n="B02K16V20"><w>εκεινοι</w> <w>δε</w> <w>εξελθοντες</w><pc>.</pc><lb/><w>εκηρυξαν</w> <w>πανταχου</w><pc>·</pc><lb/><w>του</w> <w><abbr type="nomSac"><hi rend="overline">κυ</hi></abbr></w> <w>συνεργουντος</w><pc>.</pc><lb/><w>και</w> <w>τον</w> <w>λογον</w> <w>βεβαιουντος</w><pc>.</pc><lb/><w>δια</w> <w>των</w> <w>επακολουθουντων</w> <w>σημιων</w><pc>·</pc><lb/><w>αμην</w><pc>·</pc><lb/></ab></div><div type="explicit" n="B02explicit"><ab><w>ευαγγελιον</w> <w>κατα</w> <w>μαρκον</w><lb/><w>ετελεσθη</w><pc>·</pc><lb/></ab></div></div><div type="book" n="B05"><div type="incipit" n="B05incipit"><ab><w>αρχεται</w> <w>πραξις</w> <w>αποστολων</w><pc>·</pc></ab></div> </div></body></text></TEI>

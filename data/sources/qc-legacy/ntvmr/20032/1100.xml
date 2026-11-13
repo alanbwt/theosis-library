@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    <fileDesc>      
+      <titleStmt>
+        <title>A Transcription of Matthew in 032</title>
+        <title type="document" key="20032" n="032">GA 032</title>
+        <title type="collection" level="s" xml:lang="en">The New Testament</title>
+        <title type="collection" level="s" xml:lang="de">Das Neue Testament</title>
+        <title type="work" level="m" xml:lang="de" n="01">The Gospel according to Matthew</title>
+        <title type="short" level="m" xml:lang="de" n="01">Matthew</title>      
+        <respStmt>
+          <resp>Created by</resp>
+          <name type="org">the Institut für neutestamentliche Textforschung, Münster, Germany</name>
+        </respStmt>       
+        <respStmt>
+          <resp>XML conversion by</resp>
+          <name type="org">the Institute for Textual Scholarship and Electronic Editing, Birmingham</name>
+        </respStmt>      
+        <sponsor>
+          <name type="org">Institut für neutestamentliche Textforschung, Münster, Germany</name>
+        </sponsor>
+      </titleStmt>
+      <editionStmt>
+        <edition n="2.0">Version 2.0, created on <date>24.4.2017</date></edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>
+          <name type="org">Institut für neutestamentliche Textforschung</name>
+          <name type="org">Westfälische Wilhelms-Universität Münster</name>
+        </publisher>
+        <date>24.4.2017</date>
+        <availability>
+          <p>All rights reserved by the INTF</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <msDesc>
+          <msIdentifier>
+            <altIdentifier type="GA">
+              <idno>032</idno>
+            </altIdentifier>
+            <altIdentifier type="Liste">
+              <idno>20032</idno>
+            </altIdentifier>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc n="1.5">
+      <projectDesc>
+        <p>This transcription was made by INTF in conjunction with its electronic and printed
+          editions of the New Testament (Nestle-Aland Novum Testamentum Graece, Novum Testamentum
+          Graecum Editio Critica Maior, NTtranscripts)</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>The initial transcription file was a plain text file for use with COLLATE, later
+          converted to XML according to the Text Encoding Initiative P5 guidelines.</p>
+      	<p>The XML specifications used are version 1.5 of the IGNTP Guidelines available at <ptr target="http://epapers.bham.ac.uk/1892/"/>
+      	</p></editorialDecl>
+      <variantEncoding method="parallel-segmentation" location="internal"/>
+    	
+    </encodingDesc>
+  </teiHeader>
+
+  <text xml:lang="grc"><body><pb n="1100" type="page"/><cb n="1"/><lb/><div type="book" n="B01"><div type="chapter" n="B01K27"><ab n="B01K27V61" part="F"><w>επι</w> <w>του</w> <w>ταφου</w></ab> <ab n="B01K27V62"><w>τη</w> <w>δε</w> <w>επαυριον</w> <w>ητις</w> <w>ε<lb break="no"/>στιν</w> <w>μετα</w> <w>την</w> <w>παρασκευην</w> <w>συνηχθη<lb break="no"/>σαν</w> <w>οι</w> <w>αρχιερεις</w> <w>και</w> <w>οι</w> <w>φαρισαιοι</w> <w>προς</w> <w>πι<lb break="no"/>λατον</w></ab> <ab n="B01K27V63"><w>λεγοντες</w> <w><abbr type="nomSac"><hi rend="overline">κε</hi></abbr></w> <w>εμνησθημεν</w><lb/><w>οτι</w> <w>εκεινος</w> <w>ο</w> <w>πλανος</w> <w>ειπεν</w> <w>ετι</w> <w>ζων</w><lb/><w>μετα</w> <w>τρις</w> <w>ημερας</w> <w>εγειρομαι</w></ab> <ab n="B01K27V64"><w>κελευ<lb break="no"/>σον</w> <w>ουν</w> <w>ασφαλισθηναι</w> <w>τον</w> <w>ταφον</w> <w>ε<lb break="no"/>ως</w> <w>της</w> <w>τριτης</w> <w>ημερας</w> <w>μηποτε</w> <w>ελθον<lb break="no"/>τες</w> <w>οι</w> <w>μαθηται</w> <w>αυτου</w> <w>κλεψωσιν</w> <w>αυτον</w><pc>·</pc><lb/><w>και</w> <w>ειπωσιν</w> <w>τω</w> <w>λαω</w> <w>ηγερθη</w> <w>απο</w> <w>των</w><lb/><w>νεκρων</w> <w>και</w> <w>εσται</w> <w>η</w> <w>εσχατη</w> <w>πλανη</w><lb/><w>χειρων</w> <w>της</w> <w>πρωτης</w><lb/></ab> <ab n="B01K27V65"><w>εφη</w> <w>δε</w> <w>αυτοις</w> <w>ο</w> <w>πειλατος</w> <w>εχεται</w> <w>κου<lb break="no"/>στωδιαν</w> <w>υπαγεται</w> <w>ασφαλισασθαι</w> <w>ως</w><lb/><w>οιδατε</w></ab> <ab n="B01K27V66"><w>οι</w> <w>δε</w> <w>πορευθεντες</w> <w>ησφαλι<lb break="no"/>σαντο</w> <w>τον</w> <w>ταφον</w> <w>σφραγισαντες</w> <w>τον</w><lb/><w>λιθον</w> <w>μετα</w> <w>της</w> <w>κουστωδιας</w><lb/></ab></div><div type="chapter" n="B01K28"><ab n="B01K28V1"><w>οψε</w> <w>δε</w> <w>σαββατων</w> <w>τη</w> <w>επιφωσκουση</w> <w>εις</w><lb/><w>μιαν</w> <w>σαββατων</w> <w>ηλθεν</w> <w>μαρια</w> <w>η</w> <w>μαγδα<lb break="no"/>ληνη</w> <w>και</w> <w>η</w> <w>αλλη</w> <w>μαρια</w> <w>θεωρουσαι</w> <w>τον</w><lb/><w>ταφον</w><pc>·</pc></ab> <ab n="B01K28V2"><w>και</w> <w>ιδου</w> <w>σισμος</w> <w>εγενετο</w> <w>μεγας</w><lb/><w>αγγελος</w> <w>γαρ</w> <w><abbr type="nomSac"><hi rend="overline">κυ</hi></abbr></w> <w>κατεβη</w> <w>εξ</w> <w>ουρανου</w><lb/><w>και</w> <w>προσελθων</w> <w>απεκυλισεν</w> <w>τον</w> <w>λιθον</w><lb/><w>απο</w> <w>της</w> <w>θυρας</w> <w>και</w> <w>εκαθητο</w> <w>επανω</w><lb/><w>αυτου</w></ab> <ab n="B01K28V3"><w>ην</w> <w>δε</w> <w>η</w> <w>ιδεα</w> <w>αυτου</w> <w>ως</w> <w>αστρα<lb break="no"/>πη</w> <w>και</w> <w>το</w> <w>ενδυμα</w> <w>αυτου</w> <w>λευκον</w> <w>ωσει</w><lb/><w>χιων</w></ab> <ab n="B01K28V4"><w>απο</w> <w>δε</w> <w>του</w> <w>φοβου</w> <w>αυτου</w> <w>ε<lb break="no"/>σεισθησαν</w> <w>οι</w> <w>τηρουντες</w> <w>και</w> <w>εγενοντο</w><lb/><w>ως</w> <w>νεκροι</w></ab> <ab n="B01K28V5" part="I"><w>αποκριθεις</w> <w>ο</w> <w>αγγελος</w><lb/><w>ειπεν</w> <w>ταις</w> <w>γυναιξιν</w> <w>μη</w> <w>φοβεισθαι</w> <w>υμεις</w></ab></div> </div></body></text></TEI>

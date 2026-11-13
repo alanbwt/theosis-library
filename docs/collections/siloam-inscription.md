@@ -28,3 +28,6 @@ faint letters right to left across the middle). Line numbers are Driver's.
 
 - The letters are faint in the museum photographs; the six lines cannot be read letter by letter on them.
 - Driver's reading is of 1913; later editions differ in places (e.g. zdh, line 3).
+
+## QC fixes (2026-11-12)
+The reviewer could not find the text on the photographs. No sharper open photograph of the stone exists on Wikimedia Commons (the larger Library of Congress Matson images show the PEF facsimile from a squeeze, or other inscriptions). The scan_note now says where the text is: the six lines run across the whole panel from the right-hand edge, line 1 (damaged) at the top through the crack network, its left end lost at the broken top-left corner, line 6 near the foot; the plaster-filled gap and crack a quarter of the way in from the left cut all lines; with contrast raised the letters show as rows of short strokes in the middle of the panel. Review: docs/qc/review-near-east.md; fixes: docs/qc/fixes-near-east.md.

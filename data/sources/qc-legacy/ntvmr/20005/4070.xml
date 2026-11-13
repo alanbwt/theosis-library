@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="05">05</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>United Kingdom</country>
+            <settlement>Cambridge</settlement>
+            <repository>Cambridge University Library</repository>
+            <idno>Ms. Nn. 2.41</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="g-l"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector2"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="196v" type="folio"/>
+<cb n="1"/>
+<lb/><div n="B03" type="book" part="M"><div n="B03K3" type="chapter" part="M"><ab n="B03K3V23" part="F"><w>του</w> <w>οζεια</w>
+<lb/><w>του</w> <w>αμασιου</w>
+<lb/><w>του</w> <w>ιωας</w>
+<lb/><w>του</w> <w>οχοζιου</w>
+<lb/><w>του</w> <w>ιωραμ</w>
+<lb/><w>του</w> <w>ιωσαφαδ</w>
+<lb/><w>του</w> <w>ασαφ</w>
+<lb/><w>του</w> <w>αβιουδ</w>
+<lb/><w>του</w> <w>ροβοαμ</w>
+<lb/><w>του</w> <w>σολομων</w>
+<lb/><w>του</w> <w>δαυειδ</w></ab> <ab n="B03K3V24"><note type="local">omissio</note></ab> <ab n="B03K3V25"><note type="local">omissio</note></ab> <ab n="B03K3V26"><note type="local">omissio</note></ab> <ab n="B03K3V27"><note type="local">omissio</note></ab> <ab n="B03K3V28"><note type="local">omissio</note></ab> <ab n="B03K3V29"><note type="local">omissio</note></ab> <ab n="B03K3V30"><note type="local">omissio</note></ab> <ab n="B03K3V31"><note type="local">omissio</note>
+<lb/></ab> <ab n="B03K3V32"><w>του</w> <w>ιεσσαι</w>
+<lb/><w>του</w> <app><rdg type="orig" hand="firsthand"><w>ωβηλ</w></rdg><rdg type="corr" hand="corrector2"><w>ωβηδ</w></rdg></app><note type="local">nach Parker nicht Korr.H</note>
+<lb/><w>του</w> <w>βοος</w>
+<lb/><w>του</w> <w>σαλμων</w>
+<lb/><w>του</w> <w>ναασσων</w>
+<lb/></ab> <ab n="B03K3V33"><w>του</w> <w>αμειναδαβ</w>
+<lb/><w>του</w> <w>αραμ</w>
+<lb/><w>του</w> <w>ασρωμ</w>
+<lb/><w>του</w> <w>φαρες</w>
+<lb/><w>του</w> <w>ιουδα</w>
+<lb/></ab> <ab n="B03K3V34"><w>του</w> <w>ιακωβ</w>
+<lb/><w>του</w> <app><rdg type="orig" hand="firsthand"><w>ισακ</w></rdg><rdg type="corr" hand="corrector2"><w>ισαακ</w></rdg></app><note type="local">nach Parker nicht Korr.H</note>
+<lb/><w>του</w> <w>αβρααμ</w>
+<lb/><w>του</w> <w>θαρα</w>
+<lb/><w>του</w> <w>ναχωρ</w>
+<lb/></ab> <ab n="B03K3V35"><w>του</w> <w>σερουκ</w>
+<lb/><w>του</w> <w>ραγαυ</w>
+<lb/><w>του</w> <w>φαλεκ</w>
+<lb/><w>του</w> <w>εβερ</w>
+<lb/><w>του</w> <w>σαλα</w>
+<lb/></ab> <ab n="B03K3V36" part="I"><w>του</w> <w>αρφαξαδ</w>
+<lb/><w>του</w> <w>σημ</w>
+</ab></div></div></body></text></TEI>

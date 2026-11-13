@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="05">05</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>United Kingdom</country>
+            <settlement>Cambridge</settlement>
+            <repository>Cambridge University Library</repository>
+            <idno>Ms. Nn. 2.41</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="g-l"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector1"></witness>
+<witness n="corrector2"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="419v" type="folio"/><cb n="1"/><lb/><div type="book" n="B05"><div type="chapter" n="B05K2"><ab n="B05K2V7" part="F"><w part="F">λεγοντες</w> <w>προς</w> <w>αλληλους</w><lb/><w>ουχ</w> <w>ιδου</w> <w>απαντες</w> <w>ουτοι</w> <w>εισιν</w><lb/><w>οι</w> <w>λαλουντες</w> <w>γαλιλαιοι</w><lb/></ab> <ab n="B05K2V8"><w>και</w> <w>πως</w> <w>ημεις</w> <w>ακουομεν</w><lb/><w>εκαστος</w> <app><rdg type="orig" hand="firsthand"><w>την</w> <w>διαλεκτον</w></rdg><rdg type="corr" hand="corrector1"><w>τη</w> <w>ιδια</w> <w>διαλεκτω</w></rdg></app> <w>ημων</w><lb/><w>εν</w> <w>η</w> <w>εγεννηθημεν</w><lb/></ab> <ab n="B05K2V9"><w>παρθοι</w><pc>·</pc> <w>και</w> <w>μηδοι</w> <w>και</w> <w>ελαμειται</w> <app><rdg type="orig" hand="firsthand"></rdg><rdg type="corr" hand="corrector1"><w>και</w></rdg></app><lb/><w>οι</w> <w>κατοικουντες</w> <w>την</w> <w>μεσοποταμιαν</w><lb/><w>ιουδαιαν</w> <app><rdg type="orig" hand="firsthand"></rdg><rdg type="corr" hand="corrector2"><w>τε</w></rdg></app> <w>και</w> <w>καππαδοκιαν</w><lb/><w>ποντον</w> <w>και</w> <w>την</w> <w>ασιαν</w></ab> <ab n="B05K2V10"><w>φρυγιαν</w><lb/><w>και</w> <w>παμφυλιαν</w> <w>αιγυπτον</w> <w>τε</w><lb/><w>και</w> <w>τα</w> <w>μερη</w> <w>της</w> <app><rdg type="orig" hand="firsthand"><w>λιβουης</w></rdg><rdg type="corr" hand="corrector1"><w>λιβυης</w></rdg></app><lb/><w>της</w> <w>κατα</w> <w>κυρηνην</w> <w>και</w> <w>οι</w> <w>επιδημουντες</w><lb/><w>ρωμαιοι</w></ab> <ab n="B05K2V11"><w>ιουδαιοι</w> <w>τε</w> <w>και</w> <w>προσηλυτοι</w><lb/><app><rdg type="orig" hand="firsthand"><w>κρητης</w></rdg><rdg type="corr" hand="corrector2"><w>κρηταις</w></rdg></app> <w>και</w> <app><rdg type="orig" hand="firsthand"><w>αραβοι</w></rdg><rdg type="corr" hand="corrector2"><w>αραβες</w></rdg></app><lb/><w>ακουομεν</w> <w>λαλουντων</w> <w>αυτων</w><lb/><w>ταις</w> <w>ημετεραις</w> <w>γλωσσαις</w> <w>τα</w> <w>μεγαλεια</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">θυ</hi></abbr></w><lb/></ab> <ab n="B05K2V12"><w>εξεισταντο</w> <w>δε</w> <w>παντες</w><lb/><w>και</w> <w>διηπορουν</w> <w>αλλος</w> <w>προς</w> <w>αλλον</w><lb/><w>επι</w> <w>τω</w> <w>γεγονοτι</w> <w>και</w> <w>λεγοντες</w><lb/><w>τι</w> <w>θελει</w> <w>τουτο</w> <w>ειναι</w><lb/></ab> <ab n="B05K2V13"><w>ετεροι</w> <w>δε</w> <app><rdg type="orig" hand="firsthand"><w>διεχλευαζον</w> <w>λεγοντες</w></rdg><rdg type="corr" hand="corrector2"><w>διαχλευαζοντες</w> <w>ελεγον</w></rdg></app><lb/><w>οτι</w> <w>γλευκους</w> <w>ουτοι</w> <w>μεμεστωμενοι</w> <w>εισιν</w><lb/></ab> <ab n="B05K2V14"><app><rdg type="orig" hand="firsthand"><w>τοτε</w></rdg><rdg type="corr" hand="corrector1"></rdg></app> <w>σταθεις</w> <w>δε</w> <w>ο</w> <w>πετρος</w><lb/><w>συν</w> <w>τοις</w> <app><rdg type="orig" hand="firsthand"><w>δεκα</w></rdg><rdg type="corr" hand="corrector2"><w>ενδεκα</w></rdg></app> <w>αποστολοις</w><lb/><w>επηρεν</w> <app><rdg type="orig" hand="firsthand"><w>πρωτος</w></rdg><rdg type="corr" hand="corrector1"></rdg></app> <w>την</w> <w>φωνην</w> <w>αυτου</w> <w>και</w> <w>ειπεν</w><lb/><w>ανδρες</w> <w>ιουδαιοι</w> <w>και</w> <w>παντες</w><lb/><w>οι</w> <w>κατοικουντες</w> <w>ιερουσαλημ</w><lb/><w>τουτο</w> <app><rdg type="orig" hand="firsthand"><w>ημειν</w></rdg><rdg type="corr" hand="corrector2"><w>υμειν</w></rdg></app> <w>γνωστον</w> <w>εστω</w><lb/><app><rdg type="orig" hand="firsthand"><w>ενωτισατε</w></rdg><rdg type="corr" hand="corrector1"><w>ενωτισαθε</w></rdg></app> <w>τα</w> <w>ρηματα</w> <w>μου</w><lb/></ab> <ab n="B05K2V15"><w>ου</w> <w>γαρ</w> <w>ως</w> <w>υμεις</w> <w>υπολαμβανεται</w><lb/><w>ουτοι</w> <w>μεθυουσιν</w> <app><rdg type="orig" hand="firsthand"><w>ουσης</w> <w>ωρας</w> <w>της</w> <w>ημερας</w> <w><abbr type="num"><hi rend="overline">γ</hi></abbr></w></rdg><rdg type="corr" hand="corrector1"><w>εστιν</w> <w>γαρ</w> <w>ωρα</w> <w><abbr type="num"><hi rend="overline">γ</hi></abbr></w> <w>της</w> <w>ημερας</w></rdg></app><lb/></ab> <ab n="B05K2V16" part="I"><w>αλλα</w> <w>τουτο</w> <w>εστιν</w> <w>το</w> <w part="I">ειρημενον</w></ab></div> </div></body></text></TEI>

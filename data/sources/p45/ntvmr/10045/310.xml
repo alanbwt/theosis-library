@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="P45">P45</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Ireland</country>
+            <settlement>Dublin</settlement>
+            <repository>Chester Beatty Library</repository>
+            <idno>CBL BP I</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Austria</country>
+            <settlement>Wien</settlement>
+            <repository>Österreichische Nationalbibliothek</repository>
+            <idno>Pap. G. 31974</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="Bv" type="folio"/><cb n="1"/><lb/><div type="book" n="B04"><div type="chapter" n="B04K5"><ab n="B04K5V21"><w><supplied source="na28" reason="illegible">ωσπ</supplied><unclear>ε</unclear>ρ</w> <w><unclear>γα</unclear><supplied source="na28" reason="illegible">ρ</supplied></w> <w><supplied source="na28" reason="illegible">ο</supplied></w> <w><supplied source="na28" reason="illegible"><abbr type="nomSac"><hi rend="overline">πρ</hi></abbr></supplied></w> <w><supplied source="na28" reason="illegible">εγειρει</supplied></w> <w><supplied source="na28" reason="illegible">τους</supplied></w> <w><supplied source="na28" reason="illegible">νεκρους</supplied></w> <w><supplied source="na28" reason="illegible">και</supplied></w> <w><supplied source="na28" reason="illegible">ζω<lb break="no"/>οποιει</supplied></w> <w><supplied source="na28" reason="illegible">ουτως</supplied></w> <w><supplied source="na28" reason="illegible">και</supplied></w> <w><supplied source="na28" reason="illegible">ο</supplied></w> <w><supplied source="na28" reason="illegible"><abbr type="nomSac"><hi rend="overline">υς</hi></abbr></supplied></w> <w><supplied source="na28" reason="illegible">ους</supplied></w> <w><supplied source="na28" reason="illegible">θε</supplied><unclear>λ</unclear>ει</w> <w><unclear>ζω</unclear><supplied source="na28" reason="illegible">οποιει</supplied></w></ab> <ab n="B04K5V22"><w><supplied source="na28" reason="illegible">ουδε</supplied></w> <w><supplied source="na28" reason="illegible">γαρ</supplied></w> <w><supplied source="na28" reason="illegible">ο</supplied></w> <w><supplied source="na28" reason="illegible"><abbr type="nomSac"><hi rend="overline">πρ</hi></abbr></supplied></w> <w><supplied source="na28" reason="illegible">κρινει</supplied></w> <w><supplied source="na28" reason="illegible">ου<lb break="no"/>δενα</supplied></w> <w><supplied source="na28" reason="illegible">αλλα</supplied></w> <w><supplied source="na28" reason="illegible">την</supplied></w> <w><supplied source="na28" reason="illegible">κρισιν</supplied></w> <w><supplied source="na28" reason="illegible">πα</supplied><unclear>σ</unclear>αν</w> <w>ε<unclear>δ</unclear><supplied source="na28" reason="illegible">ωκεν</supplied></w> <w><supplied source="na28" reason="illegible">τω</supplied></w> <w><supplied source="na28" reason="illegible"><abbr type="nomSac"><hi rend="overline">υω</hi></abbr></supplied></w></ab> <ab n="B04K5V23" part="I"><w><supplied source="na28" reason="illegible">ινα</supplied></w> <w><supplied source="na28" reason="illegible">παντες</supplied></w> <w><supplied source="na28" reason="illegible">τι<lb break="no"/>μωσιν</supplied></w> <w><supplied source="na28" reason="illegible">τον</supplied></w> <w><supplied source="na28" reason="illegible"><abbr type="nomSac"><hi rend="overline">υν</hi></abbr></supplied></w> <w><supplied source="na28" reason="illegible">καθως</supplied></w> <w><supplied source="na28" reason="illegible">τιμωσιν</supplied></w> <w><supplied source="na28" reason="illegible">το</supplied>ν</w> <w><abbr type="nomSac"><hi rend="overline">πρ<unclear>α</unclear></hi></abbr></w> <w><supplied source="na28" reason="illegible">ο</supplied></w> <w><supplied source="na28" reason="illegible">μη</supplied></w> <w><supplied source="na28" reason="illegible">τιμων</supplied></w> <w><supplied source="na28" reason="illegible">τον</supplied></w> <w><supplied source="na28" reason="illegible"><abbr type="nomSac"><hi rend="overline">υν</hi></abbr></supplied></w> <w><supplied source="na28" reason="illegible">ου</supplied></w> <w><supplied source="na28" reason="illegible">τιμα</supplied></w><note type="editorial" xml:id="B04K5V23-P45-1">Neues Fragment bei Skeat - McGing, Hermathena 150, 1991, 22 (mit Photo).</note></ab></div></div></body></text></TEI>

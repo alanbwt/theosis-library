@@ -34,3 +34,6 @@ which follows the stele line for line. No line-group crops were made, so every s
   as the native-script layer after a letter-by-letter check against pp. 7-10.
 - Compston's reading is of 1919. Later editions read some words differently (for example the end of line 1, the name
   of Mesha's father, now read Kemosh-yat); this is not reflected in the text.
+
+## QC fixes (2026-11-12)
+The square-script lines were plain left-aligned text in an RTL script. Each line is now a <span class="native-rtl"> (right to left) followed by a <span class="translit"> with a letter-for-letter Latin transliteration of the same line (the scheme of the Siloam and Gezer entries; mechanical, adds no reading). A translator note explains the transliteration and the dividers. Review: docs/qc/review-near-east.md; fixes: docs/qc/fixes-near-east.md.

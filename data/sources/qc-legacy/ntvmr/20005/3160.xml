@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="05">05</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>United Kingdom</country>
+            <settlement>Cambridge</settlement>
+            <repository>Cambridge University Library</repository>
+            <idno>Ms. Nn. 2.41</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="g-l"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector1"></witness>
+<witness n="corrector2"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="157v" type="folio"/><cb n="1"/><lb/><div type="book" n="B04"><div type="chapter" n="B04K13"><ab n="B04K13V32" part="F"><w part="F">και</w> <app><rdg type="orig" hand="firsthand"><w>συ</w> <w>ε</w></rdg><rdg type="corr" hand="corrector1"></rdg></app> <w>δοξασει</w> <w>αυτον</w></ab> <ab n="B04K13V33"><w>τεκνεια</w> <w>ετι</w><lb/><w>μεκρον</w> <w>μεθ</w> <w>υμων</w> <w>ειμι</w> <w>ζητησετε</w> <w>με</w><lb/><w>και</w> <w>καθως</w> <w>ειπον</w> <w>τοις</w> <w>ιουδαιοις</w><lb/><w>οπου</w> <w>εγω</w> <w>υπαγω</w> <w>υμεις</w> <w>ου</w> <w>δυνασθαι</w><lb/><w>ελθειν</w> <w>και</w> <w>υμειν</w> <w>λεγω</w> <w>αρτι</w><lb/></ab> <ab n="B04K13V34"><w>εντολην</w> <w>καινην</w> <w>διδωμι</w> <w>υμειν</w><lb/><w>ινα</w> <w>αγαπατε</w> <w>αλληλους</w> <w>καθως</w> <w>καγω</w><lb/><w>ηγαπησα</w> <w>υμας</w> <w>ινα</w> <w>και</w> <w>υμεις</w><lb/><app><rdg type="orig" hand="firsthand"><w>αλλαπατε</w></rdg><rdg type="corr" hand="corrector1"><w>αγαπατε</w></rdg></app> <w>αλληλους</w></ab> <ab n="B04K13V35"><w>εν</w> <w>τουτω</w> <w>γαρ</w><lb/><w>γνωσονται</w> <w>παντες</w> <w>οτι</w> <w>εμοι</w><lb/><w>μαθηται</w> <w>εστε</w> <w>εαν</w> <w>αγαπην</w> <w>εχητε</w><lb/><w>εν</w> <w>αλληλοις</w><pc>·</pc></ab> <ab n="B04K13V36"><w>λεγει</w> <w>αυτω</w> <w>σιμων</w> <w>πετρος</w><lb/><w><abbr type="nomSac"><hi rend="overline">κε</hi></abbr></w> <w>που</w> <w>υπαγεις</w><pc>·</pc> <w>λεγει</w> <w>αυτω</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">ιης</hi></abbr></w><lb/><w>οπου</w> <w>εγω</w> <w>υπαγω</w> <w>ου</w> <w>δυνασαι</w> <w>μοι</w> <app><rdg type="orig" hand="firsthand"><w>συν<lb break="no"/>ακολουθησαι</w></rdg><rdg type="corr" hand="corrector1"><w>συ</w> <w>νυν</w> <w>ακολουθησαι</w></rdg><rdg type="corr" hand="corrector2"><w>συνακολουθησαι</w></rdg></app> <w>αρτι</w> <w>υστερον</w> <w>δε</w> <w>μοι</w><lb/><w>ακολουθησεις</w></ab> <ab n="B04K13V37"><w>λεγει</w> <w>αυτω</w> <w><abbr type="nomSac"><hi rend="overline">κε</hi></abbr></w><lb/><w>δια</w> <w>τι</w> <w>ου</w> <w>δυναμαι</w> <w>σοι</w> <w>νυν</w> <w>ακολουθησαι</w><lb/><w>αρτι</w> <w>την</w> <w>ψυχην</w> <w>μου</w> <w>υπερ</w> <w>σου</w> <w>θησω</w><lb/></ab> <ab n="B04K13V38"><w>απεκρειθη</w> <w><abbr type="nomSac"><hi rend="overline">ιης</hi></abbr></w> <w>και</w> <w>ειπεν</w> <w>αυτω</w> <w>την</w> <w>ψυχην</w> <w>σου</w><lb/><w>υπερ</w> <w>εμου</w> <w>θησεις</w><pc>·</pc> <w>αμην</w> <w>αμην</w> <w>λεγω</w> <app><rdg type="orig" hand="firsthand"><w>σου</w></rdg><rdg type="corr" hand="corrector1"><w>σοι</w></rdg></app><lb/><w>οτι</w> <w>ου</w> <w>μη</w> <w>αλεκτωρ</w> <w>φωνησει</w> <w>εως</w> <w>ου</w><lb/><w>αρνηση</w> <w>με</w> <w>τρις</w><pc>·</pc></ab></div> <div type="chapter" n="B04K14"><ab n="B04K14V1"><w>και</w> <w>ειπεν</w> <w>τοις</w> <w>μαθηταις</w> <w>αυτου</w><lb/><w>μη</w> <w>ταρασσεσθω</w> <w>υμων</w> <w>η</w> <w>καρδια</w><lb/><w>πιστευετε</w> <w>εις</w> <w>τον</w> <w><abbr type="nomSac"><hi rend="overline">θν</hi></abbr></w> <w>και</w> <w>εις</w> <w>εμε</w><lb/><w>πιστευετε</w></ab> <ab n="B04K14V2"><w>εν</w> <w>τη</w> <w>οικεια</w> <w>του</w> <w>πατρος</w> <w>μου</w><lb/><w>μοναι</w> <w>πολλαι</w> <w>εισιν</w> <w>ει</w> <w>δε</w> <w>μη</w> <w>ειπον</w> <w>αν</w><lb/><w>υμειν</w> <w>οτι</w> <w>πορευομαι</w> <w>ετοιμασαι</w><lb/><w>τοπον</w> <w>υμειν</w></ab> <ab n="B04K14V3"><w>καν</w> <w>πορευθω</w> <w>ετοιμασαι</w><lb/><w>τοπον</w> <w>υμειν</w> <w>ερχομαι</w> <w>παλιν</w><lb/><w>και</w> <w>παραλημψομαι</w> <w>υμας</w> <w>προς</w> <w>εμαυτον</w><lb/><w>ινα</w> <w>οπου</w> <w>ειμι</w> <w>εγω</w> <w>και</w> <w>υμεις</w> <w>εσθαι</w><lb/></ab> <ab n="B04K14V4"><w>και</w> <w>οπου</w> <w>υπαγω</w> <w>οιδατε</w> <w>και</w> <w>την</w> <w>οδον</w> <w>οιδατε</w><lb/></ab> <ab n="B04K14V5" part="I"><w>λεγει</w> <w>αυτω</w> <w>θωμας</w> <w>ο</w> <w>λεγομενος</w> <w part="I">διδυμος</w></ab></div> </div></body></text></TEI>

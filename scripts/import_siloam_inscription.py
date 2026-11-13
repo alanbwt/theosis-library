@@ -125,8 +125,16 @@ def main():
         "scan_note": (
             "All six lines are on the one inscribed panel, which both photographs show whole (checked on the images: the "
             "smoothed panel cut from the tunnel wall in 1891, cracked and with pieces reset at its left end, and the incised "
-            "letters running right to left across it; in the museum light the letters are faint and show best in the middle "
-            "of the panel). Line numbers are Driver's, who prints the text line for line with the stone."),
+            "letters running right to left across it). Line numbers are Driver's, who prints the text line for line with the stone. "
+            "Where the text is on the photographs: the panel is the inscribed area itself, and the six lines run across its whole "
+            "width, each beginning at the right-hand edge (the script reads right to left), line 1 at the top and line 6 near the "
+            "foot. Line 1, the damaged line, runs through the network of cracks across the upper part of the panel, and its "
+            "left-hand end is lost at the broken top-left corner; the plaster-filled gap at the top edge and the crack that runs "
+            "down from it, a quarter of the way in from the left, cut through all the lines (compare the line-by-line facsimile "
+            "from a squeeze published by the Palestine Exploration Fund, Library of Congress matpc.04121). The letters are shallow incisions on a light, cracked surface and are "
+            "hard to see at this resolution; with the contrast raised they show as rows of short strokes in the middle of the "
+            "panel, to the right of that crack. No sharper open photograph of the stone itself was found (Wikimedia Commons, "
+            "searched 2026-11-12: the other open images show casts, the squeeze or drawings)."),
     }]
 
     intro = (

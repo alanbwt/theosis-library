@@ -51,3 +51,6 @@ page it uses and which sections they belong to.
   Photius note, but without legible foliation the images are cited by number only.
 - The English collation relied on OCR plus page images; places where the OCR was illegible were read
   on the images page by page (pp. 35-95, 157-159).
+
+## QC fixes (2026-11-12)
+Page note for DigiVatLib image 0021, right page (sections 1.22 and 1.23): it quoted the edition ('τιμᾶν τοῦτο τὸ μόριον'); the page begins 'τοῦτο τὸ μόριον ἔν τε τοῖς μυστηρίοις', and the edition's 'τιμᾶν' is not on it nor at the end of the previous page (checked on the images). The note now quotes the page and says so. Review: docs/qc/review-near-east.md; fixes: docs/qc/fixes-near-east.md.

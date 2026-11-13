@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="02">02</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>United Kingdom</country>
+            <settlement>London</settlement>
+            <repository>British Library</repository>
+            <idno>Royal 1 D.VIII</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="29v" type="folio"/><cb n="1"/><lb/><div type="book" n="B01"><div type="chapter" n="B01K28"><ab n="B01K28V19" part="F"><w>αυτους</w> <w>εις</w> <w>το</w> <w>ονομα</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">πρς</hi></abbr></w> <w>και</w><lb/><w>του</w> <w><abbr type="nomSac"><hi rend="overline">υυ</hi></abbr></w><pc>·</pc> <w>και</w> <w>του</w> <w>αγιου</w> <w><abbr type="nomSac"><hi rend="overline">πνς</hi></abbr></w><pc>·</pc></ab> <ab n="B01K28V20"><w>διδασκον<lb break="no"/>τες</w> <w>αυτους</w> <w>τηρειν</w> <w>παντα</w> <w>οσα</w> <w>ενε<lb break="no"/>τειλαμην</w> <w>υμιν</w><pc>·</pc> <w>και</w> <w>ιδου</w> <w>εγω</w> <w>με<lb break="no"/>θ</w> <w>υμων</w> <w>ειμι</w> <w>πασας</w> <w>τας</w> <w>ημερας</w><lb/><w>εως</w> <w>της</w> <w>συντελειας</w> <w>του</w> <w>αιωνος</w> <app><rdg type="orig" hand="firsthand"></rdg><rdg type="corr" hand="corrector"><w>αμην</w></rdg></app><lb/></ab></div><div type="explicit" n="B01explicit"><ab><w>ευαγγελιον</w><lb/><w>κατα</w> <w>ματ<lb break="no"/>θαιον</w></ab></div> </div></body></text></TEI>

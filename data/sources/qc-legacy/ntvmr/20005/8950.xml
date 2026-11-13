@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="05">05</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>United Kingdom</country>
+            <settlement>Cambridge</settlement>
+            <repository>Cambridge University Library</repository>
+            <idno>Ms. Nn. 2.41</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="g-l"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector1"></witness>
+<witness n="corrector2"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="440v" type="folio"/><cb n="1"/><lb/><div type="book" n="B05"><div type="chapter" n="B05K7"><ab n="B05K7V26"><app><rdg type="orig" hand="firsthand"><w>τοτε</w></rdg><rdg type="corr" hand="corrector1"><w>τη</w> <w>τε</w></rdg></app> <w>επιουση</w> <w>ημερα</w> <w>ωφθη</w> <w>αυτοις</w> <app><rdg type="orig" hand="firsthand"><w>μαχομενος</w></rdg><rdg type="corr" hand="corrector1"><w>μαχομενοις</w></rdg></app><lb/><app><rdg type="orig" hand="firsthand"><w>και</w> <w>ειδεν</w> <w>αυτους</w> <w>αδικουντας</w></rdg><rdg type="corr" hand="corrector1"></rdg></app><lb/><w>και</w> <w>συνηλλασσεν</w> <w>αυτους</w> <w>εις</w> <w>ειρηνην</w> <w>ειπων</w><lb/><w>τι</w> <w>ποιειτε</w> <w>ανδρες</w> <w>αδελφοι</w><lb/><w>ινατι</w> <w>αδεικειται</w> <app><rdg type="orig" hand="firsthand"><w>εις</w></rdg><rdg type="corr" hand="corrector1"></rdg></app> <w>αλληλους</w></ab> <ab n="B05K7V27"><w>ο</w> <w>δε</w> <w>αδικων</w> <w>τον</w> <w>πλησιον</w><lb/><w>απωσατο</w> <w>αυτον</w> <w>ειπας</w><lb/><w>τις</w> <w>σε</w> <w>κατεστησεν</w> <w>αρχοντα</w><lb/><w>και</w> <w>δικαστην</w> <w>εφ</w> <w>ημας</w><lb/></ab> <ab n="B05K7V28"><w>μη</w> <w>ανελειν</w> <w>με</w> <w>συ</w> <w>θελεις</w><lb/><w>ον</w> <w>τροπον</w> <w>ανειλες</w> <w>αιχθες</w> <w>τον</w> <w>αιγυπτιον</w><lb/></ab> <ab n="B05K7V29"><app><rdg type="orig" hand="firsthand"><w>ουτως</w> <w>και</w> <w>εφυγαδευσεν</w></rdg><rdg type="corr" hand="corrector2"><w>εφυγεν</w> <w>δε</w></rdg></app> <w>μωυσης</w><lb/><w>εν</w> <w>τω</w> <w>λογω</w> <w>τουτω</w><lb/><w>και</w> <w>εγενετο</w> <w>παροικος</w> <w>εν</w> <w>γη</w> <w>μαδιαμ</w><lb/><w>ου</w> <w>εγεννησεν</w> <w>υιους</w> <app><rdg type="orig" hand="firsthand"><w>δυω</w></rdg><rdg type="corr" hand="corrector2"><w>δυο</w></rdg></app><lb/></ab> <ab n="B05K7V30"><w>και</w> <w>μετα</w> <w>ταυτα</w> <app><rdg type="orig" hand="firsthand"><w>πλησθεντων</w> <w>αυτω</w> <w>ετη</w></rdg><rdg type="corr" hand="corrector1"><w>πληρωθεντων</w> <w>ετων</w></rdg></app> <w><abbr type="num"><hi rend="overline">μ</hi></abbr></w><lb/><w>ωφθη</w> <w>αυτω</w> <w>εν</w> <w>τη</w> <w>ερημω</w> <w>του</w> <app><rdg type="orig" hand="firsthand"><w>ορου</w></rdg><rdg type="corr" hand="corrector1"><w>ορους</w></rdg></app> <w>σεινα</w><lb/><w>αγγελος</w> <w><abbr type="nomSac"><hi rend="overline">κυ</hi></abbr></w> <w>εν</w> <w>φλογι</w> <w>πυρος</w> <w>βατου</w><lb/></ab> <ab n="B05K7V31"><w>ο</w> <w>δε</w> <w>μωυσης</w> <w>ειδων</w> <w>εθαυμαζεν</w> <w>το</w> <w>οραμα</w><lb/><w>και</w> <w>προσερχομενου</w> <w>αυτου</w> <app><rdg type="orig" hand="firsthand"><w>και</w></rdg><rdg type="corr" hand="corrector1"></rdg></app> <w>κατανοησαι</w><lb/><w>ο</w> <w><abbr type="nomSac"><hi rend="overline">κς</hi></abbr></w> <w>ειπεν</w> <w>αυτω</w> <w>λεγων</w><lb/></ab> <ab n="B05K7V32"><w>εγω</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">θς</hi></abbr></w> <w>των</w> <w>πατερων</w> <w>σου</w><lb/><w>ο</w> <w><abbr type="nomSac"><hi rend="overline">θς</hi></abbr></w> <w>αβρααμ</w> <w>και</w> <w><abbr type="nomSac"><hi rend="overline">θς</hi></abbr></w> <w>ισακ</w> <w>και</w> <w><abbr type="nomSac"><hi rend="overline">θς</hi></abbr></w> <w>ιακωβ</w><lb/><w>εντρομος</w> <w>δε</w> <w>γενομενος</w> <w>μωυσης</w><lb/><w>ουκ</w> <w>ετολμα</w> <w>κατανοησαι</w><lb/></ab> <ab n="B05K7V33"><w>και</w> <w>εγενετο</w> <w>φωνη</w> <w>προς</w> <w>αυτον</w><lb/><app><rdg type="orig" hand="firsthand"><w>λυσ<unclear>ον</unclear></w></rdg><rdg type="corr" hand="corrector2"><w>λυσ<unclear>α</unclear>ι</w></rdg></app> <w>το</w> <w>υποδημα</w> <w>των</w> <w>ποδων</w> <w>σου</w><lb/><w>ο</w> <w>γαρ</w> <w>τοπος</w> <app><rdg type="orig" hand="firsthand"><w>ου</w></rdg><rdg type="corr" hand="corrector1"><w>εφ</w> <w>ω</w></rdg></app> <w>εστηκας</w> <w>γη</w> <w>αγια</w> <w>εστιν</w><lb/></ab> <ab n="B05K7V34"><app><rdg type="orig" hand="firsthand"><w>και</w> <w>ιδων</w> <w>γαρ</w></rdg><rdg type="corr" hand="corrector1"><w>ιδων</w></rdg></app> <w>ιδον</w><lb/><w>την</w> <w>κακωσιν</w> <w>του</w> <w>λαου</w> <app><rdg type="orig" hand="firsthand"></rdg><rdg type="corr" hand="corrector2"><w>μου</w></rdg></app> <w>του</w> <w>εν</w> <app><rdg type="orig" hand="firsthand"><w>εγυπτω</w></rdg><rdg type="corr" hand="corrector2"><w>αιγυπτω</w></rdg></app><lb/><w>και</w> <w>του</w> <w>στεναγμου</w> <w>αυτου</w> <w>ακηκοα</w><lb/><w>και</w> <w>κατεβην</w> <w>εξελεσθαι</w> <w>αυτους</w><lb/><w>και</w> <w>νυν</w> <w>δευρο</w> <w>αποστειλω</w> <w>σε</w> <w>εις</w> <w>αιγυπτον</w></ab></div> </div></body></text></TEI>

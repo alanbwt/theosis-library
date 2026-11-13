@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="GA05"><teiHeader>
+    <fileDesc>      
+      <titleStmt>
+        <title>A Transcription of Matthew in 05</title>
+        <title type="document" key="20005" n="05">GA 05</title>
+        <title type="collection" level="s" xml:lang="en">The New Testament</title>
+        <title type="collection" level="s" xml:lang="de">Das Neue Testament</title>
+        <title type="work" level="m" xml:lang="de" n="01">The Gospel according to Matthew</title>
+        <title type="short" level="m" xml:lang="de" n="01">Matthew</title>      
+        <respStmt>
+          <resp>Created by</resp>
+          <name type="org">the Institut für neutestamentliche Textforschung, Münster, Germany</name>
+        </respStmt>       
+        <respStmt>
+          <resp>XML conversion by</resp>
+          <name type="org">the Institute for Textual Scholarship and Electronic Editing, Birmingham</name>
+        </respStmt>      
+        <sponsor>
+          <name type="org">Institut für neutestamentliche Textforschung, Münster, Germany</name>
+        </sponsor>
+      </titleStmt>
+      <editionStmt>
+        <edition n="2.0">Version 2.0, created on <date>26.7.2013</date></edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>
+          <name type="org">Institut für neutestamentliche Textforschung</name>
+          <name type="org">Westfälische Wilhelms-Universität Münster</name>
+        </publisher>
+        <date>26.7.2013</date>
+        <availability>
+          <p>All rights reserved by the INTF</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <msDesc>
+          <msIdentifier>
+            <altIdentifier type="GA">
+              <idno>05</idno>
+            </altIdentifier>
+            <altIdentifier type="Liste">
+              <idno>20005</idno>
+            </altIdentifier>
+          </msIdentifier>
+        </msDesc>
+      <listWit><witness xml:id="firsthand"/><witness xml:id="corrector1"/><witness xml:id="corrector1V"/><witness xml:id="corrector2"/><witness xml:id="corrector2a"/><witness xml:id="corrector2b"/><witness xml:id="corrector3"/></listWit></sourceDesc>
+    </fileDesc>
+    <encodingDesc n="1.5">
+      <projectDesc>
+        <p>This transcription was made by INTF in conjunction with its electronic and printed
+          editions of the New Testament (Nestle-Aland Novum Testamentum Graece, Novum Testamentum
+          Graecum Editio Critica Maior, NTtranscripts)</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>The initial transcription file was a plain text file for use with COLLATE, later
+          converted to XML according to the Text Encoding Initiative P5 guidelines.</p>
+      	<p>The XML specifications used are version 1.5 of the IGNTP Guidelines available at <ptr target="http://epapers.bham.ac.uk/1892/"/>
+      	</p></editorialDecl>
+      <variantEncoding method="parallel-segmentation" location="internal"/>
+    	
+    </encodingDesc>
+  </teiHeader>
+
+  <text xml:lang="grc"><body><note type="local" xml:id="BKV-05-1">Korrektorengruppen nach Parker S.48 f</note><pb n="003v" type="folio"/><cb n="1"/><lb/><div type="book" n="B01"><div type="chapter" n="B01K1"><ab n="B01K1V20" part="F"><w>παραλαβειν</w> <w>μαριαμ</w> <w>την</w> <w>γυναικα</w> <w>σου</w><lb/><w>το</w> <w>γαρ</w> <w>εν</w> <w>αυτη</w> <w>γεννηθεν</w> <w>εκ</w> <w><abbr type="nomSac"><hi rend="overline">πνς</hi></abbr></w> <w>αγιου</w> <w>εστιν</w><lb/></ab> <ab n="B01K1V21"><w>τεξεται</w> <w>δε</w> <w>υιον</w><lb/><w>και</w> <w>καλεσεις</w> <w>το</w> <w>ονομα</w> <w>αυτου</w> <w><abbr type="nomSac"><hi rend="overline">ιην</hi></abbr></w><lb/><w>αυτος</w> <w>γαρ</w> <w>σωσει</w> <w>τον</w> <w>λαον</w> <w>αυτου</w><lb/><w>απο</w> <w>των</w> <w>αμαρτιων</w> <w>αυτων</w><lb/></ab> <ab n="B01K1V22"><w>τουτο</w> <w>δε</w> <w>ολον</w> <w>γεγονεν</w><lb/><w>ινα</w> <w>πληρωθη</w> <w>το</w> <w>ρηθεν</w> <w>υπο</w> <w><abbr type="nomSac"><hi rend="overline">κυ</hi></abbr></w><lb/><w>δια</w> <w>ησαιου</w> <w>του</w> <w>προφητου</w> <w>λεγοντος</w><lb/></ab> <ab n="B01K1V23"><w>ιδου</w> <w>η</w> <w>παρθενος</w> <w>εν</w> <w>γαστρι</w> <w>εξει</w><lb/><w>και</w> <w>τεξετε</w> <w>υιον</w><pc>·</pc> <w>και</w> <w>καλεσεις</w> <w>το</w> <w>ονομα</w> <w>αυτου</w><lb/><w>ενμανουηλ</w><lb/><w>ο</w> <w>εστιν</w> <w>μεθερμηνευομενον</w> <w>μεθ</w> <w>ημων</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">θς</hi></abbr></w><lb/></ab> <ab n="B01K1V24"><w>διεγερθεις</w> <w>δε</w> <w>ο</w> <w>ιωσηφ</w> <w>απο</w> <w>του</w> <w>υπνου</w> <w>εποιησεν</w><lb/><w>ως</w> <w>προσεταξεν</w> <w>αυτω</w> <w>ο</w> <w>αγγελος</w> <w><abbr type="nomSac"><hi rend="overline">κυ</hi></abbr></w><lb/><w>και</w> <w>παρελαβεν</w> <w>την</w> <w>γυναικα</w> <w>αυτου</w><lb/></ab> <ab n="B01K1V25"><w>και</w> <w>ουκ</w> <w>εγνω</w> <w>αυτην</w><lb/><w>εως</w> <w>ου</w> <w>ετεκεν</w> <w>τον</w> <w>υιον</w> <app><rdg type="orig" hand="firsthand"><w>αυτης</w></rdg><rdg type="corr" hand="corrector1"></rdg></app><lb/><w>τον</w> <w>πρωτοτοκον</w><lb/><w>και</w> <w>εκαλεσεν</w> <w>το</w> <w>ονομα</w> <w>αυτου</w> <w><abbr type="nomSac"><hi rend="overline">ιην</hi></abbr></w><lb/></ab></div><div type="chapter" n="B01K2"><ab n="B01K2V1"><w>του</w> <w>δε</w> <w><abbr type="nomSac"><hi rend="overline">ιηυ</hi></abbr></w> <w>γεννηθεντος</w><lb/><w>εν</w> <w>βηθλεεμ</w> <w>της</w> <w>ιουδαιας</w><lb/><w>εν</w> <w>ημεραις</w> <w>ηρωδους</w> <w>του</w> <w>βασιλεως</w><lb/><w>ειδου</w> <w>μαγοι</w> <w>απο</w> <w>ανατολων</w> <w>παρεγενοντο</w><lb/><w>εις</w> <w>ιεροσολυμα</w></ab> <ab n="B01K2V2"><w>λεγοντες</w><lb/><w>που</w> <w>εστιν</w> <w>ο</w> <w>τεχθεις</w> <w>βασιλευς</w> <w>των</w> <w>ιουδαιων</w><lb/><w>ειδομεν</w> <w>γαρ</w> <w>αυτου</w> <w>τον</w> <w>αστερα</w> <w>εν</w> <w>τη</w> <w>ανατολη</w><lb/><w>και</w> <w>ηλθομεν</w> <w>προσκυνησαι</w> <w>αυτω</w><lb/></ab> <ab n="B01K2V3"><w>ακουσας</w> <w>δε</w> <w>ο</w> <w>βασιλευς</w> <w>ηρωδης</w> <w>εταραχθη</w><lb/><app><rdg type="orig" hand="firsthand"><w>κα</w></rdg><rdg type="corr" hand="corrector1"><w>και</w></rdg></app> <w>ιεροσολυμα</w> <w>μετ</w> <w>αυτου</w><lb/></ab> <ab n="B01K2V4" part="I"><w>και</w> <w>συναγαγων</w> <w>παντας</w><lb/><w>τους</w> <w>αρχιερεις</w><lb/><w>και</w> <w>γραμματεις</w> <w>του</w> <w>λαου</w> <w>επυνθανετο</w><note type="editorial" xml:id="B01K2V4-05-1">Die ganze Zeile durch C3 nachgezogen.</note></ab></div></div></body></text></TEI>

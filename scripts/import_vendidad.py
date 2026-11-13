@@ -170,7 +170,19 @@ def english(fargard):
         raw = pages[str(n)]
         segs = re.findall(r'<section begin="%s"\s*/>(.*?)(?:<section end="%s"\s*/>|$)' % (sec, sec), raw, re.S)
         parts.append(" ".join(segs))
-    text = ws_clean("\n".join(parts))
+    # join the pages; a sentence that runs over a page break (the page ends with a {{hws}} hyphenation or without
+    # closing punctuation, and the next begins with {{hwe}} or a lower-case word) is joined without a line break
+    # (QC 2026-11-12: these joins had printed a stray <br> inside 2.14 and 2.40)
+    joined = parts[0] if parts else ""
+    for nxt in parts[1:]:
+        a, b = joined.rstrip(), nxt.lstrip()
+        if re.search(r"\{\{hws\|[^{}]*\}\}$", a) and b.startswith("{{hwe|"):
+            joined = a + b
+        elif re.search(r"[A-Za-z,;]$", a) and re.match(r"(?:<ref[^>]*>.*?</ref>)?\s*[a-z]", b, re.S):  # may open with a footnote
+            joined = a + " " + b
+        else:
+            joined = joined + "\n" + nxt
+    text = ws_clean(joined)
     start = text.find("1. Ahura Mazda spake") if fargard == 1 else text.find("1. Zarathustra asked")
     assert start > 0, fargard
     text = text[start:]
@@ -216,6 +228,14 @@ def build():
                 "in this order. The opening words of the pages inside the fargard could not be confirmed on the images, so the "
                 "paragraphs are not assigned to single pages: all of them are on these pages together. As a Vendidad Sade, the "
                 "manuscript adds liturgical formulas in red at the end of the fargard.")
+        if fg["n"] == 2:  # QC 2026-11-12
+            note += (" Short forms: the Avestan text used (avesta.org's transliteration of Geldner) gives paragraphs 12-14 as one "
+                     "abbreviated line, 'âat ýimâi xshathrâi xshvash-satô-zima hañjaseñti, âat hê îm zå bvat perene ... mashyânãmca', "
+                     "because they repeat the wording of paragraphs 8-10 with 'six hundred winters' in place of 'three hundred'; "
+                     "the English gives paragraphs 12, 13 and 14 in full. Paragraph 43 is likewise abbreviated in the Avestan "
+                     "('dâtare ... ashâum') and given in full in the English. The Avestan is shown as the source gives it and is "
+                     "not expanded here; the manuscript pages carry the passage, but where it stands on them could not be "
+                     "confirmed (see above).")
         if fg["n"] == 1:
             note += (" Darmesteter notes that clause 2 of this fargard in Vendidad Sade manuscripts consists of Avestan quotations "
                      "from the Pahlavi commentary; that clause is not in the Avestan text shown and is not translated.")

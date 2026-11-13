@@ -148,6 +148,36 @@ def hebrew():
     return out
 
 
+# Letter-for-letter Latin transliteration of the square script (the same scheme as the Siloam and Gezer
+# entries); it adds no reading of its own.  QC 2026-11-12: square-script lines are set right to left
+# (<span class="native-rtl">), each followed by its transliteration (<span class="translit">).
+HEB2LAT = {
+    "א": "ʾ", "ב": "b", "ג": "g", "ד": "d", "ה": "h", "ו": "w", "ז": "z", "ח": "ḥ", "ט": "ṭ",
+    "י": "y", "כ": "k", "ך": "k", "ל": "l", "מ": "m", "ם": "m", "נ": "n", "ן": "n", "ס": "s",
+    "ע": "ʿ", "פ": "p", "ף": "p", "צ": "ṣ", "ץ": "ṣ", "ק": "q", "ר": "r", "ש": "š", "ת": "t",
+}
+
+
+def romanize(heb):
+    """Square-script line (may contain the lacuna span) -> transliteration; markup and signs kept."""
+    out, i = [], 0
+    while i < len(heb):
+        if heb[i] == "<":
+            j = heb.index(">", i) + 1
+            out.append(heb[i:j])
+            i = j
+            continue
+        ch = heb[i]
+        if ch in HEB2LAT:
+            out.append(HEB2LAT[ch])
+        elif ch in " ·|[]?…\u0305":
+            out.append(ch)
+        else:
+            raise ValueError(f"unexpected character {ch!r} in {heb!r}")
+        i += 1
+    return "".join(out)
+
+
 def main():
     SCAN_DIR.mkdir(parents=True, exist_ok=True)
     out = ROOT / "site" / "assets" / "scans" / SCAN
@@ -161,7 +191,8 @@ def main():
 
     sections = []
     for a, b, topic in GROUPS:
-        orig = "<br>".join(f"<sup>{n}</sup>{heb[n]}" for n in range(a, b + 1))
+        orig = "".join(f'<span class="native-rtl"><sup>{n}</sup> {heb[n]}</span>'
+                       f'<span class="translit"><sup>{n}</sup> {romanize(heb[n])}</span>' for n in range(a, b + 1))
         text = "<br>".join(f"<sup>{n}</sup>{eng[n]}" for n in range(a, b + 1))
         sections.append({
             "section": f"{a}-{b}",
@@ -193,13 +224,14 @@ def main():
     entry = {
         "id": TID, "slug": TID,
         "title": "Mesha Stele (Moabite Stone), Louvre AO 5066",
-        "language": "Moabite (Hebrew square script, Compston 1919) / English (Compston 1919)",
+        "language": "Moabite (Hebrew square script and transliteration, Compston 1919) / English (Compston 1919)",
         "source": "Louvre AO 5066 photograph (Wikimedia Commons, CC BY-SA 4.0) + H. F. B. Compston's 1919 text and translation (public domain)",
         "description": "The Mesha Stele (c. 840 BCE), in which Mesha king of Moab tells of his revolt against Omri's house of Israel and names YHWH, "
                        "line by line with Compston's 1919 text and translation and the photograph of the stele.",
         "introduction": intro,
         "translator_notes": [
             "Compston's English is printed line for line with the stele, so words broken between lines are hyphenated as he prints them.",
+            "Each line is given in Compston's Hebrew square script (read right to left) and below it in a letter-for-letter Latin transliteration of that same text (ʾ b g d h w z ḥ ṭ y k l m n s ʿ p ṣ q r š t); the transliteration is mechanical and adds no reading of its own. · and | are the stele's word and sentence dividers; an overline marks a letter Compston gives as uncertain.",
             "Compston: \"Words in italics are required by English idiom: they are not in the original. Words and letters within square brackets are restored conjecturally. Words within curved brackets are alternative renderings.\"",
         ] + [f"Compston's note: {re.sub(r'<[^>]+>', '', n)}" for n in notes],
         "translation": sections,
@@ -236,7 +268,7 @@ def main():
             "source_url": LOUVRE,
             "critical_edition": "H. F. B. Compston, The Inscription on the Stele of Mesa (1919)",
             "translator_name": "H. F. B. Compston (1919)",
-            "original_lang_label": "Moabite · Hebrew square script (Compston)",
+            "original_lang_label": "Moabite · Hebrew square script (Compston) and transliteration",
             "original_lang_code": "obm",
             "edition_label": "",
             "search_terms": "mesha stele moabite stone dibon omri israel yhwh chemosh kemosh 2 kings 3 louvre ao 5066 kai 181",

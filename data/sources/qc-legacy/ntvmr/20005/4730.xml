@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="05">05</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>United Kingdom</country>
+            <settlement>Cambridge</settlement>
+            <repository>Cambridge University Library</repository>
+            <idno>Ms. Nn. 2.41</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="g-l"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector1"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="229v" type="folio"/>
+<cb n="1"/>
+<lb/><div n="B03" type="book" part="M"><div n="B03K10" type="chapter" part="M"><ab n="B03K10V29" part="F"><w>και</w> <w>τις</w> <w>εστιν</w> <w>μου</w> <w>πλησιον</w></ab> <ab n="B03K10V30"><w>υπολαβων</w> <w>δε</w>
+<lb/><w>ο</w> <w><abbr type="nomSac"><hi rend="overline">ιης</hi></abbr></w> <w>ειπεν</w> <w>αυτω</w> <w>ανθρωπος</w> <w>τις</w>
+<lb/><w>κατεβενεν</w> <w>απο</w> <w>ιερουσαλημ</w> <w>εις</w> <w>ιεριχω</w>
+<lb/><w>και</w> <w>λησταις</w> <app><rdg type="orig" hand="firsthand"><w>περιεπεν</w></rdg><rdg type="corr" hand="corrector1"><w>περιεπεσεν</w></rdg></app><note type="local">Scrivener C</note> <w>οι</w> <w>και</w> <w>εκδυσαντες</w>
+<lb/><w>και</w> <w>πληγας</w> <w>επειθεντες</w> <w>απηλθον</w>
+<lb/><w>αφεντες</w> <w>ημιθανη</w></ab> <ab n="B03K10V31"><w>κατα</w> <w>τυχα</w>
+<lb/><w>ιερευς</w> <w>τις</w> <w>καταβαινων</w> <w>εν</w> <w>τη</w> <w>οδω</w> <w>εκεινη</w>
+<lb/><w>και</w> <app><rdg type="orig" hand="firsthand"><w>ιδων</w></rdg><rdg type="corr" hand="corrector1"><w>ειδων</w></rdg></app><note type="local">Scrivener A</note> <w>αυτον</w> <w>αντιπαρηλθεν</w></ab> <ab n="B03K10V32"><w>ομοιως</w>
+<lb/><w>δε</w> <w>και</w> <w>λευειτης</w> <w>γενομενος</w> <w>κατα</w> <w>τον</w>
+<lb/><w>τοπον</w> <w>και</w> <app><rdg type="orig" hand="firsthand"><w>ιδων</w></rdg><rdg type="corr" hand="corrector1"><w>ειδων</w></rdg></app><note type="local">Scrivener A</note> <w>αυτον</w> <w>αντιπαρηλθεν</w>
+<lb/></ab> <ab n="B03K10V33"><w>σαμαριτης</w> <w>δε</w> <w>τις</w> <w>οδευων</w> <w>ηλθεν</w> <w>κατ</w> <w>αυτον</w>
+<lb/><w>και</w> <app><rdg type="orig" hand="firsthand"><w>ιδων</w></rdg><rdg type="corr" hand="corrector1"><w>ειδων</w></rdg></app><note type="local">Scrivener A</note> <w>αυτον</w> <w>εσπλαγχισθη</w></ab> <ab n="B03K10V34"><w>και</w>
+<lb/><w>προσελθων</w> <w>κατεδησεν</w> <w>τα</w> <w>τραυματα</w> <w>αυτου</w>
+<lb/><w>επιχεων</w> <w>ελεον</w> <w>και</w> <w>οινον</w> <w>και</w> <w>επιβιβασας</w>
+<lb/><w>αυτον</w> <w>επι</w> <w>το</w> <w>ιδιον</w> <w>κτηνος</w> <w>ηγαγεν</w> <w>αυτον</w>
+<lb/><w>εις</w> <w>πανδοχειον</w> <w>και</w> <w>επεμεληθη</w> <w>αυτου</w>
+<lb/></ab> <ab n="B03K10V35"><w>και</w> <w>επι</w> <w>την</w> <w>αυριον</w> <w>εκβαλων</w> <w>δηναρια</w> <w>δυο</w>
+<lb/><w>εδωκεν</w> <w>τω</w> <app><rdg type="orig" hand="firsthand"><w>πανδοκει</w></rdg><rdg type="corr" hand="corrector1"><w>πανδοχει</w></rdg></app><note type="local">Scrivener A</note> <w>και</w> <w>ειπεν</w>
+<lb/><w>επιμεληθητι</w> <w>αυτου</w> <w>και</w> <w>ο</w> <w>τι</w> <w>αν</w> <w>προσ
+<lb break="no"/>δαπανησεις</w> <w>εν</w> <w>τω</w> <w>επανερχεσθαι</w> <w>με</w>
+<lb/><w>εγω</w> <w>αποδωσω</w></ab> <ab n="B03K10V36"><w>τινα</w> <w>ουν</w> <w>δοκεις</w> <w>πλησιον</w>
+<lb/><w>γεγονεναι</w> <w>του</w> <w>ενπεσοντος</w> <w>εις</w> <w>τους</w> <w>ληστας</w>
+<lb/></ab> <ab n="B03K10V37"><w>ο</w> <w>δε</w> <w>ειπεν</w> <w>ο</w> <w>ποιησας</w> <w>το</w> <w>ελεος</w> <w>μετ</w> <w>αυτου</w>
+<lb/><w>ειπεν</w> <w>δε</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">ιης</hi></abbr></w> <w>πορευου</w> <w>και</w> <w>συ</w> <w>ποιει</w> <w>ομοιως</w>
+<lb/></ab> <ab n="B03K10V38"><w>εγενετο</w> <w>δε</w> <w>εν</w> <w>τω</w> <w>πορευεσθαι</w> <w>αυτον</w>
+<lb/><w>εισελθειν</w> <w>εις</w> <w>κωμην</w> <w>τινα</w> <w>γυνη</w> <w>δε</w> <w>τις</w>
+<lb/><w>ονοματι</w> <w>μαρθα</w> <w>υπεδεξατο</w> <w>αυτον</w>
+<lb/><w>εις</w> <w>τον</w> <w>οικον</w> <w>αυτης</w></ab> <ab n="B03K10V39"><w>και</w> <w>τηδε</w> <w>ην</w> <w>αδελφη</w>
+<lb/><w>καλουμενη</w> <w>μαρια</w> <w>η</w> <w>παρακαθισασα</w>
+<lb/><w>παρα</w> <w>τους</w> <w>ποδας</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">κυ</hi></abbr></w> <w>ηκουε</w> <w>τον</w> <w>λογον</w>
+<lb/></ab> <ab n="B03K10V40" part="I"><w>η</w> <w>δε</w> <w>μαρθα</w> <w>περιεσπατο</w> <w>περι</w> <w>πολλην</w>
+<lb/><w>διακονιαν</w> <w>επισταθεις</w> <w>δε</w> <w>ειπεν</w> <w><abbr type="nomSac"><hi rend="overline">κε</hi></abbr></w>
+<lb/><w>ου</w> <w>μελι</w> <w>σοι</w> <w>οτι</w> <w>η</w> <w>αδελφη</w> <w>μου</w> <w>κατελιπεν</w> <w>με</w>
+</ab></div></div></body></text></TEI>

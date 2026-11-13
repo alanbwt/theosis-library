@@ -82,3 +82,6 @@ Africanus' 4th) are recorded in the notes.
   Ὄβνος for Onnos, σοζ' for the 4th dynasty total). The notes mention the differences seen.
 - Paris gr. 1711 p. 11 also carries Berossus' table of the ten antediluvian Chaldean kings (for the
   `berossus` collection).
+
+## QC fixes (2026-11-12)
+Fr. 3.1 (gods and demigods): the Greek reads 'θεῶν τῶν μηδέποτε γεγονότων ζʹ' (seven gods), as Paris gr. 1711 (Syncellus MS A, shown) writes on p. 12, line 3 (checked on the image) and as Müller prints; Müller's apparatus, omitted on the page, adds 'scr. ϛʹ'. Waddell, whose English is shown (not Cory's), prints ϛʹ with the footnote 'MS. A ζʹ' and translates 'six gods'. A note in the section now explains this; neither text is changed. Review: docs/qc/review-near-east.md; fixes: docs/qc/fixes-near-east.md.

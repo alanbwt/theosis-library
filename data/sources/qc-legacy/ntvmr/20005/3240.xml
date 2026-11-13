@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="05">05</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>United Kingdom</country>
+            <settlement>Cambridge</settlement>
+            <repository>Cambridge University Library</repository>
+            <idno>Ms. Nn. 2.41</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="g-l"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector1"></witness>
+<witness n="corrector2"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="161v" type="folio"/><w>με</w> <w>ο</w> <w>πατηρ</w> <w>καγω</w> <app><rdg type="orig" hand="firsthand"><w>υμας</w> <w>ηγαπησα</w></rdg><rdg type="corr" hand="corrector2"><w>ηγαπησα</w> <w>υμας</w></rdg></app><note type="local">Scri. F</note>
+<cb n="1"/>
+<lb/><div n="B04" type="book" part="M"><div n="B04K15" type="chapter" part="M"><ab n="B04K15V9" part="F"><w>μεινατε</w> <w>εν</w> <w>τη</w> <w>αγαπη</w> <w>τη</w> <w>εμη</w></ab> <ab n="B04K15V10"><w>εαν</w> <w>τας</w>
+<lb/><w>εντολας</w> <w>μου</w> <w>τηρησητε</w> <w>μενειτε</w> <w>εν</w> <w>τη</w>
+<lb/><w>αγαπη</w> <w>μου</w> <w>καθως</w> <w>καγω</w> <w>τας</w> <w>εντολας</w>
+<lb/><w>του</w> <w>πατρος</w> <w>μου</w> <w>τετηρηκα</w> <w>και</w> <w>μενω</w>
+<lb/><w>αυτου</w><note type="local">t nachgezogen</note> <w>εν</w> <w>τη</w> <w>αγαπη</w></ab> <ab n="B04K15V11"><w>ταυτα</w> <w>δε</w> <w>λελαληκα</w>
+<lb/><w>υμειν</w> <w>ινα</w> <w>η</w> <w>χαρα</w> <w>η</w> <w>εμη</w> <w>εν</w> <w>υμειν</w> <w>η</w>
+<lb/><w>και</w> <w>η</w> <w>χαρα</w> <w>υμων</w> <w>πληρωθη</w></ab> <ab n="B04K15V12"><w>αυτη</w> <w>εστιν</w>
+<lb/><w>η</w> <w>εντολη</w> <w>η</w> <w>εμη</w> <w>ινα</w> <w>αγαπατε</w> <w>αλληλους</w>
+<lb/><w>καθως</w> <w>ηγαπησα</w> <w>υμας</w><pc>·</pc></ab> <ab n="B04K15V13"><w>μειζονα</w> <w>ταυτης</w>
+<lb/><w>αγαπην</w> <w>ουδεις</w> <w>εχει</w> <w>ινα</w> <app><rdg type="orig" hand="firsthand"/><rdg type="altZ" hand="corrector2"><w>τις</w></rdg></app><note type="local">Scri. D</note> <w>την</w> <w>ψυχην</w> <w>αυτου</w>
+<lb/><w>θη</w> <w>υπερ</w> <w>των</w> <w>φιλων</w> <w>αυτου</w><pc>·</pc></ab> <ab n="B04K15V14"><w>υμεις</w> <app><rdg type="orig" hand="firsthand"><w>γαρ</w></rdg><rdg type="corr" hand="corrector1"/></app><note type="local">Scri. s.m.</note>
+<lb/><w>φιλοι</w> <w>μου</w> <w>εστε</w> <w>εαν</w> <app><rdg type="orig" hand="firsthand"><w>ποιησητε</w></rdg><rdg type="corr" hand="corrector1"><w>ποιητε</w></rdg></app><note type="local">Scri. s.m.</note> <w>α</w> <w>εγω</w>
+<lb/><w>εντελλομαι</w> <w>υμειν</w></ab> <ab n="B04K15V15"><w>ουκετι</w> <w>υμας</w> <w>λεγω</w>
+<lb/><w>δουλους</w> <w>οτι</w> <w>ο</w> <w>δουλος</w> <w>ουκ</w> <w>οιδεν</w>
+<lb/><w>τι</w> <w>ποιει</w> <w>αυτου</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">κς</hi></abbr></w> <w>υμας</w> <w>δε</w> <w>ειρηκα</w> <w>φιλους</w>
+<lb/><w>οτι</w> <w>παντα</w> <app><rdg type="orig" hand="firsthand"><w>οσα</w></rdg><rdg type="corr" hand="corrector1"><w>α</w></rdg></app><note type="local">Scri. s.m.</note> <w>ηκουσα</w> <w>παρα</w> <w>του</w> <w>πατρος</w> <w>μου</w>
+<lb/><w>εγνωρισα</w> <w>υμειν</w></ab> <ab n="B04K15V16"><w>ουχ</w> <w>υμεις</w> <w>με</w> <w>εξελεξασθε</w>
+<lb/><w>αλλα</w> <w>εγω</w> <w>εξελεξαμην</w> <w>υμας</w> <w>και</w> <w>εθηκα</w>
+<lb/><w>υμας</w> <w>ινα</w> <w>υμεις</w> <w>υπαγητε</w> <w>και</w> <w>καρπον</w>
+<lb/><w>φερητε</w> <w>και</w> <w>ο</w> <w>καρπος</w> <w>υμων</w> <w>μενη</w>
+<lb/><w>ινα</w> <w>ο</w> <w>τι</w> <w>αν</w> <w>αιτησητε</w> <w>τον</w> <w>πατερα</w>
+<lb/><w>εν</w> <w>τω</w> <w>ονοματι</w> <w>μου</w> <w>δω</w> <w>υμειν</w>
+<lb/></ab> <ab n="B04K15V17"><w>ταυτα</w> <w>εντελλομε</w> <w>υμειν</w> <w>αγαπατε</w>
+<lb/><w>αλληλους</w></ab> <ab n="B04K15V18"><w>ει</w> <w>ο</w> <w>κοσμος</w> <w>υμας</w> <w>μισει</w>
+<lb/><w>γεινωσκετε</w> <w>οτι</w> <w>εμε</w> <w>πρωτον</w> <w>μεμεισηκεν</w>
+<lb/></ab> <ab n="B04K15V19"><w>ει</w> <w>εκ</w> <w>του</w> <w>κοσμου</w> <w>ητε</w> <w>ο</w> <w>κοσμος</w> <w>αν</w> <w>το</w> <w>ιδιον</w>
+<lb/><w>εφειλει</w> <w>οτι</w> <w>εκ</w> <w>του</w> <w>κοσμου</w> <app><rdg type="orig" hand="firsthand"><w>ητε</w></rdg><rdg type="altZ" hand="corrector2"><w>ουκ</w> <w>εστε</w></rdg></app><note type="local">Scri. D</note> <w>αλλ</w> <w>εγω</w>
+<lb/><w>εξελεξαμην</w> <w>υμας</w> <w>εκ</w> <w>του</w> <w>κοσμου</w>
+<lb/><w>δια</w> <w>τουτο</w> <w>μισει</w> <w>υμας</w> <w>ο</w> <w>κοσμος</w><pc>·</pc></ab> <ab n="B04K15V20" part="I"><w>μνημονευετε</w>
+<lb/><w>τους</w> <w>λογους</w> <w>ους</w> <w>εγω</w> <w>ειπον</w> <w>υμειν</w>
+<lb/><w>ουκ</w> <w>εστιν</w> <app><rdg type="orig" hand="firsthand"><w>μου</w></rdg><rdg type="corr" hand="corrector1"/></app><note type="local">Scri. s.m.</note> <w>δουλος</w> <w>μειζων</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">κυ</hi></abbr></w> <w>αυτου</w>
+<lb/><w>ει</w> <w>εμε</w> <w>εδιωξαν</w> <w>και</w> <w>υμας</w> <w>διωξουσιν</w>
+</ab></div></div></body></text></TEI>

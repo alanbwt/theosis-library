@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="P45">P45</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Ireland</country>
+            <settlement>Dublin</settlement>
+            <repository>Chester Beatty Library</repository>
+            <idno>CBL BP I</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Austria</country>
+            <settlement>Wien</settlement>
+            <repository>Österreichische Nationalbibliothek</repository>
+            <idno>Pap. G. 31974</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="21r" type="folio" break="no"/><cb n="1"/><lb/><div type="book" n="B05"><div type="chapter" n="B05K7"><ab n="B05K7V52" part="F"><w part="F"><supplied reason="unspecified">κτειναν</supplied></w> <w><supplied reason="unspecified">τους</supplied></w> <w><supplied reason="unspecified">προκαταγγ</supplied>ειλαντας</w> <w>π<supplied reason="unspecified">ερι</supplied></w> <w><supplied reason="unspecified">της</supplied></w> <w><supplied reason="unspecified">ελευσεως</supplied></w> <w><supplied reason="unspecified">του</supplied></w> <w><supplied reason="unspecified">δικαιου</supplied></w><lb/><w><supplied reason="unspecified">ου</supplied></w> <w><supplied reason="unspecified">νυν</supplied></w> <w><supplied reason="unspecified">υμεις</supplied></w> <w><supplied reason="unspecified">προδοτα</supplied>ι</w> <w>και</w> <w>φονεις</w> <w>εγενεσ<unclear>θ</unclear><supplied reason="unspecified">ε</supplied></w></ab> <ab n="B05K7V53"><w><supplied reason="unspecified">οιτινες</supplied></w> <w><supplied reason="unspecified">ελαβετε</supplied></w> <w><supplied reason="unspecified">τον</supplied></w><lb/><w><supplied reason="unspecified">νομον</supplied></w> <w><supplied reason="unspecified">εις</supplied></w> <w><supplied reason="unspecified">διαταγας</supplied></w> <w><unclear>α</unclear>γγε<unclear>λω</unclear>ν</w> <w>και</w> <w>ουκ</w> <w>ε<supplied reason="unspecified">φυλαξατε</supplied></w></ab> <ab n="B05K7V54"><w><supplied reason="unspecified">ακουοντες</supplied></w><lb/><w><supplied reason="unspecified">δε</supplied></w> <w><supplied reason="unspecified">ταυτα</supplied></w> <w><supplied reason="unspecified">διεπριον</supplied>το</w> <w>ταις</w> <w>καρδιαις</w> <w>αυ<unclear>τ</unclear><supplied reason="unspecified">ων</supplied></w> <w><supplied reason="unspecified">και</supplied></w> <w><supplied reason="unspecified">εβρυχον</supplied></w> <w><supplied reason="unspecified">τους</supplied></w><lb/><w><supplied reason="unspecified">οδοντας</supplied></w> <w><supplied reason="unspecified">επ</supplied></w> <w><supplied reason="unspecified">αυτον</supplied></w></ab> <ab n="B05K7V55"><w><supplied reason="unspecified">υπ</supplied>αρχων</w> <w>δε</w> <w>πληρης</w> <w>π<supplied reason="unspecified">ιστεως</supplied></w> <w><supplied reason="unspecified">και</supplied></w> <w><abbr type="nomSac"><supplied reason="unspecified"><hi rend="overline">πνς</hi></supplied></abbr></w> <w><supplied reason="unspecified">αγιου</supplied></w><lb/><w><supplied reason="unspecified">ατενισας</supplied></w> <w><supplied reason="unspecified">εις</supplied></w> <w><supplied reason="unspecified">τον</supplied></w> <w><supplied reason="unspecified">ουρ</supplied>ανον</w> <w>ειδεν</w> <w>δοξαν</w> <w><abbr type="nomSac"><hi rend="overline">θ</hi><supplied reason="unspecified"><hi rend="overline">υ</hi></supplied></abbr></w> <w><supplied reason="unspecified">και</supplied></w> <w><abbr type="nomSac"><supplied reason="unspecified"><hi rend="overline">ιη</hi></supplied></abbr></w> <w><supplied reason="unspecified">εστωτα</supplied></w> <w><supplied reason="unspecified">εκ</supplied></w> <w><supplied reason="unspecified">δε</supplied><lb break="no"/><supplied reason="unspecified">ξιων</supplied></w> <w><supplied reason="unspecified">του</supplied></w> <w><abbr type="nomSac"><supplied reason="unspecified"><hi rend="overline">θυ</hi></supplied></abbr></w></ab> <ab n="B05K7V56"><w><supplied reason="unspecified">και</supplied></w> <w><supplied reason="unspecified">ειπεν</supplied></w> <w>ιδου</w> <w>θεωρω</w> <w>τους</w> <w>ουρα<supplied reason="unspecified">νους</supplied></w> <w><supplied reason="unspecified">διηνοιγμενους</supplied></w><lb/><w><supplied reason="unspecified">και</supplied></w> <w><supplied reason="unspecified">τον</supplied></w> <w><supplied reason="unspecified">υιον</supplied></w> <w><supplied reason="unspecified">του</supplied></w> <w><supplied reason="unspecified">αν</supplied><unclear>θρ</unclear>ωπου</w> <w>εστωτα</w> <w>εκ</w> <w>δε<unclear>ξ</unclear><supplied reason="unspecified">ιων</supplied></w> <w><supplied reason="unspecified">του</supplied></w> <w><abbr type="nomSac"><supplied reason="unspecified"><hi rend="overline">θυ</hi></supplied></abbr></w></ab> <ab n="B05K7V57"><w><supplied reason="unspecified">κραξαντες</supplied></w><lb/><w><supplied reason="unspecified">δε</supplied></w> <w><supplied reason="unspecified">φωνηι</supplied></w> <w><supplied reason="unspecified">μεγαληι</supplied></w> <w>συνεσχον</w> <w>τα</w> <w>ωτα</w> <w>αυ<supplied source="na28" reason="illegible">των</supplied></w> <w><supplied source="na28" reason="illegible">και</supplied></w> <w><supplied source="na28" reason="illegible">ωρμη</supplied><lb break="no"/><supplied reason="unspecified">σαν</supplied></w> <w><supplied reason="unspecified">ομοθυμαδον</supplied></w> <w><supplied reason="unspecified">ε</supplied>π</w> <w>αυτον</w></ab> <ab n="B05K7V58"><w>κα<supplied reason="unspecified">ι</supplied></w> <w>εκβαλο<unclear>ν</unclear><supplied reason="unspecified">τες</supplied></w> <w><supplied reason="unspecified">εξω</supplied></w> <w><supplied reason="unspecified">της</supplied></w> <w><supplied reason="unspecified">πολεως</supplied></w><lb/><w><supplied reason="unspecified">ελιθοβολουν</supplied></w> <w><supplied reason="unspecified">οι</supplied></w> <w>δ<unclear>ε</unclear></w> <w>μαρτυρες</w> <w>απεθεν<supplied reason="unspecified">το</supplied></w> <w><supplied reason="unspecified">τα</supplied></w> <w><supplied reason="unspecified">ιματια</supplied></w> <w><supplied reason="unspecified">αυτων</supplied></w> <w><supplied reason="unspecified">παρα</supplied></w> <w><supplied reason="unspecified">τους</supplied></w><lb/><w><supplied reason="unspecified">ποδας</supplied></w> <w><supplied reason="unspecified">νεανιου</supplied></w> <w><supplied reason="unspecified">καλου</supplied>μενου</w> <w>σαουλ</w></ab> <ab n="B05K7V59"><w>και</w> <w>ελι<supplied reason="unspecified">θοβολουν</supplied></w> <w><supplied reason="unspecified">τον</supplied></w> <w><supplied reason="unspecified">στε</supplied><lb break="no"/><supplied reason="unspecified">φανον</supplied></w> <w><supplied reason="unspecified">επικαλουμενο</supplied>ν</w> <w>και</w> <w>λεγοντα</w> <w><abbr type="nomSac"><hi rend="overline">κυ</hi></abbr></w> <w><abbr type="nomSac"><hi rend="overline">ιη</hi></abbr></w> <w><unclear>δ</unclear><supplied reason="unspecified">εξαι</supplied></w> <w><supplied reason="unspecified">το</supplied></w> <w><abbr type="nomSac"><supplied reason="unspecified"><hi rend="overline">πνα</hi></supplied></abbr></w> <w><supplied reason="unspecified">μου</supplied></w></ab> <ab n="B05K7V60"><w><supplied reason="unspecified">θεις</supplied></w><lb/><w><supplied reason="unspecified">δε</supplied></w> <w><supplied reason="unspecified">τα</supplied></w> <w><supplied reason="unspecified">γονατα</supplied></w> <w><supplied reason="unspecified">εκραξε</supplied><unclear>ν</unclear></w> <w>φωνηι</w> <w>μεγαληι</w> <w><abbr type="nomSac"><supplied reason="unspecified"><hi rend="overline">κε</hi></supplied></abbr></w> <w><supplied reason="unspecified">μη</supplied></w> <w><supplied reason="unspecified">στησης</supplied></w><lb/><w><supplied reason="unspecified">αυτοις</supplied></w> <w><supplied reason="unspecified">ταυτην</supplied></w> <w><supplied reason="unspecified">την</supplied></w> <w><supplied reason="unspecified">αμ</supplied><unclear>α</unclear><supplied reason="unspecified">ρτιαν</supplied></w> <w><unclear>και</unclear></w> <w><unclear>τα</unclear>υτα</w> <w>ει<supplied reason="unspecified">πων</supplied></w> <w><supplied reason="unspecified">εκοιμηθη</supplied></w></ab></div> <div type="chapter" n="B05K8"><ab n="B05K8V1" part="I"><w><supplied reason="unspecified">σαυλος</supplied></w> <w><supplied reason="unspecified">δε</supplied></w><lb/><w><supplied reason="unspecified">ην</supplied></w> <w><supplied reason="unspecified">συνευδοκων</supplied></w> <w><supplied reason="unspecified">τηι</supplied></w> <w><supplied reason="unspecified">αναι</supplied><unclear>ρεσε</unclear>ι</w> <w>αυτου</w><pc>·</pc> <w>εγεν<unclear>ε</unclear><supplied reason="unspecified">το</supplied></w> <w><supplied reason="unspecified">δε</supplied></w> <w><supplied reason="unspecified">εν</supplied></w> <w><supplied reason="unspecified">εκεινηι</supplied></w> <w><supplied reason="unspecified">τηι</supplied></w><lb/><w><supplied reason="unspecified">ημερα</supplied></w> <w><supplied reason="unspecified">διωγμος</supplied></w> <w><supplied reason="unspecified">μεγας</supplied></w> <w><supplied reason="unspecified">επι</supplied></w> <w>την</w> <w><unclear>εκ</unclear>κλησιαν</w> <w><unclear>τ</unclear><supplied reason="unspecified">ην</supplied></w> <w><supplied reason="unspecified">εν</supplied></w> <w><supplied reason="unspecified">ιεροσολυμοις</supplied></w><lb/><w><supplied reason="unspecified">παντες</supplied></w> <w><supplied reason="unspecified">δε</supplied></w> <w><supplied reason="unspecified">διεσπαρησ</supplied><unclear>αν</unclear></w> <w><unclear>κατα</unclear></w> <w><unclear>τα</unclear>ς</w> <w>χωρ<unclear>α</unclear><supplied reason="unspecified">ς</supplied></w> <w><supplied reason="unspecified">της</supplied></w> <w><supplied reason="unspecified">ιουδαιας</supplied></w> <w><supplied reason="unspecified">και</supplied></w> <w part="I"><supplied reason="unspecified">σαμα</supplied><lb break="no"/><supplied reason="unspecified">ρειας</supplied></w></ab></div> </div></body></text></TEI>

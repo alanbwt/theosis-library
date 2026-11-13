@@ -27,3 +27,6 @@ col. i), reverse worn along the top of all three columns (Langdon: 5-12 lines lo
 ## Open questions
 - Line-level placement inside the worn reverse heads rests on Langdon's 1915 readings; ETCSL may
   read a few lines there from the Ur tablet rather than CBS 4561.
+
+## QC fixes (2026-11-12)
+ETCSL's composite has gap rows where it gives no transliteration ('3 lines missing' after 36, '9 lines fragmentary' after 132, '4 lines missing' after 159, '2 lines fragmentary' after 187, '4 lines fragmentary' after 230, '3 lines fragmentary' after 241). They were dropped silently, so e.g. section 127-146 jumped from 132 to 142. Each gap is now shown in the Sumerian as a lacuna with its ETCSL line numbers (e.g. '(9 lines fragmentary: ETCSL lines 133-141, no transliteration)', at the broken head of reverse column iv) and named in the section note. The shared ETCSL/CDLI engine in the importer was also updated (alias links, order-preserving alignment); this entry does not use CDLI witnesses, so nothing else changed. Review: docs/qc/review-near-east.md; fixes: docs/qc/fixes-near-east.md.

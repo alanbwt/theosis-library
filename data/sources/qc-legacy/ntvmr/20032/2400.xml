@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    <fileDesc>      
+      <titleStmt>
+        <title>A Transcription of Luke in 032</title>
+        <title type="document" key="20032" n="032">GA 032</title>
+        <title type="collection" level="s" xml:lang="en">The New Testament</title>
+        <title type="collection" level="s" xml:lang="de">Das Neue Testament</title>
+        <title type="work" level="m" xml:lang="de" n="03">The Gospel according to Luke</title>
+        <title type="short" level="m" xml:lang="de" n="03">Luke</title>      
+        <respStmt>
+          <resp>Created by</resp>
+          <name type="org">the Institut für neutestamentliche Textforschung, Münster, Germany</name>
+        </respStmt>       
+        <respStmt>
+          <resp>XML conversion by</resp>
+          <name type="org">the Institute for Textual Scholarship and Electronic Editing, Birmingham</name>
+        </respStmt>      
+        <sponsor>
+          <name type="org">Institut für neutestamentliche Textforschung, Münster, Germany</name>
+        </sponsor>
+      </titleStmt>
+      <editionStmt>
+        <edition n="2.0">Version 2.0, created on <date>24.4.2017</date></edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>
+          <name type="org">Institut für neutestamentliche Textforschung</name>
+          <name type="org">Westfälische Wilhelms-Universität Münster</name>
+        </publisher>
+        <date>24.4.2017</date>
+        <availability>
+          <p>All rights reserved by the INTF</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <msDesc>
+          <msIdentifier>
+            <altIdentifier type="GA">
+              <idno>032</idno>
+            </altIdentifier>
+            <altIdentifier type="Liste">
+              <idno>20032</idno>
+            </altIdentifier>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc n="1.5">
+      <projectDesc>
+        <p>This transcription was made by INTF in conjunction with its electronic and printed
+          editions of the New Testament (Nestle-Aland Novum Testamentum Graece, Novum Testamentum
+          Graecum Editio Critica Maior, NTtranscripts)</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>The initial transcription file was a plain text file for use with COLLATE, later
+          converted to XML according to the Text Encoding Initiative P5 guidelines.</p>
+      	<p>The XML specifications used are version 1.5 of the IGNTP Guidelines available at <ptr target="http://epapers.bham.ac.uk/1892/"/>
+      	</p></editorialDecl>
+      <variantEncoding method="parallel-segmentation" location="internal"/>
+    	
+    </encodingDesc>
+  </teiHeader>
+
+  <text xml:lang="grc"><body><pb n="2400" type="page"/>
+<lb/><div n="03" type="book" part="M"><div n="B03K9" type="chapter" part="M"><ab n="B03K9V22" part="F"><w>και</w> <w>αποδοκιμασθηναι</w> <w>απο</w> <w>των</w> <w>πρεσ
+<lb break="no"/>βυτερων</w> <w>και</w> <w>αρχιερεων</w> <w>και</w> <w>γραμμα
+<lb break="no"/>τεων</w> <w>και</w> <w>αποκτανθηναι</w> <w>και</w> <w>τη</w> <w>τρι
+<lb break="no"/>τη</w> <w>ημερα</w> <w>εγερθηναι</w>
+<lb/></ab> <ab n="B03K9V23"><w>ελεγεν</w> <w>δε</w> <w>προς</w> <w>παντας</w> <w>ει</w> <w>τις</w> <w>θελει</w>
+<lb/><w>οπισω</w> <w>μου</w> <w>ερχεσθαι</w> <w>απαρνησασθω</w>
+<lb/><w>εαυτον</w><pc>·</pc> <w>και</w> <w>αρατω</w> <w>τον</w> <w>σταυρον</w> <w>αυ
+<lb break="no"/>του</w> <w>καθ</w> <w>ημεραν</w> <w>και</w> <w>ακολουθειτω</w> <w>μοι</w><pc>·</pc>
+<lb/></ab> <ab n="B03K9V24"><w>ος</w> <w>γαρ</w> <w>αν</w> <w>θελη</w> <w>την</w> <w>ψυχην</w> <w>σωσαι</w> <w>απο
+<lb break="no"/>λεσει</w> <w>αυτην</w><pc>·</pc> <w>ος</w> <w>δ</w> <w>αν</w> <w>απολεσει</w> <w>την</w>
+<lb/><w>ψυχην</w> <w>αυτου</w> <w>ενεκεν</w> <w>εμου</w> <w>ουτος</w>
+<lb/><w>σωσει</w> <w>αυτην</w></ab> <ab n="B03K9V25"><w>τι</w> <w>γαρ</w> <w>ωφελειται</w> <w>αν
+<lb break="no"/>θρωπος</w> <w>κερδησας</w> <w>τον</w> <w>κοσμον</w> <w>ολον</w>
+<lb/><w>εαυτον</w> <w>δε</w> <w>απολεσας</w> <w>η</w> <w>ζημιωθεις</w><pc>·</pc>
+<lb/></ab> <ab n="B03K9V26"><w>ος</w> <w>γαρ</w> <w>αν</w> <w>επεσχυνθη</w> <w>με</w> <w>και</w> <w>τους</w> <w>ε
+<lb break="no"/>μους</w> <w>λογους</w> <w>τουτον</w> <w>ο</w> <w>υιος</w> <w>του</w> <w>αν
+<lb break="no"/>θρωπου</w> <w>επεσχυνθησεται</w> <w>οταν</w> <w>ελ
+<lb break="no"/>θη</w> <w>εν</w> <w>τη</w> <w>δοξη</w> <w>αυτου</w> <w>και</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">πρς</hi></abbr></w>
+<lb/><w>και</w> <w>των</w> <w>αγιων</w> <w>αγγελων</w>
+<lb/></ab> <ab n="B03K9V27"><w>λεγω</w> <w>δε</w> <w>υμιν</w> <w>αληθως</w> <w>εισιν</w> <w>τινες</w>
+<lb/><w>των</w> <w>ωδε</w> <w>εστωτων</w> <w>οι</w> <w>ου</w> <w>μη</w> <w>γευσων
+<lb break="no"/>ται</w> <w>θανατου</w> <w>εως</w> <w>αν</w> <w>ιδωσιν</w> <w>την</w> <w>βασι
+<lb break="no"/>λειαν</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">θυ</hi></abbr></w>
+<lb/></ab> <ab n="B03K9V28"><w>εγενετο</w> <w>δε</w> <w>μετα</w> <w>τους</w> <w>λογους</w> <w>τουτους</w>
+<lb/><w>ωσει</w> <w>ημεραι</w> <w>οκτω</w> <w>και</w> <w>παραλαβων</w>
+<lb/><w>πετρον</w> <w>και</w> <w>ιωαννην</w> <w>και</w> <w>ιακωβον</w>
+<lb/><w>ανεβη</w> <w>εις</w> <w>το</w> <w>ορος</w> <w>προσευξασθαι</w>
+<lb/></ab> <ab n="B03K9V29" part="I"><w>και</w> <w>εγενετο</w> <w>εν</w> <w>τω</w> <w>προσευχεσθαι</w>
+<lb/><w>αυτον</w> <w>το</w> <w>ειδος</w> <w>του</w> <w>προσωπου</w> <w>αυ
+<lb break="no"/>του</w> <w>ετερον</w> <w>και</w> <w>ο</w> <w>ιματισμος</w> <w>αυτου</w>
+</ab></div></div></body></text></TEI>

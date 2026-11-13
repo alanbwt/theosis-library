@@ -24,3 +24,6 @@ faint on the photograph and cannot be checked one by one.
 
 - KH1 (the larger amulet) is not published: Wikipedia gives only an English rendering, and no openly licensed
   original-language text of KH1 was found.
+
+## QC fixes (2026-11-12)
+The reviewer could not find the letters. The source photograph (archive.org ketef-hinnom-kh-2, Public Domain Mark; 2672 x 4008 px) had been reduced to 2600 px for the whole strip; a second image, ketef-hinnom-kh2-main-piece.jpg, now shows the large upper piece at the full resolution of the source. The scan_note says how the lines run (across the width, from the broken top down over the upper piece and on to the detached pieces) and that single letters and line divisions cannot be read on the photograph, so the line numbers follow the published reading. No sharper open photograph was found. Review: docs/qc/review-near-east.md; fixes: docs/qc/fixes-near-east.md.

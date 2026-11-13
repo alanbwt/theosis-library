@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="P45">P45</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Ireland</country>
+            <settlement>Dublin</settlement>
+            <repository>Chester Beatty Library</repository>
+            <idno>CBL BP I</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Austria</country>
+            <settlement>Wien</settlement>
+            <repository>Österreichische Nationalbibliothek</repository>
+            <idno>Pap. G. 31974</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+
+<pb n="1r" type="folio"/>
+<cb n="1"/>
+<lb/><div type="book" n="Matt"><div type="chapter" n="Matt.20"><ab n="Matt.20.24" part="F"><w><supplied reason="unspecified">ηγανακτησαν</supplied></w> <w><supplied reason="unspecified">περι</supplied></w> <w><supplied reason="unspecified">των</supplied></w> <w>δυο</w> <w>αδε<unclear>λφων</unclear></w><note type="editorial">Neues Fragment mit Text vom Ende der Zeilen 1-4 (= 20,24-26) bei Skeat - McGing, Hermathena 150, 1991, 21.</note><pc>·</pc></ab> <ab n="Matt.20.25"><w>ο</w> <w>δ<supplied reason="unspecified">ε</supplied></w> <w><supplied source="na28" reason="illegible"><abbr type="nomSac"><hi rend="overline">ις</hi></abbr></supplied></w> <w><supplied reason="unspecified">προσκαλεσαμενος</supplied></w> <w><supplied reason="unspecified">αυ</supplied>
+<lb break="no"/><supplied reason="unspecified">τους</supplied></w> <w><supplied reason="unspecified">ειπεν</supplied></w> <w><supplied reason="unspecified">οιδατε</supplied></w> <w><supplied reason="unspecified">οτι</supplied></w> <w>οι</w> <w>αρχ<unclear>ο</unclear>ν<unclear>τες</unclear></w> <w><unclear>τ</unclear><supplied reason="unspecified">ω</supplied><unclear>ν</unclear></w> <w><unclear>εθ</unclear><supplied reason="unspecified">νων</supplied></w> <w><supplied reason="unspecified">κατακυριευουσιν</supplied></w> <w><supplied reason="unspecified">αυ</supplied>
+<lb break="no"/><supplied reason="unspecified">των</supplied></w> <w><supplied reason="unspecified">και</supplied></w> <w><supplied reason="unspecified">οι</supplied></w> <w><supplied reason="unspecified">μεγαλοι</supplied></w> <w><supplied reason="unspecified">κ</supplied><unclear>ατ</unclear>εξου<unclear>σ</unclear>ιαζ<unclear>ου</unclear>σ<unclear>ι</unclear><supplied reason="unspecified">ν</supplied></w> <w>αυτ<unclear>ω</unclear><supplied reason="unspecified">ν</supplied></w></ab> <ab n="Matt.20.26"><w><supplied reason="unspecified">ουχ</supplied></w> <w><supplied reason="unspecified">ουτως</supplied></w> <w><supplied reason="unspecified">εσται</supplied></w> <w><supplied reason="unspecified">εν</supplied></w>
+<lb/><w><supplied reason="unspecified">υμιν</supplied></w> <w><supplied reason="unspecified">αλλ</supplied></w> <w><supplied reason="unspecified">ος</supplied></w> <w><supplied reason="unspecified">εαν</supplied></w> <w><supplied reason="unspecified">θελη</supplied></w> <w><supplied reason="unspecified">εν</supplied></w> <w><supplied reason="unspecified">υ</supplied>μιν</w> <w>μεγας</w> <w>γε<supplied reason="unspecified">ν</supplied><unclear>ε</unclear>σθ<supplied reason="unspecified">αι</supplied></w> <w><supplied reason="unspecified">εσται</supplied></w> <w><supplied reason="unspecified">υμων</supplied></w> <w><supplied reason="unspecified">διακονος</supplied></w>
+<lb/></ab> <ab n="Matt.20.27"><w><supplied reason="unspecified">και</supplied></w> <w><supplied reason="unspecified">ος</supplied></w> <w><supplied reason="unspecified">αν</supplied></w> <w><supplied reason="unspecified">θελη</supplied></w> <w><supplied reason="unspecified">εν</supplied></w> <w><supplied reason="unspecified">υμι</supplied><unclear>ν</unclear></w> <w>ειναι</w> <w><unclear>π</unclear>ρωτος</w> <w><unclear>ε</unclear>στα<supplied reason="unspecified">ι</supplied></w> <w><supplied reason="unspecified">υμων</supplied></w> <w><supplied reason="unspecified">δουλος</supplied></w></ab> <ab n="Matt.20.28"><w><supplied reason="unspecified">ωσπερ</supplied></w> <w><supplied reason="unspecified">ο</supplied></w>
+<lb/><w><abbr type="nomSac"><supplied reason="unspecified"><hi rend="overline">υς</hi></supplied></abbr></w> <w><supplied reason="unspecified">του</supplied></w> <w><supplied reason="unspecified">ανθρωπου</supplied></w> <w><supplied reason="unspecified">ουκ</supplied></w> <w><supplied reason="unspecified">ηλθ</supplied>εν</w> <w>διακονη<supplied reason="unspecified">θ</supplied>ηναι</w> <w><supplied reason="unspecified">αλλα</supplied></w> <w><supplied reason="unspecified">διακονησαι</supplied></w> <w><supplied reason="unspecified">και</supplied></w> <w><supplied reason="unspecified">δου</supplied>
+<lb break="no"/><supplied reason="unspecified">ναι</supplied></w> <w><supplied reason="unspecified">την</supplied></w> <w><supplied reason="unspecified">ψυχην</supplied></w> <w><supplied reason="unspecified">αυτου</supplied></w> <w><supplied reason="unspecified">λυ</supplied>τρον</w> <w>αντι</w> <w><unclear>π</unclear>ο<unclear>λλ</unclear>ων</w><pc>·</pc></ab> <ab n="Matt.20.29"><w>κ<supplied reason="unspecified">αι</supplied></w> <w><supplied reason="unspecified">εκπορευομενων</supplied></w> <w><supplied reason="unspecified">αυ</supplied>
+<lb break="no"/><supplied reason="unspecified">των</supplied></w> <w><supplied reason="unspecified">απο</supplied></w> <w><supplied reason="unspecified">ιεριχω</supplied></w> <w><supplied reason="unspecified">ηκολ</supplied>ουθησαν</w> <w>οχλοι</w> <w>πολ<supplied reason="unspecified">λοι</supplied></w></ab> <ab n="Matt.20.30"><w><supplied reason="unspecified">και</supplied></w> <w><supplied reason="unspecified">ιδου</supplied></w> <w><supplied reason="unspecified">δυο</supplied></w> <w><supplied reason="unspecified">τυφ</supplied>
+<lb break="no"/><supplied reason="unspecified">λοι</supplied></w> <w><supplied reason="unspecified">καθημενοι</supplied></w> <w><supplied reason="unspecified">παρα</supplied></w> <w><supplied reason="unspecified">τη</supplied>ν</w> <w>οδον</w> <w>ακουσ<unclear>α</unclear>ντε<unclear>ς</unclear></w> <w><supplied reason="unspecified">οτι</supplied></w> <w><supplied source="na28" reason="illegible"><abbr type="nomSac"><hi rend="overline">ις</hi></abbr></supplied></w> <w><supplied reason="unspecified">παραγει</supplied></w> <w><supplied reason="unspecified">εκραξαν</supplied></w>
+<lb/><w><supplied reason="unspecified">λεγοντες</supplied></w> <w><supplied reason="unspecified">ελεησον</supplied></w> <w><supplied reason="unspecified">ημα</supplied><unclear>ς</unclear></w> <w><abbr type="nomSac"><hi rend="overline"><unclear>ιη</unclear></hi></abbr></w> <w><abbr type="nomSac"><unclear><hi rend="overline">υ</hi></unclear><hi rend="overline">ε</hi></abbr></w> <w>δαυιδ</w><pc>·</pc></ab> <ab n="Matt.20.31"><w>ο</w> <w>δε</w> <w>ο<unclear>χ</unclear><supplied reason="unspecified">λος</supplied></w> <w><supplied reason="unspecified">επετιμησεν</supplied></w> <w><supplied reason="unspecified">αυτοις</supplied></w>
+<lb/><w><supplied reason="unspecified">ινα</supplied></w> <w><supplied reason="unspecified">σιωπησωσιν</supplied></w> <w><supplied reason="unspecified">οι</supplied></w> <w><supplied reason="unspecified">δε</supplied></w> <w><gap reason="unspecified" unit="char" extent="3-4"/>ω</w> <w>εκραυγασα<unclear>ν</unclear></w> <w><supplied reason="unspecified">λεγοντες</supplied></w> <w><supplied reason="unspecified">ελεησον</supplied></w>
+<lb/><w><supplied reason="unspecified">ημας</supplied></w> <w><abbr type="nomSac"><supplied reason="unspecified"><hi rend="overline">κε</hi></supplied></abbr></w> <w><abbr type="nomSac"><supplied reason="unspecified"><hi rend="overline">υς</hi></supplied></abbr></w> <w><supplied reason="unspecified">δαυιδ</supplied></w></ab> <ab n="Matt.20.32" part="I"><w><supplied reason="unspecified">και</supplied></w> <w><supplied reason="unspecified">στας</supplied></w> <w><supplied reason="unspecified">ο</supplied></w> <w><abbr type="nomSac"><supplied source="na28" reason="illegible"><hi rend="overline">ι</hi></supplied><hi rend="overline"><unclear>ς</unclear></hi></abbr></w> <w>ε<unclear>φ</unclear><supplied source="na28" reason="illegible">ω</supplied>ν<unclear>η</unclear><supplied source="na28" reason="illegible">σεν</supplied></w> <w><supplied source="na28" reason="illegible">αυτους</supplied></w> <w><supplied source="na28" reason="illegible">και</supplied></w> <w><supplied source="na28" reason="illegible">ειπεν</supplied></w> <w><supplied source="na28" reason="illegible">τι</supplied></w> <w><supplied source="na28" reason="illegible">θελετε</supplied></w></ab></div> </div></body></text></TEI>

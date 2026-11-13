@@ -43,3 +43,6 @@ also located by line.
   details (e.g. "παλαιότατος" where Dindorf prints "παλαίτατος" in 1.9.20).
 - English is divided at clause boundaries where a Greek section starts mid-sentence (1.10.2, 1.10.19,
   1.10.24, 1.10.47 and similar).
+
+## QC fixes (2026-11-12)
+1.10.23: the English had 'against Kronos. and these', a typo of the tertullian.org transcription; the 1903 printing has 'against Kronos, and these' (archive.org OCR of the printing). Corrected through EN_FIXES and noted in the section. No other '. lowercase' slips are in the English. Review: docs/qc/review-near-east.md; fixes: docs/qc/fixes-near-east.md.

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="05">05</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>United Kingdom</country>
+            <settlement>Cambridge</settlement>
+            <repository>Cambridge University Library</repository>
+            <idno>Ms. Nn. 2.41</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="g-l"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector1"></witness>
+<witness n="corrector2"></witness>
+<witness n="corrector3"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+
+<pb n="444v" type="folio"/>
+<cb n="1"/>
+<lb/><div type="book" n="Acts"><div type="chapter" n="Acts.8"><ab n="Acts.8.1" part="F"><w>παντες</w> <w>δε</w> <w>διεσπαρησαν</w>
+<lb/><w>κατα</w> <w>τας</w> <w>χωρας</w> <app><rdg type="orig" hand="firsthand"></rdg><rdg type="corr" hand="corrector1"><w>της</w></rdg></app> <w>ιουδαιας</w> <w>και</w> <w>σαμαριας</w>
+<lb/><w>πλην</w> <w>των</w> <w>αποστολων</w>
+<lb/><app><rdg type="orig" hand="firsthand"><w>οι</w> <w>εμειναν</w> <w>εν</w> <w>ιερουσαλημ</w></rdg><rdg type="corr" hand="corrector1"></rdg></app>
+<lb/></ab> <ab n="Acts.8.2"><app><rdg type="orig" hand="firsthand"><w>συνκομισαντες</w></rdg><rdg type="corr" hand="corrector2"><w>συνεκομισαν</w> <w>τε</w></rdg></app> <w>τον</w> <w>στεφανον</w> <w>ανδρες</w> <w>ευλαβεις</w>
+<lb/><w>και</w> <w>εποιησαν</w> <w>κοπετον</w> <w>μεγαν</w> <w>επ</w> <w>αυτω</w>
+<lb/></ab> <ab n="Acts.8.3"><w>ο</w> <w>δε</w> <w>σαυλος</w> <w>ελυμενετο</w> <w>την</w> <w>εκκλησιαν</w>
+<lb/><w>κατα</w> <w>τους</w> <w>οικους</w> <w>εισπορευομενος</w>
+<lb/><w>συρων</w> <w>τε</w> <w>ανδρας</w> <w>και</w> <w>γυναικας</w>
+<lb/><app><rdg type="orig" hand="firsthand"><w>παρεδιδους</w></rdg><rdg type="corr" hand="corrector1"><w>παρεδιδου</w></rdg></app> <w>εις</w> <w>φυλακην</w>
+<lb/></ab> <ab n="Acts.8.4"><w>οι</w> <w>μεν</w> <w>ουν</w> <w>διασπαρεντες</w>
+<lb/><w>διηλθον</w> <w>ευαγγελιζομενοι</w> <w>τον</w> <w>λογον</w>
+<lb/></ab> <ab n="Acts.8.5"><w>φιλιππος</w> <w>δε</w> <app><rdg type="orig" hand="firsthand"><w>καλελθων</w></rdg><rdg type="corr" hand="corrector2"><w>κατελθων</w></rdg></app>
+<lb/><w>εις</w> <w>πολιν</w> <w>της</w> <w>σαμαριας</w>
+<lb/><w>εκηρυσσεν</w> <w>αυτοις</w> <w>τον</w> <w><abbr type="nomSac"><hi rend="overline">χρν</hi></abbr></w>
+<lb/></ab> <ab n="Acts.8.6"><app><rdg type="orig" hand="firsthand"><w>ως</w> <w>δε</w> <w>ηκουον</w> <w>παν</w> <w>οι</w> <w>οχλοι</w> <w>​</w>
+<lb/><w>προσειχον</w></rdg><rdg type="corr" hand="corrector1"><w>προσειχον</w> <w>δε</w> <w>οι</w> <w>οχλοι</w></rdg></app> <w>τοις</w> <w>λεγομενοις</w> <w>υπο</w> <app><rdg type="orig" hand="firsthand"></rdg><rdg type="corr" hand="corrector1"><w>του</w></rdg></app> <w>φιλιππου</w>
+<lb/><app><rdg type="orig" hand="firsthand"><w><gap reason="unspecified" unit="char" extent="4"/>οντ<unclear>ο</unclear></w></rdg><rdg type="corr" hand="corrector1"><w>ομοθυμαδον</w></rdg></app> <w>εν</w> <w>τω</w> <w>ακουειν</w> <w>αυτους</w>
+<lb/><w>και</w> <w>βλεπειν</w> <w>τα</w> <w>σημεια</w> <w>α</w> <w>εποιει</w>
+<lb/></ab> <ab n="Acts.8.7"><app><rdg type="orig" hand="firsthand"><w>απο</w> <w>πολλοις</w></rdg><rdg type="corr" hand="corrector2"><w>πολλοι</w></rdg><rdg type="corr" hand="corrector3"><w>απο</w> <w>πολλοι</w></rdg></app> <w>γαρ</w> <w>των</w> <w>εχοντων</w>
+<lb/><w>πνευματα</w> <w>ακαθαρτα</w>
+<lb/><w>βοωντα</w> <w>φωνη</w> <w>μεγαλη</w> <w>εξηρχοντο</w>
+<lb/><w>πολλοι</w> <w>δε</w> <w>παραλελυμενοι</w> <app><rdg type="orig" hand="firsthand"></rdg><rdg type="corr" hand="corrector1"><w>και</w></rdg></app> <w>χωλοι</w>
+<lb/><w>εθεραπευοντο</w>
+<lb/></ab> <ab n="Acts.8.8"><w>χαρα</w> <w>τε</w> <w>μεγαλη</w> <w>εγενετο</w> <w>εν</w> <w>τη</w> <w>πολει</w> <w>εκεινη</w>
+<lb/></ab> <ab n="Acts.8.9"><w>ανηρ</w> <w>δε</w> <w>τις</w> <w>ονοματι</w> <w>σιμων</w>
+<lb/><w>προυπαρχων</w> <w>εν</w> <w>τη</w> <w>πολει</w> <w>μαγευων</w> <app><rdg type="orig" hand="firsthand"></rdg><rdg type="corr" hand="corrector1"><w>και</w></rdg></app>
+<lb/><app><rdg type="orig" hand="firsthand"><w>εξε<gap reason="unspecified" unit="char" extent="1-2"/>ο<gap reason="unspecified" unit="char" extent="2-3"/></w></rdg><rdg type="corr" hand="corrector1"><w>εξειστων</w></rdg></app> <w>το</w> <w>εθνος</w> <w>της</w> <w>σαμαριας</w>
+<lb/><w>λεγων</w> <w>ειναι</w> <w>τινα</w> <w>εαυτον</w> <w>μεγαν</w>
+<lb/></ab> <ab n="Acts.8.10"><w>ω</w> <w>προσειχον</w> <w>παντες</w> <w>απο</w> <w>μεικρου</w>
+<lb/><w>εως</w> <w>μεγαλου</w> <w>λεγοντες</w>
+<lb/><w>ουτος</w> <w>εστιν</w> <w>η</w> <w>δυναμις</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">θυ</hi></abbr></w>
+<lb/><w>η</w> <w>καλουμενη</w> <w>μεγαλη</w></ab> <ab n="Acts.8.11" part="I"><w>προσειχον</w> <w>δε</w> <w>αυτω</w></ab></div> </div></body></text></TEI>

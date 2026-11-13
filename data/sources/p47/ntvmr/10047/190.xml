@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="GAP47"><teiHeader>
+    <fileDesc>      
+      <titleStmt>
+        <title>A Transcription of Revelation in P47</title>
+        <title type="document" key="10047" n="P47">GA P47</title>
+        <title type="collection" level="s" xml:lang="en">The New Testament</title>
+        <title type="collection" level="s" xml:lang="de">Das Neue Testament</title>
+        <title type="work" level="m" xml:lang="de" n="27">The Revelation to John</title>
+        <title type="short" level="m" xml:lang="de" n="27">Revelation</title>      
+        <respStmt>
+          <resp>Created by</resp>
+          <name type="org">the Institut für neutestamentliche Textforschung, Münster, Germany</name>
+        </respStmt>       
+        <respStmt>
+          <resp>XML conversion by</resp>
+          <name type="org">the Institute for Textual Scholarship and Electronic Editing, Birmingham</name>
+        </respStmt>      
+        <sponsor>
+          <name type="org">Institut für neutestamentliche Textforschung, Münster, Germany</name>
+        </sponsor>
+      </titleStmt>
+      <editionStmt>
+        <edition n="2.0">Version 2.0, created on <date>27.7.2013</date></edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>
+          <name type="org">Institut für neutestamentliche Textforschung</name>
+          <name type="org">Westfälische Wilhelms-Universität Münster</name>
+        </publisher>
+        <date>27.7.2013</date>
+        <availability>
+          <p>All rights reserved by the INTF</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <msDesc>
+          <msIdentifier>
+            <altIdentifier type="GA">
+              <idno>P47</idno>
+            </altIdentifier>
+            <altIdentifier type="Liste">
+              <idno>10047</idno>
+            </altIdentifier>
+          </msIdentifier>
+        </msDesc>
+      <listWit><witness xml:id="firsthand"/><witness xml:id="corrector"/></listWit></sourceDesc>
+    </fileDesc>
+    <encodingDesc n="1.5">
+      <projectDesc>
+        <p>This transcription was made by INTF in conjunction with its electronic and printed
+          editions of the New Testament (Nestle-Aland Novum Testamentum Graece, Novum Testamentum
+          Graecum Editio Critica Maior, NTtranscripts)</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>The initial transcription file was a plain text file for use with COLLATE, later
+          converted to XML according to the Text Encoding Initiative P5 guidelines.</p>
+      	<p>The XML specifications used are version 1.5 of the IGNTP Guidelines available at <ptr target="http://epapers.bham.ac.uk/1892/"/>
+      	</p></editorialDecl>
+      <variantEncoding method="parallel-segmentation" location="internal"/>
+    	
+    </encodingDesc>
+  </teiHeader>
+
+  <text xml:lang="grc"><body><pb n="10r" type="folio" break="no"/><note type="editorial">Papyrological recto</note>
+<cb n="1"/>
+<lb/><div n="B27" type="book" part="M"><div n="B27K16" type="chapter" part="M"><ab n="B27K16V9" part="F"><w part="F"><supplied reason="unspecified">σφημησαν</supplied></w> <gap reason="lacuna" unit="line" extent="unspecified"/>
+<lb/></ab> <ab n="B27K16V10"><w><supplied reason="unspecified">και</supplied></w> <w><supplied reason="unspecified">ο</supplied></w> <w><abbr type="num"><supplied reason="unspecified"><hi rend="overline">ε</hi></supplied></abbr></w> <w><supplied reason="unspecified">εξε</supplied><unclear>χ</unclear>εεν</w> <w><unclear>τ</unclear><supplied reason="unspecified">ην</supplied></w> <w><unclear>φιαλ</unclear><supplied reason="unspecified">ην</supplied></w> <w><unclear>αυ</unclear><supplied reason="unspecified">του</supplied></w> <w><supplied reason="unspecified">επι</supplied></w>
+<lb/><w><supplied reason="unspecified">τον</supplied></w> <w><supplied reason="unspecified">θρονο</supplied><unclear>ν</unclear></w> <w>του</w> <w>θηριου</w> <w>και</w> <w>εγενετο</w> <w>η</w> <w><unclear>βα</unclear><supplied reason="unspecified">σι</supplied>
+<lb break="no"/><supplied reason="unspecified">λε</supplied><unclear>ια</unclear></w> <w>αυτου</w> <w>εσκωτωμενην</w> <w>και</w> <w><unclear>αι</unclear>μα
+<lb break="no"/>σωντο</w> <w>τας</w> <w>γλωσσας</w> <w>αυ<unclear>τ</unclear>ων</w> <w>εκ</w> <w>του</w> <w>πο
+<lb break="no"/>νου</w></ab> <ab n="B27K16V11"><w>και</w> <app><rdg type="orig" hand="firsthand"><w>εβλασφημησαν</w></rdg><rdg type="corr" hand="corrector"><w>εβλασφημουν</w></rdg></app> <w>τον</w> <w><abbr type="nomSac"><hi rend="overline">θν</hi></abbr></w> <w>του</w> <w>ου
+<lb break="no"/>ρανου</w> <w>εκ</w> <w>των</w> <w>πονων</w> <w>αυτων</w> <w>και</w> <w>εκ</w> <w>των</w>
+<lb/><w>ελκων</w> <w>αυτων</w> <w>και</w> <w>ου</w> <w>μετενοησαν</w> <w><unclear>ε</unclear>
+<lb break="no"/>κ</w> <w>των</w> <w>εργων</w> <w>αυτων</w></ab> <ab n="B27K16V12"><w>και</w> <w>ο</w> <w><abbr type="num"><hi rend="overline">ϛ</hi></abbr></w> <w>εξεχε<unclear>ε</unclear>ν</w>
+<lb/><w>την</w> <w>φιαλην</w> <w>αυτου</w> <w>επι</w> <w>τον</w> <w>ποταμον</w>
+<lb/><w>τον</w> <w>μεγαν</w> <w>τον</w> <w>ευφρατην</w> <w>και</w> <w>εξηρανθη</w>
+<lb/><w>το</w> <w>υδωρ</w> <w>αυτου</w> <w>ινα</w> <w>ετοιμασθη</w> <w>η</w> <w>οδος</w>
+<lb/><w>των</w> <w>βασιλεων</w> <w>των</w> <w>απο</w> <w>ανατολης</w> <w>ηλι
+<lb break="no"/>ου</w></ab> <ab n="B27K16V13"><w>και</w> <w>ειδον</w> <w>εκ</w> <w>του</w> <w>στοματος</w> <w>του</w> <w>δρακον
+<lb break="no"/>τος</w> <w>και</w> <w>εκ</w> <w>του</w> <w>στοματος</w> <w>του</w> <w>θηριου</w> <w>και</w>
+<lb/><w>εκ</w> <w>του</w> <w>στοματος</w> <w>του</w> <w>ψευδοπροφητου</w>
+<lb/><w><abbr type="nomSac"><hi rend="overline">πνα</hi></abbr></w> <w>τρια</w> <w>ακαθαρτα</w> <w>ωσει</w> <w>βατραχους</w></ab> <ab n="B27K16V14"><w>ει
+<lb break="no"/>σιν</w> <w>γαρ</w> <w><abbr type="nomSac"><hi rend="overline">πνα</hi></abbr></w> <w>δαιμονιων</w> <w>ποιουντα</w> <w>σημει
+<lb break="no"/>α</w> <w>εκπορευεσθαι</w> <w>επι</w> <w>τους</w> <w>βασιλεις</w> <w>της</w>
+<lb/><w>οικουμενης</w> <w>ολης</w> <w>συναγαγειν</w> <w>αυ
+<lb break="no"/>τους</w><note type="local">nach au folgt wohl Zeilenfüller</note> <w>εις</w> <w>πολεμον</w> <w>της</w> <w>μεγαλης</w> <w>ημ<supplied reason="unspecified">ε</supplied>
+<lb break="no"/>ρας</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">θυ</hi></abbr></w> <w>του</w> <w>παντοκρατορος</w></ab> <ab n="B27K16V15" part="I"><app><rdg type="orig" hand="firsthand"><w><unclear>ι</unclear>δ<supplied reason="unspecified">ου</supplied></w></rdg><rdg type="corr" hand="corrector"><w>ε<unclear>ι</unclear>δ<supplied reason="unspecified">ου</supplied></w></rdg></app>
+<lb/><w>ερχομαι</w> <w>ως</w> <w>κλεπτης</w> <w>μακαριο<unclear>ς</unclear></w> <w><supplied reason="unspecified">ο</supplied></w>
+<lb/><w>γρηγορων</w> <w>και</w> <w>τηρων</w> <w>τα</w> <w>ιματ<unclear>ι</unclear><supplied reason="unspecified">α</supplied></w> <w><supplied reason="unspecified">αυ</supplied>
+<lb break="no"/>του</w> <w>ινα</w> <w>μη</w> <w>γυμνος</w> <w>περιπα<unclear>τ</unclear><supplied reason="unspecified">η</supplied></w> <w><supplied reason="unspecified">και</supplied></w>
+<lb/><w>βλεπουσιν</w> <w>την</w> <w>ασχημοσυν<unclear>η</unclear><supplied reason="unspecified">ν</supplied></w> <w><supplied reason="unspecified">αυτου</supplied></w>
+</ab></div></div></body></text></TEI>

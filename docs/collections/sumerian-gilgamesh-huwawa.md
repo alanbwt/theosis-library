@@ -17,6 +17,7 @@ Sections are ETCSL translation paragraphs. Tablet lines are placed by CDLI's own
 Paragraphs left out: 61, 148A-148K, 148L-148V, 148W-148FF, 148GG-148PP, 148QQ-148AAA, 152, 187-192. Lines 148A-148AAA (a passage found in one manuscript only) are not on any photographed tablet; paragraph 61 (with ETCSL's lettered lines 61A-61dd from single manuscripts), 152 (with 152A-152cc) and 187-192 have fewer than half of their lines on the tablets. IM 058700 is catalogued with a cast and was not used.
 
 ## Open questions
+- N 3691 + N 3776 + Ist Ni 09746 (+) Ist Ni 04475 (P343683, used for 1-3, 4-7 and 163-174): CDLI's photograph shows only the Penn pieces (labels N3691, N3776), while the ATF was made from the Istanbul pieces (ISET 2 46, 51) and an unpublished fragment; whether every line given stands on the photographed pieces is not established. The sections say so (WITNESS_NOTES in the importer).
 - Lines whose CDLI link was dropped or moved by the checks are printed by the importer (`python3 scripts/import_sumerian_gilgamesh_huwawa.py`).
 
 ## QC fixes (2026-11-12)

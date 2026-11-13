@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="05">05</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>United Kingdom</country>
+            <settlement>Cambridge</settlement>
+            <repository>Cambridge University Library</repository>
+            <idno>Ms. Nn. 2.41</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="g-l"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector1"></witness>
+<witness n="corrector2"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="219v" type="folio"/>
+<cb n="1"/>
+<lb/><div n="B03" type="book" part="M"><div n="B03K8" type="chapter" part="M"><ab n="B03K8V41" part="F"><w><supplied reason="unspecified">ε</supplied>ισελθειν</w> <w>εις</w> <w>την</w> <w>ο<unclear>ικια</unclear>ν</w><note type="local">Buchstaben oben abgeschnitten</note> <w>αυτου</w></ab> <ab n="B03K8V42"><w>ην</w> <w>γαρ</w>
+<lb/><w>θυγατηρ</w> <w>αυτω</w> <w>μονογενης</w> <w>ετων</w> <w><abbr type="num"><hi rend="overline">ιβ</hi></abbr></w>
+<lb/><app><rdg type="orig" hand="firsthand"><w>αποθνησκ<unclear>ο</unclear><supplied reason="unspecified">ν</supplied></w></rdg><rdg type="corr" hand="corrector1"><w>αποθνησκουσα</w></rdg></app><note type="local">Scrivener p.m.</note> <w>και</w> <w>εγενετο</w> <w>εν</w> <w>τω</w>
+<lb/><w>πορευεσθαι</w> <w>αυτον</w> <w>οι</w> <w>οχλοι</w> <w>συνεπνιγαν</w>
+<lb/><w>αυτον</w></ab> <ab n="B03K8V43"><w>και</w> <w>γυνη</w> <w>ουσα</w> <w>εν</w> <w>ρυσι</w> <w>αιματος</w>
+<lb/><w>απο</w> <w>αιτων</w> <w><abbr type="nomSac"><hi rend="overline">βι</hi></abbr></w><note type="local">sic, Wasserfleck, wohl keine Korr.</note> <w>ην</w> <w>ουδε</w> <w>εις</w> <w>ισχυεν</w> <w>θεραπευσαι</w>
+<lb/></ab> <ab n="B03K8V44"><w>προσελθουσα</w> <w>ηψατο</w> <w>του</w> <w>ιμ<unclear>α</unclear>τιου</w> <w>αυτου</w>
+<lb/><w>και</w> <w>παραχρημα</w> <w>εστη</w> <w>η</w> <w>ρυσις</w> <w>του</w> <w>αιματος</w>
+<lb/><w>αυτης</w></ab> <ab n="B03K8V45"><w>ο</w> <w>δε</w> <w><abbr type="nomSac"><hi rend="overline">ιης</hi></abbr></w> <w>γνους</w> <w>την</w> <w>εξελθουσαν</w>
+<lb/><w>εξ</w> <w>αυτου</w> <w>δυναμιν</w> <w>επηρωτα</w> <w>τις</w> <w>μου</w> <w>ηψατο</w>
+<lb/><w>αρνουμενων</w> <w>δε</w> <w>παντων</w><note type="local">pa- in Eigenkorr.</note> <w>ειπεν</w> <w>ο</w> <w>πετρος</w>
+<lb/><w>και</w> <w>οι</w> <w>συν</w> <w>αυτω</w> <w>επιστατα</w> <w>οι</w> <w>οχλοι</w> <w>συνεχουσιν</w> <w>σε</w>
+<lb/><w>και</w> <w>αποθλειβουσιν</w> <w>και</w> <w>λεγεις</w> <w>τις</w> <w>μου</w>
+<lb/><w>ηψατο</w></ab> <ab n="B03K8V46"><w>ο</w> <w>δε</w> <w>ειπεν</w> <w>ηψατο</w> <w>μου</w> <w>τις</w> <w>εγω</w> <w>γαρ</w>
+<lb/><w>εγνων</w> <w>δυναμιν</w> <w>εξελθουσαν</w> <w>απ</w> <w>εμου</w>
+<lb/></ab> <ab n="B03K8V47"><w>ιδουσα</w> <w>δε</w> <w>η</w> <w>γυνη</w> <w>οτι</w> <w>ουκ</w> <w>ελαθεν</w><pc>·</pc> <w>εντρομος</w> <w>ουσα</w>
+<lb/><w>ηλθεν</w> <w>και</w> <w>προσπεσουσα</w> <w>αυτω</w>
+<lb/><w>δι</w> <w>ην</w> <w>αιτιαν</w> <w>ηψατο</w> <w>αυτου</w> <w>απηγγειλεν</w>
+<lb/><w>ενωπιον</w> <w>παντος</w> <w>του</w> <w>λαου</w> <w>και</w> <w>οτι</w> <w>ιαθη</w>
+<lb/><w>παραχρημα</w></ab> <ab n="B03K8V48"><w>ο</w> <w>δε</w> <w>ειπεν</w> <w>αυτη</w> <w>θυγατερ</w>
+<lb/><w>η</w> <w>πιστις</w> <w>σου</w> <w>σεσωκεν</w> <w>σε</w> <w>πορευου</w> <w>εν</w> <w>ιρηνη</w>
+<lb/></ab> <ab n="B03K8V49"><w>ετι</w> <w>αυτου</w> <w>λαλουντος</w> <w>ερχονται</w> <w>απο</w> <w>του</w>
+<lb/><w>αρχισυναγωγου</w> <w>λεγοντες</w> <w>αυτω</w> <w>οτι</w>
+<lb/><w>τεθνηκεν</w> <w>σου</w> <w>η</w> <w>θυγατηρ</w><pc>·</pc> <w>μηκετι</w> <w>σκυλλε</w>
+<lb/><w>τον</w> <w>διδασκαλον</w></ab> <ab n="B03K8V50"><w>ο</w> <w>δε</w> <w><abbr type="nomSac"><hi rend="overline">ιης</hi></abbr></w> <w>ακουσας</w>
+<lb/><w>τον</w> <w>λογον</w> <w>απεκριθη</w> <w>αυτω</w> <w>λεγων</w>
+<lb/><w>μη</w> <w>φοβου</w> <w>μονον</w> <w>πιστευε</w> <w>και</w> <w>σωθησεται</w>
+<lb/></ab> <ab n="B03K8V51"><w>εισελθων</w> <w>δε</w> <w>εις</w> <w>την</w> <w>οικιαν</w> <w>ουκ</w> <w>αφηκεν</w>
+<lb/><w>εισελθειν</w> <w>συν</w> <w>αυτω</w> <w>τινα</w><pc>·</pc> <w>ει</w> <w>μη</w> <w>πετρον</w>
+<lb/><w>και</w> <w>ιωανην</w> <w>και</w> <w>ιακωβον</w> <w>και</w> <w>τον</w>
+<lb/><w>πατερα</w> <w>του</w> <w>κορασιου</w> <w>και</w> <w>την</w> <w>μητερα</w>
+<lb/></ab> <ab n="B03K8V52" part="I"><w>εκλαιον</w> <w>δε</w> <w>παντες</w> <w>και</w> <w>εκοπτοντο</w>
+<lb/><w>αυτην</w> <w>ο</w> <w>δε</w> <w>ειπεν</w> <w>μη</w> <app><rdg type="orig" hand="firsthand"><w>καιετε</w></rdg><rdg type="corr" hand="corrector2"><w>κλαιετε</w></rdg></app><note type="local">Scrivener D</note>
+</ab></div></div></body></text></TEI>

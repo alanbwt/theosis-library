@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="05">05</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>United Kingdom</country>
+            <settlement>Cambridge</settlement>
+            <repository>Cambridge University Library</repository>
+            <idno>Ms. Nn. 2.41</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="g-l"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="174v Suppl" type="folio"/><div n="B04" type="book" part="M"><div n="B04K19" type="chapter" part="F"><ab n="B04K19V38"><w>μετα</w> <w>δε</w> <w>ταυτα</w><pc>·</pc> <w>ηρωτησε</w> <w>τον</w> <w>πιλατον</w> <w>ιωσηφ</w> <w>απο</w> <w>αριμαθεας</w><pc>.</pc>
+<cb n="1"/>
+<lb/><w>ων</w> <w>μαθητης</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">ιυ</hi></abbr></w><pc>·</pc> <w>κεκρυμμενος</w> <w>δε</w>
+<lb/><w>δια</w> <w>τον</w> <w>φοβον</w> <w>των</w> <w>ιουδαιων</w><pc>.</pc>
+<lb/><w>ινα</w> <w>αρη</w> <w>το</w> <w>σωμα</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">ιυ</hi></abbr></w><pc>·</pc>
+<lb/><w>και</w> <w>επετρεψεν</w> <w>ο</w> <w>πιλατος</w><pc>·</pc>
+<lb/><w>ηλθεν</w> <w>ουν</w><pc>.</pc> <w>και</w> <w>ηρεν</w> <w>το</w> <w>σωμα</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">ιυ</hi></abbr></w><pc>·</pc>
+<lb/></ab> <ab n="B04K19V39"><w>ηλθεν</w> <w>δε</w> <w>και</w> <w>νιδημος</w><pc>.</pc>
+<lb/><w>ο</w> <w>ελθων</w> <w>προς</w> <w>τον</w> <w><abbr type="nomSac"><hi rend="overline">ιν</hi></abbr></w> <w>νυκτος</w> <w>το</w> <w>πρωτον</w><pc>.</pc>
+<lb/><w>φερων</w> <w>μιγμα</w> <w>ζμυρνης</w> <w>και</w> <w>αλοης</w>
+<lb/><w>ως</w> <w>λιτρας</w> <w>εκατον</w><pc>·</pc>
+<lb/></ab> <ab n="B04K19V40"><w>ελαβον</w> <w>ουν</w> <w>το</w> <w>σωμα</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">ιυ</hi></abbr></w><pc>·</pc>
+<lb/><w>και</w> <w>εδησαν</w> <w>αυτο</w> <w>εν</w> <w>οθονιοις</w>
+<lb/><w>μετα</w> <w>των</w> <w>αρωματων</w>
+<lb/><w>καθως</w> <w>εθος</w> <w>εστιν</w> <w>ιουδαις</w> <w>ενταφιαζειν</w><pc>·</pc>
+<lb/></ab> <ab n="B04K19V41"><w>ην</w> <w>δε</w> <w>εν</w> <w>τοπω</w> <w>οπου</w> <w>εσταυρωθη</w> <w>κηκηπος</w><pc>.</pc>
+<lb/><w>και</w> <w>εν</w> <w>τω</w> <w>κηπω</w> <w>μνημιον</w> <w>κενον</w><pc>.</pc>
+<lb/><w>εν</w> <w>ω</w>
+<lb/><w>ουδεπω</w> <w>ουδις</w>
+<lb/><w>ετεθη</w><pc>,</pc>
+<lb/></ab> <ab n="B04K19V42"><w>εκει</w> <w>ουν</w>
+<lb/><w>δια</w>
+<lb/><w>την</w> <w>παρασκευην</w>
+<lb/><w>των</w> <w>ιουδαιων</w><pc>.</pc>
+<lb/><w>οτι</w> <w>εγγυς</w> <w>ην</w>
+<lb/><w>το</w> <w>μνημιον</w><pc>.</pc>
+<lb/><w>εθηκαν</w> <w>τον</w> <w><abbr type="nomSac"><hi rend="overline">ιν</hi></abbr></w><pc>·</pc>
+<lb/></ab></div><div n="B04K20" type="chapter" part="I"><ab n="B04K20V1" part="I"><w>τη</w> <w>δε</w> <w>μια</w> <w>των</w> <w>σαββατων</w><pc>·</pc>
+<lb/><w>μαρια</w> <w>η</w> <w>μαγδαληνη</w>
+<lb/><w>ερχετε</w>
+<lb/><w>πρωι</w>
+<lb/><w>σκο
+<lb break="no"/>τιας</w>
+</ab></div></div></body></text></TEI>

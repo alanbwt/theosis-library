@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="05">05</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>United Kingdom</country>
+            <settlement>Cambridge</settlement>
+            <repository>Cambridge University Library</repository>
+            <idno>Ms. Nn. 2.41</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="g-l"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector1"></witness>
+<witness n="firsthand-C"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="319v" type="folio"/><cb n="1"/><lb/><div type="book" n="B02"><div type="chapter" n="B02K9"><ab n="B02K9V50"><w>καλον</w> <w>το</w> <w>αλας</w><pc>·</pc> <w>εαν</w> <w>δε</w> <w>το</w> <w>αλας</w><lb/><w>αναλον</w> <w>γενησεται</w><pc>·</pc> <w>εν</w> <w>τινι</w> <w>αυτο</w> <w>αρτυσεται</w><lb/><w>εχετε</w> <w>εν</w> <w>εαυτοις</w> <w>αλα</w> <w>και</w> <w>ειρηνευεται</w><lb/><w>εν</w> <w>αλληλοις</w><pc>·</pc></ab></div> <div type="chapter" n="B02K10"><ab n="B02K10V1"><w>και</w> <w>εκειθεν</w> <app><rdg type="orig" hand="firsthand"><w>αστας</w></rdg><rdg type="corr" hand="corrector1"><w>αναστας</w></rdg></app><lb/><w>ερχεται</w> <w>εις</w> <w>τα</w> <w>ορια</w> <w>της</w> <w>ιουδαιας</w><lb/><w>περαν</w> <w>του</w> <w>ιορδανου</w><pc>·</pc> <w>και</w> <w>συνερχεται</w><lb/><w>παλιν</w> <w>ο</w> <w>οχλος</w> <w>προς</w> <w>αυτον</w> <w>ως</w> <w>ειωθι</w><lb/><w>και</w> <w>παλιν</w> <w>εδιδασκεν</w> <w>αυτους</w></ab> <ab n="B02K10V2"><w>και</w> <app><rdg type="orig" hand="firsthand"><w>παλιν</w><lb/><w>εδιδισκεν</w> <w>αυτους</w> <w>κ</w></rdg><rdg type="corr" hand="firsthand"><w>επηρωτων</w><lb/><w>αυτον</w> <w>ει</w> <w>εξεστιν</w> <w>ανδρι</w></rdg></app><lb/><w>γυναικα</w> <w>απολυσαι</w><pc>·</pc> <w>πειραζοντες</w> <w>αυτον</w><lb/></ab> <ab n="B02K10V3"><w>ο</w> <w>δε</w> <w>αποκριθεις</w> <w>ειπεν</w> <w>αυτοις</w><lb/><w>τι</w> <w>υμειν</w> <app><rdg type="orig" hand="firsthand"><w>ετειλατο</w></rdg><rdg type="corr" hand="corrector1"><w>ενετειλατο</w></rdg></app><app><rdg type="orig" hand="firsthand"><w>υωυσης</w></rdg><rdg type="corr" hand="corrector1"><w>μωυσης</w></rdg></app></ab> <ab n="B02K10V4"><w>οι</w> <w>δε</w> <w>ειπαν</w><lb/><w>επετρεψεν</w> <w>μωυσης</w> <w>βιβλιον</w> <w>αποστασιου</w><lb/><w>δουναι</w> <w>γραψαι</w> <w>και</w> <w>απολυσαι</w><lb/></ab> <ab n="B02K10V5"><w>και</w> <w>αποκριθεις</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">ιης</hi></abbr></w> <w>ειπεν</w><lb/><w>προς</w> <w>την</w> <w>σκληροκαρδιαν</w> <w>υμων</w><lb/><w>εγραψεν</w> <w>μωυσης</w> <w>την</w> <w>εντολην</w> <w>ταυτην</w><lb/></ab> <ab n="B02K10V6"><w>απο</w> <w>δε</w> <w>αρχης</w> <w>αρσεν</w> <w>και</w> <app><rdg type="orig" hand="firsthand"><w>θηλυν</w></rdg><rdg type="corr" hand="corrector1"><w>θηλυ</w></rdg></app><lb/><w>εποιησεν</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">θς</hi></abbr></w></ab> <ab n="B02K10V7"><w>και</w> <w>ειπεν</w><lb/><w>ενεκεν</w> <w>τουτου</w> <w>καταλειψει</w> <w>ανθρωπος</w><lb/><w>τον</w> <w>πατερα</w> <w>και</w> <w>την</w> <w>μητερα</w> <w>αυτου</w><lb/><w>και</w> <w>προσκολληθησεται</w><pc>·</pc> <w>προς</w> <w>την</w> <w>γυναικα</w><lb/><w>αυτου</w></ab> <ab n="B02K10V8"><w>και</w> <w>εσονται</w> <w>οι</w> <w><abbr type="num"><hi rend="overline">β</hi></abbr></w> <w>εις</w> <w>σαρκα</w> <w>μιαν</w><lb/><w>ωστε</w> <w>ουκετι</w> <w>εισιν</w> <w><abbr type="num"><hi rend="overline">β</hi></abbr></w> <w>αλλα</w> <w>μια</w> <w>σαρξ</w><lb/></ab> <ab n="B02K10V9"><w>ο</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">θς</hi></abbr></w> <w>εζευξεν</w><pc>·</pc> <w>ανθρωπος</w> <w>μη</w> <w>χωριζετω</w><lb/></ab> <ab n="B02K10V10"><w>και</w> <app><rdg type="orig" hand="firsthand"><w>ει</w></rdg><rdg type="corr" hand="corrector1"></rdg></app> <w>εις</w> <app><rdg type="orig" hand="firsthand"><w>τιν</w></rdg><rdg type="corr" hand="corrector1"><w>την</w></rdg></app> <w>οικιαν</w> <w>παλιν</w><pc>·</pc> <w>οι</w> <w>μαθηται</w> <w>αυτου</w><lb/><w>περι</w> <w>του</w> <w>αυτου</w> <w>λογου</w><lb/><w>επηρωτησαν</w> <w>αυτον</w><pc>·</pc></ab> <ab n="B02K10V11"><w>και</w> <w>λεγει</w> <w>αυτοις</w><lb/><w>ος</w> <w>αν</w> <w>απολυση</w> <w>την</w> <w>γυναικα</w> <w>αυτου</w><lb/><w>και</w> <w>αλλην</w> <w>γαμηση</w><pc>·</pc> <w>μοιχαται</w> <w>επ</w> <w>αυτην</w><lb/></ab> <ab n="B02K10V12"><w>και</w> <w>εαν</w> <w>γυνη</w> <w>εξελθη</w> <w>απο</w> <w>του</w> <w>ανδρος</w><lb/><w>και</w> <w>αλλον</w> <w>γαμηση</w><pc>·</pc> <w>μοιχαται</w><lb/></ab> <ab n="B02K10V13" part="I"><w>και</w> <w>προσεφερον</w> <w>αυτω</w> <w>παιδια</w></ab></div> </div></body></text></TEI>

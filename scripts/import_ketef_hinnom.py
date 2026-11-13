@@ -52,6 +52,10 @@ REVID = 1378179986
 PH_PAGE = "https://commons.wikimedia.org/wiki/File:Ketef_Hinnom_KH2_Scroll.jpg"
 PH_SRC = "https://archive.org/details/ketef-hinnom-kh-2"
 PHOTO = ("Ketef_Hinnom_KH2_Scroll.jpg", (880, 150, 2080, 4000), f"{KEY}/ketef-hinnom-kh2.jpg")
+# QC 2026-11-12: the whole-strip image is reduced to 2600 px; this second crop shows the main (upper) piece of the
+# strip at the full resolution of the source photograph (about 1.5 times the scale of the whole-strip image), so
+# that the scratched letters can be seen.  No sharper open photograph was found (Commons, archive.org).
+DETAIL = ("Ketef_Hinnom_KH2_Scroll.jpg", (930, 190, 2010, 2830), f"{KEY}/ketef-hinnom-kh2-main-piece.jpg")
 BRACKET_FIX = {5: ("ר] ע יברך]", "[ר]ע יברך"), 12: ("] ל]ם", "[ל]ם")}
 
 
@@ -82,6 +86,14 @@ def main():
         s = 2600 / max(im.size)
         im = im.resize((round(im.width * s), round(im.height * s)), Image.LANCZOS)
         im.save(dest, quality=90)
+    dsrc, dbox, dout = DETAIL
+    ddest = ROOT / "site" / "assets" / "scans" / dout
+    if not ddest.exists():
+        im = Image.open(SRC / "photos" / dsrc).convert("RGB").crop(dbox)
+        s = min(1.0, 2600 / max(im.size))
+        if s < 1:
+            im = im.resize((round(im.width * s), round(im.height * s)), Image.LANCZOS)
+        im.save(ddest, quality=90)
     heb, tr, eng = parse()
     orig = "".join(
         f'<span class="native-rtl"><sup>{n}</sup> {heb[n]}</span><span class="translit"><sup>{n}</sup> {tr[n]}</span>'
@@ -92,13 +104,22 @@ def main():
         "original_ref": "Ketef Hinnom amulet KH2, preserved lines 1-12 (lines 5-12: Numbers 6:24-26)",
         "original_text": orig,
         "text": text,
-        "scan_pages": [out],
+        "scan_pages": [out, dout],
         "scan_note": (
-            "The twelve preserved lines are on the one inscribed side of the unrolled silver strip, which the photograph shows "
+            "The twelve preserved lines are on the one inscribed side of the unrolled silver strip, which the first photograph shows "
             "whole (checked on the image: the strip mounted on a plate, broken at the top, with fine scratched letters running "
             "across its width; the letters are very small and faint, the strip being about 11 mm wide, and the detached pieces "
             "at the bottom come from the lower end). Lines are numbered from the top of the preserved text as in Wikipedia. "
-            "Square brackets are restorations, not visible on the silver."),
+            "Square brackets are restorations, not visible on the silver. Where the text is on the photographs: the strip is "
+            "photographed upright, so each line runs across its width (right to left) and the lines follow one another from the "
+            "broken top downwards, over the large upper piece (the upper two thirds of the first photograph) and on to the "
+            "detached pieces below it; which line ends on which piece cannot be told from the photograph. The second photograph "
+            "is the large upper piece alone at the full resolution of the source photograph. The letters are very small, "
+            "fine scratches on crumpled, cracked silver, and at this resolution they show only as groups of short straight strokes "
+            "spread over the piece (near its top, in the middle and in its lower part); single letters and line divisions cannot "
+            "be read on the photograph, "
+            "so the line numbers follow the published reading, not a count made on the image. No sharper open photograph of the "
+            "strip was found (Wikimedia Commons and archive.org, searched 2026-11-12)."),
     }]
     intro = (
         "<p>The <strong>Ketef Hinnom amulets</strong> are two tiny rolled strips of silver found in 1979 by Gabriel Barkay in a "
@@ -129,11 +150,11 @@ def main():
         "translation": sections,
         "verification": {
             "scan_source": f"Wikimedia Commons, {PH_PAGE} (source given there as {PH_SRC})",
-            "scan_license": "Tagged public domain on Commons (PD-Art / PD-old-70); photographer not named; used with credit under the owner's rule for scholarly photographs",
+            "scan_license": "Tagged public domain on Commons (PD-Art / PD-old-70) and marked with the Public Domain Mark 1.0 on archive.org; photographer not named; used with credit under the owner's rule for scholarly photographs",
             "scan_manuscript": "Israel Museum, Jerusalem: Ketef Hinnom amulet KH2, rolled silver strip, about 11 x 39 mm, from a burial cave at Ketef Hinnom (found 1979); late 7th or early 6th century BCE",
             "scan_mapping": "Single inscribed side of the strip shown whole; one section with the twelve preserved lines, numbered from the top as in Wikipedia",
             "scan_mapping_urls": [PH_PAGE, WIKI],
-            "scan_local_paths": [out],
+            "scan_local_paths": [out, dout],
             "original_text_source": f"English Wikipedia, 'Ketef Hinnom scrolls', section KH2, 'Text in Hebrew letters' and 'Transliteration' (revision {REVID}): {WIKI}",
             "original_text_license": "CC BY-SA 4.0 (Wikipedia article text)",
             "translation_source": f"English Wikipedia, 'Ketef Hinnom scrolls', section KH2, numbered English lines (revision {REVID}): {WIKI}",
@@ -150,7 +171,8 @@ def main():
         "date_approx": "late 7th or early 6th century BCE", "century": -7, "source": entry["source"], "description": entry["description"],
         "themes": ["ketef-hinnom", "amulet", "priestly-blessing", "numbers-6", "yhwh", "jerusalem", "hebrew-inscription", "verified"],
         "is_first_translation": False, "status": "published",
-        "scans": {"pages": [{"file": out, "caption": "Ketef Hinnom amulet KH2, unrolled"}]},
+        "scans": {"pages": [{"file": out, "caption": "Ketef Hinnom amulet KH2, unrolled"},
+                            {"file": dout, "caption": "Ketef Hinnom amulet KH2, main piece (full resolution)"}]},
     }
     coll = {
         "collection": {

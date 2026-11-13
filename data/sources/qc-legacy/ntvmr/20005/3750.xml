@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="05">05</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>United Kingdom</country>
+            <settlement>Cambridge</settlement>
+            <repository>Cambridge University Library</repository>
+            <idno>Ms. Nn. 2.41</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="g-l"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector1"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="180v" type="folio"/><w>ανθρακειαν</w> <w>κειμενην</w> <w>και</w> <w>οψαριον</w>
+<cb n="1"/>
+<lb/><div n="B04" type="book" part="M"><div n="B04K21" type="chapter" part="M"><ab n="B04K21V9" part="F"><w>επικειμενον</w> <w>και</w> <w>αρτον</w></ab> <ab n="B04K21V10"><w>λεγει</w> <w>αυτοις</w>
+<lb/><w>ο</w> <w><abbr type="nomSac"><hi rend="overline">ιης</hi></abbr></w> <w>ενεγκατε</w> <w>εκ</w> <w>των</w> <w>οψαριων</w> <w>ων</w>
+<lb/><w>επιασατε</w> <w>νυν</w></ab> <ab n="B04K21V11"><w>ανεβη</w> <w>σιμων</w> <app><rdg type="orig" hand="firsthand"><w>πρτρος</w></rdg><rdg type="corr" hand="corrector1"><w>πετρος</w></rdg></app><note type="local">Scri. p.m.</note>
+<lb/><w>και</w> <w>ειλκυσεν</w> <w>το</w> <w>δικτυον</w> <w>μεστον</w>
+<lb/><w>επι</w> <w>την</w> <w>γην</w> <app><rdg type="orig" hand="firsthand"><w>μεγων</w></rdg><rdg type="corr" hand="corrector1"><w>μεγαλων</w></rdg></app><note type="local">Scri. B</note> <w>ιχθυων</w><pc>·</pc> <w><abbr type="num"><hi rend="overline">ρνγ</hi></abbr></w><pc>·</pc>
+<lb/><w>και</w> <w>τοσουτων</w> <w>οντων</w> <w>ουκ</w> <w>εσχισθη</w>
+<lb/><w>το</w> <w>δικτυον</w></ab> <ab n="B04K21V12"><w>λεγει</w> <w>αυτοις</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">ιης</hi></abbr></w> <w>δευτε</w>
+<lb/><w>αριστησατε</w> <w>ουδεις</w> <w>δε</w> <w>ετολμα</w> <w>των</w>
+<lb/><w>μαθητων</w> <w>εξετασαι</w> <w>αυτον</w> <w>συ</w> <w>τις</w> <w>ει</w>
+<lb/><w>ειδοτες</w> <w>οτι</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">κς</hi></abbr></w> <w>εστιν</w></ab> <ab n="B04K21V13"><w>ερχεται</w> <w><abbr type="nomSac"><hi rend="overline">ιης</hi></abbr></w>
+<lb/><w>και</w> <w>λαμβανει</w> <w>τον</w> <w>αρτον</w> <w>ευχαριστησας</w> <w>εδωκεν</w>
+<lb/><w>αυτοις</w> <w>και</w> <w>το</w> <w>οψαριον</w> <w>ομοιως</w>
+<lb/></ab> <ab n="B04K21V14"><w>τουτο</w> <w>ηδη</w> <w>τριτον</w> <w>εφανερωθη</w> <w><abbr type="nomSac"><hi rend="overline">ιης</hi></abbr></w>
+<lb/><w>τοις</w> <w>μαθηταις</w> <w>αυτου</w> <w>εγερθεις</w> <w>εκ</w> <w>νεκρων</w>
+<lb/></ab> <ab n="B04K21V15"><w>οτε</w> <w>ουν</w> <w>ηριστησαν</w> <w>λεγει</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">ιης</hi></abbr></w> <w>τω</w> <w>σιμωνι</w> <w>πετρω</w>
+<lb/><w>σιμων</w> <w>ιωανου</w> <w>αγαπας</w> <w>με</w> <w>πλεον</w> <w>τουτων</w>
+<lb/><w>λεγει</w> <w>αυτω</w> <w>ναι</w> <w><abbr type="nomSac"><hi rend="overline">κε</hi></abbr></w> <w>συ</w> <w>οιδας</w> <w>οτι</w>
+<lb/><w>φιλω</w> <w>σε</w> <w>λεγει</w> <w>αυτω</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">ιης</hi></abbr></w> <w>βοσκε</w> <w>τα</w> <w>προβατα</w> <w>μου</w>
+<lb/></ab> <ab n="B04K21V16"><w>λεγει</w> <w>αυτω</w> <w>δευτερον</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">κς</hi></abbr></w> <w>σιμων</w> <w>ιωανου</w>
+<lb/><w>αγαπας</w> <w>με</w><pc>·</pc> <w>λεγει</w> <w>αυτω</w> <w>ναι</w> <w><abbr type="nomSac"><hi rend="overline">κε</hi></abbr></w>
+<lb/><w>συ</w> <w>οιδας</w> <w>οτι</w> <w>φιλω</w> <w>σε</w><pc>·</pc> <w>λεγει</w> <w>αυτω</w> <w>ποιμενε</w>
+<lb/><w>μου</w> <w>τα</w> <w>προβατα</w></ab> <ab n="B04K21V17"><w>λεγει</w> <w>αυτω</w> <w>το</w> <w>τριτον</w>
+<lb/><w>σιμων</w> <w>ιωανου</w> <w>φιλεις</w> <w>με</w>
+<lb/><w>ελυπηθη</w> <w>ο</w> <w>πετρος</w> <w>οτι</w> <w>ειπεν</w> <w>αυτω</w> <app><rdg type="orig" hand="firsthand"/><rdg type="corr" hand="corrector1"><w>το</w> <w>τριτον</w></rdg></app><note type="local">nach Scrivener Schreiber selbst</note> <w>φιλεις</w> <w>με</w>
+<lb/><w>και</w> <w>λεγει</w> <w>αυτω</w> <w><abbr type="nomSac"><hi rend="overline">κε</hi></abbr></w> <w>παντα</w> <w>συ</w> <w>οιδας</w>
+<lb/><w>συ</w> <w>γεινωσκεις</w> <w>οτι</w> <w>φιλω</w> <w>σε</w>
+<lb/><w>λεγει</w> <w>αυτω</w> <w>βοσκε</w> <w>τα</w> <w>προβατα</w> <w>μου</w>
+<lb/></ab> <ab n="B04K21V18"><w>αμην</w> <w>αμην</w> <w>λεγω</w> <w>σοι</w><pc>·</pc> <w>οτε</w> <w>ης</w> <w>νεωτερος</w>
+<lb/><w>εζωννυες</w> <w>σεαυτον</w> <w>και</w> <w>περιεπατεις</w> <w>οπου</w>
+<lb/><w>ηθελες</w><pc>·</pc> <w>οταν</w> <w>δε</w> <w>γηρασης</w> <w>εκτενεις</w> <w>τας</w> <app><rdg type="orig" hand="firsthand"><w>χιρας</w></rdg><rdg type="corr" hand="corrector1"><w>χειρας</w></rdg></app><note type="local">nach Scrivener Schreiber selbst</note> <w>σου</w>
+<lb/><w>και</w> <w>αλλοι</w> <w>σε</w> <w>ζωσουσει</w> <w>και</w> <app><rdg type="orig" hand="firsthand"><w><unclear>επο</unclear>γουσιν</w></rdg><rdg type="corr" hand="corrector1"><w>απαγουσιν</w></rdg></app><note type="local">Scri. p.m.</note> <w>σε</w>
+<lb/><w>οπου</w> <w>συ</w> <app><rdg type="orig" hand="firsthand"/><rdg type="corr" hand="corrector1"><w>ου</w></rdg></app><note type="local">Scri. C</note> <w>θελεις</w></ab> <ab n="B04K21V19" part="I"><w>ταυτα</w> <w>δε</w> <w>ειπεν</w>
+</ab></div></div></body></text></TEI>

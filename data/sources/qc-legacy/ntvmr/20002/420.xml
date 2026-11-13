@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="02">02</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>United Kingdom</country>
+            <settlement>London</settlement>
+            <repository>British Library</repository>
+            <idno>Royal 1 D.VIII</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="59r" type="folio"/><cb n="1"/><lb/><div type="book" n="B03"><div type="chapter" n="B03K16"><ab n="B03K16V24" part="F"><w>το</w> <w>ακρον</w> <w>του</w> <w>δακτυλου</w> <w>αυ<lb break="no"/>του</w> <w>υδατος</w> <w>και</w> <w>καταψυξη</w><lb/><w>την</w> <w>γλωσσαν</w> <w>μου</w> <w>οτι</w> <w>οδυ<lb break="no"/>νωμαι</w> <w>εν</w> <w>τη</w> <w>φλογι</w> <w>ταυτη</w><pc>·</pc><lb/></ab> <ab n="B03K16V25"><w>ειπεν</w> <w>δε</w> <w>αβρααμ</w><pc>·</pc> <w>τεκνον</w><lb/><w>μνησθητι</w> <w>οτι</w> <w>απελαβες</w> <w>τα</w><lb/><w>αγαθα</w> <w>σου</w> <w>συ</w> <w>εν</w> <w>τη</w> <w>ζωη</w> <w>σου</w><lb/><w>και</w> <w>λαζαρος</w> <w>ομοιως</w> <w>τα</w> <w>κακα</w><lb/><w>νυν</w> <w>δε</w> <w>ωδε</w> <w>παρακαλειται</w><lb/><w>συ</w> <w>δε</w> <w>οδυνασαι</w></ab> <ab n="B03K16V26"><w>και</w> <w>επι</w> <w>πασιν</w><lb/><w>τουτοις</w> <w>μεταξυ</w> <w>ημων</w><pc>·</pc> <w>και</w><lb/><w>υμων</w> <w>χασμα</w> <w>μεγα</w><pc>·</pc> <w>εστη<lb break="no"/>ρικται</w> <w>οπως</w> <w>οι</w> <w>θελοντες</w><lb/><w>διαβηναι</w> <w>ενθεν</w> <w>προς</w> <app><rdg type="orig" hand="firsthand"><w>υμασ<lb break="no"/>μας</w></rdg><rdg type="corr" hand="corrector"><w>υμ<lb break="no"/>μας</w></rdg></app> <w>μη</w> <w>δυνωνται</w> <w>μηδε</w><lb/><w>οι</w> <w>εκειθεν</w> <w>προς</w> <w>ημας</w> <w>δια<lb break="no"/>περωσιν</w><pc>·</pc></ab> <ab n="B03K16V27"><w>ειπεν</w> <w>δε</w> <w>ερω<lb break="no"/>τω</w> <w>σε</w> <w>ουν</w> <w><abbr type="nomSac"><hi rend="overline">περ</hi></abbr></w><pc>·</pc> <w>ινα</w> <w>πεμψης</w><lb/><w>αυτον</w> <w>εις</w> <w>τον</w> <w>οικον</w> <w>του</w><lb/><w><abbr type="nomSac"><hi rend="overline">πρς</hi></abbr></w> <w>μου</w><pc>·</pc></ab> <ab n="B03K16V28"><w>εχω</w> <w>γαρ</w> <w>πεντε</w><lb/><w>αδελφους</w><pc>·</pc> <w>οπως</w> <w>διαμαρ<lb break="no"/>τυρητε</w> <w>αυτοις</w><pc>·</pc> <w>ινα</w> <w>μη</w> <w>και</w> <w>αυ<lb break="no"/>τοι</w> <w>ελθωσιν</w> <w>εις</w> <w>τον</w> <w>τοπον</w><lb/><w>τουτον</w> <w>της</w> <w>βασανου</w><lb/></ab> <ab n="B03K16V29"><w>λεγει</w> <w>δε</w> <w>αυτω</w> <w>αβρααμ</w> <w>εχουσιν</w><lb/><w>μωσεα</w> <w>και</w> <w>τους</w> <w>προφητας</w><lb/><w>ακουσατωσαν</w> <w>αυτων</w></ab> <ab n="B03K16V30"><w>ο</w> <w>δε</w><lb/><w>ειπεν</w> <w>ουχι</w> <w><abbr type="nomSac"><hi rend="overline">περ</hi></abbr></w> <w>αβρααμ</w><pc>·</pc> <w>αλλ</w><lb/><w>εαν</w> <w>τις</w> <w>απο</w> <w>νεκρων</w> <w>πο<lb break="no"/>ρευθη</w> <w>προς</w> <w>αυτους</w> <w>μετα<lb break="no"/>νοησουσιν</w></ab> <ab n="B03K16V31"><w>ειπεν</w> <w>δε</w> <w>αυ<lb break="no"/>τω</w> <w>ει</w> <w>μωσεως</w><pc>·</pc> <w>και</w> <w>των</w><lb/><w>προφητων</w> <w>ουκ</w> <w>ακουου<lb break="no"/>σιν</w> <w>ουδ</w> <w>εαν</w> <w>τις</w> <w>εκ</w> <w>νεκρων</w><lb/><w>αναστη</w> <w>πεισθησονται</w><pc>·</pc><lb/></ab></div><div type="chapter" n="B03K17"><ab n="B03K17V1"><w>ειπεν</w> <w>δε</w> <w>προς</w> <w>τους</w> <w>μαθητας</w><lb/><w>αυτου</w> <w>ανενδεκτον</w> <app><rdg type="orig" hand="firsthand"><w>εσ<unclear>τιν</unclear><lb break="no"/>τιν</w></rdg><rdg type="corr" hand="corrector"><w>εσ<lb break="no"/>τιν</w></rdg></app> <w>του</w> <w>μη</w> <w>ελθειν</w> <w>τα</w> <w>σκαν<lb break="no"/>δαλα</w><pc>·</pc> <w>ουαι</w> <w>δε</w> <w>δι</w> <w>ου</w> <w>ερχεται</w><lb/></ab> <ab n="B03K17V2"><w>λυσιτελει</w> <w>αυτω</w><pc>·</pc> <w>ει</w> <w>μυλος</w><lb/><w>ονικος</w> <w>περικειτε</w> <w>περι</w> <w>τον</w><lb/><w>τραχηλον</w> <w>αυτου</w><pc>·</pc> <w>και</w> <w>ερρι<lb break="no"/>πται</w> <w>εις</w> <w>την</w> <w>θαλασσαν</w><lb/><w>η</w> <w>ινα</w> <w>σκανδαλιση</w> <w>ενα</w> <w>των</w><lb/><w>μικρων</w> <w>τουτων</w><pc>·</pc><lb/></ab> <ab n="B03K17V3"><w>προσεχετε</w> <w>εαυτοις</w><pc>·</pc> <w>εαν</w> <w>δε</w><lb/><w>αμαρτη</w> <w>ο</w> <w>αδελφος</w> <w>σου</w><lb/><w>επιτιμησον</w> <w>αυτω</w><pc>·</pc> <w>και</w> <w>εαν</w><lb/><w>μεν</w> <w>μετανοηση</w> <w>αφες</w> <w>αυ<lb break="no"/>τω</w></ab> <ab n="B03K17V4"><w>και</w> <w>εαν</w> <w>επτακις</w> <w>της</w><lb/><w>ημερας</w> <w>αμαρτηση</w> <w>εις</w> <w>σε</w><cb n="2"/><lb/><w>και</w> <w>εαν</w> <w>επτακις</w> <w>της</w> <w>ημε<lb break="no"/>ρας</w> <w>επιστρεψη</w> <w>προς</w> <w>σε</w> <w>λε<lb break="no"/>γων</w> <w>μετανοω</w> <w>αφησεις</w><lb/><w>αυτω</w><pc>·</pc></ab> <ab n="B03K17V5"><w>και</w> <w>ειπον</w> <w>οι</w> <w>απο<lb break="no"/>στολοι</w> <w>τω</w> <w><abbr type="nomSac"><hi rend="overline">κω</hi></abbr></w> <w>προσθες</w> <w>ημιν</w><lb/><w>πιστιν</w><pc>·</pc></ab> <ab n="B03K17V6"><w>ειπεν</w> <w>δε</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">κς</hi></abbr></w><lb/><w>ει</w> <w>εχετε</w> <w>πιστιν</w> <w>ως</w> <w>κοκκον</w><lb/><w>σιναπεως</w> <w>ελεγετε</w> <w>αν</w> <w>τη</w><lb/><w>συκαμινω</w> <w>ταυτη</w> <w>εκριζωθη<lb break="no"/>τι</w> <w>και</w> <w>φυτευθητι</w> <w>εν</w> <w>τη</w> <w>θα<lb break="no"/>λασση</w><pc>·</pc> <w>και</w> <w>υπηκουσεν</w> <w>υμιν</w><lb/></ab> <ab n="B03K17V7"><w>τις</w> <w>δε</w> <w>εξ</w> <w>υμων</w> <w>δουλον</w> <w>εχων</w><lb/><w>αροτριωντα</w> <w>η</w> <w>ποιμαινοντα</w><lb/><w>ος</w> <w>εισελθοντι</w> <w>εκ</w> <w>του</w> <w>αγρου</w><lb/><w>ερει</w> <w>ευθεως</w><pc>·</pc> <w>παρελθων</w><lb/><w>αναπεσαι</w><pc>·</pc></ab> <ab n="B03K17V8"><w>αλλ</w> <w>ουχι</w> <w>ερει</w> <w>αυ<lb break="no"/>τω</w> <w>ετοιμασον</w> <w>τι</w> <w>διπνησω</w><lb/><w>και</w> <w>περιζωσαμενος</w> <w>δια<lb break="no"/>κονει</w> <w>μοι</w><pc>·</pc> <w>εως</w> <w>αν</w> <w>φαγω</w><lb/><w>και</w> <w>πιω</w> <w>και</w> <w>μετα</w> <w>ταυτα</w> <w>φα<lb break="no"/>γεσε</w><pc>·</pc> <w>και</w> <w>πιεσαι</w> <w>συ</w><pc>·</pc></ab> <ab n="B03K17V9"><w>μη</w> <w>χα<lb break="no"/>ριν</w> <w>εχει</w> <w>τω</w> <w>δουλω</w> <w>οτι</w> <w>εποι<lb break="no"/>ησεν</w> <w>τα</w> <w>διαταχθεντα</w><pc>·</pc> <w>ου</w> <w>δο<lb break="no"/>κω</w></ab> <ab n="B03K17V10"><w>ουτως</w> <w>και</w> <w>υμεις</w> <w>οταν</w><lb/><w>ποιησητε</w> <w>παντα</w> <w>ταυτα</w> <w>τα</w><lb/><w>διαταχθεντα</w> <w>υμιν</w> <w>λεγετε</w><lb/><w>δουλοι</w> <w>αχριοι</w> <w>εσμεν</w><pc>·</pc> <w>ο</w> <w>ω<lb break="no"/>φειλομεν</w> <w>ποιησαι</w> <w>πεποι<lb break="no"/>ηκαμεν</w></ab> <ab n="B03K17V11"><w>και</w> <w>εγενετο</w><lb/><w>εν</w> <w>τω</w> <w>πορευεσθαι</w> <w>αυτον</w><lb/><w>εις</w> <w><abbr type="nomSac"><hi rend="overline">ιλημ</hi></abbr></w><pc>·</pc> <w>και</w> <w>αυτος</w> <w>διηρχε<lb break="no"/>το</w> <w>δια</w> <w>μεσου</w> <w>σαμαριας</w> <w>και</w><lb/><w>γαλιλαιας</w><pc>·</pc></ab> <ab n="B03K17V12"><w>και</w> <w>εισερχομε<lb break="no"/>νου</w> <w>αυτου</w> <w>εις</w> <w>τινα</w> <w>κωμην</w><lb/><w>απηντησαν</w> <w>αυτω</w> <w>δεκα</w> <w>λε<lb break="no"/>προι</w> <w>ανδρες</w><pc>·</pc> <w>οι</w> <w>εστησαν</w><pc>·</pc><lb/><w>πορρωθεν</w><pc>·</pc></ab> <ab n="B03K17V13"><w>και</w> <w>αυτοι</w> <w>ηραν</w><lb/><w>φωνην</w> <w>λεγοντες</w><pc>·</pc> <w><abbr type="nomSac"><hi rend="overline">ιυ</hi></abbr></w> <w>επισ<lb break="no"/>τατα</w><pc>·</pc> <w>ελεησον</w> <w>ημας</w><pc>·</pc></ab> <ab n="B03K17V14"><w>και</w><lb/><w>ιδων</w> <w>ειπεν</w> <w>αυτοις</w> <w>πορευ<lb break="no"/>θεντες</w> <w>επιδειξατε</w> <w>εαυτους</w><lb/><w>τοις</w> <w>ιερευσιν</w><pc>·</pc> <w>και</w> <w>εγενε<lb break="no"/>το</w> <w>εν</w> <w>τω</w> <w>υπαγειν</w> <w>αυτους</w><lb/><w>εκαθερισθησαν</w><pc>·</pc></ab> <ab n="B03K17V15"><w>εις</w> <w>δε</w> <w>εξ</w><lb/><w>αυτων</w> <w>ιδων</w> <w>οτι</w> <w>ιαθη</w><pc>·</pc> <w>υπε<lb break="no"/>στρεψεν</w> <w>μετα</w> <w>φωνης</w> <w>με<lb break="no"/>γαλης</w> <w>δοξαζων</w> <w>τον</w> <w><abbr type="nomSac"><hi rend="overline">θν</hi></abbr></w><pc>·</pc></ab> <ab n="B03K17V16"><w>και</w><lb/><w>επεσεν</w> <w>επι</w> <w>προσωπον</w><lb/><w>παρα</w> <w>τους</w> <w>ποδας</w> <w>αυτου</w> <w>ευ<lb break="no"/>χαριστων</w> <w>αυτω</w> <w>και</w> <w>αυτος</w><lb/><w>ην</w><pc>·</pc> <w>σαμαρειτης</w><pc>·</pc></ab></div> </div></body></text></TEI>

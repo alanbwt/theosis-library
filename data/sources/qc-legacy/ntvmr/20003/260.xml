@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="03">03</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>Vatican City</country>
+            <settlement>Città del Vaticano</settlement>
+            <repository>Biblioteca Apostolica Vaticana</repository>
+            <idno>Vat. gr. 1209, p. 1235-1518</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector"></witness>
+<witness n="corrector2"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+
+<pb n="1257" type="page"/>
+<cb n="1"/>
+<lb/><div type="book" n="Matt"><div type="chapter" n="Matt.16"><ab n="Matt.16.16" part="F"><w>ζωντος</w></ab> <ab n="Matt.16.17"><w>αποκριθεις</w>
+<lb/><w>δε</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">ις</hi></abbr></w> <w>ειπεν</w> <w>αυτω</w> <w>μα
+<lb break="no"/>καριος</w> <w>ει</w> <w>σιμων</w> <app><rdg type="orig" hand="firsthand"><gap reason="unspecified" unit="char" extent="4-5"/></rdg><rdg type="corr" hand="corrector"><w>βαριωνᾶ</w> <w>οτι</w></rdg></app>
+<lb/><w>σαρξ</w> <w>και</w> <w>αιμα</w> <w>ουκ</w> <app><rdg type="orig" hand="firsthand"><w>απε​
+<lb break="no"/>καλυψεν</w></rdg><rdg type="corr" hand="corrector2"><w>απε​
+<lb break="no"/>καλυψε</w></rdg></app> <w>σοι</w> <w>αλλ</w> <w>ο</w> <w>πα
+<lb break="no"/>τηρ</w> <w>μου</w> <w>ο</w> <w>εν</w> <w>ουρανοις</w>
+<lb/></ab> <ab n="Matt.16.18"><w>καγω</w> <w>δε</w> <w>σοι</w> <w>λεγω</w> <w>οτι</w>
+<lb/><w>συ</w> <w>ει</w> <w>πετρος</w> <w>και</w> <w>επι</w> <w>ταυ
+<lb break="no"/>τη</w> <w>τη</w> <w>πετρα</w> <w>οικοδομη
+<lb break="no"/>σω</w> <w>μου</w> <w>την</w> <w>εκκλησι
+<lb break="no"/>αν</w> <w>και</w> <w>πυλαι</w> <w>αδου</w> <w>ου</w>
+<lb/><w>κατισχυσουσιν</w> <w>αυτης</w>
+<lb/></ab> <ab n="Matt.16.19"><app><rdg type="orig" hand="firsthand"></rdg><rdg type="corr" hand="corrector2"><w>και</w></rdg></app> <w>δωσω</w> <w>σοι</w> <w>τας</w> <app><rdg type="orig" hand="firsthand"><w>κλειδας</w></rdg><rdg type="corr" hand="corrector2"><w>κλεις</w></rdg></app>
+<lb/><w>της</w> <w>βασιλειας</w> <w>των</w> <w>ου
+<lb break="no"/>ρανων</w> <w>και</w> <w>ο</w> <w>αν</w> <w>δησης</w>
+<lb/><w>επι</w> <w>της</w> <w>γης</w> <w>εσται</w> <w>δε
+<lb break="no"/>δεμενον</w> <w>εν</w> <w>τοις</w> <w>ου
+<lb break="no"/>ρανοις</w> <w>και</w> <w>ο</w> <w>εαν</w> <w>λυσης</w>
+<lb/><w>επι</w> <w>της</w> <w>γης</w> <w>εσται</w> <w>λε
+<lb break="no"/>λυμενον</w> <w>εν</w> <w>τοις</w> <w>ου
+<lb break="no"/>ρανοις</w></ab> <ab n="Matt.16.20"><w>τοτε</w> <app><rdg type="orig" hand="firsthand"><w><unclear>επετε</unclear>ι​
+<lb break="no"/>μ<unclear>η</unclear>σεν</w></rdg><rdg type="corr" hand="corrector2"><w>διεστειλατο</w></rdg></app> <w>τοις</w> <w>μαθηταις</w>
+<lb/><w>ινα</w> <w>μηδενι</w> <w>ειπωσιν</w> <w>ο
+<lb break="no"/>τι</w> <w>αυτος</w> <w>εστιν</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">χς</hi></abbr></w>
+<lb/></ab> <ab n="Matt.16.21"><w>απο</w> <w>τοτε</w> <w>ηρξατο</w> <w><abbr type="nomSac"><hi rend="overline">ις</hi></abbr></w>
+<lb/><app><rdg type="orig" hand="firsthand"><w><abbr type="nomSac"><hi rend="overline">χς</hi></abbr></w></rdg><rdg type="corr" hand="corrector2"></rdg></app> <w>δεικνυναι</w> <w>τοις</w> <w>μα
+<lb break="no"/>θηταις</w> <w>αυτου</w> <w>οτι</w> <w>δει</w>
+<lb/><w>αυτον</w> <w>εις</w> <w>ιεροσολυμα</w>
+<lb/><w>απελθειν</w> <w>και</w> <w>πολλα</w>
+<lb/><w>παθειν</w> <w>απο</w> <w>των</w> <w>πρεσ
+<lb break="no"/>βυτερων</w> <w>και</w> <w>αρχιερε
+<lb break="no"/>ων</w> <w>και</w> <w>γραμματεων</w>
+<lb/><w>και</w> <w>αποκτανθηναι</w> <w>και</w>
+<lb/><w>τη</w> <w>τριτη</w> <w>ημερα</w> <w>εγερθη
+<lb break="no"/>ναι</w></ab> <ab n="Matt.16.22"><w>και</w> <w>προσλαβομε
+<lb break="no"/>νος</w> <w>αυτον</w> <w>ο</w> <w>πετρος</w>
+<lb/><w>λεγει</w> <w>αυτω</w> <app><rdg type="orig" hand="firsthand"><w>επιτειμων</w></rdg><rdg type="corr" hand="corrector2"><w>επιτιμων</w></rdg></app>
+<lb/><app><rdg type="orig" hand="firsthand"><w>ειλεως</w></rdg><rdg type="corr" hand="corrector2"><w>ιλεως</w></rdg></app> <w>σοι</w> <w><abbr type="nomSac"><hi rend="overline">κε</hi></abbr></w> <w>ου</w> <w>μη</w> <w>ε
+<lb break="no"/>σται</w> <w>σοι</w> <w>τουτο</w></ab> <ab n="Matt.16.23"><w>ο</w> <w>δε</w>
+<lb/><w>στραφεις</w> <app><rdg type="orig" hand="firsthand"><w>ειπεν</w></rdg><rdg type="corr" hand="corrector2"><w>ειπε</w></rdg></app> <w>τω</w>
+<lb/><w>πετρω</w> <w>υπαγε</w> <w>οπισω</w> <w>μου</w>
+<lb/><w>σατανα</w> <w>σκανδαλον</w> <w>ει</w>
+<cb n="2"/>
+<lb/><w>εμου</w> <w>οτι</w> <w>ου</w> <w>φρονεις</w>
+<lb/><w>τα</w> <w>του</w> <w><abbr type="nomSac"><hi rend="overline">θυ</hi></abbr></w> <w>αλλα</w> <w>τα</w> <w>των</w>
+<lb/><w>ανθρωπων</w></ab> <ab n="Matt.16.24"><w>τοτε</w> <app><rdg type="orig" hand="firsthand"></rdg><rdg type="corr" hand="corrector2"><w>ο</w></rdg></app> <w><abbr type="nomSac"><hi rend="overline">ις</hi></abbr></w>
+<lb/><app><rdg type="orig" hand="firsthand"><w>ειπεν</w></rdg><rdg type="corr" hand="corrector2"><w>ειπε</w></rdg></app> <w>τοις</w> <w>μαθηταις</w>
+<lb/><w>αυτου</w> <w>ει</w> <w>τις</w> <w>θελει</w> <w>οπι
+<lb break="no"/>σω</w> <w>μου</w> <w>ελθειν</w> <w>απαρνη
+<lb break="no"/>σασθω</w> <w>εαυτον</w> <w>και</w> <w>αρα
+<lb break="no"/>τω</w> <w>τον</w> <w>σταυρον</w> <w>αυτου</w>
+<lb/><w>και</w> <w>ακολουθειτω</w> <w>μοι</w>
+<lb/></ab> <ab n="Matt.16.25"><w>ος</w> <w>γαρ</w> <w>εαν</w> <w>θελη</w> <w>την</w> <w>ψυ
+<lb break="no"/>χην</w> <w>αυτου</w> <w>σωσαι</w> <w>απο
+<lb break="no"/>λεσει</w> <w>αυτην</w> <w>ος</w> <w>δ</w> <w>αν</w> <w>α
+<lb break="no"/>πολεση</w> <w>την</w> <w>ψυχην</w>
+<lb/><w>αυτου</w> <w>ενεκεν</w> <w>εμου</w>
+<lb/><w>ευρησει</w> <w>αυτην</w></ab> <ab n="Matt.16.26"><w>τι</w> <w>γαρ</w>
+<lb/><w>ωφεληθησεται</w> <w>αν
+<lb break="no"/>θρωπος</w> <w>εαν</w> <w>τον</w> <w>κοσ
+<lb break="no"/>μον</w> <w>ολον</w> <w>κερδηση</w> <w>την</w>
+<lb/><w>δε</w> <w>ψυχην</w> <w>αυτου</w> <w>ζημι
+<lb break="no"/>ωθη</w> <w>η</w> <w>τι</w> <w>δωσει</w> <w>ανθρω
+<lb break="no"/>πος</w> <app><rdg type="orig" hand="firsthand"><w>ανταλαγμα</w></rdg><rdg type="corr" hand="corrector2"><w>ανταλλαγμα</w></rdg></app> <w>της</w>
+<lb/><w>ψυχης</w> <w>αυτου</w></ab> <ab n="Matt.16.27"><w>μελλει</w>
+<lb/><w>γαρ</w> <w>ο</w> <w>υιος</w> <w>του</w> <w>ανθρω
+<lb break="no"/>που</w> <w>ερχεσθαι</w> <w>εν</w> <w>τη</w> <w>δο
+<lb break="no"/>ξη</w> <w>του</w> <w>πατρος</w> <w>αυτου</w>
+<lb/><w>μετα</w> <w>των</w> <w>αγγελων</w> <w>αυ
+<lb break="no"/>του</w> <w>και</w> <w>τοτε</w> <w>αποδω
+<lb break="no"/>σει</w> <w>εκαστω</w> <w>κατα</w> <w>την</w>
+<lb/><w>πραξιν</w> <w>αυτου</w></ab> <ab n="Matt.16.28"><w>αμην</w>
+<lb/><w>λεγω</w> <w>υμιν</w> <w>οτι</w> <app><rdg type="orig" hand="firsthand"><w>εισιν</w></rdg><rdg type="corr" hand="corrector2"><w>εισι</w></rdg></app> <w>τι
+<lb break="no"/>νες</w> <w>των</w> <w>ωδε</w> <w>εστωτων</w>
+<lb/><w>οιτινες</w> <w>ου</w> <w>μη</w> <w>γευσων
+<lb break="no"/>ται</w> <w>θανατου</w> <w>εως</w> <w>αν</w> <app><rdg type="orig" hand="firsthand"><w>ι​
+<lb break="no"/>δωσιν</w></rdg><rdg type="corr" hand="corrector2"><w>ι​
+<lb break="no"/>δωσι</w></rdg></app> <w>τον</w> <w>υιον</w> <w>του</w>
+<lb/><w>ανθρωπου</w> <w>ερχομενον</w>
+<lb/><w>εν</w> <w>τη</w> <w>βασιλεια</w> <w>αυτου</w>
+<lb/></ab></div><div type="chapter" n="Matt.17"><ab n="Matt.17.1"><w>και</w> <w>μεθ</w> <w>ημερας</w> <w>εξ</w> <w>πα
+<lb break="no"/>ραλαμβανει</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">ις</hi></abbr></w> <w>τον</w>
+<lb/><w>πετρον</w> <w>και</w> <w>ιακωβον</w>
+<lb/><w>και</w> <w>ιωανην</w> <w>τον</w> <w>αδελ
+<lb break="no"/>φον</w> <w>αυτου</w> <w>και</w> <w>αναφε
+<lb break="no"/>ρει</w> <w>αυτους</w> <w>εις</w> <w>ορος</w> <w>υ
+<cb n="3" break="no"/>
+<lb/>ψηλον</w> <app><rdg type="orig" hand="firsthand"><w>καθ</w></rdg><rdg type="corr" hand="corrector2"><w>κατ</w></rdg></app> <w>ιδιαν</w></ab> <ab n="Matt.17.2"><w>και</w> <w>με
+<lb break="no"/>τεμορφωθη</w> <w>εμπροσ
+<lb break="no"/>θεν</w> <w>αυτων</w> <w>και</w> <app><rdg type="orig" hand="firsthand"><w>ελαμψεν</w></rdg><rdg type="corr" hand="corrector2"><w>ελαμψε</w></rdg></app>
+<lb/><w>το</w> <w>προσωπον</w> <w>αυτου</w>
+<lb/><w>ως</w> <w>ο</w> <w>ηλιος</w> <w>τα</w> <w>δε</w> <w>ιματι
+<lb break="no"/>α</w> <w>αυτου</w> <w>εγενετο</w> <w>λευ
+<lb break="no"/>κα</w> <w>ως</w> <w>το</w> <w>φως</w></ab> <ab n="Matt.17.3"><w>και</w> <w>ιδου</w>
+<lb/><w>ωφθη</w> <w>αυτοις</w> <w>μωυσης</w>
+<lb/><w>και</w> <app><rdg type="orig" hand="firsthand"><w>ηλειας</w></rdg><rdg type="corr" hand="corrector2"><w>ηλιας</w></rdg></app><app><rdg type="orig" hand="firsthand"><w>συνλαλουν​
+<lb break="no"/>τες</w></rdg><rdg type="corr" hand="corrector2"><w>συλλαλουν​
+<lb break="no"/>τες</w></rdg></app> <w>μετ</w> <w>αυτου</w></ab> <ab n="Matt.17.4"><w>απο
+<lb break="no"/>κριθεις</w> <w>δε</w> <w>ο</w> <w>πετρος</w> <app><rdg type="orig" hand="firsthand"><w>ει​
+<lb break="no"/>πεν</w></rdg><rdg type="corr" hand="corrector2"><w>ει​
+<lb break="no"/>πε</w></rdg></app> <w>τω</w> <w><abbr type="nomSac"><hi rend="overline">ιυ</hi></abbr></w> <w><abbr type="nomSac"><hi rend="overline">κε</hi></abbr></w> <w>καλον</w> <w>ε
+<lb break="no"/>στιν</w> <w>ημας</w> <w>ωδε</w> <w>ειναι</w>
+<lb/><w>ει</w> <w>θελεις</w> <w>ποιησω</w> <w>ωδε</w>
+<lb/><w>σκηνας</w> <w>τρεις</w> <w>σοι</w> <w>μιαν</w>
+<lb/><w>και</w> <w>μωυσει</w> <w>μιαν</w> <w>και</w>
+<lb/><w>μιαν</w> <app><rdg type="orig" hand="firsthand"><w>ηλεια</w></rdg><rdg type="corr" hand="corrector2"><w>ηλια</w></rdg></app></ab> <ab n="Matt.17.5"><w>ετι</w> <w>αυτου</w>
+<lb/><w>λαλουντος</w> <w>ιδου</w> <w>νε
+<lb break="no"/>φελη</w> <w>φωτεινη</w> <w>επε
+<lb break="no"/>σκιασεν</w> <w>αυτους</w> <w>και</w>
+<lb/><w>ιδου</w> <w>φωνη</w> <w>εκ</w> <w>της</w> <w>νε
+<lb break="no"/>φελης</w> <w>λεγουσα</w> <w>ουτος</w>
+<lb/><w>εστιν</w> <w>ο</w> <w>υιος</w> <w>μου</w> <w>ο</w> <w>αγα
+<lb break="no"/>πητος</w> <w>εν</w> <w>ω</w> <w>ευδοκη
+<lb break="no"/>σα</w> <w>ακουετε</w> <w>αυτου</w>
+<lb/></ab> <ab n="Matt.17.6"><w>και</w> <w>ακουσαντες</w> <w>οι</w> <w>μα
+<lb break="no"/>θηται</w> <w>επεσαν</w> <w>επι</w> <w>προ
+<lb break="no"/>σωπον</w> <w>αυτων</w> <w>και</w> <w>εφο
+<lb break="no"/>βηθησαν</w> <w>σφοδρα</w></ab> <ab n="Matt.17.7"><w>και</w>
+<lb/><w>προσηλθεν</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">ις</hi></abbr></w> <w>και</w> <w>α
+<lb break="no"/>ψαμενος</w> <w>αυτων</w> <w>ειπεν</w>
+<lb/><w>εγερθητε</w> <w>και</w> <w>μη</w> <w>φο
+<lb break="no"/>βεισθε</w></ab> <ab n="Matt.17.8"><w>επαραντες</w> <w>δε</w>
+<lb/><w>τους</w> <w>οφθαλμους</w> <w>αυ
+<lb break="no"/>των</w> <w>ουδενα</w> <w>ειδον</w> <w>ει</w>
+<lb/><w>μη</w> <app><rdg type="orig" hand="firsthand"><w>αυτον</w></rdg><rdg type="corr" hand="corrector2"><w>τον</w></rdg></app> <w><abbr type="nomSac"><hi rend="overline">ιν</hi></abbr></w> <w>μονον</w>
+<lb/></ab> <ab n="Matt.17.9" part="I"><w>και</w> <w>καταβαινοντων</w>
+<lb/><w>αυτων</w> <w>εκ</w> <w>του</w> <w>ορους</w>
+<lb/><w>ενετειλατο</w> <w>αυτοις</w>
+<lb/><w>ο</w> <w><abbr type="nomSac"><hi rend="overline">ις</hi></abbr></w> <w>λεγων</w> <w>μηδενι</w> <w>ει
+<lb break="no"/>πητε</w> <w>το</w> <w>οραμα</w> <w>εως</w>
+<lb/><w>ου</w> <w>ο</w> <w>υιος</w> <w>του</w> <w>ανθρωπου</w></ab></div> </div></body></text></TEI>

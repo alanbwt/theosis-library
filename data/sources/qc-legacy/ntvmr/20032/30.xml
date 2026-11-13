@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader>
+    <fileDesc>      
+      <titleStmt>
+        <title>A Transcription of Matthew in 032</title>
+        <title type="document" key="20032" n="032">GA 032</title>
+        <title type="collection" level="s" xml:lang="en">The New Testament</title>
+        <title type="collection" level="s" xml:lang="de">Das Neue Testament</title>
+        <title type="work" level="m" xml:lang="de" n="01">The Gospel according to Matthew</title>
+        <title type="short" level="m" xml:lang="de" n="01">Matthew</title>      
+        <respStmt>
+          <resp>Created by</resp>
+          <name type="org">the Institut für neutestamentliche Textforschung, Münster, Germany</name>
+        </respStmt>       
+        <respStmt>
+          <resp>XML conversion by</resp>
+          <name type="org">the Institute for Textual Scholarship and Electronic Editing, Birmingham</name>
+        </respStmt>      
+        <sponsor>
+          <name type="org">Institut für neutestamentliche Textforschung, Münster, Germany</name>
+        </sponsor>
+      </titleStmt>
+      <editionStmt>
+        <edition n="2.0">Version 2.0, created on <date>24.4.2017</date></edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>
+          <name type="org">Institut für neutestamentliche Textforschung</name>
+          <name type="org">Westfälische Wilhelms-Universität Münster</name>
+        </publisher>
+        <date>24.4.2017</date>
+        <availability>
+          <p>All rights reserved by the INTF</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <msDesc>
+          <msIdentifier>
+            <altIdentifier type="GA">
+              <idno>032</idno>
+            </altIdentifier>
+            <altIdentifier type="Liste">
+              <idno>20032</idno>
+            </altIdentifier>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc n="1.5">
+      <projectDesc>
+        <p>This transcription was made by INTF in conjunction with its electronic and printed
+          editions of the New Testament (Nestle-Aland Novum Testamentum Graece, Novum Testamentum
+          Graecum Editio Critica Maior, NTtranscripts)</p>
+      </projectDesc>
+      <editorialDecl>
+        <p>The initial transcription file was a plain text file for use with COLLATE, later
+          converted to XML according to the Text Encoding Initiative P5 guidelines.</p>
+      	<p>The XML specifications used are version 1.5 of the IGNTP Guidelines available at <ptr target="http://epapers.bham.ac.uk/1892/"/>
+      	</p></editorialDecl>
+      <variantEncoding method="parallel-segmentation" location="internal"/>
+    	
+    </encodingDesc>
+  </teiHeader>
+
+  <text xml:lang="grc"><body><pb n="30" type="page"/><cb n="1"/><lb/><div type="book" n="B01"><div type="chapter" n="B01K1"><ab n="B01K1V19" part="F"><w>εβουληθη</w> <w>λαθρα</w> <w>απολυσαι</w> <w>αυτ<unclear>ην</unclear></w><lb/></ab> <ab n="B01K1V20"><w>ταυτα</w> <w>δε</w> <w>αυτου</w> <w>ενθυμηθεντος</w> <w><supplied source="na28" reason="lacuna">ιδου</supplied></w><lb/><w>αγγελος</w> <w><abbr type="nomSac"><hi rend="overline">κυ</hi></abbr></w> <w>εφανη</w> <w>κατ</w> <w>οναρ</w> <w>αυτω</w> <w>λεγω<supplied reason="unspecified">ν</supplied></w><lb/><w>ιωσηφ</w> <w>υιος</w> <w>δαυειδ</w> <w>μη</w> <w>φοβηθης</w> <w>παρα<lb break="no"/>λαβειν</w> <w>μαριαμ</w> <w>την</w> <w>γυναικα</w> <w>σου</w><lb/><w>το</w> <w>γαρ</w> <w>εν</w> <w>αυτη</w> <w>γεννηθεν</w> <w>εκ</w> <w><abbr type="nomSac"><hi rend="overline">πνς</hi></abbr></w> <w>εστιν</w><lb/><w>αγιου</w></ab> <ab n="B01K1V21"><w>τεξεται</w> <w>δε</w> <w>υιον</w> <w>και</w> <w>καλεσις</w><lb/><w>το</w> <w>ονομα</w> <w>αυτου</w> <w><abbr type="nomSac"><hi rend="overline">ιν</hi></abbr></w> <w>αυτος</w> <w>γαρ</w> <w>σωσει</w><lb/><w>τον</w> <w>λαον</w> <w>αυτου</w> <w>απο</w> <w>των</w> <w>αμαρτιων</w><lb/><w>αυτων</w></ab> <ab n="B01K1V22"><w>τουτο</w> <w>δε</w> <w>ολον</w> <w>γεγονεν</w><lb/><w>ινα</w> <w>πληρωθη</w> <w>το</w> <w>ρηθεν</w> <w>υπο</w> <w><abbr type="nomSac"><hi rend="overline">κυ</hi></abbr></w> <w>δια</w> <w>του</w><lb/><w>προφητου</w> <w>λεγοντος</w><lb/></ab> <ab n="B01K1V23"><w>ιδου</w> <w>η</w> <w>παρθενος</w> <w>εν</w> <w>γαστρι</w> <w>εξει</w> <w>και</w><lb/><w>τεξεται</w> <w>υιον</w> <w>και</w> <w>καλεσουσιν</w> <w>το</w> <w>ο<lb break="no"/>νομα</w> <w>αυτου</w> <w>εμμανουηλ</w><pc>·</pc> <w>ο</w> <w>εστιν</w><lb/><w>μεθερμηνευομενον</w> <w>μεθ</w> <w>ημων</w> <w>ο</w> <w><abbr type="nomSac"><hi rend="overline">θς</hi></abbr></w><pc>·</pc><lb/></ab> <ab n="B01K1V24"><w>διεγερθεις</w> <w>δε</w> <w>ο</w> <w>ιωσηφ</w> <w>απο</w> <w>του</w> <w>υπνου</w><lb/><w>εποιησεν</w> <w>ως</w> <w>προσεταξεν</w> <w>αυτω</w> <w>ο</w><lb/><w>αγγελος</w> <w><abbr type="nomSac"><hi rend="overline">κυ</hi></abbr></w> <w>και</w> <w>παρελαβεν</w> <w>την</w> <w>γυ<lb break="no"/>ναικα</w> <w>αυτου</w></ab> <ab n="B01K1V25"><w>και</w> <w>ουκ</w> <w>εγινωσκεν</w> <w>αυ<lb break="no"/>την</w> <w>εως</w> <w>ου</w> <w>ετεκεν</w> <w>τον</w> <w>υιον</w> <w>αυτης</w><lb/><w>τον</w> <w>πρωτοτοκον</w> <w>και</w> <w>εκαλεσ<unclear>ε</unclear>ν</w> <w>το</w><lb/><w>ονομα</w> <w>αυτου</w> <w><abbr type="nomSac"><hi rend="overline">ιν</hi></abbr></w><lb/></ab></div><div type="chapter" n="B01K2"><ab n="B01K2V1"><w>του</w> <w>δε</w> <w><abbr type="nomSac"><hi rend="overline">ιυ</hi></abbr></w> <w>γεννηθεντος</w> <w>εν</w> <w>βηθλεεμ</w><lb/><w>της</w> <w>ιουδαιας</w> <w>εν</w> <w>ημεραις</w> <w>ηρωδου</w> <w>του</w><lb/><w>βασιλεως</w> <w>ιδου</w> <w>μαγοι</w> <w>απο</w> <w>ανατο<lb break="no"/>λων</w> <w>παρεγενοντο</w> <w>εις</w> <w>ιερουσαλημ</w><lb/></ab> <ab n="B01K2V2" part="I"><w>λεγοντες</w><pc>·</pc> <w>που</w> <w>εστιν</w> <w>ο</w> <w>τεχθεις</w> <w>βα<lb break="no"/>σιλευς</w> <w>των</w> <w>ιουδαιων</w> <w>ιδομεν</w> <w>γαρ</w><lb/><w>αυτου</w> <w>τον</w> <w>αστερα</w> <w>εν</w> <w>τη</w> <w>ανατολη</w></ab></div> </div></body></text></TEI>

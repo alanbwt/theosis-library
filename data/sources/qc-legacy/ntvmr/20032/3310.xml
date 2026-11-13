@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="032">032</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>USA</country>
+            <settlement>Washington D.C.</settlement>
+            <repository>Smithsonian Institution, Freer Gallery of Art</repository>
+            <idno>F1906.274</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="grc"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="331" type="page" break="no"/><cb n="1"/><lb/><div type="book" n="B02"><div type="chapter" n="B02K6"><ab n="B02K6V22" part="F"><w part="F">μενοις</w> <w>ειπεν</w> <w>ο</w> <w>βασιλευς</w> <w>τω</w> <w>κορασιω</w><lb/><w>ετησαι</w> <w>με</w> <w>ο</w> <w>δ</w> <w>αν</w> <w>θελης</w> <w>και</w> <w>δωσω</w> <w>σοι</w></ab> <ab n="B02K6V23"><w>εως</w><lb/><w>ημισυ</w> <w>της</w> <w>βασιλειας</w></ab> <ab n="B02K6V24"><w>η</w> <w>δε</w> <w>εξελθουσα</w> <w>ει<lb break="no"/>πεν</w> <w>τη</w> <w>μητρι</w> <w>αυτης</w> <w>τι</w> <w>αιτησωμαι</w><lb/><w>η</w> <w>δε</w> <w>ειπεν</w> <w>αιτησε</w> <w>την</w> <w>κεφαλην</w> <w>ιωαν<lb break="no"/>νου</w> <w>του</w> <w>βαπτιστου</w></ab> <ab n="B02K6V25"><w>και</w> <w>εισελθουσα</w><lb/><w>ευθυς</w> <w>μετα</w> <w>σπουδης</w> <w>θελω</w> <w>ινα</w> <w>μοι</w> <w>δω<lb break="no"/>σης</w> <w>επι</w> <w>πινακει</w> <w>την</w> <w>κεφαλην</w> <w>ιωαν<lb break="no"/>νου</w> <w>του</w> <w>βαπτιστου</w></ab> <ab n="B02K6V26"><w>και</w> <w>περιλυπος</w><lb/><w>γενομενος</w> <w>ο</w> <w>βασιλευς</w> <w>δια</w> <w>τους</w> <w>ορκους</w><lb/><w>και</w> <w>τους</w> <w>ανακειμενους</w> <w>ουκ</w> <w>ηθελησεν</w><lb/><w>αυτην</w> <w>αθετησαι</w><pc>·</pc></ab> <ab n="B02K6V27"><w>και</w> <w>ευθεως</w> <w>απο<lb break="no"/>στιλας</w> <w>σφεκουλατορα</w> <w>επεταξεν</w> <w>ενε<lb break="no"/>χθηναι</w> <w>την</w> <w>κεφαλην</w> <w>αυτου</w> <w>επι</w> <w>πινα<lb break="no"/>κει</w> <w>και</w> <w>απελθων</w> <w>απεκεφαλισεν</w> <w>αυ<lb break="no"/>τον</w> <w>εν</w> <w>τη</w> <app><rdg type="orig" hand="firsthand"><w>φυλακ<unclear>ε</unclear>ι</w></rdg><rdg type="corr" hand="corrector"><w>φυλακη</w></rdg></app></ab> <ab n="B02K6V28"><w>και</w> <w>ηνεγκεν</w> <w>την</w><lb/><w>κεφαλην</w> <w>αυτου</w> <w>επι</w> <w>πινακει</w> <w>και</w> <w>εδω<lb break="no"/>κεν</w> <w>τω</w> <w>κορασιω</w> <w>και</w> <w>το</w> <w>κορασιον</w> <w>εδω<lb break="no"/>κεν</w> <w>αυτην</w> <w>τη</w> <w>μητρι</w> <w>αυτης</w><lb/></ab> <ab n="B02K6V29"><w>και</w> <w>ακουσαντες</w> <w>οι</w> <w>μαθηται</w> <w>αυτου</w> <w>ηλθον</w><lb/><w>κηδευσαι</w> <w>το</w> <w>πτωμα</w> <w>αυτου</w> <w>και</w> <w>εθη<lb break="no"/>καν</w> <w>αυτον</w> <w>εν</w> <w>μνημιω</w><pc>·</pc></ab> <ab n="B02K6V30"><w>και</w> <w>συναγον<lb break="no"/>ται</w> <w>οι</w> <w>αποστολοι</w> <w>προς</w> <w>τον</w> <w><abbr type="nomSac"><hi rend="overline">ιν</hi></abbr></w> <w>και</w> <w>απηγ<lb break="no"/>γειλον</w> <w>αυτω</w> <w>παντα</w> <w>και</w> <w>οσα</w> <w>εποιησ<unclear>ο</unclear>ν</w><lb/><w>και</w> <w>εδιδασκεν</w></ab> <ab n="B02K6V31"><w>και</w> <w>ειπεν</w> <w>αυτοις</w><lb/><w>δευτε</w> <w>υμεις</w> <w>κατ</w> <w>ιδιαν</w> <w>εις</w> <w>ερημον</w> <w>το<lb break="no"/>πον</w> <w>και</w> <w>αναπαυεσθαι</w> <w>λοιπον</w> <w>ησαν</w> <w>γαρ</w><lb/><w>οι</w> <w>ερχομενοι</w> <w>και</w> <w>υπαγοντες</w> <w>πολλοι</w><lb/><w>και</w> <w>ουδε</w> <w>φαγειν</w> <w>ηυκερουν</w></ab> <ab n="B02K6V32"><app><rdg type="orig" hand="firsthand"><w>κα</w></rdg><rdg type="corr" hand="corrector"><w>και</w></rdg></app> <w>απηλθον</w><lb/><w>εις</w> <w>ερημον</w> <w>τοπον</w> <w>τω</w> <w>πλοιω</w> <w>κατ</w> <w>ιδιαν</w><pc>·</pc></ab></div> </div></body></text></TEI>

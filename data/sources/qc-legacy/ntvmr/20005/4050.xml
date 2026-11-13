@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="NTPapyri.xsl"?>
+<?xml-model href="TEI-NTMSS.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="document" n="05">05</title>
+<respStmt xml:id="VMRCRE"><resp>edition metadata assembled by</resp><name type="org">VMRCRE (Virtual Manuscript Room Collaborative Research Environment), transcript/get</name></respStmt>
+      </titleStmt>
+      <!-- VMRCRE-generated: publicationStmt -->
+      <publicationStmt>
+        <publisher><name type="org">The Institut für neutestamentliche Textforschung</name></publisher>
+        <availability><p>
+<![CDATA[
+(C) 2026 Institut für Neutestamentliche Textforschung.
+]]>
+</p><p> <![CDATA[
+This work is licensed under a <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 Unported License<br/><span style="float:right;"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/80x15.png" /></span></a>
+]]>
+</p><p> <![CDATA[
+
+]]>
+</p></availability>
+      </publicationStmt>
+<!-- VMRCRE-generated: sourceDesc -->
+      <sourceDesc>
+        <msDesc>
+		<msIdentifier>
+            <country>United Kingdom</country>
+            <settlement>Cambridge</settlement>
+            <repository>Cambridge University Library</repository>
+            <idno>Ms. Nn. 2.41</idno>
+          </msIdentifier>
+        </msDesc>
+      </sourceDesc>
+</fileDesc>
+<!-- VMRCRE-generated: profileDesc -->
+    <profileDesc>
+      <langUsage>
+        <language ident="g-l"></language>
+      </langUsage>
+      <handNotes>
+        <handNote>
+          <listWit>
+            <witness n="firsthand"></witness>
+<witness n="corrector3"></witness>
+</listWit>
+        </handNote>
+      </handNotes>
+    </profileDesc>
+</teiHeader>
+<text xml:lang="grc"><body>
+<pb n="195v" type="folio"/>
+<cb n="1"/>
+<lb/><div n="B03" type="book" part="M"><div n="B03K3" type="chapter" part="M"><ab n="B03K3V19" part="F"><w>παντων</w> <w>ων</w> <w>εποιησεν</w> <w>πονηρων</w>
+<lb/><w>ο</w> <w>ηρωδης</w></ab> <ab n="B03K3V20"><w>προσεθηκεν</w> <w>και</w> <w>τουτο</w>
+<lb/><w>επι</w> <w>πασιν</w> <w>ενεκλισε</w> <w>τον</w> <w>ιωανην</w> <w>εν</w> <w>φυλακη</w>
+<lb/></ab> <ab n="B03K3V21"><w>εγενετο</w> <w>δε</w> <w>εν</w> <w>τω</w> <w>βαπτισθηναι</w> <w>απαντα</w>
+<lb/><w>τον</w> <w>λαον</w> <w>και</w> <w><abbr type="nomSac"><hi rend="overline">ιηυ</hi></abbr></w> <w>βαπτισθεντος</w> <w>και</w>
+<lb/><w>και</w><note type="local">sic</note> <w>προσευχομενου</w> <w>ανοιχθηναι</w> <w>τον</w>
+<lb/><w>ουρανον</w></ab> <ab n="B03K3V22"><w>και</w> <w>καταβηναι</w> <w>το</w> <w>πνευμα</w>
+<lb/><w>το</w> <w>αγιον</w> <w>σωματικω</w> <w>ειδει</w> <w>ως</w> <w>περιστεραν</w>
+<lb/><w>εις</w> <w>αυτον</w> <w>και</w> <w>φωνην</w> <w>εκ</w> <w>του</w> <w>ουρανου</w>
+<lb/><w>γενεσθαι</w> <w>υιος</w> <w>μου</w> <w>ει</w> <w>συ</w> <w>εγω</w> <w>σημερον</w>
+<lb/><w>γεγεννηκα</w> <w>σε</w></ab> <ab n="B03K3V23" part="I"><w>ην</w> <w>δε</w> <w><abbr type="nomSac"><hi rend="overline">ιης</hi></abbr></w> <w>ως</w> <w>ετων</w> <w><abbr type="num"><hi rend="overline">λ</hi></abbr></w>
+<lb/><w>αρχομενος</w> <w>ως</w> <w>ενομειζετο</w> <w>ειναι</w>
+<lb/><w>υιος</w> <w>ιωσηφ</w>
+<lb/><w>του</w> <app><rdg type="orig" hand="firsthand"/><rdg type="corr" hand="corrector3"><w>εγενετο</w></rdg></app><note type="local">Scrivener juengere Hand</note> <w>ιακωβ</w>
+<lb/><w>του</w> <w>μαθθαν</w>
+<lb/><w>του</w> <w>ελεαζαρ</w>
+<lb/><w>του</w> <w>ελιουδ</w>
+<lb/><w>του</w> <w>ιαχειν</w>
+<lb/><w>του</w> <w>σαδωκ</w>
+<lb/><w>του</w> <w>αζωρ</w>
+<lb/><w>του</w> <w>ελιακειμ</w>
+<lb/><w>του</w> <w>αβιουδ</w>
+<lb/><w>του</w> <w>ζοροβαβελ</w>
+<lb/><w>του</w> <w>σαλαθιηλ</w>
+<lb/><w>του</w> <w>ιεχονιου</w>
+<lb/><w>του</w> <w>ιωακειμ</w>
+<lb/><w>του</w> <w>ελιακειμ</w>
+<lb/><w>του</w> <w>ιωσεια</w>
+<lb/><w>του</w> <w>αμως</w>
+<lb/><w>του</w> <w>μανασση</w>
+<lb/><w>του</w> <w>εζεκεια</w>
+<lb/><w>του</w> <w>αχας</w>
+<lb/><w>του</w> <w>ιωαθαν</w>
+</ab></div></div></body></text></TEI>
