@@ -159,9 +159,9 @@ def main():
         elif tid.startswith("verified-edda-"):
             author_name = "Anonymous (Codex Regius, c. 1270)"
             source_url = "https://handrit.is/manuscript/view/is/GKS04-2365"
-            critical_edition = "Codex Regius (GKS 2365 4to)"
+            critical_edition = "Normalized Old Norse text (Guðni Jónsson's edition, as published at heimskringla.no)"
             translator_name = "Benjamin Thorpe (1866)"
-            original_lang_label = "Old Norse · heimskringla.no"
+            original_lang_label = "Old Norse · normalized text (Guðni Jónsson)"
             original_lang_code = "non"
         elif tid.startswith("verified-venetus-"):
             author_name = "Homer (Venetus A, 10th c.)"

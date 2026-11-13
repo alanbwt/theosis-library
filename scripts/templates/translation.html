@@ -197,7 +197,7 @@
           </div>
 
           <div class="parallel-translation" lang="en">
-            <div class="parallel-col-label">English · {{ translator_name }}</div>
+            <div class="parallel-col-label">English · {{ translator_name }}{% if section.english_ref %} · {{ section.english_ref }}{% endif %}</div>
             {{ section.text }}
           </div>
         </div>

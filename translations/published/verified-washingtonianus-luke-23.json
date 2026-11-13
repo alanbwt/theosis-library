@@ -5,8 +5,21 @@
   "language": "Greek (Tischendorf) / English (KJV)",
   "source": "Codex Washingtonianus (Freer Gospels, GA 032) via Smithsonian/Freer IIIF + CSNTM verse index + Tischendorf + KJV",
   "description": "Luke 23 shown on the actual pages of Codex Washingtonianus (Freer Gospels, GA 032, late 4th-early 5th c., Freer Gallery of Art F1906.274). Page images from the Smithsonian's own IIIF service; verse-to-page index from CSNTM. Greek is Tischendorf's 8th edition (public domain), English the King James Version.",
-  "introduction": "<p>Luke 23 from <strong>Codex Washingtonianus</strong> (the Freer Gospels, Gregory-Aland 032, Freer Gallery of Art F1906.274), a parchment codex of the four Gospels written in Egypt in the late 4th or early 5th century and bought by Charles Lang Freer from the dealer Ali Arabi at Giza in 1906. It is one of the oldest nearly complete Gospel books in existence. The Gospels stand in the so-called Western order, Matthew, John, Luke, Mark, and the text is famously block-mixed: the copyist drew on several exemplars of different textual character, so the text type changes in blocks within a single Gospel. After Mark 16:14 the codex carries the Freer Logion, a saying found in no other manuscript. Two passages are lost to damage: Mark 15:13-37 and John 14:26-16:6.</p><ol><li><strong>Scan:</strong> each section is shown with the actual page of the codex that carries those verses, from the Freer Gallery's own photographs of F1906.274 served by the Smithsonian IIIF service (ids.si.edu). Which page holds which verse comes from the verse index of the Center for the Study of New Testament Manuscripts (CSNTM), whose photographs of the codex are the same shots; every CSNTM page was matched to its Smithsonian image by pixel comparison before use. Where a verse begins on one page and ends on the next, both pages are listed. Verses the index cannot place on a surviving page are not shown.</li><li><strong>Greek:</strong> Constantin von Tischendorf's <em>Editio octava critica maior</em> (1869-72, public domain), verbatim from bolls.life. This is a printed critical edition, not a transcription of Washingtonianus itself: the codex has many readings of its own, and where it differs from Tischendorf the manuscript reading can be checked on the page image. Numbering: Tischendorf omits a few verses that the KJV prints (they are in the English column only).</li><li><strong>English:</strong> the King James Version (1611, public domain), verbatim from bible-api.com. The KJV translates the later Byzantine text, so it will not always match the Greek shown or the reading of the codex.</li></ol><p>Not shown: Luke 23:1. The CSNTM verse index has no entry for these verses and their neighbours fall on different pages, so the page cannot be fixed without guessing; they are omitted rather than estimated.</p>",
+  "introduction": "<p>Luke 23 from <strong>Codex Washingtonianus</strong> (the Freer Gospels, Gregory-Aland 032, Freer Gallery of Art F1906.274), a parchment codex of the four Gospels written in Egypt in the late 4th or early 5th century and bought by Charles Lang Freer from the dealer Ali Arabi at Giza in 1906. It is one of the oldest nearly complete Gospel books in existence. The Gospels stand in the so-called Western order, Matthew, John, Luke, Mark, and the text is famously block-mixed: the copyist drew on several exemplars of different textual character, so the text type changes in blocks within a single Gospel. After Mark 16:14 the codex carries the Freer Logion, a saying found in no other manuscript. Two passages are lost to damage: Mark 15:13-37 and John 14:26-16:6.</p><ol><li><strong>Scan:</strong> each section is shown with the actual page of the codex that carries those verses, from the Freer Gallery's own photographs of F1906.274 served by the Smithsonian IIIF service (ids.si.edu). Which page holds which verse comes from the verse index of the Center for the Study of New Testament Manuscripts (CSNTM), whose photographs of the codex are the same shots; every CSNTM page was matched to its Smithsonian image by pixel comparison before use. Where a verse begins on one page and ends on the next, both pages are listed. Verses the index cannot place on a surviving page are not shown.</li><li><strong>Greek:</strong> Constantin von Tischendorf's <em>Editio octava critica maior</em> (1869-72, public domain), verbatim from bolls.life. This is a printed critical edition, not a transcription of Washingtonianus itself: the codex has many readings of its own, and where it differs from Tischendorf the manuscript reading can be checked on the page image. Numbering: Tischendorf omits a few verses that the KJV prints (they are in the English column only).</li><li><strong>English:</strong> the King James Version (1611, public domain), verbatim from bible-api.com. The KJV translates the later Byzantine text, so it will not always match the Greek shown or the reading of the codex.</li></ol><p><strong>Page check:</strong> Luke 23:1, which the CSNTM verse index does not list, was read on the photograph: it fills the last three lines of GA_032_0302, and the next page begins with 23:2.</p>",
   "translation": [
+    {
+      "section": "23.1",
+      "original_ref": "Luke 23:1",
+      "original_text": "<sup>1</sup>Καὶ ἀναστὰν ἅπαν τὸ πλῆθος αὐτῶν ἤγαγον αὐτὸν ἐπὶ τὸν Πειλᾶτον.",
+      "text": "<sup>1</sup>And the whole multitude of them arose, and led him unto Pilate.",
+      "scan_pages": [
+        "washingtonianus/w-p0302-FS-7157_02.jpg"
+      ],
+      "scan_folios": [
+        "GA_032_0302 = Freer FS-7157_02"
+      ],
+      "scan_note": "Checked on the image: the last three lines of GA_032_0302 (Freer FS-7157_02) read και αναστα(ν) απαν το πληθος αυτων ηγαγον αυτον επι τον πειλατον (23:1); GA_032_0303 begins with 23:2 (ηρξαντο δε κατηγορειν). Luke 23:1 is not in the CSNTM verse index; it was placed by reading the page."
+    },
     {
       "section": "23.2-11",
       "original_ref": "Luke 23:2-11",
@@ -17,7 +30,8 @@
       ],
       "scan_folios": [
         "GA_032_0303 = Freer FS-7157_03"
-      ]
+      ],
+      "scan_note": "Page from the CSNTM verse index for GA 032 (the page or pages that index gives for each verse): verses 2-11 on GA_032_0303 (Freer FS-7157_03)."
     },
     {
       "section": "23.12-21",
@@ -31,7 +45,8 @@
       "scan_folios": [
         "GA_032_0303 = Freer FS-7157_03",
         "GA_032_0304 = Freer FS-7157_04"
-      ]
+      ],
+      "scan_note": "Page from the CSNTM verse index for GA 032 (the page or pages that index gives for each verse): verse 12 on GA_032_0303 (Freer FS-7157_03); verses 12-21 on GA_032_0304 (Freer FS-7157_04)."
     },
     {
       "section": "23.22-31",
@@ -45,7 +60,8 @@
       "scan_folios": [
         "GA_032_0304 = Freer FS-7157_04",
         "GA_032_0305 = Freer FS-7157_05"
-      ]
+      ],
+      "scan_note": "Page from the CSNTM verse index for GA 032 (the page or pages that index gives for each verse): verses 22-25 on GA_032_0304 (Freer FS-7157_04); verses 25-31 on GA_032_0305 (Freer FS-7157_05)."
     },
     {
       "section": "23.32-41",
@@ -59,7 +75,8 @@
       "scan_folios": [
         "GA_032_0305 = Freer FS-7157_05",
         "GA_032_0306 = Freer FS-7157_06"
-      ]
+      ],
+      "scan_note": "Page from the CSNTM verse index for GA 032 (the page or pages that index gives for each verse): verses 32-36 on GA_032_0305 (Freer FS-7157_05); verses 36-41 on GA_032_0306 (Freer FS-7157_06)."
     },
     {
       "section": "23.42-51",
@@ -73,7 +90,8 @@
       "scan_folios": [
         "GA_032_0306 = Freer FS-7157_06",
         "GA_032_0307 = Freer FS-7157_07"
-      ]
+      ],
+      "scan_note": "Page from the CSNTM verse index for GA 032 (the page or pages that index gives for each verse): verses 42-48 on GA_032_0306 (Freer FS-7157_06); verses 48-51 on GA_032_0307 (Freer FS-7157_07)."
     },
     {
       "section": "23.52-56",
@@ -85,7 +103,8 @@
       ],
       "scan_folios": [
         "GA_032_0307 = Freer FS-7157_07"
-      ]
+      ],
+      "scan_note": "Page from the CSNTM verse index for GA 032 (the page or pages that index gives for each verse): verses 52-56 on GA_032_0307 (Freer FS-7157_07)."
     }
   ],
   "translator_notes": [],
@@ -96,6 +115,12 @@
     "scan_manuscript": "Codex Washingtonianus / Freer Gospels, GA 032, late 4th-early 5th c., Freer Gallery of Art F1906.274",
     "scan_mapping": "Verse-level page index from CSNTM (manuscripts.csntm.org, manuscript 206, SearchForImageByOsis); CSNTM imageId -> GA_032_NNNN table read from the CSNTM viewer page; each CSNTM page matched to its Freer/ids.si.edu image by normalised pixel correlation of thumbnails (see data/washingtonianus_page_map.json). A verse the index does not list is placed only if the verses before and after it are on one and the same page (verses_placed_by_enclosure); otherwise it is omitted (verses_not_shown_index_gap / verses_absent_from_codex). Each section lists every page its verses touch.",
     "scan_pages_used": {
+      "washingtonianus/w-p0302-FS-7157_02.jpg": {
+        "csntm_image": "GA_032_0302.jpg",
+        "freer_id": "FS-7157_02",
+        "freer_iiif": "https://ids.si.edu/ids/iiif/FS-7157_02/full/1800,/0/default.jpg",
+        "verses_in_this_chapter": "1"
+      },
       "washingtonianus/w-p0303-FS-7157_03.jpg": {
         "csntm_image": "GA_032_0303.jpg",
         "freer_id": "FS-7157_03",
@@ -128,6 +153,7 @@
       }
     },
     "scan_local_paths": [
+      "washingtonianus/w-p0302-FS-7157_02.jpg",
       "washingtonianus/w-p0303-FS-7157_03.jpg",
       "washingtonianus/w-p0304-FS-7157_04.jpg",
       "washingtonianus/w-p0305-FS-7157_05.jpg",
@@ -136,13 +162,14 @@
     ],
     "verses_absent_from_codex": "",
     "verses_not_shown_no_owner_image": "",
-    "verses_not_shown_index_gap": "1",
+    "verses_not_shown_index_gap": "",
     "verses_placed_by_enclosure": "",
     "original_text_source": "bolls.life, TISCH (Tischendorf, Editio octava critica maior, 1869-72)",
     "original_text_license": "public domain",
     "original_text_note": "Printed edition text, not a transcription of Codex Washingtonianus; readings of the codex are visible on the page images",
     "translation_source": "bible-api.com (KJV)",
     "translation_license": "public domain",
-    "verified_date": "2026-09-05"
+    "verified_date": "2026-09-05",
+    "verses_placed_by_reading_image": "1"
   }
 }

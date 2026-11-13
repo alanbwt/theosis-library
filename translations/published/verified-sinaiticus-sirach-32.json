@@ -70,6 +70,7 @@
     "verified_date": "2026-09-05",
     "section_folios_source": "csp_xml_v1.95",
     "section_folios_note": "Each section links every folio side that carries any of its verses, in codex order. Page, column and line of every verse are taken from the Codex Sinaiticus Project transcription in TEI XML (version 1.95, ITSEE, University of Birmingham, github.com/itsee-birmingham/codex-sinaiticus), which marks each page, column and line break of the manuscript; a verse counts on a page only if some of its letters are on that page.",
-    "section_folios_checked_date": "2026-11-12"
+    "section_folios_checked_date": "2026-11-12",
+    "scan_source_note": "sirach-31-Q70_1r_B359.jpg, sirach-32-Q70_1v_B360.jpg: the Codex Sinaiticus Project's photograph, taken from a copy on GitHub (github.com/0x53616D75656C/Codex-Sinaiticus, images/uncompressed) because codexsinaiticus.org did not answer on 2026-11-12; each file was identified on the image (folio number, first words, neighbouring pages). See docs/collections/qc-sinaiticus-venetus.md."
   }
 }

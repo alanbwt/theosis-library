@@ -5,7 +5,7 @@
   "language": "Greek (Tischendorf) / English (KJV)",
   "source": "Codex Washingtonianus (Freer Gospels, GA 032) via Smithsonian/Freer IIIF + CSNTM verse index + Tischendorf + KJV",
   "description": "Luke 3 shown on the actual pages of Codex Washingtonianus (Freer Gospels, GA 032, late 4th-early 5th c., Freer Gallery of Art F1906.274). Page images from the Smithsonian's own IIIF service; verse-to-page index from CSNTM. Greek is Tischendorf's 8th edition (public domain), English the King James Version.",
-  "introduction": "<p>Luke 3 from <strong>Codex Washingtonianus</strong> (the Freer Gospels, Gregory-Aland 032, Freer Gallery of Art F1906.274), a parchment codex of the four Gospels written in Egypt in the late 4th or early 5th century and bought by Charles Lang Freer from the dealer Ali Arabi at Giza in 1906. It is one of the oldest nearly complete Gospel books in existence. The Gospels stand in the so-called Western order, Matthew, John, Luke, Mark, and the text is famously block-mixed: the copyist drew on several exemplars of different textual character, so the text type changes in blocks within a single Gospel. After Mark 16:14 the codex carries the Freer Logion, a saying found in no other manuscript. Two passages are lost to damage: Mark 15:13-37 and John 14:26-16:6.</p><ol><li><strong>Scan:</strong> each section is shown with the actual page of the codex that carries those verses, from the Freer Gallery's own photographs of F1906.274 served by the Smithsonian IIIF service (ids.si.edu). Which page holds which verse comes from the verse index of the Center for the Study of New Testament Manuscripts (CSNTM), whose photographs of the codex are the same shots; every CSNTM page was matched to its Smithsonian image by pixel comparison before use. Where a verse begins on one page and ends on the next, both pages are listed. Verses the index cannot place on a surviving page are not shown.</li><li><strong>Greek:</strong> Constantin von Tischendorf's <em>Editio octava critica maior</em> (1869-72, public domain), verbatim from bolls.life. This is a printed critical edition, not a transcription of Washingtonianus itself: the codex has many readings of its own, and where it differs from Tischendorf the manuscript reading can be checked on the page image. Numbering: Tischendorf omits a few verses that the KJV prints (they are in the English column only).</li><li><strong>English:</strong> the King James Version (1611, public domain), verbatim from bible-api.com. The KJV translates the later Byzantine text, so it will not always match the Greek shown or the reading of the codex.</li></ol>",
+  "introduction": "<p>Luke 3 from <strong>Codex Washingtonianus</strong> (the Freer Gospels, Gregory-Aland 032, Freer Gallery of Art F1906.274), a parchment codex of the four Gospels written in Egypt in the late 4th or early 5th century and bought by Charles Lang Freer from the dealer Ali Arabi at Giza in 1906. It is one of the oldest nearly complete Gospel books in existence. The Gospels stand in the so-called Western order, Matthew, John, Luke, Mark, and the text is famously block-mixed: the copyist drew on several exemplars of different textual character, so the text type changes in blocks within a single Gospel. After Mark 16:14 the codex carries the Freer Logion, a saying found in no other manuscript. Two passages are lost to damage: Mark 15:13-37 and John 14:26-16:6.</p><ol><li><strong>Scan:</strong> each section is shown with the actual page of the codex that carries those verses, from the Freer Gallery's own photographs of F1906.274 served by the Smithsonian IIIF service (ids.si.edu). Which page holds which verse comes from the verse index of the Center for the Study of New Testament Manuscripts (CSNTM), whose photographs of the codex are the same shots; every CSNTM page was matched to its Smithsonian image by pixel comparison before use. Where a verse begins on one page and ends on the next, both pages are listed. Verses the index cannot place on a surviving page are not shown.</li><li><strong>Greek:</strong> Constantin von Tischendorf's <em>Editio octava critica maior</em> (1869-72, public domain), verbatim from bolls.life. This is a printed critical edition, not a transcription of Washingtonianus itself: the codex has many readings of its own, and where it differs from Tischendorf the manuscript reading can be checked on the page image. Numbering: Tischendorf omits a few verses that the KJV prints (they are in the English column only).</li><li><strong>English:</strong> the King James Version (1611, public domain), verbatim from bible-api.com. The KJV translates the later Byzantine text, so it will not always match the Greek shown or the reading of the codex.</li></ol><p><strong>Manuscript note:</strong> Codex Washingtonianus does not have the genealogy of Jesus. On its page GA_032_0211, Luke 3:23 stops after \"being (as was supposed) the son of Joseph\" (ως ενομειζετο ιωσηφ) and the next line begins 4:1. Not written in Codex Washingtonianus: the end of 3:23 and verses 3:24-38. The English is shown with the note [not in Codex Washingtonianus] in the Greek column, and Tischendorf's text of these verses is under Compare. (The CSNTM verse index, from which the pages of this chapter were taken, lists 3:16-38 for that page; the photograph shows otherwise.)</p>",
   "translation": [
     {
       "section": "3.1-8",
@@ -19,7 +19,8 @@
       "scan_folios": [
         "GA_032_0209 = Freer FS-7147_09",
         "GA_032_0210 = Freer FS-7147_10"
-      ]
+      ],
+      "scan_note": "Page from the CSNTM verse index for GA 032 (the page or pages that index gives for each verse): verses 1-8 on GA_032_0209 (Freer FS-7147_09); verse 8 on GA_032_0210 (Freer FS-7147_10)."
     },
     {
       "section": "3.9-16",
@@ -33,43 +34,35 @@
       "scan_folios": [
         "GA_032_0210 = Freer FS-7147_10",
         "GA_032_0211 = Freer FS-7148_01"
-      ]
+      ],
+      "scan_note": "Page from the CSNTM verse index for GA 032 (the page or pages that index gives for each verse): verses 9-16 on GA_032_0210 (Freer FS-7147_10); verse 16 on GA_032_0211 (Freer FS-7148_01)."
     },
     {
-      "section": "3.17-24",
-      "original_ref": "Luke 3:17-24",
-      "original_text": "<sup>17</sup>οὗ τὸ πτύον ἐν τῇ χειρὶ αὐτοῦ διακαθᾶραι τὴν ἅλωνα αὐτοῦ καὶ συναγαγεῖν τὸν σῖτον εἰς τὴν ἀποθήκην αὐτοῦ, τὸ δὲ ἄχυρον κατακαύσει πυρὶ ἀσβέστῳ. <sup>18</sup>Πολλὰ μὲν οὖν καὶ ἕτερα παρακαλῶν εὐηγγελίζετο τὸν λαόν· <sup>19</sup>ὁ δὲ Ἡρώδης ὁ τετραάρχης, ἐλεγχόμενος ὑπ’ αὐτοῦ περὶ Ἡρῳδιάδος τῆς γυναικὸς τοῦ ἀδελφοῦ αὐτοῦ καὶ περὶ πάντων ὧν ἐποίησεν πονηρῶν ὁ Ἡρώδης, <sup>20</sup>προσέθηκεν καὶ τοῦτο ἐπὶ πᾶσιν, κατέκλεισεν τὸν Ἰωάννην ἐν φυλακῇ. <sup>21</sup>Ἐγένετο δὲ ἐν τῷ βαπτισθῆναι ἅπαντα τὸν λαὸν καὶ Ἰησοῦ βαπτισθέντος καὶ προσευχομένου ἀνεῳχθῆναι τὸν οὐρανόν, <sup>22</sup>καὶ καταβῆναι τὸ πνεῦμα τὸ ἅγιον σωματικῷ εἴδει ὡς περιστερὰν ἐπ’ αὐτόν, καὶ φωνὴν ἐξ οὐρανοῦ γενέσθαι, σὺ εἶ ὁ υἱός μου ὁ ἀγαπητός, ἐν σοὶ εὐδόκησα. <sup>23</sup>Καὶ αὐτὸς ἦν Ἰησοῦς ἀρχόμενος ὡσεὶ ἐτῶν τριάκοντα, ὢν υἱός, ὡς ἐνομίζετο, Ἰωσὴφ τοῦ Ἡλεὶ <sup>24</sup>τοῦ Μαθθὰθ τοῦ Λευεὶ τοῦ Μελχεὶ τοῦ Ἰανναὶ τοῦ Ἰωσὴφ",
-      "text": "<sup>17</sup>Whose fan\nis in his hand, and he will throughly purge his floor, and will gather the wheat into his garner; but the chaff he will burn with fire unquenchable. <sup>18</sup>And many other things in his exhortation preached he unto the people. <sup>19</sup>But Herod the tetrarch, being reproved by him for Herodias his brother Philip’s wife, and for all the evils which Herod had done, <sup>20</sup>Added yet this above all, that he shut up John in prison. <sup>21</sup>Now when all the people were baptized, it came to pass, that Jesus also being baptized, and praying, the heaven was opened, <sup>22</sup>And the Holy Ghost descended in a bodily shape like a dove upon him, and a voice came from heaven, which said, Thou art my beloved Son; in thee I am well pleased. <sup>23</sup>And Jesus himself began to be about thirty years of age, being (as was supposed) the son of Joseph, which was\nthe son of Heli, <sup>24</sup>Which was\nthe son of Matthat, which was\nthe son\n of Levi, which was\nthe son of Melchi, which was\nthe son\n of Janna, which was\nthe son of Joseph,",
+      "section": "3.17-23",
+      "original_ref": "Luke 3:17-23",
+      "original_text": "<sup>17</sup>οὗ τὸ πτύον ἐν τῇ χειρὶ αὐτοῦ διακαθᾶραι τὴν ἅλωνα αὐτοῦ καὶ συναγαγεῖν τὸν σῖτον εἰς τὴν ἀποθήκην αὐτοῦ, τὸ δὲ ἄχυρον κατακαύσει πυρὶ ἀσβέστῳ. <sup>18</sup>Πολλὰ μὲν οὖν καὶ ἕτερα παρακαλῶν εὐηγγελίζετο τὸν λαόν· <sup>19</sup>ὁ δὲ Ἡρώδης ὁ τετραάρχης, ἐλεγχόμενος ὑπ’ αὐτοῦ περὶ Ἡρῳδιάδος τῆς γυναικὸς τοῦ ἀδελφοῦ αὐτοῦ καὶ περὶ πάντων ὧν ἐποίησεν πονηρῶν ὁ Ἡρώδης, <sup>20</sup>προσέθηκεν καὶ τοῦτο ἐπὶ πᾶσιν, κατέκλεισεν τὸν Ἰωάννην ἐν φυλακῇ. <sup>21</sup>Ἐγένετο δὲ ἐν τῷ βαπτισθῆναι ἅπαντα τὸν λαὸν καὶ Ἰησοῦ βαπτισθέντος καὶ προσευχομένου ἀνεῳχθῆναι τὸν οὐρανόν, <sup>22</sup>καὶ καταβῆναι τὸ πνεῦμα τὸ ἅγιον σωματικῷ εἴδει ὡς περιστερὰν ἐπ’ αὐτόν, καὶ φωνὴν ἐξ οὐρανοῦ γενέσθαι, σὺ εἶ ὁ υἱός μου ὁ ἀγαπητός, ἐν σοὶ εὐδόκησα. <sup>23</sup>Καὶ αὐτὸς ἦν Ἰησοῦς ἀρχόμενος ὡσεὶ ἐτῶν τριάκοντα, ὢν υἱός, ὡς ἐνομίζετο, Ἰωσὴφ <em>[Tischendorf continues τοῦ Ἡλεὶ; the codex stops after ιωσηφ and goes straight on to 4:1]</em>",
+      "text": "<sup>17</sup>Whose fan\nis in his hand, and he will throughly purge his floor, and will gather the wheat into his garner; but the chaff he will burn with fire unquenchable. <sup>18</sup>And many other things in his exhortation preached he unto the people. <sup>19</sup>But Herod the tetrarch, being reproved by him for Herodias his brother Philip’s wife, and for all the evils which Herod had done, <sup>20</sup>Added yet this above all, that he shut up John in prison. <sup>21</sup>Now when all the people were baptized, it came to pass, that Jesus also being baptized, and praying, the heaven was opened, <sup>22</sup>And the Holy Ghost descended in a bodily shape like a dove upon him, and a voice came from heaven, which said, Thou art my beloved Son; in thee I am well pleased. <sup>23</sup>And Jesus himself began to be about thirty years of age, being (as was supposed) the son of Joseph, <em>[the rest of this verse, \"which was the son of Heli,\", and verses 24-38 are not in Codex Washingtonianus]</em>",
       "scan_pages": [
         "washingtonianus/w-p0211-FS-7148_01.jpg"
       ],
       "scan_folios": [
         "GA_032_0211 = Freer FS-7148_01"
-      ]
+      ],
+      "scan_note": "Page from the CSNTM verse index: verses 17-23 on GA_032_0211 (Freer FS-7148_01). Checked on the image: the page has 30 lines; line 26 ends ως ενομειζετο ιωσηφ (3:23) and line 27 begins ις δε πληρης πνς αγιου (4:1)."
     },
     {
-      "section": "3.25-32",
-      "original_ref": "Luke 3:25-32",
-      "original_text": "<sup>25</sup>τοῦ Ματταθίου τοῦ Ἀμὼς τοῦ Ναοὺμ τοῦ Ἐσλεὶ τοῦ Ναγγαὶ <sup>26</sup>τοῦ Μάαθ τοῦ Ματταθίου τοῦ Σεμεεὶν τοῦ Ἰωσὴχ τοῦ Ἰωδὰ <sup>27</sup>τοῦ Ἰωανὰν τοῦ Ῥησὰ τοῦ Ζοροβαβὲλ τοῦ Σαλαθιὴλ τοῦ Νηρεὶ <sup>28</sup>τοῦ Μελχεὶ τοῦ Ἀδδεὶ τοῦ Κωσὰμ τοῦ Ἐλμαδὰμ τοῦ Ἢρ <sup>29</sup>τοῦ Ἰησοῦ τοῦ Ἐλιέζερ τοῦ Ἰωρεὶμ τοῦ Μαθθὰθ τοῦ Λευεὶ <sup>30</sup>τοῦ Συμεὼν τοῦ Ἰούδα τοῦ Ἰωσὴφ τοῦ Ἰωνὰμ τοῦ Ἐλιακεὶμ <sup>31</sup>τοῦ Μελεὰ τοῦ Μεννὰ τοῦ Ματταθὰ τοῦ Ναθὰμ τοῦ Δαυεὶδ <sup>32</sup>τοῦ Ἰεσσαὶ τοῦ Ἰωβὴδ τοῦ Βόος τοῦ Σαλὰ τοῦ Ναασσὼν",
-      "text": "<sup>25</sup>Which was\nthe son of Mattathias, which was\nthe son\n of Amos, which was\nthe son of Naum, which was\nthe son\n of Esli, which was\nthe son of Nagge, <sup>26</sup>Which was\nthe son of Maath, which was\nthe son of Mattathias, which was\nthe son of Semei, which was\nthe son\n of Joseph, which was\nthe son of Juda, <sup>27</sup>Which was\nthe son of Joanna, which was\nthe son\n of Rhesa, which was\nthe son of Zorobabel, which was\nthe son of Salathiel, which was\nthe son of Neri, <sup>28</sup>Which was\nthe son of Melchi, which was\nthe son\n of Addi, which was\nthe son of Cosam, which was\nthe son\n of Elmodam, which was\nthe son of Er, <sup>29</sup>Which was\nthe son of Jose, which was\nthe son of Eliezer, which was\nthe son of Jorim, which was\nthe son\n of Matthat, which was\nthe son of Levi, <sup>30</sup>Which was\nthe son of Simeon, which was\nthe son\n of Juda, which was\nthe son of Joseph, which was\nthe son\n of Jonan, which was\nthe son of Eliakim, <sup>31</sup>Which was\nthe son of Melea, which was\nthe son of Menan, which was\nthe son of Mattatha, which was\nthe son\n of Nathan, which was\nthe son of David, <sup>32</sup>Which was\nthe son of Jesse, which was\nthe son of Obed, which was\nthe son of Booz, which was\nthe son of Salmon, which was\nthe son of Naasson,",
+      "section": "3.24-38",
+      "original_ref": "Luke 3:24-38",
+      "original_text": "<sup>24</sup><em>[not in Codex Washingtonianus]</em> <sup>25</sup><em>[not in Codex Washingtonianus]</em> <sup>26</sup><em>[not in Codex Washingtonianus]</em> <sup>27</sup><em>[not in Codex Washingtonianus]</em> <sup>28</sup><em>[not in Codex Washingtonianus]</em> <sup>29</sup><em>[not in Codex Washingtonianus]</em> <sup>30</sup><em>[not in Codex Washingtonianus]</em> <sup>31</sup><em>[not in Codex Washingtonianus]</em> <sup>32</sup><em>[not in Codex Washingtonianus]</em> <sup>33</sup><em>[not in Codex Washingtonianus]</em> <sup>34</sup><em>[not in Codex Washingtonianus]</em> <sup>35</sup><em>[not in Codex Washingtonianus]</em> <sup>36</sup><em>[not in Codex Washingtonianus]</em> <sup>37</sup><em>[not in Codex Washingtonianus]</em> <sup>38</sup><em>[not in Codex Washingtonianus]</em>",
+      "text": "<sup>24</sup>Which was\nthe son of Matthat, which was\nthe son\n of Levi, which was\nthe son of Melchi, which was\nthe son\n of Janna, which was\nthe son of Joseph, <sup>25</sup>Which was\nthe son of Mattathias, which was\nthe son\n of Amos, which was\nthe son of Naum, which was\nthe son\n of Esli, which was\nthe son of Nagge, <sup>26</sup>Which was\nthe son of Maath, which was\nthe son of Mattathias, which was\nthe son of Semei, which was\nthe son\n of Joseph, which was\nthe son of Juda, <sup>27</sup>Which was\nthe son of Joanna, which was\nthe son\n of Rhesa, which was\nthe son of Zorobabel, which was\nthe son of Salathiel, which was\nthe son of Neri, <sup>28</sup>Which was\nthe son of Melchi, which was\nthe son\n of Addi, which was\nthe son of Cosam, which was\nthe son\n of Elmodam, which was\nthe son of Er, <sup>29</sup>Which was\nthe son of Jose, which was\nthe son of Eliezer, which was\nthe son of Jorim, which was\nthe son\n of Matthat, which was\nthe son of Levi, <sup>30</sup>Which was\nthe son of Simeon, which was\nthe son\n of Juda, which was\nthe son of Joseph, which was\nthe son\n of Jonan, which was\nthe son of Eliakim, <sup>31</sup>Which was\nthe son of Melea, which was\nthe son of Menan, which was\nthe son of Mattatha, which was\nthe son\n of Nathan, which was\nthe son of David, <sup>32</sup>Which was\nthe son of Jesse, which was\nthe son of Obed, which was\nthe son of Booz, which was\nthe son of Salmon, which was\nthe son of Naasson, <sup>33</sup>Which was\nthe son of Aminadab, which was\nthe son\n of Aram, which was\nthe son of Esrom, which was\nthe son\n of Phares, which was\nthe son of Juda, <sup>34</sup>Which was\nthe son of Jacob, which was\nthe son of Isaac, which was\nthe son of Abraham, which was\nthe son\n of Thara, which was\nthe son of Nachor, <sup>35</sup>Which was\nthe son of Saruch, which was\nthe son\n of Ragau, which was\nthe son of Phalec, which was\nthe son\n of Heber, which was\nthe son of Sala, <sup>36</sup>Which was\nthe son of Cainan, which was\nthe son\n of Arphaxad, which was\nthe son of Sem, which was\nthe son\n of Noe, which was\nthe son of Lamech, <sup>37</sup>Which was\nthe son of Mathusala, which was\nthe son\n of Enoch, which was\nthe son of Jared, which was\nthe son\n of Maleleel, which was\nthe son of Cainan, <sup>38</sup>Which was\nthe son of Enos, which was\nthe son of Seth, which was\nthe son of Adam, which was\nthe son of God.",
+      "edition_text": "<sup>24</sup>τοῦ Μαθθὰθ τοῦ Λευεὶ τοῦ Μελχεὶ τοῦ Ἰανναὶ τοῦ Ἰωσὴφ <sup>25</sup>τοῦ Ματταθίου τοῦ Ἀμὼς τοῦ Ναοὺμ τοῦ Ἐσλεὶ τοῦ Ναγγαὶ <sup>26</sup>τοῦ Μάαθ τοῦ Ματταθίου τοῦ Σεμεεὶν τοῦ Ἰωσὴχ τοῦ Ἰωδὰ <sup>27</sup>τοῦ Ἰωανὰν τοῦ Ῥησὰ τοῦ Ζοροβαβὲλ τοῦ Σαλαθιὴλ τοῦ Νηρεὶ <sup>28</sup>τοῦ Μελχεὶ τοῦ Ἀδδεὶ τοῦ Κωσὰμ τοῦ Ἐλμαδὰμ τοῦ Ἢρ <sup>29</sup>τοῦ Ἰησοῦ τοῦ Ἐλιέζερ τοῦ Ἰωρεὶμ τοῦ Μαθθὰθ τοῦ Λευεὶ <sup>30</sup>τοῦ Συμεὼν τοῦ Ἰούδα τοῦ Ἰωσὴφ τοῦ Ἰωνὰμ τοῦ Ἐλιακεὶμ <sup>31</sup>τοῦ Μελεὰ τοῦ Μεννὰ τοῦ Ματταθὰ τοῦ Ναθὰμ τοῦ Δαυεὶδ <sup>32</sup>τοῦ Ἰεσσαὶ τοῦ Ἰωβὴδ τοῦ Βόος τοῦ Σαλὰ τοῦ Ναασσὼν <sup>33</sup>τοῦ Ἀμιναδὰβ τοῦ Ἀδμεὶν τοῦ Ἀρνεὶ τοῦ Ἐσρὼμ τοῦ Φάρες τοῦ Ἰούδα <sup>34</sup>τοῦ Ἰακὼβ τοῦ Ἰσαὰκ τοῦ Ἀβραὰμ τοῦ Θάρα τοῦ Ναχὼρ <sup>35</sup>τοῦ Σεροὺχ τοῦ Ῥαγαῦ τοῦ Φαλὲκ τοῦ Ἔβερ τοῦ Σαλὰ <sup>36</sup>τοῦ Καϊνὰμ τοῦ Ἀρφαξὰδ τοῦ Σὴμ τοῦ Νῶε τοῦ Λάμεχ <sup>37</sup>τοῦ Μαθουσαλὰ τοῦ Ἐνὼχ τοῦ Ἰάρετ τοῦ Μελελεὴλ τοῦ Καϊνὰμ <sup>38</sup>τοῦ Ἐνὼς τοῦ Σὴθ τοῦ Ἀδὰμ τοῦ θεοῦ.",
       "scan_pages": [
         "washingtonianus/w-p0211-FS-7148_01.jpg"
       ],
       "scan_folios": [
         "GA_032_0211 = Freer FS-7148_01"
-      ]
-    },
-    {
-      "section": "3.33-38",
-      "original_ref": "Luke 3:33-38",
-      "original_text": "<sup>33</sup>τοῦ Ἀμιναδὰβ τοῦ Ἀδμεὶν τοῦ Ἀρνεὶ τοῦ Ἐσρὼμ τοῦ Φάρες τοῦ Ἰούδα <sup>34</sup>τοῦ Ἰακὼβ τοῦ Ἰσαὰκ τοῦ Ἀβραὰμ τοῦ Θάρα τοῦ Ναχὼρ <sup>35</sup>τοῦ Σεροὺχ τοῦ Ῥαγαῦ τοῦ Φαλὲκ τοῦ Ἔβερ τοῦ Σαλὰ <sup>36</sup>τοῦ Καϊνὰμ τοῦ Ἀρφαξὰδ τοῦ Σὴμ τοῦ Νῶε τοῦ Λάμεχ <sup>37</sup>τοῦ Μαθουσαλὰ τοῦ Ἐνὼχ τοῦ Ἰάρετ τοῦ Μελελεὴλ τοῦ Καϊνὰμ <sup>38</sup>τοῦ Ἐνὼς τοῦ Σὴθ τοῦ Ἀδὰμ τοῦ θεοῦ.",
-      "text": "<sup>33</sup>Which was\nthe son of Aminadab, which was\nthe son\n of Aram, which was\nthe son of Esrom, which was\nthe son\n of Phares, which was\nthe son of Juda, <sup>34</sup>Which was\nthe son of Jacob, which was\nthe son of Isaac, which was\nthe son of Abraham, which was\nthe son\n of Thara, which was\nthe son of Nachor, <sup>35</sup>Which was\nthe son of Saruch, which was\nthe son\n of Ragau, which was\nthe son of Phalec, which was\nthe son\n of Heber, which was\nthe son of Sala, <sup>36</sup>Which was\nthe son of Cainan, which was\nthe son\n of Arphaxad, which was\nthe son of Sem, which was\nthe son\n of Noe, which was\nthe son of Lamech, <sup>37</sup>Which was\nthe son of Mathusala, which was\nthe son\n of Enoch, which was\nthe son of Jared, which was\nthe son\n of Maleleel, which was\nthe son of Cainan, <sup>38</sup>Which was\nthe son of Enos, which was\nthe son of Seth, which was\nthe son of Adam, which was\nthe son of God.",
-      "scan_pages": [
-        "washingtonianus/w-p0211-FS-7148_01.jpg"
       ],
-      "scan_folios": [
-        "GA_032_0211 = Freer FS-7148_01"
-      ]
+      "scan_note": "Not in the codex. Checked on the image: on GA_032_0211 (Freer FS-7148_01) 3:23 ends at line 26 with ιωσηφ and line 27 begins 4:1 (ις δε πληρης πνς αγιου); the genealogy of 3:23b-38 is not written. The CSNTM index lists 3:16-38 for this page, which is not what the page shows. Tischendorf's text of these verses is under Compare."
     }
   ],
   "translator_notes": [],
@@ -96,7 +89,7 @@
         "csntm_image": "GA_032_0211.jpg",
         "freer_id": "FS-7148_01",
         "freer_iiif": "https://ids.si.edu/ids/iiif/FS-7148_01/full/1800,/0/default.jpg",
-        "verses_in_this_chapter": "16-38"
+        "verses_in_this_chapter": "16-23"
       }
     },
     "scan_local_paths": [
@@ -104,7 +97,7 @@
       "washingtonianus/w-p0210-FS-7147_10.jpg",
       "washingtonianus/w-p0211-FS-7148_01.jpg"
     ],
-    "verses_absent_from_codex": "",
+    "verses_absent_from_codex": "24-38",
     "verses_not_shown_no_owner_image": "",
     "verses_not_shown_index_gap": "",
     "verses_placed_by_enclosure": "",
@@ -113,6 +106,8 @@
     "original_text_note": "Printed edition text, not a transcription of Codex Washingtonianus; readings of the codex are visible on the page images",
     "translation_source": "bible-api.com (KJV)",
     "translation_license": "public domain",
-    "verified_date": "2026-09-05"
+    "verified_date": "2026-09-05",
+    "verses_not_in_manuscript": "24-38",
+    "verses_partly_preserved": "23"
   }
 }
