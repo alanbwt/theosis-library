@@ -64,8 +64,7 @@ in Brahmi against the transcription.
   Hultzsch 1925 and can be added the same way.
 - Not in Hultzsch (found later): the Kandahar Greek-Aramaic bilingual and other Afghan and Indian finds after 1925. No
   public-domain or openly licensed English was found for the Kandahar bilingual, so it is not published.
-- Girnar: the short line below edict XIII ('the entirely white elephant') and two fragments under XIII are not on
-  Hultzsch's plates and are not shown.
+- Girnar: the two short fragments below edict XIII (one names 'the entirely white elephant') are not included.
 - Kalsi XIII south face: the impression begins at line 4; lines 1-3 (only "[ney]u (O) ichha" survives) are not on the plate,
   as the scan_note says.
 - Kalsi Edict X-XIV: the writer uses s, sh and ś for one sound; Hultzsch prints them as written and so does this text.

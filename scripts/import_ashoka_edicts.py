@@ -38,6 +38,9 @@ Chain of evidence
                      archive.org scan, fetched at full resolution through the archive.org BookReader
                      image service, and cropped to the band that holds the edict, keeping the plate's
                      margin labels (edict numerals and line numbers).
+                  b) Rummindei (Lumbini) only: a colour photograph of the inscribed pillar, Wikimedia Commons
+                     'Lumbini inscription (complete)' (Photo Dharma / Charlie Phillips, CC BY 2.0), on which the
+                     five lines were counted and their first and last signs read.
 4. MAPPING        Edict -> lines at a site: Hultzsch's line numbers in the transcription.
                   Lines -> plate: the plate's own margin labels (Roman numeral at the first line of
                   each edict, line numbers every second line), checked on each crop by counting the
@@ -432,7 +435,7 @@ def intro_for(site, eds):
             "<p>The edicts are laid out in two columns of ruled bands (I-V on the left, VI-XII on the right) with XIII and XIV below. "
             "Much of the thirteenth edict, which tells of the conquest of Kalinga, was blasted away during road building in the "
             "nineteenth century; two pieces of it were later recovered. The fourteen sections of this entry follow the edicts in order. "
-            "Under the thirteenth edict a short line names 'the entirely white elephant'; it is not on Hultzsch's plates and is not shown here.</p>")
+            "Two short fragments below the thirteenth edict, one naming 'the entirely white elephant', are not included here.</p>")
     elif slug == "kalsi":
         body = (
             "<p>The Kalsi rock stands near the meeting of the Yamuna and Tons rivers, west of Dehradun in Uttarakhand, and is now "
