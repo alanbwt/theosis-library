@@ -192,7 +192,7 @@ def parse_atf(text, qno=None):
     from '>>Qnnnnnn label' (only for composite qno when given).  CDLI also writes links through an alias
     defined in the ATF header ('#link: def A = Q000365 = ...' then '>>A 2'); those are resolved too."""
     out, surf, col, cur = [], "obverse", "", None
-    alias = {}
+    alias, direct, undefined = {}, set(), []
     for raw in text.split("\n"):
         ln = raw.rstrip()
         m = re.match(r"^#link:\s*def\s+(\S+)\s*=\s*(Q\d+)", ln)
@@ -218,8 +218,18 @@ def parse_atf(text, qno=None):
         m = re.match(r"^>>(\S+)\s+(\S+)", ln)
         if m and cur is not None:
             target = m.group(1) if re.fullmatch(r"Q\d+", m.group(1)) else alias.get(m.group(1))
+            if re.fullmatch(r"Q\d+", m.group(1)):
+                direct.add(m.group(1))
+            elif target is None:
+                undefined.append((cur, m.group(2)))
             if target and (qno is None or target == qno):
                 cur["q"] = m.group(2)
+    # some files use '>>A n' without defining A (e.g. CDLI P278760 '>>A 273b'); when the file has no alias
+    # definitions and links to no composite but this one, such a link can only mean this composite
+    if qno and undefined and not alias and direct <= {qno}:
+        for ln, lab in undefined:
+            if ln["q"] is None:
+                ln["q"] = lab
     return out
 
 
@@ -523,7 +533,11 @@ def align_by_text(w, comp, min_sim=0.6, min_signs=3, low=0.45, fill=0.3):
        (within 2), otherwise it is dropped.
     3. Up to three tablet lines left between two kept lines whose composite lines leave exactly as many lines
        free are placed there one to one, each if its similarity to that line is >= fill (variant spellings,
-       Emesal forms)."""
+       Emesal forms).
+    4. A line just before (after) a run of kept lines takes the composite line just before (after) the run if that
+       is free and is the line's best match (>= 0.4).
+    5. A line left after a kept line whose best match is that same composite line (>= 0.5) is its second part
+       (one composite line written over two tablet lines) and shares it."""
     comp_signs = [norm_signs(ln["html"]) for ln in comp]
     sigs = [norm_signs(atf_html(ln["atf"])) for ln in w["lines"]]
     sim = lambda k, c: difflib.SequenceMatcher(None, sigs[k], comp_signs[c]).ratio() if sigs[k] and comp_signs[c] else 0.0
@@ -558,6 +572,18 @@ def align_by_text(w, comp, min_sim=0.6, min_signs=3, low=0.45, fill=0.3):
                 if len(sigs[k + i]) >= 2 and sim(k + i, chain[k - 1] + 1 + i) >= fill:
                     chain[k + i] = chain[k - 1] + 1 + i
         k = e
+    used_c = set(chain.values())  # one step at the edges of an aligned run: the line just before (after) it may take
+    for k in sorted(chain):        # the composite line just before (after), if that is free and is its best match (>= 0.4)
+        for kk, cc in ((k - 1, chain[k] - 1), (k + 1, chain[k] + 1)):
+            if 0 <= kk < len(w["lines"]) and kk not in chain and 0 <= cc < len(comp) and cc not in used_c \
+                    and len(sigs[kk]) >= 2 and sim(kk, cc) >= 0.4 and sim(kk, cc) >= max(sim(kk, x) for x in range(len(comp))):
+                chain[kk] = cc
+                used_c.add(cc)
+    for k in range(1, len(w["lines"])):  # a composite line written over two tablet lines: the second part
+        if k not in chain and (k - 1) in chain and len(sigs[k]) >= 2 and sim(k, chain[k - 1]) >= 0.5 \
+                and ((k + 1) not in chain or chain[k + 1] > chain[k - 1]) \
+                and sim(k, chain[k - 1]) >= max(sim(k, c) for c in range(len(comp))):  # and it is its best match
+            chain[k] = chain[k - 1]
     for k, c in chain.items():
         ln = w["lines"][k]
         ln["cid"], ln["sim"], ln["how"] = comp[c]["id"], sim(k, c), "text"
@@ -576,7 +602,8 @@ def preserved_signs(ln):
 
 def plan_sections(paras, witnesses, max_w=4):
     """For each paragraph choose photographed witnesses (greedy by coverage; on a tie the tablet that preserves
-    more signs of those lines) and collect their lines."""
+    more signs of those lines) and collect their lines.  A later tablet adds a line already shown only when the
+    copy shown keeps no more than one readable sign and its own keeps three or more."""
     for p in paras:
         need = [ln["id"] for ln in p["lines"]]
         needset = set(need)
@@ -597,11 +624,22 @@ def plan_sections(paras, witnesses, max_w=4):
             chosen.append(best)
             covered |= {ln["cid"] for ln in best["lines"] if ln.get("cid") in needset}
         blocks = []
-        shown = set()
+        shown = {}  # cid -> preserved signs of the copy shown
         for w in chosen:
-            ls = [ln for ln in w["lines"] if ln.get("cid") in needset and ln["cid"] not in shown]
-            shown |= {ln["cid"] for ln in ls}
-            blocks.append((w, ls))
+            ls = []
+            for ln in w["lines"]:
+                c = ln.get("cid")
+                if c not in needset:
+                    continue
+                if c not in shown:
+                    ls.append(ln)
+                elif shown[c] <= 1 and preserved_signs(ln) >= 3:
+                    ln["better_copy"] = True  # the copy already shown keeps no readable sign; this one does
+                    ls.append(ln)
+            for ln in ls:
+                shown[ln["cid"]] = max(shown.get(ln["cid"], 0), preserved_signs(ln))
+            if ls:
+                blocks.append((w, ls))
         order = {cid: i for i, cid in enumerate(need)}
         blocks.sort(key=lambda b: min(order[ln["cid"]] for ln in b[1]))
         # a paragraph is shown only if the chosen tablets carry at least half of its lines; otherwise the
@@ -645,8 +683,25 @@ def build_witness_entry(cfg):
     assign_lines(paras, comp)
     comp_by_id = {ln["id"]: ln for ln in comp}
     comp_order = {ln["id"]: i for i, ln in enumerate(comp)}
+    # corrections to ETCSL's paragraph division, checked by reading its English (set in the importer):
+    # move_lines {line id: paragraph label} puts a line in the paragraph whose English translates it;
+    # relabel {ETCSL label: label} gives the paragraph the line range its English really covers
+    for lid, target in cfg.get("move_lines", {}).items():
+        src_p = next(p for p in paras if any(ln["id"] == lid for ln in p["lines"]))
+        dst_p = next(p for p in paras if p["label"] == target)
+        ln = next(ln for ln in src_p["lines"] if ln["id"] == lid)
+        src_p["lines"].remove(ln)
+        dst_p["lines"] = sorted(dst_p["lines"] + [ln], key=lambda x: comp_order[x["id"]])
+    for p in paras:
+        p["etcsl_label"] = p["label"]
+        if p["label"] in cfg.get("relabel", {}):
+            p["label"] = cfg["relabel"][p["label"]]
+        p["untranslated"] = [ln["id"] for ln in p["lines"] if ln["int"] > p["end"] and ln["id"] not in cfg.get("move_lines", {})]
     witnesses = []
     for p in cfg["witnesses"]:
+        if p in cfg.get("exclude", {}):
+            print(f"  {p}: not used ({cfg['exclude'][p]})")
+            continue
         w = load_witness(src, p, cfg["qno"])
         if "cast" in w["museum"].lower():  # the CDLI photograph may show a cast, not the tablet
             print(f"  {p} {w['museum']}: catalogued with a cast, not used")
@@ -701,29 +756,71 @@ def build_witness_entry(cfg):
             out = save_crop(img, cfg.get("boxes", {}).get(w["p"]), scan_dir / f"{slug(w['museum'])}.jpg")
             w["scan"] = f"{key}/{out.name}"
 
+    # tablet lines that match no ETCSL line ('extra' lines: additions, repeats, variants, or too little preserved)
+    # are not dropped: a run of up to 3 of them goes with the paragraph that shows the tablet's line before them
+    # (or, at the start of the tablet's text, the line after them), and is shown there marked '+'
+    shown_in = {}
+    for p in paras:
+        for w, ls in p["blocks"]:
+            for ln in ls:
+                shown_in[id(ln)] = (p["label"], id(w))
+    extras = {}
+    for w in used:
+        L = w["lines"]
+        placed = [k for k, ln in enumerate(L) if ln.get("cid")]
+        k = 0
+        while k < len(L):
+            if L[k].get("cid"):
+                k += 1
+                continue
+            e = k
+            while e < len(L) and not L[e].get("cid"):
+                e += 1
+            pk = max((j for j in placed if j < k), default=None)
+            nk = min((j for j in placed if j >= e), default=None)
+            owner = None
+            if e - k <= 3:  # pk, if any, is the line just before the run; nk, if any, the line just after it
+                if pk is not None:
+                    owner = shown_in.get(id(L[pk]))
+                elif nk is not None:
+                    owner = shown_in.get(id(L[nk]))
+            if owner:
+                for j in range(k, e):
+                    L[j]["extra_slot"] = None
+                    if pk is not None and nk is not None and e - k == 1 and \
+                            comp_order[L[nk]["cid"]] - comp_order[L[pk]["cid"]] == 2:
+                        L[j]["extra_slot"] = comp[comp_order[L[pk]["cid"]] + 1]["id"]
+                    extras.setdefault(owner, []).append(L[j])
+            k = e
+
     sections, skipped = [], []
     for p in paras:
         lab = sec_label(p)
         if not p["blocks"]:
             skipped.append(lab)
             continue
-        parts, notes = [], []
-        for w, ls in p["blocks"]:
+        parts, notes, extra_shown = [], [], []
+        for bi, (w, ls) in enumerate(p["blocks"]):
+            idx = {id(ln): k for k, ln in enumerate(w["lines"])}
+            ex = extras.get((p["label"], id(w)), [])
+            allx = sorted(ls + ex, key=lambda ln: idx[id(ln)])
+            p["blocks"][bi] = (w, ls, allx)
+            p.setdefault("spans", []).append((w, allx))
             prev = None
-            for ln in ls:
+            for ln in allx:
                 pl = witness_place(ln)
                 if pl != prev:
                     parts.append(f"<em>[{html.escape(w['museum'])}, {pl}]</em>")
                     prev = pl
-                parts.append(f"<sup>{ln['cid'].replace('.', '')}</sup>{atf_html(ln['atf'])}")
-            places = []
-            for ln in ls:
-                pl = witness_place(ln)
-                if pl not in places:
-                    places.append(pl)
-            span = f"{witness_place(ls[0])} line {ls[0]['line']}" + (
-                f" to {witness_place(ls[-1])} line {ls[-1]['line']}" if len(ls) > 1 else "")
+                if ln.get("cid"):
+                    parts.append(f"<sup>{ln['cid'].replace('.', '')}</sup>{atf_html(ln['atf'])}")
+                else:
+                    parts.append(f"<sup>+</sup>{atf_html(ln['atf'])}")
+                    extra_shown.append((w, ln))
+            span = f"{witness_place(allx[0])} line {allx[0]['line']}" + (
+                f" to {witness_place(allx[-1])} line {allx[-1]['line']}" if len(allx) > 1 else "")
             notes.append(f"{w['museum']} (CDLI {w['p']}), {span} = ETCSL lines {ranges([ln['cid'] for ln in ls], comp_order)}")
+        p["blocks"] = [(w, ls) for w, ls, _ in p["blocks"]]
         methods = {w["method"] for w, _ in p["blocks"]}
         how = []
         if "links" in methods:
@@ -743,12 +840,13 @@ def build_witness_entry(cfg):
         if "text" in methods:
             how.append("by aligning the tablet's CDLI transliteration line by line with the ETCSL composite text by sign "
                        "sequence, in composite order (up to three lines between two aligned lines are placed one to one in "
-                       "the ETCSL lines left free between them when their signs agree)")
+                       "the ETCSL lines left free between them, and a line next to an aligned run in the ETCSL line next to "
+                       "it, when their signs agree)")
         faced = [w for w, _ in p["blocks"] if w["face_scans"]]
         note = ("; ".join(notes) + ". Line correspondence " + "; for other tablets ".join(how) + ". "
                 + (cfg.get("face_note", "") + " " if faced else "")
-                + ("The photograph is the whole tablet (CDLI fat-cross: obverse above, reverse below, edges beside), "
-                   "checked by eye for each tablet used; the transliteration names the face and column of every block."
+                + ("The photograph is CDLI's image of the whole tablet, checked by eye for each tablet used; the "
+                   "transliteration names the face and column of every block."
                    if len(faced) < len(p["blocks"]) else ""))
         for w, _ in p["blocks"]:  # cautions about a particular tablet's photograph (set in the importer)
             if cfg.get("witness_notes", {}).get(w["p"]):
@@ -762,6 +860,31 @@ def build_witness_entry(cfg):
                      + ", ".join(ln["cid"].replace(".", " ") for _, ln in vo)
                      + " in a different order from the composite (each confirmed by CDLI's link and its signs); "
                      "they are shown in the tablet's own order.")
+        if extra_shown:
+            note += (" Line(s) marked + (" + "; ".join(f"{w['museum']} {witness_place(ln)} {ln['line']}" for w, ln in extra_shown)
+                     + ") are on the tablet among the lines shown but match no line of the ETCSL composite (an added or "
+                     "repeated line, a variant, or too little preserved to place); the English does not translate them.")
+            for w, ln in extra_shown:
+                if ln.get("extra_slot"):
+                    note += (f" {w['museum']} {witness_place(ln)} {ln['line']} stands where ETCSL line "
+                             f"{ln['extra_slot'].replace('.', ' ')} would be, but its signs do not match that line closely "
+                             "enough to place it there.")
+        bc = [(w, ln) for w, ls in p["blocks"] for ln in ls if ln.get("better_copy")]
+        if bc:
+            note += (" Line(s) " + ", ".join(f"{ln['cid'].replace('.', ' ')} ({w['museum']})" for w, ln in bc)
+                     + " are given a second time from a tablet whose copy keeps more signs than the one shown first.")
+        var = [(w, ln) for w, ls in p["blocks"] for ln in ls
+               if ln.get("sim", 1) < 0.35 and not ln.get("weak") and len(norm_signs(atf_html(ln["atf"]))) >= 3]
+        if var:
+            note += (" In line(s) " + ", ".join(ln["cid"].replace(".", " ") for _, ln in var)
+                     + " the tablet's text differs from the composite line that the English translates (other words or "
+                     "spellings).")
+        for (P, lno), txt in cfg.get("line_notes", {}).items():
+            if any(w["p"] == P and ln["line"] == lno for w, ls in p["blocks"] for ln in ls) or \
+                    any(w["p"] == P and ln["line"] == lno for w, ln in extra_shown):
+                note += " " + txt
+        if p["etcsl_label"] != p["label"] or p["label"] in cfg.get("para_notes", {}) or p["etcsl_label"] in cfg.get("para_notes", {}):
+            note += " " + cfg.get("para_notes", {}).get(p["etcsl_label"], "")
         note += " The English is ETCSL's translation of the composite text."
         gaps = [(ln["id"], ETCSL_GAPS[ln["id"]]) for ln in p["lines"] if ln["id"] in ETCSL_GAPS
                 and (ln is not p["lines"][-1] or ETCSL_GAPS[ln["id"]].lower() in p["text"].lower())]
@@ -775,7 +898,7 @@ def build_witness_entry(cfg):
             "original_ref": f"ETCSL {cfg['etcsl']} lines {lab}; " + "; ".join(
                 (f"{w['museum']} {witness_place(ls[0])} {ls[0]['line']}" + (
                     f" to {witness_place(ls[-1])} {ls[-1]['line']}" if len(ls) > 1 else ""))
-                for w, ls in p["blocks"]),
+                for w, ls in p["spans"]),
             "original_text": "<br>\n".join(parts),
             "text": f"<p><sup>{lab}</sup> {p['text']}</p>",
             "scan_pages": list(dict.fromkeys(
@@ -785,6 +908,19 @@ def build_witness_entry(cfg):
         })
     return {"sections": sections, "skipped": skipped, "used": used, "intro_note": intro_note, "paras": paras,
             "comp": comp}
+
+
+SIGN_MODIFIERS = {"t": "written turned (tenû)", "g": "with extra strokes (gunû)", "s": "šešig form", "n": "unfinished (nutillû)",
+                  "c": "written curved", "v": "a variant form", "r": "written reversed", "h": "written horizontally"}
+
+
+def sign_modifier_key(sections):
+    """Key for the ATF sign modifiers (e.g. '2(diš@t)') that occur in the shown transliterations."""
+    found = sorted({m for sec in sections for m in re.findall(r"@([a-z])\b", re.sub(r"<[^>]+>", "", sec["original_text"]))})
+    found = [m for m in found if m in SIGN_MODIFIERS]
+    if not found:
+        return ""
+    return " After a sign, " + "; ".join(f"@{m} marks it as {SIGN_MODIFIERS[m]}" for m in found) + "."
 
 
 def write_witness_outputs(M, r):
@@ -811,9 +947,12 @@ def write_witness_outputs(M, r):
         "language": "Sumerian (transliteration) / English",
         "source": M["source"], "description": M["description"], "introduction": intro,
         "translator_notes": [n for n in [r["intro_note"]] if n] + [
-            "Transliteration: CDLI ATF rendered in Unicode (sz = š, s, = ṣ, t, = ṭ, sign indices as subscripts). [ ] broken signs, # damaged sign, ? uncertain reading, ! corrected sign, x unreadable sign.",
-            "Where several tablets carry a paragraph, the first tablet's lines are given in full and later tablets add only lines the first does not carry.",
-        ] + M.get("notes", []),
+            "Transliteration: CDLI ATF rendered in Unicode (sz = š, s, = ṣ, t, = ṭ, sign indices as subscripts). [ ] broken signs, # damaged sign, ? uncertain reading, ! corrected sign, x unreadable sign."
+            + sign_modifier_key(sections),
+            "Where several tablets carry a paragraph, the first tablet's lines are given in full and later tablets add only lines the first does not carry (or a line whose first copy keeps no readable sign).",
+        ] + (["A line marked + is on the tablet but matches no line of the ETCSL composite (an added or repeated line, a "
+              "variant, or too little preserved to place); it is shown where it stands and is not translated."]
+             if any("<sup>+</sup>" in sec["original_text"] for sec in sections) else []) + M.get("notes", []),
         "translation": sections,
         "verification": {
             "scan_source": "Cuneiform Digital Library Initiative photographs: " + "; ".join(f"{w['p']} {w['photo']}" for w in used),
@@ -883,6 +1022,19 @@ QNO = "Q000782"
 ALIGN_TEXT = False
 WITNESSES = ["P222243", "P239236", "P250812", "P251531", "P251834", "P252293", "P252307", "P256631", "P257251", "P257259", "P260905", "P262937", "P265548", "P276062", "P278307", "P278340", "P278661", "P278718", "P278719", "P278760", "P278773", "P279019", "P345437", "P345814", "P346254", "P346256", "P346683", "P346684", "P346685", "P356215", "P356225", "P356311", "P356320", "P356337", "P356389", "P356421", "P356425", "P356433", "P356436", "P356451", "P356452", "P356478", "P356536", "P356703", "P356812"]
 
+# QC 2026-11-12 (round 2): ETCSL's paragraph '266-271' ends its English with line 270 ('(1 line unclear)') and its
+# paragraph '272-273' begins with line 271 ('For the shepherd ...'), so line 271 goes with the second
+# (checked by reading ETCSL's English).
+MOVE_LINES = {"271": "272-273"}
+RELABEL = {"266-271": "266-270", "272-273": "271-273"}
+PARA_NOTES = {
+    "266-271": ("ETCSL labels this paragraph 266-271, but its English ends with line 270 ('(1 line unclear)'); line 271 is "
+                "translated at the start of ETCSL's next paragraph and is shown with it (section 271-273)."),
+    "272-273": ("ETCSL labels this paragraph 272-273, but its English begins with line 271 ('For the shepherd ...'), so "
+                "line 271 is shown here. The English ends with '(1 line unclear)' for line 273; ETCSL does not translate "
+                "line 273A."),
+}
+
 M = {
     "tid": f"verified-{KEY}-ob",
     "title": "The Instructions of Shuruppak (Old Babylonian version)",
@@ -912,7 +1064,10 @@ def main():
     r = build_witness_entry({"src": SRC, "key": KEY, "etcsl": ETCSL, "qno": QNO, "witnesses": WITNESSES,
                              "scan_dir": SCAN_DIR, "align_text": ALIGN_TEXT,
                              "faces": globals().get("FACES", {}), "face_note": globals().get("FACE_NOTE", ""),
-                             "witness_notes": globals().get("WITNESS_NOTES", {})})
+                             "witness_notes": globals().get("WITNESS_NOTES", {}),
+                             "move_lines": globals().get("MOVE_LINES", {}), "relabel": globals().get("RELABEL", {}),
+                             "para_notes": globals().get("PARA_NOTES", {}), "line_notes": globals().get("LINE_NOTES", {}),
+                             "exclude": globals().get("EXCLUDE", {})})
     write_witness_outputs(dict(M, key=KEY, qno=QNO, etcsl=ETCSL, coll_path=COLL), r)
 
 

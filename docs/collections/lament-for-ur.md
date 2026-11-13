@@ -3,7 +3,7 @@
 **Entry:** `verified-lament-for-ur-ob` (1 entry, 48 sections)
 
 ## Contents
-The Lament for Ur (ETCSL 2.2.2). Coverage: 245 of the 442 ETCSL composite lines are shown on at least one photographed tablet; lines of shown paragraphs that are not on the tablets are named in the section notes.
+The Lament for Ur (ETCSL 2.2.2). Coverage: 244 of the 442 ETCSL composite lines are shown on at least one photographed tablet; lines of shown paragraphs that are not on the tablets are named in the section notes.
 
 ## Sources
 - Photos: CDLI (https://cdli.earth/dl/photo/P....jpg), whole tablet (fat-cross) unless noted, long side <= 2600 px, never upscaled; non-commercial use. Tablets: UET 6 135 (P346220, Ur); UET 6 139b = U 16900n (P464308, Ur); UET 6 138 = U 16900l (P346223, Ur); UET 6 139a = U 16900m (P346224, Ur).
@@ -21,3 +21,6 @@ Paragraphs left out: A 26-34, B 36-37, C 39-46, C 47-55, C 56-63, C 64-71, C 72,
 
 ## QC fixes (2026-11-12)
 The sign matcher required a unique best match, so refrains that recur in the composite (G 144-150 = G 154-160, ĝiš-gi4-ĝal2) and Emesal spellings were dropped. Now aligned in composite order: coverage 137 -> 245 of 442 lines, 26 -> 48 sections. F 135 and G 136-160 are shown from UET 6 139b; K 241-249 now has K244 and K249 (UET 6 138 obv 37, rev 4); UET 6 135 obv 6-26 = A 7-A 27 (CDLI's links run one line behind there). Review: docs/qc/review-near-east.md; fixes: docs/qc/fixes-near-east.md.
+
+## QC fixes, round 2 (2026-11-12)
+ETCSL's paragraph 'A 18A-26' ends its English with line 25; line 26 opens 'A 26-34' (not shown), so A26's Sumerian moved there and the section is relabelled A 18A-25, with a note. Unmatched lines of UET 6 139b obv 1-2, 6 and 20-22 and UET 6 138 obv 32 (where K 239 would be) are now shown marked +. Obv 1 may be the end of F 134 (noted). '@t' in G 151 is explained in the key. Engine (all Sumerian importers): tablet lines that match no ETCSL line are no longer dropped; a run of up to 3 is shown where it stands, marked + and named in the note, with the ETCSL line it would stand for when exactly one is free. A second copy of a line is added when the first copy shown keeps no readable sign and the other keeps 3 or more. Lines whose signs differ from the composite (similarity under 0.35) are flagged as variants. ATF sign modifiers such as @t are explained in the key. CDLI links written as '>>A n' without an alias definition are read as links to the composite when the file links to no other. The text matcher also places a line next to an aligned run, and the second half of a line written over two tablet lines. The photo boilerplate no longer claims a fat-cross layout. Coverage now 244 of 442. Review: docs/qc/review-round2.md.

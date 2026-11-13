@@ -14,7 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import import_gilgamesh as engine  # noqa: E402
 
 CHECKS = {
-    'IM.67628': "Photograph checked (eBL photograph of the Iraq Museum): obverse with both side edges and the reverse of a tall tablet from Kalhu, the upper corner and lower right broken; both faces are densely inscribed with about 40 to 45 lines, the reverse ending in a ruling and one further line. Consistent with eBL's 40 obverse and 45 reverse lines.",
+    'IM.67628': 'Photograph checked (eBL photograph of the Iraq Museum): obverse with both side edges and the reverse of a tall tablet from Kalhu. eBL numbers 68 obverse lines and 53 reverse lines (the last a catch-line after a ruling) on a tablet 20.2 cm high, but the photograph (about 13 cm by its scale bar) shows only about 44 obverse lines, from the top edge down to a diagonal break, and on the reverse about 38 lines, a ruling and one line. Obverse lines are therefore counted from the top edge of the obverse; the reverse lines cannot be located on this photograph with certainty, so no reverse line of this tablet is used.',
     '2024,6004.283': "Photograph checked: two views of a small wedge-shaped fragment about 2 cm long, no ink number visible; the upper view carries about five lines of signs, the lower view is broken surface. Consistent with eBL's five reverse lines.",
     'K.9392': "Photograph checked: obverse, reverse and edges of two joined pieces, ink K.9392 and a second, partly legible K.98.. number (eBL: K.9392+K.9810). About 12 lines on the obverse and a patch of several lines on the reverse, consistent with eBL's obverse 12 and reverse 2 + 1.",
     'BM.36320': "Photograph checked: obverse, reverse and edges, ink 36320 on the edge. About 25 lines of small script on each face, consistent with eBL's obverse 26 and reverse 19.",
@@ -79,6 +79,9 @@ WORK = engine.simple_work(
     authors=[{"id": 'shubshi-meshre-shakkan', "name": 'Shubshi-meshre-Shakkan', "dates": 'late 2nd millennium BCE', "century": -12, "era": "Ancient Near East", "tradition": "mesopotamian", "language": "Akkadian", "bio": 'Babylonian official named as the speaker of Ludlul bel nemeqi; a man of this name is attested in the time of the Kassite king Nazi-Maruttash (13th c. BCE).'}],
     checks=CHECKS, excluded=EXCLUDED, split=SPLIT,
 )
+
+# QC round 2: the eBL photograph of IM.67628 shows only part of the tablet (see CHECKS); reverse lines are not used.
+WORK["excluded_faces"] = {"IM.67628": {"r": "the photograph shows only part of the reverse"}}
 
 if __name__ == "__main__":
     engine.build_work(WORK)

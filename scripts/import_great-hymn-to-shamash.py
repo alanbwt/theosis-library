@@ -62,5 +62,14 @@ WORK = engine.simple_work(
     checks=CHECKS, excluded=EXCLUDED, split=SPLIT,
 )
 
+# QC round 2: K.19835 (joined to K.3182, photographed separately) is a flake about 2 cm across with two or three
+# lines and a ruling; eBL does not say which lines it carries and it cannot be placed by eye, so its photograph is
+# not linked to any section.
+WORK["piece_lines"] = {"K.3182": {"K.19835": {"labels": [], "note": (
+    "K.3182 is joined to K.19835, a flake about 2 cm across with two or three lines and a ruling, photographed "
+    "separately; eBL does not say which lines it carries and it cannot be placed on the photograph, so its photograph "
+    "is not linked, and a few signs of two or three lines of the hymn may be on it rather than on the K.3182 "
+    "photograph.")}}}
+
 if __name__ == "__main__":
     engine.build_work(WORK)

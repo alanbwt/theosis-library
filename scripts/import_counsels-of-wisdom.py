@@ -65,5 +65,13 @@ WORK = engine.simple_work(
     checks=CHECKS, excluded=EXCLUDED, split=SPLIT,
 )
 
+# QC round 2: K.18284 (joined to K.8282, photographed separately) shows one face with about seven lines; the K.8282
+# photograph shows its full obverse columns i and ii and about six lines of the reverse, against eBL's 13 lines of
+# column iv, so K.18284 carries the rest of column iv and is linked only to column iv lines.
+WORK["piece_lines"] = {"K.8282": {"K.18284": {"labels": ["iv"], "note": (
+    "K.8282 is joined to K.18284, photographed separately: the K.8282 photograph shows its obverse columns i and ii "
+    "in full but only about six of eBL's 13 lines of column iv on the reverse, and K.18284 (one face, about seven "
+    "lines) carries the rest of column iv (visual check).")}}}
+
 if __name__ == "__main__":
     engine.build_work(WORK)

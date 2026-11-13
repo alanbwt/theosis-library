@@ -38,3 +38,24 @@ Moved lines are named in their notes. Weak placements and 10 new photos checked 
 - Trace-only lines with no fixable position stay hidden.
 - Mercer renewal check not done.
 - vendidad is not built.
+
+## Round 2 (docs/qc/review-round2.md)
+
+All 9 Sumerian keys: 0 hard failures, 0 warnings.
+
+Engine changes, in every copy:
+- Tablet lines that match no ETCSL line are shown marked `+` and noted, including the ETCSL slot they stand in where exactly one is free.
+- A better copy is added when the first copy shown is unreadable.
+- Variant wording (similarity under 0.35) is flagged.
+- `@t`-type modifiers are explained in the key.
+- Undefined `>>A n` aliases are read as composite links.
+- Edge and two-line continuation alignment.
+- The fat-cross boilerplate is gone.
+
+| key | lines | fix |
+|---|---|---|
+| shuruppak | 276 -> 277 | 271 moved to 271-273 (ETCSL label off by one); 273A shown (N 3757 rev 1') |
+| lament | 245 -> 244 | A26 moved to its English (section A 18A-25); obv 1-2, 6, 20-22 and K239-slot obv 32 shown as +; F 134 note; @t keyed |
+| inanas | 349 | rev 13-15 (391a-c) shown; 380 also from CBS 06894; 150 pectoral variant flagged |
+| exaltation | 147 | 154's second line (UET 6 110 rev 9) shown |
+| gilgamesh-huwawa | 203 -> 202 | P343683 dropped (photo shows Penn pieces, text is Istanbul pieces); 1-3 from UET 6 49, 4-7 from CBS 07914 (images checked); 166 lost |

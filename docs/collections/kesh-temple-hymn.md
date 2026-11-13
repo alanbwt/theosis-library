@@ -21,3 +21,6 @@ Paragraphs left out: D 58A-58Q, D 58R, H 103A-103K, H 103L. Lettered lines D 58A
 
 ## QC fixes (2026-11-12)
 Re-run with the revised engine: no change in lines or coverage (133 of 165). Review: docs/qc/review-near-east.md; fixes: docs/qc/fixes-near-east.md.
+
+## QC fixes, round 2 (2026-11-12)
+Re-run with the round-2 engine; lines and coverage unchanged. Engine (all Sumerian importers): tablet lines that match no ETCSL line are no longer dropped; a run of up to 3 is shown where it stands, marked + and named in the note, with the ETCSL line it would stand for when exactly one is free. A second copy of a line is added when the first copy shown keeps no readable sign and the other keeps 3 or more. Lines whose signs differ from the composite (similarity under 0.35) are flagged as variants. ATF sign modifiers such as @t are explained in the key. CDLI links written as '>>A n' without an alias definition are read as links to the composite when the file links to no other. The text matcher also places a line next to an aligned run, and the second half of a line written over two tablet lines. The photo boilerplate no longer claims a fat-cross layout. Coverage now 133 of 165. Review: docs/qc/review-round2.md.

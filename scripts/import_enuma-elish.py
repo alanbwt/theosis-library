@@ -60,7 +60,7 @@ CHECKS = {
     'K.3437': 'Photograph checked: obverse, reverse and edges of a large tablet of joined pieces (about 14 cm tall), ink "K.3437, Rm 641, joined" on the left edge, Rm 641 on the obverse and another Rm number on the left edge. Both faces are covered in small script with about 45 to 50 lines each, consistent with eBL\'s 48 obverse and 46 reverse lines.',
     'K.5420.C': "Photograph checked: obverse, reverse and edges, ink K.5420c and a yellow label on the top edge. The obverse is worn at the top but has about 15 to 19 lines in its lower part, and the reverse about 25 lines, consistent with eBL's 19 and 27.",
     'K.11863': "Photograph checked: both faces and edges, ink K.11863 on the uninscribed face. The inscribed face has about ten lines (photographed in the obverse position, which eBL calls the reverse), broadly consistent with eBL's eleven lines of Tablet IV plus one line of Tablet V.",
-    'K.3567': "Photograph checked: obverse, reverse and edges, ink K.3567 on the bottom edge and K.8588 on a joined piece. About 25 to 27 lines on the obverse and exactly two lines on the otherwise blank reverse, matching eBL's 27 obverse lines of Tablet V and one reverse line each of Tablets V and VI.",
+    'K.3567': "Photograph checked: obverse, reverse and edges, ink K.3567 on the bottom edge and K.8588 on a joined piece. About 25 to 27 lines on the obverse, consistent with eBL's 27 obverse lines of Tablet V. The reverse is broken at the top: a damaged row of signs along the broken upper part is eBL's reverse 1'-2' (V 158 lost at r 1', then the catch-line VI 1 at r 2'); after a blank space, the two clear lines in the middle of the reverse are Ashurbanipal's colophon (eBL r 3'-4', 'tup-pi 5.KAM2.ME e-nu-ma e-lis'), as eBL's record of K.3567 for Tablet V (colophon field) gives them.",
     'K.2164': "Photograph checked: obverse, reverse and edges of a tablet of several joined pieces, ink K.2164 on the left edge, K.2195 on the right edge and K.3510 on the bottom edge. Both faces carry many lines (20 or more each), easily enough for eBL's two obverse lines.",
     'K.3445': "Photograph checked: obverse, reverse and edges of a tall tablet (about 15 cm) of joined pieces, ink K.3445, Rm 396 and a yellow label on the left edge and K.171.. (partly legible) on a small reddish piece at the top. The reverse is covered in very small script, about 60 or more lines, consistent with eBL's 68; the obverse surface is lost in its upper half but keeps line beginnings down its left side and about 20 to 25 full lines below, enough for eBL's 40.",
     'BM.38049': "Photograph checked: obverse, reverse and edges, ink 38049 on the reverse. About six to eight worn lines on the obverse below a ruling, enough for eBL's five; the reverse is uninscribed.",
@@ -208,6 +208,23 @@ WORK = {
                         "translation from the electronic Babylonian Library."),
     },
 }
+
+# QC round 2 (2026-11-12): eBL's corpus attribution numbers VI 1 on K.3567 "r 1'", the label it also gives V 158;
+# eBL's own transcription of K.3567 (colophon field of its Tablet V manuscript record) numbers V 158 r 1' and the
+# catch-line VI 1 r 2', then the colophon r 3'-4'.  Checked on the photograph: one damaged row on the broken top
+# of the reverse, a blank space, then two clear colophon lines.
+WORK["ms_line_fix"] = {("SB:VI", "1", "K.3567"): ("2'", (
+    "eBL's corpus edition labels this line r 1', the label it also gives V 158; eBL's own transcription of K.3567 "
+    "(colophon field of its Tablet V record) numbers it r 2', after V 158 at r 1', so it is given here as r 2'. On the "
+    "photograph it is the damaged row of signs along the broken top of the reverse, not the two clear lines below the "
+    "blank space, which are Ashurbanipal's colophon."))}
+# K.9267: eBL labels VII 40-44 as obverse 1'-5' and VII 45-47 as 32'-34'.  The photograph shows one block of about
+# eight lines at the upper left of the obverse (eBL attributes eight obverse lines, VII 40-47), so the lines are
+# consecutive on the tablet.
+WORK["extra_notes"] = {("SB:VII", "K.9267"): (
+    "The photograph shows the obverse text as one block of about eight lines at its upper left (eBL attributes eight "
+    "obverse lines to K.9267, VII 40-47), so these lines are consecutive on the tablet; eBL's labels 32'-34' for lines "
+    "45-47 are probably a slip for 6'-8'. Count down from the top line of that block.")}
 
 if __name__ == "__main__":
     engine.build_work(WORK)
