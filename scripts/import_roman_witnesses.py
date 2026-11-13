@@ -24,7 +24,9 @@ Entries and chain of evidence
    LATIN    C. D. Fisher, Cornelii Taciti Annalium ab excessu divi Augusti libri
             (Oxford 1906), Perseus canonical-latinLit phi1351.phi005.perseus-lat2
             (CC BY-SA 4.0).
-   ENGLISH  A. J. Church and W. J. Brodribb, Annals of Tacitus (Macmillan 1869),
+   ENGLISH  A. J. Church and W. J. Brodribb, Annals of Tacitus (London: Macmillan 1876; the
+            1869 in the Perseus header is the date of their History of Tacitus, not the Annals;
+            the Spectator reviewed the Annals as new on 11 March 1876),
             Perseus phi1351.phi005.perseus-eng2 (public domain; CC BY-SA 4.0
             digital text).
    The chapter is split at five sentence breaks; the Latin and the English are
@@ -288,7 +290,7 @@ def build_tacitus():
     entry = {
         "id": tid, "slug": tid,
         "title": "Tacitus, Annals 15.44: Nero, the fire of Rome and the Christians",
-        "language": "Latin (Fisher 1906) / English (Church and Brodribb 1869)",
+        "language": "Latin (Fisher 1906) / English (Church and Brodribb 1876)",
         "source": "Florence, Biblioteca Medicea Laurenziana, Plut. 68.2, fol. 38r-38v (Teca Digitale IIIF) + "
                   "Fisher's Latin and Church and Brodribb's English (Perseus)",
         "description": "Tacitus' account of Nero blaming the Christians for the fire of Rome in 64 AD, with the "
@@ -315,7 +317,7 @@ def build_tacitus():
             "Latin is C. D. Fisher's critical text (Oxford, 1906), which prints 'Christianos'; it is an edition, not a "
             "transcription of the manuscript page. Where the manuscript differs (for example 'coniuncti' for 'convicti', "
             "'circulo' for 'curriculo'), the scan notes say so.",
-            "English is the translation of A. J. Church and W. J. Brodribb (1869), as digitized by the Perseus Project.",
+            "English is the translation of A. J. Church and W. J. Brodribb (first published 1876), as digitized by the Perseus Project.",
             "The five parts are cut at the same sentences in the Latin and the English; nothing has been added or reworded.",
         ],
         "translation": sections,
@@ -335,10 +337,10 @@ def build_tacitus():
             "original_text_source": "C. D. Fisher, Cornelii Taciti Annalium ab excessu divi Augusti libri (Oxford: Clarendon Press, 1906), "
                                     "Perseus canonical-latinLit phi1351.phi005.perseus-lat2 (https://github.com/PerseusDL/canonical-latinLit)",
             "original_text_license": "edition public domain; Perseus digital text CC BY-SA 4.0",
-            "translation_source": "A. J. Church and W. J. Brodribb, Annals of Tacitus (London: Macmillan, 1869), Perseus "
-                                  "phi1351.phi005.perseus-eng2 (from the 1942 Modern Library reprint)",
-            "translation_license": "public domain (published 1869); Perseus digital text CC BY-SA 4.0",
-            "translator": "A. J. Church and W. J. Brodribb (1869)",
+            "translation_source": "A. J. Church and W. J. Brodribb, The Annals of Tacitus, translated into English (London: Macmillan, 1876), Perseus "
+                                  "phi1351.phi005.perseus-eng2 (from the 1942 Modern Library reprint; the Perseus header gives 1869, the date of their History of Tacitus)",
+            "translation_license": "public domain (published 1876); Perseus digital text CC BY-SA 4.0",
+            "translator": "A. J. Church and W. J. Brodribb (1876)",
             "verified_date": TODAY,
         },
     }
@@ -525,7 +527,7 @@ def main():
             "author_name": "Tacitus and Suetonius (early 2nd c. AD; 11th-century manuscripts)",
             "source_url": BML_ITEM,
             "critical_edition": "Fisher 1906 (Tacitus) and Ihm 1908 (Suetonius), via Perseus",
-            "translator_name": "Church and Brodribb (1869); J. C. Rolfe (1914)",
+            "translator_name": "Church and Brodribb (1876); J. C. Rolfe (1914)",
             "original_lang_label": "Latin · Fisher / Ihm",
             "original_lang_code": "la",
             "edition_label": "",

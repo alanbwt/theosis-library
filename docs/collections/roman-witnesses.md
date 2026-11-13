@@ -23,7 +23,7 @@ Totals: 3 entries, 7 sections, 5 scan images (`site/assets/scans/roman-witnesses
   11th c.), Wolfenbuetteler Digitale Bibliothek `/max/` JPEGs (00222 = 109v, 00223 = 110r, 00245 = 121r).
   HAB publishes its images as public domain (usage notes page).
 - **Latin**: Fisher 1906 (Tacitus) and Ihm 1908 (Suetonius) from Perseus canonical-latinLit (CC BY-SA 4.0).
-- **English**: Church and Brodribb 1869 (Perseus, public domain); J. C. Rolfe, Loeb 1914, from LacusCurtius
+- **English**: Church and Brodribb, Annals, first published London: Macmillan 1876 (Perseus, public domain; QC 2026-11-12: the 1869 in the Perseus header is the date of their History of Tacitus, and The Spectator reviewed the Annals as new on 11 March 1876); J. C. Rolfe, Loeb 1914, from LacusCurtius
   (marked public domain).
 
 ## Mapping method

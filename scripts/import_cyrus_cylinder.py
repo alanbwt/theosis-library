@@ -3,9 +3,10 @@
 import_cyrus_cylinder.py -- the Cyrus Cylinder (British Museum BM 90920), Babylon, after 539 BCE.
 PARTIAL: lines 6-36 of 45 (46 in ARIo), the part that the available photographs show.
 
-One entry, ten sections, one per paragraph of the ARIo English (lines 6-8, 9-10, 11-14, 15-17,
-18-19, 20-22, 23-25, 26-29, 30-32, 33-36), each with the ARIo Akkadian of those lines, the ARIo
-English and the photograph(s) of the side of the cylinder that carries them.
+One entry, nine sections, one per paragraph of the ARIo English (lines 6-8, 9-14, 15-17, 18-19,
+20-22, 23-25, 26-29, 30-32, 33-36; 9-14 joins ARIo's paragraphs 9-10 and 11b-14), each with the ARIo
+Akkadian of those lines, the ARIo English and the photograph(s) of the side of the cylinder that
+carries them.  Sections break at line boundaries in both columns (see A_PARTS).
 
 Chain of evidence
 -----------------
@@ -14,8 +15,8 @@ Chain of evidence
                   data/sources/cyrus-cylinder/Q006653.html. Licence CC BY-SA 3.0 (page credits).
                   Determinatives are kept as superscripts; nothing else is changed.
 2. ENGLISH        Same page, translation by J. Novotny (CC BY-SA 3.0). ARIo divides its English into
-                  paragraphs; a paragraph sometimes begins inside a line (e.g. "(11b)"), so the English
-                  of a section can end with the first words of the next section's first line.
+                  paragraphs; a paragraph sometimes begins inside a line (e.g. "(23b)"); the clause that renders
+                  the first part of that line is moved to the section that carries the line (A_PARTS).
 3. PHOTOGRAPHS    Wikimedia Commons, "Cyrus Cylinder front.jpg" and "Cyrus Cylinder back.jpg"
                   (Prioryman, British Museum, CC BY-SA 3.0). The back view was taken from behind the
                   display case, so its text is upside down; it is turned 180 degrees here so that the
@@ -72,11 +73,11 @@ RAWL_PAGE = "https://commons.wikimedia.org/wiki/File:Barrel_cylinder_of_Cyrus_(t
 BACK = f"{KEY}/cyrus-cylinder-back-view-lines-5-22.jpg"
 FRONT = f"{KEY}/cyrus-cylinder-front-view-lines-20-36.jpg"
 
-# first line of each ARIo paragraph published here -> (last line, images, where)
+# first line of each section -> (last line, images, where).  A section is one ARIo paragraph, except 9-14
+# (ARIo 9-10 and 11b-14: its English for lines 10 and 11 is interwoven, so the two are kept together).
 SECTIONS = {
     6: (8, [BACK], "in the band of lines broken in the middle by the break that runs down from the upper edge (Rawlinson's lacuna in lines 5-11); the starts of these lines are preserved at the left of the break"),
-    9: (10, [BACK], "where the break narrows towards its lower end (Rawlinson's lacuna in lines 9-11)"),
-    11: (14, [BACK], "line 11 at the lower end of the break, lines 12-14 the first complete lines below it"),
+    9: (14, [BACK], "lines 9-10 where the break narrows towards its lower end (Rawlinson's lacuna in lines 9-11), line 11 at the lower end of the break, lines 12-14 the first complete lines below it"),
     15: (17, [BACK], "the fourth to sixth complete lines below the break, in the middle of the photograph"),
     18: (19, [BACK], "the seventh and eighth lines below the break, in the lower half of the photograph"),
     20: (22, [BACK, FRONT], "at the lower edge of the back view and at the upper edge of the front view, where line 21 is the first line touched by the tip of the large break"),
@@ -84,6 +85,19 @@ SECTIONS = {
     26: (29, [FRONT], "the widest part of the large break interrupts these lines at about 57-76 % of their length"),
     30: (32, [FRONT], "lines 30-31 are interrupted by the lower end of the large break, line 32 is the first complete line below it"),
     33: (36, [FRONT], "the second to fifth lines below the large break, crossed by the crack that runs down from it"),
+}
+
+
+# ARIo begins some paragraphs inside a line ('(23b)') and translates the first part of that line (23a) at
+# the end of the previous paragraph.  These are the clauses that render the a-parts (checked against the
+# Akkadian: 23a i-na ul-ṣi ù ri-ša-a-tim i-na É.GAL ma-al-ki ar-ma-a šu-bat be-lu-tú; 26a an-ḫu-ut-su-un
+# ú-pa-áš-ši-ḫa ú-ša-ap-ṭi-ir sa-ar-ma-šu-nu; 30a bi-lat-su-nu ka-bi-it-tim ú-bi-lu-nim-ma qé-er-ba šu-an-na.KI
+# ú-na-áš-ši-qu še-pu-ú-a).  They are moved to the section that carries the line, so that every section's
+# English covers the same lines as its Akkadian (QC 2026-11-12).
+A_PARTS = {
+    23: "amidst joy and happiness, I took up (my) lordly residence in the palace of the ruler.",
+    26: "I allowed (them) to find rest for their exhaustion (and) I relieved (them) off their ...",
+    30: "brought their substantial tribute inside Šuanna (Babylon) (and) kissed my feet.",
 }
 
 
@@ -131,15 +145,20 @@ def main():
 
     sections = []
     for a, (b, scans, where) in SECTIONS.items():
-        end, en = paras[a]
-        assert end == b, (a, end, b)
-        m = re.match(r"\((\d+[ab]?)\)\s*", en)
-        en = f"<sup>{m.group(1)}</sup>" + en[m.end():]
-        nxt = [k for k in paras if k > a]
+        parts = [k for k in sorted(paras) if a <= k <= b]
+        assert parts[0] == a and paras[parts[-1]][0] == b, (a, b, parts)
+        en = " ".join(paras[k][1] for k in parts)
+        en = re.sub(r"\((\d+[ab]?)\)\s*", lambda m: f"<sup>{m.group(1)}</sup>", en)
         carry = ""
-        if nxt and re.match(r"\(\d+b\)", paras[min(nxt)][1]):
-            carry = (f" ARIo begins its next paragraph inside line {min(nxt)} ('({min(nxt)}b)'), so the last words of this "
-                     f"English translate the first words of line {min(nxt)}, which is given in the next section.")
+        if a in A_PARTS:  # the a-part of the first line, which ARIo translates in the previous paragraph
+            en = f"<sup>{a}</sup>{A_PARTS[a]} " + en
+            carry += (f" ARIo begins its paragraph inside line {a} ('({a}b)') and translates the first part of line {a} "
+                      f"at the end of the previous paragraph; that clause ('{A_PARTS[a]}') is given here, with line {a}.")
+        if b + 1 in A_PARTS:
+            assert en.endswith(" " + A_PARTS[b + 1]), (a, en[-120:])
+            en = en[: -len(A_PARTS[b + 1]) - 1]
+            carry += (f" The last clause of ARIo's paragraph, which renders the first part of line {b + 1}, is given in the "
+                      f"next section with that line.")
         sections.append({
             "section": f"{a}-{b}",
             "original_ref": f"Cyrus Cylinder (ARIo Cyrus II 1) lines {a}-{b}",
@@ -175,7 +194,7 @@ def main():
                        "gods and peoples, lines 6-36 with ARIo's text and translation and photographs of the cylinder.",
         "introduction": intro,
         "translator_notes": [
-            "ARIo's English is divided into paragraphs that do not always begin at a line start; a number such as 11b marks a paragraph that begins inside line 11.",
+            "ARIo's English is divided into paragraphs that do not always begin at a line start; a number such as 23b marks a paragraph that begins inside line 23. ARIo translates the first part of such a line (23a) at the end of the previous paragraph; that clause is moved to the section that carries the line, so each section's English covers the same lines as its Akkadian. Lines 9-14 form one section because ARIo's English for lines 10 and 11 is interwoven.",
             "The transliteration follows ARIo: Sumerian word-signs in capitals, determinatives raised (m before a man's name, d before a god's name), half brackets for damaged signs, square brackets for restorations.",
         ],
         "translation": sections,

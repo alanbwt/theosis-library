@@ -166,11 +166,11 @@ def main():
         elif tid.startswith("verified-venetus-"):
             author_name = "Homer (Venetus A, 10th c.)"
             source_url = "https://www.homermultitext.org/"
-            critical_edition = "Venetus A diplomatic edition, Homer Multitext Project (CC BY-NC 4.0); Munro & Allen for comparison"
+            critical_edition = "Venetus A diplomatic edition, Homer Multitext Project (CC BY-NC 4.0); Monro & Allen for comparison"
             translator_name = "A. T. Murray (1924)"
             original_lang_label = "Greek · Venetus A (Homer Multitext)"
             original_lang_code = "grc"
-            edition_label = "Munro & Allen, Oxford 1920 (Perseus)"
+            edition_label = "Monro & Allen, Oxford 1920 (Perseus)"
         elif tid.startswith("verified-vaticanus-"):
             author_name = "Codex Vaticanus (4th c., Vatican Library)"
             source_url = "https://digi.vatlib.it/view/MSS_Vat.gr.1209"

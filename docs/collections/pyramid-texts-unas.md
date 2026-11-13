@@ -4,7 +4,7 @@ Key `pyramid-texts-unas`, importer `scripts/import_pyramid_texts_unas.py`, shelf
 
 ## Contents
 
-17 entries, one per inscribed surface, 231 sections (one per TLA text = one utterance, or one copy of an utterance), 227 different utterance numbers. Every column W 1-649 is covered except PT 271 (see gaps).
+17 entries, one per inscribed surface, 231 sections (one per TLA text = one utterance, or one copy of an utterance), 227 different utterance numbers. Every column W 1-649 (Sethe's numbering has no W 129 or W 318) is covered except PT 271 (end of W 492, W 493, top of W 494; see gaps); W 646 has no column mark in the TLA text and its words stand under W 645.
 
 | Entry (`verified-pyramid-texts-unas-…`) | Columns (Sethe W) | Sections | Photograph |
 |---|---|---|---|
@@ -54,3 +54,6 @@ Key `pyramid-texts-unas`, importer `scripts/import_pyramid_texts_unas.py`, shelf
 ## Open questions
 
 - Per-utterance crops were not made; each section points at the whole wall and names its columns. Column positions were counted by eye; the start and end of every wall and several interior anchors were checked, not every single column.
+
+## QC fixes (2026-11-12)
+The shared introduction of all 17 entries said 'this library gives every column'. It now says that Sethe's numbering runs W 1-649 without W 129 and W 318, that PT 271 (end of W 492, W 493, top of W 494) is missing because it is not in the TLA data used, and that the words of W 646 are given under W 645 because the TLA text has no column mark for it. The 139 checker warnings (one image per wall or register) are unchanged. Still open from the review: the US renewal check for Mercer 1952 (spec rule 6). Review: docs/qc/review-near-east.md.

@@ -30,6 +30,7 @@ Two columns per page (a = left, b = right), 25-30 verses each. For every column 
 - Hymn 4, Hermes: 499.
 - Hymn 5, Aphrodite: 68-112 (M passes from 67 to 113).
 - Hymn 18: 5-12 (the manuscript ends at 18.4 on fol. 50r; 50v is blank).
+- Hymns 19-33 are not in the collection: M breaks off at 18.4, so it does not carry them (they survive in other manuscripts). Every entry's introduction now says so (QC fix 2026-11-12).
 - Lines the Loeb numbers with letters (Demeter 137a, 236a, 403a; Apollo 81a, 317a, 325a, 402a, 539a-b; Hermes 91a, 409a-b, 526a, 568a-b) are editorial supplements or variants and are left out. 137a, 236a, 317a and 526a were checked as absent on the page; the others were not checked one by one.
 - Demeter 387-411 and 462-481 (fol. 35, badly damaged and repaired) survive only in part; the edition's restorations are in brackets.
 

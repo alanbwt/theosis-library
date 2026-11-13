@@ -2,9 +2,9 @@
 
 Collection key: `cyrus-cylinder` · importer: `scripts/import_cyrus_cylinder.py` · shelf: Persia
 
-## Contents (1 entry, 10 sections)
+## Contents (1 entry, 9 sections)
 
-`verified-cyrus-cylinder-bm-90920`: ARIo paragraphs 6-8, 9-10, 11-14, 15-17, 18-19, 20-22, 23-25, 26-29, 30-32, 33-36.
+`verified-cyrus-cylinder-bm-90920`: ARIo paragraphs 6-8, 9-14 (ARIo 9-10 and 11b-14 joined), 15-17, 18-19, 20-22, 23-25, 26-29, 30-32, 33-36.
 Not published: lines 1-5 and 37-46.
 
 ## Sources
@@ -40,3 +40,6 @@ are listed on both photographs. Lines are counted outward from the breaks; no li
 - The line counts at the lower edges of the two views (lines ~20-23 and below 36) are the least certain part; the sections
   were chosen so that each one's lines lie well inside a view, except 20-22, which lists both.
 - A third photograph of the underside (e.g. a BM image) would allow lines 37-46 to be added.
+
+## QC fixes (2026-11-12)
+ARIo begins some paragraphs inside a line ((11b), (23b), (26b), (30b)) and translates the first part of that line at the end of the previous paragraph, so sections 9-10, 20-22, 23-25 and 26-29 had English half a line longer than their Akkadian. Sections now break at line boundaries in both columns: the clauses that render lines 23a, 26a and 30a (checked against the Akkadian; listed as A_PARTS in the importer) are moved to the section that carries the line, and ARIo 9-10 and 11b-14 are joined as 9-14 because the English of lines 10 and 11 is interwoven. Nothing in the Akkadian or the English is changed. Review: docs/qc/review-near-east.md.

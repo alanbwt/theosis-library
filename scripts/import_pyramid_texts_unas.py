@@ -575,8 +575,12 @@ def main():
         "resurrection of the dead king, his protection, his meals and his ascent to the sky, cut in vertical columns of "
         "hieroglyphs on the walls of the burial apartments of late Old Kingdom pyramids. The pyramid of Unas at Saqqara, the last "
         "king of the 5th Dynasty (about 2375-2345 BCE), is the first to carry them. Its sarcophagus chamber, the passage to the "
-        "antechamber, the antechamber and the corridor hold 649 numbered columns of text; this library gives every column, wall "
-        f"by wall, in seventeen entries ({len(distinct)} different utterances, some of them inscribed more than once).</p>")
+        "antechamber, the antechamber and the corridor hold the columns of text that Sethe numbered W 1-649 (there is no W 129 "
+        "or W 318). This library gives them wall by wall, in seventeen entries "
+        f"({len(distinct)} different utterances, some of them inscribed more than once), with one gap: Utterance 271 (the end "
+        "of W 492, all of W 493 and the top of W 494, on the south wall of the antechamber) is not in the Thesaurus Linguae "
+        "Aegyptiae data used here, so it is not given. W 646 (corridor, east wall) has no column mark of its own in the TLA "
+        "text; its words are given with W 645.</p>")
     reading = (
         "<p>Each section is one utterance. The Egyptian is the transliteration of the Thesaurus Linguae Aegyptiae (edition by "
         "Doris Topmann), with Sethe's Unas column number (W) before each column; a number ending in 'a' marks the offering label "

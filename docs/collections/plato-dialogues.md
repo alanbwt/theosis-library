@@ -13,7 +13,7 @@ Shelf: Greece. Era Classical, tradition greek. 5 entries, 143 sections (one per 
 | 4 | `verified-plato-dialogues-phaedo-78b-84b` (affinity of soul and divine) | 31 | Clarke 39 fol. 37r-40v |
 | 6 | `verified-plato-dialogues-laws-715e-716d` (god the measure) | 5 | Paris, BnF, grec 1807 fol. 189v |
 
-Order 5 is left free for a Republic entry (see gaps).
+Order 5 is left free for a Republic entry (see gaps); the Republic passages are now built as their own collection, `plato-republic`.
 
 ## Sources
 
@@ -31,5 +31,5 @@ Folio ranges per dialogue from Pinakes (diktyon 47776) and the BnF description. 
 - English section breaks follow each translator's own Stephanus milestones; a few words can sit on the neighbouring side of a break.
 - Perseus repeats speaker labels at paragraph breaks inside a speech; the importer prints a label only when the speaker changes.
 - Clarke 39 fol. 38v (Phaedo 80c-81b): the inner ends of lines 1-7 are damaged and repaired, some letters retraced by a later hand.
-- Not built: Republic 6.509b and the Cave (7.514a-521b) on Paris gr. 1807 (fol. 71-76). Shorey's Loeb Republic vol. 2 (1935) could not be confirmed as unrenewed, and the public-domain Jowett text available online has no Stephanus markers, so the English could not be split without guessing. A Jowett split taken from the marginal Stephanus numbers of a scanned 1892 printing would solve this.
+- Republic 6.509b and the Cave (7.514a-521b) are not in this collection. They are now built as a separate collection, `plato-republic` (docs/collections/plato-republic.md), on Laur. Plut. 80.19 with Shorey's Loeb English (1935), after a check of the 1962-1963 renewal lists found no renewal. (Updated 2026-11-12; this note had said the Republic was not built because Shorey's renewal status was unconfirmed.)
 - Not built: complete dialogues (only the key passages are mapped).

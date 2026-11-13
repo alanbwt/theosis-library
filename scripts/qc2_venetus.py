@@ -22,7 +22,7 @@ Greek (original_text): the HMT diplomatic edition of the Venetus A text
 (urn:cts:greekLit:tlg0012.tlg001.msA.diplomatic, same release), line by line in
 the manuscript's order, with its punctuation and signs as given. The release
 states the licence CC BY-NC 4.0 (images: CC BY-SA, per the vaimg collection).
-edition_text: Munro & Allen, Homeri Opera (Oxford 1908-1920), Perseus
+edition_text: Monro & Allen, Homeri Opera (Oxford 1908-1920), Perseus
 canonical-greekLit tlg0012.tlg001.perseus-grc2 (CC BY-SA 4.0 encoding), for the
 same lines; lines of the standard text that Venetus A lacks are given there
 with the page before which they would stand.
@@ -35,6 +35,9 @@ The English is cut only at those marks: each block (from one mark to the next)
 goes with the page that holds most of its lines (ties to the earlier page), so
 the English of a section can start or end a few lines away from the Greek. The
 exact English range is stated in each section's original_ref and scan_note.
+Pages listed in ENGLISH_CUTS are instead cut at Murray's sentence ends: the
+sentence that runs across the page break goes whole to one page, and the
+scan_note says which (QC fix 2026-11-12).
 Murray's footnotes are left out; speeches, which Perseus marks as quotations,
 are shown in quotation marks.
 
@@ -86,6 +89,35 @@ PLACED_BY_IMAGE = {
     "16.704-705": ("219v", "last two lines of fol. 219v (χείρεσσ' ἀθανάτῃσι ... / ἀλλ' ὅτε δὴ τὸ τέταρτον ...); fol. 220r begins with 16.706"),
     "18.604_605": ("250v", "last line of fol. 250v (τερπόμενοι· δοιὼ δὲ κυβιστητῆρε κατ' αὐτοὺς); fol. 251r begins with 18.606"),
     "18.617": ("251r", "last line of book 18 on fol. 251r (τεύχεα μαρμαίροντα παρ' Ἡφαίστοιο φέρουσα), above the end ornament"),
+}
+
+# English cut at Murray's sentence ends instead of his five-line marks (QC 2026-11-12): the English of
+# the page (book, folio) begins with the sentence that starts with the phrase (its occurrence in the
+# book's English, counted from 0), which renders the given line. The note goes into the scan_note of
+# that page and of the page before it.
+ENGLISH_CUTS = {
+    (13, "172r"): ("Howbeit Idomeneus, looking steadily", 0, 404,
+                   "Murray's sentence for 13.404-410 (Howbeit Idomeneus ... grazed thereon.) runs across the break between "
+                   "fol. 171v (Greek to 13.406) and fol. 172r (Greek from 13.407); it is given whole with fol. 172r, so the "
+                   "English of fol. 171v ends with 13.403 and that of fol. 172r begins with 13.404."),
+    (13, "172v"): ("Then the dear son of Aesyetes", 0, 427,
+                   "Murray's next sentence, for 13.427-441 (Then the dear son of Aesyetes ... cloven about the spear.), runs "
+                   "across the break between fol. 172r (Greek to 13.432) and fol. 172v (Greek from 13.433); it is given whole "
+                   "with fol. 172v, so the English of fol. 172r ends with 13.426 and that of fol. 172v begins with 13.427."),
+}
+
+# Corrections to venetus_visual_checks.json entries (they replace the stored text).
+VISUAL_CHECK_FIXES = {
+    "13:172r": ("first line 13.407 (‹δινωτὴν φορέεσκε›) and last line of the column 13.432 (‹ἰδὲ φρεσί· τοὔνεκα καί μιν›) "
+                "read on the photograph; the column has 25 lines, because 13.422 (‹μηκιστεὺς ἐχίοιο πάϊς καὶ δῖος ἀλάστωρ›) "
+                "is not written in it: the scribe left it out between 13.421 and 13.423 and wrote it alone at the foot of the "
+                "page, below the last line of the column (rechecked 2026-11-12)."),
+}
+# Corrections to the "placed on this page by ..." wording for single lines.
+PLACED_NOTE_FIXES = {
+    "13.422": ("Line 13.422 is not in that index; it is on this page, written alone at the foot of the page below the "
+               "column (the scribe left it out between 13.421 and 13.423); the Greek above gives it in its place in the "
+               "line order, as the Homer Multitext edition does."),
 }
 
 # Pages whose first and last lines were read on the photograph (2026-11-12),
@@ -393,22 +425,60 @@ def build_book(book, dip, dse, codex, page, how, ma, murray):
         if idx and idx != list(range(idx[0], idx[-1] + 1)):
             raise SystemExit(f"book {book}: English blocks of {f} not contiguous")
     # render English per page
-    eng = collections.defaultdict(list)
+    flat = []
     cur = None
     for a in atoms:
         if a[0] == "m":
             cur = owner[a[1]]
         if cur is None:
             continue
-        eng[cur].append(a)
+        flat.append([cur, a])
+    # sentence cuts (ENGLISH_CUTS): the page's English starts at the sentence that begins with the phrase
+    cut_start = {}
+    for (bk, fol), (phrase, occ, start, _note) in ENGLISH_CUTS.items():
+        if bk != book:
+            continue
+        hits = [i for i, (_, a) in enumerate(flat) if a[0] == "t" and phrase in a[1]]
+        i = hits[occ]
+        a = flat[i][1]
+        k = a[1].index(phrase)
+        new = ([[flat[i][0], ("t", a[1][:k])]] if a[1][:k] else []) + [[fol, ("m", start)], [fol, ("t", a[1][k:])]]
+        flat[i:i + 1] = new
+        j = i + (1 if a[1][:k] else 0)            # first atom of the page's English
+        fi = folios.index(fol)
+        prev, nxt = folios[fi - 1], (folios[fi + 1] if fi + 1 < len(folios) else None)
+        for x in range(len(flat)):
+            if x < j and flat[x][0] == fol:
+                flat[x][0] = prev
+            elif x >= j and flat[x][0] == prev:
+                flat[x][0] = fol
+            if nxt and x > j and flat[x][0] == nxt:
+                break
+        cut_start[fol] = start
+    eng = collections.defaultdict(list)
+    for fol, a in flat:
+        eng[fol].append(a)
+    # drop a block mark left at the very end of a page by a cut
+    for fol in eng:
+        while eng[fol] and eng[fol][-1][0] in ("m", "p"):
+            eng[fol].pop()
     sections = []
-    for f in folios:
+    for fi, f in enumerate(folios):
         ms = groups[f]
         ed = sorted(n for n in ed_lines if ed_page[n] == f)
         img = image_for(f, dse, codex, ms)
         my_blocks = [(a, z) for (a, z) in blocks if owner[a] == f]
         e_from, e_to = my_blocks[0][0], my_blocks[-1][1]
-        sections.append({"folio": f, "image": img, "ms": ms, "ed": ed, "blocks": my_blocks,
+        if f in cut_start:
+            e_from = cut_start[f]
+        if fi + 1 < len(folios) and folios[fi + 1] in cut_start:
+            e_to = cut_start[folios[fi + 1]] - 1
+        cut_notes = []
+        if f in cut_start:
+            cut_notes.append(ENGLISH_CUTS[(book, f)][3])
+        if fi + 1 < len(folios) and folios[fi + 1] in cut_start:
+            cut_notes.append(ENGLISH_CUTS[(book, folios[fi + 1])][3])
+        sections.append({"folio": f, "image": img, "ms": ms, "ed": ed, "blocks": my_blocks, "cut_notes": cut_notes,
                          "eng_atoms": eng[f], "absent": [n for n in absent if ed_page[n] == f],
                          "idx_only": [l for l in idx_only if dse[l][1] == f],
                          "e_range": (e_from, e_to)})
@@ -505,24 +575,24 @@ def build(dry=False):
                      f"ends ‹{last_words(dip[texted[-1]])}›. Page of each line from the Homer Multitext 2024c index of lines to pages."]
             placed = [l for l in ms if how.get(l, "index") != "index"]
             for l in placed:
-                notes.append(f"Line {l} is not in that index; placed on this page by {how[l]}.")
+                notes.append(PLACED_NOTE_FIXES.get(l, f"Line {l} is not in that index; placed on this page by {how[l]}."))
             if s["idx_only"]:
                 notes.append(f"Line{'s' if len(s['idx_only']) > 1 else ''} {', '.join(s['idx_only'])} "
                              f"{'are' if len(s['idx_only']) > 1 else 'is'} indexed on this page but "
                              f"{'have' if len(s['idx_only']) > 1 else 'has'} no text in the HMT diplomatic edition; "
-                             f"Munro & Allen's text is in the edition text.")
+                             f"Monro & Allen's text is in the edition text.")
             dele = [l for l in ms if l.endswith("del")]
             for l in dele:
                 notes.append(f"{l}: the HMT edition cites this line as deleted in the manuscript; its words repeat line {l.split('.')[0]}.{''.join(re.findall(r'\d+', l.split('.')[1]))}.")
             plus = [l for l in ms if re.search(r"\d[a-z]$", l)]
             for l in plus:
-                notes.append(f"{l} is a line of Venetus A that Munro & Allen do not number.")
+                notes.append(f"{l} is a line of Venetus A that Monro & Allen do not number.")
             if nums != sorted(nums):
                 notes.append("The manuscript has these lines in the order " + ", ".join(lab(l) for l in ms) + ".")
             if s["absent"]:
                 notes.append(f"Line{'s' if len(s['absent']) > 1 else ''} {book}.{ranges(s['absent'])} of the standard text "
                              f"{'are' if len(s['absent']) > 1 else 'is'} not in Venetus A; "
-                             f"{'they are' if len(s['absent']) > 1 else 'it is'} in the edition text (Munro & Allen) and the English.")
+                             f"{'they are' if len(s['absent']) > 1 else 'it is'} in the edition text (Monro & Allen) and the English.")
             blocks = ", ".join(f"{x}-{y}" if x != y else f"{x}" for x, y in s["blocks"])
             off = []
             if ea != a:
@@ -533,11 +603,16 @@ def build(dry=False):
                 notes.append(f"English (Butler): lines {book}.{ea}-{ez}; cut where Butler's English for the first line of "
                              f"the page begins, found by reading his English against the Greek"
                              + (f" ({BUTLER_NOTES[ea]})." if ea in BUTLER_NOTES else "."))
+            elif s["cut_notes"]:
+                notes.append(f"English (Murray): lines {book}.{ea}-{ez}. " + " ".join(s["cut_notes"])
+                             + (" At the page's other break the English follows Murray's five-line marks (a block that "
+                                "crosses the break goes with the page holding most of its lines)."
+                                if len(s["cut_notes"]) == 1 else ""))
             else:
                 notes.append(f"English (Murray): lines {book}.{ea}-{ez}, in his blocks {blocks}. Murray marks every fifth line and "
                              f"each paragraph; a block that crosses the page break goes with the page holding most of its lines"
                              + (f", so the English here {' and '.join(off)}." if off else "."))
-            ck = checks.get(f"{book}:{f}")
+            ck = VISUAL_CHECK_FIXES.get(f"{book}:{f}", checks.get(f"{book}:{f}"))
             if ck:
                 notes.append(f"Checked on the image: {ck}")
             out.append({
@@ -554,7 +629,7 @@ def build(dry=False):
         first_f, last_f = secs[0]["folio"], secs[-1]["folio"]
         n_ma = len(ma[book])
         placed_book = sorted({how[l] for l in dip if l.split(".")[0] == str(book) and how.get(l, "index").startswith("image")})
-        intro = (f"<p>Book {book} of the <em>Iliad</em> ({n_ma} lines in Munro and Allen's edition) as written in Venetus A "
+        intro = (f"<p>Book {book} of the <em>Iliad</em> ({n_ma} lines in Monro and Allen's edition) as written in Venetus A "
                  f"(Venice, Biblioteca Nazionale Marciana, Marc. gr. Z. 454 = 822), the oldest complete manuscript of the "
                  f"Iliad, copied in the 10th century with the text in the centre of each page and the scholia around it. "
                  f"This book is on fol. {first_f}-{last_f}; each section below is one page of the manuscript and links "
@@ -563,7 +638,7 @@ def build(dry=False):
                  f"which records where each line stands on the page photographs."
                  f"{' Lines missing from that index were placed by reading the photographs; each case is described in its section.' if placed_book else ''}</p>"
                  f"<p><strong>Greek:</strong> the manuscript's own text, from the Homer Multitext diplomatic edition of "
-                 f"Venetus A, with its accents, punctuation and signs as given there. The Oxford text of Munro and Allen "
+                 f"Venetus A, with its accents, punctuation and signs as given there. The Oxford text of Monro and Allen "
                  f"(1920) is given for comparison.</p>"
                  f"<p><strong>English:</strong> A. T. Murray's translation (Loeb Classical Library, 1924). Murray numbers "
                  f"every fifth line and starts a new paragraph at many other lines; the English is divided only at those "
@@ -578,16 +653,18 @@ def build(dry=False):
                       "break where his rendering of the page's first line begins; each section gives its English line "
                       "range. Butler gives no line numbers, so only the first line of each section is numbered.</p>")
         if absent:
-            intro += (f"<p><strong>Not in Venetus A:</strong> lines {book}.{ranges(absent)} of the standard text are not "
-                      f"in this manuscript. They are shown in the Munro and Allen text and in the English of the page "
-                      f"where they would stand.</p>")
+            one = len(absent) == 1
+            intro += (f"<p><strong>Not in Venetus A:</strong> {'line' if one else 'lines'} {book}.{ranges(absent)} of the "
+                      f"standard text {'is' if one else 'are'} not "
+                      f"in this manuscript. {'It is' if one else 'They are'} shown in the Monro and Allen text and in the English of the page "
+                      f"where {'it' if one else 'they'} would stand.</p>")
         d["translation"] = out
         d["language"] = "Ancient Greek (Venetus A) / English (A. T. Murray)"
         d["source"] = ("Venetus A (Marc. gr. Z. 454) page photographs and diplomatic text, Homer Multitext Project "
-                       "(release 2024c) + Munro & Allen (Oxford 1920, Perseus) + A. T. Murray, Loeb (1924, Perseus)")
+                       "(release 2024c) + Monro & Allen (Oxford 1920, Perseus) + A. T. Murray, Loeb (1924, Perseus)")
         d["description"] = (f"Book {book} of Homer's Iliad page by page in Venetus A (10th century, Venice): "
                             f"{len(out)} pages, fol. {first_f}-{last_f}, each with the manuscript's own Greek text "
-                            f"(Homer Multitext edition), Munro and Allen's text for comparison, and A. T. Murray's 1924 English.")
+                            f"(Homer Multitext edition), Monro and Allen's text for comparison, and A. T. Murray's 1924 English.")
         d["introduction"] = intro
         tn = ["Greek: Homer Multitext Project, diplomatic edition of the Venetus A text (release 2024c); "
               "edition text: D. B. Monro and T. W. Allen, Homeri Opera (Oxford, 1908-1920), via Perseus.",
@@ -713,7 +790,8 @@ def check():
         if seen_ed != sorted(ma[book]):
             probs.append({"id": d["id"], "section": None, "type": "edition_lines_not_complete_once",
                           "missing": sorted(set(ma[book]) - set(seen_ed))[:20]})
-        marks = sorted({a[1] for a in murray[book][0] if a[0] == "m"})
+        marks = sorted({a[1] for a in murray[book][0] if a[0] == "m"}
+                       | {v[2] for (bk, _f), v in ENGLISH_CUTS.items() if bk == book})   # + sentence-cut marks
         if book == 1:
             _, full = butler_segments()
             joined = " ".join(re.sub(r"<[^>]+>", " ", re.sub(r"<sup>\d+</sup>", "", s["text"])) for s in d["translation"])

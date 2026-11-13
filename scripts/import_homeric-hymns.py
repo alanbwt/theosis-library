@@ -389,6 +389,9 @@ def build(force=False):
         intro = (
             f"<p>The <em>Homeric Hymns</em> are 33 hexameter poems to the Greek gods, composed by anonymous poets between about the 7th and the 5th century BCE "
             f"and handed down under Homer's name. This entry: <strong>{esc(title)}</strong>. {esc(blurb)}</p>"
+            "<p>This collection has Hymns 1-18 only. The manuscript shown, M, breaks off at Hymn 18, line 4 (fol. 50r; fol. 50v is blank), "
+            "so the rest of Hymn 18 (lines 5-12) and Hymns 19-33 (to Pan, Hephaestus, Apollo, Poseidon, Zeus, Hestia, the Muses and Apollo, "
+            "Dionysus, Artemis, Athena, Hestia, Earth, Helios, Selene and the Dioscuri) are not in it and are not given here.</p>"
             f"<p>The page photographs are from {esc(MS_LONG)}. M is the only manuscript of the Hymn to Demeter. "
             f"Each section below is one column of a page (a = left, b = right); its note gives the first and last verse as read on the photograph. "
             f"This entry is on fol. {', '.join(fol_list)}.</p>"
