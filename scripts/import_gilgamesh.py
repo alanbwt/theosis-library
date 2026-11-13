@@ -714,7 +714,20 @@ def piece_line_map(work, src, chapters):
                 for num, atf in rows:
                     if re.search(r"#note:.*\b" + re.escape(p) + r"\b", atf):
                         info["lines"].setdefault(t2, {}).setdefault(num, False)
-            for t2, nums in (cfg.get(main, {}).get(p) or {}).items():
+            pc = cfg.get(main, {}).get(p) or {}
+            for t2, nums in pc.items():
+                if t2 == "note":
+                    continue
+                if t2 == "labels":
+                    # configured by visual check: the piece carries the lines of these columns/faces
+                    for t3, (ch, _rows) in per_tag.items():
+                        ids = {m["id"] for m in ch["manuscripts"] if m["museumNumber"] == main}
+                        for l in ch["lines"]:
+                            for v in l["variants"]:
+                                for m in v["manuscripts"]:
+                                    if m["manuscriptId"] in ids and (m["labels"] or [""])[0] in nums:
+                                        info["lines"].setdefault(t3, {}).setdefault(l["number"], False)
+                    continue
                 for num in nums:
                     info["lines"].setdefault(t2, {}).setdefault(num, False)
             # a piece covers a continuous stretch of the tablet: lines of the join between the first and the
@@ -727,6 +740,7 @@ def piece_line_map(work, src, chapters):
                     for n in order[min(pos):max(pos) + 1]:
                         got.setdefault(n, False)
             info["mapped"] = (has_atf and located_all) or p in cfg.get(main, {})
+            info["note"] = (cfg.get(main, {}).get(p) or {}).get("note", "")
             res[p] = info
         out[main] = res
     return out
@@ -762,6 +776,7 @@ GAP_CATS = [  # (category, heading used in the list of lines not shown), in disp
     ("wrongphoto", "eBL's photograph shows a different object"),
     ("unchecked", "photograph not checked"),
     ("extskip", "its photographs do not show which lines these are"),
+    ("partface", "its photograph shows only part of this face, and the lines cannot be located on it"),
     ("Commentary", "commentary"),
     ("Quotation", "quotation in another text"),
     ("Parallel", "parallel text"),
@@ -783,6 +798,8 @@ def gap_reason(work, src, ms, atf, usable):
         return "unnumbered", "unnumbered"
     if museum in work["excluded"]:
         return "excluded", museum
+    if museum in (work.get("excluded_faces") or {}):
+        return "partface", museum
     if museum in (work.get("external_photos") or {}):
         return "extskip", museum
     f = ebl_fragment(src, museum)
@@ -828,6 +845,8 @@ def chapter_sections(work, chapter, all_chapters, usable, raw_dir, dry=False, lo
                 museum = ms["museumNumber"]
                 if museum not in usable:
                     continue
+                if (m["labels"] or [""])[0] in (work.get("excluded_faces") or {}).get(museum, {}):
+                    continue   # this face cannot be located on the photograph (see the importer)
                 u = usable[museum]
                 fkey = None
                 if u.get("external") and u["external"].get("face_rule"):
@@ -840,8 +859,9 @@ def chapter_sections(work, chapter, all_chapters, usable, raw_dir, dry=False, lo
                     photos, documented = photos_for_line(museum, u, pmap, tag, l["number"])
                 kept = preserved_signs(atf)
                 sc = (kept + 1.0) * (SPLIT_FACTOR if len(photos) > 1 else 1.0)
+                fix = (work.get("ms_line_fix") or {}).get((tag, l["number"], museum))
                 cands.append({"state": (m["manuscriptId"], col_label(m["labels"]), photos), "score": sc, "atf": atf,
-                              "kept": kept, "ms_line": m["number"], "labels": m["labels"], "museum": museum,
+                              "kept": kept, "ms_line": fix[0] if fix else m["number"], "ms_line_note": fix[1] if fix else "", "labels": m["labels"], "museum": museum,
                               "ms": ms, "excerpt": ms_type(ms) in EXCERPT_TYPES, "photos": photos,
                               "documented": documented, "restricted": bool(u.get("restricted")), "catch": catch,
                               "face_key": fkey})
@@ -952,16 +972,34 @@ def chapter_sections(work, chapter, all_chapters, usable, raw_dir, dry=False, lo
         seen_ids.add(sid)
         ms_first, ms_last = part[0][1]["ms_line"], part[-1][1]["ms_line"]
         ms_range = ms_first if ms_first == ms_last else f"{ms_first} to {ms_last}"
+        # eBL's tablet line numbers that jump inside a run of consecutive poem lines are listed as given
+        groups = []
+        for _i, c in part:
+            nums_ = [int(x) for x in re.findall(r"\d+", c["ms_line"])]
+            if groups and nums_ and groups[-1][2] and (nums_[0] - groups[-1][2][-1]) > 2:
+                groups.append([c["ms_line"], c["ms_line"], nums_])
+            elif groups:
+                groups[-1][1] = c["ms_line"]
+                groups[-1][2] = nums_ or groups[-1][2]
+            else:
+                groups.append([c["ms_line"], c["ms_line"], nums_])
+        ms_jump = ""
+        if len(groups) > 1:
+            ms_range = " and ".join(a if a == b else f"{a} to {b}" for a, b, _ in groups)
+            ms_jump = (f" eBL numbers these lines on the tablet {ms_range}: its line numbers jump although the poem "
+                       "lines are consecutive.")
         orig, eng = [], []
         no_tr, syms, span_notes = [], set(), []
-        lost, scant, partial = [], [], []
+        lost, traces, scant, partial = [], [], [], []
         in_part = {i for i, _ in part}
         for i, c in part:
             num = html.escape(lines[i]["number"], quote=False)
             rendered, s = render_atf(c["atf"])
             syms |= s
             orig.append(f"<sup>{num}</sup>{rendered}")
-            if c["kept"] == 0:
+            if c["kept"] == 0 and re.search(r"(?<![\w])x(?![\w])", re.sub(r"\[[^\]]*\]", " ", c["atf"])):
+                traces.append(i)
+            elif c["kept"] == 0:
                 lost.append(i)
             elif c["kept"] <= 3 and re.search(r"[\[\]]|\.\.\.|…", c["atf"]):
                 scant.append(i)
@@ -1016,6 +1054,12 @@ def chapter_sections(work, chapter, all_chapters, usable, raw_dir, dry=False, lo
         note = (f"{holder} {museum}: {where}, the tablet's own line{'s' if ms_first != ms_last else ''} "
                 f"{ms_range}. eBL's corpus edition ({chap_url}) attributes {chap_label} {sid} to this manuscript "
                 f"at these column and line numbers. {u['check']}")
+        note += ms_jump
+        for _i, c in part:
+            if c.get("ms_line_note"):
+                note += " " + c["ms_line_note"]
+        if (tag, museum) in (work.get("extra_notes") or {}):
+            note += " " + work["extra_notes"][(tag, museum)]
         if ms_type(ms) in EXCERPT_TYPES:
             note += (f" eBL classes {museum} as {EXCERPT_TYPES[ms_type(ms)]}, not a library copy of the whole work. "
                      "It carries these lines as text (eBL's transliteration has no commentary or quotation markup), and "
@@ -1030,7 +1074,17 @@ def chapter_sections(work, chapter, all_chapters, usable, raw_dir, dry=False, lo
         if len(all_split) > 1:
             if c0["documented"]:
                 on_piece = [p for p in photo_ids if p != museum]
-                if on_piece and museum in photo_ids:
+                cfg_notes = [pmap[museum][p]["note"] for p in all_split[1:]
+                             if pmap.get(museum, {}).get(p, {}).get("note")]
+                if cfg_notes:
+                    # piece placed by a visual check recorded in the importer
+                    note += " " + " ".join(cfg_notes)
+                    if on_piece:
+                        note += (" " + " and ".join(on_piece) + (" is" if len(on_piece) == 1 else " are")
+                                 + " therefore linked for these lines.")
+                    else:
+                        note += f" Only the photograph of {museum} is linked for these lines."
+                elif on_piece and museum in photo_ids:
                     note += (f" {museum} is joined to " + ", ".join(x for x in all_split if x != museum) +
                              ", which the British Museum photographed separately. eBL's own transliteration of "
                              + " and ".join(on_piece) + " and the notes of its edition place parts of these lines on "
@@ -1049,11 +1103,14 @@ def chapter_sections(work, chapter, all_chapters, usable, raw_dir, dry=False, lo
                          "photograph of each of these pieces; it does not say which piece carries which line, so the "
                          "photographs of " + " + ".join(photo_ids) + " are linked, and the lines are on one or more of them.")
         # what the English renders that this tablet does not show (spec rule 7)
-        if lost or scant or partial:
+        if lost or traces or scant or partial:
             bits = []
             if lost:
                 bits.append(f"line{'s' if len(lost) > 1 else ''} {idx_ranges(lost, lines)} "
                             f"{'are' if len(lost) > 1 else 'is'} entirely broken")
+            if traces:
+                bits.append(f"of line{'s' if len(traces) > 1 else ''} {idx_ranges(traces, lines)} only illegible "
+                            "traces (x) survive")
             if scant:
                 bits.append(f"of line{'s' if len(scant) > 1 else ''} {idx_ranges(scant, lines)} only one to three "
                             "signs survive")
@@ -1061,12 +1118,12 @@ def chapter_sections(work, chapter, all_chapters, usable, raw_dir, dry=False, lo
                 bits.append(f"line{'s' if len(partial) > 1 else ''} {idx_ranges(partial, lines)} "
                             f"{'are' if len(partial) > 1 else 'is'} partly broken (square brackets and x in the Akkadian)")
             note += (" On this tablet " + ", ".join(bits[:-1]) + (" and " if len(bits) > 1 else "") + bits[-1]
-                     + ". The English of " + ("these lines" if len(lost) + len(scant) + len(partial) > 1 else "this line")
+                     + ". The English of " + ("these lines" if len(lost) + len(traces) + len(scant) + len(partial) > 1 else "this line")
                      + " translates eBL's composite text, so it includes words that are not preserved on this tablet "
                        "but are restored from other manuscripts or by the editors. Square brackets in the English mark "
                        "eBL's restorations in its composite text; words that survive on other tablets carry no brackets "
                        "even where this tablet is broken.")
-            others = [i for i in in_part if i not in lost and i not in scant and i not in partial]
+            others = [i for i in in_part if i not in lost and i not in traces and i not in scant and i not in partial]
             if others:
                 note += f" Line{'s' if len(others) > 1 else ''} {idx_ranges(others, lines)} {'are' if len(others) > 1 else 'is'} complete on this tablet."
         else:
@@ -1132,9 +1189,17 @@ def gap_ranges(gaps):
         if out and out[-1][2] == reason and out[-1][3] == idx - 1:
             out[-1][1] = num
             out[-1][3] = idx
+            out[-1][4] += 1
         else:
-            out.append([num, num, reason, idx])
-    return [(a if a == b else f"{a}-{b}", r) for a, b, r, _ in out]
+            out.append([num, num, reason, idx, 1])
+
+    def lab(a, b, n):
+        if a == b:
+            return a
+        if "-" in a or "-" in b:   # eBL labels that are themselves ranges ("109-110")
+            return f"{a}, {b}" if n == 2 else f"{a} to {b}"
+        return f"{a}-{b}"
+    return [(lab(a, b, n), r) for a, b, r, _, n in out]
 
 
 # ---------------------------------------------------------------------------
@@ -1471,7 +1536,7 @@ def simple_work(key, ebl_text, ebl_name, label, entries, translator, translator_
 # contact sheets and full views, 2026-11-12).  "Lines" = lines eBL attributes to
 # the manuscript in the chapters used.
 GILG_CHECKS = {
-    'IM.67564': "Photograph checked (eBL photograph of the Iraq Museum): two views of a fragment from Kalhu, each face with two columns divided by a vertical ruling and about 30 to 35 lines per column; on the face shown first the right edge carries the museum number. Consistent with eBL's columns i (tablet lines 1'-32') and ii (1'-36') of Tablet X on one face and column vi of Tablet XI on the other.",
+    'IM.67564': "Photograph checked (eBL photograph of the Iraq Museum): two views of a fragment from Kalhu (Nimrud), each face with two columns divided by a vertical ruling and about 30 to 40 lines per column. The ink on the right part of the face shown first reads 'N.D. 4381', the Nimrud excavation number (not the Iraq Museum number). Consistent with eBL's columns i (tablet lines 1'b to 40') and ii (1' to 36') of Tablet X on the face shown first, and column vi of Tablet XI on the other.",
     "K.2756.C": "Photograph checked: one face shown, about 16 lines in a single column, consistent with eBL's 16 lines in column i.",
     "K.8584": "Photograph checked: two views; the inscribed face (lower view) shows two columns, consistent with eBL's columns i and ii (12 lines each); the other view is the uninscribed back with the ink number K.8584.",
     "K.15145": "Photograph checked: one face, ink number K.15145, about 6 lines, consistent with eBL's 6 lines of column i.",
@@ -1515,7 +1580,7 @@ GILG_CHECKS = {
     "K.14945": "Photograph checked: one face of a fragment from the lower edge with about 8 lines (British Museum description: 8 lines), consistent with eBL's 9 lines of column iv.",
     "K.3588": "Photograph checked: obverse, reverse and edges, ink number K.3588 on both side edges; one column on each face, consistent with eBL's columns i and vi.",
     "BM.43021": "Photograph checked: obverse, reverse and edges of a small fragment (ink number 81-7-1,785); a few lines on each face, consistent with eBL's columns i and vi (4 lines each).",
-    "Sm.2132": "Photograph checked: obverse, reverse and edges, ink number S.2132; one column on the obverse and traces on the reverse, consistent with eBL's columns i and iv.",
+    'Sm.2132': "Photograph checked: obverse, reverse and edges, ink number S.2132 on the left edge. The face shown above carries about 13 lines whose right ends are cut off by a diagonal break, consistent with eBL's column iv? (13 lines, VII 249-261); the face shown below keeps only the first two to four signs of about 11 lines along its left edge, consistent with eBL's column i (11 lines, VII 56-68). The photograph therefore shows the face with column iv? above the face with column i.",
     "Rm-II.399": "Photograph checked: obverse, reverse and edges; about 13 lines on one face, consistent with eBL's column ii.",
     "BM.46002": "Photograph checked: two views, ink number 46002 (81-7-6,446) on the back; the inscribed face shows two columns, consistent with eBL's columns ii and iii.",
     "K.8590": "Photograph checked: obverse, reverse and edges, ink number K.8590; one column on each face, consistent with eBL's columns iii and iv.",

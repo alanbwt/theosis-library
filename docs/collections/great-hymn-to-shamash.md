@@ -2,11 +2,11 @@
 
 Built by `scripts/import_great-hymn-to-shamash.py` (re-runnable; engine in `scripts/import_gilgamesh.py`, whose docstring gives the chain of evidence). Rebuilt 2026-11-12 after the independent QC review (`docs/qc/review-near-east.md`); the changes are summarised below and in `docs/qc/fixes-akkadian.md`.
 
-## Contents (1 entry, 19 sections)
+## Contents (1 entry, 15 sections)
 
 | Entry | eBL lines | lines with any manuscript | published | sections | tablets used |
 |---|---|---|---|---|---|
-| Great Hymn to Shamash (Babylonian hymn to the sun god) | 200 | 200 | 200 | 19 | 11 |
+| Great Hymn to Shamash (Babylonian hymn to the sun god) | 200 | 200 | 200 | 15 | 7 |
 
 Total: 200 of the 200 lines in the eBL edition (100%); 200 of the 200 lines that survive on any manuscript. (Before the QC fix round: 200 lines in 18 sections.)
 
@@ -31,16 +31,21 @@ Each entry's introduction and `verification.lines_not_published` give, for every
 
 ## QC fix round (2026-11-12)
 
-- Lines shown 200 -> 200; sections 18 -> 19.
-- hymn 7: now on BM.98732 (was BM.36296).
-- hymn 8: now on BM.98732 (was K.3182).
+- Lines shown 200 -> 200; sections 18 -> 15.
+- hymn 7: now on K.3182 (was BM.36296).
+- hymn 69-70, 159-160, 169-170: now on K.3182 (was K.3650).
 - hymn 71-73: now on K.3182 (was BM.33514).
-- hymn 74-75: now on K.3182 (was BM.35077).
+- hymn 74-77: now on K.3182 (was BM.35077).
+- hymn 113-118, 125-135: now on K.3182 (was 1883,0118.472).
+- hymn 119-124: now on K.3182 (was BM.134517).
+- hymn 175-179: now on K.3182 (was BM.98631).
+- hymn 180-182: now on K.3182 (was K.3474).
+- hymn 8-16, 136-158, 171-174 on K.3182: linked photographs corrected (joined pieces).
 - eBL's raw ATF codes (!bs, !cm, !qt, !zz, ($___$), &, &n, {( )}, °..\..°, %n) are written out in plain form; each entry's notes end with a key to the signs used on that page.
 - Each section's scan_note now lists the lines that are entirely broken, keep only one to three signs, or are partly broken on its tablet, and says that the English of those lines renders eBL's composite text.
 - Gap reasons give the real cause per manuscript instead of 'not openly licensed'.
 
 ## Notes
 
-- All 200 lines of the eBL edition are shown. The school tablet BM.33514 (+ three separately photographed pieces) is no longer needed for 71-73 (the library copy K.3182 carries them); lines 7-8 now come from the library copy BM.98732 instead of the school tablet BM.36296.
-- Lines 1-6 and 76-77 remain on school tablets (BM.36296, BM.35077) because no photographed library copy preserves them as well; the sections say so.
+- All 200 lines of the eBL edition are shown. QC round 2: K.19835, a 2 cm flake joined to K.3182 and photographed separately, cannot be placed on any line, so its photograph is no longer linked; without that second photograph the large library copy K.3182 is now the best witness for 7-16, 69-77, 113-160 and 169-182 (it replaced K.3650, 1883,0118.472, BM.134517, BM.98631, BM.98732, BM.35077 and part of K.3474 there; checked on the photograph).
+- Lines 1-6 remain on the school tablet BM.36296 because no photographed library copy preserves them as well; the section says so.

@@ -30,3 +30,19 @@ Engine `scripts/import_gilgamesh.py` changed; all 13 importers re-run. Detail pe
 - 33 joined-piece sections still link every piece photograph. They need visual mapping.
 
 **Check**: `check_collection.py` reports 0 hard failures for all 13. The one warning (Gilgamesh V §278) predates this round. I looked at the image for every re-witnessed section.
+
+## Round 2 (after docs/qc/review-round2.md)
+
+- **Gilgamesh VII Sm.2132.** The faces were swapped in the note. The upper view holds column iv? (249-261); the lower view holds the line-beginnings of column i (56-68).
+- **Gilgamesh X IM.67564.** The ink reads "N.D. 4381", a Nimrud excavation number, and column i runs to 40'.
+- **Enuma Elish VI 1.** The ref is now r 2', per eBL's own K.3567 transcription. The note points to the damaged catch-line row on the top edge, not to the colophon.
+- **Enuma Elish VII 42-47.** The engine now prints eBL's line-number jumps (3'-5' and 32'-34'). The note says the photo shows one consecutive block.
+- **Ludlul IM.67628.** The note gives eBL's 68 obverse and 53 reverse lines and says the photo shows only part of the tablet. The reverse is no longer used, so I 85 and 92 are gaps again (451 lines).
+- **Theodicy.** The gap list now reads "109-110, 111-119".
+- **Atrahasis UM.55-21-29.** The note now names the reverse view and where the five lines sit.
+- **Joined pieces.** K.19835 (Great Hymn) can't be placed and is no longer linked. Without it, K.3182 now carries 7-16, 69-77, 113-160 and 169-182 (41 lines re-witnessed, 15 sections). K.18284 (Counsels) is linked only to column iv; 27-32 moved to K.8282.
+- **"Only illegible traces (x) survive"** is now separate from "entirely broken" (Adapa f+10, Counsels A+1 and 54). A script confirms that no "entirely broken" line keeps an x.
+
+`check_collection.py` reports 0 hard failures for all 13 (the Gilgamesh V §278 warning predates this). I checked every changed section on its image (Sm.2132, IM.67564 ink, K.3567 reverse, UM.55-21-29, K.3182, K.8282).
+
+Total lines: 5707 originally, 5804 after round 1, **5802** now.

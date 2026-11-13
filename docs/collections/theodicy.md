@@ -27,7 +27,7 @@ Joins that the British Museum photographed in pieces: a section links only the p
 
 Each entry's introduction and `verification.lines_not_published` give, for every line not shown, the manuscripts that carry it and why each cannot be used (no photograph in eBL, not in the eBL Fragmentarium, commentary, quotation in another text, photograph does not show the lines).
 
-- The Babylonian Theodicy (dialogue of the sufferer and his friend): 89: no manuscript preserves it; 109-110-111-119: no manuscript preserves it; 157: no manuscript preserves it; 158-171: photograph does not show these lines (visual check): K.5932; 172: photograph does not show these lines (visual check): K.5932; quotation in another text: K.4267; 173-174: photograph does not show these lines (visual check): K.5932; 192: no photograph in eBL: VAT.10567 (Vorderasiatisches Museum, Berlin); commentary: BM.66882; 290-293: no photograph in eBL: BM.34773, BM.34633; 294-297: no photograph in eBL: BM.34773, BM.34633; commentary: BM.66882
+- The Babylonian Theodicy (dialogue of the sufferer and his friend): 89: no manuscript preserves it; 109-110, 111-119: no manuscript preserves it; 157: no manuscript preserves it; 158-171: photograph does not show these lines (visual check): K.5932; 172: photograph does not show these lines (visual check): K.5932; quotation in another text: K.4267; 173-174: photograph does not show these lines (visual check): K.5932; 192: no photograph in eBL: VAT.10567 (Vorderasiatisches Museum, Berlin); commentary: BM.66882; 290-293: no photograph in eBL: BM.34773, BM.34633; 294-297: no photograph in eBL: BM.34773, BM.34633; commentary: BM.66882
 
 ## QC fix round (2026-11-12)
 

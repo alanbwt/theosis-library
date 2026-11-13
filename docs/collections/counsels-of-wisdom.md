@@ -34,7 +34,9 @@ Each entry's introduction and `verification.lines_not_published` give, for every
 
 - Lines shown 157 -> 159; sections 17 -> 18.
 - counsels 19: now on K.8282 (was BM.51070).
+- counsels 27-32: now on K.8282 (was K.3364).
 - counsels A+1-A+2: newly shown on CBS.6059.
+- counsels 20-26 on K.8282: linked photographs corrected (joined pieces).
 - eBL's raw ATF codes (!bs, !cm, !qt, !zz, ($___$), &, &n, {( )}, °..\..°, %n) are written out in plain form; each entry's notes end with a key to the signs used on that page.
 - Each section's scan_note now lists the lines that are entirely broken, keep only one to three signs, or are partly broken on its tablet, and says that the English of those lines renders eBL's composite text.
 - Gap reasons give the real cause per manuscript instead of 'not openly licensed'.
@@ -43,4 +45,4 @@ Each entry's introduction and `verification.lines_not_published` give, for every
 
 - A+1-A+2 were omitted as 'not openly licensed'; they now come from the Nippur school tablet CBS.6059 (Penn Museum photograph served by eBL, used under spec rule 9). VAT.17157 (Berlin) has no photograph in eBL.
 - BM.51070 and BM.41682 keep the British Museum's own catalogue labels in scan_manuscript ('HAR.ra = Hubullu VIIA', 'Astronomical?'); eBL identifies the Counsels of Wisdom on them, and those labels describe other text on the same school tablets or are out of date.
-- K.8282 shows only part of the reverse lines eBL attributes to it; the rest is on the joined piece K.18284, whose photograph is linked with it.
+- K.8282 shows only about six of the 13 lines of column iv that eBL attributes to it; the rest is on the joined piece K.18284 (photographed separately). QC round 2: K.18284 is now linked only to column iv lines, so it no longer appears beside column i (19-32, now all on K.8282); no column iv line of K.8282 is currently chosen.
