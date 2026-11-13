@@ -23,6 +23,8 @@ translation of the same passage. These important texts do not yet meet that bar.
 - Avesta: the Gathas and Yasht 19 (no openly usable manuscript images where the chapters could be located).
 
 ## India and China
+- Ashoka: the Shahbazgarhi, Mansehra, Jaugada and remaining Dhauli rock edicts, the other pillars and the minor rock edicts (all in Hultzsch 1925, not yet transcribed); the Kandahar Greek-Aramaic bilingual (no open English).
+- The Buddha's first sermon (Dhammacakkappavattana Sutta): no openly viewable manuscript found (the British Library EAP and Toronto Myanmar collections refuse automated access).
 - Kena, Mundaka, Taittiriya, Shvetashvatara and Brihadaranyaka Upanishads: no citable Sanskrit e-text (Kena, Mundaka) or no clean public-domain English text (the others).
 - Book of Odes (the Airs of the States), Classic of Changes, Mencius, Zhuangzi, Art of War: not yet built (clean public-domain English and suitable witnesses still being assembled).
 - Shang oracle bones: Britton's 'Fifty Shang Inscriptions' (1940) appears unrenewed but is not online.

@@ -50,6 +50,43 @@ def main():
     p = ROOT / "site" / "index.html"
     s = p.read_text(encoding="utf-8")
     s = re.sub(r"<!-- HOME:PILLS-STATS START -->.*?<!-- HOME:PILLS-STATS END -->", lambda m: block, s, flags=re.S)
+    # Featured passages (data/featured.json): quote must appear verbatim in the section's English.
+    import build_library
+    feats = json.loads((ROOT / "data" / "featured.json").read_text(encoding="utf-8"))["featured"]
+    cards = []
+    for f in feats:
+        pub = json.loads((PUB / f"{f['id']}.json").read_text(encoding="utf-8"))
+        secs = [x for x in pub["translation"] if f.get("section") in (None, x["section"])]
+        sec = secs[0]
+        eng = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", sec.get("text", "") + " " + sec.get("original_text", "")))
+        if f["quote"] not in eng:
+            raise SystemExit(f"featured quote not verbatim in {f['id']} {f.get('section')}: {f['quote']}")
+        thumb = build_library.thumb(sec["scan_pages"][0], width=640)
+        anchor = "#s" + str(sec["section"]).replace(".", "-").replace(" ", "-") if f.get("section") else ""
+        cards.append(f'''          <a href="/library/{f['id']}{anchor}" class="passage-card">
+            <div class="card-scan"><img src="{thumb}" alt="" loading="lazy"></div>
+            <div class="card-body">
+              <div class="card-quote">"{html.escape(f['quote'])}"</div>
+              <div class="card-meta">{html.escape(f['meta'])}</div>
+              <div class="card-context">{html.escape(f['context'])}</div>
+            </div>
+          </a>''')
+    s = re.sub(r"<!-- HOME:FEATURED START -->.*?<!-- HOME:FEATURED END -->",
+               lambda m: "<!-- HOME:FEATURED START -->\n" + "\n".join(cards) + "\n<!-- HOME:FEATURED END -->", s, flags=re.S)
+    # Reading paths (data/paths.json), first four plus the compass and the index
+    paths = json.loads((ROOT / "data" / "paths.json").read_text(encoding="utf-8"))["paths"]
+    pc = [f'''          <a href="/paths/{x['slug']}" class="paths-card">
+            <div class="paths-card-label">{html.escape(x['card_label'])}</div>
+            <h3>{html.escape(x['title'])}</h3>
+            <p>{html.escape(x['description'])}</p>
+          </a>''' for x in paths[:5]]
+    pc.append('''          <a href="/paths/" class="paths-card">
+            <div class="paths-card-label">Browse all</div>
+            <h3>All reading paths →</h3>
+            <p>Short guided sequences through the library, each step a real section with its photograph, original and English.</p>
+          </a>''')
+    s = re.sub(r"<!-- HOME:PATHS START -->.*?<!-- HOME:PATHS END -->",
+               lambda m: "<!-- HOME:PATHS START -->\n" + "\n".join(pc) + "\n<!-- HOME:PATHS END -->", s, flags=re.S)
     desc = (f"{n_entries:,} ancient primary sources in {len(colls)} collections, from the first Sumerian writing to the New Testament. "
             "Every section pairs a photograph of the original document with the verbatim original-language text and an English translation.")
     short = f"{n_entries:,} ancient primary sources, each with a photograph of the original document, the original language and English."
@@ -102,6 +139,21 @@ def main():
     sp = ROOT / "site" / "sources" / "index.html"
     t = sp.read_text(encoding="utf-8")
     t = re.sub(r"<!-- SOURCES:COLLECTIONS START -->.*?<!-- SOURCES:COLLECTIONS END -->", lambda m: "\n".join(blocks), t, flags=re.S)
+    # "What's Not Here (Yet)": generated from docs/GAPS.md
+    gaps = (ROOT / "docs" / "GAPS.md").read_text(encoding="utf-8")
+    parts = []
+    for block in re.split(r"\n## ", gaps)[1:]:
+        title, *lines = block.strip().split("\n")
+        items = [l[2:] for l in lines if l.startswith("- ")]
+        parts.append(f"        <h3>{html.escape(title)}</h3>\n        <ul>\n" + "\n".join(f"          <li>{html.escape(i)}</li>" for i in items) + "\n        </ul>")
+    gap_html = ("      <section>\n        <h2>What's Not Here (Yet)</h2>\n"
+                "        <p>A text enters the library only when every section has a photograph of the original document that carries it, "
+                "the verbatim original-language text, and a public-domain or openly licensed English translation of the same passage. "
+                "These important texts do not yet meet that bar, and why:</p>\n" + "\n".join(parts) + "\n      </section>")
+    a = t.index("<h2>What's Not Here (Yet)</h2>")
+    start = t.rfind("<section>", 0, a); start = t.rfind("\n", 0, start) + 1
+    end = t.index("</section>", a) + len("</section>")
+    t = t[:start] + gap_html + t[end:]
     sp.write_text(t, encoding="utf-8")
     print(f"home: {n_entries} entries, {n_sections} sections, {len(colls)} collections, languages: {sorted(langs)}")
 
