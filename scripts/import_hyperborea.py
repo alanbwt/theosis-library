@@ -853,7 +853,7 @@ def herodotus_4_184_185():
                "Mount Atlas, so high that its summit is never seen for clouds, which the natives call the pillar of heaven. The people "
                "there are named after the mountain, the Atlantes; they are said to eat nothing that has life and to have no dreams (4.184). "
                "Beyond them the sand belt runs on to the Pillars of Heracles and beyond (4.185). This is the oldest surviving mention of a "
-               "people named after Atlas in the far west, a century before Plato's Atlantis.</p>",
+               "people named after Atlas in the far west, written some seventy years before Plato's Atlantis (Herodotus c. 430 BCE, the Timaeus and Critias c. 360 BCE).</p>",
                "<p>The manuscript is Florence, Biblioteca Medicea Laurenziana, Plut. 70.3 (Herodotus A, 10th century). 4.184 opens fol. 193r; "
                "4.185 ends at fol. 193v line 5. Where the edition prints Ἀτάραντες (the nameless people of 4.184.1), this manuscript reads "
                "ἄτλαντες.</p>"],
@@ -1601,7 +1601,7 @@ PROSE["aelian"] = {
     "ms_short": "Paris suppl. gr. 352", "library": "Gallica (BnF)", "ms_date": "13th century (Paris suppl. gr. 352)",
     "ms_intro": ("<p>The manuscript is Paris, BnF, Supplément grec 352, a 13th-century bombycin codex with the <em>Varia Historia</em> on fol. "
                  "106v-132, the oldest complete witness of the work with published images (the 12th-century Vat. gr. 96 has only excerpts). "
-                 "The scribe gives each story a title between crosses. 3.18 runs from fol. 113r line 31 to fol. 113v line 18; inside it the "
+                 "The scribe gives each story a title between crosses. 3.18 runs from fol. 113r line 30 to fol. 113v line 18; inside it the "
                  "scribe adds subtitles for the city Machimos and for the place called Anostos.</p>"),
     "images": {"113r": {"file": "bnf-suppl-gr352-f113r.jpg", "service": SUPPL352 + "230", "caption": "Paris suppl. gr. 352 fol. 113r"},
                "113v": {"file": "bnf-suppl-gr352-f113v.jpg", "service": SUPPL352 + "231", "caption": "Paris suppl. gr. 352 fol. 113v"}},
@@ -1609,13 +1609,13 @@ PROSE["aelian"] = {
         "scan_source": "Bibliothèque nationale de France, Gallica https://gallica.bnf.fr/ark:/12148/btv1b11000151s (IIIF via openapi.bnf.fr; images 230-231)",
         "license": BNF_LICENSE,
         "manuscript": "Paris, BnF, Supplément grec 352, bombycin, 182 fol., 13th century (BnF dating 1201-1300); Varia Historia on fol. 106v-132 (Pinakes 53102)",
-        "mapping": "Own visual check: the start, page break and end read on the images, with the 38 lines of fol. 113r counted by hand (see scan_note)",
+        "mapping": "Own visual check: the start, page break and end read on the images, with the 37 text lines of fol. 113r counted by hand (recounted on a ruled crop 2026-11-12; see scan_note)",
         "urls": ["https://gallica.bnf.fr/ark:/12148/btv1b11000151s", "https://archivesetmanuscrits.bnf.fr/ark:/12148/cc24612m"],
     },
     "place": {
-        "3.18": ("fol. 113r line 31 to fol. 113v line 18", ["113r", "113v"],
-                 "3.18 begins in fol. 113r line 31 (folio number read), after the end of 3.17 ‹ἐπιδραμών›, with the title ‹Περὶ συνουσίας μίδου καὶ σιληνοῦ› between crosses and ‹Περιηγεῖταί τινα θεόπομπος "
-                 "συνουσίαν›; the last line of the page (38) ends ‹γεωργεῖν δὲ καὶ σπείρειν οὐδὲν αὐτοῖς ἔργον εἶναι›; fol. 113v begins ‹καὶ διατελοῦσιν ὑγιεῖς καὶ ἄνοσοι›, "
+        "3.18": ("fol. 113r line 30 to fol. 113v line 18", ["113r", "113v"],
+                 "3.18 begins in fol. 113r line 30 (text lines counted from the top; the folio number above them is not counted; recounted 2026-11-12), after the end of 3.17 ‹ἐπιδραμών›, with the title ‹Περὶ συνουσίας μίδου καὶ σιληνοῦ› between crosses and ‹Περιηγεῖταί τινα θεόπομπος "
+                 "συνουσίαν›; the last line of the page (37) ends ‹γεωργεῖν δὲ καὶ σπείρειν οὐδὲν αὐτοῖς ἔργον εἶναι›; fol. 113v begins ‹καὶ διατελοῦσιν ὑγιεῖς καὶ ἄνοσοι›, "
                  "with subtitles in lines 2 and 8, the Meropes in line 9, and the chapter ends in line 18, ‹ἐμοὶ δὲ δεινὸς εἶναι δοκεῖ μυθολόγος›, followed by the title of 3.19. Read on the BnF images at full resolution."),
     },
 }

@@ -61,6 +61,12 @@ TABLETS = [
      "title": "Proto-cuneiform field measurements from Jemdet Nasr (MSVO 1, 2)",
      "what": "a record of the length and width of fields of the same officials and the area calculated from them."},
     {"p": "P005070", "slug": "msvo-1-3", "order": 4,
+     # QC 2026-11-12: the ink number on the tablet's left edge in the CDLI photograph reads 1924.577 (an open 4,
+     # unlike the looped 6 of '1926.561' on MSVO 1, 1); CDLI catalogues the tablet as Ashm 1926-0577.  The number
+     # written on the object is used.
+     "museum": "Ashm 1924-0577",
+     "museum_note": ("The museum number is given as written in ink on the tablet's left edge in the photograph, "
+                     "1924.577; CDLI's catalogue lists the tablet (MSVO 1, 3 = OECT 7, 83) as Ashm 1926-0577."),
      "title": "Proto-cuneiform field measurements from Jemdet Nasr (MSVO 1, 3)",
      "what": "a record of the length, width and area of the fields of officials (the wife of the lord, the equid herder, "
              "the chief trade agent, the priest and the chief justice), with totals on the reverse."},
@@ -133,7 +139,7 @@ def main():
         scan = f"{KEY}/{out.name}"
         lines = parse(atf)
         assert lines and all(ln["tr"] for ln in lines), p
-        museum = meta.get("museum_no")
+        museum = t.get("museum") or meta.get("museum_no")
         designation = meta.get("designation")
         coll = ", ".join(c["collection"]["collection"] for c in meta.get("collections", []))
         prov = meta.get("provenience")
@@ -161,7 +167,10 @@ def main():
                 "text": f"<p>{eng}</p>",
                 "scan_pages": [scan],
                 "scan_note": (f"{designation} ({museum}), {pl}. The photograph shows the whole tablet (obverse above, reverse below, "
-                              "edges beside); face and column as given in the CDLI transliteration, checked by eye on the photograph."),
+                              "edges beside); face and column as given in the CDLI transliteration, checked by eye on the photograph."
+                              + (" On the reverse the columns run from right to left: column 1 is the right-hand column."
+                                 if pl.startswith("reverse, column") else "")
+                              + (" " + t["museum_note"] if t.get("museum_note") else "")),
             })
         tid = f"verified-{KEY}-{t['slug']}"
         intro = (
@@ -173,6 +182,7 @@ def main():
             "entries rather than a translation of connected language.</p>"
             "<p>The sections follow the faces and columns of the tablet. The transliteration and the English are CDLI's, line by line "
             "with the same line numbers.</p>"
+            + (f"<p>{t['museum_note']}</p>" if t.get("museum_note") else "")
         )
         entry = {
             "id": tid, "slug": tid, "title": t["title"],

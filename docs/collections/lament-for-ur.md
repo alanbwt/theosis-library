@@ -1,9 +1,9 @@
 # lament-for-ur
 
-**Entry:** `verified-lament-for-ur-ob` (1 entry, 26 sections)
+**Entry:** `verified-lament-for-ur-ob` (1 entry, 48 sections)
 
 ## Contents
-The Lament for Ur (ETCSL 2.2.2). Coverage: 137 of the 442 ETCSL composite lines are shown on at least one photographed tablet; lines of shown paragraphs that are not on the tablets are named in the section notes.
+The Lament for Ur (ETCSL 2.2.2). Coverage: 245 of the 442 ETCSL composite lines are shown on at least one photographed tablet; lines of shown paragraphs that are not on the tablets are named in the section notes.
 
 ## Sources
 - Photos: CDLI (https://cdli.earth/dl/photo/P....jpg), whole tablet (fat-cross) unless noted, long side <= 2600 px, never upscaled; non-commercial use. Tablets: UET 6 135 (P346220, Ur); UET 6 139b = U 16900n (P464308, Ur); UET 6 138 = U 16900l (P346223, Ur); UET 6 139a = U 16900m (P346224, Ur).
@@ -11,10 +11,13 @@ The Lament for Ur (ETCSL 2.2.2). Coverage: 137 of the 442 ETCSL composite lines 
 - English: ETCSL 2.2.2 translation, CC BY-NC-SA 3.0 (Oxford Text Archive 2518). It renders the composite text.
 
 ## Mapping
-Sections are ETCSL translation paragraphs. Tablet lines are placed by CDLI's own links to composite Q000379 (ETCSL numbering). Every link is scored against the ETCSL composite text (sign-sequence similarity): links under 0.25 on lines with 3+ signs are dropped; links off by a line or two (a match >= 0.5 and 0.25 better within +/-3 lines) are moved to the matching ETCSL line; links must run in composite order. Tablets without CDLI links are aligned by sign-sequence matching (>= 0.6, clear margin over the next best line, 3+ signs, longest run in composite order). Per paragraph the tablets carrying most lines are chosen (max 4); a paragraph is shown only if they carry at least half of its lines. Tablets catalogued with a cast, or whose photo has a long side under 1200 px, are not used. Every photograph used was looked at (montages) to confirm it shows the tablet itself.
+Sections are ETCSL translation paragraphs. Tablet lines are placed by CDLI's own links to composite Q000379 (ETCSL numbering). Every link is checked against the ETCSL composite text by sign sequence (CDLI and ETCSL spellings brought to one form first: ku3 = kug, sza3 = šag4, gesz = ĝiš, u4 = ud, du10/du11 = dug3/dug4 and similar). CDLI also writes links through an alias defined in the ATF header (`#link: def A = Q...`, then `>>A n`); both forms are read (before 2026-11-12 the alias form was ignored, which lost lines). The placement kept for each tablet is the best-matching chain that runs in composite order, with a preference for CDLI's own link: a link may move to a neighbouring ETCSL line (within 3) that matches clearly better, and a run of links off by the same amount (common with formulaic lines) moves together; a line too broken to be scored keeps CDLI's link and moves with its neighbours; a line confirmed at its own link but out of composite order is kept in the scribe's order; a mistyped link is replaced when the line fits the one ETCSL line free between its neighbours; a line CDLI does not link (or links to a label ETCSL does not have) may take an ETCSL line just after the previous link on a close match (>= 0.6). Linked lines with 3+ signs that still match under 0.25 are dropped. Tablets without any CDLI links are aligned by sign sequence in composite order (best order-preserving chain of matches >= 0.45, each match under 0.6 supported by a neighbouring line; up to three lines between two aligned lines are placed one to one in the ETCSL lines left free there when their signs agree, >= 0.3); repeated refrains are placed by their neighbours. Every moved or sign-placed line is named in its section note. Per paragraph the tablets carrying most lines are chosen (max 4; on a tie the one preserving more signs); a paragraph is shown only if they carry at least half of its lines. Tablets catalogued with a cast, or whose photo has a long side under 1200 px, are not used. Every photograph used was looked at (montages) to confirm it shows the tablet itself.
 
 ## Gaps
-Paragraphs left out: A 26-34, A 35, B 36-37, B 38, C 39-46, C 47-55, C 56-63, C 64-71, C 72, D 73-74, D 75, E 76-84, E 85-94, E 95-100A, E 101-111, E 112-122, E 123-132, E 133, F 134, F 135, G 136-143, G 144-150, G 151-160, H 171, I 188-191, I 192-196, I 197-203, J 205, J 206, L 253, M 275-285, M 286-291, M 292-298, M 299-309, M 310-320, M 321-327, M 328, N 329, N 330, O 331-341, O 342-347, O 348-358, O 378-386, O 387, P 388, P 389, R 400, R 401, S 417, T 419, U 438. 
+Paragraphs left out: A 26-34, B 36-37, C 39-46, C 47-55, C 56-63, C 64-71, C 72, D 73-74, D 75, E 76-84, E 85-94, E 95-100A, E 101-111, E 112-122, E 123-132, E 133, F 134, M 286-291, M 292-298, M 299-309, M 310-320, M 321-327, M 328, N 329, N 330, O 331-341, O 342-347, R 401, T 419. 
 
 ## Open questions
 - Lines whose CDLI link was dropped or moved by the checks are printed by the importer (`python3 scripts/import_lament_for_ur.py`).
+
+## QC fixes (2026-11-12)
+The sign matcher required a unique best match, so refrains that recur in the composite (G 144-150 = G 154-160, ĝiš-gi4-ĝal2) and Emesal spellings were dropped. Now aligned in composite order: coverage 137 -> 245 of 442 lines, 26 -> 48 sections. F 135 and G 136-160 are shown from UET 6 139b; K 241-249 now has K244 and K249 (UET 6 138 obv 37, rev 4); UET 6 135 obv 6-26 = A 7-A 27 (CDLI's links run one line behind there). Review: docs/qc/review-near-east.md; fixes: docs/qc/fixes-near-east.md.

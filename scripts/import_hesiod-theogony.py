@@ -20,8 +20,11 @@ Chain of evidence
               spurious (<del>) are shown in square brackets. Lines 929a-929t (quoted by Galen,
               not in any medieval manuscript) are left out.
   4. ENGLISH  H. G. Evelyn-White (1914, public domain), Perseus tlg0020.tlg001.perseus-eng2.
-              The prose is divided into blocks of about five lines (Perseus <l n>); each
-              block is placed in the section that holds the middle line of the block.
+              Perseus divides the prose into blocks of about five lines; at each page break the
+              English is cut at the end of Evelyn-White's sentence (ENGLISH_CUTS, chosen by reading
+              the English against the Greek; scripts/qc4_hesiod_english.py), so a sentence that runs
+              across a page break goes whole to one page and the scan_note gives the exact range.
+              Spaces lost where Perseus footnotes were removed are restored (QC fix 2026-11-12).
 
 Usage:  python3 scripts/import_hesiod-theogony.py [--force]   (--force re-downloads scans)
 """
@@ -37,7 +40,12 @@ from pathlib import Path
 
 from PIL import Image
 
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parent))
+from qc4_hesiod_english import cut_english, english_note  # noqa: E402
+
 KEY = "hesiod-theogony"
+TOTAL = 1022
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "data" / "sources" / "hesiod"
 PUB = ROOT / "translations" / "published"
@@ -63,30 +71,93 @@ IIIF = {
 }
 
 # Verified on the images (see docstring).  first/last = edition line numbers on the page.
+# Every page edge was re-read on the photograph on 2026-11-12 (QC fix: 246v ends at 933 and 247r
+# begins at 934, not 939/940); read_first / read_last record the first and last row as read
+# (left | right column; Greek as written, accents simplified).
 PAGES = [
     {"folio": "240r", "first": 1, "last": 42,
-     "note": "The Theogony begins in the lower half of the page under the red title ἡσιόδου θεογονία; 21 rows of two verses."},
-    {"folio": "240v", "first": 43, "last": 100, "note": ""},
-    {"folio": "241r", "first": 101, "last": 160, "note": ""},
-    {"folio": "241v", "first": 161, "last": 222, "note": ""},
-    {"folio": "242r", "first": 223, "last": 278, "note": ""},
-    {"folio": "242v", "first": 279, "last": 340, "note": ""},
+     "read_first": "1 | 2: Μουσάων ἑλικωνιάδων ἀρχώμεθ' ... | αἵθ' ἑλικῶνος ἔχουσιν ...",
+     "read_last": "41 | 42: ... θεᾶν ὀπὶ λειριοέσσῃ | ... κάρη νιφόεντος ὀλύμπου",
+     "note": "The Theogony begins in the lower half of the page under the faded red title ἡσιόδου θεογονία, with a faded red initial; 21 rows of two verses."},
+    {"folio": "240v", "first": 43, "last": 100,
+     "read_first": "43 | 44: δώματ' ἀθανάτων αἳ δ' ... | θεῶν γένος αἰδοῖον ...",
+     "read_last": "99 | 100: ... ἀκαχήμενος αὐτὰρ ἀοιδὸς | μουσάων θεράπων κλέα προτέρων ...", "note": ""},
+    {"folio": "241r", "first": 101, "last": 160,
+     "read_first": "101 | 102: ὑμνήσῃ μάκαράς τε θεοὺς ... | αἶψ' ὅ γε δυσφροσυνέων ...",
+     "read_last": "159 | 160: ... στοναχίζετο γαῖα πελώρη | ... κακήν τ' ἐφράσσατο τέχνην", "note": ""},
+    {"folio": "241v", "first": 161, "last": 222,
+     "read_first": "161 | 162: αἶψα δὲ ποιήσασα γένος ... | τεῦξε μέγα δρέπανον ...",
+     "read_last": "221 | 222: ... θεαὶ δεινοῖο χόλοιο | ... κακὴν ὄπιν ὅς τις ἁμάρτῃ", "note": ""},
+    {"folio": "242r", "first": 223, "last": 278,
+     "read_first": "223 | 224: τίκτε δὲ καὶ νέμεσιν ... | νὺξ ὀλοή μετὰ τὴν δ' ...",
+     "read_last": "277 | 278: ... ἀθάνατοι καὶ ἀγήρῳ | ... παρελέξατο κυανοχαίτης", "note": ""},
+    {"folio": "242v", "first": 279, "last": 340,
+     "read_first": "279 | 280: ἐν μαλακῷ λειμῶνι ... | τῆς δ' ὅτε δὴ περσεὺς ...",
+     "read_last": "339 | 340: στρυμόνα μαίανδρόν τε ... | ... ἀχελώϊόν τ' ἀργυροδίνην",
+     "note": "A one-line note in the top margin is not part of the poem."},
     {"folio": "243r", "first": 341, "last": 409,
-     "note": "The right column starts half a row higher than the left (342 and 343 both stand at the head of the right column), so the two columns are out of step on this page."},
-    {"folio": "243v", "first": 410, "last": 475, "note": ""},
-    {"folio": "244r", "first": 476, "last": 547, "note": ""},
+     "read_first": "341 (left) νέσσον τε ῥόδιόν θ' ἁλιάκμονα ...; 342 (right, half a row higher) γρήνικόν τε καὶ αἴσηπον ...",
+     "read_last": "408 | 409: ... ἀγανώτατον ἐντὸς ὀλύμπου | γείνατο δ' ἀστερίην ... ἥν ποτε πέρσης",
+     "note": "The right column starts half a row higher than the left, so the top rows read by height 341 (left), 342 and 343 (right), 344 (left), 345 (right) and so on; the right column has 35 rows and the left 34, and by the foot the rows pair normally (402 | 403 ... 408 | 409)."},
+    {"folio": "243v", "first": 410, "last": 475,
+     "read_first": "410 | 411: ἠγάγετ' ἐς μέγα δῶμα ... | ἡ δ' ὑποκυσαμένη ἑκάτην ...",
+     "read_last": "474 | 475: οἳ δὲ θυγατρὶ φίλῃ ... | ... ὅσα περ πέπρωτο γενέσθαι", "note": ""},
+    {"folio": "244r", "first": 476, "last": 547,
+     "read_first": "476 | 477: ἀμφὶ κρόνῳ βασιλῆι ... | πέμψαν δ' ἐς λύκτον ...",
+     "read_last": "546 | 547: τὸν δ' αὖτε προσέειπε προμηθεὺς ... | ... δολίης δ' οὐ λήθετο τέχνης",
+     "note": "The last three rows (542-547) are written smaller, squeezed in at the foot of the page."},
     {"folio": "244v", "first": 548, "last": 668,
-     "note": "Dense page written in three columns, three verses to a row (548 left, 549 middle, 550 right, and so on); the last rows run across the full width. A short note in the lower margin is not part of the text."},
+     "read_first": "548 | 549 | 550: ζεῦ κύδιστε μέγιστε ... | τῶν δ' ἕλε' ὁπποτέρην ... | φῆ ῥα δολοφρονέων ...",
+     "read_last": "666-668 across the full width: μᾶλλον ἔτ' ἢ τὸ πάροιθε ... καὶ ὅσοι κρόνου ἐξεγένοντο",
+     "note": "Dense page written in three columns, three verses to a row (548 left, 549 middle, 550 right, and so on); the last five rows run across the full width (653-655, 656-658, 659-661, 662 with 664-665, 666-668). Verse 663 (μαρνάμενοι τιτῆσιν ἀνὰ καρτερὰς ὑσμίνας) is left out of its row and written in the lower margin under a reference mark that also follows 662; the Greek shows it in its place. A short note in the top margin is not part of the text."},
     {"folio": "245r", "first": 669, "last": 736,
-     "note": "In the falling-anvil passage (722-725) the scribe skipped between the two verses ending χάλκεος ἄκμων; the skipped verses are written in the lower margin with a reference sign (their exact wording on the page was not transcribed here)."},
-    {"folio": "245v", "first": 737, "last": 803, "note": ""},
-    {"folio": "246r", "first": 804, "last": 867, "note": ""},
-    {"folio": "246v", "first": 868, "last": 939,
-     "note": "Lines 929a-929t of the Loeb edition (a passage quoted by Galen) are not in this or any medieval manuscript and are left out here."},
-    {"folio": "247r", "first": 940, "last": 991, "note": ""},
+     "read_first": "669 | 670: οὕς τε ζεὺς ἐρέβευσφιν ... | δεινοί τε κρατεροί τε ...",
+     "read_last": "735 | 736: ναίουσιν φύλακες πιστοὶ ... | ἔνθα δὲ γῆς δνοφερῆς ...",
+     "note": "In the falling-anvil passage the scribe's eye slipped from ἄκμων (722) to ἄκμων (724): the column reads 721 | 722, with a mark after 722, then 725 | 726. Under the same mark in the lower margin stand 723 (οὐρανόθεν κατιὼν ...), then a verse that is not in Evelyn-White's text (read as ἶσον δ' αὖτ' ἀπὸ [γῆς] ἐς τάρταρον ἠερόεντα, the middle abbreviated, so not certain; a verse of this kind is found in part of the manuscript tradition), then 724 written over two lines. The Greek shows 723-724 in their places and does not include the extra verse."},
+    {"folio": "245v", "first": 737, "last": 803,
+     "read_first": "737 | 738: πόντου τ' ἀτρυγέτοιο ... | ἑξείης πάντων πηγαὶ ...",
+     "read_last": "802 | 803: οὐδέ ποτ' ἐς βουλὴν ... | ἐννέα πάντα ἔτεα ... αὖτις",
+     "note": "A short note in the lower margin is not part of the poem."},
+    {"folio": "246r", "first": 804, "last": 867,
+     "read_first": "804 | 805: εἴρας ἐς ἀθανάτων ... | τοῖον ἄρ' ὅρκον ἔθεντο ...",
+     "read_last": "866 | 867: τήκεται ἐν χθονὶ δίῃ ... | ὣς ἄρα τήκετο γαῖα ...", "note": ""},
+    {"folio": "246v", "first": 868, "last": 933,
+     "read_first": "868 | 869: ῥῖψε δέ μιν θυμῷ ... | ἐκ δὲ τυφωέος ...",
+     "read_last": "932 | 933: πυθμέν' ἔχων παρὰ μητρὶ ... | ναίει χρύσεα δῶ ... αὐτὰρ ἄρηϊ",
+     "note": "Lines 929a-929t of the Loeb edition (a passage quoted by Galen) are not in this or any medieval manuscript and are left out here: the row 928 | 929 is followed directly by 930 | 931."},
+    {"folio": "247r", "first": 934, "last": 991,
+     "read_first": "934 | 935: ῥινοτόρῳ κυθέρεια φόβον ... | δεινούς οἵ τ' ἀνδρῶν πυκινὰς ...",
+     "read_last": "990 | 991: ὦρτ' ἀναρεψαμένη ... | ... ποιήσατο δαίμονα δῖον",
+     "note": "Rows 1-3 hold 934-939; 940 (Καδμείη δ' ἄρα οἱ) opens row 4. (Corrected 2026-11-12: the page map had put 934-939 on fol. 246v.)"},
     {"folio": "247v", "first": 992, "last": 1022, "ms_last": 1020,
-     "note": "Line 1014 (Telegonus) is not on the page: the manuscript passes from 1013 to 1015. The poem ends at 1020 with the red subscription τέλος τῆς θεογονίας ἡσιόδου; lines 1021-1022, the transition to the Catalogue of Women, are not in this manuscript and are printed from the edition."},
+     "read_first": "992 | 993: κούρην δ' αἰήταο ... | αἰσονίδης βουλῇσι ...",
+     "read_last": "1019 | 1020: αὗται μὲν θνητοῖσι ... | ἀθάναται γείναντο θεοῖς ἐπιείκελα τέκνα",
+     "note": "Line 1014 (Telegonus) is not on the page: the row 1012 | 1013 is followed by 1015 | 1016. The poem ends at 1020 with the red subscription τέλος τῆς θεογονίας ἡσιόδου; lines 1021-1022, the transition to the Catalogue of Women, are not in this manuscript and are printed from the edition."},
 ]
+
+# Evelyn-White's English is cut at the end of his sentences at each page break (QC fix 2026-11-12;
+# scripts/qc4_hesiod_english.py). folio: (opening words of the sentence that begins the page's English,
+# occurrence, first line it renders, last line of the previous page's English). Where his sentence runs
+# across the break it goes whole to the side nearer its end, or, where both are equally near or one
+# part of the poem would otherwise have no English on that page, as noted.
+ENGLISH_CUTS = {
+    "240v": ("And they, uttering their immortal voice", 0, 43, 43),        # sentence break inside 43
+    "241r": ("For although a man has sorrow", 0, 98, 97),                  # 98-103: 3 lines each side; given to 241r so that its 101-103 have English
+    "241v": ("Forthwith she made the element of grey flint", 0, 161, 160),
+    "242r": ("Also deadly Night bore Nemesis", 0, 223, 222),
+    "242v": ("With her lay the Dark-haired One", 0, 278, 278),            # sentence break inside 278
+    "243r": ("Also she brought forth a holy company", 0, 346, 345),      # rivers 337-345 kept with 242v, which holds 337-340 of this part
+    "243v": ("And she conceived and bore Hecate", 0, 411, 410),           # 409-410 tie: kept with the page where it begins
+    "244r": ("So they sent her to Lyctus", 0, 477, 476),
+    "244v": ("“Zeus, most glorious and greatest", 0, 548, 547),
+    "245r": ("A hundred arms sprang from the shoulders", 0, 671, 670),
+    "245v": ("And there, all in their order, are the sources and ends of gloomy", 0, 736, 735),
+    "246r": ("But in the tenth year he comes again", 0, 803, 803),        # sentence break inside 803
+    "246v": ("And in the bitterness of his anger", 0, 868, 867),
+    "247r": ("Also Cytherea bore to Ares", 0, 933, 933),                 # sentence break inside 933
+    "247v": ("And the son of Aeson by the will of the gods", 0, 992, 991),
+}
+ENGLISH_SPLITS = []
 FIRST_LAST_WORDS = {}  # filled from the Greek at build time
 
 # Episodes (boundaries fall on Evelyn-White's paragraph blocks)
@@ -195,7 +266,12 @@ def english_blocks():
                         parts.append([c.get("n"), ""])
                 elif tag != "note":
                     walk(c)
-                parts[-1][1] += c.tail or ""
+                tail = c.tail or ""
+                # a footnote anchored between two words leaves no space in the Perseus XML
+                # ("quick-glancing<note>..</note>Aphrodite"); the printed text has one
+                if tag == "note" and tail[:1].strip() and parts[-1][1][-1:].strip() and tail[0] not in ",.;:!?)]’”—":
+                    tail = " " + tail
+                parts[-1][1] += tail
         walk(l)
         if len(parts) > 1 and not parts[-1][1].strip():
             pending[0] = parts[-1][0]          # card milestone at the very end of the block
@@ -238,19 +314,15 @@ def build(force=False):
     for f, pth in paths.items():
         print(f"  {f}: {pth.stat().st_size} bytes")
 
-    # English block -> (entry index, folio) by the block's middle line
+    # English: cut at Evelyn-White's sentence ends at every page break (ENGLISH_CUTS, qc4_hesiod_english)
     def entry_of(k):
         for i, (a, b, *_rest) in enumerate(ENTRIES):
             if a <= k <= b:
                 return i
-    blocks = []
-    for i, (n, t) in enumerate(eng):
-        a = int(n)
-        b = max(a, starts[i + 1] - 1) if i + 1 < len(starts) else 1022
-        mid = (a + b) // 2
-        ei = entry_of(a)
-        assert entry_of(b) == ei, f"English block {a}-{b} crosses an entry boundary"
-        blocks.append((a, b, ei, page_of[mid], t))
+    pieces = cut_english([(int(n), t) for n, t in eng], PAGES, ENGLISH_CUTS, ENGLISH_SPLITS, TOTAL)
+    for pc in pieces:
+        pc["entry"] = entry_of(pc["start"])
+        assert entry_of(pc["end"]) == pc["entry"], f"English piece {pc['start']}-{pc['end']} crosses an entry boundary"
 
     rows, pubs = [], []
     for ei, (a, b, slug, title, blurb) in enumerate(ENTRIES):
@@ -262,19 +334,19 @@ def build(force=False):
                 continue
             f = p["folio"]
             g = "<br>".join(f"<sup>{k}</sup>{esc(gtext[k])}" for k in range(lo, hi + 1))
-            eb = [blk for blk in blocks if blk[2] == ei and blk[3] == f]
-            e = "<p>" + " ".join(f"<sup>{x[0]}</sup>{esc(x[4])}" for x in eb) + "</p>" if eb else ""
+            eb = [pc for pc in pieces if pc["entry"] == ei and pc["folio"] == f]
+            e = "<p>" + " ".join(f"<sup>{pc['mark']}</sup>{esc(pc['text'])}" for pc in eb) + "</p>" if eb else ""
             if not eb:
-                e = "<p><em>The English for these lines is given with the neighbouring section (Evelyn-White's prose runs in blocks of about five lines).</em></p>"
+                e = "<p><em>The English for these lines is given with the neighbouring section (Evelyn-White's sentence runs across the page break).</em></p>"
             ms_last = p.get("ms_last", p["last"])
             first_w = " ".join(gtext[p["first"]].split()[:4])
             last_w = " ".join(gtext[ms_last].split()[-4:])
             part = "" if (lo, hi) == (p["first"], p["last"]) else f" This section shows lines {lo}-{hi} of that page; the rest of the page belongs to the {'previous' if lo > p['first'] else 'next'} part of the poem."
             if (lo, hi) != (p["first"], p["last"]) and lo > p["first"] and hi < p["last"]:
                 part = f" This section shows lines {lo}-{hi} of that page."
-            eng_range = f" English blocks here: {eb[0][0]}-{eb[-1][1]}." if eb else ""
+            eng_range = (" " + english_note(eb, PAGES, ENGLISH_CUTS, f)) if eb else ""
             note = (f"{MS}, fol. {f}: lines {p['first']}-{ms_last}, begins ‹{first_w}›, ends ‹{last_w}›. "
-                    "Checked on the image: first and last rows read and matched to the Greek"
+                    "Checked on the image: first and last rows read and matched to the Greek (re-read on the image 2026-11-12: first row ‹" + p["read_first"] + "›, last row ‹" + p["read_last"] + "›)"
                     + (f"; the page before ends at line {p['first'] - 1}" if p['first'] > 1 else "; this is the first page of the poem")
                     + (f" and the page after begins at line {ms_last + 1}." if ms_last < 1020 else " and this is its last page.") + part
                     + (" " + p["note"] if p["note"] else "") + eng_range)
@@ -298,7 +370,7 @@ def build(force=False):
             "Each section below is one page; its note gives the page's first and last verse as read on the photograph.</p>"
             "<p>The Greek is Evelyn-White's Loeb text (1914) via Perseus, not a transcription of this manuscript, whose wording differs here and there. "
             "Verses the editor brackets as later additions are shown in square brackets. "
-            "The English is Evelyn-White's prose translation (1914); it runs in blocks of about five lines, so at a page break a block can start a line or two before or after the page.</p>"
+            "The English is Evelyn-White's prose translation (1914); it is cut at the end of his sentences, so where a sentence runs across a page break it is given whole to one page; each section's note gives the exact lines its English covers.</p>"
         )
         pub = {
             "id": tid, "slug": tid,

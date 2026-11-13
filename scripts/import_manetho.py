@@ -1256,7 +1256,12 @@ def build_gods(force):
          "original_text": head + "<br>" + narr, "text": w[0] + "<br>" + w[1], "scan_pages": [p11, p12],
          "scan_note": "The heading 'περὶ τῆς τῶν αἰγυπτίων ἀρχαιολογίας' is the last line of p. 11, below the table of the ten Chaldean "
                       "kings before the Flood. The text fills the first eight lines of p. 12: 'Μανεθῶ ὁ Σεβεννύτης ἀρχιερεὺς τῶν ἐν "
-                      "Αἰγύπτῳ μιαρῶν ἱερῶν' to 'τῇ ἀληθείᾳ συμβιβάζοντες'. Checked on the image (Gallica " + A_VIEWER + ", images 19 and 20)."},
+                      "Αἰγύπτῳ μιαρῶν ἱερῶν' to 'τῇ ἀληθείᾳ συμβιβάζοντες'. Checked on the image (Gallica " + A_VIEWER + ", images 19 and 20). "
+                      "Seven or six gods: the Greek has 'θεῶν τῶν μηδέποτε γεγονότων ζʹ' (seven gods), as this manuscript writes on p. 12, "
+                      "line 3 ('δυναστειῶν ϛ ... γεγονότων ζ', checked on the image) and as Müller prints it; Müller's apparatus, omitted "
+                      "here, adds 'scr. ϛʹ' (read six). Waddell, whose English is shown, prints ϛʹ in his own Greek text with the footnote "
+                      "'MS. A ζʹ' (Paris gr. 1711 is Syncellus MS A) and so translates 'six gods', matching the six dynasties named just "
+                      "before and the six gods listed in Fr. 3.2. Neither text is changed here."},
         {"section": "Fr. 3.2", "original_ref": "Waddell fr. 3 (Müller fr. 3); Paris gr. 1711 p. 12",
          "original_text": gods, "text": "<br>".join(w[2:9]), "scan_pages": [p12],
          "scan_note": "P. 12, the table below the text: each row begins 'Αἰγυπτίων' in the left column, then the numeral and "

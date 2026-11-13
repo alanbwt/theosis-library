@@ -14,6 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import import_gilgamesh as engine  # noqa: E402
 
 CHECKS = {
+    'K.17235': "Photograph checked: one face of a small fragment about 2 cm across, no ink number visible; about seven or eight line-ends along the preserved right edge. Consistent with eBL's seven line-ends of column iii.",
     'K.8463': "Photograph checked: obverse, reverse and edges of three joined pieces, inks K.8463, K.103.. and K.20280 (eBL: K.8463+K.10301+K.20280). Two obverse columns of about 17 and 10 lines, and about 6 lines at the lower right of the mostly blank reverse; consistent with eBL's columns i (17), ii (10) and iii (8).",
     'BM.35405': "Photograph checked: obverse, reverse and edges of two joined pieces, ink 35405 with Sp II 988 and Sp II 1001 (eBL: BM.35405+Sp-II.1001). About 40 lines with vertical rulings on the obverse and a blank reverse, consistent with eBL's column i (40).",
     'K.9290': "Photograph checked: obverse, reverse and edges of two joined pieces, inks K.9290 and K.9297. Two columns on each face, about 33 and 19 lines on the obverse and 35 and 16 on the reverse; consistent with eBL's 103 lines in columns i to iv.",

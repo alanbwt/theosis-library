@@ -20,7 +20,9 @@ Chain of evidence
               tlg0012.tlg002.perseus-grc2 (CC BY-SA 4.0).
   4. ENGLISH  A. T. Murray (Loeb, 1919; public domain in the US), Perseus
               tlg0012.tlg002.perseus-eng3, which marks every fifth line; the prose is cut at
-              those marks and each five-line block is placed with the page holding its middle line.
+              those marks and each five-line block is placed with the page holding its middle line,
+              except at the page breaks in ENGLISH_CUTS, where it is cut at Murray's sentence ends
+              (QC fix 2026-11-12) and the scan_note gives the exact English line range.
 
 Usage:  python3 scripts/import_odyssey.py [--force]   (--force re-downloads scans)
 """
@@ -106,6 +108,59 @@ def get_scan(folio, svc, force=False):
 
 def esc(s):
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+# English cut at Murray's sentence ends instead of his five-line marks (QC 2026-11-12). Key: (book,
+# folio of the page whose English begins at the cut). Value: (opening words of the sentence that begins
+# the page's English, which occurrence in the book (from 0), the line that sentence begins in, the last
+# line rendered by the previous page's English, note for both pages' scan_notes).
+ENGLISH_CUTS = {
+    (3, "19v"): ("Now when they had tasted the inner parts", 0, 9, 8,
+                 "At the break between fol. 19r (Greek to 3.8) and fol. 19v (Greek from 3.9) the English is cut where "
+                 "Murray's sentence for 3.9 begins (Now when they had tasted ...), so both pages' English ends and begins "
+                 "with the same line as the Greek."),
+    (13, "129v"): ("But now I know not where to bestow", 0, 207, 206,
+                   "At the break between fol. 129r (Greek to 13.206) and fol. 129v (Greek from 13.207) the English is cut "
+                   "where Murray's sentence for 13.207 begins (But now I know not where ...), the same line as the Greek."),
+    (13, "130r"): ("And tell me this also truly", 0, 232, 231,
+                   "At the break between fol. 129v (Greek to 13.231) and fol. 130r (Greek from 13.232) the English is cut "
+                   "where Murray's sentence for 13.232 begins (And tell me this also truly ...), the same line as the Greek."),
+    (13, "134r"): ("So when the two had thus taken counsel", 0, 439, 438,
+                   "Murray's sentence for 13.436-438 (And about him she cast ... slung by a twisted cord.) runs across the "
+                   "break between fol. 133v (Greek to 13.437) and fol. 134r (Greek from 13.438); it is given whole with "
+                   "fol. 133v, so the English of fol. 133v ends with 13.438 and that of fol. 134r begins with 13.439."),
+    (21, "214r"): ("“Telemachus, the stranger", 0, 424, 423,
+                   "At the break between fol. 213v (Greek to 21.423) and fol. 214r (Greek from 21.424) the English is cut "
+                   "where Odysseus' speech begins (“Telemachus, the stranger ...), the same line as the Greek."),
+    (22, "221r"): ("And as he pondered this seemed to him the better course", 0, 338, 337,
+                   "Murray's sentence for 22.332-337 (He stood with the clear-toned lyre ... clasp the knees of Odysseus in "
+                   "prayer.) runs across the break between fol. 220v (Greek to 22.336) and fol. 221r (Greek from 22.337); it "
+                   "is given whole with fol. 220v, so the English of fol. 220v ends with 22.337 and that of fol. 221r begins "
+                   "with 22.338."),
+    (22, "221v"): ("So he spoke, and Medon, wise of heart", 0, 361, 360,
+                   "Murray's sentence for 22.361-363 (So he spoke, and Medon ... black fate.) runs across the break between "
+                   "fol. 221r (Greek to 22.361) and fol. 221v (Greek from 22.362); it is given whole with fol. 221v, so the "
+                   "English of fol. 221r ends with 22.360 and that of fol. 221v begins with 22.361."),
+    (24, "232r"): ("He held in his hands his wand", 0, 2, 2,
+                   "Line 24.2 holds the end of one sentence and the start of the next (ἀνδρῶν μνηστήρων· | ἔχε δὲ ῥάβδον); "
+                   "Murray's sentence for 24.2-5 (He held in his hands his wand ... they followed gibbering.) runs across "
+                   "the break between fol. 231v (Greek 24.1-2) and fol. 232r (Greek from 24.3) and is given whole with "
+                   "fol. 232r, so the English of fol. 231v is 24.1 and the first words of 24.2 (... the spirits of the "
+                   "wooers.) and that of fol. 232r begins in 24.2."),
+}
+
+
+def english_note(book, f, eb, cut_info):
+    """scan_note sentence on the English of a page: its exact line range and how it was cut."""
+    a, b = eb[0][0], eb[-1][1]
+    notes = [c[1] for c in (cut_info.get(f), cut_info.get(("end", f))) if c]
+    if not notes:
+        return f" English blocks here: {', '.join(f'{x}-{y}' for x, y, t in eb)}."
+    out = f" English here: {book}.{a}-{b}. " + " ".join(dict.fromkeys(notes))
+    if len(notes) == 1:
+        out += (" At the page's other break the English follows Murray's five-line marks (a block that crosses "
+                "the break goes with the page holding its middle line).")
+    return out
 
 
 def greek_book(book):
@@ -194,12 +249,40 @@ def build(force=False):
         for p in bpages:
             get_scan(p["folio"], svc, force)
         # English blocks -> page by middle line
-        eng_at = {}
+        flat = []
         for i, (a, t) in enumerate(E):
             b = (E[i + 1][0] - 1) if i + 1 < len(E) else (cut["english_last"] if cut else max(G))
             b = max(a, b)
             mid = (a + b) // 2
             f = where.get(mid) or where.get(a)
+            flat.append([f, a, b, t])
+        # sentence cuts (ENGLISH_CUTS): the page's English begins with the sentence opening with the phrase
+        order = [p["folio"] for p in main]
+        cut_info = {}
+        for (bk, fol), (phrase, occ, start, prev_end, cnote) in ENGLISH_CUTS.items():
+            if bk != book:
+                continue
+            hits = [i for i, x in enumerate(flat) if phrase in x[3]]
+            i = hits[occ]
+            f0, a0, b0, t0 = flat[i]
+            k = t0.index(phrase)
+            if t0[:k].strip():
+                flat[i:i + 1] = [[f0, a0, prev_end, t0[:k].strip()], [fol, start, b0, t0[k:]]]
+                j = i + 1
+            else:
+                flat[i] = [fol, start, b0, t0]
+                j = i
+            fi = order.index(fol)
+            prev = order[fi - 1]
+            for x in range(len(flat)):
+                if x < j and flat[x][0] == fol:
+                    flat[x][0] = prev
+                elif x >= j and flat[x][0] == prev:
+                    flat[x][0] = fol
+            cut_info[fol] = (start, cnote)
+            cut_info.setdefault(("end", prev), (prev_end, cnote))
+        eng_at = {}
+        for f, a, b, t in flat:
             eng_at.setdefault(f, []).append((a, b, t))
         sections = []
         for idx, p in enumerate(main):
@@ -236,7 +319,7 @@ def build(force=False):
                     + (f" (the last line written on the page is {book}.{p['ends']})" if "ends" in p else "") + ". "
                     f"Checked on the image: first and last lines read and matched to the Greek.{cont}{onpage}"
                     + (f" {p['note']}" if p.get("note") else "") + extra
-                    + (f" English blocks here: {', '.join(f'{a}-{b}' for a, b, t in eb)}." if eb else "")
+                    + (english_note(book, f, eb, cut_info) if eb else "")
                     + (f" {cut['english_note']}" if cut and eb and eb[-1][1] > cut["last"] else ""))
             sections.append({
                 "section": f"fol. {f}",
@@ -256,7 +339,8 @@ def build(force=False):
             f"This book is on fol. {fols[0]}-{fols[-1]}; each section below is one page, with its first and last line as read on the photograph. "
             "Many pages carry interlinear glosses and a few marginal notes in later hands.</p>"
             "<p>The Greek is A. T. Murray's Loeb text (1919) via Perseus, not a transcription of this manuscript, whose wording differs in places. "
-            "The English is Murray's prose translation (1919), divided every five lines; at a page break a five-line block goes with the page holding most of it.</p>"
+            "The English is Murray's prose translation (1919), divided every five lines; at a page break a five-line block goes with the page holding most of it, "
+            "except at the page breaks where a section's note says the English is cut at the end of Murray's sentence. Each section's note gives its English line range.</p>"
             "<p>Where the scribe left out a line, wrote one in the margin, changed the order or added a line not in Murray's text, the section's note on the photograph says so; the Greek and English shown are Murray's full text for the page's range.</p>"
         )
         pub = {

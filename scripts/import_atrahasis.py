@@ -14,6 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import import_gilgamesh as engine  # noqa: E402
 
 CHECKS = {
+    'UM.55-21-29': "Photograph checked (eBL photograph of the Penn Museum): obverse, reverse and edges of a fragment about 5 x 6 cm, ink 55-21-29 and a Nippur field number on the right edge; about 10 to 11 lines on each face, consistent with the Penn catalogue's 11 x 11 lines and with eBL's five reverse lines.",
     'BM.17596.A': "Photograph checked: inscribed face and blank back (inks 17596A and 94-1-15,310A on the back), fragment about 5 cm high. A double vertical ruling with line-end traces to its left (column i) and about 15 lines to its right; broadly consistent with eBL's columns i (10) and ii (21) once broken lines are counted.",
     'K.10082': "Photograph checked: one face only, fragment about 5 cm wide with about 8 lines and a column ruling near the right edge with a few signs beyond it; no ink number visible. Consistent with eBL's column i (8) and the start of column ii (4).",
     'K.6235': "Photograph checked: obverse, reverse and edges of a fragment about 3 x 5 cm, about 10 lines on each face, no ink number visible. Alone it holds about 20 of eBL's 37 lines; with the linked piece K.7109+K.9979 (about 16 lines) the total fits eBL's column ii and reverse column i.",
@@ -60,6 +61,15 @@ WORK = engine.simple_work(
     authors=[{"id": 'anonymous-babylonian-poet', "name": 'Anonymous (Babylonian poets)', "dates": '2nd-1st millennium BCE', "century": -12, "era": "Ancient Near East", "tradition": "mesopotamian", "language": "Akkadian", "bio": 'Unnamed Babylonian and Assyrian poets and scribes who composed and copied the Akkadian myths and epics preserved on cuneiform tablets.'}],
     checks=CHECKS, excluded=EXCLUDED, split=SPLIT,
 )
+
+# eBL translates OB I 214 and 215-216 in English word order: the English under 214 is marked "(215-216)" and
+# the English under 215-216 is marked "(214)".  Both are shown together, with eBL's own (correct) markers.
+WORK["translation_spans"] = {"OB:I": {"214": {
+    "through": "215-216",
+    "replace": [],
+    "note": ("eBL translates lines 214 and 215-216 together in English word order; its markers (215-216) and (214) "
+             "show which words belong to which line, and the English is shown once for these lines."),
+}}}
 
 if __name__ == "__main__":
     engine.build_work(WORK)

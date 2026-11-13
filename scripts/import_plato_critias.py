@@ -84,6 +84,14 @@ ATLANTIS_NOTE = (
 WORK = {
     "key": "plato-critias", "name": "Critias", "abbr": "Crit.", "tlg": "tlg032",
     "columns": COLUMNS, "topics": TOPICS, "atlantis_pages": set(TOPICS), "atlantis_note": ATLANTIS_NOTE,
+    # Bury turns the sentence round (Solon and the priests first, the names last), so Perseus' 110b
+    # milestone falls after most of his sentence although most of the Greek sentence is in 110b.
+    "english_moves": [
+        ("110a", "110b", "And for evidence of what I say",
+         "English: the Greek sentence λέγω δὲ αὐτὰ τεκμαιρόμενος ... κατὰ τὰ αὐτά begins at the end of 110a and runs on through "
+         "most of 110b; Bury's rendering of it (And for evidence of what I say ... the names of the women.) is given whole with 110b, "
+         "so the English of 110a ends at ‹have been preserved.› and that of 110b begins at ‹And for evidence›."),
+    ],
     "collection": {
         "key": "plato-critias",
         "prefix": "verified-plato-critias-",

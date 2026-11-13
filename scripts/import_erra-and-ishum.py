@@ -14,6 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import import_gilgamesh as engine  # noqa: E402
 
 CHECKS = {
+    'VAT.10174': "Photograph checked (eBL photograph of the Vorderasiatisches Museum, Berlin): obverse, reverse and edges of a complete landscape tablet from Assur, ink VAT 10174 on the right edge; both faces are filled with about 17 to 20 long lines. Consistent with eBL's reverse lines 7a-15 (Erra I 121-131) on this school tablet, which also carries an excerpt of the Great Hymn to Shamash on the obverse.",
     'BM.35931': "Photograph checked: obverse, reverse and edges of a fragment about 3 cm wide, ink 35931 on two edges. About 10 lines of small script on the obverse and a blank reverse, consistent with eBL's column i (8).",
     'BM.36197': "Photograph checked: obverse, reverse and edges of a narrow fragment, ink 36197 on the edge. About 15 lines on one face and only a few signs on the other, consistent with eBL's column i (15).",
     'K.8571': "Photograph checked: obverse, reverse and edges of two joined pieces, ink K.8571 on the left edge. Two obverse columns with a double ruling between them, about 27 and 25 lines, and a small patch of traces on the worn reverse; consistent with eBL's columns i (27), ii (25) and iv (2).",

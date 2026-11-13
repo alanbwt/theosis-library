@@ -155,13 +155,36 @@ ENTRIES = [
             "Lines 724-739 stand on fol. 55r (line 724 is its sixth line) and 740-751 on fol. 55v. "
             "The Latin is Greenough's edition (Perseus), not a transcription of the manuscript. The English is Theodore C. Williams' verse translation (1910).</p>"
         ),
+        # English cut at the end of Williams' sentences (QC fix 2026-11-12). His sentence "Thence man and beast ...
+        # the radiant world." renders 728-734 and runs across the 732/733 break; it is given whole with 724-732.
+        # His line 966 holds the end of 742 and the start of 743 ("Or burned away in fire. Each man receives"):
+        # it is divided at the full stop (ENG_LINE_SPLITS).
         "sections": [
-            (724, 732, 942, 952, "one spirit and mind move the universe; the fiery seed of souls"),
-            (733, 742, 953, 965, "the body's darkness; purification after death"),
+            (724, 732, 942, 956, "one spirit and mind move the universe; the fiery seed of souls"),
+            (733, 742, 957, 966, "the body's darkness; purification after death"),
             (743, 751, 966, 977, "Elysium; after a thousand years the souls drink of Lethe and return"),
         ],
+        "english_notes": {
+            "724-732": ("English: Williams' lines 942-956, which render Latin 724-734. His sentence for 728-734 (Thence man and beast ... "
+                        "on the radiant world.) runs across the break after 732 and is given whole here, so the English of 733-734 "
+                        "(whence also spring / Terrors and passions ... the radiant world.) stands in this section and the next "
+                        "section's English begins with 735."),
+            "733-742": ("English: Williams' lines 957-966 (to the full stop in 966), which render Latin 735-742; the English of 733-734 "
+                        "ends the sentence given with the previous section (see there). His line 966 ends this section at "
+                        "Or burned away in fire. (aut exuritur igni, 742)."),
+            "743-751": ("English: Williams' lines 966 (from Each man receives) to 977, which render Latin 743-751, the same lines as the "
+                        "Latin."),
+        },
+        "english_from": {"724-732": 724, "733-742": 735, "743-751": 743},
     },
 ]
+
+
+# A translator's verse line that holds the end of one Latin sentence and the start of the next is divided
+# at the full stop: the text before goes with the section that ends with that line, the rest with the next.
+ENG_LINE_SPLITS = {
+    (("phi003", "6"), 966): "Or burned away in fire.",
+}
 
 
 # The Perseus file of Rhoades lowercases three line-initial words that are capitalised in print
@@ -236,9 +259,21 @@ def main():
                 eng[n] = new + eng[n][len(old):]
         mpages = [p for p in PAGES if p[0] == E["ms"]]
         secs, used = [], []
+        unit = (E["work"], E["unit"])
         for (a, b, c, d, label), nxt in zip(E["sections"], E["sections"][1:] + [None]):
             if nxt:
-                assert nxt[2] == d + 1, (E["slug"], d, nxt[2])
+                assert nxt[2] == d + 1 or (nxt[2] == d and (unit, d) in ENG_LINE_SPLITS), (E["slug"], d, nxt[2])
+
+            def eline(n, first, last):
+                t = eng[n]
+                cutw = ENG_LINE_SPLITS.get((unit, n))
+                if cutw:
+                    assert t.startswith(cutw), (n, t)
+                    if n == last and nxt and nxt[2] == n:              # this section ends inside line n
+                        return t[:len(cutw)]
+                    if n == first and any(x[3] == n for x in E["sections"] if x[0] < a):   # starts inside it
+                        return t[len(cutw):].strip()
+                return t
             pages = [p for p in mpages if p[3] <= b and p[4] >= a]
             assert pages, (E["slug"], a, b)
             for p in pages:
@@ -255,11 +290,15 @@ def main():
                 note = f"Lines {a}-{b} start on {ms['shelf']} fol. {pages[0][1]} and continue on fol. {pages[-1][1]} (page break inside this section). "
             note += "Checked on the images: " + " ".join(pn(p) for p in pages)
             note += " The Latin shown is Greenough's edited text; the manuscript's spelling differs from it in places."
+            sec_id = f"{a}-{b}"
+            if E.get("english_notes", {}).get(sec_id):
+                note += " " + E["english_notes"][sec_id]
+            e_from = E.get("english_from", {}).get(sec_id, a)
             secs.append({
                 "section": f"{a}-{b}",
                 "original_ref": f"Virgil, {pre} ({label}); {ms['shelf']} fol. " + ", ".join(p[1] for p in pages),
                 "original_text": "<p>" + "<br>\n".join(f"<sup>{n}</sup>{esc(lat[n])}" for n in range(a, b + 1)) + "</p>",
-                "text": f"<p><sup>{a}</sup>" + "<br>\n".join(esc(eng[n]) for n in range(c, d + 1)) + "</p>",
+                "text": f"<p><sup>{e_from}</sup>" + "<br>\n".join(esc(eline(n, c, d)) for n in range(c, d + 1)) + "</p>",
                 "scan_pages": [f"{KEY}/{files[(E['ms'], p[1])].name}" for p in pages],
                 "scan_note": note,
             })
@@ -271,8 +310,11 @@ def main():
             "source": src, "description": E["description"], "introduction": E["intro"],
             "translator_notes": [
                 "Latin: J. B. Greenough, The Bucolics, Aeneid, and Georgics of Virgil (Boston: Ginn), Perseus digital text.",
-                f"English: {E['translation_source']}. The translation is in verse with more lines than the Latin; each English section begins at the translator's line "
-                "that starts the rendering of the section's first Latin line, so a few words can fall on the neighbouring side of a break.",
+                f"English: {E['translation_source']}. The translation is in verse with more lines than the Latin; "
+                + ("each English section is cut at the end of one of Williams' sentences; where his sentence runs across a section break it is given whole to one side, "
+                   "and each section's note says which Latin lines its English renders."
+                   if E.get("english_notes") else
+                   "each English section begins at the translator's line that starts the rendering of the section's first Latin line, so a few words can fall on the neighbouring side of a break."),
             ] + (["In Rhoades' Eclogue 4 the Perseus file lowercases three line-initial words; 'Muses' (line 1), 'Apollo' (13) and the vocative 'O' (76) are printed with capitals here."]
                  if E["work"] == "phi001" else []),
             "translation": secs,

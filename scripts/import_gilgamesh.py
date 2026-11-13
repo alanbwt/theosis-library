@@ -22,10 +22,15 @@ Chain of evidence for every published section
              from other manuscripts; every section says so.
 3. SCAN      The photograph of that same manuscript served by eBL's fragment
              photo API (https://www.ebl.lmu.de/api/fragments/<no>/photo).
-             Only British Museum photographs are used: eBL states their terms
-             as "(c) The Trustees of the British Museum, CC BY-NC-SA 4.0".
-             Photographs of other holders (Iraq Museum, Yale, Penn, Istanbul,
-             Ankara) are shown on eBL by permission only and are not used.
+             British Museum photographs: "(c) The Trustees of the British
+             Museum, CC BY-NC-SA 4.0" as stated by eBL.  Photographs of other
+             holders that eBL serves (Iraq Museum, Penn Museum, Berlin, Yale,
+             Hatay) carry restrictive terms (eBL: "cannot be reproduced without
+             the explicit consent ..."); under COLLECTION_SPEC rule 9 (owner's
+             instruction 2026-11-12) they are used with credit, but only for
+             lines that no British Museum photograph carries.  Open photographs
+             from a holder's own site (Yale Peabody CC0 IIIF) are configured per
+             work in external_photos.
 4. MAPPING   Text-to-image mapping is eBL's own attribution of each line to a
              manuscript (museum number + column + line).  Every manuscript
              used was additionally checked by eye on its photograph
@@ -35,18 +40,33 @@ Chain of evidence for every published section
              Manuscripts that failed (wrong photograph, photograph showing only
              one piece of a later join) are listed in EXCLUDED with the reason.
              Where eBL joins pieces that the British Museum photographed
-             separately, every photograph of the join is linked and the section
-             says so (eBL does not say which piece carries which line).
+             separately, piece_line_map() places lines on pieces from eBL's own
+             documentation (the piece's own transliteration and its parallel-line
+             references, notes naming the piece); a section links only the
+             photographs of the pieces that carry its lines.  Where eBL documents
+             nothing, every photograph of the join is linked and the section says so.
 
 Selecting the witness for each line
 -----------------------------------
 For each line of a chapter the candidates are the checked, photographed
-manuscripts that carry it.  A dynamic programme picks, line by line, the
-candidate with the most preserved signs (signs outside [ ], not 'x'), with a
-penalty for switching manuscript or column, so that sections are long runs of
+copies of the work that carry it.  eBL's manuscript types decide what counts
+(QC 2026-11-12): commentaries, quotations in other texts (letters, rituals,
+god lists, treatises) and parallel texts are never witnesses, and neither is
+any line written with commentary/quotation markup (!bs !cm !qt !zz); a
+catch-line on a library copy of the previous tablet is the line itself and is
+used.  School, excerpt, amulet and 'Varia' tablets are a fallback: used for a
+line only when no photographed library copy preserves it as well, and the
+section says so.  A dynamic programme then picks, line by line, the candidate
+with the most preserved signs (signs outside [ ], not 'x'), with a penalty for
+switching manuscript, column or photograph, so that sections are long runs of
 consecutive lines on one column of one tablet.  Runs longer than MAX_RUN lines
-are split.  Lines with no checked photographed witness are not published and
-are listed as gaps in the entry introduction.
+are split.  Lines with no usable witness are not published and are listed as
+gaps in the entry introduction with the reason for each manuscript.
+
+Rendering: eBL's ATF control codes are written out (render_atf); each entry's
+notes carry a key to the sign conventions used on that page.  Each section's
+scan_note lists the lines that are entirely or partly broken on its tablet,
+because the English always translates eBL's composite line.
 
 Face of a column: eBL gives column numbers (i-vi) or o/r.  The face is named
 only where it is certain: explicit o/r labels, or a six-column manuscript
@@ -99,6 +119,64 @@ MAX_GAP = 12          # a run may continue across this many lines that no checke
 SWITCH_PENALTY = 8.0  # in preserved signs
 SPLIT_FACTOR = 0.5    # score multiplier for joins photographed in several pieces
 MAX_SIDE = 2600       # px, long side of published scans
+
+# eBL manuscript types (chapter JSON, manuscripts[].type).  Only copies of the poem itself are
+# witnesses.  Commentaries quote words of a line and add explanations; quotations embed a line in
+# another text (a letter, a ritual, a god list); neither carries the poem line as such, so they are
+# never used (QC 2026-11-12).  Excerpt-type tablets (school exercises, excerpt tablets, amulets,
+# 'Varia') copy a passage of the poem; they are a fallback only: used for a line only when no
+# photographed library copy preserves it as well, only when eBL's transliteration of the line has no
+# commentary or quotation markup (i.e. the tablet carries the line verbatim), and the section says so.
+POEM_TYPES = {"Library", "None", ""}
+EXCERPT_TYPES = {
+    "School": "a school tablet (a scribal exercise that copies an excerpt of the text)",
+    "Excerpt": "an excerpt tablet (a tablet that copies an excerpt of the text)",
+    "Amulet": "an amulet tablet inscribed with an excerpt of the text",
+    "Varia": "a tablet that eBL classes as 'Varia' (not a library copy of the series)",
+}
+NON_POEM_TYPES = {
+    "Commentary": "commentary",
+    "Quotation": "quotation in another text",
+    "Parallel": "parallel text",
+    "Lexical": "lexical list",
+}
+COMMENTARY_MARK_RE = re.compile(r"(?<!\S)!(?:bs|cm|qt|zz)(?!\S)")
+
+# Photograph holders other than the British Museum whose eBL photographs may be used under the
+# library's photo rule (COLLECTION_SPEC rule 9, owner's instruction 2026-11-12: museum photographs of
+# the object may be used with credit even when the terms are restrictive or unstated).  Terms as
+# stated on eBL's About page (https://www.ebl.lmu.de/about/library, section III. Photographs).
+EBL_PHOTO_TERMS = ("eBL: 'The images cannot be reproduced without the explicit consent of the funding projects "
+                   "and institutions, as well as the institutions in which the cuneiform tablets are kept.'")
+HOLDERS = {
+    "THE_BRITISH_MUSEUM": ("British Museum", BM_LICENCE),
+    "THE_IRAQ_MUSEUM": ("Iraq Museum", "Photograph by A. A. Fadhil and N. Jabbar (Iraq Museum - eBL Project), "
+                        "displayed by eBL by permission of the State Board of Antiquities and Heritage and The Iraq "
+                        "Museum; " + EBL_PHOTO_TERMS + " Used with credit under the library's photo rule (non-commercial)."),
+    "PENN_MUSEUM": ("Penn Museum", "Photograph of the Penn Museum (University of Pennsylvania Museum of Archaeology and "
+                    "Anthropology) as served by eBL; terms not stated beyond " + EBL_PHOTO_TERMS +
+                    " Used with credit under the library's photo rule (non-commercial)."),
+    "YALE_PEABODY_COLLECTION": ("Yale Peabody Museum", "Photograph by K. Wagensonner (Yale Babylonian Collection), "
+                                "used by eBL with the permission of the Yale Peabody Museum; " + EBL_PHOTO_TERMS +
+                                " Used with credit under the library's photo rule (non-commercial)."),
+    "HATAY_ARCHAEOLOGY_MUSEUM": ("Hatay Archaeology Museum", "Photograph of the Hatay Archaeology Museum, Antakya, "
+                                 "as served by eBL; " + EBL_PHOTO_TERMS +
+                                 " Used with credit under the library's photo rule (non-commercial)."),
+    "VORDERASIATISCHES_MUSEUM": ("Vorderasiatisches Museum, Berlin", "Photograph of the Vorderasiatisches Museum, "
+                                 "Staatliche Museen zu Berlin, as served by eBL; " + EBL_PHOTO_TERMS +
+                                 " Used with credit under the library's photo rule (non-commercial)."),
+}
+HOLDER_NAMES = {
+    "THE_BRITISH_MUSEUM": "British Museum", "THE_IRAQ_MUSEUM": "Iraq Museum", "PENN_MUSEUM": "Penn Museum",
+    "YALE_PEABODY_COLLECTION": "Yale Peabody Museum", "VORDERASIATISCHES_MUSEUM": "Vorderasiatisches Museum, Berlin",
+    "MUSEUM_OF_ANATOLIAN_CIVILIZATIONS": "Museum of Anatolian Civilizations, Ankara",
+    "ISTANBUL_ARKEOLOJI_MUSEUM": "Istanbul Archaeological Museum", "ASHMOLEAN_MUSEUM": "Ashmolean Museum",
+    "LOUVRE": "Louvre", "SANLIURFA_MUSEUM": "Şanlıurfa Museum", "PIERPONT_MORGAN": "Morgan Library",
+    "ANCIENT_CULTURES_CHICAGO": "Institute for the Study of Ancient Cultures, Chicago",
+    "NATIONAL_MUSEUM_OF_WORLD_WRITING_SYSTEMS": "National Museum of World Writing Systems, Korea",
+    "HATAY_ARCHAEOLOGY_MUSEUM": "Hatay Archaeology Museum", "MUSEUM_OF_MONTSERRAT": "Museum of Montserrat",
+    "DE_LIAGRE_BOEHL_COLLECTION": "de Liagre Böhl Collection, Leiden", "KUNSTHISTORISCHES_MUSEUM": "Kunsthistorisches Museum, Vienna",
+}
 
 
 # ---------------------------------------------------------------------------
@@ -240,8 +318,127 @@ def preserved_signs(atf):
             out.append(" ")
         else:
             out.append(ch if depth == 0 else " ")
-    toks = [t.strip("#?!*<>()") for t in re.split(r"[\s\-.:{}+]+", "".join(out))]
-    return sum(1 for t in toks if t and t not in ("x", "X", "...", "…") and not t.startswith(("%", "!", "$")))
+    toks = [t.strip("#?!*<>()°\\") for t in re.split(r"[\s\-.:{}+]+", "".join(out))]
+    return sum(1 for t in toks if t and t not in ("x", "X", "...", "…", "&", "|", "/", "ø") and not t.startswith(("%", "!", "$", "&")))
+
+
+# ---------------------------------------------------------------------------
+# Plain rendering of eBL ATF (QC 2026-11-12: no raw control codes on the page)
+# ---------------------------------------------------------------------------
+# eBL-ATF reference: https://github.com/ElectronicBabylonianLiterature/ebl-api/blob/master/docs/ebl-atf.md
+#   !bs !cm !qt !zz  commentary protocols (base text / commentary / quotation / uncertain): dropped
+#                    (they only occur in commentaries and quotations, which are no longer used)
+#   ($___$)          tabulation: shown as "(blank space)"
+#   |  (alone)       line break on the manuscript: shown as "(line break)"
+#   &  &n            column separator (&n: the next column spans n columns): shown as " | "
+#   {( ... )}        document-oriented gloss: shown as "(gloss: ...)"
+#   °a\b°            erasure (a erased, b written over it): described in words
+#   %n %sb ...       language/register shifts: dropped
+#   ø                word omitted: "(word omitted)"
+ATF_KEY = [  # (id, text) in display order; the first five are always listed
+    ("[]", "[ ] broken away"), ("x", "x illegible sign"), ("#", "# damaged sign"), ("?", "? uncertain reading"),
+    ("!", "! sign corrected by the editor"), ("*", "* collated sign"), ("...", "... broken signs of unknown number"),
+    ("()", "( ) signs perhaps broken away"), ("{}", "{ } determinative"), ("{+}", "{+ } phonetic gloss"),
+    ("<>", "< > sign omitted by the scribe, supplied by the editor"), ("<()>", "<( )> sign left out on purpose by the scribe"),
+    ("<<>>", "<< >> sign written in error by the scribe"), ("/", "/ alternative readings"),
+    (":", ": divider sign written on the tablet"), ("@", "@v and similar: variant or modified form of a sign"),
+    ("|", "| division between the parts of a line written in separate columns on the tablet"),
+    ("lb", "(line break) the line runs on to the next line of the tablet"),
+    ("tab", "(blank space) a space left by the scribe"),
+    ("gloss", "(gloss: ...) a note written by the scribe in small signs or in the margin"),
+]
+ATF_KEY_BASE = {"[]", "x", "#", "?", "!"}
+_ATF_SPECIAL = re.compile(
+    r"(?P<prot>(?<!\S)!(?:bs|cm|qt|zz)(?!\S))"
+    r"|(?P<tab>\(\$___\$\))"
+    r"|(?P<lb>(?<!\S)\|(?!\S))"
+    r"|(?P<col>(?<!\S)&(?P<span>\d*)(?!\S))"
+    r"|(?P<gloss>\{\((?P<gbody>.*?)\)\})"
+    r"|(?P<eras>°(?P<erased>[^°\\]*)\\(?P<over>[^°]*)°)"
+    r"|(?P<shift>(?:(?<=\s)|(?<=\[)|^)%[a-z][a-z0-9]*(?=\s|$))"
+    r"|(?P<omit>(?<!\S)ø(?!\S))"
+)
+
+
+def _atf_symbols(plain):
+    s = set()
+    if "[" in plain or "]" in plain:
+        s.add("[]")
+    if re.search(r"(?<![\w])[xX](?![\w])", plain):
+        s.add("x")
+    for ch, k in (("#", "#"), ("?", "?"), ("*", "*"), ("/", "/"), ("@", "@")):
+        if ch in plain:
+            s.add(k)
+    if re.search(r"[\w\])]!", plain):
+        s.add("!")
+    if "..." in plain or "…" in plain:
+        s.add("...")
+    if "{+" in plain:
+        s.add("{+}")
+    if re.search(r"\{(?![+(])", plain):
+        s.add("{}")
+    if "<<" in plain:
+        s.add("<<>>")
+    if "<(" in plain:
+        s.add("<()>")
+    if re.search(r"(?<![<])<(?![<(])", plain):
+        s.add("<>")
+    if re.search(r"(?<![{<])\((?!\$)", plain):
+        s.add("()")
+    if re.search(r"(?<!\S):(?:[.'\"?:])?(?!\S)", plain):
+        s.add(":")
+    return s
+
+
+def render_atf(atf):
+    """eBL manuscript ATF -> (HTML for the page, set of ATF_KEY ids that the reader needs).
+    Signs are untouched; only eBL's control codes are replaced by plain wording."""
+    out, syms, pos = [], set(), 0
+    note = lambda t: f'<span class="lacuna">({t})</span>'
+    for m in _ATF_SPECIAL.finditer(atf):
+        plain = atf[pos:m.start()]
+        out.append(html.escape(plain, quote=False))
+        syms |= _atf_symbols(plain)
+        pos = m.end()
+        if m.group("prot") or m.group("shift"):
+            continue
+        if m.group("tab"):
+            out.append(note("blank space"))
+            syms.add("tab")
+        elif m.group("lb"):
+            out.append(note("line break"))
+            syms.add("lb")
+        elif m.group("col"):
+            out.append("|")
+            syms.add("|")
+        elif m.group("gloss"):
+            body = m.group("gbody").strip()
+            out.append("(gloss: " + html.escape(body, quote=False) + ")")
+            syms |= _atf_symbols(body)
+            syms.add("gloss")
+        elif m.group("eras"):
+            er, ov = m.group("erased").strip(), m.group("over").strip()
+            syms |= _atf_symbols(er + " " + ov)
+            if ov and er:
+                out.append(html.escape(ov, quote=False) + " " + note("written over erased " + html.escape(er, quote=False)))
+            elif ov:
+                out.append(html.escape(ov, quote=False) + " " + note("written over an erasure"))
+            elif er:
+                out.append(note("erased: " + html.escape(er, quote=False)))
+            else:
+                out.append(note("erasure"))
+        elif m.group("omit"):
+            out.append(note("word omitted"))
+    plain = atf[pos:]
+    out.append(html.escape(plain, quote=False))
+    syms |= _atf_symbols(plain)
+    s = re.sub(r"\s{2,}", " ", "".join(out)).strip()
+    return s, syms
+
+
+def atf_key_line(syms):
+    used = ATF_KEY_BASE | set(syms)
+    return "Signs in the Akkadian: " + "; ".join(t for k, t in ATF_KEY if k in used) + "."
 
 
 _TR_RE = re.compile(r"^#tr\.en(?:\.\(([^)]*)\))?:\s?(.*)$")
@@ -332,13 +529,285 @@ def where_text(face, col):
 # ---------------------------------------------------------------------------
 # Core: one chapter -> sections
 # ---------------------------------------------------------------------------
+def ms_type(ms):
+    return (ms.get("type") or "").strip()
+
+
+def catchline_of(ms, chapter, all_chapters):
+    """eBL types a catch-line (the first line of the next tablet of a series, written at the end of a
+    library copy of the previous tablet) as a 'Quotation'.  It is the poem's own line on a copy of the
+    poem, so it is a witness.  Recognised when eBL's notes say 'catchline', or when the same tablet is
+    a library or school copy of another chapter of this work; never for commentaries or texts that
+    cite the line ('cites', 'CCP', 'Commentary', 'Letter', 'treatise', 'God List', 'Ritual').
+    Returns the chapter name of which the tablet is a copy, or '' if not a catch-line."""
+    if ms_type(ms) != "Quotation" or not ms.get("museumNumber"):
+        return ""
+    notes = ms.get("notes") or ""
+    if re.search(r"cites|CCP|[Cc]ommentary|Letter|treatise|God List|Ritual|incipit", notes):
+        return ""
+    for ch in all_chapters:
+        if ch is chapter:
+            continue
+        for m in ch["manuscripts"]:
+            if m["museumNumber"] == ms["museumNumber"] and ms_type(m) in POEM_TYPES | set(EXCERPT_TYPES):
+                return f"{ch.get('_stage_abbr', '')} {ch['name']}".replace(" -", "")
+    if re.search(r"catch-?line", notes, re.I):
+        return "?"
+    return ""
+
+
+def chapter_tag(chapter):
+    return f"{chapter.get('_stage_abbr', '')}:{chapter['name']}"
+
+
+def idx_ranges(idxs, lines):
+    """Chapter line indices -> 'a-b, c' in eBL line numbers (runs of consecutive lines merged)."""
+    out = []
+    for i in sorted(set(idxs)):
+        if out and out[-1][1] == i - 1:
+            out[-1][1] = i
+        else:
+            out.append([i, i])
+    parts = []
+    for a, b in out:
+        na, nb = lines[a]["number"], lines[b]["number"]
+        if a == b:
+            parts.append(na)
+        else:
+            parts.append(f"{na}{' to ' if ('-' in na or '-' in nb) else '-'}{nb}")
+    return ", ".join(parts)
+
+
+_TOK_SPLIT = re.compile(r"[\s\-.:{}+]+")
+
+
+def sign_tokens(atf, preserved_only):
+    """Sign readings of an ATF line, lower-cased and without flags; preserved_only drops what is in [ ]."""
+    if preserved_only:
+        out, depth = [], 0
+        for ch in atf:
+            if ch == "[":
+                depth += 1
+                out.append(" ")
+            elif ch == "]":
+                depth = max(0, depth - 1)
+                out.append(" ")
+            else:
+                out.append(ch if depth == 0 else " ")
+        atf = "".join(out)
+    atf = atf.replace("[", "").replace("]", "")
+    toks = [t.strip("#?!*<>()°\\").lower() for t in _TOK_SPLIT.split(atf)]
+    return [t for t in toks if t and t not in ("x", "...", "…", "&", "|", "/", "ø")
+            and not t.startswith(("%", "!", "$", "&", "@"))]
+
+
+_SUBSCRIPT = str.maketrans("", "", "₀₁₂₃₄₅₆₇₈₉ₓ")
+
+
+def _same_sign(x, y):
+    """x (a piece's reading, possibly a sign cut by a break) matches y (eBL's reading for the join)."""
+    x, y = x.translate(_SUBSCRIPT), y.translate(_SUBSCRIPT)
+    return x == y or (len(x) < len(y) and (y.startswith(x) or y.endswith(x)))
+
+
+def _lcs(a, b):
+    if not a or not b:
+        return 0
+    prev = [0] * (len(b) + 1)
+    for x in a:
+        cur = [0]
+        for j, y in enumerate(b):
+            cur.append(prev[j] + 1 if _same_sign(x, y) else max(prev[j + 1], cur[j]))
+        prev = cur
+    return prev[-1]
+
+
+def _roman(n):
+    out = ""
+    for v, r in ((10, "X"), (9, "IX"), (5, "V"), (4, "IV"), (1, "I")):
+        while n >= v:
+            out += r
+            n -= v
+    return out
+
+
+def piece_line_map(work, src, chapters):
+    """Joins that the British Museum photographed in separate pieces: which lines each separately
+    photographed piece carries, from eBL's own documentation only:
+      (a) the piece's own eBL transliteration (fragment ATF): its parallel-line references
+          ('// L I.4 SB "X" 308'), or a sign-by-sign match against eBL's corpus lines for the join
+          (a piece line with at least 2 preserved signs, at least 3/4 of which occur in order in
+          exactly one corpus line);
+      (b) notes in eBL's corpus edition that name the piece (e.g. 'preserved in K.19050');
+      (c) 'piece_lines' in the work configuration (visual checks).
+    Returns {main: {piece: {"mapped": bool, "lines": {chapter_tag: {line number: only_on_piece}}}}}.
+    'mapped' means the piece's extent is documented: every line of its own transliteration with 3 or
+    more preserved signs was located (lines with 1-2 legible signs are traces that eBL does not place).
+    only_on_piece is True when every preserved sign of eBL's line for the join is accounted for by the
+    piece's own transliteration (the line is then not on the main piece)."""
+    out = {}
+    cfg = work.get("piece_lines") or {}
+    g, c, i = work["ebl_text"]
+    text_ref = f"{g} {_roman(int(c))}.{i}"
+    for main, pieces in (work.get("split_photos") or {}).items():
+        res = {}
+        for p in pieces:
+            frag = ebl_fragment(src, p)
+            plines = []   # [tokens, [(stage, chapter, line) parallels]]
+            for ln in (frag.get("atf") or "").split("\n"):
+                pm_ = re.match(r'^\s*//\s*(\S+ \S+) (\S+) "([^"]*)" (\S+)', ln)
+                if pm_ and plines:
+                    if pm_.group(1) == text_ref:
+                        plines[-1][1].append((pm_.group(2), pm_.group(3), pm_.group(4)))
+                    continue
+                mm = re.match(r"^\s*([^\s.@$#&/]*\d[^\s.]*)\.\s+(.*)$", ln)
+                if mm:
+                    plines.append([sign_tokens(mm.group(2), True), []])
+            has_atf = bool(plines)
+            located_all = True
+            info = {"lines": {}}
+            per_tag = {}
+            for ch in chapters:
+                tag = chapter_tag(ch)
+                ids = {m["id"] for m in ch["manuscripts"] if m["museumNumber"] == main}
+                if not ids:
+                    continue
+                rows = []
+                for l in ch["lines"]:
+                    for v in l["variants"]:
+                        for m in v["manuscripts"]:
+                            if m["manuscriptId"] in ids and (m.get("atf") or "").strip():
+                                rows.append((l["number"], m["atf"]))
+                per_tag[tag] = (ch, rows)
+            for toks, pars in plines:
+                where = None
+                for st, chn, num in pars:
+                    t2 = f"{st}:{chn}"
+                    if t2 in per_tag and any(n == num for n, _ in per_tag[t2][1]):
+                        where = (t2, num)
+                        break
+                if where is None and len(toks) >= 2:
+                    scored = []
+                    for t2, (_ch, rows) in per_tag.items():
+                        for num, atf in rows:
+                            k = _lcs(toks, sign_tokens(clean_atf(atf), False))
+                            if k >= 2 and k >= 0.75 * len(toks):
+                                scored.append((k, t2, num))
+                    if scored:
+                        best = max(x[0] for x in scored)
+                        top = [x for x in scored if x[0] == best]
+                        if len(top) == 1:
+                            where = (top[0][1], top[0][2])
+                if where is None:
+                    if len(toks) >= 3:
+                        located_all = False
+                    continue
+                t2, num = where
+                atf = dict(per_tag[t2][1])[num]
+                rest = sign_tokens(clean_atf(atf), True)
+                for t in toks:
+                    if t in rest:
+                        rest.remove(t)
+                got = info["lines"].setdefault(t2, {})
+                got[num] = got.get(num, True) and not rest
+            for t2, (_ch, rows) in per_tag.items():
+                for num, atf in rows:
+                    if re.search(r"#note:.*\b" + re.escape(p) + r"\b", atf):
+                        info["lines"].setdefault(t2, {}).setdefault(num, False)
+            for t2, nums in (cfg.get(main, {}).get(p) or {}).items():
+                for num in nums:
+                    info["lines"].setdefault(t2, {}).setdefault(num, False)
+            # a piece covers a continuous stretch of the tablet: lines of the join between the first and the
+            # last line located on it run across it as well (e.g. the first half of a tablet line 6'a whose
+            # second half 6'b is on the piece)
+            for t2, got in info["lines"].items():
+                order = [n for n, _ in per_tag[t2][1]]
+                pos = [order.index(n) for n in got if n in order]
+                if pos:
+                    for n in order[min(pos):max(pos) + 1]:
+                        got.setdefault(n, False)
+            info["mapped"] = (has_atf and located_all) or p in cfg.get(main, {})
+            res[p] = info
+        out[main] = res
+    return out
+
+
+def photos_for_line(main, u, pmap, tag, num):
+    """Photographs (museum numbers) that show line `num` of manuscript `main`, and whether the
+    attribution to pieces is documented."""
+    pieces = u["photos"][1:]
+    if not pieces:
+        return (main,), True
+    info = pmap.get(main, {})
+    shown, documented = [], True
+    only_piece = False
+    for p in pieces:
+        pi = info.get(p)
+        if not pi or not pi["mapped"]:
+            shown.append(p)
+            documented = False
+            continue
+        if num in pi["lines"].get(tag, {}):
+            shown.append(p)
+            only_piece = only_piece or pi["lines"][tag][num]
+    if only_piece and documented and shown:
+        return tuple(shown), True
+    return (main,) + tuple(shown), documented
+
+
+GAP_CATS = [  # (category, heading used in the list of lines not shown), in display order
+    ("nophoto", "no photograph in eBL"),
+    ("notfrag", "not in the eBL Fragmentarium (no photograph there)"),
+    ("excluded", "photograph does not show these lines (visual check)"),
+    ("wrongphoto", "eBL's photograph shows a different object"),
+    ("unchecked", "photograph not checked"),
+    ("extskip", "its photographs do not show which lines these are"),
+    ("Commentary", "commentary"),
+    ("Quotation", "quotation in another text"),
+    ("Parallel", "parallel text"),
+    ("Lexical", "lexical list"),
+    ("markup", "line written with commentary or quotation markup"),
+    ("unnumbered", "unnumbered manuscript"),
+]
+
+
+def gap_reason(work, src, ms, atf, usable):
+    """(category, label) for a manuscript that carries a line that is not shown."""
+    museum = ms["museumNumber"]
+    t = ms_type(ms)
+    if t in NON_POEM_TYPES and not ms.get("_catch"):
+        return t, museum
+    if COMMENTARY_MARK_RE.search(atf):
+        return "markup", museum
+    if not museum:
+        return "unnumbered", "unnumbered"
+    if museum in work["excluded"]:
+        return "excluded", museum
+    if museum in (work.get("external_photos") or {}):
+        return "extskip", museum
+    f = ebl_fragment(src, museum)
+    if not f.get("museumNumber"):
+        return "notfrag", museum
+    holder = HOLDER_NAMES.get(f.get("museum") or "", "")
+    lab = museum + (f" ({holder})" if holder and holder != "British Museum" else "")
+    if not f.get("hasPhoto"):
+        return "nophoto", lab
+    if "photo shows" in ((f.get("notes") or {}).get("text") or ""):
+        return "wrongphoto", lab
+    return "unchecked", lab
+
+
 def chapter_sections(work, chapter, all_chapters, usable, raw_dir, dry=False, log=print):
     """Return (sections, coverage dict)."""
     key = work["key"]
+    src = work["_src"]
+    tag = chapter_tag(chapter)
+    pmap = work.get("_pmap") or {}
     msinfo = {}
     for m in chapter["manuscripts"]:
         msinfo[m["id"]] = m
     lines = chapter["lines"]
+    num_idx = {l["number"]: i for i, l in enumerate(lines)}
     cands_by_line = []
     for i, l in enumerate(lines):
         cands = []
@@ -353,13 +822,36 @@ def chapter_sections(work, chapter, all_chapters, usable, raw_dir, dry=False, lo
                 ms = msinfo.get(m["manuscriptId"])
                 if not ms:
                     continue
+                catch = catchline_of(ms, chapter, all_chapters)
+                if (ms_type(ms) in NON_POEM_TYPES and not catch) or COMMENTARY_MARK_RE.search(atf):
+                    continue   # commentary / quotation: not the poem line as such
                 museum = ms["museumNumber"]
                 if museum not in usable:
                     continue
                 u = usable[museum]
-                sc = (preserved_signs(atf) + 1.0) * (SPLIT_FACTOR if len(u["photos"]) > 1 else 1.0)
-                cands.append({"state": (m["manuscriptId"], col_label(m["labels"])), "score": sc, "atf": atf,
-                              "ms_line": m["number"], "labels": m["labels"], "museum": museum, "ms": ms})
+                fkey = None
+                if u.get("external") and u["external"].get("face_rule"):
+                    # several separately photographed fragments of one manuscript (configured per line)
+                    fkey = u["external"]["face_rule"](m["labels"], m["number"])
+                    if not fkey:
+                        continue
+                    photos, documented = (f"{museum}|{fkey}",), True
+                else:
+                    photos, documented = photos_for_line(museum, u, pmap, tag, l["number"])
+                kept = preserved_signs(atf)
+                sc = (kept + 1.0) * (SPLIT_FACTOR if len(photos) > 1 else 1.0)
+                cands.append({"state": (m["manuscriptId"], col_label(m["labels"]), photos), "score": sc, "atf": atf,
+                              "kept": kept, "ms_line": m["number"], "labels": m["labels"], "museum": museum,
+                              "ms": ms, "excerpt": ms_type(ms) in EXCERPT_TYPES, "photos": photos,
+                              "documented": documented, "restricted": bool(u.get("restricted")), "catch": catch,
+                              "face_key": fkey})
+        if any(not c["restricted"] for c in cands):
+            # photographs under restrictive terms (rule 9) only where no openly licensed photograph carries the line
+            cands = [c for c in cands if not c["restricted"]]
+        best_poem = max((c["kept"] for c in cands if not c["excerpt"]), default=None)
+        if best_poem is not None:
+            # excerpt-type tablets only where no photographed library copy preserves the line as well
+            cands = [c for c in cands if not c["excerpt"] or c["kept"] > best_poem]
         cands_by_line.append(cands)
 
     # dynamic programme
@@ -430,6 +922,14 @@ def chapter_sections(work, chapter, all_chapters, usable, raw_dir, dry=False, lo
             if part:
                 pieces.append(part)
 
+    # English spanning several lines (configured: eBL translates some lines together)
+    spans = (work.get("translation_spans") or {}).get(tag, {})
+    span_of = {}
+    for first, spec in spans.items():
+        a, b = num_idx[first], num_idx[spec["through"]]
+        for j in range(a, b + 1):
+            span_of[j] = (a, b, spec)
+
     chap_label = f"{work['chapter_prefix'](chapter)}"
     chap_url = work["chapter_url"](chapter)
     sections = []
@@ -453,10 +953,42 @@ def chapter_sections(work, chapter, all_chapters, usable, raw_dir, dry=False, lo
         ms_first, ms_last = part[0][1]["ms_line"], part[-1][1]["ms_line"]
         ms_range = ms_first if ms_first == ms_last else f"{ms_first} to {ms_last}"
         orig, eng = [], []
-        no_tr = []
+        no_tr, syms, span_notes = [], set(), []
+        lost, scant, partial = [], [], []
+        in_part = {i for i, _ in part}
         for i, c in part:
             num = html.escape(lines[i]["number"], quote=False)
-            orig.append(f"<sup>{num}</sup>{html.escape(c['atf'], quote=False)}")
+            rendered, s = render_atf(c["atf"])
+            syms |= s
+            orig.append(f"<sup>{num}</sup>{rendered}")
+            if c["kept"] == 0:
+                lost.append(i)
+            elif c["kept"] <= 3 and re.search(r"[\[\]]|\.\.\.|…", c["atf"]):
+                scant.append(i)
+            elif re.search(r"[\[\]]|(?<![\w])x(?![\w])|\.\.\.|…", c["atf"]):
+                partial.append(i)
+            if i in span_of:
+                a, b, spec = span_of[i]
+                if i != a:
+                    if a in in_part:
+                        continue   # the English was given with the first line of the span
+                    eng.append(f"<sup>{num}</sup><span class=\"lacuna\">(translated together with line "
+                               f"{html.escape(lines[a]['number'], quote=False)}, in the section that shows it)</span>")
+                    continue
+                parts_t = []
+                for j in range(a, b + 1):
+                    t, _ext = english_of(lines[j])
+                    if t:
+                        parts_t.append(t)
+                t = " ".join(parts_t)
+                for old, new in spec.get("replace", []):
+                    t = t.replace(old, "\x00" + new + "\x00")
+                t = t.replace("\x00", "")
+                last_in = max(j for j in range(a, b + 1) if j in in_part or j == a)
+                lab = lines[a]["number"] if last_in == a else f"{lines[a]['number']}-{lines[last_in]['number']}"
+                eng.append(f"<sup>{html.escape(lab, quote=False)}</sup>{tr_html(t)}")
+                span_notes.append(spec["note"])
+                continue
             t, _ext = english_of(lines[i])
             if t is None:
                 eng.append(f"<sup>{num}</sup><span class=\"lacuna\">(no English for this line in the eBL edition)</span>")
@@ -464,18 +996,19 @@ def chapter_sections(work, chapter, all_chapters, usable, raw_dir, dry=False, lo
             else:
                 eng.append(f"<sup>{num}</sup>{tr_html(t)}")
         sig = siglum_of(ms, work.get("siglum_re"))
+        photo_ids = c0["photos"]
         if u.get("external"):
             ext = u["external"]
-            fkey = face or ext["label_face"].get(col.rstrip("?"), "")
+            fkey = c0.get("face_key") or face or ext["label_face"].get(col.rstrip("?"), "")
             if fkey not in ext["faces"]:
                 raise SystemExit(f"{museum}: no photograph configured for face '{fkey}' (labels {c0['labels']})")
-            if not face:
+            if not face or c0.get("face_key"):
                 face = fkey
             photos = [ensure_external(key, ext["faces"][fkey], dry)]
         elif face in (work.get("crops") or {}).get(museum, {}):
             photos = [ensure_crop(key, museum, face, work["crops"][museum][face], raw_dir, dry)]
         else:
-            photos = [ensure_scan(key, p, raw_dir, dry) for p in u["photos"]]
+            photos = [ensure_scan(key, p, raw_dir, dry) for p in photo_ids]
         where = where_text(face, col)
         holder = u.get("holder_short", "British Museum")
         ref = (f"{museum}{' (' + work['siglum_label'] + ' ' + sig + ')' if sig else ''}, {where}, "
@@ -483,15 +1016,67 @@ def chapter_sections(work, chapter, all_chapters, usable, raw_dir, dry=False, lo
         note = (f"{holder} {museum}: {where}, the tablet's own line{'s' if ms_first != ms_last else ''} "
                 f"{ms_range}. eBL's corpus edition ({chap_url}) attributes {chap_label} {sid} to this manuscript "
                 f"at these column and line numbers. {u['check']}")
-        if len(photos) > 1:
-            note += (" eBL treats " + " + ".join(u["photos"]) + " as one manuscript and holds a separate "
-                     "photograph of each of these pieces; it does not say which piece carries which line, so all "
-                     "of these photographs are linked, and the lines are on one or more of them.")
-        note += (" The English translates eBL's composite text: words in square brackets are restored, "
-                 "partly from other manuscripts, and may not be legible on this tablet.")
+        if ms_type(ms) in EXCERPT_TYPES:
+            note += (f" eBL classes {museum} as {EXCERPT_TYPES[ms_type(ms)]}, not a library copy of the whole work. "
+                     "It carries these lines as text (eBL's transliteration has no commentary or quotation markup), and "
+                     "it is used because no photographed library copy preserves these lines as well.")
+        if c0.get("catch"):
+            of = (f", a copy of {c0['catch']}" if c0["catch"] != "?" else "")
+            note += (f" {museum}{of}, carries {'these lines' if len(part) > 1 else 'this line'} as its catch-line: the "
+                     "opening of the next tablet of the series, copied at the end of the previous one (eBL lists catch-lines "
+                     "among its quotations; unlike commentaries and quotations in other texts, a catch-line is the line itself "
+                     "on a copy of the work).")
+        all_split = u["photos"]
+        if len(all_split) > 1:
+            if c0["documented"]:
+                on_piece = [p for p in photo_ids if p != museum]
+                if on_piece and museum in photo_ids:
+                    note += (f" {museum} is joined to " + ", ".join(x for x in all_split if x != museum) +
+                             ", which the British Museum photographed separately. eBL's own transliteration of "
+                             + " and ".join(on_piece) + " and the notes of its edition place parts of these lines on "
+                             + " and ".join(on_piece) + ", so " + ("its photograph is" if len(on_piece) == 1 else "their photographs are")
+                             + f" linked as well as that of {museum}.")
+                elif on_piece:
+                    note += (f" These lines are on the joined piece {' and '.join(on_piece)}, photographed separately from "
+                             f"{museum}: eBL's own transliteration of {' and '.join(on_piece)} carries every preserved "
+                             "sign of them, so only that photograph is linked.")
+                else:
+                    note += (f" {museum} is joined to " + ", ".join(x for x in all_split if x != museum) +
+                             ", photographed separately; eBL's own transliteration of the joined piece(s) does not "
+                             "include these lines, so only the photograph of " + museum + " is linked.")
+            else:
+                note += (" eBL treats " + " + ".join(all_split) + " as one manuscript and holds a separate "
+                         "photograph of each of these pieces; it does not say which piece carries which line, so the "
+                         "photographs of " + " + ".join(photo_ids) + " are linked, and the lines are on one or more of them.")
+        # what the English renders that this tablet does not show (spec rule 7)
+        if lost or scant or partial:
+            bits = []
+            if lost:
+                bits.append(f"line{'s' if len(lost) > 1 else ''} {idx_ranges(lost, lines)} "
+                            f"{'are' if len(lost) > 1 else 'is'} entirely broken")
+            if scant:
+                bits.append(f"of line{'s' if len(scant) > 1 else ''} {idx_ranges(scant, lines)} only one to three "
+                            "signs survive")
+            if partial:
+                bits.append(f"line{'s' if len(partial) > 1 else ''} {idx_ranges(partial, lines)} "
+                            f"{'are' if len(partial) > 1 else 'is'} partly broken (square brackets and x in the Akkadian)")
+            note += (" On this tablet " + ", ".join(bits[:-1]) + (" and " if len(bits) > 1 else "") + bits[-1]
+                     + ". The English of " + ("these lines" if len(lost) + len(scant) + len(partial) > 1 else "this line")
+                     + " translates eBL's composite text, so it includes words that are not preserved on this tablet "
+                       "but are restored from other manuscripts or by the editors. Square brackets in the English mark "
+                       "eBL's restorations in its composite text; words that survive on other tablets carry no brackets "
+                       "even where this tablet is broken.")
+            others = [i for i in in_part if i not in lost and i not in scant and i not in partial]
+            if others:
+                note += f" Line{'s' if len(others) > 1 else ''} {idx_ranges(others, lines)} {'are' if len(others) > 1 else 'is'} complete on this tablet."
+        else:
+            note += (" Every line of this section is complete on this tablet; the English translates eBL's composite "
+                     "text, which may follow other manuscripts where they differ in wording.")
+        for sn in span_notes:
+            note += " " + sn
         if no_tr:
             note += f" eBL gives no English for line(s) {', '.join(no_tr)}."
-        skipped = [lines[j]["number"] for j in range(part[0][0], part[-1][0] + 1) if j not in {i for i, _ in part}]
+        skipped = [lines[j]["number"] for j in range(part[0][0], part[-1][0] + 1) if j not in in_part]
         if skipped:
             note += (f" eBL line(s) {', '.join(skipped)} fall within this run but are not on this tablet "
                      "(they are listed among the lines not shown).")
@@ -504,6 +1089,8 @@ def chapter_sections(work, chapter, all_chapters, usable, raw_dir, dry=False, lo
             "scan_note": note,
             "_museum": museum,
             "_n": len(part),
+            "_syms": syms,
+            "_excerpt": ms_type(ms) in EXCERPT_TYPES,
         })
 
     # coverage
@@ -512,14 +1099,17 @@ def chapter_sections(work, chapter, all_chapters, usable, raw_dir, dry=False, lo
     for i, l in enumerate(lines):
         if i in covered:
             continue
-        others = []
+        reasons = []
         for v in l["variants"]:
             for m in v["manuscripts"]:
                 if m.get("atf", "").strip() and not m["atf"].lstrip().startswith("$"):
                     ms = msinfo.get(m["manuscriptId"])
-                    if ms and ms["museumNumber"] not in others:
-                        others.append(ms["museumNumber"] or "unnumbered")
-        gaps.append((l["number"], tuple(others), i))
+                    if ms:
+                        ms = dict(ms, _catch=catchline_of(ms, chapter, all_chapters))
+                        r = gap_reason(work, src, ms, clean_atf(m["atf"]), usable)
+                        if r not in reasons:
+                            reasons.append(r)
+        gaps.append((l["number"], tuple(reasons), i))
     cov = {"lines": len(lines), "covered": len(covered), "gaps": gaps,
            "with_ms": sum(1 for l in lines if any(m.get("atf", "").strip() and not m["atf"].lstrip().startswith("$")
                                                    for v in l["variants"] for m in v["manuscripts"]))}
@@ -527,11 +1117,18 @@ def chapter_sections(work, chapter, all_chapters, usable, raw_dir, dry=False, lo
 
 
 def gap_ranges(gaps):
-    """[(num, others)] -> list of 'a-b (reason)' strings, merging neighbours with the same reason."""
+    """[(num, reasons, idx)] -> list of ('a-b', reason) merging neighbours with the same reason."""
     out = []
-    for num, others, idx in gaps:
-        reason = ("no manuscript preserves it" if not others
-                  else "only on " + ", ".join(others))
+    for num, reasons, idx in gaps:
+        if not reasons:
+            reason = "no manuscript preserves it"
+        else:
+            parts = []
+            for cat, head in GAP_CATS:
+                labs = [lab for c, lab in reasons if c == cat]
+                if labs:
+                    parts.append(f"{head}: {', '.join(labs)}")
+            reason = "; ".join(parts)
         if out and out[-1][2] == reason and out[-1][3] == idx - 1:
             out[-1][1] = num
             out[-1][3] = idx
@@ -544,26 +1141,28 @@ def gap_ranges(gaps):
 # Work driver
 # ---------------------------------------------------------------------------
 def load_usable(work, src):
-    """museum -> {photos, check, sixcol}.  Only manuscripts with a PHOTO_CHECKS
-    entry and a British Museum photograph are usable."""
+    """museum -> {photos, check, sixcol, holder_short, licence}.  Only manuscripts with a PHOTO_CHECKS
+    entry (visual check) and an eBL photograph of a holder listed in HOLDERS are usable."""
     out = {}
     for museum, check in work["photo_checks"].items():
         if museum in work["excluded"]:
             continue
         f = ebl_fragment(src, museum)
-        if f.get("museum") != "THE_BRITISH_MUSEUM" or not f.get("hasPhoto"):
+        if f.get("museum") not in HOLDERS or not f.get("hasPhoto"):
             continue
         photos = [museum] + list(work.get("split_photos", {}).get(museum, []))
-        out[museum] = {"photos": photos, "check": check, "frag": f}
+        hs, lic = HOLDERS[f["museum"]]
+        out[museum] = {"photos": photos, "check": check, "frag": f, "holder_short": hs, "licence": lic,
+                       "restricted": f["museum"] != "THE_BRITISH_MUSEUM"}
     for museum, ext in (work.get("external_photos") or {}).items():
         f = ebl_fragment(src, museum)
         out[museum] = {"photos": [museum], "check": ext["check"], "frag": f, "external": ext,
-                       "holder_short": ext["holder_short"]}
+                       "holder_short": ext["holder_short"], "licence": ext["licence"]}
     return out
 
 
 def auto_candidates(work, src, chapters):
-    """All manuscripts with a British Museum photograph on eBL (not excluded), with the
+    """All manuscripts with an eBL photograph of a holder listed in HOLDERS (not excluded), with the
     pieces of their physical join group that have their own photograph (split joins)."""
     out = {}
     listed = {m["museumNumber"] for ch in chapters for m in ch["manuscripts"] if m["museumNumber"]}
@@ -573,7 +1172,7 @@ def auto_candidates(work, src, chapters):
             if not museum or museum in out or museum in work["excluded"]:
                 continue
             f = ebl_fragment(src, museum)
-            if f.get("museum") != "THE_BRITISH_MUSEUM" or not f.get("hasPhoto"):
+            if f.get("museum") not in HOLDERS or not f.get("hasPhoto"):
                 continue
             if "photo shows" in ((f.get("notes") or {}).get("text") or ""):
                 continue
@@ -588,7 +1187,7 @@ def auto_candidates(work, src, chapters):
                     if n == museum:
                         continue
                     jf = ebl_fragment(src, n)
-                    if jf.get("hasPhoto") and jf.get("museum") == "THE_BRITISH_MUSEUM":
+                    if jf.get("hasPhoto") and jf.get("museum") in HOLDERS:
                         photographed.append(n)
                 split += photographed
                 if not own_group and not photographed:
@@ -596,7 +1195,9 @@ def auto_candidates(work, src, chapters):
             if missing:
                 print(f"      (skipping {museum}: indirectly joined piece(s) {', '.join(missing)} have no usable photograph)")
                 continue
-            out[museum] = {"photos": [museum] + split, "check": "(unchecked)", "frag": f}
+            hs, lic = HOLDERS[f["museum"]]
+            out[museum] = {"photos": [museum] + split, "check": "(unchecked)", "frag": f,
+                           "holder_short": hs, "licence": lic, "restricted": f["museum"] != "THE_BRITISH_MUSEUM"}
     return out
 
 
@@ -606,7 +1207,7 @@ def build_work(work, argv=None):
     ap.add_argument("--raw-dir", default=os.environ.get("EBL_RAW_DIR", str(Path(tempfile.gettempdir()) / "theosis-ebl-raw")))
     ap.add_argument("--report", action="store_true", help="coverage report only; write nothing")
     ap.add_argument("--candidates", action="store_true",
-                    help="treat every eBL British Museum photograph as usable (unchecked) and list the tablets the "
+                    help="treat every eBL photograph of a listed holder as usable (unchecked) and list the tablets the "
                          "selection would use, for visual checking; writes nothing")
     args = ap.parse_args(argv)
     key = work["key"]
@@ -618,6 +1219,8 @@ def build_work(work, argv=None):
         ch = ebl_chapter(src, g, c, i, st, name)
         ch["_stage_abbr"] = st
         chapters.append(ch)
+    work["_src"] = src
+    work["_pmap"] = piece_line_map(work, src, chapters)
     usable = load_usable(work, src)
     if args.candidates:
         cand = auto_candidates(work, src, chapters)
@@ -655,8 +1258,8 @@ def build_work(work, argv=None):
             continue
         entry, row = work["make_entry"](work, ent, ch, secs, cov, used, usable, order)
         for s in entry["translation"]:
-            s.pop("_museum", None)
-            s.pop("_n", None)
+            for k_ in ("_museum", "_n", "_syms", "_excerpt"):
+                s.pop(k_, None)
         (PUB / f"{entry['id']}.json").write_text(json.dumps(entry, ensure_ascii=False, indent=2), encoding="utf-8")
         rows.append(row)
     if args.report or wanted:
@@ -693,6 +1296,11 @@ def caption_for(p, key, used, usable):
             for face, spec in ext["faces"].items():
                 if p == f"{key}/{spec['file']}":
                     return f"{ext['holder_short']} {m}, {face}"
+        for ph in usable[m]["photos"]:
+            stem = scan_name(key, ph)[:-4]
+            name = p.split("/", 1)[1][:-4]
+            if name == stem or name.startswith(stem + "-"):
+                return f"{usable[m].get('holder_short', 'British Museum')} {name[len(key) + 1:]}"
     return "British Museum " + p.split("/", 1)[1][len(key) + 1:-4]
 
 
@@ -718,26 +1326,37 @@ def standard_entry(work, ent, ch, secs, cov, used, usable, order):
             holders.append(h)
     holder_txt = " and ".join(holders)
     ext_used = [usable[m]["external"] for m in used if usable[m].get("external")]
-    bm_used = [m for m in used if not usable[m].get("external")]
     pct = round(100 * cov["covered"] / cov["lines"]) if cov["lines"] else 0
     gap_html = ""
     if gaps:
         items = "; ".join(f"{r} ({html.escape(why, quote=False)})" for r, why in gaps)
         gap_html = (f"<p><strong>Lines not shown.</strong> {cov['lines'] - cov['covered']} of the {cov['lines']} lines of "
-                    f"the eBL edition have no witness here with an open photograph: {items}. "
-                    "Lines that survive only on tablets whose photographs are not openly licensed (for example in "
-                    "the Iraq Museum, Berlin, Istanbul, Ankara, Philadelphia or private collections), or only on "
-                    "tablets whose eBL photograph does not show the lines, are omitted.</p>")
+                    f"the eBL edition are not shown, because no photographed copy of the work used here carries them: "
+                    f"{items}. A line is shown only on a photographed tablet that carries it as text. Commentaries "
+                    "and other texts that quote a line (letters, rituals, god lists) are not used as witnesses, because "
+                    "they carry it with explanations or inside another text; tablets without a photograph in eBL are "
+                    "not used, because the line could not be shown on its tablet.</p>")
+    excerpt_used = sorted({s["_museum"] for s in secs if s.get("_excerpt")})
+    syms = set()
+    for s in secs:
+        syms |= s.get("_syms", set())
+    excerpt_txt = (" School and excerpt tablets are used only for lines that no photographed library copy preserves "
+                   "as well, and only where they carry the line as text; their sections say so"
+                   + (f" ({', '.join(excerpt_used)})" if excerpt_used else "") + ".")
     intro = (
         ent["intro"]
         + f"<p><strong>How this page is built.</strong> Each section is a run of consecutive lines as written on one "
         f"photographed clay tablet. For every line the eBL edition ({html.escape(chap_url, quote=False)}) lists the manuscripts "
         "that carry it, with each tablet's own column and line numbers; the tablet chosen for each run is the "
-        "photographed manuscript with the most signs preserved there. The original text is eBL's transliteration of "
+        "photographed copy of the work with the most signs preserved there. Commentaries and texts that only quote a "
+        "line are never chosen." + html.escape(excerpt_txt, quote=False) + " The original text is eBL's transliteration of "
         "that tablet's signs (not a modern composite text): square brackets mark broken signs, x an illegible sign, "
-        "# a damaged sign, ? an uncertain reading, and words in {braces} are determinatives. Superscript numbers are the "
-        f"line numbers of the eBL edition, used in both the Akkadian and the English. {html.escape(work['translator_line'], quote=False)}"
-        "</p><p><strong>Finding a line on the photograph.</strong> Each section names the tablet, the face and column, "
+        "# a damaged sign, ? an uncertain reading, and words in {braces} are determinatives; the notes give a key to "
+        "every sign used on this page, and eBL's layout codes are written out in words (for example '(line break)' or "
+        "'(blank space)'). Superscript numbers are the line numbers of the eBL edition, used in both the Akkadian and the "
+        f"English. {html.escape(work['translator_line'], quote=False)} Where the tablet is broken, the English still "
+        "translates the whole line of eBL's composite text; each section's note names the lines that are broken on its "
+        "tablet.</p><p><strong>Finding a line on the photograph.</strong> Each section names the tablet, the face and column, "
         "and the tablet's own line numbers (a prime, as in 5', counts from the first preserved line of a broken "
         "column). On a tablet with six columns the obverse carries columns i-iii from left to right; the reverse, "
         "turned over from bottom to top, carries columns iv-vi from right to left. The photographs often show the "
@@ -746,6 +1365,13 @@ def standard_entry(work, ent, ch, secs, cov, used, usable, order):
         f"{len(used)} tablet{'s' if len(used) != 1 else ''} in the {html.escape(holder_txt, quote=False)}: {', '.join(html.escape(x, quote=False) for x in used_desc)}.</p>"
         + gap_html
     )
+    notes = list(work.get("translator_notes", [])) + [atf_key_line(syms)]
+    licences = []
+    for m in used:
+        lic = usable[m].get("licence") or BM_LICENCE
+        if lic not in licences:
+            licences.append(lic)
+    ebl_used = [m for m in used if not usable[m].get("external")]
     entry = {
         "id": tid,
         "slug": tid,
@@ -756,17 +1382,18 @@ def standard_entry(work, ent, ch, secs, cov, used, usable, order):
                    f"({work['translator_short']})"),
         "description": ent["description"].format(covered=cov["covered"], lines=cov["lines"], tablets=len(used)),
         "introduction": intro,
-        "translator_notes": work.get("translator_notes", []),
+        "translator_notes": notes,
         "translation": secs,
         "verification": {
             "scan_source": "; ".join(
                 ([("electronic Babylonian Library fragment photo API, https://www.ebl.lmu.de/api/fragments/<museum number>/photo "
-                   "(British Museum photographs); tablets used: " + ", ".join(
-                       f"{m} ({EBL_WEB}/library/{urllib.parse.quote(m)})" for m in bm_used))] if bm_used else [])
+                   "(photographs of the " + " and ".join(dict.fromkeys(usable[m]["holder_short"] for m in ebl_used))
+                   + "); tablets used: " + ", ".join(
+                       f"{m} ({EBL_WEB}/library/{urllib.parse.quote(m)})" for m in ebl_used))] if ebl_used else [])
                 + [e["source"] for e in ext_used]),
-            "scan_license": "; ".join(([BM_LICENCE] if bm_used else []) + [e["licence"] for e in ext_used]),
+            "scan_license": "; ".join(licences),
             "scan_manuscript": "; ".join(
-                (usable[m]["external"]["holder"] if usable[m].get("external") else f"British Museum {m}")
+                (usable[m]["external"]["holder"] if usable[m].get("external") else f"{usable[m]['holder_short']} {m}")
                 + (f" ({usable[m]['frag'].get('description', '')[:120].strip()})"
                    if usable[m]['frag'].get('description') else "") for m in used),
             "scan_mapping": ("eBL corpus edition: every line of the poem lists the manuscripts that carry it with the "
@@ -844,6 +1471,7 @@ def simple_work(key, ebl_text, ebl_name, label, entries, translator, translator_
 # contact sheets and full views, 2026-11-12).  "Lines" = lines eBL attributes to
 # the manuscript in the chapters used.
 GILG_CHECKS = {
+    'IM.67564': "Photograph checked (eBL photograph of the Iraq Museum): two views of a fragment from Kalhu, each face with two columns divided by a vertical ruling and about 30 to 35 lines per column; on the face shown first the right edge carries the museum number. Consistent with eBL's columns i (tablet lines 1'-32') and ii (1'-36') of Tablet X on one face and column vi of Tablet XI on the other.",
     "K.2756.C": "Photograph checked: one face shown, about 16 lines in a single column, consistent with eBL's 16 lines in column i.",
     "K.8584": "Photograph checked: two views; the inscribed face (lower view) shows two columns, consistent with eBL's columns i and ii (12 lines each); the other view is the uninscribed back with the ink number K.8584.",
     "K.15145": "Photograph checked: one face, ink number K.15145, about 6 lines, consistent with eBL's 6 lines of column i.",
@@ -1007,7 +1635,7 @@ def gilg_entries():
             "slug": f"tablet-{t.lower()}",
             "title": f"Epic of Gilgamesh, {title}",
             "description": ("Standard Babylonian Epic of Gilgamesh, Tablet " + t + ": {covered} of {lines} lines, each "
-                            "shown on a photographed cuneiform tablet ({tablets} British Museum tablets), with the eBL "
+                            "shown on a photographed cuneiform tablet ({tablets} tablets), with the eBL "
                             "transliteration of that tablet and A. R. George's English translation."),
             "intro": (f"<p>{summary}</p>"
                       f"<p>The Standard Babylonian version of the epic, traditionally ascribed to the scholar "
@@ -1101,7 +1729,7 @@ GILGAMESH = {
         "edition_label": "",
         "search_terms": "gilgamesh gilgamesh epic enkidu uta-napishti flood utnapishtim nineveh ashurbanipal cuneiform akkadian",
         "description": ("The Standard Babylonian Epic of Gilgamesh, Tablets I-XII, read line by line on photographed "
-                        "clay tablets in the British Museum: each section shows one tablet's own transliteration "
+                        "clay tablets, mostly in the British Museum: each section shows one tablet's own transliteration "
                         "with A. R. George's English translation from the electronic Babylonian Library."),
     },
     "authors": [{

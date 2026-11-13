@@ -14,6 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import import_gilgamesh as engine  # noqa: E402
 
 CHECKS = {
+    'CBS.6059': "Photograph checked (eBL photograph of the Penn Museum): obverse, reverse and edges of a fragment about 4 cm across, ink 6059 on the left edge; each face carries about 14 to 16 lines of small script, consistent with the catalogue's 14 + 16 lines and with eBL's nine reverse lines.",
     'K.13770': "Photograph checked: a fragment about 2 cm across, with one face carrying about 8 to 9 lines, consistent with eBL's 9 obverse lines. The back is uninscribed; ink K 13770 is on an edge.",
     'BM.41931': "Photograph checked: one face with about 13 to 15 lines of large signs, consistent with eBL's 15 lines (no face given). The back is uninscribed and carries ink 41931.",
     'BM.51070': "Photograph checked: obverse, reverse and edges, with about 8 lines on each face, well over eBL's 4 obverse lines. Registration D 82-3-23,2066 is on the lower edge and reverse; a faded number on the obverse is not legible.",

@@ -53,7 +53,7 @@ Natesan, 1922), English Wikisource "Bhagavad-Gita (Besant 4th)", Discourse 1-18,
 validated (revision ids in `data/sources/bhagavad-gita/besant/revids.json`). Public domain (1922;
 Besant died 1933); Wikisource transcription CC BY-SA 4.0. Besant prints each verse in Sanskrit with
 its English and a number, so the two languages align verse for verse. Footnote markers are dropped.
-The colophon section of each chapter uses Besant's printed colophon (his Sanskrit is mostly
+The colophon section of each chapter uses Besant's printed colophon (her Sanskrit is mostly
 abbreviated with ॰; the manuscript writes it out in full and its chapter names differ in places,
 noted in each scan note).
 

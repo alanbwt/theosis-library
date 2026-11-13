@@ -49,5 +49,21 @@ WORK = engine.simple_work(
     checks=CHECKS, excluded=EXCLUDED, split=SPLIT,
 )
 
+# eBL gives one English sentence for lines e+16 and e+17 (stored on line e+16; line e+17 has no English of its
+# own).  In English word order the clause of line e+17 ("the bandages of pure Ninkarrak will bring alleviation")
+# comes first.  The line markers inside eBL's sentence read "(e+16)" and "(e+15)", one lower than the lines they
+# translate in eBL's own numbering (Akkadian e+17 has Ninkarrak, e+16 has "the painful sore it has laid upon
+# people's bodies"; e+15 has its own English).  The sentence is shown once for both lines, with the markers
+# corrected to (e+17) and (e+16) (QC 2026-11-12: English was one line off).
+WORK["translation_spans"] = {"SB:-": {"e+16": {
+    "through": "e+17",
+    "replace": [("(e+16)", "(e+17)"), ("(e+15)", "(e+16)")],
+    "note": ("eBL translates lines e+16 and e+17 together in one English sentence (given under e+16; e+17 has none "
+             "of its own), with the clause of line e+17 first; the sentence is shown once for both lines. eBL's "
+             "markers inside it read (e+16) and (e+15), one lower than the Akkadian lines they translate in eBL's own "
+             "numbering (Ninkarrak is in line e+17, the sore laid upon people's bodies in line e+16); they are shown "
+             "here as (e+17) and (e+16)."),
+}}}
+
 if __name__ == "__main__":
     engine.build_work(WORK)

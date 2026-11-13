@@ -37,6 +37,7 @@ Importer: `scripts/import_odyssey.py`; page map: `data/sources/odyssey/page_map.
 - Manuscript: Florence, Biblioteca Medicea Laurenziana, Plut. 32.24 (parchment, 10th century), the oldest Odyssey manuscript with published images. BML Teca Digitale IIIF, manifest `https://cdm21059.contentdm.oclc.org/iiif/plutei:735325/manifest.json` (cached as `data/sources/odyssey/laur-32-24-manifest.json`); CC BY-NC-SA per the record. Text on fols. 1v-233v; mostly 24-28 lines a page.
 - Greek: A. T. Murray, Loeb 1919, Perseus `tlg0012.tlg002.perseus-grc2` (CC BY-SA 4.0).
 - English: A. T. Murray, Loeb 1919 (public domain in the US), Perseus `tlg0012.tlg002.perseus-eng3`, which marks every fifth line; the prose is cut there and each block goes to the page with its middle line.
+  QC fix 2026-11-12: at eight page breaks the English is cut at the end of Murray's sentence instead (`ENGLISH_CUTS` in the importer), so English and Greek start and end at the same line or at most one sentence crosses the break: 3.8|9 (19r/19v), 13.206|207 and 13.231|232 (129v exact), 13.437|438 (134r: English 439-440, the sentence for 436-438 stays with 133v), 21.423|424 (214r exact), 22.336|337 and 22.361|362 (221r: English 338-360), 24.2|3 (231v: English 24.1 and the start of 24.2). Each section's scan_note gives its exact English range. The other page breaks still follow Murray's five-line marks (a block can start or end 1-4 lines from the Greek); that systemic offset was not reworked.
 
 ## Mapping method
 

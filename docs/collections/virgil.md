@@ -25,7 +25,7 @@ First and last line of each page read on IIIF crops (rustic capitals, fully legi
 - Vaticanus: 55r = Aen. 6.719-739 (724 is its sixth line), 55v = 740-755 (751 is its twelfth line).
 Words read are in `PAGES` and in every scan_note.
 
-English sections: both translations are in verse with more lines than the Latin (Rhoades 79 lines for 63; Williams lines 942-977 for 724-751). Each English section starts at the translator's line that begins the rendering of the section's first Latin line (`SECTIONS`), so a half line can sit on the neighbouring side (e.g. Williams' "Encumber and o'ercloud" opens 733-742 though it renders the end of 732).
+English sections: both translations are in verse with more lines than the Latin (Rhoades 79 lines for 63; Williams lines 942-977 for 724-751). In Eclogue 4 each English section starts at the translator's line that begins the rendering of the section's first Latin line (`sections`), so a half line can sit on the neighbouring side. In Aeneid 6 (QC fix 2026-11-12) the English is cut at the end of Williams' sentences: his sentence for 728-734 ("Thence man and beast ... on the radiant world.") runs across the 732/733 break and is given whole with 724-732 (English 724-734), so 733-742 has the English of 735-742; his line 966 is divided at the full stop, "Or burned away in fire." ending 733-742 and "Each man receives" opening 743-751. Each section's scan_note gives the Latin lines its English renders.
 
 ## Notes and gaps
 

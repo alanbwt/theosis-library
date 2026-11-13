@@ -5,7 +5,7 @@ electronic Babylonian Library corpus edition L I.2 (ed. A. C. Heinrich, rev. Z. 
 E. Jiménez; English by B. R. Foster), one entry per tablet.
 
 Uses the shared engine in import_gilgamesh.py; read its docstring for the chain of evidence
-(manuscript-level eBL ATF + eBL English + British Museum photograph of the same manuscript,
+(manuscript-level eBL ATF + eBL English + photograph of the same manuscript,
 eBL's line-to-manuscript attribution, visual check of every photograph used).
 
 Usage:
@@ -23,6 +23,9 @@ KEY = "enuma-elish"
 
 # Visual checks of the eBL photographs used (2026-11-12).
 CHECKS = {
+    'K.19822': "Photograph checked: one face of a small fragment about 2.5 cm across, no ink number visible; about seven short lines of signs at the left, the right part broken away. Consistent with eBL's seven reverse lines.",
+    'K.12830': "Photograph checked: one face of a small fragment about 2 cm across, no ink number visible; about seven or eight lines of signs, all broken at both ends. Consistent with eBL's eight reverse lines (the British Museum description counts six).",
+    'BM.37981': "Photograph checked: obverse, reverse and edges of a small school-tablet fragment about 3 cm across, ink 37981 on the left edge; one face carries about six short lines in its left part and the other a few lines, consistent with eBL's six obverse lines. The joined piece 1880,0617.2892 (about 1.5 cm, a few signs on two faces) is photographed separately and is linked as well.",
     'K.5419.C': "Photograph checked: obverse, reverse and edges, ink K.5419.c on the bottom edge. About 14 to 16 lines on the obverse and a few lines along the left side of the reverse, consistent with eBL's 16 obverse lines of Tablet I and one reverse line of Tablet II.",
     'BM.45528': "Photograph checked: obverse, reverse and edges of a tall tablet (about 17 cm) built from many joined pieces, some with plaster, ink 45528 on the left edge and 47197 (81-8-30,719) and 47150 on joined pieces on the right edge. Both faces densely inscribed in small script, consistent with eBL's 58 obverse and 39 reverse lines.",
     'BM.36726': "Photograph checked: obverse, reverse and edges of a joined tablet, ink 36726 on the right edge. The obverse carries 15 or more lines and the reverse ruled sections of text, easily enough for eBL's six obverse lines.",
@@ -100,6 +103,7 @@ EXCLUDED = {
     'K.5661': "visual check: photograph shows obverse, reverse and edges, ink K.5661 on the left edge and K.11641 on the top edge (a joined piece). The obverse has several patches of text, perhaps 15 to 20 lines in all, but the reverse surface is largely lost, with only three small patches of signs (about six to eight lines' worth), so eBL's 14 reverse lines, and possibly all 22 obverse lines, cannot be confirmed from this photograph.",
 }
 SPLIT = {
+    'BM.37981': ['1880,0617.2892'],
     'K.4832': ['K.23609'],
     'BM.32206': ['F.220'],
     'K.5923': ['K.8512', 'K.18305'],

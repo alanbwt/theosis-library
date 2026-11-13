@@ -141,7 +141,7 @@ def main():
         "it should go on to the cold water flowing from the Lake of Memory (Mnemosyne) and say to the guardians: 'I am a child of Earth and of Starry Heaven; "
         "but my race is of Heaven (alone)'. Then they will let it drink, and it will rule among the other heroes (in Gilbert Murray's translation). "
         "The tablet had been rolled up and kept in a gold cylinder hung on a chain, worn as an amulet.</p>\n\n"
-        "<p>The photograph shows the tablet with its chain and case as displayed in the British Museum (registration number 1843,0816.1). "
+        "<p>The photograph shows the tablet on its clear display mount in the British Museum (registration number 1843,0816.1); it is cropped from a wider photograph that also shows the chain and case, which are outside the crop. "
         "The letters are very small and the gold is crumpled, so only parts can be made out on the photograph; the text is divided here into three groups of lines, "
         "all on the one tablet. The Greek is the reading of Cecil Smith of the British Museum as printed by Jane Ellen Harrison in 1903; "
         "the English is Gilbert Murray's translation from his appendix to the same book. Lines 12-14 survive only in fragments, the last written along the right edge.</p>"

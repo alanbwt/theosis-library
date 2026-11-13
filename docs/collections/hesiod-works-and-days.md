@@ -21,7 +21,7 @@ Importer: `scripts/import_hesiod-works-and-days.py` (page map in `PAGES`). Scans
 ## Sources
 
 - Manuscript: Florence, BML, Plut. 32.16 (late 13th century), Works and Days on fols. 233r-239v, with scholia in the margins (Pinakes gives "235-241", which is not right: the poem begins on 233r). BML Teca Digitale IIIF, manifest `https://cdm21059.contentdm.oclc.org/iiif/plutei:596036/manifest.json`; CC BY-NC-SA.
-- Greek: Evelyn-White, Loeb 1914, Perseus `tlg0020.tlg002.perseus-grc2` (CC BY-SA 4.0).
+- Greek: Evelyn-White, Loeb 1914, Perseus `tlg0020.tlg002.perseus-grc2` (CC BY-SA 4.0). (The entries' verification fields cited the Theogony's id `tlg001` until the QC fix of 2026-11-12.)
 - English: Evelyn-White 1914 (public domain), Perseus `tlg0020.tlg002.perseus-eng2`.
 
 ## Choice of witness
@@ -30,7 +30,9 @@ Older manuscripts exist. Paris gr. 2771 (10th/11th c.) is on Gallica, which retu
 
 ## Mapping method
 
-As for the Theogony: two verses to a row, first and last verse rows of every page read on the image, continuity checked at every page break. Page ranges: 233r 1-58, 233v 59-117, 234r 118-183, 234v 184-239, 235r 240-301, 235v 302-361, 236r 362-414, 236v 415-474, 237r 475-536, 237v 537-598, 238r 599-660, 238v 661-724, 239r 725-775, 239v 776-828. English in five-line blocks placed by middle line.
+As for the Theogony: two verses to a row, first and last verse rows of every page read on the image, continuity checked at every page break. Page ranges: 233r 1-58, 233v 59-117, 234r 118-183, 234v 184-239, 235r 240-301, 235v 302-361, 236r 362-414, 236v 415-474, 237r 475-536, 237v 537-598, 238r 599-660, 238v 661-724, 239r 725-775, 239v 776-828. All 28 page edges were re-read on the photographs on 2026-11-12 and confirmed (`read_first` / `read_last` in `PAGES`). Also recorded: 93 is written at the foot of 233v; 169 as well as 120 is absent from 234r; 239 is in a different ink on 234v; 235v has the verse 310 that Evelyn-White omits; 370-372 are written at the foot of 236r; 758 is written twice on 239r, which has 768/769 in the traditional order.
+
+English (QC fix 2026-11-12): at every page break the English is cut at the end of one of Evelyn-White's sentences (`ENGLISH_CUTS` in the importer, each chosen by reading his English against the Greek; shared code in `scripts/qc4_hesiod_english.py`). Where his sentence runs across the break it goes whole to the side nearer its end (ties stay with the page where it begins), so at most one sentence crosses a break; each section's scan_note gives the exact English line range. Spaces lost where Perseus footnotes were removed (e.g. "quick-glancingAphrodite", "capof") are restored: in the Theogony and Shield; one space missing in the Perseus encoding itself is restored here (618, "earth. But if"). Perseus begins its paragraph 504 with the English of 502-503 ("While it is yet midsummer ... build barns."); that sentence is given with 502-503, the end of the ploughing part (QC fix).
 
 ## Differences from the edition, gaps
 

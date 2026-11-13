@@ -14,6 +14,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import import_gilgamesh as engine  # noqa: E402
 
 CHECKS = {
+    'IM.67628': "Photograph checked (eBL photograph of the Iraq Museum): obverse with both side edges and the reverse of a tall tablet from Kalhu, the upper corner and lower right broken; both faces are densely inscribed with about 40 to 45 lines, the reverse ending in a ruling and one further line. Consistent with eBL's 40 obverse and 45 reverse lines.",
+    '2024,6004.283': "Photograph checked: two views of a small wedge-shaped fragment about 2 cm long, no ink number visible; the upper view carries about five lines of signs, the lower view is broken surface. Consistent with eBL's five reverse lines.",
     'K.9392': "Photograph checked: obverse, reverse and edges of two joined pieces, ink K.9392 and a second, partly legible K.98.. number (eBL: K.9392+K.9810). About 12 lines on the obverse and a patch of several lines on the reverse, consistent with eBL's obverse 12 and reverse 2 + 1.",
     'BM.36320': "Photograph checked: obverse, reverse and edges, ink 36320 on the edge. About 25 lines of small script on each face, consistent with eBL's obverse 26 and reverse 19.",
     'K.10503': "Photograph checked: two views of an irregular fragment, no ink number visible. One face has about 8 or 9 lines; the other side has about 6 lines on a projecting piece and about 6 more at the edge. With the linked flake K.22794 this is broadly consistent with eBL's obverse 14 and reverse 13.",

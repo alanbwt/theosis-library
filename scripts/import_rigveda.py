@@ -555,6 +555,13 @@ def assign_verses(located, S, order, first, last):
 
 # ----------------------------------------------------------------------------- entries
 
+# The words quoted in a scan_note come from the padapāṭha edition; where that edition misprints a word
+# that the leaf writes correctly, the note quotes the leaf (QC fix 2026-11-12).
+NOTE_READING_FIXES = {
+    "‹upa-sṛitaḥ cit astu śam›": "‹upa-śritaḥ cit astu śam› (so the leaf, उपऽश्रितः; the padapāṭha text used here misprints upa-sṛitaḥ)",
+}
+
+
 def padref(pid):
     m, h, rest = pid.split(".")
     return f"{int(m)}.{int(h)}.{int(rest[:-1])}"
@@ -655,6 +662,8 @@ def make_sections(m, h, pub, wit, ctx):
         note = (f"{w['shelfmark']}, fol. {pgl['label']} (OPenn image {pgl['image']}, {leaf} leaf). "
                 f"Checked on the image: the Rigveda text on this page begins in RV {padref(pg['pada'])} "
                 f"‹{S.words_at(pg['start'])}›.")
+        for bad, good in NOTE_READING_FIXES.items():
+            note = note.replace(bad, good)
         if pg.get("note") and not pg["note"].startswith("BOUND"):
             note += f" {pg['note'][0].upper() + pg['note'][1:]}."
         if nxt is not None and not pg.get("cut"):

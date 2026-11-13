@@ -89,7 +89,7 @@ it links exactly that page.
   lacks, 16.401, 16.627-628, 16.704-705, 18.604_605, 18.617). The index gives 13.281 the image of fol.
   172r; the photograph of 169v shows it as the first line.
 - Greek: HMT diplomatic edition of Venetus A (`original_text`, release licence CC BY-NC 4.0);
-  Munro and Allen (Perseus) as `edition_text`. Lines of the standard text not in Venetus A (e.g. 1.265;
+  Monro and Allen (Perseus) as `edition_text`. Lines of the standard text not in Venetus A (e.g. 1.265;
   40 lines in all) are in the edition text with the page where they would stand, and listed in the
   introduction.
 - English: Murray (Loeb 1924-1925, Perseus) for Books 2-24, cut only at his line marks; a block crossing
@@ -110,9 +110,10 @@ it links exactly that page.
 
 - Transcribe Murray's 1924 Book 1 (archive.org `iliadmurray01homeuoft`, leaves 29-75) to replace Butler.
 - Hermas 28-31 (fol. 347r-v, Q93_7r/7v) have Greek in the XML but no entries.
-- `scripts/render_verified.py` (venetus branch) labels the Greek "Munro & Allen" and the edition text
+- `scripts/render_verified.py` (venetus branch) labels the Greek "Munro & Allen" (sic; the editor is D. B. Monro, and
+  `scripts/collections_lib.py` line 103 has the same misspelling) and the edition text
   "Tischendorf"; it should read e.g. "Greek · Venetus A (Homer Multitext diplomatic edition)" and
-  edition label "Munro & Allen (1920)"; translator comes from `verification.translator`.
+  edition label "Monro & Allen (1920)"; translator comes from `verification.translator`.
 
 ## Catalog changes needed in data/texts.json (not made)
 

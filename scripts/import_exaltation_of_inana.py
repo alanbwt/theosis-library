@@ -12,14 +12,13 @@ Chain of evidence
              face, column and line numbers.
 3. ENGLISH   ETCSL 4.07.2 translation (CC BY-NC-SA 3.0, Oxford Text Archive).
 MAPPING      CDLI links lines of these transliterations to lines of composite Q000623
-             (">>Q000623 nnn", ETCSL numbering).  Every link is scored against the ETCSL composite
-             text (sign-sequence similarity); links under 0.25 on a line with three or more readable
-             signs are dropped.  Tablets that CDLI has not linked to the composite are aligned by
-             matching each transliterated line with the ETCSL composite line that has the most similar
-             sign sequence (similarity >= 0.6, clearly better than the next best line, at least three
-             readable signs), keeping only matches that run in composite order.  Sections follow ETCSL's translation paragraphs; for
-             each paragraph the tablets carrying most of its lines are chosen (up to four); lines not
-             carried by them are named in the section note.
+             (">>Q000623 nnn", ETCSL numbering).  CDLI also writes links through an alias
+             defined in the ATF header ('#link: def A = Q...', then '>>A nnn'); both forms are read.
+             Every link is checked against the ETCSL composite text by sign sequence; the rules for
+             moving, keeping or dropping a link are in check_links() of the shared engine.  Tablets that CDLI has not linked to the composite are aligned
+             with it by sign sequence, in composite order (align_by_text() of the shared engine).  Sections follow ETCSL's translation paragraphs; for
+             each paragraph the tablets carrying most of its lines are chosen (up to four; on a tie the one
+             preserving more signs); lines not carried by them are named in the section note.
 
 Usage:  python3 scripts/import_exaltation_of_inana.py
 """
@@ -89,15 +88,25 @@ def etcsl_translit_html(cell):
     return html.escape(s, quote=False).replace("&lt;em&gt;", "<em>").replace("&lt;/em&gt;", "</em>")
 
 
+ETCSL_GAPS = {}  # composite line id -> ETCSL's gap marker printed after it (e.g. '9 lines fragmentary')
+
+
 def etcsl_composite(src_dir, num):
+    """Composite lines in ETCSL order.  ETCSL's gap rows ('9 lines fragmentary', lines it gives no
+    transliteration for) are not lines; they are recorded in ETCSL_GAPS under the line they follow."""
     page = fetch(src_dir, ETCSL_CGI.format(kind="c", num=num), f"etcsl_c.{num}.html")
     body = page.split("<h2>", 1)[1]
     lines = []
     seg = ""
-    for m in re.finditer(r"<h4>Segment ([A-Z])</h4>|<a name='c\d+\.((?:[A-Z]\.)?[0-9A-Za-z.]+)'></a></td><td>(.*?)</td></tr>",
+    for m in re.finditer(r"<h4>Segment ([A-Z])</h4>|<a name='c\d+\.((?:[A-Z]\.)?[0-9A-Za-z.]+)'></a></td><td>(.*?)</td></tr>"
+                         r"|<tr><td></td><td><span class=\"gap\">(.*?)</span></td></tr>",
                          body, flags=re.S):
         if m.group(1):
             seg = m.group(1)
+            continue
+        if m.group(4) is not None:
+            if lines:
+                ETCSL_GAPS[lines[-1]["id"]] = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", m.group(4)))).strip()
             continue
         lid = m.group(2)
         n = lid.split(".", 1)[1] if re.match(r"[A-Z]\.", lid) else lid
@@ -180,10 +189,16 @@ def atf_html(s):
 
 def parse_atf(text, qno=None):
     """[{surface, column, line, atf, q}] for every numbered line of a CDLI ATF; q = composite line label
-    from '>>Qnnnnnn label' (only for composite qno when given)."""
+    from '>>Qnnnnnn label' (only for composite qno when given).  CDLI also writes links through an alias
+    defined in the ATF header ('#link: def A = Q000365 = ...' then '>>A 2'); those are resolved too."""
     out, surf, col, cur = [], "obverse", "", None
+    alias = {}
     for raw in text.split("\n"):
         ln = raw.rstrip()
+        m = re.match(r"^#link:\s*def\s+(\S+)\s*=\s*(Q\d+)", ln)
+        if m:
+            alias[m.group(1)] = m.group(2)
+            continue
         if ln.startswith("@"):
             tag = ln[1:].split()
             if not tag:
@@ -200,9 +215,11 @@ def parse_atf(text, qno=None):
             cur = {"surface": surf, "column": col, "line": m.group(1), "atf": m.group(2).strip(), "q": None}
             out.append(cur)
             continue
-        m = re.match(r"^>>(Q\d+) (\S+)", ln)
-        if m and cur is not None and (qno is None or m.group(1) == qno):
-            cur["q"] = m.group(2)
+        m = re.match(r"^>>(\S+)\s+(\S+)", ln)
+        if m and cur is not None:
+            target = m.group(1) if re.fullmatch(r"Q\d+", m.group(1)) else alias.get(m.group(1))
+            if target and (qno is None or target == qno):
+                cur["q"] = m.group(2)
     return out
 
 
@@ -231,13 +248,20 @@ import difflib  # noqa: E402
 _NORM = str.maketrans({"š": "sz", "Š": "sz", "ĝ": "g", "Ĝ": "g", "ḫ": "h", "Ḫ": "h", "ṣ": "s", "ṭ": "t"})
 
 
+# ETCSL writes some signs by their lemma reading, CDLI by the sign value: kug = ku3, šag4 = sza3,
+# inana = inanna, iri = uru2, zid = zi, ĝiš = gesz, urim2 = uri2, ud = u4, dug3/dug4 = du10/du11,
+# gud = gu4, id2 = i7.  Both sides are brought to one spelling before comparison.
+_EQUIV = {"kug": "ku", "szag": "sza", "inanna": "inana", "uru": "iri", "zid": "zi", "gisz": "gesz",
+          "urim": "uri", "ud": "u", "dug": "du", "gud": "gu", "id": "i"}
+
+
 def norm_signs(s):
     s = re.sub(r"<[^>]+>", " ", s)
     s = html.unescape(s).translate(_NORM).lower()
     s = re.sub(r"[₀-₉]", "", s)
     s = re.sub(r"(?<=[a-z])\d+", "", s)
     s = re.sub(r"[\[\]⸢⸣#?!*<>«»{}()…]|\.\.\.", " ", s)
-    return [t for t in re.split(r"[\s\-.:]+", s) if t and t not in ("x",)]
+    return [_EQUIV.get(t, t) for t in re.split(r"[\s\-.:]+", s) if t and t not in ("x",)]
 
 
 def similarity(a, b):
@@ -289,107 +313,255 @@ def load_witness(src_dir, p, qno):
             "page": f"https://cdli.earth/artifacts/{n}", "photo": f"https://cdli.earth/dl/photo/{p}.jpg"}
 
 
+def _best_chain(items):
+    """items: [(tablet_index, comp_pos, score, allow_equal)] -> the subset with the highest total score
+    whose composite positions rise with the tablet order (a manuscript follows the composition's order);
+    allow_equal lets a CDLI sub-line (e.g. '069.a') share its ETCSL line with the line before it.
+    At most one item per tablet line."""
+    items = sorted(items, key=lambda t: (t[0], t[1]))
+    n = len(items)
+    best, prv = [0.0] * n, [-1] * n
+    for i, (k, c, s, eq) in enumerate(items):
+        best[i] = s
+        for j in range(i):
+            k2, c2, _, _ = items[j]
+            if k2 < k and (c2 < c or (eq and c2 == c)) and best[j] + s > best[i]:
+                best[i], prv[i] = best[j] + s, j
+    if not n:
+        return []
+    i = max(range(n), key=lambda x: best[x])
+    out = []
+    while i >= 0:
+        out.append(items[i])
+        i = prv[i]
+    return out[::-1]
+
+
 def check_links(w, comp_by_id, min_sim=0.25):
-    """Attach composite ids to witness lines and score each link against the ETCSL composite."""
+    """Attach composite ids to witness lines from CDLI's own links and score each link against the ETCSL
+    composite.  CDLI's link may be off: a line may move to a neighbouring ETCSL line (within 3) whose sign
+    sequence matches clearly better (>= 0.5 and at least 0.2 above the linked line), to the line next to its
+    link (>= 0.3, at a penalty, so only when that lets a neighbouring line take a clearly better match), or
+    further (within 12) on a very close match (>= 0.75 and at least 0.3 above the linked line; ETCSL numbers
+    some manuscripts' extra lines apart).  A line with no usable CDLI link (none, or a label that is not an
+    ETCSL line) may take an ETCSL line just after the previous link by its signs alone (>= 0.6).  The
+    placement kept is the one with the best total match that stays in composite order, with a preference for
+    CDLI's own link, and a smaller one for the offset that neighbouring lines agree on (CDLI's links can be off
+    by one over a run of formulaic lines).  A line too broken to be scored (fewer than 3 readable signs, or no
+    ETCSL line within 3 of its link matching at 0.3) keeps its CDLI link, moved by the same amount as the
+    scored lines on either side of it when CDLI's links for both of them were moved alike.  Lines confirmed
+    at their own link but out of composite order are kept (scribal order); a mistyped link is replaced when
+    the line fits the one ETCSL line left free between its neighbours."""
     bad, scores = [], []
     by_n = {}
     for cid_, cl in comp_by_id.items():
         by_n.setdefault(cl["n"], []).append(cid_)
-    for ln in w["lines"]:
-        q = re.sub(r"\.[a-z]\.?$", "", ln["q"]) if ln["q"] else None
-        cid = qlabel_to_id(q) if q else None
-        if cid and cid not in comp_by_id and len(by_n.get(cid, [])) == 1:
-            cid = by_n[cid][0]
-        ln["cid"] = cid if cid in comp_by_id else None
-        if ln["q"] and ln["cid"] is None:
-            bad.append((ln["line"], ln["q"], "no such ETCSL line"))
-            continue
-        if ln["cid"]:
-            sc = similarity(atf_html(ln["atf"]), comp_by_id[ln["cid"]]["html"])
-            # CDLI's link may be off by a line or two: re-link to a neighbouring ETCSL line whose sign
-            # sequence matches much better (>= 0.5 and at least 0.25 above the linked line)
-            ids = list(comp_by_id)
-            k = ids.index(ln["cid"])
-            best, bsc = None, sc
-            for j in range(max(0, k - 3), min(len(ids), k + 4)):
-                if j == k:
-                    continue
-                s2 = similarity(atf_html(ln["atf"]), comp_by_id[ids[j]]["html"])
-                if s2 >= 0.5 and s2 >= sc + 0.25 and s2 > bsc:
-                    best, bsc = ids[j], s2
-            if best:
-                ln["relinked_from"] = ln["cid"]
-                ln["cid"], sc = best, bsc
-            ln["sim"] = sc
-            scores.append(sc)
-            if sc < min_sim and len(norm_signs(atf_html(ln["atf"]))) >= 3:
-                bad.append((ln["line"], ln["q"], f"low similarity {sc:.2f}"))
-    # keep links in composite order: a later tablet line that lands on or before the previous line's
-    # ETCSL line is moved to the next free ETCSL line if that matches (>= 0.5), otherwise dropped
     ids = list(comp_by_id)
     pos = {c: i for i, c in enumerate(ids)}
-    last = -1
-    for ln in w["lines"]:
-        cid = ln.get("cid")
-        if not cid:
+    items = []
+    last = None  # composite position of the previous CDLI link on this tablet
+    for k, ln in enumerate(w["lines"]):
+        ln["cid"] = None
+        sig = atf_html(ln["atf"])
+        ln["weak"] = len(norm_signs(sig)) < 3
+        cid = None
+        if ln["q"]:
+            q = re.sub(r"\.[a-z]\.?$", "", ln["q"])
+            cid = qlabel_to_id(q)
+            if cid and cid not in comp_by_id and len(by_n.get(cid, [])) == 1:
+                cid = by_n[cid][0]
+            if cid and cid not in comp_by_id and len(by_n.get(cid.upper(), [])) == 1:
+                cid = by_n[cid.upper()][0]  # CDLI '103a' = ETCSL '103A'
+            if cid not in comp_by_id:
+                bad.append((ln["line"], ln["q"], "no such ETCSL line"))
+                ln["unresolved"] = ln["q"]
+                mnum = re.match(r"0*(\d+)", q)
+                if mnum and by_n.get(mnum.group(1)):
+                    last = pos[by_n[mnum.group(1)][0]]
+                cid = None
+        if cid is None:
+            # no usable CDLI link (none, or a label that is not an ETCSL line): candidate ETCSL lines just
+            # after the previous link, by their signs alone (>= 0.6)
+            if not ln["weak"] and last is not None:
+                for j in range(max(0, last - 2), min(len(ids), last + 13)):
+                    s2 = similarity(sig, comp_by_id[ids[j]]["html"])
+                    if s2 >= 0.6:
+                        items.append((k, j, s2 - 0.1, False))
             continue
-        sub = bool(ln["q"] and re.search(r"\.[a-z]\.?$", ln["q"]))
-        if pos[cid] <= last and not (sub and pos[cid] == last):
-            moved = None
-            for j in range(last + 1, min(len(ids), last + 3)):
-                s2 = similarity(atf_html(ln["atf"]), comp_by_id[ids[j]]["html"])
-                if s2 >= 0.5:
-                    moved, ln["sim"] = ids[j], s2
-                    break
-            if moved:
-                ln.setdefault("relinked_from", cid)
-                ln["cid"] = moved
-            else:
-                ln["cid"] = None
-                bad.append((ln["line"], ln["q"], "out of order, dropped"))
+        ln["link"] = cid
+        # a line CDLI links to the same ETCSL line as the line before it (one composite line written over
+        # two or more tablet lines, or a sub-line '069.a') may share that ETCSL line
+        ln["eq"] = bool(re.search(r"\.[a-z]\.?$", ln["q"])) or last == pos[cid]
+        last = pos[cid]
+        ln["sims"] = {} if ln["weak"] else {
+            j - pos[cid]: similarity(sig, comp_by_id[ids[j]]["html"])
+            for j in range(max(0, pos[cid] - 12), min(len(ids), pos[cid] + 13))}
+        if not ln["weak"]:
+            near = {d: v for d, v in ln["sims"].items() if abs(d) <= 3}
+            ln["best_d"] = max(near, key=lambda d: (round(near[d], 6), -abs(d)))
+            if near[ln["best_d"]] < 0.3:
+                # too broken or too divergent to be placed by its signs: treated like a line with few signs
+                ln["weak"], ln["sims"] = True, {}
+    # CDLI's links are sometimes off by the same amount over a run of lines (formulaic lines match several
+    # neighbours almost equally): each placement gains 0.1 for every scored neighbouring line (the nearest
+    # before and after, within 3 tablet lines) whose own best match lies at the same offset from its link
+    scored = [k for k, ln in enumerate(w["lines"]) if ln.get("link") and not ln["weak"]]
+    for i, k in enumerate(scored):
+        nb = [scored[j] for j in (i - 1, i + 1) if 0 <= j < len(scored) and abs(scored[j] - k) <= 3]
+        w["lines"][k]["support"] = lambda d, nb=nb: 0.1 * sum(1 for j in nb if w["lines"][j]["best_d"] == d)
+    for k, ln in enumerate(w["lines"]):
+        if not ln.get("link"):
+            continue
+        cid, eq = ln["link"], ln["eq"]
+        if ln["weak"]:
+            items.append((k, pos[cid], 0.2, eq))
+            continue
+        sc0, sup = ln["sims"][0], ln["support"]
+        items.append((k, pos[cid], sc0 + 0.2 + sup(0), eq))
+        for d, s2 in ln["sims"].items():
+            if d == 0:
                 continue
-        last = max(last, pos[ln["cid"]])
+            j = pos[cid] + d
+            if abs(d) <= 3 and s2 >= 0.5 and (s2 >= sc0 + 0.2 or d == ln["best_d"]):
+                items.append((k, j, s2 + sup(d), False))
+            elif abs(d) == 1 and s2 >= 0.3:
+                # one line off with weaker evidence: kept only when it lets a neighbour take a clearly
+                # better match (the penalty makes a lone move lose against CDLI's link)
+                items.append((k, j, s2 - 0.1 + sup(d), False))
+            elif s2 >= 0.75 and s2 >= sc0 + 0.3:
+                # further off (ETCSL may number a manuscript's extra lines apart, e.g. 'I'-'L' after 186)
+                items.append((k, j, s2 - 0.1, False))
+    for k, c, _, _ in _best_chain(items):
+        ln = w["lines"][k]
+        ln["cid"] = ids[c]
+        ln["sim"] = similarity(atf_html(ln["atf"]), comp_by_id[ids[c]]["html"])
+        if not ln.get("link"):
+            ln["how"] = "text"  # placed by its signs (no usable CDLI link)
+            if ln.get("unresolved"):
+                ln["relinked_from"] = ln["unresolved"]
+        elif ln["cid"] != ln["link"]:
+            ln["relinked_from"] = ln["link"]
+    # weak lines (too few readable signs to be scored) inside a run of consecutive CDLI links whose scored lines on
+    # either side (or on the one side, at the start or end of the tablet's links) were all moved by the same
+    # amount are moved with them, if that ETCSL line is free and keeps the order
+    linked = [k for k, ln in enumerate(w["lines"]) if ln.get("link")]
+    shift = lambda ln: pos[ln["cid"]] - pos[ln["link"]]
+    proposals = {}
+    for a, k in enumerate(linked):
+        ln = w["lines"][k]
+        if not ln["weak"]:
+            continue
+        b = next((j for j in reversed(range(a)) if not w["lines"][linked[j]]["weak"]), None)
+        f = next((j for j in range(a + 1, len(linked)) if not w["lines"][linked[j]]["weak"]), None)
+        nbrs = [w["lines"][linked[j]] for j in (b, f) if j is not None]
+        if not nbrs or not all(x.get("cid") for x in nbrs):
+            continue
+        lo, hi = (b if b is not None else a), (f if f is not None else a)
+        if any(pos[w["lines"][linked[j + 1]]["link"]] - pos[w["lines"][linked[j]]["link"]] != 1 for j in range(lo, hi)):
+            continue  # CDLI's links are not consecutive here
+        d = shift(nbrs[0])
+        if d == 0 or any(shift(x) != d for x in nbrs):
+            continue
+        t = pos[ln["link"]] + d
+        low_ok = b is None or pos[w["lines"][linked[b]]["cid"]] < t
+        high_ok = f is None or t < pos[w["lines"][linked[f]]["cid"]]
+        if 0 <= t < len(ids) and low_ok and high_ok and re.fullmatch(r"\d+", comp_by_id[ids[t]]["n"]):
+            proposals[k] = t  # never onto a lettered (extra) line
+    # moves are applied together, so that a run of such lines shifts as one
+    taken = {pos[x["cid"]] for k, x in enumerate(w["lines"]) if x.get("cid") and k not in proposals}
+    for k, t in proposals.items():
+        ln = w["lines"][k]
+        if t in taken:
+            continue
+        taken.add(t)
+        ln["cid"] = ids[t]
+        ln["sim"] = similarity(atf_html(ln["atf"]), comp_by_id[ids[t]]["html"])
+        ln["relinked_from"] = ln["link"]
+    # a line whose own CDLI link is confirmed by its signs (>= 0.6) but which stands out of composite order
+    # is a scribal difference of order: it is kept at its link (if no other line of the tablet has it)
+    L = w["lines"]
+    taken = {x["cid"] for x in L if x.get("cid")}
+    for ln in L:
+        if ln.get("link") and not ln.get("cid") and not ln["weak"] and ln["link"] not in taken:
+            s0 = similarity(atf_html(ln["atf"]), comp_by_id[ln["link"]]["html"])
+            if s0 >= 0.6:
+                ln["cid"], ln["sim"], ln["variant_order"] = ln["link"], s0, True
+                taken.add(ln["cid"])
+    # a scored line left out (e.g. a mistyped CDLI link) whose neighbours on the tablet are placed with exactly
+    # one ETCSL line free between them goes there if its signs agree (>= 0.5, and clearly better than with
+    # its own CDLI link)
+    for k in range(1, len(L) - 1):
+        ln = L[k]
+        if ln.get("cid") or len(norm_signs(atf_html(ln["atf"]))) < 3 or not (L[k - 1].get("cid") and L[k + 1].get("cid")):
+            continue
+        a, b = pos[L[k - 1]["cid"]], pos[L[k + 1]["cid"]]
+        if b - a == 2:
+            s2 = similarity(atf_html(ln["atf"]), comp_by_id[ids[a + 1]]["html"])
+            s0 = similarity(atf_html(ln["atf"]), comp_by_id[ln["link"]]["html"]) if ln.get("link") else 0.0
+            if s2 >= 0.5 and s2 >= s0 + 0.2 and ids[a + 1] not in taken:
+                ln["cid"], ln["sim"] = ids[a + 1], s2
+                taken.add(ln["cid"])
+                if ln.get("link") and ln["link"] != ln["cid"]:
+                    ln["relinked_from"] = ln["link"]
+    for ln in w["lines"]:
+        if ln.get("link") and not ln.get("cid"):
+            bad.append((ln["line"], ln["q"], "out of order, dropped"))
+        elif ln.get("cid"):
+            scores.append(ln["sim"])
+            if ln["sim"] < min_sim and not ln["weak"]:
+                bad.append((ln["line"], ln["q"], f"low similarity {ln['sim']:.2f}"))
     return bad, (sum(scores) / len(scores) if scores else 0)
 
 
-def align_by_text(w, comp, min_sim=0.6, min_signs=3):
-    """For a witness without CDLI composite links: match each of its lines to the ETCSL composite line with
-    the most similar sign sequence (>= min_sim, at least min_signs readable signs), then keep only the
-    longest run of matches that is in composite order (a manuscript follows the composition's order)."""
-    order = {ln["id"]: i for i, ln in enumerate(comp)}
-    comp_signs = [(ln["id"], norm_signs(ln["html"])) for ln in comp]
-    cands = []
+def align_by_text(w, comp, min_sim=0.6, min_signs=3, low=0.45, fill=0.3):
+    """For a witness without CDLI composite links: align its lines with the ETCSL composite by sign
+    sequence, in composite order (a manuscript follows the composition's order).
+    1. Every pair (tablet line, composite line) with similarity >= low is a candidate (tablet lines with at
+       least min_signs readable signs).  The kept pairs are the order-preserving chain with the highest total
+       (similarity - 0.35); refrains that recur in the composite are thus placed by their neighbours.
+    2. A kept pair under min_sim must have a neighbouring tablet line kept at a neighbouring composite line
+       (within 2), otherwise it is dropped.
+    3. Up to three tablet lines left between two kept lines whose composite lines leave exactly as many lines
+       free are placed there one to one, each if its similarity to that line is >= fill (variant spellings,
+       Emesal forms)."""
+    comp_signs = [norm_signs(ln["html"]) for ln in comp]
+    sigs = [norm_signs(atf_html(ln["atf"])) for ln in w["lines"]]
+    sim = lambda k, c: difflib.SequenceMatcher(None, sigs[k], comp_signs[c]).ratio() if sigs[k] and comp_signs[c] else 0.0
+    items = []
     for k, ln in enumerate(w["lines"]):
-        if ln.get("cid"):
+        if ln.get("cid") or len(sigs[k]) < min_signs:
             continue
-        sig = norm_signs(atf_html(ln["atf"]))
-        if len(sig) < min_signs:
+        for c in range(len(comp)):
+            r = sim(k, c)
+            if r >= low:
+                items.append((k, c, r - 0.35, False))
+    chain = {k: c for k, c, _, _ in _best_chain(items)}
+    while True:  # drop weak pairs with no neighbouring support
+        drop = [k for k, c in chain.items() if sim(k, c) < min_sim
+                and not any(0 < (chain[k2] - c) * (k2 - k) and abs(chain[k2] - c) <= 2
+                            for k2 in (k - 1, k + 1) if k2 in chain)]
+        if not drop:
+            break
+        for k in drop:
+            del chain[k]
+    k = 1
+    while k < len(w["lines"]) - 1:  # runs of up to 3 tablet lines between two kept lines, one free ETCSL line each
+        if k in chain or (k - 1) not in chain:
+            k += 1
             continue
-        best, bs, second = None, 0.0, 0.0
-        for cid, cs in comp_signs:
-            if not cs:
-                continue
-            r = difflib.SequenceMatcher(None, sig, cs).ratio()
-            if r > bs:
-                best, second, bs = cid, bs, r
-            elif r > second:
-                second = r
-        if best and bs >= min_sim and bs - second >= 0.05:
-            cands.append((k, best, bs))
-    # longest increasing subsequence on composite order
-    n = len(cands)
-    dp, prv = [1] * n, [-1] * n
-    for i in range(n):
-        for j in range(i):
-            if order[cands[j][1]] < order[cands[i][1]] and dp[j] + 1 > dp[i]:
-                dp[i], prv[i] = dp[j] + 1, j
-    keep, i = [], (max(range(n), key=lambda x: dp[x]) if n else -1)
-    while i >= 0:
-        keep.append(cands[i])
-        i = prv[i]
-    for k, cid, sc in keep:
-        w["lines"][k]["cid"], w["lines"][k]["sim"], w["lines"][k]["how"] = cid, sc, "text"
-    return len(keep)
+        e = k
+        while e < len(w["lines"]) and e not in chain:
+            e += 1
+        m = e - k
+        if e < len(w["lines"]) and m <= 3 and chain[e] - chain[k - 1] - 1 == m:
+            for i in range(m):
+                if len(sigs[k + i]) >= 2 and sim(k + i, chain[k - 1] + 1 + i) >= fill:
+                    chain[k + i] = chain[k - 1] + 1 + i
+        k = e
+    for k, c in chain.items():
+        ln = w["lines"][k]
+        ln["cid"], ln["sim"], ln["how"] = comp[c]["id"], sim(k, c), "text"
+    return len(chain)
 
 
 def witness_place(ln):
@@ -397,21 +569,29 @@ def witness_place(ln):
     return f"{s}, column {ROMAN.get(ln['column'], ln['column'])}" if ln["column"] else s
 
 
+def preserved_signs(ln):
+    """Readable signs of a tablet line outside square brackets (signs actually on the tablet)."""
+    return len(norm_signs(atf_html(re.sub(r"\[[^\]]*\]", " ", ln["atf"]))))
+
+
 def plan_sections(paras, witnesses, max_w=4):
-    """For each paragraph choose photographed witnesses (greedy by coverage) and collect their lines."""
+    """For each paragraph choose photographed witnesses (greedy by coverage; on a tie the tablet that preserves
+    more signs of those lines) and collect their lines."""
     for p in paras:
         need = [ln["id"] for ln in p["lines"]]
         needset = set(need)
         chosen, covered = [], set()
         while len(chosen) < max_w:
-            best, gain = None, 0
+            best, gain, bkey = None, 0, None
             for w in witnesses:
                 if w in chosen:
                     continue
                 carried = {ln["cid"] for ln in w["lines"] if ln.get("cid") in needset}
                 g = len(carried - covered)
-                if g > gain or (g == gain and g > 0 and best is not None and w["nlinks"] > best["nlinks"]):
-                    best, gain = w, g
+                # ties: the tablet that preserves more signs of these lines, then the one with more links
+                key = (sum(preserved_signs(ln) for ln in w["lines"] if ln.get("cid") in carried - covered), w["nlinks"])
+                if g > gain or (g == gain and g > 0 and best is not None and key > bkey):
+                    best, gain, bkey = w, g, key
             if not best:
                 break
             chosen.append(best)
@@ -483,8 +663,9 @@ def build_witness_entry(cfg):
             print(f"  {p} re-linked {len(rel)}: {rel[:8]}")
         print(f"  {p} {w['museum']:<28} links {w['nlinks']:>3}/{len(w['lines']):<3} mean similarity {avg:.2f}"
               + (f"  CHECK {bad[:4]}" if bad else ""))
-        for ln in w["lines"]:  # drop links that failed the check
-            if ln.get("cid") and ln.get("sim", 1) < cfg.get("min_sim", 0.25) and len(norm_signs(atf_html(ln["atf"]))) >= 3:
+        for ln in w["lines"]:  # drop links that failed the check (lines placed by CDLI's link alone are kept)
+            if ln.get("cid") and ln.get("sim", 1) < cfg.get("min_sim", 0.25) and not ln.get("weak") \
+                    and len(norm_signs(atf_html(ln["atf"]))) >= 3:
                 ln["cid"] = None
         if w["nlinks"]:
             witnesses.append(w)
@@ -549,21 +730,44 @@ def build_witness_entry(cfg):
             relinked = [ln for w, ls in p["blocks"] for ln in ls if ln.get("relinked_from")]
             how.append(f"from the CDLI transliterations' own links to the composite ({cfg['qno']}, ETCSL numbering), "
                        "each link checked against the ETCSL composite text"
-                       + (f" ({len(relinked)} line(s) where CDLI's link is off by a line are placed at the ETCSL line with the "
-                          "same sign sequence)" if relinked else ""))
+                       + (" (placed at another ETCSL line than CDLI's link, where the signs match that line: "
+                          + "; ".join(f"{w['museum']} {witness_place(ln)} {ln['line']}, CDLI {ln['relinked_from'].replace('.', ' ')}"
+                                      f" -> ETCSL {ln['cid'].replace('.', ' ')}" for w, ls in p["blocks"] for ln in ls
+                                      if ln.get("relinked_from")) + ")" if relinked else ""))
+        bysign = [(w, ln) for w, ls in p["blocks"] for ln in ls if ln.get("how") == "text" and w["method"] == "links"
+                  and not ln.get("relinked_from")]
+        if bysign:
+            how.append("where CDLI gives no link, by the line's signs ("
+                       + "; ".join(f"{w['museum']} {witness_place(ln)} {ln['line']} = ETCSL {ln['cid'].replace('.', ' ')}"
+                                   for w, ln in bysign) + ")")
         if "text" in methods:
-            how.append("by matching each line of the tablet's CDLI transliteration with the ETCSL composite line that has "
-                       "the same sign sequence (in composite order)")
+            how.append("by aligning the tablet's CDLI transliteration line by line with the ETCSL composite text by sign "
+                       "sequence, in composite order (up to three lines between two aligned lines are placed one to one in "
+                       "the ETCSL lines left free between them when their signs agree)")
         faced = [w for w, _ in p["blocks"] if w["face_scans"]]
         note = ("; ".join(notes) + ". Line correspondence " + "; for other tablets ".join(how) + ". "
                 + (cfg.get("face_note", "") + " " if faced else "")
                 + ("The photograph is the whole tablet (CDLI fat-cross: obverse above, reverse below, edges beside), "
                    "checked by eye for each tablet used; the transliteration names the face and column of every block."
                    if len(faced) < len(p["blocks"]) else ""))
+        for w, _ in p["blocks"]:  # cautions about a particular tablet's photograph (set in the importer)
+            if cfg.get("witness_notes", {}).get(w["p"]):
+                note += " " + cfg["witness_notes"][w["p"]]
         if p["missing"]:
             note += (f" ETCSL line(s) {ranges(p['missing'], comp_order)} are not shown from the tablet(s) here (not preserved "
                      "on them, or the correspondence could not be confirmed): for those lines the English renders other manuscripts.")
+        vo = [(w, ln) for w, ls in p["blocks"] for ln in ls if ln.get("variant_order")]
+        if vo:
+            note += (" " + "; ".join(sorted({w["museum"] for w, _ in vo})) + " writes line(s) "
+                     + ", ".join(ln["cid"].replace(".", " ") for _, ln in vo)
+                     + " in a different order from the composite (each confirmed by CDLI's link and its signs); "
+                     "they are shown in the tablet's own order.")
         note += " The English is ETCSL's translation of the composite text."
+        gaps = [(ln["id"], ETCSL_GAPS[ln["id"]]) for ln in p["lines"] if ln["id"] in ETCSL_GAPS
+                and (ln is not p["lines"][-1] or ETCSL_GAPS[ln["id"]].lower() in p["text"].lower())]
+        for after, g in gaps:
+            note += (f" After line {after.replace('.', ' ')} ETCSL's composite gives no transliteration ('{g}'), "
+                     "so no tablet lines are shown there.")
         if p["untranslated"]:
             note += f" Line(s) {', '.join(x.replace('.', ' ') for x in p['untranslated'])} are left untranslated by ETCSL."
         sections.append({
@@ -708,7 +912,8 @@ M = {
 def main():
     r = build_witness_entry({"src": SRC, "key": KEY, "etcsl": ETCSL, "qno": QNO, "witnesses": WITNESSES,
                              "scan_dir": SCAN_DIR, "align_text": ALIGN_TEXT,
-                             "faces": globals().get("FACES", {}), "face_note": globals().get("FACE_NOTE", "")})
+                             "faces": globals().get("FACES", {}), "face_note": globals().get("FACE_NOTE", ""),
+                             "witness_notes": globals().get("WITNESS_NOTES", {})})
     write_witness_outputs(dict(M, key=KEY, qno=QNO, etcsl=ETCSL, coll_path=COLL), r)
 
 

@@ -157,7 +157,16 @@ EN_FIXES = [
     ("account Ge was", "account Gé was"), ("but Ge repelled", "but Gé repelled"), ("behalf of Ge.", "behalf of Gé."),
     ("named Demarus.", "named Demarûs."), ("sisters, Ehea and Dione", "sisters, Rhea and Dione"),
     ("called ledud", "called Iedud"), ("eternal, uncreated,", "eternal, uncreate,"),
+    # QC 2026-11-12: the transcription has 'against Kronos. and these'; the 1903 printing has a comma
+    # (archive.org OCR of the printing, data/sources/sanchuniathon/gifford/gifford1903_djvu.txt: 'against Kronos, and these').
+    ("against Kronos. and these", "against Kronos, and these"),
 ]
+# notes added to a section's scan_note where its English was corrected against the printing
+EN_NOTES = {
+    "10.23": ("English corrected against the 1903 printing: the online transcription reads 'against Kronos. and these', "
+              "the printed book 'against Kronos, and these', which also matches the Greek ('κατὰ τοῦ Κρόνου ... συμμάχων, "
+              "καὶ ταύτας'), one sentence."),
+}
 
 ENTRIES = [
     ("testimony", 1, "9.20", "9.30",
@@ -298,7 +307,8 @@ def main():
                 "original_text": f"<sup>{k}</sup>{g[k]}",
                 "text": f"<sup>{k}</sup>{e[k]}",
                 "scan_pages": [rel[f] for f in fp],
-                "scan_note": lead + note + " Checked on the image. Viewer: " + GALLICA + f"/f{idx[fp[0]]}.item",
+                "scan_note": lead + note + " Checked on the image. Viewer: " + GALLICA + f"/f{idx[fp[0]]}.item"
+                             + (" " + EN_NOTES[k] if k in EN_NOTES else ""),
             })
         tid = PREFIX + slug
         entry = {

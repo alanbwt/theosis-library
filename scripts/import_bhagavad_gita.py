@@ -419,7 +419,7 @@ def main():
             "Sanskrit and English: Annie Besant, The Bhagavad-Gita, 4th edition (Madras: G. A. Natesan, 1922), transcription validated on English Wikisource. Besant's footnotes are not reproduced.",
             "Verse numbers follow Besant and the manuscript, which agree throughout: chapter 13 counts Arjuna's opening question ('prakṛtiṃ puruṣaṃ caiva...') as verse 1, so it has 35 verses and the whole text 701.",
             "K. T. Telang's translation (Sacred Books of the East 8, 1882) was the first choice for the English, but it is continuous prose without verse divisions, so it cannot be matched to manuscript pages verse by verse; Besant's verse-numbered translation is used instead.",
-            "The last section of each chapter is the chapter colophon. Besant prints most Sanskrit colophons in shortened form (marked with ॰) while his English gives the full formula; the manuscript writes the colophon out in full, and its chapter names differ in places from Besant's (see the scan note).",
+            "The last section of each chapter is the chapter colophon. Besant prints most Sanskrit colophons in shortened form (marked with ॰) while her English gives the full formula; the manuscript writes the colophon out in full, and its chapter names differ in places from Besant's (see the scan note).",
         ]
         if c == 1:
             notes.append("Before chapter 1 the manuscript has a ritual preface (Gītā-nyāsa) and nine meditation verses (dhyāna), fol. 1v-4r; they are not part of the 700-verse text and are not reproduced here.")

@@ -279,6 +279,16 @@ WORK = {
     "key": "plato-timaeus", "name": "Timaeus", "abbr": "Tim.", "tlg": "tlg031",
     "columns": COLUMNS, "topics": TOPICS, "atlantis_pages": ATLANTIS_PAGES,
     "first_folio": "114r", "last_folio": "144v",
+    # Bury's 17b and 18b milestones fall inside a reply of Timaeus that Burnet's Greek has wholly in
+    # 17b / 18b; the English reply is moved whole to the section that holds the Greek.
+    "english_moves": [
+        ("17a", "17b", "Undoubtedly, and we shall do our best",
+         "English: Timaeus' reply πάνυ μὲν οὖν ... ἀνταφεστιᾶν stands wholly in 17b in the Greek; Bury's 17b milestone falls inside "
+         "it, so his English of the reply (Undoubtedly ... cordially in return.) is given whole with 17b."),
+        ("18a", "18b", "Certainly.",
+         "English: Timaeus' reply πάνυ μὲν οὖν stands in 18b in the Greek; Bury's 18b milestone falls after it, so his English "
+         "of the reply (Certainly.) is given with 18b."),
+    ],
 }
 
 
@@ -321,7 +331,41 @@ def get_scan(key, folio, canvases, force=False):
 
 
 # ---------------------------------------------------------------- text
-def _tokens(el, out, lang):
+# Perseus splits a long speech into several <said rend="merge"> (and quoted speech into several
+# <q rend="merge">) at its card boundaries, repeating the speaker label each time. A merged <q>
+# continues the quotation, so it gets no new opening mark, and the <q> it continues gets no
+# closing mark. Repeated labels are marked "label_dup" in sections(): kept for locating column
+# openings (plain()), not shown (to_html()).
+_Q_CONTINUED = set()
+
+
+def _mark_continued_quotes(body):
+    """ids of <q> elements whose quotation is continued by a later <q rend="merge"> at the same depth."""
+    events, counter = [], [0]
+
+    def walk(el, depth):
+        tag = el.tag.replace(TEI, "")
+        is_q = tag in ("q", "quote") and el.get("type") not in ("emph", "foreign", "mentioned")
+        start = counter[0]
+        counter[0] += 1
+        for ch in el:
+            walk(ch, depth + (1 if is_q else 0))
+        if is_q:
+            events.append((start, counter[0], depth, el))
+        counter[0] += 1
+    walk(body, 0)
+    events.sort(key=lambda e: e[0])
+    for i, (s, e, d, el) in enumerate(events):
+        later = [x for x in events[i + 1:] if x[0] > e]
+        nxt = next((x for x in later if x[2] == d), None)
+        if not nxt or nxt[3].get("rend") != "merge":
+            continue
+        # every enclosing quotation opened in between must itself be a continuation
+        if all(x[3].get("rend") == "merge" for x in later if x[0] < nxt[0] and x[2] < d):
+            _Q_CONTINUED.add(id(el))
+
+
+def _tokens(el, out, lang, qdepth=0):
     tag = el.tag.replace(TEI, "")
     if tag in ("note", "teiHeader", "head", "bibl"):
         if el.tail:
@@ -337,30 +381,45 @@ def _tokens(el, out, lang):
             out.append(("para", None))
         wrap = None
         if lang == "eng" and tag in ("q", "quote"):
-            wrap = ("em", "em") if el.get("type") in ("emph", "foreign", "mentioned") else ("“", "”")
+            if el.get("type") in ("emph", "foreign", "mentioned"):
+                wrap = ("em", "em")
+            else:
+                # outer quotation “ ”, a quotation inside it ‘ ’
+                o, c = ("“", "”") if qdepth % 2 == 0 else ("‘", "’")
+                wrap = ("" if el.get("rend") == "merge" else o, "" if id(el) in _Q_CONTINUED else c)
         elif tag == "emph":
             wrap = ("em", "em")
         if wrap == ("em", "em"):
             out.append(("open", "em"))
-        elif wrap:
+        elif wrap and wrap[0]:
             out.append(("t", wrap[0]))
         if el.text:
             out.append(("t", el.text))
         for ch in el:
-            _tokens(ch, out, lang)
+            _tokens(ch, out, lang, qdepth + (1 if wrap and wrap != ("em", "em") else 0))
         if wrap == ("em", "em"):
             out.append(("close", "em"))
-        elif wrap:
+        elif wrap and wrap[1]:
             out.append(("t", wrap[1]))
     if el.tail:
         out.append(("t", el.tail))
 
 
 def sections(path, lang):
-    """Return (ordered section ids, {id: [tokens]}) split at Stephanus section milestones."""
+    """Return (ordered section ids, {id: [tokens]}) split at Stephanus section milestones.
+    A speaker label that repeats the previous label (same speaker, speech continued after a
+    Perseus card break) becomes "label_dup" and is not shown."""
     body = ET.parse(path).getroot().find(f".//{TEI}body")
+    _mark_continued_quotes(body)
     toks = []
     _tokens(body, toks, lang)
+    last = None
+    for i, (kind, v) in enumerate(toks):
+        if kind == "label":
+            who = v.rstrip(".").strip().lower()
+            if who == last:
+                toks[i] = ("label_dup", v)
+            last = who
     order, secs, cur = [], {}, None
     for kind, v in toks:
         if kind == "ms":
@@ -379,7 +438,7 @@ def plain(items):
         if kind == "para":
             if paras[-1]:
                 paras.append([])
-        elif kind == "label":
+        elif kind in ("label", "label_dup"):
             paras[-1].append(v + " ")
         elif kind == "t":
             paras[-1].append(v)
@@ -413,6 +472,8 @@ def to_html(items):
             if open_em:
                 cur.append("</em>")
                 open_em -= 1
+        elif kind == "label_dup":
+            continue
         else:
             if v.strip():
                 only_label = False
@@ -484,6 +545,27 @@ def build(work, force=False):
     g_order, g_secs = sections(source_xml(work["tlg"], "perseus-grc2"), "grc")
     e_order, e_secs = sections(source_xml(work["tlg"], "perseus-eng2"), "eng")
     assert g_order == e_order, "Greek and English Stephanus sections differ"
+    # Where Bury's word order puts a whole English sentence on the other side of a Stephanus
+    # milestone from the Greek it renders, the sentence is moved whole to the section that holds
+    # most of the Greek (work["english_moves"]: (from, to, opening words of the moved English)).
+    move_notes = {}
+    for frm, to, phrase, note in work.get("english_moves", []):
+        toks = e_secs[frm]
+        k = next(i for i, (kind, v) in enumerate(toks) if kind == "t" and phrase in v)
+        kind, v = toks[k]
+        cut = v.index(phrase)
+        head = k
+        if not v[:cut].strip():          # a whole speech: take its paragraph start and label too
+            def blank(t):
+                return t[0] in ("para", "label", "label_dup") or (t[0] == "t" and not t[1].strip())
+            while head > 0 and blank(toks[head - 1]):
+                head -= 1
+        moved = toks[head:k] + ([("t", v[cut:])] if v[cut:] else []) + toks[k + 1:]
+        e_secs[frm] = toks[:head] + ([("t", v[:cut])] if v[:cut].strip() else [])
+        assert to == e_order[e_order.index(frm) + 1], (frm, to)
+        e_secs[to] = moved + e_secs[to]
+        move_notes[frm] = move_notes.get(frm, "") + " " + note
+        move_notes[to] = move_notes.get(to, "") + " " + note
     plain_by_sec = {s: plain(g_secs[s]) for s in g_order}
     sec_start, total, col_starts, _ = locate_columns(g_order, plain_by_sec, work["columns"])
     columns = work["columns"]
@@ -544,7 +626,8 @@ def build(work, force=False):
                 "text": to_html(e_secs[s]),
                 "scan_pages": [f"{key}/grec1807-f{f}.jpg" for f in sfol],
                 "scan_note": (f"{abbr} {s} stands in Paris gr. 1807, {span_text(cols)}. Checked on the image (column openings "
-                              f"read on the BnF photographs and found in Burnet's text, quoted in Burnet's spelling): {evidence}."),
+                              f"read on the BnF photographs and found in Burnet's text, quoted in Burnet's spelling): {evidence}."
+                              + move_notes.get(s, "")),
             })
         n_sec += len(translation)
 

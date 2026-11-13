@@ -97,8 +97,13 @@ def atf_html(s):
 def parse_atf(text):
     """[{surface, column, line, atf, q}] with q = composite line label (e.g. '040', '288A', 'colophon')."""
     out, surf, col, cur = [], None, None, None
+    alias = {}  # CDLI may also link through an alias defined in the header: '#link: def A = Q000371', '>>A 040'
     for raw in text.split("\n"):
         ln = raw.rstrip()
+        m = re.match(r"^#link:\s*def\s+(\S+)\s*=\s*(Q\d+)", ln)
+        if m:
+            alias[m.group(1)] = m.group(2)
+            continue
         if ln.startswith("@surface"):
             surf = ln.split()[1]
         elif ln.startswith("@column"):
@@ -108,9 +113,9 @@ def parse_atf(text):
             cur = {"surface": surf, "column": col, "line": m.group(1), "atf": m.group(2).strip(), "q": None}
             out.append(cur)
             continue
-        m = re.match(r"^>>Q000371 (\S+)", ln)
-        if m and cur is not None:
-            cur["q"] = m.group(1)
+        m = re.match(r"^>>(\S+)\s+(\S+)", ln)
+        if m and cur is not None and (m.group(1) == "Q000371" or alias.get(m.group(1)) == "Q000371"):
+            cur["q"] = m.group(2)
     return out
 
 
