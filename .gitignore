@@ -16,3 +16,14 @@ data/sources/**/*.pdf
 data/sources/**/*.JPG
 data/sources/**/*.tif
 data/sources/**/*.tiff
+
+# large downloaded caches (re-fetched by importers)
+data/sources/black-obelisk/json/
+data/sources/black-obelisk/*.zip
+data/sources/sennacherib-prism/
+data/sources/qc-legacy/audit/*.cex
+data/sources/*/griffith_scan/*.xml
+data/sources/*/*_djvu.xml
+data/sources/*/hultzsch/*.xml
+data/sources/qumran-1qphab/etcbc/
+data/sources/hyperborea/*.perseus-*.xml
