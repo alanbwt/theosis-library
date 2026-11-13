@@ -5,7 +5,7 @@ carries it, the verbatim original-language text, and a public-domain or openly l
 translation of the same passage. These important texts do not yet meet that bar.
 
 ## Egypt
-- Book of the Dead, Papyrus of Ani (BM EA 10470): no open digital Egyptian text of Ani (TLA has only BD 58, 59, 185, 186 from it); Budge's 1895 transliteration exists only as poor scans.
+- Book of the Dead: the library has spells 1-165 on the Turin papyrus of Iuefankh; the Papyrus of Ani itself has no open digital Egyptian text (TLA holds only BD 58, 59, 185, 186 from it). Spells 20, 111, 121 lack a usable public-domain English; Spell 175 is not on the Turin roll.
 - Shabaka Stone (Memphite Theology), Palermo Stone, Turin King List: no open digital text.
 - Rosetta Stone, hieroglyphic and Demotic versions: no open text (the Greek version is in).
 - Story of Sinuhe, Shipwrecked Sailor: no open photographs of the papyri.
